@@ -9,12 +9,12 @@
     "contact": "Contact"
   },
   "home": {
-    "tag": "Dialysis Intelligence Platform",
+    "tag": "Smart Dialysis Platform",
     "hero": {
-      "title1": "AI-Driven Dialysis Intelligence",
-      "title2": "and Automation",
-      "subtitle": "Building the operating system for next-generation dialysis care.",
-      "description": "We integrate dialysis machines, patient vitals, and clinical workflows through AI, IoT, and automation to enable safer, more consistent, and scalable dialysis operations."
+      "title1": "From Assisted Driving",
+      "title2": "to Autonomous Driving",
+      "subtitle": "Redefining dialysis treatment with AI",
+      "description": "Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into a smarter, more automated, personalized, safer and more efficient intelligent dialysis system."
     },
     "cta": {
       "explore": "Explore Platform",
@@ -24,53 +24,53 @@
     },
     "pillars": {
       "tag": "Core Capabilities",
-      "title": "From Device Data to Clinical Decisions",
-      "description": "Dialysis produces continuous, high-frequency clinical data. Most of it remains underutilized. Our platform transforms this data into real-time intelligence.",
+      "title": "Complete Closed-Loop from Data Source to Clinical Decision",
+      "description": "Starting from the data source, we've built a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
       "iot": {
         "title": "IoT Data Infrastructure",
-        "description": "Dialysis machines, BP monitors, scales, sensors, and EHR interfaces unified into a real-time data layer.",
-        "features": ["High-frequency data capture", "Secure device connectivity", "Structured data pipelines"]
+        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis devices connected.",
+        "features": ["3,000+ devices connected", "Full-process data capture", "HIS/LIS system integration"]
       },
       "ai": {
-        "title": "AI Intelligence Engine",
-        "description": "Risk detection, trend analysis, personalized dialysis parameters, and early warning systems.",
-        "features": ["Intradialytic BP analysis", "Ultrafiltration risk detection", "Personalized insights"]
+        "title": "Customized Large Language Model",
+        "description": "Dialysis-specific LLM combined with proprietary AI Agent decision system providing real-time clinical intelligence.",
+        "features": ["Dialysis-specific LLM", "AI Agent decisions", "Real-time risk alerts"]
       },
       "automation": {
-        "title": "Automation & Decision Support",
-        "description": "Assisted dialysis control, workflow automation, remote supervision, and standardized execution.",
-        "features": ["Protocol enforcement", "Remote oversight", "Workflow standardization"]
+        "title": "Intelligent Decision Support",
+        "description": "System continuously provides decision support during treatment, including prescription adjustments, volume assessment, and hypotension alerts.",
+        "features": ["Prescription recommendations", "Volume & UF assessment", "High-risk event prediction"]
       }
     },
     "flow": {
-      "title": "Machine → Data → AI → Action",
-      "description": "A vertically integrated platform that transforms real-time dialysis data into clinical intelligence and assisted automation.",
+      "title": "Device → Data → AI → Decision",
+      "description": "A complete chain from data collection, analysis, evaluation, recommendations to real-time feedback. These recommendations are not post-hoc analysis, but exist in real-time within the physician's workflow.",
       "steps": {
-        "machines": { "label": "Dialysis Machines", "sublabel": "IoT Devices" },
-        "data": { "label": "Data Layer", "sublabel": "Real-time Streaming" },
-        "ai": { "label": "AI Engine", "sublabel": "Intelligence" },
-        "automation": { "label": "Automation", "sublabel": "Decision Support" }
+        "machines": { "label": "Dialysis Devices", "sublabel": "3,000+ connected" },
+        "data": { "label": "Data Fusion", "sublabel": "HIS/LIS integrated" },
+        "ai": { "label": "AI LLM", "sublabel": "Agent decisions" },
+        "automation": { "label": "Real-time Feedback", "sublabel": "Decision support" }
       }
     },
     "stats": {
       "reduction": "Reduction in adverse events",
       "response": "Faster clinical response",
       "monitoring": "Continuous monitoring",
-      "stations": "Dialysis stations connected"
+      "stations": "Dialysis devices connected"
     },
     "why": {
-      "tag": "Why This Matters",
-      "title": "Dialysis is one of the most data-intensive clinical procedures",
-      "description1": "Yet decision-making remains largely manual and experience-dependent. Continuous high-frequency machine and patient data is underutilized. Clinical variability leads to preventable adverse events.",
-      "description2": "We exist to transform dialysis data into actionable intelligence and safe automation, enabling better care at scale.",
-      "clinical": { "title": "Clinical Impact", "desc": "Fewer intradialytic adverse events and improved treatment stability" },
-      "operational": { "title": "Operational Impact", "desc": "Centralized oversight and scalable operations" },
-      "strategic": { "title": "Strategic Impact", "desc": "Data moat built on real-world dialysis operations" },
-      "longterm": { "title": "Long-term Value", "desc": "Alignment with outcome-driven care models" }
+      "tag": "The Problem We Solve",
+      "title": "Dialysis is a high-frequency, high-risk, experience-dependent medical scenario",
+      "description1": "Hypotension, volume management, prescription adjustment, and complication alerts almost entirely depend on individual physician and nurse experience. Data is scattered and fragmented, unable to form real-time decision support.",
+      "description2": "We use AI, IoT and LLMs to upgrade dialysis—a high-risk medical scenario heavily dependent on human experience—into a predictable, interventionable, and scalably replicable smart dialysis system.",
+      "clinical": { "title": "Clinical Value", "desc": "Reduced adverse events, improved treatment safety and consistency" },
+      "operational": { "title": "Operational Value", "desc": "50 smart dialysis centers deployed, scalably replicable" },
+      "strategic": { "title": "Strategic Value", "desc": "Not selling software, but restructuring how dialysis centers operate" },
+      "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027" }
     },
     "finalCta": {
-      "title": "Ready to transform dialysis care?",
-      "description": "We welcome discussions with strategic investors, clinical partners, and healthcare operators aligned with long-term transformation of dialysis care."
+      "title": "Already Deployed, Not Just a Concept",
+      "description": "Currently deployed in 50 smart dialysis centers, including 30 self-operated centers and 20+ landmark private and public hospitals. This is a system validated by real clinical practice."
     }
   },
   "platform": {
@@ -243,46 +243,46 @@
     }
   },
   "company": {
-    "tag": "Company",
-    "title": "Why We Exist",
-    "subtitle": "Dialysis generates some of the most complex real-time clinical data. We exist to transform that data into actionable intelligence and safe automation.",
+    "tag": "About Us",
+    "title": "Deep AI Application in Dialysis",
+    "subtitle": "Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into an intelligent dialysis system.",
     "mission": {
       "title": "Mission",
-      "description": "To improve the safety, consistency, and efficiency of dialysis care through AI-driven intelligence and automation, enabling clinicians to deliver better outcomes at scale."
+      "description": "Using AI, IoT and LLMs to upgrade dialysis—a high-risk medical scenario heavily dependent on human experience—into a predictable, interventionable, and scalably replicable smart dialysis system."
     },
     "vision": {
       "title": "Vision",
-      "description": "To become the core intelligence and automation layer powering dialysis care at scale, enabling safer treatments, operational excellence, and data-driven clinical decisions worldwide."
+      "description": "From assisted driving to autonomous driving—enabling the system to complete more standardized decisions within clear boundaries, with physicians taking on more supervisory and final decision-making roles."
     },
     "about": {
       "title": "About Suntop AI",
       "paragraphs": [
-        "Suntop AI is an AI, IoT, and automation company focused exclusively on dialysis. We are building the operating system for next-generation dialysis care.",
-        "Dialysis is one of the most data-intensive medical procedures, yet most of that data remains underutilized. Clinical variability leads to preventable adverse events. Scaling dialysis networks increases operational risk and inconsistency.",
-        "We address this gap by integrating dialysis machines, patient vitals, and clinical workflows through a unified AI platform that transforms real-time data into clinical intelligence and assisted automation.",
-        "Our approach is dialysis-native, not adapted from generic healthcare AI. We focus on deep integration at the machine and workflow level, with automation that includes clinical guardrails and physician oversight by design."
+        "We are a company focused on deep AI application in dialysis. Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into a smarter, more automated, personalized, safer and more efficient intelligent dialysis system.",
+        "Starting from the data source, we've made all core dialysis room equipment IoT-enabled—dialysis machines, BP monitors, scales. We've connected 3,000+ dialysis devices, achieving structured data capture throughout the entire treatment process, deeply integrated with hospital HIS and LIS systems.",
+        "On this foundation, we've built a dialysis-specific customized LLM and proprietary AI Agent decision system, forming a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
+        "The system continuously provides decision support to physicians during treatment, including prescription adjustment recommendations, volume and ultrafiltration assessment, and prediction and warning of high-risk events like hypotension. These recommendations are not post-hoc analysis, but exist in real-time within the physician's workflow."
       ]
     },
     "values": {
-      "title": "Our Values",
-      "description": "Principles that guide how we build technology and work with clinical partners.",
+      "title": "Business Model",
+      "description": "Complete solution provider—we're not selling software, we're restructuring how dialysis centers operate.",
       "items": [
-        { "title": "Patient Safety First", "description": "Every feature and decision is evaluated through the lens of patient safety and clinical outcomes." },
-        { "title": "Clinical Relevance", "description": "Technology serves clinical needs, not the other way around. We build what matters for care delivery." },
-        { "title": "Transparency", "description": "Clear explanations, auditable decisions, and honest communication with all stakeholders." },
-        { "title": "Partnership", "description": "We succeed when our clinical partners succeed. Long-term relationships over short-term transactions." }
+        { "title": "Turnkey Solutions", "description": "Complete smart dialysis center construction solutions, full support from planning to deployment." },
+        { "title": "Equipment & Consumables", "description": "Providing dialysis equipment and consumables, ensuring device interoperability." },
+        { "title": "Software & Hardware", "description": "Proprietary dialysis management system, AI LLM and IoT infrastructure." },
+        { "title": "Smart Supply Chain", "description": "Integrated smart supply chain system for better treatment outcomes, lower medical risk, and higher operational efficiency." }
       ]
     },
     "leadership": {
-      "title": "Leadership",
-      "description": "Our team combines experience in dialysis operations, clinical medicine, AI systems, and medical device integration.",
-      "note": "We focus on long-term clinical value rather than short-term technology trends."
+      "title": "Expansion Plan",
+      "description": "Clear, replicable expansion path—targeting 300 centers within two years.",
+      "note": "Already deployed, not just a concept—this is a system validated by real clinical practice."
     },
     "stats": {
-      "founded": "Founded",
-      "team": "Team Members",
-      "partners": "Clinical Partners",
-      "stations": "Stations Connected"
+      "founded": "Centers Deployed",
+      "team": "Self-Operated",
+      "partners": "Partner Hospitals",
+      "stations": "Devices Connected"
     }
   },
   "news": {
