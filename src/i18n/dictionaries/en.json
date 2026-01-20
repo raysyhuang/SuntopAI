@@ -28,28 +28,28 @@
       "description": "Starting from the data source, we've built a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
       "iot": {
         "title": "IoT Data Infrastructure",
-        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis devices connected.",
-        "features": ["3,000+ devices connected", "Full-process data capture", "HIS/LIS system integration"]
+        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis devices connected with high-frequency streaming (every 5 seconds).",
+        "features": ["3,000+ devices connected", "HIS/LIS/EMR integration", "Structured clinical data pipeline"]
       },
       "ai": {
-        "title": "Customized Large Language Model",
-        "description": "Dialysis-specific LLM combined with proprietary AI Agent decision system providing real-time clinical intelligence.",
-        "features": ["Dialysis-specific LLM", "AI Agent decisions", "Real-time risk alerts"]
+        "title": "Dialysis-Specific AI Engine",
+        "description": "Customized LLM trained on dialysis clinical data, combined with AI Agent for IDH prediction, UF rate optimization, and dry weight assessment.",
+        "features": ["IDH risk prediction", "UF rate optimization", "Dry weight trending"]
       },
       "automation": {
-        "title": "Intelligent Decision Support",
-        "description": "System continuously provides decision support during treatment, including prescription adjustments, volume assessment, and hypotension alerts.",
-        "features": ["Prescription recommendations", "Volume & UF assessment", "High-risk event prediction"]
+        "title": "Real-Time Clinical Decision Support",
+        "description": "Continuous intradialytic monitoring with alerts for BP trends, UF tolerance, access flow, and Kt/V adequacy. Prescription adjustment recommendations integrated into physician workflow.",
+        "features": ["Intradialytic BP analysis", "UF & volume management", "Adequacy monitoring (Kt/V)"]
       }
     },
     "flow": {
-      "title": "Device → Data → AI → Decision",
-      "description": "A complete chain from data collection, analysis, evaluation, recommendations to real-time feedback. These recommendations are not post-hoc analysis, but exist in real-time within the physician's workflow.",
+      "title": "Device → Data → AI → Clinical Action",
+      "description": "Real-time data streaming every 5 seconds from dialysis machines, integrated with BP monitors, weight scales, and lab results. AI engine analyzes intradialytic trends and delivers actionable alerts directly into physician workflow.",
       "steps": {
-        "machines": { "label": "Dialysis Devices", "sublabel": "3,000+ connected" },
-        "data": { "label": "Data Fusion", "sublabel": "HIS/LIS integrated" },
-        "ai": { "label": "AI LLM", "sublabel": "Agent decisions" },
-        "automation": { "label": "Real-time Feedback", "sublabel": "Decision support" }
+        "machines": { "label": "Dialysis Machines", "sublabel": "BP, UF, Blood Flow" },
+        "data": { "label": "Clinical Data Lake", "sublabel": "Labs, Vitals, Rx" },
+        "ai": { "label": "AI Analytics", "sublabel": "IDH, UF, Kt/V" },
+        "automation": { "label": "Clinical Alerts", "sublabel": "Real-time CDSS" }
       }
     },
     "stats": {
@@ -61,12 +61,12 @@
     "why": {
       "tag": "The Problem We Solve",
       "title": "Dialysis is a high-frequency, high-risk, experience-dependent medical scenario",
-      "description1": "Hypotension, volume management, prescription adjustment, and complication alerts almost entirely depend on individual physician and nurse experience. Data is scattered and fragmented, unable to form real-time decision support.",
-      "description2": "We use AI, IoT and LLMs to upgrade dialysis—a high-risk medical scenario heavily dependent on human experience—into a predictable, interventionable, and scalably replicable smart dialysis system.",
-      "clinical": { "title": "Clinical Value", "desc": "Reduced adverse events, improved treatment safety and consistency" },
-      "operational": { "title": "Operational Value", "desc": "50 smart dialysis centers deployed, scalably replicable" },
-      "strategic": { "title": "Strategic Value", "desc": "Not selling software, but restructuring how dialysis centers operate" },
-      "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027" }
+      "description1": "Intradialytic hypotension (IDH) occurs in 20-30% of sessions. Volume overload leads to cardiovascular events. UF rate miscalculation causes cramping and hemodynamic instability. Dry weight assessment relies on clinical judgment with significant inter-physician variability.",
+      "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events 15-30 minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
+      "clinical": { "title": "IDH Prevention", "desc": "30% reduction in intradialytic hypotension through predictive alerts" },
+      "operational": { "title": "Deployed Scale", "desc": "50 smart dialysis centers, 30 self-operated, 3,000+ machines" },
+      "strategic": { "title": "Clinical Outcomes", "desc": "Improved Kt/V adequacy, reduced hospitalization rates" },
+      "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027, targeting 300 total" }
     },
     "finalCta": {
       "title": "Already Deployed, Not Just a Concept",
