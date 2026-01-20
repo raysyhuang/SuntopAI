@@ -1,0 +1,382 @@
+{
+  "nav": {
+    "home": "Home",
+    "platform": "Platform",
+    "clinical": "Clinical Applications",
+    "deployment": "Deployment",
+    "company": "Company",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "home": {
+    "tag": "Dialysis Intelligence Platform",
+    "hero": {
+      "title1": "AI-Driven Dialysis Intelligence",
+      "title2": "and Automation",
+      "subtitle": "Building the operating system for next-generation dialysis care.",
+      "description": "We integrate dialysis machines, patient vitals, and clinical workflows through AI, IoT, and automation to enable safer, more consistent, and scalable dialysis operations."
+    },
+    "cta": {
+      "explore": "Explore Platform",
+      "contact": "Contact Us",
+      "start": "Start a Conversation",
+      "learn": "Learn More"
+    },
+    "pillars": {
+      "tag": "Core Capabilities",
+      "title": "From Device Data to Clinical Decisions",
+      "description": "Dialysis produces continuous, high-frequency clinical data. Most of it remains underutilized. Our platform transforms this data into real-time intelligence.",
+      "iot": {
+        "title": "IoT Data Infrastructure",
+        "description": "Dialysis machines, BP monitors, scales, sensors, and EHR interfaces unified into a real-time data layer.",
+        "features": ["High-frequency data capture", "Secure device connectivity", "Structured data pipelines"]
+      },
+      "ai": {
+        "title": "AI Intelligence Engine",
+        "description": "Risk detection, trend analysis, personalized dialysis parameters, and early warning systems.",
+        "features": ["Intradialytic BP analysis", "Ultrafiltration risk detection", "Personalized insights"]
+      },
+      "automation": {
+        "title": "Automation & Decision Support",
+        "description": "Assisted dialysis control, workflow automation, remote supervision, and standardized execution.",
+        "features": ["Protocol enforcement", "Remote oversight", "Workflow standardization"]
+      }
+    },
+    "flow": {
+      "title": "Machine → Data → AI → Action",
+      "description": "A vertically integrated platform that transforms real-time dialysis data into clinical intelligence and assisted automation.",
+      "steps": {
+        "machines": { "label": "Dialysis Machines", "sublabel": "IoT Devices" },
+        "data": { "label": "Data Layer", "sublabel": "Real-time Streaming" },
+        "ai": { "label": "AI Engine", "sublabel": "Intelligence" },
+        "automation": { "label": "Automation", "sublabel": "Decision Support" }
+      }
+    },
+    "stats": {
+      "reduction": "Reduction in adverse events",
+      "response": "Faster clinical response",
+      "monitoring": "Continuous monitoring",
+      "stations": "Dialysis stations connected"
+    },
+    "why": {
+      "tag": "Why This Matters",
+      "title": "Dialysis is one of the most data-intensive clinical procedures",
+      "description1": "Yet decision-making remains largely manual and experience-dependent. Continuous high-frequency machine and patient data is underutilized. Clinical variability leads to preventable adverse events.",
+      "description2": "We exist to transform dialysis data into actionable intelligence and safe automation, enabling better care at scale.",
+      "clinical": { "title": "Clinical Impact", "desc": "Fewer intradialytic adverse events and improved treatment stability" },
+      "operational": { "title": "Operational Impact", "desc": "Centralized oversight and scalable operations" },
+      "strategic": { "title": "Strategic Impact", "desc": "Data moat built on real-world dialysis operations" },
+      "longterm": { "title": "Long-term Value", "desc": "Alignment with outcome-driven care models" }
+    },
+    "finalCta": {
+      "title": "Ready to transform dialysis care?",
+      "description": "We welcome discussions with strategic investors, clinical partners, and healthcare operators aligned with long-term transformation of dialysis care."
+    }
+  },
+  "platform": {
+    "tag": "Technology",
+    "title": "The Smart Dialysis Platform",
+    "subtitle": "A modular AI and automation platform designed specifically for dialysis environments.",
+    "features": {
+      "native": "Dialysis-Native",
+      "realtime": "Real-Time Intelligence",
+      "guardrails": "Clinical Guardrails"
+    },
+    "architecture": {
+      "title": "Platform Architecture",
+      "description": "Three integrated layers working together to transform dialysis data into clinical intelligence and safe automation."
+    },
+    "layers": {
+      "data": {
+        "title": "Device & Data Layer",
+        "subtitle": "The foundation of safe automation",
+        "description": "We connect dialysis machines, vital sign devices, and clinical systems to create a unified, real-time data layer across treatment sessions.",
+        "signal": "This layer ensures reliable, structured, and continuous data capture during every treatment.",
+        "capabilities": [
+          "Dialysis machines from multiple vendors",
+          "Blood pressure monitors & vital signs",
+          "High-frequency streaming data",
+          "Secure device connectivity"
+        ]
+      },
+      "intelligence": {
+        "title": "Intelligence Layer",
+        "subtitle": "Clinical intelligence built on real-world data",
+        "description": "Our AI models analyze trends, detect risk patterns, and generate clinically relevant insights during dialysis, not after complications occur.",
+        "signal": "The system augments clinical judgment rather than replacing it.",
+        "capabilities": [
+          "Intradialytic blood pressure trend analysis",
+          "Ultrafiltration risk detection",
+          "Personalized parameter recommendations",
+          "Early warning signals for adverse events"
+        ]
+      },
+      "automation": {
+        "title": "Automation & Control Layer",
+        "subtitle": "Execution with guardrails",
+        "description": "We enable assisted control, protocol enforcement, and remote supervision to reduce variability and operational burden while keeping clinicians in control.",
+        "signal": "Automation is applied only where safety, predictability, and clinical consensus exist.",
+        "capabilities": [
+          "Assisted dialysis parameter adjustment",
+          "Protocol-based automation",
+          "Workflow standardization",
+          "Remote monitoring and supervision"
+        ]
+      }
+    },
+    "differentiators": {
+      "title": "Why Our Platform Wins",
+      "description": "Technical and strategic advantages built for long-term dialysis transformation.",
+      "items": [
+        { "title": "Dialysis-Native Focus", "description": "Built specifically for dialysis, not adapted from generic healthcare AI." },
+        { "title": "Deep Integration", "description": "Machine-level and workflow-level connectivity across the care continuum." },
+        { "title": "Clinical Guardrails", "description": "Automation with safety-first design, not black-box AI." },
+        { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
+      ]
+    }
+  },
+  "clinical": {
+    "tag": "Clinical Applications",
+    "title": "From Technology to Clinical Outcomes",
+    "subtitle": "Translating AI and automation capabilities into measurable improvements in dialysis care delivery, patient safety, and operational efficiency.",
+    "apps": {
+      "inCenter": {
+        "title": "In-Center Hemodialysis",
+        "description": "Real-time monitoring and AI-powered alerts for safer dialysis sessions.",
+        "outcomes": [
+          "Continuous monitoring during treatment",
+          "Real-time alerts for instability",
+          "Reduced intradialytic adverse events",
+          "Improved consistency across shifts"
+        ],
+        "before": "Periodic manual checks, reactive intervention after events occur",
+        "after": "Continuous AI monitoring with proactive alerts before complications",
+        "aiRole": "Continuous analysis of vital signs and machine parameters to detect early warning signs and trigger proactive interventions."
+      },
+      "networked": {
+        "title": "Networked Dialysis Centers",
+        "description": "Centralized oversight and standardized quality across multiple sites.",
+        "outcomes": [
+          "Centralized oversight across multiple sites",
+          "Standardized treatment quality",
+          "Scalable operations without loss of control",
+          "Support for regional or national networks"
+        ],
+        "before": "Siloed centers with variable quality and no unified oversight",
+        "after": "Unified platform enabling real-time visibility and standardization",
+        "aiRole": "Aggregated intelligence across all connected centers to identify patterns, benchmark performance, and ensure consistent care delivery."
+      },
+      "decision": {
+        "title": "Physician Decision Support",
+        "description": "Data-driven insights to support clinical decision-making.",
+        "outcomes": [
+          "Longitudinal patient trend analysis",
+          "Data-driven dry weight and UF insights",
+          "Reduced cognitive load during busy shifts",
+          "Objective support for clinical decisions"
+        ],
+        "before": "Manual review of scattered data, experience-dependent decisions",
+        "after": "AI-synthesized insights with trend analysis and risk stratification",
+        "aiRole": "Synthesizing multi-session patient data into actionable insights for treatment optimization and risk stratification."
+      }
+    },
+    "beforeAfter": {
+      "before": "Before",
+      "after": "After"
+    },
+    "aiRoleLabel": "AI's Role",
+    "statement": {
+      "title": "Clinical Augmentation, Not Replacement",
+      "description": "Our platform is designed to augment clinical expertise, not replace it. Every AI recommendation and automated action is built with clinical guardrails, transparency, and physician oversight as core design principles.",
+      "quote": "\"The goal is to free clinicians from routine monitoring tasks so they can focus on complex clinical decisions and patient relationships.\""
+    }
+  },
+  "deployment": {
+    "tag": "Deployment",
+    "title": "Designed for Real-World Dialysis Operations",
+    "subtitle": "Our systems are built to integrate into existing dialysis environments with minimal disruption and maximum flexibility.",
+    "statement": "This is not a concept system. It is designed for real dialysis environments.",
+    "features": {
+      "title": "Deployment-Ready by Design",
+      "description": "Built with the practical realities of healthcare IT, clinical workflows, and regulatory requirements in mind.",
+      "items": [
+        { "title": "Multi-Vendor Compatibility", "description": "Compatible with existing dialysis machine ecosystems from multiple manufacturers. No rip-and-replace required." },
+        { "title": "Flexible Deployment", "description": "On-premise, cloud, or hybrid deployment options to meet your infrastructure and compliance requirements." },
+        { "title": "Minimal Disruption", "description": "Incremental rollout designed to integrate into existing clinical workflows without operational downtime." },
+        { "title": "Security by Design", "description": "Enterprise-grade security architecture with encryption at rest and in transit, role-based access controls." },
+        { "title": "Regulatory Awareness", "description": "Built with healthcare regulatory requirements in mind, supporting compliance with local and international standards." },
+        { "title": "Scalable Architecture", "description": "From single centers to national networks, the platform scales without architectural changes." }
+      ]
+    },
+    "process": {
+      "title": "Deployment Process",
+      "description": "A structured, clinically supervised approach to implementation.",
+      "steps": [
+        { "step": "01", "title": "Assessment", "description": "Evaluate current infrastructure, machine compatibility, and integration requirements." },
+        { "step": "02", "title": "Pilot Deployment", "description": "Limited deployment with select dialysis stations to validate integration and clinical workflows." },
+        { "step": "03", "title": "Clinical Validation", "description": "Work with clinical teams to fine-tune alerts, thresholds, and decision support parameters." },
+        { "step": "04", "title": "Scale & Optimize", "description": "Expand deployment across facilities with continuous monitoring and optimization." }
+      ]
+    },
+    "security": {
+      "tag": "Security & Compliance",
+      "title": "Enterprise-Grade Security",
+      "description": "Healthcare data demands the highest levels of protection. Our platform is built with security and compliance as foundational requirements, not afterthoughts.",
+      "features": [
+        "End-to-end encryption for all data",
+        "Role-based access controls",
+        "Audit logging and traceability",
+        "Regular security assessments",
+        "Compliance-ready architecture"
+      ],
+      "stats": {
+        "encryption": { "label": "Data Encryption", "value": "AES-256" },
+        "access": { "label": "Access Control", "value": "RBAC" },
+        "audit": { "label": "Audit Logs", "value": "Complete" },
+        "compliance": { "label": "Compliance", "value": "Ready" }
+      }
+    },
+    "cta": {
+      "title": "Ready to discuss deployment?",
+      "description": "Our team is ready to assess your infrastructure and design a deployment plan tailored to your needs.",
+      "button": "Schedule a Discussion"
+    }
+  },
+  "company": {
+    "tag": "Company",
+    "title": "Why We Exist",
+    "subtitle": "Dialysis generates some of the most complex real-time clinical data. We exist to transform that data into actionable intelligence and safe automation.",
+    "mission": {
+      "title": "Mission",
+      "description": "To improve the safety, consistency, and efficiency of dialysis care through AI-driven intelligence and automation, enabling clinicians to deliver better outcomes at scale."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To become the core intelligence and automation layer powering dialysis care at scale, enabling safer treatments, operational excellence, and data-driven clinical decisions worldwide."
+    },
+    "about": {
+      "title": "About Suntop AI",
+      "paragraphs": [
+        "Suntop AI is an AI, IoT, and automation company focused exclusively on dialysis. We are building the operating system for next-generation dialysis care.",
+        "Dialysis is one of the most data-intensive medical procedures, yet most of that data remains underutilized. Clinical variability leads to preventable adverse events. Scaling dialysis networks increases operational risk and inconsistency.",
+        "We address this gap by integrating dialysis machines, patient vitals, and clinical workflows through a unified AI platform that transforms real-time data into clinical intelligence and assisted automation.",
+        "Our approach is dialysis-native, not adapted from generic healthcare AI. We focus on deep integration at the machine and workflow level, with automation that includes clinical guardrails and physician oversight by design."
+      ]
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "Principles that guide how we build technology and work with clinical partners.",
+      "items": [
+        { "title": "Patient Safety First", "description": "Every feature and decision is evaluated through the lens of patient safety and clinical outcomes." },
+        { "title": "Clinical Relevance", "description": "Technology serves clinical needs, not the other way around. We build what matters for care delivery." },
+        { "title": "Transparency", "description": "Clear explanations, auditable decisions, and honest communication with all stakeholders." },
+        { "title": "Partnership", "description": "We succeed when our clinical partners succeed. Long-term relationships over short-term transactions." }
+      ]
+    },
+    "leadership": {
+      "title": "Leadership",
+      "description": "Our team combines experience in dialysis operations, clinical medicine, AI systems, and medical device integration.",
+      "note": "We focus on long-term clinical value rather than short-term technology trends."
+    },
+    "stats": {
+      "founded": "Founded",
+      "team": "Team Members",
+      "partners": "Clinical Partners",
+      "stations": "Stations Connected"
+    }
+  },
+  "news": {
+    "tag": "News & Updates",
+    "title": "Company Updates",
+    "subtitle": "Clinical deployments, platform milestones, academic collaborations, and industry presence.",
+    "categories": {
+      "all": "All Updates",
+      "deployment": "Deployments",
+      "partnership": "Partnerships",
+      "milestone": "Milestones",
+      "conference": "Conferences"
+    },
+    "featured": "Featured",
+    "allUpdates": "All Updates",
+    "readMore": "Read more",
+    "subscribe": {
+      "title": "Stay Informed",
+      "description": "Subscribe to receive updates on clinical deployments, platform milestones, and industry insights.",
+      "placeholder": "Enter your email",
+      "button": "Subscribe"
+    }
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Let's Connect",
+    "subtitle": "For clinical collaboration, deployment discussions, or strategic partnerships, we welcome the opportunity to connect.",
+    "reasons": {
+      "clinical": { "title": "Clinical Partnership", "description": "Interested in deploying our platform at your dialysis center or network." },
+      "investment": { "title": "Investment Inquiry", "description": "Strategic investors aligned with healthcare transformation." },
+      "collaboration": { "title": "Strategic Collaboration", "description": "Equipment manufacturers, healthcare systems, or research institutions." }
+    },
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "organization": "Organization",
+      "organizationPlaceholder": "Your organization",
+      "reason": "Reason for Contact",
+      "reasonPlaceholder": "Select a reason",
+      "reasonOptions": {
+        "clinical": "Clinical Partnership",
+        "investment": "Investment Inquiry",
+        "collaboration": "Strategic Collaboration",
+        "media": "Media Inquiry",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "How can we help?",
+      "submit": "Send Message",
+      "success": {
+        "title": "Message Received",
+        "description": "We'll be in touch shortly."
+      }
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "headquarters": "Headquarters",
+      "location": "Shanghai, China",
+      "global": "Global Operations",
+      "phone": "Phone",
+      "phoneValue": "Available upon request",
+      "response": {
+        "title": "Response Time",
+        "description": "We aim to respond to all inquiries within 2 business days. For urgent clinical matters, please indicate in your message."
+      }
+    }
+  },
+  "footer": {
+    "description": "AI-driven dialysis intelligence and automation. Building the operating system for next-generation dialysis care.",
+    "platform": "Platform",
+    "clinical": "Clinical",
+    "company": "Company",
+    "links": {
+      "techOverview": "Technology Overview",
+      "dataInfra": "Data Infrastructure",
+      "aiEngine": "AI Engine",
+      "automation": "Automation",
+      "inCenter": "In-Center Hemodialysis",
+      "networked": "Networked Centers",
+      "decisionSupport": "Decision Support",
+      "aboutUs": "About Us",
+      "leadership": "Leadership",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "legal": {
+      "rights": "All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "compliance": "Compliance"
+    }
+  }
+}

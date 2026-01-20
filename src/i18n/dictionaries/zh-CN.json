@@ -1,0 +1,382 @@
+{
+  "nav": {
+    "home": "首页",
+    "platform": "平台",
+    "clinical": "临床应用",
+    "deployment": "部署",
+    "company": "公司",
+    "news": "新闻",
+    "contact": "联系我们"
+  },
+  "home": {
+    "tag": "透析智能平台",
+    "hero": {
+      "title1": "AI驱动的透析智能",
+      "title2": "与自动化",
+      "subtitle": "构建下一代透析护理的操作系统",
+      "description": "我们通过AI、物联网和自动化整合透析设备、患者生命体征和临床工作流程，实现更安全、更一致、可扩展的透析运营。"
+    },
+    "cta": {
+      "explore": "探索平台",
+      "contact": "联系我们",
+      "start": "开始对话",
+      "learn": "了解更多"
+    },
+    "pillars": {
+      "tag": "核心能力",
+      "title": "从设备数据到临床决策",
+      "description": "透析产生连续、高频的临床数据。其中大部分未被充分利用。我们的平台将这些数据转化为实时智能。",
+      "iot": {
+        "title": "物联网数据基础设施",
+        "description": "透析设备、血压监测仪、体重秤、传感器和电子病历接口统一到实时数据层。",
+        "features": ["高频数据采集", "安全设备连接", "结构化数据管道"]
+      },
+      "ai": {
+        "title": "AI智能引擎",
+        "description": "风险检测、趋势分析、个性化透析参数和早期预警系统。",
+        "features": ["透析中血压分析", "超滤风险检测", "个性化洞察"]
+      },
+      "automation": {
+        "title": "自动化与决策支持",
+        "description": "辅助透析控制、工作流程自动化、远程监督和标准化执行。",
+        "features": ["协议执行", "远程监督", "工作流程标准化"]
+      }
+    },
+    "flow": {
+      "title": "设备 → 数据 → AI → 行动",
+      "description": "一个垂直整合平台，将实时透析数据转化为临床智能和辅助自动化。",
+      "steps": {
+        "machines": { "label": "透析设备", "sublabel": "物联网设备" },
+        "data": { "label": "数据层", "sublabel": "实时流式传输" },
+        "ai": { "label": "AI引擎", "sublabel": "智能分析" },
+        "automation": { "label": "自动化", "sublabel": "决策支持" }
+      }
+    },
+    "stats": {
+      "reduction": "不良事件减少",
+      "response": "临床响应加快",
+      "monitoring": "持续监测",
+      "stations": "已连接透析站"
+    },
+    "why": {
+      "tag": "为什么重要",
+      "title": "透析是数据最密集的临床操作之一",
+      "description1": "然而，决策仍主要依赖手动和经验。连续的高频设备和患者数据未被充分利用。临床差异导致可预防的不良事件。",
+      "description2": "我们的存在是为了将透析数据转化为可操作的智能和安全的自动化，实现规模化的更好护理。",
+      "clinical": { "title": "临床影响", "desc": "减少透析中不良事件，提高治疗稳定性" },
+      "operational": { "title": "运营影响", "desc": "集中监督和可扩展运营" },
+      "strategic": { "title": "战略影响", "desc": "基于真实透析运营构建的数据护城河" },
+      "longterm": { "title": "长期价值", "desc": "与结果驱动的护理模式保持一致" }
+    },
+    "finalCta": {
+      "title": "准备好变革透析护理了吗？",
+      "description": "我们欢迎与战略投资者、临床合作伙伴和医疗运营商就透析护理的长期变革进行讨论。"
+    }
+  },
+  "platform": {
+    "tag": "技术",
+    "title": "智能透析平台",
+    "subtitle": "专为透析环境设计的模块化AI和自动化平台。",
+    "features": {
+      "native": "透析原生",
+      "realtime": "实时智能",
+      "guardrails": "临床护栏"
+    },
+    "architecture": {
+      "title": "平台架构",
+      "description": "三个集成层协同工作，将透析数据转化为临床智能和安全自动化。"
+    },
+    "layers": {
+      "data": {
+        "title": "设备与数据层",
+        "subtitle": "安全自动化的基础",
+        "description": "我们连接透析设备、生命体征设备和临床系统，在整个治疗过程中创建统一的实时数据层。",
+        "signal": "该层确保在每次治疗期间进行可靠、结构化和连续的数据采集。",
+        "capabilities": [
+          "多厂商透析设备",
+          "血压监测仪和生命体征",
+          "高频流式数据",
+          "安全设备连接"
+        ]
+      },
+      "intelligence": {
+        "title": "智能层",
+        "subtitle": "基于真实数据构建的临床智能",
+        "description": "我们的AI模型分析趋势、检测风险模式，并在透析过程中而非并发症发生后生成临床相关洞察。",
+        "signal": "系统增强而非取代临床判断。",
+        "capabilities": [
+          "透析中血压趋势分析",
+          "超滤风险检测",
+          "个性化参数推荐",
+          "不良事件早期预警信号"
+        ]
+      },
+      "automation": {
+        "title": "自动化与控制层",
+        "subtitle": "带护栏的执行",
+        "description": "我们实现辅助控制、协议执行和远程监督，在保持临床医生控制权的同时减少差异和运营负担。",
+        "signal": "自动化仅在安全性、可预测性和临床共识存在的情况下应用。",
+        "capabilities": [
+          "辅助透析参数调整",
+          "基于协议的自动化",
+          "工作流程标准化",
+          "远程监测和监督"
+        ]
+      }
+    },
+    "differentiators": {
+      "title": "为什么我们的平台能赢",
+      "description": "为长期透析变革构建的技术和战略优势。",
+      "items": [
+        { "title": "透析原生聚焦", "description": "专为透析构建，而非从通用医疗AI改编。" },
+        { "title": "深度整合", "description": "贯穿整个护理流程的设备级和工作流程级连接。" },
+        { "title": "临床护栏", "description": "以安全为先的自动化设计，而非黑盒AI。" },
+        { "title": "规模化就绪", "description": "为多中心网络设计，而非单站点试点。" }
+      ]
+    }
+  },
+  "clinical": {
+    "tag": "临床应用",
+    "title": "从技术到临床成果",
+    "subtitle": "将AI和自动化能力转化为透析护理交付、患者安全和运营效率的可衡量改进。",
+    "apps": {
+      "inCenter": {
+        "title": "中心内血液透析",
+        "description": "用于更安全透析会话的实时监测和AI驱动警报。",
+        "outcomes": [
+          "治疗期间持续监测",
+          "不稳定性实时警报",
+          "减少透析中不良事件",
+          "提高班次间一致性"
+        ],
+        "before": "定期手动检查，事件发生后被动干预",
+        "after": "持续AI监测，在并发症发生前主动警报",
+        "aiRole": "持续分析生命体征和设备参数，检测早期预警信号并触发主动干预。"
+      },
+      "networked": {
+        "title": "网络透析中心",
+        "description": "跨多个站点的集中监督和标准化质量。",
+        "outcomes": [
+          "跨多个站点的集中监督",
+          "标准化治疗质量",
+          "不失控制的可扩展运营",
+          "支持区域或全国透析网络"
+        ],
+        "before": "孤立的中心，质量参差不齐，没有统一监督",
+        "after": "统一平台实现实时可见性和标准化",
+        "aiRole": "跨所有连接中心的聚合智能，识别模式、基准性能并确保一致的护理交付。"
+      },
+      "decision": {
+        "title": "医生决策支持",
+        "description": "支持临床决策的数据驱动洞察。",
+        "outcomes": [
+          "纵向患者趋势分析",
+          "数据驱动的干体重和超滤洞察",
+          "减少繁忙班次的认知负担",
+          "临床决策的客观支持"
+        ],
+        "before": "手动审查分散数据，依赖经验的决策",
+        "after": "AI合成洞察，包含趋势分析和风险分层",
+        "aiRole": "将多次会话患者数据合成为可操作的洞察，用于治疗优化和风险分层。"
+      }
+    },
+    "beforeAfter": {
+      "before": "之前",
+      "after": "之后"
+    },
+    "aiRoleLabel": "AI的作用",
+    "statement": {
+      "title": "临床增强，而非替代",
+      "description": "我们的平台旨在增强临床专业知识，而非取代它。每个AI建议和自动化操作都以临床护栏、透明度和医生监督作为核心设计原则。",
+      "quote": "「目标是将临床医生从日常监测任务中解放出来，让他们能够专注于复杂的临床决策和患者关系。」"
+    }
+  },
+  "deployment": {
+    "tag": "部署",
+    "title": "为真实透析运营而设计",
+    "subtitle": "我们的系统旨在以最小干扰和最大灵活性集成到现有透析环境中。",
+    "statement": "这不是一个概念系统。它是为真实透析环境设计的。",
+    "features": {
+      "title": "从设计阶段即可部署",
+      "description": "考虑到医疗IT、临床工作流程和监管要求的实际现实而构建。",
+      "items": [
+        { "title": "多厂商兼容性", "description": "与多个制造商的现有透析设备生态系统兼容。无需更换设备。" },
+        { "title": "灵活部署", "description": "本地、云端或混合部署选项，满足您的基础设施和合规要求。" },
+        { "title": "最小干扰", "description": "渐进式部署，旨在无运营停机时间地集成到现有临床工作流程中。" },
+        { "title": "设计安全", "description": "企业级安全架构，包括静态和传输加密、基于角色的访问控制。" },
+        { "title": "监管意识", "description": "考虑医疗监管要求构建，支持符合本地和国际标准。" },
+        { "title": "可扩展架构", "description": "从单个中心到全国网络，平台无需架构更改即可扩展。" }
+      ]
+    },
+    "process": {
+      "title": "部署流程",
+      "description": "结构化、临床监督下的实施方法。",
+      "steps": [
+        { "step": "01", "title": "评估", "description": "评估当前基础设施、设备兼容性和集成要求。" },
+        { "step": "02", "title": "试点部署", "description": "在选定的透析站进行有限部署，验证集成和临床工作流程。" },
+        { "step": "03", "title": "临床验证", "description": "与临床团队合作，微调警报、阈值和决策支持参数。" },
+        { "step": "04", "title": "扩展与优化", "description": "通过持续监测和优化，在各设施扩展部署。" }
+      ]
+    },
+    "security": {
+      "tag": "安全与合规",
+      "title": "企业级安全",
+      "description": "医疗数据需要最高级别的保护。我们的平台将安全和合规作为基础要求而非事后考虑。",
+      "features": [
+        "所有数据端到端加密",
+        "基于角色的访问控制",
+        "审计日志和可追溯性",
+        "定期安全评估",
+        "合规就绪架构"
+      ],
+      "stats": {
+        "encryption": { "label": "数据加密", "value": "AES-256" },
+        "access": { "label": "访问控制", "value": "RBAC" },
+        "audit": { "label": "审计日志", "value": "完整" },
+        "compliance": { "label": "合规性", "value": "就绪" }
+      }
+    },
+    "cta": {
+      "title": "准备好讨论部署了吗？",
+      "description": "我们的团队随时准备评估您的基础设施，并设计适合您需求的部署计划。",
+      "button": "预约讨论"
+    }
+  },
+  "company": {
+    "tag": "公司",
+    "title": "我们为何存在",
+    "subtitle": "透析产生一些最复杂的实时临床数据。我们的存在是为了将这些数据转化为可操作的智能和安全的自动化。",
+    "mission": {
+      "title": "使命",
+      "description": "通过AI驱动的智能和自动化提高透析护理的安全性、一致性和效率，使临床医生能够规模化地提供更好的结果。"
+    },
+    "vision": {
+      "title": "愿景",
+      "description": "成为支撑规模化透析护理的核心智能和自动化层，在全球范围内实现更安全的治疗、卓越运营和数据驱动的临床决策。"
+    },
+    "about": {
+      "title": "关于Suntop AI",
+      "paragraphs": [
+        "Suntop AI是一家专注于透析的AI、物联网和自动化公司。我们正在构建下一代透析护理的操作系统。",
+        "透析是数据最密集的医疗操作之一，但大部分数据仍未被充分利用。临床差异导致可预防的不良事件。透析网络的扩展增加了运营风险和不一致性。",
+        "我们通过统一的AI平台整合透析设备、患者生命体征和临床工作流程，将实时数据转化为临床智能和辅助自动化，从而解决这一差距。",
+        "我们的方法是透析原生的，而非从通用医疗AI改编。我们专注于设备和工作流程级别的深度整合，自动化设计包含临床护栏和医生监督。"
+      ]
+    },
+    "values": {
+      "title": "我们的价值观",
+      "description": "指导我们构建技术和与临床合作伙伴合作的原则。",
+      "items": [
+        { "title": "患者安全第一", "description": "每个功能和决策都通过患者安全和临床结果的视角进行评估。" },
+        { "title": "临床相关性", "description": "技术服务于临床需求，而非相反。我们构建对护理交付重要的东西。" },
+        { "title": "透明度", "description": "清晰的解释、可审计的决策以及与所有利益相关者的诚实沟通。" },
+        { "title": "合作伙伴关系", "description": "我们的临床合作伙伴成功，我们才成功。长期关系优于短期交易。" }
+      ]
+    },
+    "leadership": {
+      "title": "领导团队",
+      "description": "我们的团队结合了透析运营、临床医学、AI系统和医疗设备整合方面的经验。",
+      "note": "我们专注于长期临床价值，而非短期技术趋势。"
+    },
+    "stats": {
+      "founded": "成立于",
+      "team": "团队成员",
+      "partners": "临床合作伙伴",
+      "stations": "已连接站点"
+    }
+  },
+  "news": {
+    "tag": "新闻与更新",
+    "title": "公司动态",
+    "subtitle": "临床部署、平台里程碑、学术合作和行业活动。",
+    "categories": {
+      "all": "所有更新",
+      "deployment": "部署",
+      "partnership": "合作伙伴",
+      "milestone": "里程碑",
+      "conference": "会议"
+    },
+    "featured": "精选",
+    "allUpdates": "所有更新",
+    "readMore": "阅读更多",
+    "subscribe": {
+      "title": "保持关注",
+      "description": "订阅以接收临床部署、平台里程碑和行业洞察的更新。",
+      "placeholder": "输入您的邮箱",
+      "button": "订阅"
+    }
+  },
+  "contact": {
+    "tag": "联系我们",
+    "title": "建立联系",
+    "subtitle": "对于临床合作、部署讨论或战略合作伙伴关系，我们欢迎与您联系。",
+    "reasons": {
+      "clinical": { "title": "临床合作", "description": "有兴趣在您的透析中心或网络部署我们的平台。" },
+      "investment": { "title": "投资咨询", "description": "与医疗变革保持一致的战略投资者。" },
+      "collaboration": { "title": "战略合作", "description": "设备制造商、医疗系统或研究机构。" }
+    },
+    "form": {
+      "title": "发送消息",
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "邮箱",
+      "emailPlaceholder": "your@email.com",
+      "organization": "组织",
+      "organizationPlaceholder": "您的组织",
+      "reason": "联系原因",
+      "reasonPlaceholder": "选择原因",
+      "reasonOptions": {
+        "clinical": "临床合作",
+        "investment": "投资咨询",
+        "collaboration": "战略合作",
+        "media": "媒体咨询",
+        "other": "其他"
+      },
+      "message": "消息",
+      "messagePlaceholder": "我们能如何帮助您？",
+      "submit": "发送消息",
+      "success": {
+        "title": "消息已收到",
+        "description": "我们会尽快与您联系。"
+      }
+    },
+    "info": {
+      "title": "联系信息",
+      "email": "邮箱",
+      "headquarters": "总部",
+      "location": "中国上海",
+      "global": "全球运营",
+      "phone": "电话",
+      "phoneValue": "联系后提供",
+      "response": {
+        "title": "响应时间",
+        "description": "我们力争在2个工作日内回复所有咨询。如有紧急临床事项，请在消息中说明。"
+      }
+    }
+  },
+  "footer": {
+    "description": "AI驱动的透析智能与自动化。构建下一代透析护理的操作系统。",
+    "platform": "平台",
+    "clinical": "临床",
+    "company": "公司",
+    "links": {
+      "techOverview": "技术概述",
+      "dataInfra": "数据基础设施",
+      "aiEngine": "AI引擎",
+      "automation": "自动化",
+      "inCenter": "中心内血液透析",
+      "networked": "网络中心",
+      "decisionSupport": "决策支持",
+      "aboutUs": "关于我们",
+      "leadership": "领导团队",
+      "news": "新闻",
+      "contact": "联系我们"
+    },
+    "legal": {
+      "rights": "保留所有权利。",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "compliance": "合规"
+    }
+  }
+}
