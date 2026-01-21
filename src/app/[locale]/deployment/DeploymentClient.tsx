@@ -2,9 +2,16 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight } from 'lucide-react'
+import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight, Package, Wrench, Truck, TrendingDown } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+
+const supplyChainIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+  Package,
+  Wrench,
+  Truck,
+  TrendingDown,
+}
 
 interface DeploymentClientProps {
   locale: Locale
@@ -210,6 +217,119 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
           </div>
         </div>
       </section>
+
+      {/* Smart Supply Chain */}
+      {t.supplyChain && (
+        <section className="relative py-32 bg-slate-925">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="label-tag mb-6 inline-block">{t.supplyChain.tag}</span>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+                {t.supplyChain.title}
+              </h2>
+              <p className="text-neutral-400 max-w-3xl mx-auto">
+                {t.supplyChain.subtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6 mb-16">
+              {t.supplyChain.features.map((feature, index) => {
+                const IconComponent = supplyChainIcons[feature.icon] || Package
+                return (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="card-institutional"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-6 h-6 text-accent-400" />
+                      </div>
+                      <div>
+                        <h3 className="font-display font-semibold text-white mb-2">{feature.title}</h3>
+                        <p className="text-neutral-500 text-sm leading-relaxed mb-4">{feature.description}</p>
+                        <ul className="space-y-2">
+                          {feature.items.map((item: string, itemIndex: number) => (
+                            <li key={itemIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
+                              <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+
+            {/* Supply Chain Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+            >
+              {Object.values(t.supplyChain.stats).map((stat) => (
+                <div key={stat.label} className="text-center p-6 bg-slate-900/50 rounded-xl border border-slate-700/50">
+                  <div className="text-3xl font-display font-semibold text-accent-400 mb-2">{stat.value}</div>
+                  <div className="text-neutral-500 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Cross Links */}
+      {t.crossLinks && (
+        <section className="relative py-24">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/platform`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.platform.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.platform.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.platform.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/clinical`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.clinical.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.clinical.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.clinical.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="relative py-24 bg-slate-925">

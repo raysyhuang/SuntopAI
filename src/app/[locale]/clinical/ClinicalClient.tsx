@@ -1,9 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+
+const sectionIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+  Users,
+  Shield,
+  Heart,
+  Monitor,
+  Sparkles,
+}
 
 interface ClinicalClientProps {
   locale: Locale
@@ -195,6 +204,108 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           </motion.div>
         </div>
       </section>
+
+      {/* Fine Management Section */}
+      {t.fineManagement && (
+        <section className="relative py-32 bg-slate-925">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="label-tag mb-6 inline-block">{t.fineManagement.tag}</span>
+              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+                {t.fineManagement.title}
+              </h2>
+              <p className="text-neutral-400 max-w-3xl mx-auto">
+                {t.fineManagement.subtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(t.fineManagement.sections).map(([key, section], index) => {
+                const IconComponent = sectionIcons[section.icon] || Shield
+                return (
+                  <motion.div
+                    key={key}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="card-institutional"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
+                      <IconComponent className="w-6 h-6 text-accent-400" />
+                    </div>
+                    <h3 className="font-display font-semibold text-white mb-2">{section.title}</h3>
+                    <p className="text-neutral-500 text-sm leading-relaxed mb-4">{section.description}</p>
+                    
+                    <ul className="space-y-2 mb-4">
+                      {section.features.map((feature: string, featureIndex: number) => (
+                        <li key={featureIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
+                          <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="mt-auto pt-4 border-t border-slate-700/50">
+                      <div className="flex items-center gap-2 text-accent-400 text-sm">
+                        <Cpu className="w-4 h-4" />
+                        <span>{section.aiSupport}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Cross Links */}
+      {t.crossLinks && (
+        <section className="relative py-24">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/platform`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.platform.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.platform.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.platform.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/deployment`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.deployment.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.deployment.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.deployment.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   )
 }

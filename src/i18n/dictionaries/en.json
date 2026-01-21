@@ -133,12 +133,24 @@
         { "title": "Clinical Guardrails", "description": "Automation with safety-first design, not black-box AI." },
         { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
       ]
+    },
+    "crossLinks": {
+      "clinical": {
+        "title": "Explore Clinical Applications",
+        "description": "How AI platform enables refined management",
+        "button": "View Clinical"
+      },
+      "deployment": {
+        "title": "Explore Deployment",
+        "description": "Smart supply chain and implementation",
+        "button": "View Deployment"
+      }
     }
   },
   "clinical": {
     "tag": "Clinical Applications",
-    "title": "From Technology to Clinical Outcomes",
-    "subtitle": "Translating AI and automation capabilities into measurable improvements in dialysis care delivery, patient safety, and operational efficiency.",
+    "title": "AI-Enabled Refined Management",
+    "subtitle": "Comprehensive dialysis center management through AI platform, ensuring medical quality, operational efficiency, and patient satisfaction.",
     "apps": {
       "inCenter": {
         "title": "In-Center Hemodialysis",
@@ -189,6 +201,85 @@
       "title": "Clinical Augmentation, Not Replacement",
       "description": "Our platform is designed to augment clinical expertise, not replace it. Every AI recommendation and automated action is built with clinical guardrails, transparency, and physician oversight as core design principles.",
       "quote": "\"The goal is to free clinicians from routine monitoring tasks so they can focus on complex clinical decisions and patient relationships.\""
+    },
+    "crossLinks": {
+      "platform": {
+        "title": "Explore AI Platform",
+        "description": "Core AI technology powering refined management",
+        "button": "View Platform"
+      },
+      "deployment": {
+        "title": "Explore Deployment",
+        "description": "Smart supply chain and system implementation",
+        "button": "View Deployment"
+      }
+    },
+    "fineManagement": {
+      "tag": "Refined Management",
+      "title": "AI-Enabled Comprehensive Dialysis Center Management",
+      "subtitle": "Achieving comprehensive improvement through clear organizational division, systematic quality control, attentive patient services, and advanced information technology.",
+      "sections": {
+        "organization": {
+          "title": "Organization & Staff Management",
+          "icon": "Users",
+          "description": "Clear responsibility definition from center managers to teams to each position, ensuring every workflow step has dedicated personnel.",
+          "features": [
+            "QC team, medical team, nursing team, nutrition team, rehabilitation team with clear division",
+            "Attending physician daily rounds: fluid removal, anticoagulation, vascular access, potassium assessment",
+            "Director weekly rounds: volume assessment, solute assessment, infection assessment",
+            "Daily meetings for cross-department collaboration and information sharing"
+          ],
+          "aiSupport": "AI auto-generates dialysis logs and communication records, assists daily round documentation"
+        },
+        "qualityControl": {
+          "title": "Quality Control Refinement",
+          "icon": "Shield",
+          "description": "Multi-dimensional QC teams monitoring medical safety, nutrition, foot care, vascular access and other critical dimensions.",
+          "features": [
+            "Medical safety QC team: adverse event classification and reporting",
+            "Vascular access QC team: access maintenance and assessment",
+            "Nutrition QC team: patient nutrition monitoring",
+            "Foot care QC team: ABI testing, monthly screening"
+          ],
+          "aiSupport": "AI real-time monitoring alerts, automatic adverse event tracking, QC report generation"
+        },
+        "patientService": {
+          "title": "Patient Service Refinement",
+          "icon": "Heart",
+          "description": "Personalized full-cycle services with attention to patient health details.",
+          "features": [
+            "Personalized dialysis logs and communication records",
+            "Monthly lab results bedside explanation and progress summary",
+            "Foot examination process and assessment meetings",
+            "Multiple packages: foot health nutrition care, vascular access management, physical therapy"
+          ],
+          "aiSupport": "AI intelligent lab result interpretation, personalized health recommendations"
+        },
+        "informationization": {
+          "title": "Informatization & Smart Management",
+          "icon": "Monitor",
+          "description": "Multiple IT solutions for real-time medical data monitoring, transmission, and sharing, improving efficiency and accuracy.",
+          "features": [
+            "Central monitoring system for all dialysis stations",
+            "5G blood pressure monitors with automatic data upload",
+            "Full integration with HIS/LIS/ABI systems",
+            "Auto-generated dialysis prescriptions and follow-up records"
+          ],
+          "aiSupport": "AI-driven smart scheduling, automatic medication cost calculation"
+        },
+        "innovation": {
+          "title": "Continuous Optimization & Innovation",
+          "icon": "Sparkles",
+          "description": "Continuous workflow optimization with new elements and innovative services for diversified treatment options.",
+          "features": [
+            "Staff performance evaluation and incentive system",
+            "Carbonated spring room design and experience services",
+            "External red light therapy devices",
+            "Continuous workflow process optimization"
+          ],
+          "aiSupport": "Data-driven performance analysis, AI-assisted process optimization recommendations"
+        }
+      }
     }
   },
   "deployment": {
@@ -234,6 +325,55 @@
         "access": { "label": "Access Control", "value": "RBAC" },
         "audit": { "label": "Audit Logs", "value": "Complete" },
         "compliance": { "label": "Compliance", "value": "Ready" }
+      }
+    },
+    "supplyChain": {
+      "tag": "Smart Supply Chain",
+      "title": "AI-Driven Dialysis Supply Chain Management",
+      "subtitle": "From consumables management to equipment maintenance, full-process intelligence to reduce operational costs and improve management efficiency.",
+      "features": [
+        {
+          "title": "Smart Consumables Management",
+          "icon": "Package",
+          "description": "AI predicts consumable usage, auto-triggers restocking, preventing shortages or expiration waste.",
+          "items": ["Intelligent prediction for dialyzers, blood tubing sets", "Automatic restocking alerts", "Batch tracing and expiry management", "Cost analysis and optimization suggestions"]
+        },
+        {
+          "title": "Predictive Equipment Maintenance",
+          "icon": "Wrench",
+          "description": "Based on equipment operation data, AI predicts maintenance needs, reducing unplanned downtime.",
+          "items": ["Real-time dialysis machine status monitoring", "Predictive maintenance reminders", "Early fault warnings", "Digitalized maintenance records"]
+        },
+        {
+          "title": "Logistics Optimization",
+          "icon": "Truck",
+          "description": "Smart dispatch and delivery, delivery robots for in-hospital logistics.",
+          "items": ["Multi-center delivery route optimization", "Delivery robots for in-hospital logistics", "Real-time inventory visualization", "Emergency allocation response"]
+        },
+        {
+          "title": "Cost Control Analysis",
+          "icon": "TrendingDown",
+          "description": "Comprehensive cost monitoring and analysis for lean operations.",
+          "items": ["Per-dialysis cost accounting", "Consumable usage efficiency analysis", "Labor cost optimization suggestions", "Real-time ROI tracking"]
+        }
+      ],
+      "stats": {
+        "inventory": { "label": "Inventory Accuracy", "value": "99.5%" },
+        "waste": { "label": "Consumable Waste Reduction", "value": "35%" },
+        "downtime": { "label": "Equipment Downtime Reduction", "value": "60%" },
+        "efficiency": { "label": "Operational Efficiency Increase", "value": "40%" }
+      }
+    },
+    "crossLinks": {
+      "platform": {
+        "title": "Explore AI Platform",
+        "description": "Core AI technology powering the smart supply chain",
+        "button": "View Platform"
+      },
+      "clinical": {
+        "title": "Explore Clinical Applications",
+        "description": "How refined management improves clinical outcomes",
+        "button": "View Clinical"
       }
     },
     "cta": {

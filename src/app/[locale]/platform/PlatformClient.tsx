@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Database, Brain, Cog, Server, Wifi, Shield, Activity, Cpu, GitBranch, Target, Layers, Zap } from 'lucide-react'
+import Link from 'next/link'
+import { Database, Brain, Cog, Server, Wifi, Shield, Activity, Cpu, GitBranch, Target, Layers, Zap, ArrowRight } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 
@@ -248,6 +249,48 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
           </div>
         </div>
       </section>
+
+      {/* Cross Links */}
+      {t.crossLinks && (
+        <section className="relative py-24">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/clinical`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.clinical.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.clinical.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.clinical.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <Link href={`/${locale}/deployment`} className="block card-institutional group hover:border-accent-500/50 transition-colors">
+                  <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    {t.crossLinks.deployment.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm mb-4">{t.crossLinks.deployment.description}</p>
+                  <span className="inline-flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    {t.crossLinks.deployment.button}
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   )
 }
