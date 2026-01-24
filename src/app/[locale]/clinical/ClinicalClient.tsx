@@ -7,27 +7,6 @@ import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, 
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
-import informationRoundsImage from '../../../../files/信息化查房.jpg'
-import labResultsEvaluationImage from '../../../../files/化验结果评估.jpg'
-import footScreeningImage from '../../../../files/足部筛查.jpg'
-import dailyStandupImage from '../../../../files/每日例会.jpg'
-import callAndResponseImage from '../../../../files/指认呼唤.jpg'
-import qualityControlWeeklyImage from '../../../../files/质控管理小组周例会.jpg'
-import qualityControlAllianceImage from '../../../../files/新安国际质控小组会议.jpg'
-import patientEducationLibraryImage from '../../../../files/患者宣教资料库.jpg'
-import patientReportBookImage from '../../../../files/患者说明用报告书.jpg'
-import nutritionActivityImage from '../../../../files/营养趣味猜谜活动.jpg'
-import nutritionActivityTwoImage from '../../../../files/营养趣味猜谜活动2.jpg'
-import rehabExerciseRoomImage from '../../../../files/康复运动设备.jpg'
-import carbonicFootBathImage from '../../../../files/碳酸泉足浴.jpg'
-import carbonicRoomImage from '../../../../files/碳酸泉室.jpg'
-import carbonicEffectImage from '../../../../files/碳酸泉效果.jpg'
-import trainingPocketGuideImage from '../../../../files/教育培训用口袋书.jpg'
-import trainingMaterialImage from '../../../../files/培训教材.jpg'
-import labResultsExplanationImage from '../../../../files/化验结果说明.jpg'
-import labResultsLiaoningExplanationImage from '../../../../files/辽宁杏康化验结果说明.jpg'
-import dailySharingImage from '../../../../files/每日例会经验分享.jpg'
-import standardizedOpsImage from '../../../../files/标准化操作.png'
 
 const sectionIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
   Users,
@@ -109,28 +88,28 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
   ]
 
   const infrastructureImages = [
-    informationRoundsImage,
-    labResultsEvaluationImage,
-    qualityControlWeeklyImage,
-    callAndResponseImage,
+    '/images/clinical/信息化查房.jpg',
+    '/images/clinical/化验结果评估.jpg',
+    '/images/clinical/质控管理小组周例会.jpg',
+    '/images/clinical/指认呼唤.jpg',
   ]
 
-  const galleryItems: Record<string, { src: string }> = {
-    educationLibrary: patientEducationLibraryImage,
-    patientReport: patientReportBookImage,
-    nutritionActivity: nutritionActivityImage,
-    nutritionActivityTwo: nutritionActivityTwoImage,
-    rehabRoom: rehabExerciseRoomImage,
-    carbonicBath: carbonicFootBathImage,
-    carbonicRoom: carbonicRoomImage,
-    carbonicEffect: carbonicEffectImage,
-    trainingPocketGuide: trainingPocketGuideImage,
-    trainingMaterial: trainingMaterialImage,
-    labResultsExplanation: labResultsExplanationImage,
-    labResultsLiaoning: labResultsLiaoningExplanationImage,
-    dailySharing: dailySharingImage,
-    qualityAlliance: qualityControlAllianceImage,
-    standardizedOps: standardizedOpsImage,
+  const galleryItems: Record<string, string> = {
+    educationLibrary: '/images/clinical/患者宣教资料库.jpg',
+    patientReport: '/images/clinical/患者说明用报告书.jpg',
+    nutritionActivity: '/images/clinical/营养趣味猜谜活动.jpg',
+    nutritionActivityTwo: '/images/clinical/营养趣味猜谜活动2.jpg',
+    rehabRoom: '/images/clinical/康复运动设备.jpg',
+    carbonicBath: '/images/clinical/碳酸泉足浴.jpg',
+    carbonicRoom: '/images/clinical/碳酸泉室.jpg',
+    carbonicEffect: '/images/clinical/碳酸泉效果.jpg',
+    trainingPocketGuide: '/images/clinical/教育培训用口袋书.jpg',
+    trainingMaterial: '/images/clinical/培训教材.jpg',
+    labResultsExplanation: '/images/clinical/化验结果说明.jpg',
+    labResultsLiaoning: '/images/clinical/辽宁杏康化验结果说明.jpg',
+    dailySharing: '/images/clinical/每日例会经验分享.jpg',
+    qualityAlliance: '/images/clinical/新安国际质控小组会议.jpg',
+    standardizedOps: '/images/clinical/标准化操作.png',
   }
 
   const galleryGroups = [
@@ -444,7 +423,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     }}
                   >
                     <img 
-                      src={dailyStandupImage.src} 
+                      src="/images/clinical/每日例会.jpg" 
                       alt="Daily team huddle"
                       className="w-full h-64 object-cover"
                     />
@@ -528,7 +507,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     }}
                   >
                     <img 
-                      src={footScreeningImage.src} 
+                      src="/images/clinical/足部筛查.jpg" 
                       alt="Foot screening"
                       className="w-full h-64 object-cover"
                     />
@@ -659,7 +638,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                           border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                         }}
                       >
-                        <img src={image.src} alt="" className="w-full h-32 object-cover" />
+                        <img src={image} alt="" className="w-full h-32 object-cover" />
                       </div>
                     ))}
                   </motion.div>
@@ -782,7 +761,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                           >
                             <button
                               type="button"
-                              onClick={() => setActiveGalleryItem({ src: image.src, alt: label })}
+                              onClick={() => setActiveGalleryItem({ src: image, alt: label })}
                               aria-label={`Open ${label}`}
                               className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007d73]/60"
                             >
@@ -794,7 +773,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                                 }}
                               >
                                 <img 
-                                  src={image.src} 
+                                  src={image} 
                                   alt={label} 
                                   className="w-full h-56 object-cover"
                                 />
