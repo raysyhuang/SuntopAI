@@ -8,7 +8,7 @@ export const localeNames: Record<Locale, string> = {
   'zh-TW': '繁體中文',
 }
 
-export const defaultLocale: Locale = 'en'
+export const defaultLocale: Locale = 'zh-CN'
 
 export function isValidLocale(locale: string): locale is Locale {
   return locales.includes(locale as Locale)

@@ -32,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} dark`} suppressHydrationWarning>
+    <html lang="zh-CN" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} light`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>
           {children}
