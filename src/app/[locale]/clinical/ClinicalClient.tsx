@@ -750,7 +750,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                         if (!image) {
                           return null
                         }
-                        const label = t.gallery.items?.[itemKey]?.title ?? itemKey
+                        const label = (t.gallery.items as Record<string, { title: string } | undefined>)?.[itemKey]?.title ?? itemKey
                         const transitionIndex = groupIndex * 10 + index
                         return (
                           <motion.div
