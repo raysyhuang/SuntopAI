@@ -70,8 +70,8 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
     },
     {
       id: 4,
-      title: locale === 'zh-CN' ? '智能管护与预警' : locale === 'zh-TW' ? '智能管護與預警' : locale === 'ja' ? 'インテリジェントケアと警告' : 'Intelligent Care & Alerts',
-      subtitle: locale === 'zh-CN' ? '管护模块' : locale === 'zh-TW' ? '管護模組' : locale === 'ja' ? 'ケア管理モジュール' : 'Care Management Module',
+      title: locale === 'zh-CN' ? '足部管理与风险预警' : locale === 'zh-TW' ? '足部管理與風險預警' : locale === 'ja' ? '足部管理とリスク警告' : 'Foot Management & Risk Alerts',
+      subtitle: locale === 'zh-CN' ? '足部管理模块' : locale === 'zh-TW' ? '足部管理模組' : locale === 'ja' ? '足部管理モジュール' : 'Foot Management Module',
       description: locale === 'zh-CN' ? '精细化储存、智能化分类、预测风险早预警，多维数据自动完成风险分级分类。' : locale === 'zh-TW' ? '精細化儲存、智慧化分類、預測風險早預警，多維資料自動完成風險分級分類。' : locale === 'ja' ? '精密な保存、インテリジェントな分類、予測的早期警告。' : 'Refined storage, intelligent classification, predictive early warning.',
       image: '/images/foot-management.jpg',
       gradient: 'bg-gradient-to-br from-purple-900/40 via-slate-900 to-slate-950',

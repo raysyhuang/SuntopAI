@@ -162,9 +162,9 @@
           "aiHighlight": "AI assistant preset templates for quick generation of clinical recommendations"
         },
         "careManagement": {
-          "title": "Care Management Module",
-          "subtitle": "Refined storage, intelligent classification, predictive early warning",
-          "description": "Comprehensive evaluation for new dialysis patients covering lower limb arteries, nerve sensation, skin and nail indicators. Deep coverage of every microcirculation indicator, with time-based photo comparison for clear trend visualization.",
+          "title": "Foot Management Module",
+          "subtitle": "Refined screening, intelligent grading, protecting every step",
+          "description": "Evaluation covers lower limb arteries, nerve sensation, skin and nail indicators, deeply capturing every subtle lesion. Supports instant wound photography for documentation, with historical comparison making disease progression trends immediately clear. System automatically performs risk grading based on multi-dimensional data, helping staff quickly identify high-risk patients for precise early warning and intervention.",
           "features": [
             {
               "title": "Risk Classification",
