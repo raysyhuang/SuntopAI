@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, ArrowRight, Building2, Users, Award, Mic } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from '@/components/ThemeProvider'
 
 interface NewsClientProps {
   locale: Locale
@@ -75,6 +76,7 @@ const formatDate = (dateString: string, locale: string) => {
 export default function NewsClient({ locale, dictionary }: NewsClientProps) {
   const t = dictionary.news
   const content = newsContent[locale] || newsContent.en
+  const { theme } = useTheme()
 
   const categories = [
     { id: 'all', label: t.categories.all },

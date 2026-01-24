@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu, MessageSquare, Layout, Footprints, Workflow, Wifi } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from '@/components/ThemeProvider'
 
 const sectionIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
   Users,
@@ -36,6 +37,7 @@ const outcomeIcons = [Activity, AlertTriangle, Shield, CheckCircle, Network, Tre
 
 export default function ClinicalClient({ locale, dictionary }: ClinicalClientProps) {
   const t = dictionary.clinical
+  const { theme } = useTheme()
 
   const applications = [
     {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight, Package, Wrench, Truck, TrendingDown } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from '@/components/ThemeProvider'
 
 const supplyChainIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
   Package,
@@ -28,6 +29,7 @@ const featureIcons = [Settings, Cloud, Server, Shield, Lock, Globe]
 
 export default function DeploymentClient({ locale, dictionary }: DeploymentClientProps) {
   const t = dictionary.deployment
+  const { theme } = useTheme()
 
   return (
     <div className="relative pt-20">

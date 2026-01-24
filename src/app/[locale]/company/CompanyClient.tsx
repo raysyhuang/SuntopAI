@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Target, Eye, Heart, Users, Award, Briefcase, Building } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from '@/components/ThemeProvider'
 
 interface CompanyClientProps {
   locale: Locale
@@ -27,6 +28,7 @@ const leadership = [
 
 export default function CompanyClient({ locale, dictionary }: CompanyClientProps) {
   const t = dictionary.company
+  const { theme } = useTheme()
 
   return (
     <div className="relative pt-20">

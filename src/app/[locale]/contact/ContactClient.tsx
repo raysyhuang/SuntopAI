@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { Mail, MapPin, Phone, Building2, Users, Briefcase, Send, CheckCircle } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from '@/components/ThemeProvider'
 
 interface ContactClientProps {
   locale: Locale
@@ -21,6 +22,7 @@ const reasonIcons = [Building2, Briefcase, Users]
 
 export default function ContactClient({ locale, dictionary }: ContactClientProps) {
   const t = dictionary.contact
+  const { theme } = useTheme()
 
   const [formState, setFormState] = useState({
     name: '',
