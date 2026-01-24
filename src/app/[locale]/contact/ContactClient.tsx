@@ -420,8 +420,14 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                   border: theme === 'light' ? 'none' : '1px solid rgba(20,184,166,0.2)'
                 }}
               >
+                <h4 
+                  className="font-medium mb-2 text-sm"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.info.response.title}
+                </h4>
                 <p className="text-sm" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
-                  {t.info.response}
+                  {t.info.response.description}
                 </p>
               </div>
             </motion.div>
