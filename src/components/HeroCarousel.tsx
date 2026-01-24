@@ -95,10 +95,11 @@ export default function HeroCarousel({ slides, autoPlayInterval = 5000 }: HeroCa
           }}
           className="absolute inset-0"
         >
-          {/* Image placeholder - using gradient as placeholder */}
+          {/* Background image with gradient fallback */}
           <div 
             className={`w-full h-full ${currentSlide.gradient}`}
             style={{
+              backgroundImage: currentSlide.image ? `url(${currentSlide.image})` : undefined,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

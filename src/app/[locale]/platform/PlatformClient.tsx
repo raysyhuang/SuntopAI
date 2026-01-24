@@ -42,14 +42,14 @@ const monitoringIcons: { [key: string]: any } = {
 export default function PlatformClient({ locale, dictionary }: PlatformClientProps) {
   const t = dictionary.platform
 
-  // Hero carousel slides
+  // Hero carousel slides with actual images
   const heroSlides = [
     {
       id: 1,
       title: locale === 'zh-CN' ? '智能查房系统' : locale === 'zh-TW' ? '智能查房系統' : locale === 'ja' ? 'スマート回診システム' : 'Smart Consultation System',
       subtitle: locale === 'zh-CN' ? '查房模块' : locale === 'zh-TW' ? '查房模組' : locale === 'ja' ? '回診モジュール' : 'Consultation Module',
       description: locale === 'zh-CN' ? '语音输入+AI即时优化，让电子病历书写不再是负担。解决医生「说一遍、再写一遍」的痛点。' : locale === 'zh-TW' ? '語音輸入+AI即時優化，讓電子病歷書寫不再是負擔。解決醫師「說一遍、再寫一遍」的痛點。' : locale === 'ja' ? '音声入力+AIリアルタイム最適化、電子カルテ記録を負担なく。' : 'Voice input + AI real-time optimization, making EMR documentation effortless.',
-      image: '/images/consultation.jpg',
+      image: '/images/digital-rounds.jpg',
       gradient: 'bg-gradient-to-br from-accent-900/40 via-slate-900 to-slate-950',
     },
     {
@@ -65,7 +65,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
       title: locale === 'zh-CN' ? '透析中央监控系统' : locale === 'zh-TW' ? '透析中央監控系統' : locale === 'ja' ? '透析中央監視システム' : 'Dialysis Central Monitoring',
       subtitle: locale === 'zh-CN' ? '守护神' : locale === 'zh-TW' ? '守護神' : locale === 'ja' ? 'ガーディアン' : 'Guardian',
       description: locale === 'zh-CN' ? '守护透析治疗安全，系统自动同步透析机与患者血压，颜色分级预警让异常状态一目了然。' : locale === 'zh-TW' ? '守護透析治療安全，系統自動同步透析機與病患血壓，顏色分級預警讓異常狀態一目了然。' : locale === 'ja' ? '透析治療の安全を守り、透析機と患者血圧を自動同期。' : 'Protecting dialysis safety with automatic BP synchronization and color-coded alerts.',
-      image: '/images/monitoring.jpg',
+      image: '/images/central-monitoring.jpg',
       gradient: 'bg-gradient-to-br from-emerald-900/40 via-slate-900 to-slate-950',
     },
     {
@@ -73,10 +73,27 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
       title: locale === 'zh-CN' ? '智能管护与预警' : locale === 'zh-TW' ? '智能管護與預警' : locale === 'ja' ? 'インテリジェントケアと警告' : 'Intelligent Care & Alerts',
       subtitle: locale === 'zh-CN' ? '管护模块' : locale === 'zh-TW' ? '管護模組' : locale === 'ja' ? 'ケア管理モジュール' : 'Care Management Module',
       description: locale === 'zh-CN' ? '精细化储存、智能化分类、预测风险早预警，多维数据自动完成风险分级分类。' : locale === 'zh-TW' ? '精細化儲存、智慧化分類、預測風險早預警，多維資料自動完成風險分級分類。' : locale === 'ja' ? '精密な保存、インテリジェントな分類、予測的早期警告。' : 'Refined storage, intelligent classification, predictive early warning.',
-      image: '/images/care-management.jpg',
+      image: '/images/foot-management.jpg',
       gradient: 'bg-gradient-to-br from-purple-900/40 via-slate-900 to-slate-950',
     },
+    {
+      id: 5,
+      title: locale === 'zh-CN' ? '应用场景' : locale === 'zh-TW' ? '應用場景' : locale === 'ja' ? 'アプリケーションシナリオ' : 'Application Scenarios',
+      subtitle: locale === 'zh-CN' ? '数字化透析中心' : locale === 'zh-TW' ? '數位化透析中心' : locale === 'ja' ? 'デジタル透析センター' : 'Digital Dialysis Center',
+      description: locale === 'zh-CN' ? '从软件、硬件到数据服务的深度融合方案，打造从数据采集到生态互联的「数字中枢」。' : locale === 'zh-TW' ? '從軟體、硬體到資料服務的深度融合方案，打造從資料採集到生態互聯的「數位中樞」。' : locale === 'ja' ? 'ソフトウェア、ハードウェア、データサービスの深い統合ソリューション。' : 'Deep integration of software, hardware, and data services.',
+      image: '/images/application-scenario.jpg',
+      gradient: 'bg-gradient-to-br from-cyan-900/40 via-slate-900 to-slate-950',
+    },
   ]
+
+  // Module images mapping
+  const moduleImages: { [key: string]: string } = {
+    consultation: '/images/consultation-template.png',
+    labEvaluation: '/images/lab-evaluation.jpg',
+    careManagement: '/images/foot-management.jpg',
+    medicalRecords: '/images/bp-weight-assistant.jpg',
+    labReminder: '/images/four-item-monitoring.jpg',
+  }
 
   const platformLayers = [
     {
@@ -226,11 +243,21 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       </div>
                     </div>
                     <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden">
-                        <div className="text-center p-8">
-                          <IconComponent className="w-16 h-16 text-accent-400/50 mx-auto mb-4" />
-                          <p className="text-neutral-500 text-sm">{module.title}</p>
-                        </div>
+                      <div className="aspect-video bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 overflow-hidden">
+                        {moduleImages[key] ? (
+                          <img 
+                            src={moduleImages[key]} 
+                            alt={module.title}
+                            className="w-full h-full object-cover"
+                          />
+                        ) : (
+                          <div className="flex items-center justify-center h-full">
+                            <div className="text-center p-8">
+                              <IconComponent className="w-16 h-16 text-accent-400/50 mx-auto mb-4" />
+                              <p className="text-neutral-500 text-sm">{module.title}</p>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </motion.div>
@@ -259,6 +286,55 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               <p className="text-neutral-400 max-w-3xl mx-auto">
                 {t.monitoringSystem.description}
               </p>
+            </motion.div>
+
+            {/* Monitoring System Images Gallery */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid md:grid-cols-2 gap-6 mb-12"
+            >
+              <div className="rounded-2xl overflow-hidden border border-slate-700">
+                <img 
+                  src="/images/central-monitoring.jpg" 
+                  alt={locale === 'zh-CN' ? '中央监控系统' : 'Central Monitoring System'}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4 bg-slate-900/80">
+                  <p className="text-white font-medium">{locale === 'zh-CN' ? '中央监控系统' : locale === 'zh-TW' ? '中央監控系統' : locale === 'ja' ? '中央監視システム' : 'Central Monitoring System'}</p>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-slate-700">
+                <img 
+                  src="/images/monitoring-treatment-status.jpg" 
+                  alt={locale === 'zh-CN' ? '治疗状态监控' : 'Treatment Status Monitoring'}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4 bg-slate-900/80">
+                  <p className="text-white font-medium">{locale === 'zh-CN' ? '治疗状态监控' : locale === 'zh-TW' ? '治療狀態監控' : locale === 'ja' ? '治療状態監視' : 'Treatment Status Monitoring'}</p>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-slate-700">
+                <img 
+                  src="/images/smart-terminal.jpg" 
+                  alt={locale === 'zh-CN' ? '智慧床旁终端' : 'Smart Bedside Terminal'}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4 bg-slate-900/80">
+                  <p className="text-white font-medium">{locale === 'zh-CN' ? '智慧床旁终端' : locale === 'zh-TW' ? '智慧床旁終端' : locale === 'ja' ? 'スマートベッドサイド端末' : 'Smart Bedside Terminal'}</p>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-slate-700">
+                <img 
+                  src="/images/four-item-monitoring.jpg" 
+                  alt={locale === 'zh-CN' ? '四项监测' : 'Four-Item Monitoring'}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-4 bg-slate-900/80">
+                  <p className="text-white font-medium">{locale === 'zh-CN' ? '四项监测' : locale === 'zh-TW' ? '四項監測' : locale === 'ja' ? '4項目モニタリング' : 'Four-Item Monitoring'}</p>
+                </div>
+              </div>
             </motion.div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu } from 'lucide-react'
+import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu, MessageSquare, Layout, Footprints, Workflow, Wifi } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 
@@ -12,6 +12,13 @@ const sectionIcons: { [key: string]: React.ComponentType<{ className?: string }>
   Heart,
   Monitor,
   Sparkles,
+  MessageSquare,
+  Layout,
+  Footprints,
+  TrendingUp,
+  Workflow,
+  Brain,
+  Wifi,
 }
 
 interface ClinicalClientProps {
@@ -205,64 +212,290 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
         </div>
       </section>
 
-      {/* Fine Management Section */}
-      {t.fineManagement && (
-        <section className="relative py-32 bg-slate-925">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <span className="label-tag mb-6 inline-block">{t.fineManagement.tag}</span>
-              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
-                {t.fineManagement.title}
-              </h2>
-              <p className="text-neutral-400 max-w-3xl mx-auto">
-                {t.fineManagement.subtitle}
-              </p>
-            </motion.div>
+      {/* Fine Management Section - Three Parts */}
+      {t.fineManagement && t.fineManagement.parts && (
+        <>
+          {/* Hero for Fine Management */}
+          <section className="relative py-24 bg-slate-925">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-8"
+              >
+                <span className="label-tag mb-6 inline-block">{t.fineManagement.tag}</span>
+                <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+                  {t.fineManagement.title}
+                </h2>
+                <p className="text-neutral-400 max-w-4xl mx-auto leading-relaxed">
+                  {t.fineManagement.subtitle}
+                </p>
+              </motion.div>
+            </div>
+          </section>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {Object.entries(t.fineManagement.sections).map(([key, section], index) => {
-                const IconComponent = sectionIcons[section.icon] || Shield
-                return (
+          {/* Part 1: Center Management */}
+          {t.fineManagement.parts.centerManagement && (
+            <section className="relative py-20">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                   <motion.div
-                    key={key}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="card-institutional"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
-                      <IconComponent className="w-6 h-6 text-accent-400" />
-                    </div>
-                    <h3 className="font-display font-semibold text-white mb-2">{section.title}</h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed mb-4">{section.description}</p>
-                    
-                    <ul className="space-y-2 mb-4">
-                      {section.features.map((feature: string, featureIndex: number) => (
-                        <li key={featureIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
-                          <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <span className="text-accent-400 text-sm font-medium uppercase tracking-wider mb-2 block">
+                      {t.fineManagement.parts.centerManagement.tag}
+                    </span>
+                    <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-2">
+                      {t.fineManagement.parts.centerManagement.title}
+                    </h3>
+                    <p className="text-accent-400 text-lg mb-4">
+                      {t.fineManagement.parts.centerManagement.subtitle}
+                    </p>
+                    <p className="text-neutral-400 max-w-3xl">
+                      {t.fineManagement.parts.centerManagement.description}
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="rounded-2xl overflow-hidden border border-slate-700"
+                  >
+                    <img 
+                      src="/images/application-scenario.jpg" 
+                      alt="Application Scenario"
+                      className="w-full h-64 object-cover"
+                    />
+                  </motion.div>
+                </div>
 
-                    <div className="mt-auto pt-4 border-t border-slate-700/50">
-                      <div className="flex items-center gap-2 text-accent-400 text-sm">
-                        <Cpu className="w-4 h-4" />
-                        <span>{section.aiSupport}</span>
-                      </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {Object.entries(t.fineManagement.parts.centerManagement.sections).map(([key, section]: [string, any], index) => {
+                    const IconComponent = sectionIcons[section.icon] || Shield
+                    return (
+                      <motion.div
+                        key={key}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="card-institutional flex flex-col"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
+                          <IconComponent className="w-6 h-6 text-accent-400" />
+                        </div>
+                        <h4 className="font-display font-semibold text-white mb-1">{section.title}</h4>
+                        <p className="text-accent-400/80 text-sm mb-3">{section.subtitle}</p>
+                        <p className="text-neutral-500 text-sm leading-relaxed mb-4">{section.description}</p>
+                        
+                        <ul className="space-y-2 mb-4 flex-grow">
+                          {section.features.map((feature: string, featureIndex: number) => (
+                            <li key={featureIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
+                              <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="mt-auto pt-4 border-t border-slate-700/50">
+                          <div className="flex items-center gap-2 text-accent-400 text-sm">
+                            <Cpu className="w-4 h-4" />
+                            <span>{section.aiSupport}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Part 2: Patient Management */}
+          {t.fineManagement.parts.patientManagement && (
+            <section className="relative py-20 bg-slate-925">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="rounded-2xl overflow-hidden border border-slate-700 lg:order-1 order-2"
+                  >
+                    <img 
+                      src="/images/foot-management.jpg" 
+                      alt="Foot Management"
+                      className="w-full h-64 object-cover"
+                    />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="lg:order-2 order-1"
+                  >
+                    <span className="text-accent-400 text-sm font-medium uppercase tracking-wider mb-2 block">
+                      {t.fineManagement.parts.patientManagement.tag}
+                    </span>
+                    <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-2">
+                      {t.fineManagement.parts.patientManagement.title}
+                    </h3>
+                    <p className="text-accent-400 text-lg mb-4">
+                      {t.fineManagement.parts.patientManagement.subtitle}
+                    </p>
+                    <p className="text-neutral-400 max-w-3xl">
+                      {t.fineManagement.parts.patientManagement.description}
+                    </p>
+                  </motion.div>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {Object.entries(t.fineManagement.parts.patientManagement.sections).map(([key, section]: [string, any], index) => {
+                    const IconComponent = sectionIcons[section.icon] || Heart
+                    return (
+                      <motion.div
+                        key={key}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="card-institutional flex flex-col"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
+                          <IconComponent className="w-6 h-6 text-accent-400" />
+                        </div>
+                        <h4 className="font-display font-semibold text-white mb-1">{section.title}</h4>
+                        <p className="text-accent-400/80 text-sm mb-3">{section.subtitle}</p>
+                        <p className="text-neutral-500 text-sm leading-relaxed mb-4">{section.description}</p>
+                        
+                        <ul className="space-y-2 mb-4 flex-grow">
+                          {section.features.map((feature: string, featureIndex: number) => (
+                            <li key={featureIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
+                              <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="mt-auto pt-4 border-t border-slate-700/50">
+                          <div className="flex items-center gap-2 text-accent-400 text-sm">
+                            <Cpu className="w-4 h-4" />
+                            <span>{section.aiSupport}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* Part 3: IT Infrastructure */}
+          {t.fineManagement.parts.itInfrastructure && (
+            <section className="relative py-20">
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <span className="text-accent-400 text-sm font-medium uppercase tracking-wider mb-2 block">
+                      {t.fineManagement.parts.itInfrastructure.tag}
+                    </span>
+                    <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-white mb-2">
+                      {t.fineManagement.parts.itInfrastructure.title}
+                    </h3>
+                    <p className="text-accent-400 text-lg mb-4">
+                      {t.fineManagement.parts.itInfrastructure.subtitle}
+                    </p>
+                    <p className="text-neutral-400 max-w-3xl">
+                      {t.fineManagement.parts.itInfrastructure.description}
+                    </p>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="grid grid-cols-2 gap-4"
+                  >
+                    <div className="rounded-xl overflow-hidden border border-slate-700">
+                      <img 
+                        src="/images/central-monitoring.jpg" 
+                        alt="Central Monitoring"
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                    <div className="rounded-xl overflow-hidden border border-slate-700">
+                      <img 
+                        src="/images/digital-rounds.jpg" 
+                        alt="Digital Rounds"
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                    <div className="rounded-xl overflow-hidden border border-slate-700">
+                      <img 
+                        src="/images/smart-terminal.jpg" 
+                        alt="Smart Terminal"
+                        className="w-full h-32 object-cover"
+                      />
+                    </div>
+                    <div className="rounded-xl overflow-hidden border border-slate-700">
+                      <img 
+                        src="/images/bp-weight-assistant.jpg" 
+                        alt="BP Assessment"
+                        className="w-full h-32 object-cover"
+                      />
                     </div>
                   </motion.div>
-                )
-              })}
-            </div>
-          </div>
-        </section>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {Object.entries(t.fineManagement.parts.itInfrastructure.sections).map(([key, section]: [string, any], index) => {
+                    const IconComponent = sectionIcons[section.icon] || Monitor
+                    return (
+                      <motion.div
+                        key={key}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        className="card-institutional flex flex-col"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
+                          <IconComponent className="w-6 h-6 text-accent-400" />
+                        </div>
+                        <h4 className="font-display font-semibold text-white mb-1">{section.title}</h4>
+                        <p className="text-accent-400/80 text-sm mb-3">{section.subtitle}</p>
+                        <p className="text-neutral-500 text-sm leading-relaxed mb-4">{section.description}</p>
+                        
+                        <ul className="space-y-2 mb-4 flex-grow">
+                          {section.features.map((feature: string, featureIndex: number) => (
+                            <li key={featureIndex} className="flex items-start gap-2 text-neutral-400 text-sm">
+                              <CheckCircle className="w-4 h-4 text-accent-500 flex-shrink-0 mt-0.5" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        <div className="mt-auto pt-4 border-t border-slate-700/50">
+                          <div className="flex items-center gap-2 text-accent-400 text-sm">
+                            <Cpu className="w-4 h-4" />
+                            <span>{section.aiSupport}</span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </div>
+            </section>
+          )}
+        </>
       )}
 
       {/* Cross Links */}
