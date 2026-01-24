@@ -42,7 +42,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
                 <span className="text-white font-display font-bold text-lg">S</span>
               </div>
               <span className="font-display font-semibold text-xl tracking-tight text-white">
-                Suntop<span className="text-accent-500">.AI</span>
+                Suntop<span className="text-accent-500">AI</span>
               </span>
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed mb-6 max-w-sm">

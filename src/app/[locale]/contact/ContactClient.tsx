@@ -228,8 +228,8 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                     </div>
                     <div>
                       <h3 className="font-medium text-white mb-1">{t.info.email}</h3>
-                      <a href="mailto:contact@suntop.ai" className="text-neutral-400 hover:text-accent-400 transition-colors">
-                        contact@suntop.ai
+                      <a href="mailto:contact@suntopai.com" className="text-neutral-400 hover:text-accent-400 transition-colors">
+                        contact@suntopai.com
                       </a>
                     </div>
                   </div>

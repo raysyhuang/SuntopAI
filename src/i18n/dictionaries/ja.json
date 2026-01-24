@@ -55,7 +55,7 @@
     "stats": {
       "reduction": "有害事象の削減",
       "response": "臨床対応の高速化",
-      "monitoring": "継続的モニタリング",
+      "monitoring": "データ収集間隔",
       "stations": "接続された透析装置"
     },
     "why": {

@@ -211,10 +211,10 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Building, value: '2022', label: t.stats.founded },
+              { icon: Building, value: '50+', label: t.stats.founded },
               { icon: Users, value: '30+', label: t.stats.team },
-              { icon: Award, value: '5+', label: t.stats.partners },
-              { icon: Briefcase, value: '100+', label: t.stats.stations },
+              { icon: Award, value: '25+', label: t.stats.partners },
+              { icon: Briefcase, value: '3000+', label: t.stats.stations },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}

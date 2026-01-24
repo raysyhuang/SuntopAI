@@ -460,7 +460,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 <h3 className="font-display text-xl font-semibold text-white mb-2">
                   {t.partners.categories.publicHospitals}
                 </h3>
-                <div className="text-4xl font-display font-semibold text-accent-400 mb-2">10+</div>
+                <div className="text-4xl font-display font-semibold text-accent-400 mb-2">5+</div>
                 <p className="text-sm text-neutral-500">
                   {locale === 'zh-CN' ? '标杆性公立医院' : locale === 'zh-TW' ? '標杆性公立醫院' : locale === 'ja' ? '著名公立病院' : 'Landmark public hospitals'}
                 </p>
@@ -477,7 +477,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 <h3 className="font-display text-xl font-semibold text-white mb-2">
                   {t.partners.categories.privateHospitals}
                 </h3>
-                <div className="text-4xl font-display font-semibold text-accent-400 mb-2">10+</div>
+                <div className="text-4xl font-display font-semibold text-accent-400 mb-2">20+</div>
                 <p className="text-sm text-neutral-500">
                   {locale === 'zh-CN' ? '知名民营医院' : locale === 'zh-TW' ? '知名民營醫院' : locale === 'ja' ? '著名民間病院' : 'Renowned private hospitals'}
                 </p>

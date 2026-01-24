@@ -52,8 +52,8 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
   const impactStats = [
     { value: '40%', label: t.stats.reduction, icon: Shield },
     { value: '3x', label: t.stats.response, icon: Zap },
-    { value: '24/7', label: t.stats.monitoring, icon: Activity },
-    { value: '100+', label: t.stats.stations, icon: Server },
+    { value: '5s', label: t.stats.monitoring, icon: Activity },
+    { value: '3000+', label: t.stats.stations, icon: Server },
   ]
 
   return (

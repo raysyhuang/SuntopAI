@@ -55,7 +55,7 @@
     "stats": {
       "reduction": "Reduction in adverse events",
       "response": "Faster clinical response",
-      "monitoring": "Continuous monitoring",
+      "monitoring": "Data collection interval",
       "stations": "Dialysis devices connected"
     },
     "why": {

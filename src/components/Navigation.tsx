@@ -68,7 +68,7 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                 <span className="text-white font-display font-bold text-lg">S</span>
               </div>
               <span className="font-display font-semibold text-xl tracking-tight text-white group-hover:text-accent-400 transition-colors">
-                Suntop<span className="text-accent-500">.AI</span>
+                Suntop<span className="text-accent-500">AI</span>
               </span>
             </Link>
 
