@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Outfit, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -31,9 +32,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} dark`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -3,48 +3,126 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* Dark Theme (Default) */
+  :root, .dark {
     --background: 10 15 26;
     --foreground: 250 250 250;
     --accent: 20 184 166;
     --accent-dim: 15 118 110;
     --border: 30 41 59;
+    
+    /* Theme-specific variables */
+    --bg-primary: 2 6 23;
+    --bg-secondary: 15 23 42;
+    --bg-tertiary: 30 41 59;
+    --bg-card: 15 23 42;
+    --bg-card-hover: 30 41 59;
+    
+    --text-primary: 255 255 255;
+    --text-secondary: 203 213 225;
+    --text-tertiary: 148 163 184;
+    --text-muted: 100 116 139;
+    
+    --border-primary: 51 65 85;
+    --border-secondary: 30 41 59;
+    
+    --nav-bg: 2 6 23;
+    --nav-bg-scrolled: 2 6 23 / 0.9;
+  }
+
+  /* Light Theme - Apple-inspired clean design */
+  .light {
+    --background: 255 255 255;
+    --foreground: 29 29 31;
+    --accent: 20 184 166;
+    --accent-dim: 13 148 136;
+    --border: 229 231 235;
+    
+    /* Theme-specific variables */
+    --bg-primary: 255 255 255;
+    --bg-secondary: 249 250 251;
+    --bg-tertiary: 243 244 246;
+    --bg-card: 255 255 255;
+    --bg-card-hover: 249 250 251;
+    
+    --text-primary: 29 29 31;
+    --text-secondary: 75 85 99;
+    --text-tertiary: 107 114 128;
+    --text-muted: 156 163 175;
+    
+    --border-primary: 229 231 235;
+    --border-secondary: 243 244 246;
+    
+    --nav-bg: 255 255 255;
+    --nav-bg-scrolled: 255 255 255 / 0.8;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
-  body {
+  /* Dark mode body */
+  .dark body {
     @apply bg-slate-950 text-neutral-100 antialiased;
     font-feature-settings: "ss01", "ss02", "cv01";
   }
 
-  ::selection {
+  /* Light mode body */
+  .light body {
+    @apply bg-white text-gray-900 antialiased;
+    font-feature-settings: "ss01", "ss02", "cv01";
+  }
+
+  .dark ::selection {
     @apply bg-accent-500/30 text-white;
   }
 
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
+  .light ::selection {
+    @apply bg-accent-500/20 text-accent-900;
+  }
+
+  /* Custom scrollbar - Dark */
+  .dark ::-webkit-scrollbar {
     @apply w-2;
   }
 
-  ::-webkit-scrollbar-track {
+  .dark ::-webkit-scrollbar-track {
     @apply bg-slate-950;
   }
 
-  ::-webkit-scrollbar-thumb {
+  .dark ::-webkit-scrollbar-thumb {
     @apply bg-slate-700 rounded-full;
   }
 
-  ::-webkit-scrollbar-thumb:hover {
+  .dark ::-webkit-scrollbar-thumb:hover {
     @apply bg-slate-600;
+  }
+
+  /* Custom scrollbar - Light */
+  .light ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .light ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  .light ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full;
+  }
+
+  .light ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400;
   }
 }
 
 @layer components {
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-300 via-accent-400 to-accent-500;
+  }
+
+  .light .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-600 via-accent-500 to-accent-600;
   }
 
   .gradient-border {
@@ -62,36 +140,84 @@
     pointer-events: none;
   }
 
-  .card-institutional {
+  /* Dark theme cards */
+  .dark .card-institutional {
     @apply relative bg-slate-900/50 backdrop-blur-sm border border-slate-800/50 rounded-xl p-6 transition-all duration-300;
   }
 
-  .card-institutional:hover {
+  .dark .card-institutional:hover {
     @apply border-accent-700/30 bg-slate-900/70;
   }
 
-  .section-divider {
+  /* Light theme cards - Apple style */
+  .light .card-institutional {
+    @apply relative bg-white backdrop-blur-sm border border-gray-200 rounded-2xl p-6 transition-all duration-300 shadow-sm;
+  }
+
+  .light .card-institutional:hover {
+    @apply border-gray-300 shadow-md;
+  }
+
+  /* Section dividers */
+  .dark .section-divider {
     @apply h-px bg-gradient-to-r from-transparent via-slate-700/50 to-transparent my-24;
   }
 
-  .nav-link {
+  .light .section-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent my-24;
+  }
+
+  /* Navigation links - Dark */
+  .dark .nav-link {
     @apply text-neutral-400 hover:text-white transition-colors duration-200 text-sm tracking-wide;
   }
 
-  .nav-link-active {
+  .dark .nav-link-active {
     @apply text-accent-400;
   }
 
+  /* Navigation links - Light */
+  .light .nav-link {
+    @apply text-gray-600 hover:text-gray-900 transition-colors duration-200 text-sm tracking-wide font-medium;
+  }
+
+  .light .nav-link-active {
+    @apply text-accent-600;
+  }
+
+  /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-600 hover:bg-accent-500 text-white font-medium rounded-lg transition-all duration-200;
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-600 hover:bg-accent-500 text-white font-medium rounded-full transition-all duration-200;
   }
 
-  .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-accent-600/50 text-neutral-300 hover:text-white rounded-lg transition-all duration-200;
+  .dark .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-accent-600/50 text-neutral-300 hover:text-white rounded-full transition-all duration-200;
   }
 
-  .label-tag {
+  .light .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-gray-300 hover:border-accent-500 text-gray-700 hover:text-accent-600 rounded-full transition-all duration-200;
+  }
+
+  /* Label tags */
+  .dark .label-tag {
     @apply inline-flex items-center px-3 py-1 text-2xs font-medium tracking-wider uppercase bg-accent-900/30 text-accent-400 rounded-full border border-accent-800/30;
+  }
+
+  .light .label-tag {
+    @apply inline-flex items-center px-3 py-1 text-2xs font-medium tracking-wider uppercase bg-accent-50 text-accent-700 rounded-full border border-accent-200;
+  }
+
+  /* Theme toggle button */
+  .theme-toggle {
+    @apply p-2 rounded-full transition-all duration-300;
+  }
+
+  .dark .theme-toggle {
+    @apply bg-slate-800/50 hover:bg-slate-700 text-neutral-300 hover:text-white;
+  }
+
+  .light .theme-toggle {
+    @apply bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900;
   }
 }
 

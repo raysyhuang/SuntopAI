@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { Menu, X, Globe, ChevronDown, Sun, Moon } from 'lucide-react'
 import { locales, localeNames, type Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import { useTheme } from './ThemeProvider'
 
 interface NavigationProps {
   locale: Locale
@@ -18,6 +19,7 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   const navLinks = [
     { href: `/${locale}`, label: dictionary.nav.home },
@@ -56,7 +58,9 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50'
+            ? theme === 'dark' 
+              ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50'
+              : 'bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm'
             : 'bg-transparent'
         }`}
       >
@@ -64,10 +68,14 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href={`/${locale}`} className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center shadow-lg shadow-accent-500/20">
                 <span className="text-white font-display font-bold text-lg">S</span>
               </div>
-              <span className="font-display font-semibold text-xl tracking-tight text-white group-hover:text-accent-400 transition-colors">
+              <span className={`font-display font-semibold text-xl tracking-tight transition-colors ${
+                theme === 'dark' 
+                  ? 'text-white group-hover:text-accent-400' 
+                  : 'text-gray-900 group-hover:text-accent-600'
+              }`}>
                 Suntop<span className="text-accent-500">AI</span>
               </span>
             </Link>
@@ -84,11 +92,24 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                 </Link>
               ))}
 
+              {/* Theme Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+
               {/* Language Switcher */}
               <div className="relative">
                 <button
                   onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                  className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/50 hover:bg-slate-800 text-neutral-300 hover:text-white transition-all text-sm"
+                  className={`flex items-center gap-2 px-3 py-2 rounded-full transition-all text-sm ${
+                    theme === 'dark'
+                      ? 'bg-slate-800/50 hover:bg-slate-800 text-neutral-300 hover:text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-900'
+                  }`}
                 >
                   <Globe size={16} />
                   <span>{localeNames[locale]}</span>
@@ -101,7 +122,11 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute right-0 mt-2 w-40 bg-slate-900 border border-slate-700 rounded-lg shadow-xl overflow-hidden"
+                      className={`absolute right-0 mt-2 w-40 rounded-xl shadow-xl overflow-hidden ${
+                        theme === 'dark'
+                          ? 'bg-slate-900 border border-slate-700'
+                          : 'bg-white border border-gray-200'
+                      }`}
                     >
                       {locales.map((loc) => (
                         <Link
@@ -110,8 +135,12 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                           onClick={() => setIsLangMenuOpen(false)}
                           className={`block px-4 py-2.5 text-sm transition-colors ${
                             loc === locale
-                              ? 'bg-accent-900/30 text-accent-400'
-                              : 'text-neutral-300 hover:bg-slate-800 hover:text-white'
+                              ? theme === 'dark'
+                                ? 'bg-accent-900/30 text-accent-400'
+                                : 'bg-accent-50 text-accent-600'
+                              : theme === 'dark'
+                                ? 'text-neutral-300 hover:bg-slate-800 hover:text-white'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                           }`}
                         >
                           {localeNames[loc]}
@@ -124,17 +153,29 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
             </div>
 
             {/* Mobile Menu Button */}
-            <div className="lg:hidden flex items-center gap-4">
+            <div className="lg:hidden flex items-center gap-2">
+              {/* Mobile Theme Toggle */}
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
               {/* Mobile Language Switcher */}
               <button
                 onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                className="p-2 text-neutral-400 hover:text-white transition-colors"
+                className={`p-2 transition-colors ${
+                  theme === 'dark' ? 'text-neutral-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'
+                }`}
               >
                 <Globe size={20} />
               </button>
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-neutral-400 hover:text-white transition-colors"
+                className={`p-2 transition-colors ${
+                  theme === 'dark' ? 'text-neutral-400 hover:text-white' : 'text-gray-500 hover:text-gray-900'
+                }`}
                 aria-label="Toggle menu"
               >
                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -151,7 +192,9 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="fixed top-20 right-4 z-50 lg:hidden bg-slate-900 border border-slate-700 rounded-lg shadow-xl overflow-hidden"
+            className={`fixed top-20 right-4 z-50 lg:hidden rounded-xl shadow-xl overflow-hidden ${
+              theme === 'dark' ? 'bg-slate-900 border border-slate-700' : 'bg-white border border-gray-200'
+            }`}
           >
             {locales.map((loc) => (
               <Link
@@ -160,8 +203,8 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                 onClick={() => setIsLangMenuOpen(false)}
                 className={`block px-6 py-3 text-sm transition-colors ${
                   loc === locale
-                    ? 'bg-accent-900/30 text-accent-400'
-                    : 'text-neutral-300 hover:bg-slate-800 hover:text-white'
+                    ? theme === 'dark' ? 'bg-accent-900/30 text-accent-400' : 'bg-accent-50 text-accent-600'
+                    : theme === 'dark' ? 'text-neutral-300 hover:bg-slate-800 hover:text-white' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                 }`}
               >
                 {localeNames[loc]}
@@ -182,7 +225,9 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
             className="fixed inset-0 z-40 lg:hidden"
           >
             <div
-              className="absolute inset-0 bg-slate-950/95 backdrop-blur-md"
+              className={`absolute inset-0 backdrop-blur-md ${
+                theme === 'dark' ? 'bg-slate-950/95' : 'bg-white/95'
+              }`}
               onClick={() => setIsMobileMenuOpen(false)}
             />
             <nav className="relative pt-24 px-6">
@@ -197,11 +242,11 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                     <Link
                       href={link.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`block py-3 text-xl font-display ${
+                      className={`block py-3 text-xl font-display transition-colors ${
                         isActive(link.href)
-                          ? 'text-accent-400'
-                          : 'text-neutral-300 hover:text-white'
-                      } transition-colors`}
+                          ? 'text-accent-500'
+                          : theme === 'dark' ? 'text-neutral-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+                      }`}
                     >
                       {link.label}
                     </Link>
@@ -209,18 +254,18 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                 ))}
 
                 {/* Mobile Language Links */}
-                <div className="mt-8 pt-8 border-t border-slate-800">
-                  <p className="text-neutral-500 text-sm mb-4">Language</p>
+                <div className={`mt-8 pt-8 border-t ${theme === 'dark' ? 'border-slate-800' : 'border-gray-200'}`}>
+                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>Language</p>
                   <div className="flex flex-wrap gap-3">
                     {locales.map((loc) => (
                       <Link
                         key={loc}
                         href={getLocalizedPath(loc)}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        className={`px-4 py-2 rounded-lg text-sm transition-colors ${
+                        className={`px-4 py-2 rounded-full text-sm transition-colors ${
                           loc === locale
                             ? 'bg-accent-600 text-white'
-                            : 'bg-slate-800 text-neutral-300 hover:bg-slate-700'
+                            : theme === 'dark' ? 'bg-slate-800 text-neutral-300 hover:bg-slate-700' : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                         }`}
                       >
                         {localeNames[loc]}
