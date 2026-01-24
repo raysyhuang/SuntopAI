@@ -497,6 +497,35 @@
           }
         }
       }
+    },
+    "gallery": {
+      "tag": "真实场景",
+      "title": "临床一线与患者关怀",
+      "subtitle": "来自合作中心的真实场景，覆盖患者宣教、康复支持与标准化服务。",
+      "groups": {
+        "education": { "title": "患者教育与沟通" },
+        "quality": { "title": "质控与标准化运营" },
+        "engagement": { "title": "患者参与活动" },
+        "rehab": { "title": "康复与特色护理" },
+        "training": { "title": "培训与能力建设" }
+      },
+      "items": {
+        "educationLibrary": { "title": "患者宣教资料库" },
+        "patientReport": { "title": "患者说明用报告书" },
+        "nutritionActivity": { "title": "营养趣味猜谜活动" },
+        "nutritionActivityTwo": { "title": "营养宣教互动活动" },
+        "rehabRoom": { "title": "康复运动设备" },
+        "carbonicBath": { "title": "碳酸泉足浴" },
+        "carbonicRoom": { "title": "碳酸泉室" },
+        "carbonicEffect": { "title": "碳酸泉效果" },
+        "trainingPocketGuide": { "title": "教育培训用口袋书" },
+        "trainingMaterial": { "title": "培训教材" },
+        "labResultsExplanation": { "title": "化验结果说明" },
+        "labResultsLiaoning": { "title": "化验结果床旁说明" },
+        "dailySharing": { "title": "每日例会经验分享" },
+        "qualityAlliance": { "title": "质控小组会议" },
+        "standardizedOps": { "title": "标准化操作流程" }
+      }
     }
   },
   "deployment": {

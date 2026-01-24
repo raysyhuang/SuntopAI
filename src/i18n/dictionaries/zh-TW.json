@@ -497,6 +497,35 @@
           }
         }
       }
+    },
+    "gallery": {
+      "tag": "實景展示",
+      "title": "臨床一線與患者關懷",
+      "subtitle": "來自合作中心的真實場景，涵蓋宣教、復健與標準化服務。",
+      "groups": {
+        "education": { "title": "患者教育與溝通" },
+        "quality": { "title": "質控與標準化營運" },
+        "engagement": { "title": "患者參與活動" },
+        "rehab": { "title": "復健與特色照護" },
+        "training": { "title": "培訓與能力建設" }
+      },
+      "items": {
+        "educationLibrary": { "title": "患者宣教資料庫" },
+        "patientReport": { "title": "患者說明用報告書" },
+        "nutritionActivity": { "title": "營養趣味猜謎活動" },
+        "nutritionActivityTwo": { "title": "營養宣教互動活動" },
+        "rehabRoom": { "title": "復健運動設備" },
+        "carbonicBath": { "title": "碳酸泉足浴" },
+        "carbonicRoom": { "title": "碳酸泉室" },
+        "carbonicEffect": { "title": "碳酸泉效果" },
+        "trainingPocketGuide": { "title": "教育培訓用口袋書" },
+        "trainingMaterial": { "title": "培訓教材" },
+        "labResultsExplanation": { "title": "化驗結果說明" },
+        "labResultsLiaoning": { "title": "化驗結果床旁說明" },
+        "dailySharing": { "title": "每日例會經驗分享" },
+        "qualityAlliance": { "title": "質控小組會議" },
+        "standardizedOps": { "title": "標準化操作流程" }
+      }
     }
   },
   "deployment": {

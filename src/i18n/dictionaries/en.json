@@ -497,6 +497,35 @@
           }
         }
       }
+    },
+    "gallery": {
+      "tag": "In Practice",
+      "title": "Clinical Care in the Real World",
+      "subtitle": "Real scenes from partner centers covering education, rehab, and standardized care.",
+      "groups": {
+        "education": { "title": "Patient Education & Communication" },
+        "quality": { "title": "Quality & Standardized Operations" },
+        "engagement": { "title": "Patient Engagement Activities" },
+        "rehab": { "title": "Rehab & Specialty Care" },
+        "training": { "title": "Training & Capability Building" }
+      },
+      "items": {
+        "educationLibrary": { "title": "Patient Education Library" },
+        "patientReport": { "title": "Patient Report Booklet" },
+        "nutritionActivity": { "title": "Nutrition Game Activity" },
+        "nutritionActivityTwo": { "title": "Nutrition Education Event" },
+        "rehabRoom": { "title": "Rehab Exercise Room" },
+        "carbonicBath": { "title": "Carbonic Foot Bath" },
+        "carbonicRoom": { "title": "Carbonic Bath Room" },
+        "carbonicEffect": { "title": "Carbonic Bath Results" },
+        "trainingPocketGuide": { "title": "Training Pocket Guide" },
+        "trainingMaterial": { "title": "Training Materials" },
+        "labResultsExplanation": { "title": "Lab Results Explanation" },
+        "labResultsLiaoning": { "title": "Bedside Lab Explanation" },
+        "dailySharing": { "title": "Daily Meeting Sharing" },
+        "qualityAlliance": { "title": "Quality Control Meeting" },
+        "standardizedOps": { "title": "Standardized Procedures" }
+      }
     }
   },
   "deployment": {

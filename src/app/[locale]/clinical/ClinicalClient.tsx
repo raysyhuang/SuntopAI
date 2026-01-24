@@ -1,11 +1,33 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu, MessageSquare, Layout, Footprints, Workflow, Wifi } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import informationRoundsImage from '../../../../files/信息化查房.jpg'
+import labResultsEvaluationImage from '../../../../files/化验结果评估.jpg'
+import footScreeningImage from '../../../../files/足部筛查.jpg'
+import dailyStandupImage from '../../../../files/每日例会.jpg'
+import callAndResponseImage from '../../../../files/指认呼唤.jpg'
+import qualityControlWeeklyImage from '../../../../files/质控管理小组周例会.jpg'
+import qualityControlAllianceImage from '../../../../files/新安国际质控小组会议.jpg'
+import patientEducationLibraryImage from '../../../../files/患者宣教资料库.jpg'
+import patientReportBookImage from '../../../../files/患者说明用报告书.jpg'
+import nutritionActivityImage from '../../../../files/营养趣味猜谜活动.jpg'
+import nutritionActivityTwoImage from '../../../../files/营养趣味猜谜活动2.jpg'
+import rehabExerciseRoomImage from '../../../../files/康复运动设备.jpg'
+import carbonicFootBathImage from '../../../../files/碳酸泉足浴.jpg'
+import carbonicRoomImage from '../../../../files/碳酸泉室.jpg'
+import carbonicEffectImage from '../../../../files/碳酸泉效果.jpg'
+import trainingPocketGuideImage from '../../../../files/教育培训用口袋书.jpg'
+import trainingMaterialImage from '../../../../files/培训教材.jpg'
+import labResultsExplanationImage from '../../../../files/化验结果说明.jpg'
+import labResultsLiaoningExplanationImage from '../../../../files/辽宁杏康化验结果说明.jpg'
+import dailySharingImage from '../../../../files/每日例会经验分享.jpg'
+import standardizedOpsImage from '../../../../files/标准化操作.png'
 
 const sectionIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
   Users,
@@ -38,6 +60,20 @@ const outcomeIcons = [Activity, AlertTriangle, Shield, CheckCircle, Network, Tre
 export default function ClinicalClient({ locale, dictionary }: ClinicalClientProps) {
   const t = dictionary.clinical
   const { theme } = useTheme()
+  const [activeGalleryItem, setActiveGalleryItem] = useState<{ src: string; alt: string } | null>(null)
+
+  useEffect(() => {
+    if (!activeGalleryItem) {
+      return
+    }
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setActiveGalleryItem(null)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [activeGalleryItem])
 
   const applications = [
     {
@@ -69,6 +105,54 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
       before: t.apps.decision.before,
       after: t.apps.decision.after,
       aiRole: t.apps.decision.aiRole,
+    },
+  ]
+
+  const infrastructureImages = [
+    informationRoundsImage,
+    labResultsEvaluationImage,
+    qualityControlWeeklyImage,
+    callAndResponseImage,
+  ]
+
+  const galleryItems: Record<string, { src: string }> = {
+    educationLibrary: patientEducationLibraryImage,
+    patientReport: patientReportBookImage,
+    nutritionActivity: nutritionActivityImage,
+    nutritionActivityTwo: nutritionActivityTwoImage,
+    rehabRoom: rehabExerciseRoomImage,
+    carbonicBath: carbonicFootBathImage,
+    carbonicRoom: carbonicRoomImage,
+    carbonicEffect: carbonicEffectImage,
+    trainingPocketGuide: trainingPocketGuideImage,
+    trainingMaterial: trainingMaterialImage,
+    labResultsExplanation: labResultsExplanationImage,
+    labResultsLiaoning: labResultsLiaoningExplanationImage,
+    dailySharing: dailySharingImage,
+    qualityAlliance: qualityControlAllianceImage,
+    standardizedOps: standardizedOpsImage,
+  }
+
+  const galleryGroups = [
+    {
+      key: 'education',
+      itemKeys: ['educationLibrary', 'patientReport', 'labResultsExplanation', 'labResultsLiaoning'],
+    },
+    {
+      key: 'quality',
+      itemKeys: ['dailySharing', 'qualityAlliance', 'standardizedOps'],
+    },
+    {
+      key: 'engagement',
+      itemKeys: ['nutritionActivity', 'nutritionActivityTwo'],
+    },
+    {
+      key: 'rehab',
+      itemKeys: ['rehabRoom', 'carbonicRoom', 'carbonicBath', 'carbonicEffect'],
+    },
+    {
+      key: 'training',
+      itemKeys: ['trainingPocketGuide', 'trainingMaterial'],
     },
   ]
 
@@ -360,8 +444,8 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     }}
                   >
                     <img 
-                      src="/images/application-scenario.jpg" 
-                      alt="Application Scenario"
+                      src={dailyStandupImage.src} 
+                      alt="Daily team huddle"
                       className="w-full h-64 object-cover"
                     />
                   </motion.div>
@@ -444,8 +528,8 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     }}
                   >
                     <img 
-                      src="/images/foot-management.jpg" 
-                      alt="Foot Management"
+                      src={footScreeningImage.src} 
+                      alt="Foot screening"
                       className="w-full h-64 object-cover"
                     />
                   </motion.div>
@@ -566,7 +650,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     viewport={{ once: true }}
                     className="grid grid-cols-2 gap-4"
                   >
-                    {['/images/central-monitoring.jpg', '/images/digital-rounds.jpg', '/images/smart-terminal.jpg', '/images/bp-weight-assistant.jpg'].map((src, i) => (
+                    {infrastructureImages.map((image, i) => (
                       <div 
                         key={i}
                         className="rounded-xl overflow-hidden"
@@ -575,7 +659,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                           border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                         }}
                       >
-                        <img src={src} alt="" className="w-full h-32 object-cover" />
+                        <img src={image.src} alt="" className="w-full h-32 object-cover" />
                       </div>
                     ))}
                   </motion.div>
@@ -639,6 +723,134 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
             </section>
           )}
         </>
+      )}
+
+      {/* Clinical Gallery */}
+      {t.gallery && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="label-tag mb-6 inline-block">{t.gallery.tag}</span>
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.gallery.title}
+              </h2>
+              <p 
+                className="max-w-4xl mx-auto leading-relaxed"
+                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+              >
+                {t.gallery.subtitle}
+              </p>
+            </motion.div>
+
+            <div className="space-y-12">
+              {galleryGroups.map((group, groupIndex) => {
+                const groupTitle = t.gallery.groups?.[group.key]?.title ?? group.key
+                return (
+                  <div key={group.key}>
+                    <h3
+                      className="text-lg font-semibold tracking-tight mb-5"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#e2e8f0' }}
+                    >
+                      {groupTitle}
+                    </h3>
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {group.itemKeys.map((itemKey, index) => {
+                        const image = galleryItems[itemKey]
+                        if (!image) {
+                          return null
+                        }
+                        const label = t.gallery.items?.[itemKey]?.title ?? itemKey
+                        const transitionIndex = groupIndex * 10 + index
+                        return (
+                          <motion.div
+                            key={itemKey}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: transitionIndex * 0.03 }}
+                          >
+                            <button
+                              type="button"
+                              onClick={() => setActiveGalleryItem({ src: image.src, alt: label })}
+                              aria-label={`Open ${label}`}
+                              className="block w-full text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#007d73]/60"
+                            >
+                              <div 
+                                className="rounded-2xl overflow-hidden cursor-zoom-in"
+                                style={{ 
+                                  boxShadow: theme === 'light' ? '0 4px 16px rgba(0,0,0,0.08)' : 'none',
+                                  border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                                }}
+                              >
+                                <img 
+                                  src={image.src} 
+                                  alt={label} 
+                                  className="w-full h-56 object-cover"
+                                />
+                              </div>
+                            </button>
+                            <p 
+                              className="mt-3 text-sm font-medium"
+                              style={{ color: theme === 'light' ? '#1d1d1f' : '#e2e8f0' }}
+                            >
+                              {label}
+                            </p>
+                          </motion.div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {activeGalleryItem && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6"
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setActiveGalleryItem(null)}
+        >
+          <button
+            type="button"
+            onClick={() => setActiveGalleryItem(null)}
+            className="absolute top-4 right-4 rounded-full bg-white/90 px-3 py-1 text-sm font-medium text-slate-900 shadow"
+          >
+            Close
+          </button>
+          <motion.div
+            initial={{ scale: 0.96, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="max-h-[85vh] w-full max-w-5xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img
+              src={activeGalleryItem.src}
+              alt={activeGalleryItem.alt}
+              className="max-h-[75vh] w-full rounded-2xl object-contain"
+            />
+            <p className="mt-3 text-center text-sm font-medium text-white/90">
+              {activeGalleryItem.alt}
+            </p>
+          </motion.div>
+        </motion.div>
       )}
 
       {/* Cross Links */}

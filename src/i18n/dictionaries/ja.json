@@ -497,6 +497,35 @@
           }
         }
       }
+    },
+    "gallery": {
+      "tag": "現場風景",
+      "title": "臨床現場と患者ケアの実際",
+      "subtitle": "提携センターの実例で、教育・リハビリ・標準化ケアを紹介します。",
+      "groups": {
+        "education": { "title": "患者教育とコミュニケーション" },
+        "quality": { "title": "品質管理と標準化運用" },
+        "engagement": { "title": "患者参加型アクティビティ" },
+        "rehab": { "title": "リハビリと特色ケア" },
+        "training": { "title": "研修と能力強化" }
+      },
+      "items": {
+        "educationLibrary": { "title": "患者教育資料ライブラリ" },
+        "patientReport": { "title": "患者向け報告書" },
+        "nutritionActivity": { "title": "栄養クイズ活動" },
+        "nutritionActivityTwo": { "title": "栄養教育イベント" },
+        "rehabRoom": { "title": "リハビリ運動ルーム" },
+        "carbonicBath": { "title": "炭酸泉足浴" },
+        "carbonicRoom": { "title": "炭酸泉ルーム" },
+        "carbonicEffect": { "title": "炭酸泉の効果" },
+        "trainingPocketGuide": { "title": "教育・研修用ポケットガイド" },
+        "trainingMaterial": { "title": "研修教材" },
+        "labResultsExplanation": { "title": "検査結果の説明" },
+        "labResultsLiaoning": { "title": "ベッドサイド検査説明" },
+        "dailySharing": { "title": "日次ミーティング共有" },
+        "qualityAlliance": { "title": "品質管理会議" },
+        "standardizedOps": { "title": "標準化手順" }
+      }
     }
   },
   "deployment": {
