@@ -75,8 +75,8 @@
   },
   "platform": {
     "tag": "Technology",
-    "title": "The Smart Dialysis Platform",
-    "subtitle": "A modular AI and automation platform designed specifically for dialysis environments.",
+    "title": "Digital Hemodialysis Management Platform",
+    "subtitle": "Deep integration of software, hardware, and data services. Low-cost cloud architecture, real-time updates with zero maintenance, compliant with national medical data security standards. Technology truly serving healthcare, from data collection to the interconnected 'Digital Hub'.",
     "features": {
       "native": "Dialysis-Native",
       "realtime": "Real-Time Intelligence",
@@ -122,6 +122,142 @@
           "Workflow standardization",
           "Remote monitoring and supervision"
         ]
+      }
+    },
+    "coreModules": {
+      "tag": "Core Modules",
+      "title": "Core Feature Modules",
+      "description": "From rounds to labs, from care management to monitoring, full-process intelligent coverage",
+      "modules": {
+        "consultation": {
+          "title": "Consultation Module",
+          "subtitle": "Voice input + AI real-time optimization, making EMR documentation effortless",
+          "description": "Solving the doctor's pain point of 'say it once, write it again'. During daily patient communication, the AI assistant automatically captures speech and converts it to standardized medical terminology in real-time.",
+          "features": [
+            {
+              "title": "Problem List Function",
+              "description": "Create a problem list for each patient, query historical treatment plans for the same problem, ensure treatment plan and care plan continuity and accuracy, display unresolved and resolved issues on the same page for easy reference."
+            },
+            {
+              "title": "Expert Consultation Support",
+              "description": "Designed for department chiefs' consultation needs with 'Key Problem Organization' feature. Keep unresolved issues in the list for quick expert access. AI voice capture greatly simplifies post-consultation task distribution and organization."
+            }
+          ],
+          "aiHighlight": "AI assistant voice capture greatly simplifies post-consultation task distribution"
+        },
+        "labEvaluation": {
+          "title": "Lab Results Evaluation Module",
+          "subtitle": "Deep integration of expert wisdom, evolving each small step from task to precision unit",
+          "description": "This module builds a highly integrated digital evaluation page, eliminating the hassle of switching between different pages. Refined display with medication records and graphical lab trends side by side, intuitive observation of all historical values, precise medication adjustment impact on lab indicators.",
+          "features": [
+            {
+              "title": "Data-Driven Decisions",
+              "description": "Providing solid data support for treatment planning, with AI assistant preset templates for quick generation of clinical recommendations."
+            },
+            {
+              "title": "One-Click Report Printing",
+              "description": "Doctors can print reports with graphical lab trends and personalized recommendations. Paper reports help explain patient conditions more clearly, greatly improving patient acceptance and treatment compliance."
+            }
+          ],
+          "aiHighlight": "AI assistant preset templates for quick generation of clinical recommendations"
+        },
+        "careManagement": {
+          "title": "Care Management Module",
+          "subtitle": "Refined storage, intelligent classification, predictive early warning",
+          "description": "Comprehensive evaluation for new dialysis patients covering lower limb arteries, nerve sensation, skin and nail indicators. Deep coverage of every microcirculation indicator, with time-based photo comparison for clear trend visualization.",
+          "features": [
+            {
+              "title": "Risk Classification",
+              "description": "System automatically completes risk classification based on multi-dimensional data, helping quickly identify high-risk patients for targeted intervention."
+            },
+            {
+              "title": "Photo Comparison Tracking",
+              "description": "Time-based before/after photo comparison, making condition evolution trends immediately visible."
+            }
+          ],
+          "aiHighlight": "System automatically completes risk classification based on multi-dimensional data"
+        },
+        "medicalRecords": {
+          "title": "Medical Records Module",
+          "subtitle": "Automatic capture and organization of lab results, graphical structuring and visualization",
+          "description": "A medical records database integrated as a hidden module within care management. The system automatically captures and organizes lab results and other numerical data for graphical, structured visualization.",
+          "features": [
+            {
+              "title": "Automatic Data Capture",
+              "description": "System automatically captures and organizes lab results, reducing manual data entry workload."
+            },
+            {
+              "title": "Graphical Display",
+              "description": "Graphical, structured, and visual medical records database for clear data presentation."
+            }
+          ],
+          "aiHighlight": "Automatic lab result capture with graphical medical record display"
+        },
+        "labReminder": {
+          "title": "Lab Reminder Module",
+          "subtitle": "Managing varying lab frequencies - weekly, periodic - is often the most challenging aspect",
+          "description": "Automatic calculation and reminders, assisting doctors in generating reminder requirements. One-click creation of long-term personalized lab plans with automated time prediction, converting tasks into scheduled items.",
+          "features": [
+            {
+              "title": "Smart Reminder Calculation",
+              "description": "Automatic calculation and reminders, assisting doctors in generating reminder requirements."
+            },
+            {
+              "title": "Personalized Plans",
+              "description": "One-click creation of long-term personalized lab plans with automated time prediction."
+            }
+          ],
+          "aiHighlight": "Automatic reminder calculation, one-click long-term lab plan generation"
+        }
+      }
+    },
+    "monitoringSystem": {
+      "tag": "Dialysis Central Monitoring System",
+      "title": "Guardian",
+      "subtitle": "Protecting dialysis treatment safety with automatic synchronization of dialysis machine and patient blood pressure",
+      "description": "Through visual graphical interface with color classification, abnormal status is immediately visible. Visual graphical views provide nurses with skin and nail warnings. Redefining bedside equipment - not just equipment, but intelligent nodes integrated into the workflow.",
+      "features": [
+        {
+          "title": "Real-Time BP Sync",
+          "icon": "Activity",
+          "description": "System automatically synchronizes dialysis machine and patient blood pressure data for real-time vital sign monitoring."
+        },
+        {
+          "title": "Color-Coded Alerts",
+          "icon": "AlertTriangle",
+          "description": "Visual graphical interface with color classification makes abnormal status immediately visible."
+        },
+        {
+          "title": "Nurse Workstation",
+          "icon": "Monitor",
+          "description": "Centralized display of all patient status, quickly identifying beds requiring attention."
+        },
+        {
+          "title": "Smart Bedside Equipment",
+          "icon": "Cpu",
+          "description": "Redefining bedside equipment - not just devices, but intelligent nodes integrated into the workflow."
+        }
+      ],
+      "stats": {
+        "response": { "label": "Response Time", "value": "<30s" },
+        "coverage": { "label": "Monitoring Coverage", "value": "100%" },
+        "alerts": { "label": "Alert Accuracy", "value": "95%" },
+        "uptime": { "label": "System Uptime", "value": "99.9%" }
+      }
+    },
+    "partners": {
+      "tag": "Partner Hospitals",
+      "title": "Onboarded Hospitals",
+      "description": "Numerous landmark hospitals have successfully adopted our Digital Hemodialysis Management Platform",
+      "categories": {
+        "selfOperated": "Self-Operated Dialysis Centers",
+        "publicHospitals": "Public Hospitals",
+        "privateHospitals": "Private Hospitals"
+      },
+      "cta": {
+        "title": "Join Our Partner Network",
+        "description": "Learn how to upgrade your dialysis center to a smart dialysis center",
+        "button": "Contact Us"
       }
     },
     "differentiators": {
