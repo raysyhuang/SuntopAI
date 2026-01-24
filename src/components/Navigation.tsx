@@ -56,27 +56,36 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? theme === 'dark' 
-              ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50'
-              : 'bg-white/80 backdrop-blur-md border-b border-gray-200/50 shadow-sm'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+        style={{
+          backgroundColor: isScrolled 
+            ? (theme === 'dark' ? 'rgba(2,6,23,0.9)' : 'rgba(251,251,253,0.72)')
+            : 'transparent',
+          backdropFilter: isScrolled ? 'saturate(180%) blur(20px)' : 'none',
+          WebkitBackdropFilter: isScrolled ? 'saturate(180%) blur(20px)' : 'none',
+          borderBottom: isScrolled 
+            ? (theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : '1px solid rgba(0,0,0,0.1)')
+            : 'none'
+        }}
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href={`/${locale}`} className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center shadow-lg shadow-accent-500/20">
+              <div 
+                className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{ 
+                  background: 'linear-gradient(135deg, #14b8a6 0%, #0d9488 100%)',
+                  boxShadow: '0 4px 12px rgba(20,184,166,0.25)'
+                }}
+              >
                 <span className="text-white font-display font-bold text-lg">S</span>
               </div>
-              <span className={`font-display font-semibold text-xl tracking-tight transition-colors ${
-                theme === 'dark' 
-                  ? 'text-white group-hover:text-accent-400' 
-                  : 'text-gray-900 group-hover:text-accent-600'
-              }`}>
-                Suntop<span className="text-accent-500">AI</span>
+              <span 
+                className="font-display font-semibold text-xl tracking-tight transition-colors"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                Suntop<span style={{ color: '#14b8a6' }}>AI</span>
               </span>
             </Link>
 

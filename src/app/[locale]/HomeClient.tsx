@@ -61,9 +61,10 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className={`relative min-h-screen flex items-center justify-center overflow-hidden ${
-        theme === 'light' ? 'bg-gradient-to-b from-gray-50 to-white' : ''
-      }`}>
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{ backgroundColor: theme === 'light' ? '#fbfbfd' : undefined }}
+      >
         {theme === 'dark' && (
           <>
             <div className="absolute inset-0 grid-pattern" />
@@ -74,8 +75,8 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         )}
         {theme === 'light' && (
           <>
-            <div className="absolute top-1/4 -left-32 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent-400/5 rounded-full blur-3xl" />
+            <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(0,125,115,0.03)' }} />
+            <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full blur-3xl" style={{ backgroundColor: 'rgba(0,125,115,0.03)' }} />
           </>
         )}
 
@@ -92,9 +93,11 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
 
             <motion.h1
               variants={fadeInUp}
-              className={`font-display text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tightest mb-6 text-balance ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}
+              className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 text-balance"
+              style={{ 
+                color: theme === 'light' ? '#1d1d1f' : '#ffffff',
+                letterSpacing: '-0.03em'
+              }}
             >
               {t.hero.title1}
               <br />
@@ -103,18 +106,16 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
 
             <motion.p
               variants={fadeInUp}
-              className={`text-xl md:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed ${
-                theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-              }`}
+              className="text-xl md:text-2xl max-w-3xl mx-auto mb-8 leading-relaxed"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#a1a1aa' }}
             >
               {t.hero.subtitle}
             </motion.p>
 
             <motion.p
               variants={fadeInUp}
-              className={`text-lg max-w-2xl mx-auto mb-12 leading-relaxed ${
-                theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
-              }`}
+              className="text-lg max-w-2xl mx-auto mb-12 leading-relaxed"
+              style={{ color: theme === 'light' ? '#6e6e73' : '#71717a' }}
             >
               {t.hero.description}
             </motion.p>
@@ -139,13 +140,15 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             transition={{ delay: 1.5 }}
             className="absolute bottom-8 left-1/2 -translate-x-1/2"
           >
-            <div className={`w-6 h-10 rounded-full border-2 flex justify-center pt-2 ${
-              theme === 'dark' ? 'border-neutral-700' : 'border-gray-300'
-            }`}>
+            <div 
+              className="w-6 h-10 rounded-full border-2 flex justify-center pt-2"
+              style={{ borderColor: theme === 'light' ? '#d2d2d7' : 'rgba(64,64,64,1)' }}
+            >
               <motion.div
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1.5 h-1.5 bg-accent-500 rounded-full"
+                className="w-1.5 h-1.5 rounded-full"
+                style={{ backgroundColor: '#007d73' }}
               />
             </div>
           </motion.div>
