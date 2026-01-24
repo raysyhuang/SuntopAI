@@ -33,9 +33,16 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
   return (
     <div className="relative pt-20">
       {/* Hero */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="absolute inset-0 radial-gradient" />
+      <section 
+        className="relative py-32 overflow-hidden"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
+        {theme === 'dark' && (
+          <>
+            <div className="absolute inset-0 grid-pattern" />
+            <div className="absolute inset-0 radial-gradient" />
+          </>
+        )}
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
@@ -49,13 +56,15 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl font-semibold tracking-tightest text-white mb-6"
+              className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
             >
               {t.title}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-neutral-400 leading-relaxed"
+              className="text-xl leading-relaxed"
+              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
             >
               {t.subtitle}
             </motion.p>
@@ -64,20 +73,36 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       </section>
 
       {/* Mission & Vision */}
-      <section className="relative py-32 bg-slate-925">
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="card-institutional gradient-border"
+              className="rounded-2xl p-8"
+              style={{ 
+                backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                boxShadow: theme === 'light' ? '0 2px 20px rgba(0,0,0,0.06)' : 'none',
+                border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
+              }}
             >
-              <div className="w-14 h-14 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-accent-400" />
+              <div 
+                className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+              >
+                <Target style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-7 h-7" />
               </div>
-              <h2 className="font-display text-2xl font-semibold text-white mb-4">{t.mission.title}</h2>
-              <p className="text-neutral-400 leading-relaxed">{t.mission.description}</p>
+              <h2 
+                className="font-display text-2xl font-semibold mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.mission.title}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="leading-relaxed">{t.mission.description}</p>
             </motion.div>
 
             <motion.div
@@ -85,20 +110,36 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="card-institutional gradient-border"
+              className="rounded-2xl p-8"
+              style={{ 
+                backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                boxShadow: theme === 'light' ? '0 2px 20px rgba(0,0,0,0.06)' : 'none',
+                border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
+              }}
             >
-              <div className="w-14 h-14 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-accent-400" />
+              <div 
+                className="w-14 h-14 rounded-xl flex items-center justify-center mb-6"
+                style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+              >
+                <Eye style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-7 h-7" />
               </div>
-              <h2 className="font-display text-2xl font-semibold text-white mb-4">{t.vision.title}</h2>
-              <p className="text-neutral-400 leading-relaxed">{t.vision.description}</p>
+              <h2 
+                className="font-display text-2xl font-semibold mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.vision.title}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="leading-relaxed">{t.vision.description}</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* About */}
-      <section className="relative py-32">
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div
@@ -106,10 +147,13 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-8">
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-8"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
                 {t.about.title}
               </h2>
-              <div className="space-y-6 text-lg text-neutral-400 leading-relaxed">
+              <div className="space-y-6 text-lg leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
                 {t.about.paragraphs.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
@@ -120,7 +164,10 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       </section>
 
       {/* Values */}
-      <section className="relative py-32 bg-slate-925">
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -128,10 +175,13 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 
+              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            >
               {t.values.title}
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
               {t.values.description}
             </p>
           </motion.div>
@@ -146,13 +196,26 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="card-institutional text-center"
+                  className="text-center rounded-2xl p-6"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-accent-400" />
+                  <div 
+                    className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4"
+                    style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                  >
+                    <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
                   </div>
-                  <h3 className="font-display font-semibold text-white mb-2">{value.title}</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed">{value.description}</p>
+                  <h3 
+                    className="font-display font-semibold mb-2"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                  >
+                    {value.title}
+                  </h3>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed">{value.description}</p>
                 </motion.div>
               )
             })}
@@ -161,7 +224,11 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       </section>
 
       {/* Leadership */}
-      <section id="leadership" className="relative py-32">
+      <section 
+        id="leadership" 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -169,10 +236,13 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight text-white mb-4">
+            <h2 
+              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            >
               {t.leadership.title}
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
               {t.leadership.description}
             </p>
           </motion.div>
@@ -187,12 +257,24 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-32 h-32 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-slate-600" />
+                <div 
+                  className="w-32 h-32 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                  style={{ 
+                    background: theme === 'light' 
+                      ? 'linear-gradient(135deg, #e5e5e5, #f5f5f5)' 
+                      : 'linear-gradient(135deg, #334155, #475569)'
+                  }}
+                >
+                  <Users style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="w-12 h-12" />
                 </div>
-                <h3 className="font-display font-semibold text-white mb-1">{person.name}</h3>
-                <p className="text-accent-400 text-sm mb-2">{person.titleKey}</p>
-                <p className="text-neutral-500 text-xs">{person.credential}</p>
+                <h3 
+                  className="font-display font-semibold mb-1"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {person.name}
+                </h3>
+                <p style={{ color: '#007d73' }} className="text-sm mb-2">{person.titleKey}</p>
+                <p style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="text-xs">{person.credential}</p>
               </motion.div>
             ))}
           </div>
@@ -201,7 +283,8 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center text-neutral-500 text-sm mt-12 italic"
+            className="text-center text-sm mt-12 italic"
+            style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}
           >
             {t.leadership.note}
           </motion.p>
@@ -209,7 +292,14 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       </section>
 
       {/* Company Stats */}
-      <section className="relative py-24 bg-slate-925 border-y border-slate-800/50">
+      <section 
+        className="relative py-24"
+        style={{ 
+          backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
+          borderTop: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)',
+          borderBottom: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -226,9 +316,14 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
                 transition={{ delay: index * 0.1 }}
                 className="text-center"
               >
-                <stat.icon className="w-6 h-6 text-accent-400 mx-auto mb-3" />
-                <div className="text-3xl font-display font-semibold text-white mb-1">{stat.value}</div>
-                <div className="text-neutral-500 text-sm">{stat.label}</div>
+                <stat.icon style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6 mx-auto mb-3" />
+                <div 
+                  className="text-3xl font-display font-semibold mb-1"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {stat.value}
+                </div>
+                <div style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>

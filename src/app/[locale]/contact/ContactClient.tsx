@@ -18,8 +18,6 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-const reasonIcons = [Building2, Briefcase, Users]
-
 export default function ContactClient({ locale, dictionary }: ContactClientProps) {
   const t = dictionary.contact
   const { theme } = useTheme()
@@ -47,9 +45,16 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
   return (
     <div className="relative pt-20">
       {/* Hero */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="absolute inset-0 radial-gradient" />
+      <section 
+        className="relative py-32 overflow-hidden"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
+        {theme === 'dark' && (
+          <>
+            <div className="absolute inset-0 grid-pattern" />
+            <div className="absolute inset-0 radial-gradient" />
+          </>
+        )}
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
@@ -63,13 +68,15 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl font-semibold tracking-tightest text-white mb-6"
+              className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
             >
               {t.title}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-neutral-400 leading-relaxed"
+              className="text-xl leading-relaxed"
+              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
             >
               {t.subtitle}
             </motion.p>
@@ -78,7 +85,10 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
       </section>
 
       {/* Contact Reasons */}
-      <section className="relative py-16 bg-slate-925">
+      <section 
+        className="relative py-16"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             {contactReasons.map((reason, index) => (
@@ -88,13 +98,26 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="card-institutional"
+                className="rounded-2xl p-6"
+                style={{ 
+                  backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                  boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                  border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                }}
               >
-                <div className="w-12 h-12 rounded-xl bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mb-4">
-                  <reason.icon className="w-6 h-6 text-accent-400" />
+                <div 
+                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                  style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                >
+                  <reason.icon style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
                 </div>
-                <h3 className="font-display font-semibold text-white mb-2">{reason.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{reason.description}</p>
+                <h3 
+                  className="font-display font-semibold mb-2"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {reason.title}
+                </h3>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed">{reason.description}</p>
               </motion.div>
             ))}
           </div>
@@ -102,7 +125,10 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
       </section>
 
       {/* Contact Form & Info */}
-      <section className="relative py-32">
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
@@ -111,25 +137,47 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-2xl font-semibold text-white mb-8">{t.form.title}</h2>
+              <h2 
+                className="font-display text-2xl font-semibold mb-8"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.form.title}
+              </h2>
               
               {isSubmitted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="card-institutional gradient-border text-center py-12"
+                  className="text-center py-12 rounded-2xl"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                    boxShadow: theme === 'light' ? '0 2px 20px rgba(0,125,115,0.08)' : 'none',
+                    border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
+                  }}
                 >
-                  <div className="w-16 h-16 rounded-full bg-accent-900/30 border border-accent-800/30 flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="w-8 h-8 text-accent-400" />
+                  <div 
+                    className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
+                    style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                  >
+                    <CheckCircle style={{ color: '#007d73' }} className="w-8 h-8" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-white mb-2">{t.form.success.title}</h3>
-                  <p className="text-neutral-400">{t.form.success.description}</p>
+                  <h3 
+                    className="font-display text-xl font-semibold mb-2"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                  >
+                    {t.form.success.title}
+                  </h3>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>{t.form.success.description}</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm text-neutral-400 mb-2">
+                      <label 
+                        htmlFor="name" 
+                        className="block text-sm mb-2"
+                        style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                      >
                         {t.form.name}
                       </label>
                       <input
@@ -138,12 +186,21 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                         required
                         value={formState.name}
                         onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-accent-600 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl transition-colors focus:outline-none"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                          border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                          color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                        }}
                         placeholder={t.form.namePlaceholder}
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm text-neutral-400 mb-2">
+                      <label 
+                        htmlFor="email" 
+                        className="block text-sm mb-2"
+                        style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                      >
                         {t.form.email}
                       </label>
                       <input
@@ -152,14 +209,23 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                         required
                         value={formState.email}
                         onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                        className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-accent-600 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl transition-colors focus:outline-none"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                          border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                          color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                        }}
                         placeholder={t.form.emailPlaceholder}
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="organization" className="block text-sm text-neutral-400 mb-2">
+                    <label 
+                      htmlFor="organization" 
+                      className="block text-sm mb-2"
+                      style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    >
                       {t.form.organization}
                     </label>
                     <input
@@ -167,20 +233,34 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                       id="organization"
                       value={formState.organization}
                       onChange={(e) => setFormState({ ...formState, organization: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-accent-600 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl transition-colors focus:outline-none"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                        border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                        color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                      }}
                       placeholder={t.form.organizationPlaceholder}
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="reason" className="block text-sm text-neutral-400 mb-2">
+                    <label 
+                      htmlFor="reason" 
+                      className="block text-sm mb-2"
+                      style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    >
                       {t.form.reason}
                     </label>
                     <select
                       id="reason"
                       value={formState.reason}
                       onChange={(e) => setFormState({ ...formState, reason: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-accent-600 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl transition-colors focus:outline-none"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                        border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                        color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                      }}
                     >
                       <option value="">{t.form.reasonPlaceholder}</option>
                       <option value="clinical">{t.form.reasonOptions.clinical}</option>
@@ -192,7 +272,11 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm text-neutral-400 mb-2">
+                    <label 
+                      htmlFor="message" 
+                      className="block text-sm mb-2"
+                      style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    >
                       {t.form.message}
                     </label>
                     <textarea
@@ -201,7 +285,12 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
                       required
                       value={formState.message}
                       onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-accent-600 transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl transition-colors focus:outline-none resize-none"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                        border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                        color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                      }}
                       placeholder={t.form.messagePlaceholder}
                     />
                   </div>
@@ -220,57 +309,119 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="font-display text-2xl font-semibold text-white mb-8">{t.info.title}</h2>
+              <h2 
+                className="font-display text-2xl font-semibold mb-8"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.info.title}
+              </h2>
               
-              <div className="space-y-8">
-                <div className="card-institutional">
+              <div className="space-y-6">
+                <div 
+                  className="rounded-2xl p-6"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-accent-400" />
+                    <div 
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,1)' }}
+                    >
+                      <Mail style={{ color: '#007d73' }} className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-white mb-1">{t.info.email}</h3>
-                      <a href="mailto:contact@suntopai.com" className="text-neutral-400 hover:text-accent-400 transition-colors">
+                      <h3 
+                        className="font-medium mb-1"
+                        style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      >
+                        {t.info.email}
+                      </h3>
+                      <a 
+                        href="mailto:contact@suntopai.com" 
+                        className="transition-colors hover:text-[#007d73]"
+                        style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                      >
                         contact@suntopai.com
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <div className="card-institutional">
+                <div 
+                  className="rounded-2xl p-6"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-accent-400" />
+                    <div 
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,1)' }}
+                    >
+                      <MapPin style={{ color: '#007d73' }} className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-white mb-1">{t.info.headquarters}</h3>
-                      <p className="text-neutral-400">
-                        {t.info.location}<br />
+                      <h3 
+                        className="font-medium mb-1"
+                        style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      >
+                        {t.info.headquarters}
+                      </h3>
+                      <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
+                        {t.info.location}
+                      </p>
+                      <p style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="text-sm mt-1">
                         {t.info.global}
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <div className="card-institutional">
+                <div 
+                  className="rounded-2xl p-6"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-accent-400" />
+                    <div 
+                      className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                      style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,1)' }}
+                    >
+                      <Phone style={{ color: '#007d73' }} className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-medium text-white mb-1">{t.info.phone}</h3>
-                      <p className="text-neutral-400">{t.info.phoneValue}</p>
+                      <h3 
+                        className="font-medium mb-1"
+                        style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      >
+                        {t.info.phone}
+                      </h3>
+                      <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
+                        {t.info.phoneValue}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12 p-6 bg-accent-900/10 rounded-xl border border-accent-800/20">
-                <h3 className="text-accent-400 text-sm font-medium uppercase tracking-wider mb-3">
-                  {t.info.response.title}
-                </h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
-                  {t.info.response.description}
+              {/* Response Time */}
+              <div 
+                className="mt-8 p-6 rounded-xl"
+                style={{ 
+                  backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.06)' : 'rgba(20,184,166,0.1)',
+                  border: theme === 'light' ? 'none' : '1px solid rgba(20,184,166,0.2)'
+                }}
+              >
+                <p className="text-sm" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
+                  {t.info.response}
                 </p>
               </div>
             </motion.div>

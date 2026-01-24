@@ -26,7 +26,6 @@ const newsItems = [
   { id: 6, category: 'milestone', icon: Award, date: '2025-08-10', featured: true },
 ]
 
-// Sample news content for each locale
 const newsContent: Record<string, { title: string; summary: string }[]> = {
   en: [
     { title: 'Platform Deployed at Regional Dialysis Network', summary: 'Suntop AI platform now monitoring 50+ dialysis stations across a regional healthcare network, providing real-time intelligence and decision support.' },
@@ -94,9 +93,16 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
   return (
     <div className="relative pt-20">
       {/* Hero */}
-      <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 grid-pattern" />
-        <div className="absolute inset-0 radial-gradient" />
+      <section 
+        className="relative py-32 overflow-hidden"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
+        {theme === 'dark' && (
+          <>
+            <div className="absolute inset-0 grid-pattern" />
+            <div className="absolute inset-0 radial-gradient" />
+          </>
+        )}
         
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           <motion.div
@@ -110,13 +116,15 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
             </motion.span>
             <motion.h1
               variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl font-semibold tracking-tightest text-white mb-6"
+              className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
             >
               {t.title}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-xl text-neutral-400 leading-relaxed"
+              className="text-xl leading-relaxed"
+              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
             >
               {t.subtitle}
             </motion.p>
@@ -125,7 +133,10 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
       </section>
 
       {/* News Feed */}
-      <section className="relative py-16 bg-slate-925">
+      <section 
+        className="relative py-16"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Categories */}
           <motion.div
@@ -137,11 +148,14 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
             {categories.map((category) => (
               <button
                 key={category.id}
-                className={`px-4 py-2 rounded-full text-sm transition-all ${
-                  category.id === 'all'
-                    ? 'bg-accent-600 text-white'
-                    : 'bg-slate-800 text-neutral-400 hover:bg-slate-700 hover:text-white'
-                }`}
+                className="px-4 py-2 rounded-full text-sm transition-all"
+                style={category.id === 'all' ? {
+                  backgroundColor: '#007d73',
+                  color: '#ffffff'
+                } : {
+                  backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,1)',
+                  color: theme === 'light' ? '#6e6e73' : '#a1a1aa'
+                }}
               >
                 {category.label}
               </button>
@@ -150,7 +164,12 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
 
           {/* Featured News */}
           <div className="mb-16">
-            <h2 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-6">{t.featured}</h2>
+            <h2 
+              className="text-sm font-medium uppercase tracking-wider mb-6"
+              style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}
+            >
+              {t.featured}
+            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {enrichedNewsItems
                 .filter((item) => item.featured)
@@ -161,22 +180,33 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="card-institutional gradient-border group cursor-pointer"
+                    className="group cursor-pointer rounded-2xl p-6"
+                    style={{ 
+                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                      boxShadow: theme === 'light' ? '0 2px 12px rgba(0,125,115,0.06)' : 'none',
+                      border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
+                    }}
                   >
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-lg bg-accent-900/30 border border-accent-800/30 flex items-center justify-center">
-                        <item.icon className="w-5 h-5 text-accent-400" />
+                      <div 
+                        className="w-10 h-10 rounded-lg flex items-center justify-center"
+                        style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                      >
+                        <item.icon style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-5 h-5" />
                       </div>
-                      <div className="flex items-center gap-2 text-xs text-neutral-500">
+                      <div className="flex items-center gap-2 text-xs" style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}>
                         <Calendar className="w-3 h-3" />
                         {formatDate(item.date, locale)}
                       </div>
                     </div>
-                    <h3 className="font-display font-semibold text-white mb-3 group-hover:text-accent-400 transition-colors">
+                    <h3 
+                      className="font-display font-semibold mb-3 transition-colors group-hover:text-[#007d73]"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
                       {item.title}
                     </h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed mb-4">{item.summary}</p>
-                    <div className="flex items-center gap-2 text-accent-400 text-sm font-medium">
+                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed mb-4">{item.summary}</p>
+                    <div className="flex items-center gap-2 text-sm font-medium" style={{ color: '#007d73' }}>
                       {t.readMore}
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -187,7 +217,12 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
 
           {/* All News */}
           <div>
-            <h2 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-6">{t.allUpdates}</h2>
+            <h2 
+              className="text-sm font-medium uppercase tracking-wider mb-6"
+              style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}
+            >
+              {t.allUpdates}
+            </h2>
             <div className="space-y-4">
               {enrichedNewsItems.map((item, index) => (
                 <motion.article
@@ -196,25 +231,41 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-start gap-6 p-6 bg-slate-900/30 border border-slate-800/50 rounded-xl hover:border-slate-700/50 transition-all cursor-pointer group"
+                  className="flex items-start gap-6 p-6 rounded-xl transition-all cursor-pointer group"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.3)',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
                 >
-                  <div className="hidden sm:flex w-12 h-12 rounded-xl bg-slate-800/50 items-center justify-center flex-shrink-0">
-                    <item.icon className="w-6 h-6 text-neutral-500" />
+                  <div 
+                    className="hidden sm:flex w-12 h-12 rounded-xl items-center justify-center flex-shrink-0"
+                    style={{ backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.5)' }}
+                  >
+                    <item.icon style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="w-6 h-6" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-3 mb-2">
-                      <span className="text-2xs font-medium text-accent-400 uppercase tracking-wider">
+                      <span 
+                        className="text-2xs font-medium uppercase tracking-wider"
+                        style={{ color: '#007d73' }}
+                      >
                         {item.category}
                       </span>
-                      <span className="text-neutral-600">•</span>
-                      <span className="text-xs text-neutral-500">{formatDate(item.date, locale)}</span>
+                      <span style={{ color: theme === 'light' ? '#d2d2d7' : '#4b5563' }}>•</span>
+                      <span className="text-xs" style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}>{formatDate(item.date, locale)}</span>
                     </div>
-                    <h3 className="font-display font-semibold text-white mb-2 group-hover:text-accent-400 transition-colors">
+                    <h3 
+                      className="font-display font-semibold mb-2 transition-colors group-hover:text-[#007d73]"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
                       {item.title}
                     </h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed line-clamp-2">{item.summary}</p>
+                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed line-clamp-2">{item.summary}</p>
                   </div>
-                  <ArrowRight className="w-5 h-5 text-neutral-600 group-hover:text-accent-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                  <ArrowRight 
+                    className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-all" 
+                    style={{ color: theme === 'light' ? '#d2d2d7' : '#4b5563' }}
+                  />
                 </motion.article>
               ))}
             </div>
@@ -223,24 +274,35 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
       </section>
 
       {/* Subscribe Section */}
-      <section className="relative py-24">
+      <section 
+        className="relative py-24"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+      >
         <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-display text-2xl font-semibold tracking-tight text-white mb-4">
+            <h2 
+              className="font-display text-2xl font-semibold tracking-tight mb-4"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            >
               {t.subscribe.title}
             </h2>
-            <p className="text-neutral-400 mb-8">
+            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="mb-8">
               {t.subscribe.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder={t.subscribe.placeholder}
-                className="flex-1 px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-accent-600 transition-colors"
+                className="flex-1 px-4 py-3 rounded-lg transition-colors focus:outline-none"
+                style={{ 
+                  backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,1)',
+                  border: theme === 'light' ? '1px solid rgba(0,0,0,0.1)' : '1px solid rgba(51,65,85,0.5)',
+                  color: theme === 'light' ? '#1d1d1f' : '#ffffff'
+                }}
               />
               <button className="btn-primary whitespace-nowrap">
                 {t.subscribe.button}
