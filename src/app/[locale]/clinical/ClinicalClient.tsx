@@ -35,6 +35,7 @@ const fadeInUp = {
 }
 
 const outcomeIcons = [Activity, AlertTriangle, Shield, CheckCircle, Network, TrendingUp, Users, Building2, TrendingUp, Activity, Clock, CheckCircle]
+type GalleryGroupKey = 'education' | 'quality' | 'engagement' | 'rehab' | 'training'
 
 export default function ClinicalClient({ locale, dictionary }: ClinicalClientProps) {
   const t = dictionary.clinical
@@ -112,7 +113,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
     standardizedOps: '/images/clinical/标准化操作.png',
   }
 
-  const galleryGroups = [
+  const galleryGroups: Array<{ key: GalleryGroupKey; itemKeys: string[] }> = [
     {
       key: 'education',
       itemKeys: ['educationLibrary', 'patientReport', 'labResultsExplanation', 'labResultsLiaoning'],
