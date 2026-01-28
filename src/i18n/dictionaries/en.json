@@ -208,6 +208,34 @@
             }
           ],
           "aiHighlight": "Automatic reminder calculation, one-click long-term lab plan generation"
+        },
+        "fourItemMonitoring": {
+          "title": "Four-Item Monitoring Module",
+          "subtitle": "Continuous monitoring and intelligent analysis of BP, Kt/V, Blood Volume, and Blood Temperature",
+          "description": "Real-time monitoring of four critical dialysis indicators throughout treatment. Not only capturing current data but tracking historical trends, providing multi-dimensional data support for clinical decisions. Some metrics are obtained directly from dialysis machines, while others are intelligently calculated by AI, ensuring data completeness and accuracy.",
+          "features": [
+            {
+              "title": "Blood Pressure Monitoring",
+              "description": "Real-time data collection via 4G-connected BP monitors with instant transmission. Auto-generates BP trend charts, tracks pre/intra/post-dialysis changes, and alerts for hypotension risk."
+            },
+            {
+              "title": "Kt/V Monitoring",
+              "description": "Core dialysis adequacy indicator. Some machine models provide direct readings, while AI intelligently calculates based on blood flow rate, dialysis time, and weight parameters to ensure treatment quality."
+            },
+            {
+              "title": "Blood Volume Monitoring",
+              "description": "Real-time relative blood volume change monitoring. Obtained via dialysis machine BVM module or AI-calculated based on ultrafiltration volume and BP changes, preventing hypotension from excessive ultrafiltration."
+            },
+            {
+              "title": "Blood Temperature Monitoring",
+              "description": "Monitors blood temperature changes during dialysis. Obtained directly from machines or AI-calculated, optimizing dialysate temperature settings for patient comfort."
+            }
+          ],
+          "tracking": {
+            "title": "Historical Tracking & Analysis",
+            "description": "All monitoring data is not only displayed in real-time but automatically archived as time series, supporting cross-treatment cycle comparison to help doctors identify long-term trends and abnormal patterns."
+          },
+          "aiHighlight": "AI calculation + direct device capture, full tracking and trend analysis of four indicators"
         }
       }
     },

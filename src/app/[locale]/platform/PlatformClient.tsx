@@ -31,6 +31,7 @@ const moduleIcons: { [key: string]: any } = {
   careManagement: Heart,
   medicalRecords: ClipboardList,
   labReminder: Bell,
+  fourItemMonitoring: Activity,
 }
 
 const monitoringIcons: { [key: string]: any } = {
@@ -94,7 +95,8 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
     labEvaluation: '/images/lab-evaluation.jpg',
     careManagement: '/images/foot-management.jpg',
     medicalRecords: '/images/bp-weight-assistant.jpg',
-    labReminder: '/images/four-item-monitoring.jpg',
+    labReminder: '/images/consultation-template.png',
+    fourItemMonitoring: '/images/four-item-monitoring.jpg',
   }
 
   const platformLayers = [
