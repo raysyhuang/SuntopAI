@@ -263,12 +263,22 @@
     },
     "partners": {
       "tag": "Partner Hospitals",
-      "title": "Onboarded Hospitals",
-      "description": "Numerous landmark hospitals have successfully adopted our Digital Hemodialysis Management Platform",
+      "title": "Hospitals Using Our Platform",
+      "description": "Numerous landmark hospitals have successfully implemented our digital hemodialysis management platform",
       "categories": {
-        "selfOperated": "Self-Operated Dialysis Centers",
+        "selfOperated": "Self-Operated Centers",
         "publicHospitals": "Public Hospitals",
         "privateHospitals": "Private Hospitals"
+      },
+      "stats": {
+        "selfOperated": "50+",
+        "publicHospitals": "20+",
+        "privateHospitals": "30+"
+      },
+      "descriptions": {
+        "selfOperated": "Self-operated smart dialysis centers",
+        "publicHospitals": "Landmark public hospitals",
+        "privateHospitals": "Renowned private hospitals"
       },
       "cta": {
         "title": "Join Our Partner Network",
@@ -277,7 +287,7 @@
       }
     },
     "differentiators": {
-      "title": "Why Our Platform Wins",
+      "title": "Our Platform's Advantages",
       "description": "Technical and strategic advantages built for long-term dialysis transformation.",
       "items": [
         { "title": "Dialysis-Native Focus", "description": "Built specifically for dialysis, not adapted from generic healthcare AI." },
@@ -285,6 +295,57 @@
         { "title": "Clinical Guardrails", "description": "Automation with safety-first design, not black-box AI." },
         { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
       ]
+    },
+    "clinicalApplications": {
+      "tag": "Clinical Applications",
+      "title": "Real-World Clinical Scenarios",
+      "description": "Our AI platform powers three core clinical scenarios, enabling safer and more efficient dialysis delivery.",
+      "beforeAfter": {
+        "before": "Before",
+        "after": "After"
+      },
+      "aiRoleLabel": "AI's Role",
+      "apps": {
+        "inCenter": {
+          "title": "Standalone Hemodialysis Centers",
+          "description": "Real-time monitoring and AI-powered alerts for safer dialysis sessions.",
+          "outcomes": [
+            "Continuous monitoring during treatment",
+            "Real-time alerts for instability",
+            "Reduced intradialytic adverse events",
+            "Improved consistency across shifts"
+          ],
+          "before": "Periodic manual checks, reactive intervention after events occur",
+          "after": "Continuous AI monitoring with proactive alerts before complications",
+          "aiRole": "Continuous analysis of vital signs and machine parameters to detect early warning signs and trigger proactive interventions."
+        },
+        "networked": {
+          "title": "Chain Dialysis Centers",
+          "description": "Centralized oversight and standardized quality across multiple sites.",
+          "outcomes": [
+            "Centralized oversight across multiple sites",
+            "Standardized treatment quality",
+            "Scalable operations without loss of control",
+            "Support for regional or national networks"
+          ],
+          "before": "Siloed centers with variable quality and no unified oversight",
+          "after": "Unified platform enabling real-time visibility and standardization",
+          "aiRole": "Aggregated intelligence across all connected centers to identify patterns, benchmark performance, and ensure consistent care delivery."
+        },
+        "decision": {
+          "title": "Physician Decision Support",
+          "description": "Data-driven insights to support clinical decision-making.",
+          "outcomes": [
+            "Longitudinal patient trend analysis",
+            "Data-driven dry weight and UF insights",
+            "Reduced cognitive load during busy shifts",
+            "Objective support for clinical decisions"
+          ],
+          "before": "Manual review of scattered data, experience-dependent decisions",
+          "after": "AI-synthesized insights with trend analysis and risk stratification",
+          "aiRole": "Synthesizing multi-session patient data into actionable insights for treatment optimization and risk stratification."
+        }
+      }
     },
     "crossLinks": {
       "clinical": {
@@ -549,6 +610,59 @@
     "title": "Designed for Real-World Dialysis Operations",
     "subtitle": "Our systems are built to integrate into existing dialysis environments with minimal disruption and maximum flexibility.",
     "statement": "This is not a concept system. It is designed for real dialysis environments.",
+    "architecture": {
+      "tag": "Technical Architecture",
+      "title": "Platform Architecture",
+      "description": "Three integrated layers working together to transform dialysis data into clinical intelligence and safe automation.",
+      "layers": {
+        "data": {
+          "title": "Device & Data Layer",
+          "subtitle": "The foundation of safe automation",
+          "description": "We connect dialysis machines, vital sign devices, and clinical systems to create a unified, real-time data layer across treatment sessions.",
+          "signal": "This layer ensures reliable, structured, and continuous data capture during every treatment.",
+          "capabilities": [
+            "Dialysis machines from multiple vendors",
+            "Blood pressure monitors & vital signs",
+            "High-frequency streaming data",
+            "Secure device connectivity"
+          ]
+        },
+        "intelligence": {
+          "title": "Intelligence Layer",
+          "subtitle": "Clinical intelligence built on real-world data",
+          "description": "Our AI models analyze trends, detect risk patterns, and generate clinically relevant insights during dialysis, not after complications occur.",
+          "signal": "The system augments clinical judgment rather than replacing it.",
+          "capabilities": [
+            "Intradialytic blood pressure trend analysis",
+            "Ultrafiltration risk detection",
+            "Personalized parameter recommendations",
+            "Early warning signals for adverse events"
+          ]
+        },
+        "automation": {
+          "title": "Automation & Control Layer",
+          "subtitle": "Execution with guardrails",
+          "description": "We enable assisted control, protocol enforcement, and remote supervision to reduce variability and operational burden while keeping clinicians in control.",
+          "signal": "Automation is applied only where safety, predictability, and clinical consensus exist.",
+          "capabilities": [
+            "Assisted dialysis parameter adjustment",
+            "Protocol-based automation",
+            "Workflow standardization",
+            "Remote monitoring and supervision"
+          ]
+        }
+      }
+    },
+    "differentiators": {
+      "title": "Our Platform's Advantages",
+      "description": "Technical and strategic advantages built for long-term dialysis transformation.",
+      "items": [
+        { "title": "Dialysis-Native Focus", "description": "Built specifically for dialysis, not adapted from general-purpose healthcare AI." },
+        { "title": "Deep Integration", "description": "Device-level and workflow-level connectivity across the entire care continuum." },
+        { "title": "Clinical Guardrails", "description": "Safety-first automation by design, not black-box AI." },
+        { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
+      ]
+    },
     "features": {
       "title": "Deployment-Ready by Design",
       "description": "Built with the practical realities of healthcare IT, clinical workflows, and regulatory requirements in mind.",
@@ -685,6 +799,54 @@
       "team": "Self-Operated",
       "partners": "Partner Hospitals",
       "stations": "Devices Connected"
+    },
+    "contact": {
+      "tag": "Contact",
+      "title": "Let's Connect",
+      "subtitle": "For clinical collaboration, deployment discussions, or strategic partnerships, we welcome the opportunity to connect.",
+      "reasons": {
+        "clinical": { "title": "Clinical Partnership", "description": "Interested in deploying our platform at your dialysis center or network." },
+        "investment": { "title": "Investment Inquiry", "description": "Strategic investors aligned with healthcare transformation." },
+        "collaboration": { "title": "Strategic Collaboration", "description": "Equipment manufacturers, healthcare systems, or research institutions." }
+      },
+      "form": {
+        "title": "Send a Message",
+        "name": "Name",
+        "namePlaceholder": "Your name",
+        "email": "Email",
+        "emailPlaceholder": "your@email.com",
+        "organization": "Organization",
+        "organizationPlaceholder": "Your organization",
+        "reason": "Reason for Contact",
+        "reasonPlaceholder": "Select a reason",
+        "reasonOptions": {
+          "clinical": "Clinical Partnership",
+          "investment": "Investment Inquiry",
+          "collaboration": "Strategic Collaboration",
+          "media": "Media Inquiry",
+          "other": "Other"
+        },
+        "message": "Message",
+        "messagePlaceholder": "How can we help?",
+        "submit": "Send Message",
+        "success": {
+          "title": "Message Received",
+          "description": "We'll be in touch shortly."
+        }
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": "Email",
+        "headquarters": "Headquarters",
+        "location": "Shanghai, China",
+        "global": "Global Operations",
+        "phone": "Phone",
+        "phoneValue": "Available upon request",
+        "response": {
+          "title": "Response Time",
+          "description": "We aim to respond to all inquiries within 2 business days. For urgent clinical matters, please indicate in your message."
+        }
+      }
     }
   },
   "news": {

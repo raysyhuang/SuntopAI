@@ -270,6 +270,16 @@
         "publicHospitals": "公立醫院",
         "privateHospitals": "民營醫院"
       },
+      "stats": {
+        "selfOperated": "50+",
+        "publicHospitals": "20+",
+        "privateHospitals": "30+"
+      },
+      "descriptions": {
+        "selfOperated": "自營智慧透析中心",
+        "publicHospitals": "標杆性公立醫院",
+        "privateHospitals": "知名民營醫院"
+      },
       "cta": {
         "title": "加入我們的合作網路",
         "description": "了解如何將您的透析中心升級為智慧透析中心",
@@ -277,7 +287,7 @@
       }
     },
     "differentiators": {
-      "title": "為什麼我們的平台能贏",
+      "title": "我們平台的優勢",
       "description": "為長期透析變革構建的技術和策略優勢。",
       "items": [
         { "title": "透析原生聚焦", "description": "專為透析構建，而非從通用醫療AI改編。" },
@@ -285,6 +295,57 @@
         { "title": "臨床護欄", "description": "以安全為先的自動化設計，而非黑盒AI。" },
         { "title": "規模化就緒", "description": "為多中心網路設計，而非單站點試點。" }
       ]
+    },
+    "clinicalApplications": {
+      "tag": "臨床應用場景",
+      "title": "AI平台的臨床應用",
+      "description": "從單中心到網路化營運，AI賦能透析治療全流程",
+      "beforeAfter": {
+        "before": "導入前",
+        "after": "導入後"
+      },
+      "aiRoleLabel": "AI的作用",
+      "apps": {
+        "inCenter": {
+          "title": "單體血液透析中心",
+          "description": "用於更安全透析會話的即時監測和AI驅動警報。",
+          "outcomes": [
+            "治療期間持續監測",
+            "不穩定性即時警報",
+            "減少透析中不良事件",
+            "提高班次間一致性"
+          ],
+          "before": "定期手動檢查，事件發生後被動干預",
+          "after": "持續AI監測，在併發症發生前主動警報",
+          "aiRole": "持續分析生命體徵和設備參數，檢測早期預警信號並觸發主動干預。"
+        },
+        "networked": {
+          "title": "連鎖透析中心",
+          "description": "跨多個站點的集中監督和標準化品質。",
+          "outcomes": [
+            "跨多個站點的集中監督",
+            "標準化治療品質",
+            "可擴展營運而不失去控制",
+            "支援區域或全國網路"
+          ],
+          "before": "孤立中心，品質不一，無統一監督",
+          "after": "統一平台實現即時可見性和標準化",
+          "aiRole": "匯集所有連接中心的智能，識別模式，基準績效，確保一致的護理提供。"
+        },
+        "decision": {
+          "title": "醫師決策支援",
+          "description": "支援臨床決策的資料驅動洞察。",
+          "outcomes": [
+            "縱向患者趨勢分析",
+            "資料驅動的乾體重和UF洞察",
+            "減少繁忙班次中的認知負荷",
+            "臨床決策的客觀支援"
+          ],
+          "before": "手動審查分散資料，依賴經驗的決策",
+          "after": "AI合成的洞察與趨勢分析和風險分層",
+          "aiRole": "將多次會話患者資料合成為可操作的洞察，以優化治療和風險分層。"
+        }
+      }
     },
     "crossLinks": {
       "clinical": {
@@ -549,6 +610,59 @@
     "title": "為真實透析營運而設計",
     "subtitle": "我們的系統旨在以最小干擾和最大彈性整合到現有透析環境中。",
     "statement": "這不是一個概念系統。它是為真實透析環境設計的。",
+    "architecture": {
+      "tag": "技術架構",
+      "title": "平台架構",
+      "description": "三個整合層協同工作，將透析資料轉化為臨床智能和安全自動化。",
+      "layers": {
+        "data": {
+          "title": "設備與資料層",
+          "subtitle": "安全自動化的基礎",
+          "description": "我們連接透析設備、生命體徵設備和臨床系統，在整個治療過程中創建統一的即時資料層。",
+          "signal": "該層確保在每次治療期間進行可靠、結構化和連續的資料採集。",
+          "capabilities": [
+            "多廠商透析設備",
+            "血壓監測儀和生命體徵",
+            "高頻串流資料",
+            "安全設備連接"
+          ]
+        },
+        "intelligence": {
+          "title": "智能層",
+          "subtitle": "基於真實資料構建的臨床智能",
+          "description": "我們的AI模型分析趨勢、檢測風險模式，並在透析過程中而非併發症發生後生成臨床相關洞察。",
+          "signal": "系統增強而非取代臨床判斷。",
+          "capabilities": [
+            "透析中血壓趨勢分析",
+            "超過濾風險檢測",
+            "個性化參數推薦",
+            "不良事件早期預警信號"
+          ]
+        },
+        "automation": {
+          "title": "自動化與控制層",
+          "subtitle": "帶護欄的執行",
+          "description": "我們實現輔助控制、協議執行和遠端監督，在保持臨床醫師控制權的同時減少差異和營運負擔。",
+          "signal": "自動化僅在安全性、可預測性和臨床共識存在的情況下應用。",
+          "capabilities": [
+            "輔助透析參數調整",
+            "基於協議的自動化",
+            "工作流程標準化",
+            "遠端監測和監督"
+          ]
+        }
+      }
+    },
+    "differentiators": {
+      "title": "我們平台的優勢",
+      "description": "為長期透析變革構建的技術和策略優勢。",
+      "items": [
+        { "title": "透析原生聚焦", "description": "專為透析構建，而非從通用醫療AI改編。" },
+        { "title": "深度整合", "description": "貫穿整個護理流程的設備級和工作流程級連接。" },
+        { "title": "臨床護欄", "description": "以安全為先的自動化設計，而非黑盒AI。" },
+        { "title": "規模化就緒", "description": "為多中心網路設計，而非單站點試點。" }
+      ]
+    },
     "features": {
       "title": "從設計階段即可部署",
       "description": "考慮到醫療IT、臨床工作流程和監管要求的實際現實而構建。",
@@ -685,6 +799,54 @@
       "team": "自營中心",
       "partners": "合作醫院",
       "stations": "已連接設備"
+    },
+    "contact": {
+      "tag": "聯繫我們",
+      "title": "建立聯繫",
+      "subtitle": "對於臨床合作、部署討論或策略合作夥伴關係，我們歡迎與您聯繫。",
+      "reasons": {
+        "clinical": { "title": "臨床合作", "description": "有興趣在您的透析中心或網路部署我們的平台。" },
+        "investment": { "title": "投資諮詢", "description": "與醫療變革保持一致的策略投資者。" },
+        "collaboration": { "title": "策略合作", "description": "設備製造商、醫療系統或研究機構。" }
+      },
+      "form": {
+        "title": "發送訊息",
+        "name": "姓名",
+        "namePlaceholder": "您的姓名",
+        "email": "信箱",
+        "emailPlaceholder": "your@email.com",
+        "organization": "組織",
+        "organizationPlaceholder": "您的組織",
+        "reason": "聯繫原因",
+        "reasonPlaceholder": "選擇原因",
+        "reasonOptions": {
+          "clinical": "臨床合作",
+          "investment": "投資諮詢",
+          "collaboration": "策略合作",
+          "media": "媒體諮詢",
+          "other": "其他"
+        },
+        "message": "訊息",
+        "messagePlaceholder": "我們能如何幫助您？",
+        "submit": "發送訊息",
+        "success": {
+          "title": "訊息已收到",
+          "description": "我們會盡快與您聯繫。"
+        }
+      },
+      "info": {
+        "title": "聯繫資訊",
+        "email": "信箱",
+        "headquarters": "總部",
+        "location": "中國上海",
+        "global": "全球營運",
+        "phone": "電話",
+        "phoneValue": "聯繫後提供",
+        "response": {
+          "title": "響應時間",
+          "description": "我們力爭在2個工作日內回覆所有諮詢。如有緊急臨床事項，請在訊息中說明。"
+        }
+      }
     }
   },
   "news": {
