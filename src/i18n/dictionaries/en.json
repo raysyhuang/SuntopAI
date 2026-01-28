@@ -76,7 +76,7 @@
   "platform": {
     "tag": "Technology",
     "title": "Digital Hemodialysis Management Platform",
-    "subtitle": "Deep integration of software, hardware, and data services. Low-cost cloud architecture, real-time updates with zero maintenance, compliant with national medical data security standards. Technology truly serving healthcare, from data collection to the interconnected 'Digital Hub'.",
+    "subtitle": "Deep integration of software, hardware, and data services. Low-cost cloud architecture with real-time updates and zero maintenance, compliant with national medical data security standards. Technology truly serving healthcare—building the interconnected 'Digital Hub' from data collection to ecosystem integration.",
     "features": {
       "native": "Dialysis-Native",
       "realtime": "Real-Time Intelligence",
@@ -231,7 +231,7 @@
       "tag": "Dialysis Central Monitoring System",
       "title": "Guardian",
       "subtitle": "Protecting dialysis treatment safety with automatic synchronization of dialysis machine and patient blood pressure",
-      "description": "Through visual graphical interface with color classification, abnormal status is immediately visible. Visual graphical views provide nurses with skin and nail warnings. Redefining bedside equipment - not just equipment, but intelligent nodes integrated into the workflow.",
+      "description": "System automatically synchronizes dialysis machine parameters with patient vital signs. Visual graphical interface with color-coded classification makes abnormal conditions immediately apparent. Evolving from manual nursing rounds to intelligent system alerts, capturing potential treatment risks in real-time for comprehensive dialysis safety assurance.",
       "features": [
         {
           "title": "Real-Time BP Sync",
