@@ -178,20 +178,20 @@
           "aiHighlight": "System automatically completes risk classification based on multi-dimensional data"
         },
         "medicalRecords": {
-          "title": "4-Point BP Pattern Analysis",
-          "subtitle": "Track BP changes throughout dialysis, identify risk patterns, AI-powered IDH prediction",
-          "description": "Captures blood pressure data at four key time points during each dialysis treatment. The system automatically identifies BP change patterns and risk grades. Using accumulated historical data combined with LLM analysis, it predicts individual patient BP patterns and anticipates intradialytic hypotension (IDH) events, providing decision support for clinical intervention.",
+          "title": "Dry Weight Assessment Assistant",
+          "subtitle": "Smart weight trend tracking, scientific dry weight assessment, optimized UF planning",
+          "description": "System automatically records pre/post-dialysis weight data, combining UF volume, BP changes and multi-dimensional indicators to intelligently analyze patient weight trends. Assists doctors in scientifically assessing and adjusting dry weight, optimizing UF prescriptions, and preventing volume-related complications.",
           "features": [
             {
-              "title": "BP Collection & Pattern Recognition",
-              "description": "Captures BP at each dialysis phase, classifies risk by pattern: Stable (low risk), Continuous/Stepped Decline (high risk), U-Shape/V-Shape (medium risk), with color-coded visualization."
+              "title": "Smart Weight Trend Tracking",
+              "description": "Auto-records pre-dialysis weight, post-dialysis weight, UF volume, generating visual trend charts to clearly show weight patterns and dry weight deviations."
             },
             {
-              "title": "AI Prediction & Historical Tracking",
-              "description": "Records BP pattern evolution across treatment cycles, LLM analyzes historical data to predict IDH risk, alerting 15-30 minutes in advance with personalized prevention recommendations."
+              "title": "Dry Weight Assessment & Recommendations",
+              "description": "Combining BP patterns, UF tolerance, edema assessment data, AI analyzes if current dry weight setting is appropriate and generates adjustment recommendations."
             }
           ],
-          "aiHighlight": "4-point BP + pattern recognition + LLM analysis for IDH prediction & personalized prevention"
+          "aiHighlight": "Smart weight tracking + multi-dimensional analysis for scientific dry weight assessment"
         },
         "labReminder": {
           "title": "Lab Reminder Module",

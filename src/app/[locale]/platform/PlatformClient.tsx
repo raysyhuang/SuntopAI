@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { 
   Database, Brain, Cog, Server, Wifi, Shield, Activity, Cpu, GitBranch, Target, 
   Layers, Zap, ArrowRight, Mic, FileText, ClipboardList, Bell, Heart, AlertTriangle,
-  Monitor, Building2, Building, Hospital
+  Monitor, Building2, Building, Hospital, Scale
 } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
@@ -29,7 +29,7 @@ const moduleIcons: { [key: string]: any } = {
   consultation: Mic,
   labEvaluation: FileText,
   careManagement: Heart,
-  medicalRecords: Activity,
+  medicalRecords: Scale,
   labReminder: Bell,
   fourItemMonitoring: Monitor,
 }
@@ -94,7 +94,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
     consultation: '/images/consultation-template.png',
     labEvaluation: '/images/lab-evaluation.jpg',
     careManagement: '/images/foot-management.jpg',
-    medicalRecords: '/images/bp-pattern-tracking.png',
+    medicalRecords: '/images/bp-weight-assistant.jpg',
     labReminder: '/images/consultation-template.png',
     fourItemMonitoring: '/images/four-item-monitoring.jpg',
   }
