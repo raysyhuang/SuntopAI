@@ -178,20 +178,36 @@
           "aiHighlight": "System automatically completes risk classification based on multi-dimensional data"
         },
         "medicalRecords": {
-          "title": "Medical Records Module",
-          "subtitle": "Automatic capture and organization of lab results, graphical structuring and visualization",
-          "description": "A medical records database integrated as a hidden module within care management. The system automatically captures and organizes lab results and other numerical data for graphical, structured visualization.",
+          "title": "4-Point BP Pattern Analysis",
+          "subtitle": "Track BP changes throughout dialysis, identify risk patterns, AI-powered IDH prediction",
+          "description": "Captures blood pressure data at four key time points during each dialysis treatment. The system automatically identifies BP change patterns and risk grades. Using accumulated historical data combined with LLM analysis, it predicts individual patient BP patterns and anticipates intradialytic hypotension (IDH) events, providing decision support for clinical intervention.",
           "features": [
             {
-              "title": "Automatic Data Capture",
-              "description": "System automatically captures and organizes lab results, reducing manual data entry workload."
+              "title": "4-Point BP Collection",
+              "description": "Captures BP at dialysis start, mid-treatment phases (≤3%, 3-5%, ≥5% fluid removal stages), recording the complete BP trajectory throughout treatment."
             },
             {
-              "title": "Graphical Display",
-              "description": "Graphical, structured, and visual medical records database for clear data presentation."
+              "title": "Intelligent Pattern Classification",
+              "description": "System auto-identifies five BP patterns: Stable (low risk), Continuous Decline (high risk), Stepped Decline (high risk), U-Shape (medium risk), V-Shape (medium risk), with color-coded risk visualization."
+            },
+            {
+              "title": "Historical Trend Tracking",
+              "description": "Records patient BP pattern evolution across treatment cycles, auto-generates trend charts, helping clinicians identify individual BP characteristics and long-term changes."
+            },
+            {
+              "title": "AI/LLM Prediction & Prevention",
+              "description": "LLM analyzes patient historical BP patterns, dry weight, UF volume and multi-dimensional data to predict IDH risk for current treatment, alerting 15-30 minutes in advance with personalized prevention recommendations."
             }
           ],
-          "aiHighlight": "Automatic lab result capture with graphical medical record display"
+          "patternTypes": {
+            "title": "BP Pattern Classification",
+            "stable": { "name": "Stable", "risk": "Low Risk", "description": "BP remains steady throughout dialysis with <5% variance" },
+            "continuousDecline": { "name": "Continuous Decline", "risk": "High Risk", "description": "BP trends downward continuously, close IDH monitoring needed" },
+            "steppedDecline": { "name": "Stepped Decline", "risk": "High Risk", "description": "BP drops in steps, possibly excessive UF rate" },
+            "uShape": { "name": "U-Shape", "risk": "Medium Risk", "description": "Falls then rises, monitor mid-treatment low point" },
+            "vShape": { "name": "V-Shape", "risk": "Medium Risk", "description": "Sharp drop and rise, watch for hemodynamic instability" }
+          },
+          "aiHighlight": "4-point BP + pattern recognition + LLM analysis for IDH prediction & personalized prevention"
         },
         "labReminder": {
           "title": "Lab Reminder Module",
