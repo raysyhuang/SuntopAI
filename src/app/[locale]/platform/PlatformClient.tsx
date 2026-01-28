@@ -95,7 +95,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
     labEvaluation: '/images/lab-evaluation.jpg',
     careManagement: '/images/foot-management.jpg',
     medicalRecords: '/images/bp-weight-assistant.jpg',
-    labReminder: '/images/consultation-template.png',
+    labReminder: '/images/lab-reminder.jpg',
     fourItemMonitoring: '/images/four-item-monitoring.jpg',
   }
 

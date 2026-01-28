@@ -135,8 +135,8 @@
           "description": "Solving the doctor's pain point of 'say it once, write it again'. During daily patient communication, the AI assistant automatically captures speech and converts it to standardized medical terminology in real-time.",
           "features": [
             {
-              "title": "Problem List Function",
-              "description": "Create a problem list for each patient, query historical treatment plans for the same problem, ensure treatment plan and care plan continuity and accuracy, display unresolved and resolved issues on the same page for easy reference."
+              "title": "Problem List Management",
+              "description": "Create comprehensive problem lists for each patient with searchable historical treatment plans. Unresolved and resolved issues displayed on a single page for easy access to treatment history, ensuring continuity and accuracy in care planning."
             },
             {
               "title": "Expert Consultation Support",
@@ -151,20 +151,20 @@
           "description": "This module builds a highly integrated digital evaluation page, eliminating the hassle of switching between different pages. Refined display with medication records and graphical lab trends side by side, intuitive observation of all historical values, precise medication adjustment impact on lab indicators.",
           "features": [
             {
-              "title": "Data-Driven Decisions",
-              "description": "Providing solid data support for treatment planning, with AI assistant preset templates for quick generation of clinical recommendations."
+              "title": "Data-Driven Clinical Decisions",
+              "description": "Robust data foundation for treatment planning with AI-powered preset templates enabling rapid generation of evidence-based clinical recommendations."
             },
             {
-              "title": "One-Click Report Printing",
-              "description": "Doctors can print reports with graphical lab trends and personalized recommendations. Paper reports help explain patient conditions more clearly, greatly improving patient acceptance and treatment compliance."
+              "title": "One-Click Clinical Reports",
+              "description": "Generate and print comprehensive reports featuring graphical lab trends with personalized treatment recommendations. Visual paper reports enable clearer patient communication, significantly enhancing treatment acceptance, trust, and adherence."
             }
           ],
-          "aiHighlight": "AI assistant preset templates for quick generation of clinical recommendations"
+          "aiHighlight": "AI-powered preset templates for rapid clinical recommendation generation"
         },
         "careManagement": {
-          "title": "Foot Management Module",
+          "title": "Foot Care Management Module",
           "subtitle": "Refined screening, intelligent grading, protecting every step",
-          "description": "Evaluation covers lower limb arteries, nerve sensation, skin and nail indicators, deeply capturing every subtle lesion. Supports instant wound photography for documentation, with historical comparison making disease progression trends immediately clear. System automatically performs risk grading based on multi-dimensional data, helping staff quickly identify high-risk patients for precise early warning and intervention.",
+          "description": "Comprehensive assessment of lower limb arterial pulse, neurological sensation, skin integrity, and nail condition. The system captures subtle changes in foot health status. Instant wound photography with archival storage enables visual trend tracking through historical photo comparison. Multi-dimensional risk stratification automatically identifies high-risk patients, enabling early intervention and targeted prevention.",
           "features": [
             {
               "title": "Risk Classification",
@@ -199,12 +199,12 @@
           "description": "Automatic calculation and reminders, assisting doctors in generating reminder requirements. One-click creation of long-term personalized lab plans with automated time prediction, converting tasks into scheduled items.",
           "features": [
             {
-              "title": "Smart Reminder Calculation",
-              "description": "Automatic calculation and reminders, assisting doctors in generating reminder requirements."
+              "title": "Intelligent Scheduling",
+              "description": "System automatically calculates lab cycles based on test-specific frequencies (weekly, monthly, quarterly), generating smart reminders to ensure complete coverage without duplication."
             },
             {
-              "title": "Personalized Plans",
-              "description": "One-click creation of long-term personalized lab plans with automated time prediction."
+              "title": "Personalized Lab Calendars",
+              "description": "One-click generation of long-term personalized lab schedules with automated next-test predictions. Shifts from staff-tracked to system-managed—from reactive to proactive."
             }
           ],
           "aiHighlight": "Automatic reminder calculation, one-click long-term lab plan generation"
