@@ -19,11 +19,12 @@ const fadeInUp = {
 
 const valueIcons = [Heart, Target, Eye, Users]
 
+// Leadership team - names to be provided
 const leadership = [
-  { name: 'Dr. James Chen', titleKey: 'ceo', credential: '20+ years healthcare technology' },
-  { name: 'Dr. Sarah Liu', titleKey: 'cmo', credential: '15+ years nephrology' },
-  { name: 'Michael Zhang', titleKey: 'cto', credential: 'AI systems expert' },
-  { name: 'Lisa Wang', titleKey: 'vp', credential: 'Dialysis operations' },
+  { titleKey: 'CEO' },
+  { titleKey: 'CMO' },
+  { titleKey: 'CTO' },
+  { titleKey: 'VP' },
 ]
 
 export default function CompanyClient({ locale, dictionary }: CompanyClientProps) {
@@ -250,7 +251,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((person, index) => (
               <motion.div
-                key={person.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -267,27 +268,10 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
                 >
                   <Users style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="w-12 h-12" />
                 </div>
-                <h3 
-                  className="font-display font-semibold mb-1"
-                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                >
-                  {person.name}
-                </h3>
-                <p style={{ color: '#007d73' }} className="text-sm mb-2">{person.titleKey}</p>
-                <p style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="text-xs">{person.credential}</p>
+                <p style={{ color: '#007d73' }} className="text-sm font-medium">{person.titleKey}</p>
               </motion.div>
             ))}
           </div>
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center text-sm mt-12 italic"
-            style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}
-          >
-            {t.leadership.note}
-          </motion.p>
         </div>
       </section>
 
