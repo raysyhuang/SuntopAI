@@ -184,7 +184,7 @@
           "features": [
             {
               "title": "BP Collection & Pattern Recognition",
-              "description": "Captures BP at each dialysis phase (≤3%, 3-5%, ≥5% UF), auto-identifies five patterns: Stable (low risk), Continuous/Stepped Decline (high risk), U-Shape/V-Shape (medium risk), with color-coded visualization."
+              "description": "Captures BP at each dialysis phase, classifies risk by pattern: Stable (low risk), Continuous/Stepped Decline (high risk), U-Shape/V-Shape (medium risk), with color-coded visualization."
             },
             {
               "title": "AI Prediction & Historical Tracking",
