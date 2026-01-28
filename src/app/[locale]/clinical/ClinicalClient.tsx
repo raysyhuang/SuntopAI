@@ -55,39 +55,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [activeGalleryItem])
 
-  const applications = [
-    {
-      id: 'in-center',
-      icon: Building2,
-      title: t.apps.inCenter.title,
-      description: t.apps.inCenter.description,
-      outcomes: t.apps.inCenter.outcomes,
-      before: t.apps.inCenter.before,
-      after: t.apps.inCenter.after,
-      aiRole: t.apps.inCenter.aiRole,
-    },
-    {
-      id: 'networked',
-      icon: Network,
-      title: t.apps.networked.title,
-      description: t.apps.networked.description,
-      outcomes: t.apps.networked.outcomes,
-      before: t.apps.networked.before,
-      after: t.apps.networked.after,
-      aiRole: t.apps.networked.aiRole,
-    },
-    {
-      id: 'decision-support',
-      icon: Brain,
-      title: t.apps.decision.title,
-      description: t.apps.decision.description,
-      outcomes: t.apps.decision.outcomes,
-      before: t.apps.decision.before,
-      after: t.apps.decision.after,
-      aiRole: t.apps.decision.aiRole,
-    },
-  ]
-
   const infrastructureImages = [
     '/images/clinical/信息化查房.jpg',
     '/images/clinical/化验结果评估.jpg',
@@ -140,7 +107,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
     <div className="relative pt-20">
       {/* Hero */}
       <section 
-        className="relative py-32 overflow-hidden"
+        className="relative py-24 overflow-hidden"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
       >
         {theme === 'dark' && (
@@ -178,179 +145,45 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
         </div>
       </section>
 
-      {/* Applications */}
-      {applications.map((app, index) => (
-        <section
-          key={app.id}
-          id={app.id}
-          className="relative py-32"
-          style={{ 
-            backgroundColor: index % 2 === 0 
-              ? (theme === 'light' ? '#ffffff' : '#0f172a') 
-              : (theme === 'light' ? '#f5f5f7' : undefined)
-          }}
+      {/* Clinical Philosophy Statement */}
+      {t.statement && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-start">
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+          <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-6"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div 
-                    className="w-14 h-14 rounded-xl flex items-center justify-center"
-                    style={{ 
-                      backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)',
-                      border: theme === 'dark' ? '1px solid rgba(20,184,166,0.3)' : 'none'
-                    }}
-                  >
-                    <app.icon style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-7 h-7" />
-                  </div>
-                </div>
-                <h2 
-                  className="font-display text-4xl font-semibold tracking-tight mb-4"
-                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                >
-                  {app.title}
-                </h2>
-                <p 
-                  className="text-lg leading-relaxed mb-8"
-                  style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-                >
-                  {app.description}
+                {t.statement.title}
+              </h2>
+              <p 
+                className="text-lg leading-relaxed mb-8"
+                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+              >
+                {t.statement.description}
+              </p>
+              <div 
+                className="max-w-2xl mx-auto p-6 rounded-2xl"
+                style={{ 
+                  backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.06)' : 'rgba(20,184,166,0.1)',
+                  border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
+                }}
+              >
+                <p style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="text-lg italic leading-relaxed">
+                  {t.statement.quote}
                 </p>
-
-                <div className="grid grid-cols-2 gap-4">
-                  {app.outcomes.map((outcome, outcomeIndex) => {
-                    const IconComponent = outcomeIcons[(index * 4 + outcomeIndex) % outcomeIcons.length]
-                    return (
-                      <motion.div
-                        key={outcome}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: outcomeIndex * 0.1 }}
-                        className="flex items-start gap-3 p-4 rounded-xl"
-                        style={{ 
-                          backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.3)',
-                          border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                        }}
-                      >
-                        <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                        <span style={{ color: theme === 'light' ? '#1d1d1f' : '#d1d5db' }} className="text-sm">{outcome}</span>
-                      </motion.div>
-                    )
-                  })}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
-                <div 
-                  className="rounded-2xl p-6"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
-                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
-                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                  }}
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <div 
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: theme === 'light' ? '#86868b' : '#6b7280' }}
-                    />
-                    <span 
-                      className="text-sm font-medium uppercase tracking-wider"
-                      style={{ color: theme === 'light' ? '#86868b' : '#6b7280' }}
-                    >
-                      {t.beforeAfter.before}
-                    </span>
-                  </div>
-                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="leading-relaxed">{app.before}</p>
-                </div>
-
-                <div className="flex justify-center">
-                  <div 
-                    className="w-px h-8"
-                    style={{ background: theme === 'light' ? 'linear-gradient(to bottom, #86868b, #007d73)' : 'linear-gradient(to bottom, #6b7280, #14b8a6)' }}
-                  />
-                </div>
-
-                <div 
-                  className="rounded-2xl p-6"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
-                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,125,115,0.1)' : 'none',
-                    border: theme === 'light' ? '1px solid rgba(0,125,115,0.2)' : '1px solid rgba(20,184,166,0.3)'
-                  }}
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-3 h-3 rounded-full" style={{ backgroundColor: '#007d73' }} />
-                    <span 
-                      className="text-sm font-medium uppercase tracking-wider"
-                      style={{ color: '#007d73' }}
-                    >
-                      {t.beforeAfter.after}
-                    </span>
-                  </div>
-                  <p style={{ color: theme === 'light' ? '#1d1d1f' : '#d1d5db' }} className="leading-relaxed">{app.after}</p>
-                </div>
-
-                <div 
-                  className="mt-8 p-6 rounded-xl"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.06)' : 'rgba(20,184,166,0.1)',
-                    border: theme === 'light' ? 'none' : '1px solid rgba(20,184,166,0.2)'
-                  }}
-                >
-                  <h4 
-                    className="text-sm font-medium uppercase tracking-wider mb-3"
-                    style={{ color: '#007d73' }}
-                  >
-                    {t.aiRoleLabel}
-                  </h4>
-                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm leading-relaxed">{app.aiRole}</p>
-                </div>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </section>
-      ))}
-
-      {/* Clinical Focus Statement */}
-      <section 
-        className="relative py-32"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
-      >
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 
-              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-6"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {t.statement.title}
-            </h2>
-            <p 
-              className="text-lg leading-relaxed mb-8"
-              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-            >
-              {t.statement.description}
-            </p>
-            <p style={{ color: theme === 'light' ? '#86868b' : '#71717a' }} className="italic">
-              {t.statement.quote}
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      )}
 
       {/* Fine Management Section - Three Parts */}
       {t.fineManagement && t.fineManagement.parts && (
@@ -387,7 +220,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 1: Center Management */}
           {t.fineManagement.parts.centerManagement && (
             <section 
-              className="relative py-20"
+              className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -492,7 +325,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 2: Patient Management */}
           {t.fineManagement.parts.patientManagement && (
             <section 
-              className="relative py-20"
+              className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -598,7 +431,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 3: IT Infrastructure */}
           {t.fineManagement.parts.itInfrastructure && (
             <section 
-              className="relative py-20"
+              className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">

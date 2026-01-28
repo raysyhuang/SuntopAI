@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight, Package, Wrench, Truck, TrendingDown } from 'lucide-react'
+import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight, Package, Wrench, Truck, TrendingDown, Database, Brain, Cog, Activity, Wifi, Target, Cpu, Zap, GitBranch, Layers, Building2, Hospital, Building } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -31,11 +31,31 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
   const t = dictionary.deployment
   const { theme } = useTheme()
 
+  const capabilityIcons = [Server, Activity, Wifi, Shield, Activity, Target, Cpu, Zap, GitBranch, Layers, Target, Shield]
+
+  const platformLayers = t.architecture?.layers ? [
+    {
+      id: 'data',
+      icon: Database,
+      ...t.architecture.layers.data,
+    },
+    {
+      id: 'intelligence',
+      icon: Brain,
+      ...t.architecture.layers.intelligence,
+    },
+    {
+      id: 'automation',
+      icon: Cog,
+      ...t.architecture.layers.automation,
+    },
+  ] : []
+
   return (
     <div className="relative pt-20">
       {/* Hero */}
       <section 
-        className="relative py-32 overflow-hidden"
+        className="relative py-24 overflow-hidden"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
       >
         {theme === 'dark' && (
@@ -75,7 +95,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
 
       {/* Key Statement */}
       <section 
-        className="relative py-16"
+        className="relative py-24"
         style={{ 
           backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
           borderTop: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)',
@@ -96,9 +116,200 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         </div>
       </section>
 
+      {/* Platform Architecture - Moved up to show foundation first */}
+      {t.architecture && (
+        <>
+          <section className={`relative py-24 ${theme === 'dark' ? 'bg-slate-925' : 'bg-white'}`}>
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mb-16"
+              >
+                <span className="label-tag mb-4 inline-block">{t.architecture.tag}</span>
+                <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}>
+                  {t.architecture.title}
+                </h2>
+                <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+                  {t.architecture.description}
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="relative mb-24"
+              >
+                <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap md:flex-nowrap">
+                  {platformLayers.map((layer, index) => (
+                    <div key={layer.id} className="flex items-center gap-4 md:gap-8">
+                      <div className="flex flex-col items-center">
+                        <div className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl flex items-center justify-center ${
+                          theme === 'dark' 
+                            ? 'bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 glow-accent' 
+                            : 'bg-white border border-gray-200 shadow-lg'
+                        }`}>
+                          <layer.icon className={`w-10 h-10 md:w-12 md:h-12 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                        </div>
+                        <span className={`mt-4 font-medium text-sm text-center max-w-[120px] ${
+                          theme === 'dark' ? 'text-white' : 'text-gray-900'
+                        }`}>
+                          {layer.title}
+                        </span>
+                      </div>
+                      {index < platformLayers.length - 1 && (
+                        <div className="hidden md:flex items-center">
+                          <div className="w-12 h-px bg-gradient-to-r from-accent-600 to-accent-400" />
+                          <div className="w-2 h-2 bg-accent-400 rounded-full" />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Detailed Layer Sections */}
+          {platformLayers.map((layer, index) => (
+            <section
+              key={layer.id}
+              id={layer.id}
+              className={`relative py-24 ${
+                index % 2 === 0 
+                  ? (theme === 'light' ? 'bg-gray-50' : '') 
+                  : (theme === 'dark' ? 'bg-slate-925' : 'bg-white')
+              }`}
+            >
+              <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className={index % 2 === 1 ? 'lg:col-start-2' : ''}
+                  >
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${
+                        theme === 'dark' 
+                          ? 'bg-accent-900/30 border border-accent-800/30' 
+                          : 'bg-accent-50 border border-accent-200'
+                      }`}>
+                        <layer.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                      </div>
+                      <span className={`text-sm font-medium tracking-wider uppercase ${
+                        theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
+                      }`}>
+                        Layer {index + 1}
+                      </span>
+                    </div>
+                    <h2 className={`font-display text-4xl font-semibold tracking-tight mb-3 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {layer.title}
+                    </h2>
+                    <p className={`text-xl mb-6 ${theme === 'dark' ? 'text-accent-400/80' : 'text-accent-600'}`}>{layer.subtitle}</p>
+                    <p className={`text-lg leading-relaxed mb-8 ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+                      {layer.description}
+                    </p>
+                    <p className={`italic border-l-2 border-accent-600 pl-4 ${
+                      theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
+                    }`}>
+                      {layer.signal}
+                    </p>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className={`grid grid-cols-2 gap-4 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}
+                  >
+                    {layer.capabilities.map((cap: string, capIndex: number) => {
+                      const IconComponent = capabilityIcons[(index * 4 + capIndex) % capabilityIcons.length]
+                      return (
+                        <motion.div
+                          key={cap}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: capIndex * 0.1 }}
+                          className={`rounded-2xl p-6 ${
+                            theme === 'dark' 
+                              ? 'bg-slate-900/50 border border-slate-800/50' 
+                              : 'bg-white border border-gray-200 shadow-sm'
+                          }`}
+                        >
+                          <IconComponent className={`w-6 h-6 mb-3 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                          <p className={`text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-gray-700'}`}>{cap}</p>
+                        </motion.div>
+                      )
+                    })}
+                  </motion.div>
+                </div>
+              </div>
+            </section>
+          ))}
+        </>
+      )}
+
+      {/* Technical Differentiators - Moved up to show advantages early */}
+      {t.differentiators && (
+        <section className={`relative py-24 ${theme === 'light' ? 'bg-white' : ''}`}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>
+                {t.differentiators.title}
+              </h2>
+              <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+                {t.differentiators.description}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {t.differentiators.items.map((item: any, index: number) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`text-center rounded-2xl p-6 ${
+                    theme === 'dark' 
+                      ? 'bg-slate-900/50 border border-slate-800/50' 
+                      : 'bg-white border border-gray-200 shadow-sm'
+                  }`}
+                >
+                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                    theme === 'dark' 
+                      ? 'bg-accent-900/30 border border-accent-800/30' 
+                      : 'bg-accent-50 border border-accent-200'
+                  }`}>
+                    <span className={`font-display font-semibold ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`}>{index + 1}</span>
+                  </div>
+                  <h3 className={`font-display font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
+                  <p className={`text-sm ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{item.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Deployment Features */}
       <section 
-        className="relative py-32"
+        className="relative py-24"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -158,7 +369,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
 
       {/* Deployment Process */}
       <section 
-        className="relative py-32"
+        className="relative py-24"
         style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -229,7 +440,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
 
       {/* Security & Compliance */}
       <section 
-        className="relative py-32"
+        className="relative py-24"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -306,7 +517,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {/* Smart Supply Chain */}
       {t.supplyChain && (
         <section 
-          className="relative py-32"
+          className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
