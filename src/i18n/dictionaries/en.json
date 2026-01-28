@@ -183,30 +183,14 @@
           "description": "Captures blood pressure data at four key time points during each dialysis treatment. The system automatically identifies BP change patterns and risk grades. Using accumulated historical data combined with LLM analysis, it predicts individual patient BP patterns and anticipates intradialytic hypotension (IDH) events, providing decision support for clinical intervention.",
           "features": [
             {
-              "title": "4-Point BP Collection",
-              "description": "Captures BP at dialysis start, mid-treatment phases (≤3%, 3-5%, ≥5% fluid removal stages), recording the complete BP trajectory throughout treatment."
+              "title": "BP Collection & Pattern Recognition",
+              "description": "Captures BP at each dialysis phase (≤3%, 3-5%, ≥5% UF), auto-identifies five patterns: Stable (low risk), Continuous/Stepped Decline (high risk), U-Shape/V-Shape (medium risk), with color-coded visualization."
             },
             {
-              "title": "Intelligent Pattern Classification",
-              "description": "System auto-identifies five BP patterns: Stable (low risk), Continuous Decline (high risk), Stepped Decline (high risk), U-Shape (medium risk), V-Shape (medium risk), with color-coded risk visualization."
-            },
-            {
-              "title": "Historical Trend Tracking",
-              "description": "Records patient BP pattern evolution across treatment cycles, auto-generates trend charts, helping clinicians identify individual BP characteristics and long-term changes."
-            },
-            {
-              "title": "AI/LLM Prediction & Prevention",
-              "description": "LLM analyzes patient historical BP patterns, dry weight, UF volume and multi-dimensional data to predict IDH risk for current treatment, alerting 15-30 minutes in advance with personalized prevention recommendations."
+              "title": "AI Prediction & Historical Tracking",
+              "description": "Records BP pattern evolution across treatment cycles, LLM analyzes historical data to predict IDH risk, alerting 15-30 minutes in advance with personalized prevention recommendations."
             }
           ],
-          "patternTypes": {
-            "title": "BP Pattern Classification",
-            "stable": { "name": "Stable", "risk": "Low Risk", "description": "BP remains steady throughout dialysis with <5% variance" },
-            "continuousDecline": { "name": "Continuous Decline", "risk": "High Risk", "description": "BP trends downward continuously, close IDH monitoring needed" },
-            "steppedDecline": { "name": "Stepped Decline", "risk": "High Risk", "description": "BP drops in steps, possibly excessive UF rate" },
-            "uShape": { "name": "U-Shape", "risk": "Medium Risk", "description": "Falls then rises, monitor mid-treatment low point" },
-            "vShape": { "name": "V-Shape", "risk": "Medium Risk", "description": "Sharp drop and rise, watch for hemodynamic instability" }
-          },
           "aiHighlight": "4-point BP + pattern recognition + LLM analysis for IDH prediction & personalized prevention"
         },
         "labReminder": {
@@ -231,26 +215,14 @@
           "description": "Real-time monitoring of four critical dialysis indicators throughout treatment. Not only capturing current data but tracking historical trends, providing multi-dimensional data support for clinical decisions. Some metrics are obtained directly from dialysis machines, while others are intelligently calculated by AI, ensuring data completeness and accuracy.",
           "features": [
             {
-              "title": "Blood Pressure Monitoring",
-              "description": "Real-time data collection via 4G-connected BP monitors with instant transmission. Auto-generates BP trend charts, tracks pre/intra/post-dialysis changes, and alerts for hypotension risk."
+              "title": "BP & Kt/V Monitoring",
+              "description": "4G BP monitors with real-time transmission and auto-generated trend charts for hypotension alerts; Kt/V via direct machine reading or AI calculation to ensure dialysis adequacy."
             },
             {
-              "title": "Kt/V Monitoring",
-              "description": "Core dialysis adequacy indicator. Some machine models provide direct readings, while AI intelligently calculates based on blood flow rate, dialysis time, and weight parameters to ensure treatment quality."
-            },
-            {
-              "title": "Blood Volume Monitoring",
-              "description": "Real-time relative blood volume change monitoring. Obtained via dialysis machine BVM module or AI-calculated based on ultrafiltration volume and BP changes, preventing hypotension from excessive ultrafiltration."
-            },
-            {
-              "title": "Blood Temperature Monitoring",
-              "description": "Monitors blood temperature changes during dialysis. Obtained directly from machines or AI-calculated, optimizing dialysate temperature settings for patient comfort."
+              "title": "Blood Volume & Temperature Monitoring",
+              "description": "Real-time blood volume monitoring to prevent excessive UF, plus temperature tracking to optimize dialysate settings—some via direct device capture, some AI-calculated."
             }
           ],
-          "tracking": {
-            "title": "Historical Tracking & Analysis",
-            "description": "All monitoring data is not only displayed in real-time but automatically archived as time series, supporting cross-treatment cycle comparison to help doctors identify long-term trends and abnormal patterns."
-          },
           "aiHighlight": "AI calculation + direct device capture, full tracking and trend analysis of four indicators"
         }
       }
