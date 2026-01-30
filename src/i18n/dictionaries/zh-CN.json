@@ -29,27 +29,51 @@
       "iot": {
         "title": "IoT数据基础设施",
         "description": "透析机、血压计、体重秤等核心设备全部物联网化，已接入3000+台透析设备，每5秒高频数据采集。",
-        "features": ["3000+台设备接入", "HIS/LIS/EMR系统集成", "结构化临床数据管道"]
+        "features": [
+          "3000+台设备接入",
+          "HIS/LIS/EMR系统集成",
+          "结构化临床数据管道"
+        ]
       },
       "ai": {
         "title": "透析专用AI引擎",
         "description": "基于透析临床数据训练的定制化大模型，结合AI Agent实现IDH预测、超滤率优化和干体重评估。",
-        "features": ["IDH风险预测", "超滤率优化", "干体重趋势分析"]
+        "features": [
+          "IDH风险预测",
+          "超滤率优化",
+          "干体重趋势分析"
+        ]
       },
       "automation": {
         "title": "实时临床决策支持",
         "description": "透析中持续监测血压趋势、超滤耐受、通路血流和Kt/V充分性，处方调整建议直接集成到医生工作流程。",
-        "features": ["透析中血压分析", "超滤与容量管理", "充分性监测(Kt/V)"]
+        "features": [
+          "透析中血压分析",
+          "超滤与容量管理",
+          "充分性监测(Kt/V)"
+        ]
       }
     },
     "flow": {
       "title": "设备 → 数据 → AI → 临床行动",
       "description": "透析设备每5秒实时数据流传输，整合血压监测、体重秤和化验结果。AI引擎分析透析中趋势，直接向医生工作流程发送可操作预警。",
       "steps": {
-        "machines": { "label": "透析设备", "sublabel": "血压/超滤/血流" },
-        "data": { "label": "临床数据湖", "sublabel": "化验/生命体征/处方" },
-        "ai": { "label": "AI分析", "sublabel": "IDH/超滤/Kt/V" },
-        "automation": { "label": "临床预警", "sublabel": "实时CDSS" }
+        "machines": {
+          "label": "透析设备",
+          "sublabel": "血压/超滤/血流"
+        },
+        "data": {
+          "label": "临床数据湖",
+          "sublabel": "化验/生命体征/处方"
+        },
+        "ai": {
+          "label": "AI分析",
+          "sublabel": "IDH/超滤/Kt/V"
+        },
+        "automation": {
+          "label": "临床预警",
+          "sublabel": "实时CDSS"
+        }
       }
     },
     "stats": {
@@ -63,10 +87,22 @@
       "title": "透析是高频、高风险、强依赖经验的医疗场景",
       "description1": "透析中低血压(IDH)发生率高达20-30%。容量超负荷导致心血管事件。超滤率计算不当引起痉挛和血流动力学不稳定。干体重评估依赖临床经验，医生间差异显著。",
       "description2": "我们的AI系统分析血压趋势、超滤耐受模式和历史治疗数据，在IDH发生前15-30分钟预警，优化超滤曲线，并提供循证的干体重建议。",
-      "clinical": { "title": "IDH预防", "desc": "通过预测性预警，透析中低血压减少30%" },
-      "operational": { "title": "部署规模", "desc": "50家智慧透析中心，30家自营，3000+台设备" },
-      "strategic": { "title": "临床成效", "desc": "Kt/V充分性提升，住院率下降" },
-      "longterm": { "title": "发展规划", "desc": "2026年新增100家，2027年新增150家，目标300家" }
+      "clinical": {
+        "title": "IDH预防",
+        "desc": "通过预测性预警，透析中低血压减少30%"
+      },
+      "operational": {
+        "title": "部署规模",
+        "desc": "50家智慧透析中心，30家自营，3000+台设备"
+      },
+      "strategic": {
+        "title": "临床成效",
+        "desc": "Kt/V充分性提升，住院率下降"
+      },
+      "longterm": {
+        "title": "发展规划",
+        "desc": "2026年新增100家，2027年新增150家，目标300家"
+      }
     },
     "finalCta": {
       "title": "已经落地，而不是概念",
@@ -89,29 +125,29 @@
       "apps": {
         "inCenter": {
           "title": "单体血液透析中心",
-          "description": "用于更安全透析会话的实时监测和AI驱动警报。",
+          "description": "为单中心提供实时监测与AI智能预警，提升治疗安全性与标准化水平。",
           "outcomes": [
-            "治疗期间持续监测",
-            "不稳定性实时警报",
-            "减少透析中不良事件",
-            "提高班次间一致性"
+            "治疗全程实时监测",
+            "异常情况主动预警",
+            "透析不良事件减少",
+            "治疗质量标准化"
           ],
-          "before": "定期手动检查，事件发生后被动干预",
-          "after": "持续AI监测，在并发症发生前主动警报",
-          "aiRole": "持续分析生命体征和设备参数，检测早期预警信号并触发主动干预。"
+          "before": "人工定期巡视，问题发生后被动应对",
+          "after": "AI持续监测，异常趋势提前预警，主动干预",
+          "aiRole": "实时分析生命体征与透析参数，识别异常趋势与早期风险信号，触发主动预警与干预建议。"
         },
         "networked": {
           "title": "连锁透析中心",
-          "description": "跨多个站点的集中监督和标准化质量。",
+          "description": "为连锁中心提供集中监管与质量标准化，支撑规模化扩张与统一运营。",
           "outcomes": [
-            "跨多个站点的集中监督",
-            "标准化治疗质量",
-            "不失控制的可扩展运营",
-            "支持区域或全国透析网络"
+            "多中心集中监管",
+            "治疗质量标准化",
+            "规模化运营不失控",
+            "支持区域或全国网络扩展"
           ],
-          "before": "孤立的中心，质量参差不齐，没有统一监督",
-          "after": "统一平台实现实时可见性和标准化",
-          "aiRole": "跨所有连接中心的聚合智能，识别模式、基准性能并确保一致的护理交付。"
+          "before": "各中心独立运营，质量参差不齐，缺乏统一标准",
+          "after": "统一平台，实时监管，标准流程，质量可控",
+          "aiRole": "汇聚所有中心数据，识别最佳实践模式，建立质控基准，确保治疗标准统一执行。"
         },
         "decision": {
           "title": "医生决策支持",
@@ -178,7 +214,7 @@
     "coreModules": {
       "tag": "核心模块",
       "title": "核心功能模块介绍",
-      "description": "从查房到化验、从管护到监控，全流程智能化覆盖",
+      "description": "覆盖查房、化验、管护、监控全流程，实现透析中心智能化升级",
       "modules": {
         "consultation": {
           "title": "查房模块",
@@ -198,7 +234,7 @@
         },
         "labEvaluation": {
           "title": "化验结果评估模块",
-          "subtitle": "深度集成专家智慧，让每一次化验评估从任务进化为精准诊疗单元",
+          "subtitle": "深度集成专家智慧，让每一次化验评估从任务进化为临床决策导航",
           "description": "该模块构建了一个高度集成的数字化评估页面，让医生彻底告别在不同页面间反复切换的烦恼。精细化的阶段展示，将患者用药记录与图形化化验趋势对比并列呈现，直观观测从过往至今所有的数值波动，精准评估药物调整对化验指标的真实影响。",
           "features": [
             {
@@ -219,7 +255,7 @@
           "features": [
             {
               "title": "风险分级分类",
-              "description": "系统基于多维数据自动完成风险分级分类，助力快速锁定高风险人群，实现精准预测预干预。"
+              "description": "系统基于多维数据自动完成风险分级分类，助力快速锁定高风险人群，实现提前预测与干预。"
             },
             {
               "title": "照片对比追踪",
@@ -247,7 +283,7 @@
         "labReminder": {
           "title": "化验提醒模块",
           "subtitle": "化验频率繁多、周期不一(每周、每月、每季度等)，往往是化验管理中的最大难点",
-          "description": "自动计算和提醒，辅助医生生成提醒需求，一键制定长期个人个性化验计划，自动化时间预测，接管任务变为事项。",
+          "description": "自动计算和提醒，辅助医生生成提醒需求，一键制定长期个人个性化验计划，自动化时间预测，将人工跟进转为系统自动提醒。",
           "features": [
             {
               "title": "智能排程计算",
@@ -275,41 +311,59 @@
             }
           ],
           "aiHighlight": "AI智能计算+设备直采，四项指标全程追踪与趋势分析"
+        },
+        "qualityControl": {
+          "title": "质控模块",
+          "subtitle": "结构化、可视化的持续质量管理",
+          "description": "系统自动汇聚化验结果、治疗参数和关键过程指标，形成结构化、可视化的质控数据库，用于透析质量评估、问题追踪与持续改进。",
+          "aiHighlight": "质控数据自动汇聚，支撑标准化执行与持续改进"
         }
       }
     },
     "monitoringSystem": {
       "tag": "透析中央监控系统",
-      "title": "守护者",
-      "subtitle": "守护透析治疗安全，系统自动同步透析机与患者血压",
-      "description": "系统自动同步透析机参数与患者生命体征，通过可视化图形界面和颜色分级，让异常状态一目了然。从护士巡视进化到系统预警，实时捕捉治疗中的潜在风险，为透析安全提供全方位保障。",
+      "title": "智能监护，从巡视到预警的升级",
+      "subtitle": "实时数据采集、智能风险预警、集中可视化管理",
+      "description": "透析机、血压计、体重秤等设备数据实时自动上传，通过中央监控系统集中呈现。智能算法分析生命体征与透析参数，识别异常趋势并分级预警。从传统的护士定时巡视，升级为系统主动监护，让风险早发现、早干预。",
       "features": [
         {
-          "title": "实时血压同步",
+          "title": "实时数据同步",
           "icon": "Activity",
-          "description": "系统自动同步透析机与患者血压数据，实时监控生命体征。"
+          "description": "透析机、血压计等设备数据自动实时上传，无需人工录入，确保数据准确及时。"
         },
         {
-          "title": "颜色分级预警",
+          "title": "智能分级预警",
           "icon": "AlertTriangle",
-          "description": "通过可视化图形界面与颜色分级，让异常状态一目了然。"
+          "description": "基于生命体征与透析参数的智能分析，通过颜色分级直观呈现患者风险等级，异常状态一目了然。"
         },
         {
-          "title": "护士工作站",
+          "title": "集中监控大屏",
           "icon": "Monitor",
-          "description": "集中显示所有患者状态，快速锁定需要关注的床位。"
+          "description": "护士工作站集中显示所有床位患者状态，快速识别高风险患者，优化护理资源分配。"
         },
         {
-          "title": "智能床旁设备",
+          "title": "智能床旁终端",
           "icon": "Cpu",
-          "description": "重新定义床旁设备，不仅是设备，更是融入流程的智能节点。"
+          "description": "床旁设备不再只是显示器，而是融入临床流程的智能终端，提供实时数据、预警提醒与处置建议。"
         }
       ],
       "stats": {
-        "response": { "label": "响应时间", "value": "<30秒" },
-        "coverage": { "label": "监控覆盖", "value": "100%" },
-        "alerts": { "label": "预警准确率", "value": "95%" },
-        "uptime": { "label": "系统可用性", "value": "99.9%" }
+        "response": {
+          "label": "响应时间",
+          "value": "<30秒"
+        },
+        "coverage": {
+          "label": "监控覆盖",
+          "value": "100%"
+        },
+        "alerts": {
+          "label": "预警准确率",
+          "value": "95%"
+        },
+        "uptime": {
+          "label": "系统可用性",
+          "value": "99.9%"
+        }
       }
     },
     "partners": {
@@ -524,28 +578,68 @@
       "title": "临床一线与患者关怀",
       "subtitle": "来自合作中心的真实场景，覆盖患者宣教、康复支持与标准化服务。",
       "groups": {
-        "education": { "title": "患者教育与沟通" },
-        "quality": { "title": "质控与标准化运营" },
-        "engagement": { "title": "患者参与活动" },
-        "rehab": { "title": "康复与特色护理" },
-        "training": { "title": "培训与能力建设" }
+        "education": {
+          "title": "患者教育与沟通"
+        },
+        "quality": {
+          "title": "质控与标准化运营"
+        },
+        "engagement": {
+          "title": "患者参与活动"
+        },
+        "rehab": {
+          "title": "康复与特色护理"
+        },
+        "training": {
+          "title": "培训与能力建设"
+        }
       },
       "items": {
-        "educationLibrary": { "title": "患者宣教资料库" },
-        "patientReport": { "title": "患者说明用报告书" },
-        "nutritionActivity": { "title": "营养趣味猜谜活动" },
-        "nutritionActivityTwo": { "title": "营养宣教互动活动" },
-        "rehabRoom": { "title": "康复运动设备" },
-        "carbonicBath": { "title": "碳酸泉足浴" },
-        "carbonicRoom": { "title": "碳酸泉室" },
-        "carbonicEffect": { "title": "碳酸泉效果" },
-        "trainingPocketGuide": { "title": "教育培训用口袋书" },
-        "trainingMaterial": { "title": "培训教材" },
-        "labResultsExplanation": { "title": "化验结果说明" },
-        "labResultsLiaoning": { "title": "化验结果床旁说明" },
-        "dailySharing": { "title": "每日例会经验分享" },
-        "qualityAlliance": { "title": "质控小组会议" },
-        "standardizedOps": { "title": "标准化操作流程" }
+        "educationLibrary": {
+          "title": "患者宣教资料库"
+        },
+        "patientReport": {
+          "title": "患者说明用报告书"
+        },
+        "nutritionActivity": {
+          "title": "营养趣味猜谜活动"
+        },
+        "nutritionActivityTwo": {
+          "title": "营养宣教互动活动"
+        },
+        "rehabRoom": {
+          "title": "康复运动设备"
+        },
+        "carbonicBath": {
+          "title": "碳酸泉足浴"
+        },
+        "carbonicRoom": {
+          "title": "碳酸泉室"
+        },
+        "carbonicEffect": {
+          "title": "碳酸泉效果"
+        },
+        "trainingPocketGuide": {
+          "title": "教育培训用口袋书"
+        },
+        "trainingMaterial": {
+          "title": "培训教材"
+        },
+        "labResultsExplanation": {
+          "title": "化验结果说明"
+        },
+        "labResultsLiaoning": {
+          "title": "化验结果床旁说明"
+        },
+        "dailySharing": {
+          "title": "每日例会经验分享"
+        },
+        "qualityAlliance": {
+          "title": "质控小组会议"
+        },
+        "standardizedOps": {
+          "title": "标准化操作流程"
+        }
       }
     }
   },
@@ -558,22 +652,56 @@
       "title": "从设计阶段即可部署",
       "description": "考虑到医疗IT、临床工作流程和监管要求的实际现实而构建。",
       "items": [
-        { "title": "多厂商兼容性", "description": "与多个制造商的现有透析设备生态系统兼容。无需更换设备。" },
-        { "title": "灵活部署", "description": "本地、云端或混合部署选项，满足您的基础设施和合规要求。" },
-        { "title": "最小干扰", "description": "渐进式部署，旨在无运营停机时间地集成到现有临床工作流程中。" },
-        { "title": "设计安全", "description": "企业级安全架构，包括静态和传输加密、基于角色的访问控制。" },
-        { "title": "监管意识", "description": "考虑医疗监管要求构建，支持符合本地和国际标准。" },
-        { "title": "可扩展架构", "description": "从单个中心到全国网络，平台无需架构更改即可扩展。" }
+        {
+          "title": "多厂商兼容性",
+          "description": "与多个制造商的现有透析设备生态系统兼容。无需更换设备。"
+        },
+        {
+          "title": "灵活部署",
+          "description": "本地、云端或混合部署选项，满足您的基础设施和合规要求。"
+        },
+        {
+          "title": "最小干扰",
+          "description": "渐进式部署，旨在无运营停机时间地集成到现有临床工作流程中。"
+        },
+        {
+          "title": "设计安全",
+          "description": "企业级安全架构，包括静态和传输加密、基于角色的访问控制。"
+        },
+        {
+          "title": "监管意识",
+          "description": "考虑医疗监管要求构建，支持符合本地和国际标准。"
+        },
+        {
+          "title": "可扩展架构",
+          "description": "从单个中心到全国网络，平台无需架构更改即可扩展。"
+        }
       ]
     },
     "process": {
       "title": "部署流程",
       "description": "结构化、临床监督下的实施方法。",
       "steps": [
-        { "step": "01", "title": "评估", "description": "评估当前基础设施、设备兼容性和集成要求。" },
-        { "step": "02", "title": "试点部署", "description": "在选定的透析站进行有限部署，验证集成和临床工作流程。" },
-        { "step": "03", "title": "临床验证", "description": "与临床团队合作，微调警报、阈值和决策支持参数。" },
-        { "step": "04", "title": "扩展与优化", "description": "通过持续监测和优化，在各设施扩展部署。" }
+        {
+          "step": "01",
+          "title": "评估",
+          "description": "评估当前基础设施、设备兼容性和集成要求。"
+        },
+        {
+          "step": "02",
+          "title": "试点部署",
+          "description": "在选定的透析站进行有限部署，验证集成和临床工作流程。"
+        },
+        {
+          "step": "03",
+          "title": "临床验证",
+          "description": "与临床团队合作，微调警报、阈值和决策支持参数。"
+        },
+        {
+          "step": "04",
+          "title": "扩展与优化",
+          "description": "通过持续监测和优化，在各设施扩展部署。"
+        }
       ]
     },
     "security": {
@@ -588,10 +716,22 @@
         "合规就绪架构"
       ],
       "stats": {
-        "encryption": { "label": "数据加密", "value": "AES-256" },
-        "access": { "label": "访问控制", "value": "RBAC" },
-        "audit": { "label": "审计日志", "value": "完整" },
-        "compliance": { "label": "合规性", "value": "就绪" }
+        "encryption": {
+          "label": "数据加密",
+          "value": "AES-256"
+        },
+        "access": {
+          "label": "访问控制",
+          "value": "RBAC"
+        },
+        "audit": {
+          "label": "审计日志",
+          "value": "完整"
+        },
+        "compliance": {
+          "label": "合规性",
+          "value": "就绪"
+        }
       }
     },
     "supplyChain": {
@@ -603,32 +743,64 @@
           "title": "智能耗材管理",
           "icon": "Package",
           "description": "AI预测耗材使用量，自动触发补货，避免缺货或过期浪费。",
-          "items": ["透析器、血路管等耗材智能预测", "自动补货提醒", "批次追溯与效期管理", "成本分析与优化建议"]
+          "items": [
+            "透析器、血路管等耗材智能预测",
+            "自动补货提醒",
+            "批次追溯与效期管理",
+            "成本分析与优化建议"
+          ]
         },
         {
           "title": "设备维护预测",
           "icon": "Wrench",
           "description": "基于设备运行数据，AI预测维护需求，减少非计划停机。",
-          "items": ["透析机运行状态实时监控", "预测性维护提醒", "故障早期预警", "维护记录数字化管理"]
+          "items": [
+            "透析机运行状态实时监控",
+            "预测性维护提醒",
+            "故障早期预警",
+            "维护记录数字化管理"
+          ]
         },
         {
           "title": "物流配送优化",
           "icon": "Truck",
           "description": "智能调度配送，送货机器人辅助院内物流。",
-          "items": ["多中心配送路线优化", "送货机器人院内配送", "实时库存可视化", "紧急调配响应"]
+          "items": [
+            "多中心配送路线优化",
+            "送货机器人院内配送",
+            "实时库存可视化",
+            "紧急调配响应"
+          ]
         },
         {
           "title": "成本控制分析",
           "icon": "TrendingDown",
           "description": "全面成本监控与分析，助力精益运营。",
-          "items": ["单次透析成本核算", "耗材使用效率分析", "人力成本优化建议", "ROI实时追踪"]
+          "items": [
+            "单次透析成本核算",
+            "耗材使用效率分析",
+            "人力成本优化建议",
+            "ROI实时追踪"
+          ]
         }
       ],
       "stats": {
-        "inventory": { "label": "库存准确率", "value": "99.5%" },
-        "waste": { "label": "耗材浪费减少", "value": "35%" },
-        "downtime": { "label": "设备停机减少", "value": "60%" },
-        "efficiency": { "label": "运营效率提升", "value": "40%" }
+        "inventory": {
+          "label": "库存准确率",
+          "value": "99.5%"
+        },
+        "waste": {
+          "label": "耗材浪费减少",
+          "value": "35%"
+        },
+        "downtime": {
+          "label": "设备停机减少",
+          "value": "60%"
+        },
+        "efficiency": {
+          "label": "运营效率提升",
+          "value": "40%"
+        }
       }
     },
     "architecture": {
@@ -678,10 +850,22 @@
       "title": "我们平台的优势",
       "description": "为长期透析变革构建的技术和战略优势。",
       "items": [
-        { "title": "透析原生聚焦", "description": "专为透析构建，而非从通用医疗AI改编。" },
-        { "title": "深度整合", "description": "贯穿整个护理流程的设备级和工作流程级连接。" },
-        { "title": "临床护栏", "description": "以安全为先的自动化设计，而非黑盒AI。" },
-        { "title": "规模化就绪", "description": "为多中心网络设计，而非单站点试点。" }
+        {
+          "title": "透析原生聚焦",
+          "description": "专为透析构建，而非从通用医疗AI改编。"
+        },
+        {
+          "title": "深度整合",
+          "description": "贯穿整个护理流程的设备级和工作流程级连接。"
+        },
+        {
+          "title": "临床护栏",
+          "description": "以安全为先的自动化设计，而非黑盒AI。"
+        },
+        {
+          "title": "规模化就绪",
+          "description": "为多中心网络设计，而非单站点试点。"
+        }
       ]
     },
     "crossLinks": {
@@ -727,10 +911,22 @@
       "title": "商业模式",
       "description": "整体解决方案型——我们不是在卖一个软件，而是在重构透析中心的运行方式。",
       "items": [
-        { "title": "整体建设方案", "description": "提供智慧透析中心整体建设方案，从规划到落地全流程支持。" },
-        { "title": "设备与耗材", "description": "提供透析所需的设备、耗材，确保设备互联互通。" },
-        { "title": "软件与硬件", "description": "自主研发的透析管理系统、AI大模型和IoT基础设施。" },
-        { "title": "智慧供应链", "description": "结合智慧供应链体系，实现更好的治疗效果、更低的医疗风险、更高的运营效率。" }
+        {
+          "title": "整体建设方案",
+          "description": "提供智慧透析中心整体建设方案，从规划到落地全流程支持。"
+        },
+        {
+          "title": "设备与耗材",
+          "description": "提供透析所需的设备、耗材，确保设备互联互通。"
+        },
+        {
+          "title": "软件与硬件",
+          "description": "自主研发的透析管理系统、AI大模型和IoT基础设施。"
+        },
+        {
+          "title": "智慧供应链",
+          "description": "结合智慧供应链体系，实现更好的治疗效果、更低的医疗风险、更高的运营效率。"
+        }
       ]
     },
     "leadership": {
@@ -749,9 +945,18 @@
       "title": "建立联系",
       "subtitle": "对于临床合作、部署讨论或战略合作伙伴关系，我们欢迎与您联系。",
       "reasons": {
-        "clinical": { "title": "临床合作", "description": "有兴趣在您的透析中心或网络部署我们的平台。" },
-        "investment": { "title": "投资咨询", "description": "与医疗变革保持一致的战略投资者。" },
-        "collaboration": { "title": "战略合作", "description": "设备制造商、医疗系统或研究机构。" }
+        "clinical": {
+          "title": "临床合作",
+          "description": "有兴趣在您的透析中心或网络部署我们的平台。"
+        },
+        "investment": {
+          "title": "投资咨询",
+          "description": "与医疗变革保持一致的战略投资者。"
+        },
+        "collaboration": {
+          "title": "战略合作",
+          "description": "设备制造商、医疗系统或研究机构。"
+        }
       },
       "form": {
         "title": "发送消息",
@@ -819,9 +1024,18 @@
     "title": "建立联系",
     "subtitle": "对于临床合作、部署讨论或战略合作伙伴关系，我们欢迎与您联系。",
     "reasons": {
-      "clinical": { "title": "临床合作", "description": "有兴趣在您的透析中心或网络部署我们的平台。" },
-      "investment": { "title": "投资咨询", "description": "与医疗变革保持一致的战略投资者。" },
-      "collaboration": { "title": "战略合作", "description": "设备制造商、医疗系统或研究机构。" }
+      "clinical": {
+        "title": "临床合作",
+        "description": "有兴趣在您的透析中心或网络部署我们的平台。"
+      },
+      "investment": {
+        "title": "投资咨询",
+        "description": "与医疗变革保持一致的战略投资者。"
+      },
+      "collaboration": {
+        "title": "战略合作",
+        "description": "设备制造商、医疗系统或研究机构。"
+      }
     },
     "form": {
       "title": "发送消息",

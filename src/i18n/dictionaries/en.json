@@ -127,7 +127,7 @@
     "coreModules": {
       "tag": "Core Modules",
       "title": "Core Feature Modules",
-      "description": "From rounds to labs, from care management to monitoring, full-process intelligent coverage",
+      "description": "End-to-end coverage across rounds, labs, care management, and monitoring—supporting an intelligent upgrade for dialysis center operations",
       "modules": {
         "consultation": {
           "title": "Consultation Module",
@@ -229,29 +229,29 @@
     },
     "monitoringSystem": {
       "tag": "Dialysis Central Monitoring System",
-      "title": "Guardian",
-      "subtitle": "Protecting dialysis treatment safety with automatic synchronization of dialysis machine and patient blood pressure",
-      "description": "System automatically synchronizes dialysis machine parameters with patient vital signs. Visual graphical interface with color-coded classification makes abnormal conditions immediately apparent. Evolving from manual nursing rounds to intelligent system alerts, capturing potential treatment risks in real-time for comprehensive dialysis safety assurance.",
+      "title": "Smart Monitoring: From Rounds to Early Warning",
+      "subtitle": "Real-time data capture, tiered early warnings, centralized visualization",
+      "description": "Data from dialysis machines, blood pressure monitors, and scales can be uploaded automatically in real time and displayed centrally. Algorithms analyze vital signs and dialysis parameters to highlight abnormal trends and generate tiered early warnings. This supports earlier recognition and timely clinical response within established workflows.",
       "features": [
         {
-          "title": "Real-Time BP Sync",
+          "title": "Real-Time Data Synchronization",
           "icon": "Activity",
-          "description": "System automatically synchronizes dialysis machine and patient blood pressure data for real-time vital sign monitoring."
+          "description": "Dialysis machine and vital-sign device data can be uploaded and synchronized automatically to reduce manual entry and improve timeliness."
         },
         {
-          "title": "Color-Coded Alerts",
+          "title": "Tiered Risk Alerts",
           "icon": "AlertTriangle",
-          "description": "Visual graphical interface with color classification makes abnormal status immediately visible."
+          "description": "Risk status is visualized with tiered, color-coded indicators so abnormal trends can be recognized at a glance."
         },
         {
-          "title": "Nurse Workstation",
+          "title": "Central Monitoring Dashboard",
           "icon": "Monitor",
-          "description": "Centralized display of all patient status, quickly identifying beds requiring attention."
+          "description": "A centralized view of patient status helps staff quickly identify which stations may require attention."
         },
         {
-          "title": "Smart Bedside Equipment",
+          "title": "Smart Bedside Terminal",
           "icon": "Cpu",
-          "description": "Redefining bedside equipment - not just devices, but intelligent nodes integrated into the workflow."
+          "description": "A bedside terminal integrated into the workflow to present real-time data, reminders, and decision-support prompts."
         }
       ],
       "stats": {
@@ -299,7 +299,7 @@
     "clinicalApplications": {
       "tag": "Clinical Applications",
       "title": "Real-World Clinical Scenarios",
-      "description": "Our AI platform powers three core clinical scenarios, enabling safer and more efficient dialysis delivery.",
+      "description": "From single centers to network operations, AI supports the dialysis care workflow with monitoring, early warning, and clinical decision support.",
       "beforeAfter": {
         "before": "Before",
         "after": "After"
@@ -308,29 +308,29 @@
       "apps": {
         "inCenter": {
           "title": "Standalone Hemodialysis Centers",
-          "description": "Real-time monitoring and AI-powered alerts for safer dialysis sessions.",
+          "description": "Real-time monitoring with AI-enabled early warnings to support treatment safety and standardization in a single center.",
           "outcomes": [
-            "Continuous monitoring during treatment",
-            "Real-time alerts for instability",
+            "Real-time monitoring throughout treatment",
+            "Early warning for abnormal trends",
             "Reduced intradialytic adverse events",
-            "Improved consistency across shifts"
+            "More standardized treatment quality"
           ],
-          "before": "Periodic manual checks, reactive intervention after events occur",
-          "after": "Continuous AI monitoring with proactive alerts before complications",
-          "aiRole": "Continuous analysis of vital signs and machine parameters to detect early warning signs and trigger proactive interventions."
+          "before": "Periodic manual rounds and checks, with reactive response after problems occur",
+          "after": "Continuous monitoring with early warnings for emerging risks, supporting earlier clinical response",
+          "aiRole": "Analyzes vital signs and dialysis parameters to detect abnormal trends and early risk signals, then provides early warnings and decision-support prompts."
         },
         "networked": {
           "title": "Chain Dialysis Centers",
-          "description": "Centralized oversight and standardized quality across multiple sites.",
+          "description": "Centralized oversight and quality standardization across multiple sites to support scalable, unified operations.",
           "outcomes": [
-            "Centralized oversight across multiple sites",
+            "Centralized oversight across sites",
             "Standardized treatment quality",
-            "Scalable operations without loss of control",
-            "Support for regional or national networks"
+            "Scalable operations with governance",
+            "Support for regional or national expansion"
           ],
-          "before": "Siloed centers with variable quality and no unified oversight",
-          "after": "Unified platform enabling real-time visibility and standardization",
-          "aiRole": "Aggregated intelligence across all connected centers to identify patterns, benchmark performance, and ensure consistent care delivery."
+          "before": "Independent centers with variable quality and limited unified standards",
+          "after": "A unified platform enabling real-time visibility, standardized processes, and quality governance",
+          "aiRole": "Aggregates data across centers to identify patterns, establish quality benchmarks, and support consistent, standardized care delivery."
         },
         "decision": {
           "title": "Physician Decision Support",
