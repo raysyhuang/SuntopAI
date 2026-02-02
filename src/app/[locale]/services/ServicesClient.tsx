@@ -443,123 +443,103 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
-            <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              {t.training.title}
-            </h2>
-            <p className={`text-lg max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-              {t.training.subtitle}
-            </p>
-          </motion.div>
-
-          {/* Two Platforms */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Staff Platform - 医柔课纲 */}
+          {/* Content Grid - Left: Text, Right: App Preview */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Platform Descriptions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`rounded-2xl p-8 ${
-                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
-              }`}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                  theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
-                }`}>
-                  <GraduationCap className={`w-6 h-6 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
-                </div>
-                <div>
-                  <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    {t.training.staffPlatform.title}
-                  </h3>
-                  <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
-                    {t.training.staffPlatform.target}
-                  </span>
-                </div>
-              </div>
-              <p className={`text-sm mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                {t.training.staffPlatform.description}
+              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
+              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                {t.training.title}
+              </h2>
+              <p className={`text-lg mb-8 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                {t.training.subtitle}
               </p>
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                {t.training.staffPlatform.features.map((feature: string, index: number) => (
-                  <div 
-                    key={index}
-                    className={`p-3 rounded-lg text-center ${
-                      theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                    }`}
-                  >
-                    <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
-                      {feature}
+              {/* Staff Platform - 医柔课纲 */}
+              <div className="mb-8">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                    theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+                  }`}>
+                    <GraduationCap className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                  </div>
+                  <div>
+                    <h3 className={`text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                      {t.training.staffPlatform.title}
+                    </h3>
+                    <span className={`text-xs ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
+                      {t.training.staffPlatform.target}
                     </span>
                   </div>
-                ))}
+                </div>
+                <p className={`mb-3 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {t.training.staffPlatform.description}
+                </p>
+                <a 
+                  href="https://www.yiroyiro.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                    theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
+                  }`}
+                >
+                  {t.training.staffPlatform.link} →
+                </a>
               </div>
-              <a 
-                href="https://www.yiroyiro.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-                  theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
-                }`}
-              >
-                {t.training.staffPlatform.link} →
-              </a>
+
+              {/* Patient App - 医柔健康 */}
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                    theme === 'dark' ? 'bg-rose-500/15' : 'bg-rose-50'
+                  }`}>
+                    <Smartphone className={`w-5 h-5 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
+                  </div>
+                  <div>
+                    <h3 className={`text-lg font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                      {t.training.patientApp.title}
+                    </h3>
+                    <span className={`text-xs ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>
+                      {t.training.patientApp.target}
+                    </span>
+                  </div>
+                </div>
+                <p className={`${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {t.training.patientApp.description}
+                </p>
+              </div>
+
+              {/* Provider Note */}
+              <p className={`text-sm mt-8 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}>
+                {t.training.provider}
+              </p>
             </motion.div>
 
-            {/* Patient App - 医柔健康 */}
+            {/* Right: App Preview with QR Code */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className={`rounded-2xl p-8 ${
-                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
-              }`}
+              className="flex flex-col items-center justify-center"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                  theme === 'dark' ? 'bg-rose-500/15' : 'bg-rose-50'
-                }`}>
-                  <Smartphone className={`w-6 h-6 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
-                </div>
-                <div>
-                  <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    {t.training.patientApp.title}
-                  </h3>
-                  <span className={`text-sm ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>
-                    {t.training.patientApp.target}
-                  </span>
-                </div>
+              <div 
+                className="relative w-64 h-auto cursor-pointer mb-6"
+                onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+              >
+                <Image 
+                  src="/images/health-app/iphone-mockup.png" 
+                  alt="App Preview" 
+                  width={256}
+                  height={512}
+                  className="object-contain"
+                />
               </div>
-              <p className={`text-sm mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                {t.training.patientApp.description}
-              </p>
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                {t.training.patientApp.features.map((feature: string, index: number) => (
-                  <div 
-                    key={index}
-                    className={`p-3 rounded-lg text-center ${
-                      theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                    }`}
-                  >
-                    <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              {/* QR Code and App Preview */}
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-4">
                 <div 
-                  className="relative w-20 h-20 rounded-lg overflow-hidden cursor-pointer flex-shrink-0"
+                  className="relative w-24 h-24 rounded-lg overflow-hidden cursor-pointer"
                   onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
                 >
                   <Image 
@@ -569,36 +549,15 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="object-contain"
                   />
                 </div>
-                <div 
-                  className="relative h-32 w-24 cursor-pointer flex-shrink-0"
-                  onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
-                >
-                  <Image 
-                    src="/images/health-app/iphone-mockup.png" 
-                    alt="App Preview" 
-                    fill 
-                    className="object-contain"
-                  />
-                </div>
                 <div className="flex items-center gap-1">
-                  <QrCode className={`w-3 h-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
-                  <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+                  <QrCode className={`w-4 h-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
+                  <span className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
                     {t.training.patientApp.scanToDownload}
                   </span>
                 </div>
               </div>
             </motion.div>
           </div>
-
-          {/* Provider Note */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className={`text-center text-sm mt-8 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}
-          >
-            {t.training.provider}
-          </motion.p>
         </div>
       </section>
 

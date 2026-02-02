@@ -1220,27 +1220,15 @@
       "subtitle": "Comprehensive digital training and health management support for medical teams and patients",
       "staffPlatform": {
         "title": "Yiro Curriculum",
-        "target": "Medical Staff",
-        "description": "Professional online training platform providing systematic continuing education and certification services for dialysis medical teams",
-        "link": "Visit YiroYiro.com",
-        "features": [
-          "Teaching Videos",
-          "Live Courses",
-          "Academic Conferences",
-          "Interactive Sharing"
-        ]
+        "target": "Medical Staff Training",
+        "description": "A professional online training platform that provides systematic continuing education and certification services for dialysis medical teams through teaching videos, live courses, academic conferences, and interactive sharing, helping healthcare professionals continuously enhance their expertise.",
+        "link": "Visit YiroYiro.com"
       },
       "patientApp": {
         "title": "Yiro Health",
-        "target": "Patients",
-        "description": "A mobile health platform designed for dialysis patients, helping them understand their condition, build social connections, and improve quality of life",
-        "scanToDownload": "Scan to Download",
-        "features": [
-          "Activity Center",
-          "Challenge Tasks",
-          "Health Education",
-          "Points Mall"
-        ]
+        "target": "Patient Health Management",
+        "description": "A mobile health platform designed for dialysis patients, integrating activity center, health challenges, educational content, and rewards program. It helps patients understand their condition, build social connections, participate in interactive activities, and improve overall quality of life.",
+        "scanToDownload": "Scan to Download"
       },
       "provider": "Powered by Sound Decision Technology Co., Ltd."
     },
