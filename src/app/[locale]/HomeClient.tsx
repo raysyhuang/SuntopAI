@@ -121,7 +121,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 {t.cta.explore}
                 <ArrowRight size={18} />
               </Link>
-              <Link href={`/${locale}/contact`} className="btn-secondary">
+              <Link href={`/${locale}/company#contact`} className="btn-secondary">
                 {t.cta.contact}
               </Link>
             </motion.div>
@@ -522,7 +522,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
               {t.finalCta.description}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={`/${locale}/contact`} className="btn-primary">
+              <Link href={`/${locale}/company#contact`} className="btn-primary">
                 {t.cta.start}
                 <ArrowRight size={18} />
               </Link>

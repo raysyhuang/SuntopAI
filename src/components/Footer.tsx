@@ -44,7 +44,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.aboutUs, href: `/${locale}/company` },
       { label: t.links.centers, href: `/${locale}/company#centers` },
       { label: t.links.news, href: `/${locale}/news` },
-      { label: t.links.contact, href: `/${locale}/contact` },
+      { label: t.links.contact, href: `/${locale}/company#contact` },
     ],
   }
 

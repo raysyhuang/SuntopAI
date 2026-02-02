@@ -396,7 +396,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               {t.contact?.title || 'Contact Us'}
             </h2>
             <Link 
-              href={`/${locale}/contact`}
+              href={`/${locale}/company#contact`}
               className="btn-primary inline-flex"
             >
               {t.contact?.form?.submit || 'Get in Touch'}

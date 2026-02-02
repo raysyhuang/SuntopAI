@@ -859,7 +859,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               {t.cta.description}
             </p>
             <Link
-              href={`/${locale}/contact`}
+              href={`/${locale}/company#contact`}
               className="inline-flex items-center gap-2 px-8 py-4 bg-accent-600 hover:bg-accent-700 text-white rounded-xl font-semibold transition-colors"
             >
               {t.cta.button}

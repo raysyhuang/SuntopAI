@@ -29,7 +29,6 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
     { href: `/${locale}/services`, label: dictionary.nav.services },
     { href: `/${locale}/company`, label: dictionary.nav.company },
     { href: `/${locale}/news`, label: dictionary.nav.news },
-    { href: `/${locale}/contact`, label: dictionary.nav.contact },
   ]
 
   useEffect(() => {
