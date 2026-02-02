@@ -47,13 +47,6 @@ const patientCareImages = [
   '/images/patient-care/holiday-events.png',
 ]
 
-// All expandable images
-const onlineTrainingImages = [
-  '/images/training/online-training-1.png',
-  '/images/training/online-training-2.png',
-  '/images/training/online-training-3.png',
-]
-
 const nutritionImages = [
   '/images/clinical/营养趣味猜谜活动.jpg',
   '/images/clinical/营养趣味猜谜活动2.jpg',
@@ -473,70 +466,52 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`rounded-2xl overflow-hidden ${
+              className={`rounded-2xl p-8 ${
                 theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
               }`}
             >
-              <div className={`p-6 border-b ${theme === 'dark' ? 'border-slate-700' : 'border-gray-100'}`}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
-                    }`}>
-                      <GraduationCap className={`w-6 h-6 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                        {t.training.staffPlatform.title}
-                      </h3>
-                      <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
-                        {t.training.staffPlatform.target}
-                      </span>
-                    </div>
-                  </div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                  theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+                }`}>
+                  <GraduationCap className={`w-6 h-6 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
                 </div>
-                <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {t.training.staffPlatform.description}
-                </p>
-              </div>
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {t.training.staffPlatform.features.map((feature: string, index: number) => (
-                    <div 
-                      key={index}
-                      className={`p-3 rounded-lg text-center ${
-                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                      }`}
-                    >
-                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
+                <div>
+                  <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {t.training.staffPlatform.title}
+                  </h3>
+                  <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
+                    {t.training.staffPlatform.target}
+                  </span>
                 </div>
-                <a 
-                  href="https://www.yiroyiro.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-                    theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
-                  }`}
-                >
-                  {t.training.staffPlatform.link} →
-                </a>
               </div>
-              {/* Online Training Screenshots */}
-              <div className="grid grid-cols-3 gap-1">
-                {onlineTrainingImages.map((src, index) => (
+              <p className={`text-sm mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                {t.training.staffPlatform.description}
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {t.training.staffPlatform.features.map((feature: string, index: number) => (
                   <div 
                     key={index}
-                    className="relative aspect-[4/3] cursor-pointer group"
-                    onClick={() => openLightbox(onlineTrainingImages, index)}
+                    className={`p-3 rounded-lg text-center ${
+                      theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                    }`}
                   >
-                    <Image src={src} alt="Training Platform" fill className="object-cover group-hover:opacity-80 transition-opacity" />
+                    <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
+              <a 
+                href="https://www.yiroyiro.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                  theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
+                }`}
+              >
+                {t.training.staffPlatform.link} →
+              </a>
             </motion.div>
 
             {/* Patient App - 医柔健康 */}
@@ -545,83 +520,71 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className={`rounded-2xl overflow-hidden ${
+              className={`rounded-2xl p-8 ${
                 theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
               }`}
             >
-              <div className={`p-6 border-b ${theme === 'dark' ? 'border-slate-700' : 'border-gray-100'}`}>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                      theme === 'dark' ? 'bg-rose-500/15' : 'bg-rose-50'
-                    }`}>
-                      <Smartphone className={`w-6 h-6 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
-                    </div>
-                    <div>
-                      <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                        {t.training.patientApp.title}
-                      </h3>
-                      <span className={`text-sm ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>
-                        {t.training.patientApp.target}
-                      </span>
-                    </div>
-                  </div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                  theme === 'dark' ? 'bg-rose-500/15' : 'bg-rose-50'
+                }`}>
+                  <Smartphone className={`w-6 h-6 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
                 </div>
-                <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                  {t.training.patientApp.description}
-                </p>
-              </div>
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 mb-6">
-                  {t.training.patientApp.features.map((feature: string, index: number) => (
-                    <div 
-                      key={index}
-                      className={`p-3 rounded-lg text-center ${
-                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                      }`}
-                    >
-                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
+                <div>
+                  <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {t.training.patientApp.title}
+                  </h3>
+                  <span className={`text-sm ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>
+                    {t.training.patientApp.target}
+                  </span>
                 </div>
               </div>
-              {/* App Preview with QR Code */}
-              <div className={`p-6 ${theme === 'dark' ? 'bg-slate-900/50' : 'bg-gray-50'}`}>
-                <div className="flex items-center justify-center gap-8">
-                  {/* QR Code */}
-                  <div className="text-center">
-                    <div 
-                      className="relative w-24 h-24 rounded-lg overflow-hidden cursor-pointer mx-auto mb-2"
-                      onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
-                    >
-                      <Image 
-                        src="/images/health-app/wechat-qr-code.png" 
-                        alt="QR Code" 
-                        fill 
-                        className="object-contain"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center gap-1">
-                      <QrCode className={`w-3 h-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
-                      <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
-                        {t.training.patientApp.scanToDownload}
-                      </span>
-                    </div>
-                  </div>
-                  {/* Phone Mockup */}
+              <p className={`text-sm mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                {t.training.patientApp.description}
+              </p>
+              <div className="grid grid-cols-2 gap-3 mb-6">
+                {t.training.patientApp.features.map((feature: string, index: number) => (
                   <div 
-                    className="relative w-28 h-56 cursor-pointer"
-                    onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+                    key={index}
+                    className={`p-3 rounded-lg text-center ${
+                      theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                    }`}
                   >
-                    <Image 
-                      src="/images/health-app/iphone-mockup.png" 
-                      alt="App Preview" 
-                      fill 
-                      className="object-contain"
-                    />
+                    <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                      {feature}
+                    </span>
                   </div>
+                ))}
+              </div>
+              {/* QR Code and App Preview */}
+              <div className="flex items-center gap-6">
+                <div 
+                  className="relative w-20 h-20 rounded-lg overflow-hidden cursor-pointer flex-shrink-0"
+                  onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
+                >
+                  <Image 
+                    src="/images/health-app/wechat-qr-code.png" 
+                    alt="QR Code" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <div 
+                  className="relative h-32 w-24 cursor-pointer flex-shrink-0"
+                  onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+                >
+                  <Image 
+                    src="/images/health-app/iphone-mockup.png" 
+                    alt="App Preview" 
+                    fill 
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center gap-1">
+                  <QrCode className={`w-3 h-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
+                  <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+                    {t.training.patientApp.scanToDownload}
+                  </span>
                 </div>
               </div>
             </motion.div>
