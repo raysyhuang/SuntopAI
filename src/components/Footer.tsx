@@ -55,7 +55,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
         : 'bg-gray-50 border-gray-200'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-8 lg:gap-6">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href={`/${locale}`} className="flex items-center gap-3 mb-6">
