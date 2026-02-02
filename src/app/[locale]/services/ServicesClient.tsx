@@ -8,7 +8,8 @@ import {
   Activity, Heart, Users, GraduationCap, Globe, Wifi, Brain, 
   FileText, Cpu, Video, BookOpen, CalendarHeart, Sparkles, 
   PartyPopper, Utensils, Footprints, Smile, ArrowRight,
-  ChevronLeft, ChevronRight, X, Dumbbell, PersonStanding, Footprints as FootIcon
+  ChevronLeft, ChevronRight, X, Dumbbell, PersonStanding, Footprints as FootIcon,
+  Smartphone, QrCode
 } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
@@ -442,121 +443,197 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         </div>
       </section>
 
-      {/* Section 3: Training */}
+      {/* Section 3: Training - Yirou Digital Platforms */}
       <section 
         id="training" 
         className="py-24"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Left: Content */}
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
+            <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+              {t.training.title}
+            </h2>
+            <p className={`text-lg max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              {t.training.subtitle}
+            </p>
+          </motion.div>
+
+          {/* Two Platforms */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Staff Platform - 医柔课纲 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className={`rounded-2xl overflow-hidden ${
+                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
+              }`}
             >
-              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
-              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                {t.training.title}
-              </h2>
-              <p className={`text-lg mb-8 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                {t.training.subtitle}
-              </p>
-
-              {/* Training Types */}
-              <div className="space-y-6 mb-8">
-                {/* Offline */}
-                <div className={`p-5 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+              <div className={`p-6 border-b ${theme === 'dark' ? 'border-slate-700' : 'border-gray-100'}`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                       theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
                     }`}>
-                      <Users className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                      <GraduationCap className={`w-6 h-6 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
                     </div>
-                    <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      {t.training.offline.title}
-                    </h3>
-                  </div>
-                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {t.training.offline.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {t.training.offline.pillars.map((pillar: { title: string }, index: number) => (
-                      <span 
-                        key={index}
-                        className={`px-3 py-1 rounded-full text-xs ${
-                          theme === 'dark' ? 'bg-slate-700 text-gray-300' : 'bg-gray-100 text-gray-700'
-                        }`}
-                      >
-                        {pillar.title}
+                    <div>
+                      <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                        {t.training.staffPlatform.title}
+                      </h3>
+                      <span className={`text-sm ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>
+                        {t.training.staffPlatform.target}
                       </span>
-                    ))}
+                    </div>
                   </div>
                 </div>
-
-                {/* Online */}
-                <div className={`p-5 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
-                    }`}>
-                      <Video className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
-                    </div>
-                    <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      {t.training.online.title}
-                    </h3>
-                  </div>
-                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {t.training.online.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {t.training.online.features.map((feature: { title: string }, index: number) => (
-                      <span 
-                        key={index}
-                        className={`px-3 py-1 rounded-full text-xs ${
-                          theme === 'dark' ? 'bg-slate-700 text-gray-300' : 'bg-gray-100 text-gray-700'
-                        }`}
-                      >
-                        {feature.title}
+                <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {t.training.staffPlatform.description}
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {t.training.staffPlatform.features.map((feature: string, index: number) => (
+                    <div 
+                      key={index}
+                      className={`p-3 rounded-lg text-center ${
+                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                      }`}
+                    >
+                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                        {feature}
                       </span>
-                    ))}
-                  </div>
-                  <a 
-                    href="https://www.yiroyiro.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-                      theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
-                    }`}
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="https://www.yiroyiro.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                    theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
+                  }`}
+                >
+                  {t.training.staffPlatform.link} →
+                </a>
+              </div>
+              {/* Online Training Screenshots */}
+              <div className="grid grid-cols-3 gap-1">
+                {onlineTrainingImages.map((src, index) => (
+                  <div 
+                    key={index}
+                    className="relative aspect-[4/3] cursor-pointer group"
+                    onClick={() => openLightbox(onlineTrainingImages, index)}
                   >
-                    {t.training.online.link} →
-                  </a>
-                </div>
+                    <Image src={src} alt="Training Platform" fill className="object-cover group-hover:opacity-80 transition-opacity" />
+                  </div>
+                ))}
               </div>
             </motion.div>
 
-            {/* Right: Photos */}
+            {/* Patient App - 医柔健康 */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-2 gap-3"
+              transition={{ delay: 0.1 }}
+              className={`rounded-2xl overflow-hidden ${
+                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
+              }`}
             >
-              {onlineTrainingImages.map((src, index) => (
-                <div 
-                  key={index}
-                  className={`relative rounded-xl overflow-hidden cursor-pointer group ${
-                    index === 0 ? 'col-span-2 aspect-[2/1]' : 'aspect-[4/3]'
-                  }`}
-                  onClick={() => openLightbox(onlineTrainingImages, index)}
-                >
-                  <Image src={src} alt="Training" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+              <div className={`p-6 border-b ${theme === 'dark' ? 'border-slate-700' : 'border-gray-100'}`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                      theme === 'dark' ? 'bg-rose-500/15' : 'bg-rose-50'
+                    }`}>
+                      <Smartphone className={`w-6 h-6 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
+                    </div>
+                    <div>
+                      <h3 className={`text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                        {t.training.patientApp.title}
+                      </h3>
+                      <span className={`text-sm ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>
+                        {t.training.patientApp.target}
+                      </span>
+                    </div>
+                  </div>
                 </div>
-              ))}
+                <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {t.training.patientApp.description}
+                </p>
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-2 gap-3 mb-6">
+                  {t.training.patientApp.features.map((feature: string, index: number) => (
+                    <div 
+                      key={index}
+                      className={`p-3 rounded-lg text-center ${
+                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                      }`}
+                    >
+                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-200' : 'text-gray-700'}`}>
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* App Preview with QR Code */}
+              <div className={`p-6 ${theme === 'dark' ? 'bg-slate-900/50' : 'bg-gray-50'}`}>
+                <div className="flex items-center gap-6">
+                  <div 
+                    className="relative w-32 h-32 rounded-xl overflow-hidden cursor-pointer flex-shrink-0"
+                    onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
+                  >
+                    <Image 
+                      src="/images/health-app/wechat-qr-code.png" 
+                      alt="QR Code" 
+                      fill 
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <QrCode className={`w-4 h-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
+                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+                        {t.training.patientApp.scanToDownload}
+                      </span>
+                    </div>
+                    <div 
+                      className="relative w-full max-w-[180px] aspect-[1/2] cursor-pointer"
+                      onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+                    >
+                      <Image 
+                        src="/images/health-app/iphone-mockup.png" 
+                        alt="App Preview" 
+                        fill 
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
+
+          {/* Provider Note */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className={`text-center text-sm mt-8 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-400'}`}
+          >
+            {t.training.provider}
+          </motion.p>
         </div>
       </section>
 

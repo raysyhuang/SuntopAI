@@ -1311,30 +1311,34 @@
       }
     },
     "training": {
-      "tag": "专业培训",
-      "title": "专业培训体系",
-      "subtitle": "线上线下结合，打造专业透析医护团队",
-      "offline": {
-        "title": "线下培训",
-        "description": "完善的理论与实操培训体系",
-        "pillars": [
-          { "title": "专家驻场授课", "description": "专业指导，系统教学" },
-          { "title": "医护人员培训座谈", "description": "分享医学心得，促进交流" },
-          { "title": "科室进驻实验", "description": "增强临床实操能力" },
-          { "title": "交换服务", "description": "汇聚医疗人才，分享医疗进步" }
-        ]
-      },
-      "online": {
-        "title": "线上培训",
-        "description": "通过医柔课纲平台提供专业培训",
+      "tag": "数字化培训",
+      "title": "医柔系列数字平台",
+      "subtitle": "为医护团队与肾友提供全方位数字化培训与健康管理支持",
+      "staffPlatform": {
+        "title": "医柔课纲",
+        "target": "医护人员",
+        "description": "专业的在线培训平台，为透析医护团队提供系统化的继续教育与认证服务",
         "link": "访问医柔课纲平台",
         "features": [
-          { "title": "普及医学知识", "description": "定期公告，直播教学" },
-          { "title": "分享医学心得", "description": "线上互动，跨越空间限制" },
-          { "title": "提升专业素养", "description": "与知名专家合作" },
-          { "title": "线上交流", "description": "利用平台进行知识连接" }
+          "教学影片",
+          "课程直播",
+          "学术会议",
+          "互动分享"
         ]
-      }
+      },
+      "patientApp": {
+        "title": "医柔健康",
+        "target": "肾友",
+        "description": "专为透析患者设计的移动健康平台，帮助肾友了解病理知识、建立社交圈、提升生活质量",
+        "scanToDownload": "扫码下载",
+        "features": [
+          "活动中心",
+          "挑战任务",
+          "宣教信息",
+          "积分商城"
+        ]
+      },
+      "provider": "由尚鼎医泉全球科技有限公司提供技术支持"
     },
     "rehabilitation": {
       "tag": "透析康复",

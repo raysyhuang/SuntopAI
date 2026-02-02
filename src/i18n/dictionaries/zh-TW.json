@@ -1250,30 +1250,34 @@
       }
     },
     "training": {
-      "tag": "專業培訓",
-      "title": "專業培訓體系",
-      "subtitle": "線上線下結合，打造專業透析醫護團隊",
-      "offline": {
-        "title": "線下培訓",
-        "description": "完善的理論與實操培訓體系",
-        "pillars": [
-          { "title": "專家駐場授課", "description": "專業指導，系統教學" },
-          { "title": "醫護人員培訓座談", "description": "分享醫學心得，促進交流" },
-          { "title": "科室進駐實驗", "description": "增強臨床實操能力" },
-          { "title": "交換服務", "description": "匯聚醫療人才，分享醫療進步" }
-        ]
-      },
-      "online": {
-        "title": "線上培訓",
-        "description": "透過醫柔課綱平台提供專業培訓",
+      "tag": "數位培訓",
+      "title": "醫柔系列數位平台",
+      "subtitle": "為醫護團隊與腎友提供全方位數位化培訓與健康管理支援",
+      "staffPlatform": {
+        "title": "醫柔課綱",
+        "target": "醫護人員",
+        "description": "專業的線上培訓平台，為透析醫護團隊提供系統化的繼續教育與認證服務",
         "link": "訪問醫柔課綱平台",
         "features": [
-          { "title": "普及醫學知識", "description": "定期公告，直播教學" },
-          { "title": "分享醫學心得", "description": "線上互動，跨越空間限制" },
-          { "title": "提升專業素養", "description": "與知名專家合作" },
-          { "title": "線上交流", "description": "利用平台進行知識連接" }
+          "教學影片",
+          "課程直播",
+          "學術會議",
+          "互動分享"
         ]
-      }
+      },
+      "patientApp": {
+        "title": "醫柔健康",
+        "target": "腎友",
+        "description": "專為透析患者設計的行動健康平台，幫助腎友了解病理知識、建立社交圈、提升生活品質",
+        "scanToDownload": "掃碼下載",
+        "features": [
+          "活動中心",
+          "挑戰任務",
+          "宣教資訊",
+          "積分商城"
+        ]
+      },
+      "provider": "由尚鼎醫泉全球科技有限公司提供技術支援"
     },
     "rehabilitation": {
       "tag": "透析康復",

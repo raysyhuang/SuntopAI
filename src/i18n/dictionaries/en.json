@@ -1215,30 +1215,34 @@
       }
     },
     "training": {
-      "tag": "Professional Training",
-      "title": "Professional Training System",
-      "subtitle": "Online and offline combined, building professional dialysis medical teams",
-      "offline": {
-        "title": "Offline Training",
-        "description": "Comprehensive theoretical and practical training system",
-        "pillars": [
-          { "title": "Expert On-Site Teaching", "description": "Professional guidance, systematic instruction" },
-          { "title": "Medical Staff Training Sessions", "description": "Share medical insights, promote exchanges" },
-          { "title": "Department-Based Practice", "description": "Enhance clinical practical skills" },
-          { "title": "Exchange Services", "description": "Gather medical talent, share medical advances" }
-        ]
-      },
-      "online": {
-        "title": "Online Training",
-        "description": "Professional training via Yirou Platform",
+      "tag": "Digital Training",
+      "title": "Yirou Digital Platforms",
+      "subtitle": "Comprehensive digital training and health management support for medical teams and patients",
+      "staffPlatform": {
+        "title": "Yirou Curriculum",
+        "target": "Medical Staff",
+        "description": "Professional online training platform providing systematic continuing education and certification services for dialysis medical teams",
         "link": "Visit Yirou Platform",
         "features": [
-          { "title": "Medical Knowledge Dissemination", "description": "Regular announcements, livestream teaching" },
-          { "title": "Medical Insights Sharing", "description": "Online interaction, transcending space limitations" },
-          { "title": "Professional Development", "description": "Collaborate with renowned experts" },
-          { "title": "Online Exchange", "description": "Platform-based knowledge connections" }
+          "Teaching Videos",
+          "Live Courses",
+          "Academic Conferences",
+          "Interactive Sharing"
         ]
-      }
+      },
+      "patientApp": {
+        "title": "Yirou Health",
+        "target": "Patients",
+        "description": "A mobile health platform designed for dialysis patients, helping them understand their condition, build social connections, and improve quality of life",
+        "scanToDownload": "Scan to Download",
+        "features": [
+          "Activity Center",
+          "Challenge Tasks",
+          "Health Education",
+          "Points Mall"
+        ]
+      },
+      "provider": "Powered by Shang Ding Yi Quan Global Technology Co., Ltd."
     },
     "rehabilitation": {
       "tag": "Dialysis Rehabilitation",
