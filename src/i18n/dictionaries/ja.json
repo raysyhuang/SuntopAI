@@ -1561,9 +1561,10 @@
     "subtitle": "臨床導入、プラットフォームマイルストーン、学術コラボレーション、業界プレゼンス。",
     "categories": {
       "all": "すべての更新",
-      "event": "イベント",
-      "deployment": "新センター",
-      "health": "健康情報"
+      "deployment": "導入",
+      "partnership": "パートナーシップ",
+      "milestone": "マイルストーン",
+      "conference": "カンファレンス"
     },
     "featured": "注目",
     "allUpdates": "すべての更新",

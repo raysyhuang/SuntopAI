@@ -1828,10 +1828,11 @@
     "title": "公司动态",
     "subtitle": "临床部署、平台里程碑、学术合作和行业活动。",
     "categories": {
-      "all": "全部动态",
-      "event": "活动",
-      "deployment": "新中心",
-      "health": "健康科普"
+      "all": "所有更新",
+      "deployment": "部署",
+      "partnership": "合作伙伴",
+      "milestone": "里程碑",
+      "conference": "会议"
     },
     "featured": "精选",
     "allUpdates": "所有更新",

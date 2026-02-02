@@ -1702,10 +1702,11 @@
     "title": "公司動態",
     "subtitle": "臨床部署、平台里程碑、學術合作和產業活動。",
     "categories": {
-      "all": "全部動態",
-      "event": "活動",
-      "deployment": "新中心",
-      "health": "健康科普"
+      "all": "所有更新",
+      "deployment": "部署",
+      "partnership": "合作夥伴",
+      "milestone": "里程碑",
+      "conference": "會議"
     },
     "featured": "精選",
     "allUpdates": "所有更新",
