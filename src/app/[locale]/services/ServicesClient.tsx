@@ -449,91 +449,148 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
+            <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+              {t.training.title}
+            </h2>
+            <p className={`text-lg max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+              {t.training.subtitle}
+            </p>
+          </motion.div>
+
+          {/* Training Cards */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            {/* Offline Training Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              className={`rounded-2xl overflow-hidden ${
+                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
+              }`}
             >
-              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
-              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                {t.training.title}
-              </h2>
-              <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                {t.training.subtitle}
-              </p>
-
-              {/* Training Types */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <Users className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
-                    <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      {t.training.offline.title}
-                    </h4>
+              <div className={`p-6 ${
+                theme === 'dark' 
+                  ? 'bg-gradient-to-r from-teal-900/50 to-cyan-900/50' 
+                  : 'bg-gradient-to-r from-teal-500 to-cyan-500'
+              }`}>
+                <div className="flex items-center gap-3">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                    theme === 'dark' ? 'bg-white/10' : 'bg-white/20'
+                  }`}>
+                    <Users className="w-6 h-6 text-white" />
                   </div>
-                  <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {t.training.offline.description}
-                  </p>
-                </div>
-                <div className={`p-4 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
-                  <div className="flex items-center gap-2 mb-2">
-                    <Video className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
-                    <h4 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                      {t.training.online.title}
-                    </h4>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{t.training.offline.title}</h3>
+                    <p className="text-white/80 text-sm">{t.training.offline.description}</p>
                   </div>
-                  <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {t.training.online.description}
-                  </p>
                 </div>
               </div>
-
-              {/* Pillars */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {t.training.offline.pillars.map((pillar: { title: string }, index: number) => (
-                  <span 
-                    key={index}
-                    className={`px-3 py-1.5 rounded-full text-sm ${
-                      theme === 'dark' ? 'bg-teal-500/20 text-teal-300' : 'bg-teal-100 text-teal-700'
-                    }`}
-                  >
-                    {pillar.title}
-                  </span>
-                ))}
+              <div className="p-6">
+                <div className="grid grid-cols-2 gap-3">
+                  {t.training.offline.pillars.map((pillar: { title: string; description: string }, index: number) => (
+                    <div 
+                      key={index}
+                      className={`p-4 rounded-xl ${
+                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                      }`}
+                    >
+                      <h4 className={`font-medium text-sm mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                        {pillar.title}
+                      </h4>
+                      <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                        {pillar.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-
-              {/* Online Platform Link */}
-              <a 
-                href="https://www.yiroyiro.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-                  theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
-                }`}
-              >
-                {t.training.online.link} →
-              </a>
             </motion.div>
 
-            {/* Images Grid */}
+            {/* Online Training Card */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="grid grid-cols-3 gap-3"
+              transition={{ delay: 0.1 }}
+              className={`rounded-2xl overflow-hidden ${
+                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
+              }`}
             >
-              {onlineTrainingImages.map((src, index) => (
-                <div 
-                  key={index}
-                  className="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
-                  onClick={() => openLightbox(onlineTrainingImages, index)}
-                >
-                  <Image src={src} alt="Training" width={200} height={150} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div className={`p-6 ${
+                theme === 'dark' 
+                  ? 'bg-gradient-to-r from-violet-900/50 to-purple-900/50' 
+                  : 'bg-gradient-to-r from-violet-500 to-purple-500'
+              }`}>
+                <div className="flex items-center gap-3">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                    theme === 'dark' ? 'bg-white/10' : 'bg-white/20'
+                  }`}>
+                    <Video className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{t.training.online.title}</h3>
+                    <p className="text-white/80 text-sm">{t.training.online.description}</p>
+                  </div>
                 </div>
-              ))}
+              </div>
+              <div className="p-6">
+                <div className="grid grid-cols-2 gap-3 mb-4">
+                  {t.training.online.features.map((feature: { title: string; description: string }, index: number) => (
+                    <div 
+                      key={index}
+                      className={`p-4 rounded-xl ${
+                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
+                      }`}
+                    >
+                      <h4 className={`font-medium text-sm mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                        {feature.title}
+                      </h4>
+                      <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                        {feature.description}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <a 
+                  href="https://www.yiroyiro.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                    theme === 'dark' ? 'text-violet-400 hover:text-violet-300' : 'text-violet-600 hover:text-violet-700'
+                  }`}
+                >
+                  {t.training.online.link} →
+                </a>
+              </div>
             </motion.div>
           </div>
+
+          {/* Photo Gallery */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-3 gap-4"
+          >
+            {onlineTrainingImages.map((src, index) => (
+              <div 
+                key={index}
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
+                onClick={() => openLightbox(onlineTrainingImages, index)}
+              >
+                <Image src={src} alt="Training" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
