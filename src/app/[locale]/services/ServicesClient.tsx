@@ -589,36 +589,38 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               </div>
               {/* App Preview with QR Code */}
               <div className={`p-6 ${theme === 'dark' ? 'bg-slate-900/50' : 'bg-gray-50'}`}>
-                <div className="flex items-center gap-6">
-                  <div 
-                    className="relative w-32 h-32 rounded-xl overflow-hidden cursor-pointer flex-shrink-0"
-                    onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
-                  >
-                    <Image 
-                      src="/images/health-app/wechat-qr-code.png" 
-                      alt="QR Code" 
-                      fill 
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <QrCode className={`w-4 h-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
-                      <span className={`text-sm font-medium ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
-                        {t.training.patientApp.scanToDownload}
-                      </span>
-                    </div>
+                <div className="flex items-center justify-center gap-8">
+                  {/* QR Code */}
+                  <div className="text-center">
                     <div 
-                      className="relative w-full max-w-[180px] aspect-[1/2] cursor-pointer"
-                      onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+                      className="relative w-24 h-24 rounded-lg overflow-hidden cursor-pointer mx-auto mb-2"
+                      onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
                     >
                       <Image 
-                        src="/images/health-app/iphone-mockup.png" 
-                        alt="App Preview" 
+                        src="/images/health-app/wechat-qr-code.png" 
+                        alt="QR Code" 
                         fill 
                         className="object-contain"
                       />
                     </div>
+                    <div className="flex items-center justify-center gap-1">
+                      <QrCode className={`w-3 h-3 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`} />
+                      <span className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>
+                        {t.training.patientApp.scanToDownload}
+                      </span>
+                    </div>
+                  </div>
+                  {/* Phone Mockup */}
+                  <div 
+                    className="relative w-28 h-56 cursor-pointer"
+                    onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
+                  >
+                    <Image 
+                      src="/images/health-app/iphone-mockup.png" 
+                      alt="App Preview" 
+                      fill 
+                      className="object-contain"
+                    />
                   </div>
                 </div>
               </div>
