@@ -142,12 +142,20 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       {/* Service Navigation Cards */}
       <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            {t.serviceCards.map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
+          {/* First row - 4 cards */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+            {t.serviceCards.slice(0, 4).map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
               const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-                Activity, Heart, GraduationCap, Utensils, Dumbbell
+                Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile
               }
               const Icon = icons[card.icon] || Activity
+              const colors = [
+                { bg: 'from-teal-500 to-cyan-500', darkBg: 'from-teal-600 to-cyan-600' },
+                { bg: 'from-rose-500 to-pink-500', darkBg: 'from-rose-600 to-pink-600' },
+                { bg: 'from-emerald-500 to-green-500', darkBg: 'from-emerald-600 to-green-600' },
+                { bg: 'from-blue-500 to-indigo-500', darkBg: 'from-blue-600 to-indigo-600' },
+              ]
+              const color = colors[index % colors.length]
               return (
                 <motion.a
                   key={card.id}
@@ -155,22 +163,62 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`p-6 rounded-2xl transition-all hover:scale-[1.02] ${
+                  transition={{ delay: index * 0.05 }}
+                  className={`group relative p-5 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:shadow-lg ${
                     theme === 'dark' 
-                      ? 'bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50' 
-                      : 'bg-gray-50 hover:bg-gray-100'
+                      ? 'bg-slate-800/80 border border-slate-700/50' 
+                      : 'bg-white shadow-sm border border-gray-100'
                   }`}
                 >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    theme === 'dark' ? 'bg-teal-500/20' : 'bg-teal-100'
-                  }`}>
-                    <Icon className={`w-6 h-6 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${color.bg}`} />
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-gradient-to-br ${color.bg}`}>
+                    <Icon className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className={`text-lg font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {card.title}
                   </h3>
-                  <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  <p className={`text-sm line-clamp-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {card.description}
+                  </p>
+                </motion.a>
+              )
+            })}
+          </div>
+          {/* Second row - 3 cards centered */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:max-w-4xl lg:mx-auto">
+            {t.serviceCards.slice(4).map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
+              const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+                Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile
+              }
+              const Icon = icons[card.icon] || Activity
+              const colors = [
+                { bg: 'from-amber-500 to-orange-500' },
+                { bg: 'from-purple-500 to-violet-500' },
+                { bg: 'from-sky-500 to-blue-500' },
+              ]
+              const color = colors[index % colors.length]
+              return (
+                <motion.a
+                  key={card.id}
+                  href={`#${card.id}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: (index + 4) * 0.05 }}
+                  className={`group relative p-5 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:shadow-lg ${
+                    theme === 'dark' 
+                      ? 'bg-slate-800/80 border border-slate-700/50' 
+                      : 'bg-white shadow-sm border border-gray-100'
+                  } ${index === 2 ? 'col-span-2 lg:col-span-1' : ''}`}
+                >
+                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${color.bg}`} />
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-gradient-to-br ${color.bg}`}>
+                    <Icon className="w-5 h-5 text-white" />
+                  </div>
+                  <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {card.title}
+                  </h3>
+                  <p className={`text-sm line-clamp-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     {card.description}
                   </p>
                 </motion.a>
