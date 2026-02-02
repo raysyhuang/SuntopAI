@@ -721,6 +721,147 @@
       }
     }
   },
+  "patientCare": {
+    "tag": "腎友關懷",
+    "title": "腎友關懷服務",
+    "subtitle": "從初識到相伴，攜手同行，為愛啟程",
+    "backToClinical": "返回臨床應用",
+    "description": "從初識到相伴，我們已經與腎友攜手走過了數十個春秋，最初的一句「為腎友服務」，也從簡單的口號變成了一次次真切的體驗。",
+    "tagline": "攜手同行，為愛啟程",
+    "activitiesTitle": "六大關懷服務",
+    "activities": [
+      {
+        "title": "腎友聯誼會",
+        "description": "加強醫護人員、腎友與家屬之間的互動交流，構建溫暖的透析大家庭。"
+      },
+      {
+        "title": "線上腎友會",
+        "description": "知名專家與腎友進行直播互動，打破時空限制的健康交流。"
+      },
+      {
+        "title": "開幕儀式",
+        "description": "共同見證每一次優質透析醫療服務的開始，開啟新的希望之旅。"
+      },
+      {
+        "title": "透析旅遊",
+        "description": "讓腎友實現「邊走邊透」，突破治療對生活的限制。"
+      },
+      {
+        "title": "人文關懷",
+        "description": "不定期開展關懷活動，豐富腎友生活，傳遞溫暖與希望。"
+      },
+      {
+        "title": "節日活動",
+        "description": "多場大大小小的節日活動，創造更好的活動形式與美好回憶。"
+      }
+    ],
+    "featured": {
+      "tag": "特色服務",
+      "title": "透析旅遊",
+      "description": "讓腎友實現「邊走邊透」是我們的一大服務特色。透過與全國透析中心的合作網路，腎友可以在旅行途中安排透析治療，不再被治療束縛。",
+      "benefits": [
+        "全國透析中心網路支援",
+        "提前預約，無縫銜接",
+        "專業醫護團隊保障",
+        "讓生活不因透析而停止"
+      ]
+    },
+    "association": {
+      "tag": "社群建設",
+      "title": "腎友聯誼會",
+      "description": "腎友聯誼會是我們搭建的患者交流平台，透過定期舉辦各類活動，增進醫患、患患之間的情感聯繫。",
+      "features": [
+        "定期舉辦線下交流活動",
+        "專家健康講座與答疑",
+        "患者經驗分享與互助",
+        "家屬支援與心理疏導"
+      ]
+    },
+    "cta": {
+      "title": "讓我們一起關愛腎友",
+      "description": "了解更多關於我們的腎友關懷服務，或預約參觀我們的透析中心。",
+      "button": "聯繫我們"
+    }
+  },
+  "vascularAccess": {
+    "tag": "血管通路中心",
+    "title": "血管通路服務",
+    "subtitle": "以全方位血管通路介入規劃處置為準則，確保透析治療有效進行",
+    "backToClinical": "返回臨床應用",
+    "servicesTitle": "血管通路服務項目",
+    "servicesDescription": "提供從術前評估到術後管理的全流程血管通路服務",
+    "services": [
+      {
+        "title": "術前血管通路評估與治療",
+        "description": "全面評估患者血管條件，制定個人化治療方案"
+      },
+      {
+        "title": "自體動靜脈瘻管手術",
+        "description": "首選的永久性血管通路，使用患者自身血管"
+      },
+      {
+        "title": "中心靜脈導管置入",
+        "description": "緊急透析或短期過渡的臨時血管通路選擇"
+      },
+      {
+        "title": "人工動靜脈瘻管手術",
+        "description": "血管條件不佳患者的替代永久性通路方案"
+      },
+      {
+        "title": "血栓及瘤樣擴張併發症手術",
+        "description": "處理血管通路常見併發症，延長通路使用壽命"
+      },
+      {
+        "title": "微創介入手術",
+        "description": "超音波/DSA引導下狹窄球囊擴張等微創治療"
+      }
+    ],
+    "featuresTitle": "中心特色",
+    "features": [
+      {
+        "title": "專業診療",
+        "description": "周邊血管疾病診療與透析照護"
+      },
+      {
+        "title": "精密設備",
+        "description": "先進的儀器設備支援"
+      },
+      {
+        "title": "一站式服務",
+        "description": "從評估到手術的完整服務"
+      },
+      {
+        "title": "舒適環境",
+        "description": "溫馨的看診與治療環境"
+      },
+      {
+        "title": "便捷流程",
+        "description": "迅速便捷的就醫流程"
+      },
+      {
+        "title": "專人諮詢",
+        "description": "專人術前教育與諮詢"
+      },
+      {
+        "title": "轉介服務",
+        "description": "完善的醫療轉介體系"
+      },
+      {
+        "title": "併發症處理",
+        "description": "通路併發症方案處理"
+      },
+      {
+        "title": "專業團隊",
+        "description": "國內外專業醫療團隊"
+      }
+    ],
+    "galleryTitle": "中心活動",
+    "cta": {
+      "title": "了解更多血管通路服務",
+      "description": "我們的專業團隊隨時為您提供諮詢與服務。",
+      "button": "預約諮詢"
+    }
+  },
   "deployment": {
     "tag": "部署",
     "title": "為真實透析營運而設計",
@@ -969,6 +1110,64 @@
           { "name": "寶萊特", "nameEn": "BIOLIGHT" },
           { "name": "天益醫療", "nameEn": "TIANYI" }
         ]
+      }
+    },
+    "training": {
+      "tag": "人員培訓",
+      "title": "專業培訓體系",
+      "subtitle": "線上線下結合，打造專業透析醫護團隊",
+      "description": "杏泰醫療始終把服務品質放在第一位，不斷加強機構能力和員工專業性。培訓模式已從傳統的科室培訓和醫護人員交流學習，延伸到靈活多樣的線上學習模式。",
+      "offline": {
+        "title": "線下培訓",
+        "description": "完善的理論與實操培訓體系",
+        "pillars": [
+          {
+            "title": "專家駐場授課",
+            "description": "專業指導，系統教學"
+          },
+          {
+            "title": "醫護人員培訓座談",
+            "description": "分享醫學心得，促進交流"
+          },
+          {
+            "title": "科室進駐實驗",
+            "description": "增強臨床實操能力"
+          },
+          {
+            "title": "交換服務",
+            "description": "匯聚醫療人才，分享醫療進步"
+          }
+        ]
+      },
+      "online": {
+        "title": "線上培訓",
+        "description": "透過醫柔課綱平台提供專業培訓",
+        "features": [
+          {
+            "title": "普及醫學知識",
+            "description": "定期公告，直播教學"
+          },
+          {
+            "title": "分享醫學心得",
+            "description": "線上互動，跨越空間限制"
+          },
+          {
+            "title": "提升專業素養",
+            "description": "與知名專家合作"
+          },
+          {
+            "title": "線上交流",
+            "description": "利用平台進行知識連接"
+          }
+        ]
+      },
+      "images": {
+        "photo1": "專家駐場培訓",
+        "photo2": "醫護人員座談",
+        "photo3": "實操培訓",
+        "online1": "線上課程介面",
+        "online2": "直播教學",
+        "online3": "線上考核"
       }
     },
     "crossLinks": {
@@ -1388,6 +1587,9 @@
       "inCenter": "中心管理",
       "networked": "患者管理",
       "decisionSupport": "資訊化建設",
+      "patientCare": "腎友關懷",
+      "vascularAccess": "血管通路",
+      "training": "人員培訓",
       "aboutUs": "關於我們",
       "centers": "透析中心",
       "news": "新聞",

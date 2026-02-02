@@ -2,7 +2,8 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Server, Cloud, Shield, Settings, ArrowRight, Package, Wrench, Truck, TrendingDown, Brain, Wifi, Monitor, GitMerge, Compass, GraduationCap, CheckCircle } from 'lucide-react'
+import { Server, Cloud, Shield, Settings, ArrowRight, Package, Wrench, Truck, TrendingDown, Brain, Wifi, Monitor, GitMerge, Compass, GraduationCap, CheckCircle, Users, BookOpen, Video, MessageSquare } from 'lucide-react'
+import Image from 'next/image'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -733,6 +734,219 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
           </div>
         </div>
       </section>
+
+      {/* Training Section */}
+      {t.training && (
+        <section 
+          id="training"
+          className="relative py-24"
+          style={{ 
+            backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a',
+            borderTop: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)'
+          }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
+              <h2 
+                className="font-display text-4xl font-semibold mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.training.title}
+              </h2>
+              <p 
+                className="text-lg max-w-3xl mx-auto"
+                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+              >
+                {t.training.subtitle}
+              </p>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center max-w-4xl mx-auto mb-16"
+              style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}
+            >
+              {t.training.description}
+            </motion.p>
+
+            <div className="grid lg:grid-cols-2 gap-12">
+              {/* Offline Training */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="rounded-2xl overflow-hidden"
+                style={{ 
+                  backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                  border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                }}
+              >
+                <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.2)' }}
+                    >
+                      <Users style={{ color: '#007d73' }} className="w-5 h-5" />
+                    </div>
+                    <h3 
+                      className="font-display text-2xl font-semibold"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
+                      {t.training.offline.title}
+                    </h3>
+                  </div>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="mb-6">
+                    {t.training.offline.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {t.training.offline.pillars.map((pillar: any, index: number) => (
+                      <div 
+                        key={index}
+                        className="p-4 rounded-xl"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)'
+                        }}
+                      >
+                        <h4 
+                          className="font-semibold text-sm mb-1"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {pillar.title}
+                        </h4>
+                        <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-xs">
+                          {pillar.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Training Photos */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/training-photo-1.jpg"
+                        alt={t.training.images?.photo1 || 'Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/training-photo-2.jpg"
+                        alt={t.training.images?.photo2 || 'Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/training-photo-3.jpg"
+                        alt={t.training.images?.photo3 || 'Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Online Training */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="rounded-2xl overflow-hidden"
+                style={{ 
+                  backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                  border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                }}
+              >
+                <div className="p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.2)' }}
+                    >
+                      <Video style={{ color: '#007d73' }} className="w-5 h-5" />
+                    </div>
+                    <h3 
+                      className="font-display text-2xl font-semibold"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
+                      {t.training.online.title}
+                    </h3>
+                  </div>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="mb-6">
+                    {t.training.online.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {t.training.online.features.map((feature: any, index: number) => (
+                      <div 
+                        key={index}
+                        className="p-4 rounded-xl"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)'
+                        }}
+                      >
+                        <h4 
+                          className="font-semibold text-sm mb-1"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {feature.title}
+                        </h4>
+                        <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-xs">
+                          {feature.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Online Training Screenshots */}
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/online-training-1.png"
+                        alt={t.training.images?.online1 || 'Online Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/online-training-2.png"
+                        alt={t.training.images?.online2 || 'Online Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/training/online-training-3.png"
+                        alt={t.training.images?.online3 || 'Online Training'}
+                        width={200}
+                        height={150}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Cross Links */}
       {t.crossLinks && (

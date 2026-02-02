@@ -26,10 +26,13 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.inCenter, href: `/${locale}/clinical#in-center` },
       { label: t.links.networked, href: `/${locale}/clinical#networked` },
       { label: t.links.decisionSupport, href: `/${locale}/clinical#decision-support` },
+      { label: t.links.patientCare, href: `/${locale}/clinical/patient-care` },
+      { label: t.links.vascularAccess, href: `/${locale}/clinical/vascular-access` },
     ],
     company: [
       { label: t.links.aboutUs, href: `/${locale}/company` },
       { label: t.links.centers, href: `/${locale}/company#centers` },
+      { label: t.links.training, href: `/${locale}/deployment#training` },
       { label: t.links.news, href: `/${locale}/news` },
       { label: t.links.contact, href: `/${locale}/contact` },
     ],

@@ -740,6 +740,147 @@
       }
     }
   },
+  "patientCare": {
+    "tag": "肾友关怀",
+    "title": "肾友关怀服务",
+    "subtitle": "从初识到相伴，携手同行，为爱启程",
+    "backToClinical": "返回临床应用",
+    "description": "从初识到相伴，我们已经与肾友携手走过了数十个春秋，最初的一句「为肾友服务」，也从简单的口号变成了一次次真切的体验。",
+    "tagline": "携手同行，为爱启程",
+    "activitiesTitle": "六大关怀服务",
+    "activities": [
+      {
+        "title": "肾友联谊会",
+        "description": "加强医护人员、肾友与家属之间的互动交流，构建温暖的透析大家庭。"
+      },
+      {
+        "title": "线上肾友会",
+        "description": "知名专家与肾友进行直播互动，打破时空限制的健康交流。"
+      },
+      {
+        "title": "开幕仪式",
+        "description": "共同见证每一次优质透析医疗服务的开始，开启新的希望之旅。"
+      },
+      {
+        "title": "透析旅游",
+        "description": "让肾友实现「边走边透」，突破治疗对生活的限制。"
+      },
+      {
+        "title": "人文关怀",
+        "description": "不定期开展关怀活动，丰富肾友生活，传递温暖与希望。"
+      },
+      {
+        "title": "节日活动",
+        "description": "多场大大小小的节日活动，创造更好的活动形式与美好回忆。"
+      }
+    ],
+    "featured": {
+      "tag": "特色服务",
+      "title": "透析旅游",
+      "description": "让肾友实现「边走边透」是我们的一大服务特色。通过与全国透析中心的合作网络，肾友可以在旅行途中安排透析治疗，不再被治疗束缚。",
+      "benefits": [
+        "全国透析中心网络支持",
+        "提前预约，无缝衔接",
+        "专业医护团队保障",
+        "让生活不因透析而停止"
+      ]
+    },
+    "association": {
+      "tag": "社区建设",
+      "title": "肾友联谊会",
+      "description": "肾友联谊会是我们搭建的患者交流平台，通过定期举办各类活动，增进医患、患患之间的情感联系。",
+      "features": [
+        "定期举办线下交流活动",
+        "专家健康讲座与答疑",
+        "患者经验分享与互助",
+        "家属支持与心理疏导"
+      ]
+    },
+    "cta": {
+      "title": "让我们一起关爱肾友",
+      "description": "了解更多关于我们的肾友关怀服务，或预约参观我们的透析中心。",
+      "button": "联系我们"
+    }
+  },
+  "vascularAccess": {
+    "tag": "血管通路中心",
+    "title": "血管通路服务",
+    "subtitle": "以全方位血管通路介入规划处置为准则，确保透析治疗有效进行",
+    "backToClinical": "返回临床应用",
+    "servicesTitle": "血管通路服务项目",
+    "servicesDescription": "提供从术前评估到术后管理的全流程血管通路服务",
+    "services": [
+      {
+        "title": "术前血管通路评估与治疗",
+        "description": "全面评估患者血管条件，制定个性化治疗方案"
+      },
+      {
+        "title": "自体动静脉瘘管手术",
+        "description": "首选的永久性血管通路，使用患者自身血管"
+      },
+      {
+        "title": "中心静脉导管置入",
+        "description": "紧急透析或短期过渡的临时血管通路选择"
+      },
+      {
+        "title": "人工动静脉瘘管手术",
+        "description": "血管条件不佳患者的替代永久性通路方案"
+      },
+      {
+        "title": "血栓及瘤样扩张合并症手术",
+        "description": "处理血管通路常见并发症，延长通路使用寿命"
+      },
+      {
+        "title": "微创介入手术",
+        "description": "超声/DSA引导下狭窄球囊扩张等微创治疗"
+      }
+    ],
+    "featuresTitle": "中心特色",
+    "features": [
+      {
+        "title": "专业诊疗",
+        "description": "周边血管疾病诊疗与透析照护"
+      },
+      {
+        "title": "精密设备",
+        "description": "先进的仪器设备支持"
+      },
+      {
+        "title": "一站式服务",
+        "description": "从评估到手术的完整服务"
+      },
+      {
+        "title": "舒适环境",
+        "description": "温馨的看诊与治疗环境"
+      },
+      {
+        "title": "便捷流程",
+        "description": "迅速便捷的就医流程"
+      },
+      {
+        "title": "专人咨询",
+        "description": "专人术前教育与咨询"
+      },
+      {
+        "title": "转介服务",
+        "description": "完善的医疗转介体系"
+      },
+      {
+        "title": "合并症处理",
+        "description": "通路合并症方案处理"
+      },
+      {
+        "title": "专业团队",
+        "description": "国内外专业医疗团队"
+      }
+    ],
+    "galleryTitle": "中心活动",
+    "cta": {
+      "title": "了解更多血管通路服务",
+      "description": "我们的专业团队随时为您提供咨询与服务。",
+      "button": "预约咨询"
+    }
+  },
   "deployment": {
     "tag": "部署方案",
     "title": "智慧透析中心建设与部署",
@@ -985,6 +1126,64 @@
           { "name": "宝莱特", "nameEn": "BIOLIGHT" },
           { "name": "天益医疗", "nameEn": "TIANYI" }
         ]
+      }
+    },
+    "training": {
+      "tag": "人员培训",
+      "title": "专业培训体系",
+      "subtitle": "线上线下结合，打造专业透析医护团队",
+      "description": "杏泰医疗始终把服务质量放在第一位，不断加强机构能力和员工专业性。培训模式已从传统的科室培训和医护人员交流学习，延伸到灵活多样的线上学习模式。",
+      "offline": {
+        "title": "线下培训",
+        "description": "完善的理论与实操培训体系",
+        "pillars": [
+          {
+            "title": "专家驻场授课",
+            "description": "专业指导，系统教学"
+          },
+          {
+            "title": "医护人员培训座谈",
+            "description": "分享医学心得，促进交流"
+          },
+          {
+            "title": "科室进驻实验",
+            "description": "增强临床实操能力"
+          },
+          {
+            "title": "交换服务",
+            "description": "汇聚医疗人才，分享医疗进步"
+          }
+        ]
+      },
+      "online": {
+        "title": "线上培训",
+        "description": "通过医柔课纲平台提供专业培训",
+        "features": [
+          {
+            "title": "普及医学知识",
+            "description": "定期公告，直播教学"
+          },
+          {
+            "title": "分享医学心得",
+            "description": "线上互动，跨越空间限制"
+          },
+          {
+            "title": "提升专业素养",
+            "description": "与知名专家合作"
+          },
+          {
+            "title": "线上交流",
+            "description": "利用平台进行知识连接"
+          }
+        ]
+      },
+      "images": {
+        "photo1": "专家驻场培训",
+        "photo2": "医护人员座谈",
+        "photo3": "实操培训",
+        "online1": "线上课程界面",
+        "online2": "直播教学",
+        "online3": "在线考核"
       }
     },
     "crossLinks": {
@@ -1469,6 +1668,9 @@
       "inCenter": "中心管理",
       "networked": "患者管理",
       "decisionSupport": "信息化建设",
+      "patientCare": "肾友关怀",
+      "vascularAccess": "血管通路",
+      "training": "人员培训",
       "aboutUs": "关于我们",
       "centers": "透析中心",
       "news": "新闻",

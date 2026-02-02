@@ -692,6 +692,147 @@
       }
     }
   },
+  "patientCare": {
+    "tag": "Patient Care",
+    "title": "Patient Care Services",
+    "subtitle": "Walking together, journey for love - from first meeting to lifelong companions",
+    "backToClinical": "Back to Clinical",
+    "description": "From first meeting to lifelong companions, we have walked with kidney patients through decades. What started as a simple slogan 'serving kidney patients' has become countless real experiences of care and support.",
+    "tagline": "Walking Together, Journey for Love",
+    "activitiesTitle": "Six Care Services",
+    "activities": [
+      {
+        "title": "Kidney Friend Association",
+        "description": "Strengthens interaction among medical staff, patients, and families, building a warm dialysis community."
+      },
+      {
+        "title": "Online Patient Meetings",
+        "description": "Renowned experts interact with patients via livestream, breaking time and space barriers."
+      },
+      {
+        "title": "Opening Ceremonies",
+        "description": "Witness the start of quality dialysis medical services together, beginning new journeys of hope."
+      },
+      {
+        "title": "Dialysis Tourism",
+        "description": "Enable patients to travel while receiving dialysis, breaking treatment limitations on life."
+      },
+      {
+        "title": "Humanistic Care",
+        "description": "Regular care activities enriching patients' lives, spreading warmth and hope."
+      },
+      {
+        "title": "Holiday Events",
+        "description": "Multiple holiday celebrations creating enhanced activity formats and beautiful memories."
+      }
+    ],
+    "featured": {
+      "tag": "Featured Service",
+      "title": "Dialysis Tourism",
+      "description": "Enabling patients to 'travel while on dialysis' is one of our signature services. Through our nationwide dialysis center network, patients can arrange dialysis treatments during their travels, no longer bound by treatment schedules.",
+      "benefits": [
+        "Nationwide dialysis center network support",
+        "Advance booking, seamless transitions",
+        "Professional medical team assurance",
+        "Life doesn't stop for dialysis"
+      ]
+    },
+    "association": {
+      "tag": "Community Building",
+      "title": "Kidney Friend Association",
+      "description": "The Kidney Friend Association is our patient exchange platform, regularly hosting various activities to strengthen emotional connections between doctors and patients, and among patients themselves.",
+      "features": [
+        "Regular offline exchange activities",
+        "Expert health lectures and Q&A",
+        "Patient experience sharing and mutual support",
+        "Family support and counseling"
+      ]
+    },
+    "cta": {
+      "title": "Let's Care for Patients Together",
+      "description": "Learn more about our patient care services or schedule a visit to our dialysis centers.",
+      "button": "Contact Us"
+    }
+  },
+  "vascularAccess": {
+    "tag": "Vascular Access Center",
+    "title": "Vascular Access Services",
+    "subtitle": "Following comprehensive vascular access intervention planning to ensure effective dialysis treatment",
+    "backToClinical": "Back to Clinical",
+    "servicesTitle": "Vascular Access Services",
+    "servicesDescription": "Providing full-cycle vascular access services from pre-operative assessment to post-operative management",
+    "services": [
+      {
+        "title": "Pre-operative Assessment & Treatment",
+        "description": "Comprehensive evaluation of patient vascular conditions, developing personalized treatment plans"
+      },
+      {
+        "title": "Autologous AV Fistula Surgery",
+        "description": "Preferred permanent vascular access using patient's own blood vessels"
+      },
+      {
+        "title": "Central Venous Catheter Insertion",
+        "description": "Temporary vascular access for emergency dialysis or short-term transition"
+      },
+      {
+        "title": "Prosthetic AV Fistula Surgery",
+        "description": "Alternative permanent access for patients with poor vascular conditions"
+      },
+      {
+        "title": "Thrombosis & Aneurysm Surgery",
+        "description": "Managing common vascular access complications to extend access lifespan"
+      },
+      {
+        "title": "Minimally Invasive Procedures",
+        "description": "Ultrasound/DSA-guided stenosis balloon dilation and other minimally invasive treatments"
+      }
+    ],
+    "featuresTitle": "Center Features",
+    "features": [
+      {
+        "title": "Professional Diagnosis",
+        "description": "Peripheral vascular disease diagnosis and dialysis care"
+      },
+      {
+        "title": "Advanced Equipment",
+        "description": "State-of-the-art medical equipment support"
+      },
+      {
+        "title": "One-Stop Service",
+        "description": "Complete service from assessment to surgery"
+      },
+      {
+        "title": "Comfortable Environment",
+        "description": "Pleasant consultation and treatment setting"
+      },
+      {
+        "title": "Efficient Process",
+        "description": "Rapid and convenient medical procedures"
+      },
+      {
+        "title": "Personal Consultation",
+        "description": "Dedicated pre-surgery education and consultation"
+      },
+      {
+        "title": "Referral Service",
+        "description": "Comprehensive medical referral system"
+      },
+      {
+        "title": "Complication Management",
+        "description": "Access complication treatment solutions"
+      },
+      {
+        "title": "Expert Team",
+        "description": "Professional domestic and international medical team"
+      }
+    ],
+    "galleryTitle": "Center Activities",
+    "cta": {
+      "title": "Learn More About Vascular Access Services",
+      "description": "Our professional team is ready to provide consultation and services.",
+      "button": "Book Consultation"
+    }
+  },
   "deployment": {
     "tag": "Deployment",
     "title": "Smart Dialysis Center Construction & Deployment",
@@ -889,6 +1030,64 @@
           { "name": "BIOLIGHT", "nameEn": "BIOLIGHT" },
           { "name": "TIANYI", "nameEn": "TIANYI" }
         ]
+      }
+    },
+    "training": {
+      "tag": "Staff Training",
+      "title": "Professional Training System",
+      "subtitle": "Online and offline combined, building professional dialysis medical teams",
+      "description": "Suntop Healthcare always puts service quality first, continuously strengthening institutional capabilities and staff professionalism. Training has evolved from traditional department training and medical staff exchanges to flexible and diverse online learning models.",
+      "offline": {
+        "title": "Offline Training",
+        "description": "Comprehensive theoretical and practical training system",
+        "pillars": [
+          {
+            "title": "Expert On-Site Teaching",
+            "description": "Professional guidance, systematic instruction"
+          },
+          {
+            "title": "Medical Staff Training Sessions",
+            "description": "Share medical insights, promote exchanges"
+          },
+          {
+            "title": "Department-Based Practice",
+            "description": "Enhance clinical practical skills"
+          },
+          {
+            "title": "Exchange Services",
+            "description": "Gather medical talent, share medical advances"
+          }
+        ]
+      },
+      "online": {
+        "title": "Online Training",
+        "description": "Professional training via Yirou Platform",
+        "features": [
+          {
+            "title": "Medical Knowledge Dissemination",
+            "description": "Regular announcements, livestream teaching"
+          },
+          {
+            "title": "Medical Insights Sharing",
+            "description": "Online interaction, transcending space limitations"
+          },
+          {
+            "title": "Professional Development",
+            "description": "Collaborate with renowned experts"
+          },
+          {
+            "title": "Online Exchange",
+            "description": "Platform-based knowledge connections"
+          }
+        ]
+      },
+      "images": {
+        "photo1": "Expert On-Site Training",
+        "photo2": "Medical Staff Sessions",
+        "photo3": "Practical Training",
+        "online1": "Online Course Interface",
+        "online2": "Livestream Teaching",
+        "online3": "Online Assessment"
       }
     },
     "crossLinks": {
@@ -1331,6 +1530,9 @@
       "inCenter": "Center Management",
       "networked": "Patient Management",
       "decisionSupport": "IT Infrastructure",
+      "patientCare": "Patient Care",
+      "vascularAccess": "Vascular Access",
+      "training": "Staff Training",
       "aboutUs": "About Us",
       "centers": "Dialysis Centers",
       "news": "News",
