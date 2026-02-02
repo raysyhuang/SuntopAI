@@ -142,20 +142,12 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       {/* Service Navigation Cards */}
       <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* First row - 4 cards */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-            {t.serviceCards.slice(0, 4).map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {t.serviceCards.map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
               const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
                 Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile
               }
               const Icon = icons[card.icon] || Activity
-              const colors = [
-                { bg: 'from-teal-500 to-cyan-500', darkBg: 'from-teal-600 to-cyan-600' },
-                { bg: 'from-rose-500 to-pink-500', darkBg: 'from-rose-600 to-pink-600' },
-                { bg: 'from-emerald-500 to-green-500', darkBg: 'from-emerald-600 to-green-600' },
-                { bg: 'from-blue-500 to-indigo-500', darkBg: 'from-blue-600 to-indigo-600' },
-              ]
-              const color = colors[index % colors.length]
               return (
                 <motion.a
                   key={card.id}
@@ -164,61 +156,21 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className={`group relative p-5 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:shadow-lg ${
+                  className={`group p-5 rounded-2xl transition-all hover:-translate-y-1 ${
                     theme === 'dark' 
-                      ? 'bg-slate-800/80 border border-slate-700/50' 
-                      : 'bg-white shadow-sm border border-gray-100'
+                      ? 'bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50' 
+                      : 'bg-gray-50 hover:bg-white hover:shadow-lg'
                   }`}
                 >
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${color.bg}`} />
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-gradient-to-br ${color.bg}`}>
-                    <Icon className="w-5 h-5 text-white" />
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${
+                    theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+                  }`}>
+                    <Icon className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
                   </div>
-                  <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  <h3 className={`font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {card.title}
                   </h3>
-                  <p className={`text-sm line-clamp-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {card.description}
-                  </p>
-                </motion.a>
-              )
-            })}
-          </div>
-          {/* Second row - 3 cards centered */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:max-w-4xl lg:mx-auto">
-            {t.serviceCards.slice(4).map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
-              const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-                Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile
-              }
-              const Icon = icons[card.icon] || Activity
-              const colors = [
-                { bg: 'from-amber-500 to-orange-500' },
-                { bg: 'from-purple-500 to-violet-500' },
-                { bg: 'from-sky-500 to-blue-500' },
-              ]
-              const color = colors[index % colors.length]
-              return (
-                <motion.a
-                  key={card.id}
-                  href={`#${card.id}`}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (index + 4) * 0.05 }}
-                  className={`group relative p-5 rounded-2xl overflow-hidden transition-all hover:scale-[1.02] hover:shadow-lg ${
-                    theme === 'dark' 
-                      ? 'bg-slate-800/80 border border-slate-700/50' 
-                      : 'bg-white shadow-sm border border-gray-100'
-                  } ${index === 2 ? 'col-span-2 lg:col-span-1' : ''}`}
-                >
-                  <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${color.bg}`} />
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-gradient-to-br ${color.bg}`}>
-                    <Icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    {card.title}
-                  </h3>
-                  <p className={`text-sm line-clamp-2 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  <p className={`text-sm leading-relaxed ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     {card.description}
                   </p>
                 </motion.a>
@@ -497,148 +449,114 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
-            <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-              {t.training.title}
-            </h2>
-            <p className={`text-lg max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-              {t.training.subtitle}
-            </p>
-          </motion.div>
-
-          {/* Training Cards */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* Offline Training Card */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left: Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className={`rounded-2xl overflow-hidden ${
-                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
-              }`}
             >
-              <div className={`p-6 ${
-                theme === 'dark' 
-                  ? 'bg-gradient-to-r from-teal-900/50 to-cyan-900/50' 
-                  : 'bg-gradient-to-r from-teal-500 to-cyan-500'
-              }`}>
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                    theme === 'dark' ? 'bg-white/10' : 'bg-white/20'
-                  }`}>
-                    <Users className="w-6 h-6 text-white" />
+              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
+              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                {t.training.title}
+              </h2>
+              <p className={`text-lg mb-8 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                {t.training.subtitle}
+              </p>
+
+              {/* Training Types */}
+              <div className="space-y-6 mb-8">
+                {/* Offline */}
+                <div className={`p-5 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                      theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+                    }`}>
+                      <Users className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                    </div>
+                    <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                      {t.training.offline.title}
+                    </h3>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{t.training.offline.title}</h3>
-                    <p className="text-white/80 text-sm">{t.training.offline.description}</p>
+                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {t.training.offline.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {t.training.offline.pillars.map((pillar: { title: string }, index: number) => (
+                      <span 
+                        key={index}
+                        className={`px-3 py-1 rounded-full text-xs ${
+                          theme === 'dark' ? 'bg-slate-700 text-gray-300' : 'bg-gray-100 text-gray-700'
+                        }`}
+                      >
+                        {pillar.title}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-3">
-                  {t.training.offline.pillars.map((pillar: { title: string; description: string }, index: number) => (
-                    <div 
-                      key={index}
-                      className={`p-4 rounded-xl ${
-                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                      }`}
-                    >
-                      <h4 className={`font-medium text-sm mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                        {pillar.title}
-                      </h4>
-                      <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                        {pillar.description}
-                      </p>
+
+                {/* Online */}
+                <div className={`p-5 rounded-xl ${theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'}`}>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                      theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+                    }`}>
+                      <Video className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
                     </div>
-                  ))}
+                    <h3 className={`font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                      {t.training.online.title}
+                    </h3>
+                  </div>
+                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                    {t.training.online.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {t.training.online.features.map((feature: { title: string }, index: number) => (
+                      <span 
+                        key={index}
+                        className={`px-3 py-1 rounded-full text-xs ${
+                          theme === 'dark' ? 'bg-slate-700 text-gray-300' : 'bg-gray-100 text-gray-700'
+                        }`}
+                      >
+                        {feature.title}
+                      </span>
+                    ))}
+                  </div>
+                  <a 
+                    href="https://www.yiroyiro.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
+                      theme === 'dark' ? 'text-teal-400 hover:text-teal-300' : 'text-teal-600 hover:text-teal-700'
+                    }`}
+                  >
+                    {t.training.online.link} →
+                  </a>
                 </div>
               </div>
             </motion.div>
 
-            {/* Online Training Card */}
+            {/* Right: Photos */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className={`rounded-2xl overflow-hidden ${
-                theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-lg'
-              }`}
+              className="grid grid-cols-2 gap-3"
             >
-              <div className={`p-6 ${
-                theme === 'dark' 
-                  ? 'bg-gradient-to-r from-violet-900/50 to-purple-900/50' 
-                  : 'bg-gradient-to-r from-violet-500 to-purple-500'
-              }`}>
-                <div className="flex items-center gap-3">
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                    theme === 'dark' ? 'bg-white/10' : 'bg-white/20'
-                  }`}>
-                    <Video className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{t.training.online.title}</h3>
-                    <p className="text-white/80 text-sm">{t.training.online.description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  {t.training.online.features.map((feature: { title: string; description: string }, index: number) => (
-                    <div 
-                      key={index}
-                      className={`p-4 rounded-xl ${
-                        theme === 'dark' ? 'bg-slate-700/50' : 'bg-gray-50'
-                      }`}
-                    >
-                      <h4 className={`font-medium text-sm mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                        {feature.title}
-                      </h4>
-                      <p className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                        {feature.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-                <a 
-                  href="https://www.yiroyiro.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-                    theme === 'dark' ? 'text-violet-400 hover:text-violet-300' : 'text-violet-600 hover:text-violet-700'
+              {onlineTrainingImages.map((src, index) => (
+                <div 
+                  key={index}
+                  className={`relative rounded-xl overflow-hidden cursor-pointer group ${
+                    index === 0 ? 'col-span-2 aspect-[2/1]' : 'aspect-[4/3]'
                   }`}
+                  onClick={() => openLightbox(onlineTrainingImages, index)}
                 >
-                  {t.training.online.link} →
-                </a>
-              </div>
+                  <Image src={src} alt="Training" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                </div>
+              ))}
             </motion.div>
           </div>
-
-          {/* Photo Gallery */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-3 gap-4"
-          >
-            {onlineTrainingImages.map((src, index) => (
-              <div 
-                key={index}
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
-                onClick={() => openLightbox(onlineTrainingImages, index)}
-              >
-                <Image src={src} alt="Training" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
