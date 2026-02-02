@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, ArrowRight, Building2, Users, Award, Mic } from 'lucide-react'
+import Image from 'next/image'
+import { Calendar, ArrowRight, Building2, Users, Heart, Utensils } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -18,46 +19,36 @@ const fadeInUp = {
 }
 
 const newsItems = [
-  { id: 1, category: 'deployment', icon: Building2, date: '2026-01-15', featured: true },
-  { id: 2, category: 'partnership', icon: Users, date: '2025-12-08', featured: false },
-  { id: 3, category: 'milestone', icon: Award, date: '2025-11-20', featured: true },
-  { id: 4, category: 'conference', icon: Mic, date: '2025-10-15', featured: false },
-  { id: 5, category: 'deployment', icon: Building2, date: '2025-09-01', featured: false },
-  { id: 6, category: 'milestone', icon: Award, date: '2025-08-10', featured: true },
+  { id: 1, category: 'event', icon: Heart, date: '2026-01-15', featured: true, image: '/images/news/news-kidney-care-event.jpg' },
+  { id: 2, category: 'health', icon: Utensils, date: '2025-12-20', featured: false, image: '/images/news/news-summer-foods.jpg' },
+  { id: 3, category: 'event', icon: Users, date: '2025-11-25', featured: true, image: '/images/news/news-dragon-boat.jpg' },
+  { id: 4, category: 'deployment', icon: Building2, date: '2025-10-18', featured: true, image: '/images/news/news-binzhou-opening.jpg' },
 ]
 
 const newsContent: Record<string, { title: string; summary: string }[]> = {
   en: [
-    { title: 'Platform Deployed at Regional Dialysis Network', summary: 'Suntop AI platform now monitoring 50+ dialysis stations across a regional healthcare network, providing real-time intelligence and decision support.' },
-    { title: 'Strategic Partnership with Leading Dialysis Equipment Manufacturer', summary: 'New integration partnership expands platform compatibility and enables deeper machine-level data access.' },
-    { title: 'AI Model Achieves 95% Early Detection Rate', summary: 'Clinical validation study demonstrates high accuracy in predicting intradialytic hypotension 15 minutes before occurrence.' },
-    { title: 'Presented at International Nephrology Conference', summary: 'Research findings on AI-assisted dialysis optimization presented to international audience of nephrologists and researchers.' },
-    { title: 'Pilot Program Expansion', summary: 'Following successful initial deployment, three additional dialysis centers join the pilot program.' },
-    { title: 'Series A Funding Completed', summary: 'Funding round led by healthcare-focused investors to accelerate platform development and market expansion.' },
+    { title: 'Caring for Kidneys, Quality Dialysis | First Kidney Friend Association Event Successfully Concluded!', summary: 'The first Kidney Friend Association event at Zhongshan Shenkang brought together patients, families, and medical staff for an afternoon of education, sharing, and mutual support.' },
+    { title: 'Are Common Summer Foods Suitable for Dialysis Patients?', summary: 'Our nutrition experts share guidance on which refreshing summer foods are safe and beneficial for dialysis patients, and which ones to avoid.' },
+    { title: 'A Ceremonial Dragon Boat Festival at Xingkang Dialysis Center!', summary: 'Xingkang Blood Dialysis Center celebrated Dragon Boat Festival with traditional activities, zongzi making, and heartwarming moments with our kidney friends.' },
+    { title: 'Walking Together for Kidney Health — Binzhou Xingkang Dialysis Center Now Open!', summary: 'We are excited to announce the grand opening of Binzhou Xingkang Blood Dialysis Center, bringing advanced dialysis care to more patients in the region.' },
   ],
   ja: [
-    { title: '地域透析ネットワークでプラットフォーム導入', summary: 'Suntop AIプラットフォームが地域医療ネットワーク全体で50以上の透析ステーションを監視し、リアルタイムインテリジェンスと意思決定支援を提供。' },
-    { title: '大手透析装置メーカーとの戦略的パートナーシップ', summary: '新しい統合パートナーシップにより、プラットフォームの互換性が拡大し、より深い装置レベルのデータアクセスが可能に。' },
-    { title: 'AIモデルが95%の早期検出率を達成', summary: '臨床検証研究により、透析中低血圧の発生15分前に高精度で予測できることが実証。' },
-    { title: '国際腎臓学会議で発表', summary: 'AI支援透析最適化に関する研究成果を腎臓専門医と研究者の国際的な聴衆に発表。' },
-    { title: 'パイロットプログラムの拡大', summary: '初期導入の成功に続き、3つの透析センターがパイロットプログラムに参加。' },
-    { title: 'シリーズA資金調達完了', summary: 'ヘルスケア重視の投資家主導の資金調達ラウンドにより、プラットフォーム開発と市場拡大を加速。' },
+    { title: '腎臓ケア・質の高い透析 | 第1回腎友会イベントが無事終了！', summary: '中山腎康での第1回腎友会イベントでは、患者、家族、医療スタッフが集まり、教育、共有、相互支援の午後を過ごしました。' },
+    { title: '一般的な夏の食べ物は透析患者に適していますか？', summary: '栄養専門家が、透析患者にとって安全で有益な夏の爽やかな食べ物と、避けるべきものについてガイダンスを共有します。' },
+    { title: '杏康透析センターでの端午の節句！', summary: '杏康血液透析センターは、伝統的な活動、粽作り、腎友との心温まるひとときで端午の節句を祝いました。' },
+    { title: '腎臓の健康のために共に歩む — 滨州杏康透析センターオープン！', summary: '滨州杏康血液透析センターのグランドオープンを発表できることを嬉しく思います。この地域のより多くの患者に先進的な透析ケアを提供します。' },
   ],
   'zh-CN': [
-    { title: '平台在区域透析网络部署', summary: 'Suntop AI平台现已在区域医疗网络中监控50多个透析站，提供实时智能和决策支持。' },
-    { title: '与领先透析设备制造商达成战略合作', summary: '新的整合合作扩展了平台兼容性，实现更深层次的设备级数据访问。' },
-    { title: 'AI模型实现95%早期检测率', summary: '临床验证研究表明，在透析中低血压发生前15分钟即可高精度预测。' },
-    { title: '在国际肾脏病学会议上发表', summary: 'AI辅助透析优化的研究成果向国际肾脏病专家和研究人员展示。' },
-    { title: '试点项目扩展', summary: '在成功初始部署后，三个额外的透析中心加入试点项目。' },
-    { title: 'A轮融资完成', summary: '由医疗健康投资者主导的融资轮，加速平台开发和市场扩张。' },
+    { title: '关爱肾脏 品质透析 | 首届肾友会圆满结束！', summary: '首届肾友会活动在中山肾康成功举办，患者、家属和医护人员共聚一堂，进行健康教育、经验分享和相互支持。' },
+    { title: '常见的消暑食品适不适合透析人群？', summary: '我们的营养专家分享了哪些清凉消暑食品对透析患者安全有益，以及应该避免哪些食品的指导建议。' },
+    { title: '充满仪式感的端午节，杏康血液透析中心太给力啦！', summary: '杏康血液透析中心与肾友们一起庆祝端午节，包粽子、做手工，共度温馨美好的节日时光。' },
+    { title: '携手共"净" 肾爱同行——滨州杏康血液透析中心正式开诊啦！', summary: '滨州杏康血液透析中心盛大开业，为更多肾友带来先进的透析医疗服务，守护肾友健康。' },
   ],
   'zh-TW': [
-    { title: '平台在區域透析網路部署', summary: 'Suntop AI平台現已在區域醫療網路中監控50多個透析站，提供即時智能和決策支援。' },
-    { title: '與領先透析設備製造商達成策略合作', summary: '新的整合合作擴展了平台相容性，實現更深層次的設備級資料存取。' },
-    { title: 'AI模型實現95%早期檢測率', summary: '臨床驗證研究表明，在透析中低血壓發生前15分鐘即可高精度預測。' },
-    { title: '在國際腎臟病學會議上發表', summary: 'AI輔助透析最佳化的研究成果向國際腎臟病專家和研究人員展示。' },
-    { title: '試點專案擴展', summary: '在成功初始部署後，三個額外的透析中心加入試點專案。' },
-    { title: 'A輪融資完成', summary: '由醫療健康投資者主導的融資輪，加速平台開發和市場擴張。' },
+    { title: '關愛腎臟 品質透析 | 首屆腎友會圓滿結束！', summary: '首屆腎友會活動在中山腎康成功舉辦，患者、家屬和醫護人員共聚一堂，進行健康教育、經驗分享和相互支持。' },
+    { title: '常見的消暑食品適不適合透析人群？', summary: '我們的營養專家分享了哪些清涼消暑食品對透析患者安全有益，以及應該避免哪些食品的指導建議。' },
+    { title: '充滿儀式感的端午節，杏康血液透析中心太給力啦！', summary: '杏康血液透析中心與腎友們一起慶祝端午節，包粽子、做手工，共度溫馨美好的節日時光。' },
+    { title: '攜手共"淨" 腎愛同行——濱州杏康血液透析中心正式開診啦！', summary: '濱州杏康血液透析中心盛大開業，為更多腎友帶來先進的透析醫療服務，守護腎友健康。' },
   ],
 }
 
@@ -79,10 +70,9 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
 
   const categories = [
     { id: 'all', label: t.categories.all },
+    { id: 'event', label: t.categories.event || '活动' },
     { id: 'deployment', label: t.categories.deployment },
-    { id: 'partnership', label: t.categories.partnership },
-    { id: 'milestone', label: t.categories.milestone },
-    { id: 'conference', label: t.categories.conference },
+    { id: 'health', label: t.categories.health || '健康' },
   ]
 
   const enrichedNewsItems = newsItems.map((item, index) => ({
@@ -170,7 +160,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
             >
               {t.featured}
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {enrichedNewsItems
                 .filter((item) => item.featured)
                 .map((item, index) => (
@@ -180,35 +170,47 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="group cursor-pointer rounded-2xl p-6"
-                    style={{ 
-                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
-                      boxShadow: theme === 'light' ? '0 2px 12px rgba(0,125,115,0.06)' : 'none',
-                      border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(20,184,166,0.2)'
-                    }}
+                    className={`group cursor-pointer rounded-2xl overflow-hidden ${
+                      theme === 'dark' ? 'bg-slate-800/50 border border-slate-700/50' : 'bg-white shadow-lg'
+                    }`}
                   >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div 
-                        className="w-10 h-10 rounded-lg flex items-center justify-center"
-                        style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
-                      >
-                        <item.icon style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-5 h-5" />
-                      </div>
-                      <div className="flex items-center gap-2 text-xs" style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}>
-                        <Calendar className="w-3 h-3" />
-                        {formatDate(item.date, locale)}
+                    {/* Image */}
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image 
+                        src={item.image} 
+                        alt={item.title} 
+                        fill 
+                        className="object-cover group-hover:scale-105 transition-transform duration-300" 
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute bottom-3 left-3 flex items-center gap-2">
+                        <div 
+                          className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/20 backdrop-blur-sm"
+                        >
+                          <item.icon className="w-4 h-4 text-white" />
+                        </div>
+                        <div className="flex items-center gap-1.5 text-xs text-white/90">
+                          <Calendar className="w-3 h-3" />
+                          {formatDate(item.date, locale)}
+                        </div>
                       </div>
                     </div>
-                    <h3 
-                      className="font-display font-semibold mb-3 transition-colors group-hover:text-[#007d73]"
-                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                    >
-                      {item.title}
-                    </h3>
-                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed mb-4">{item.summary}</p>
-                    <div className="flex items-center gap-2 text-sm font-medium" style={{ color: '#007d73' }}>
-                      {t.readMore}
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    {/* Content */}
+                    <div className="p-5">
+                      <h3 
+                        className={`font-display font-semibold mb-2 line-clamp-2 transition-colors group-hover:text-[#007d73] ${
+                          theme === 'dark' ? 'text-white' : 'text-gray-900'
+                        }`}
+                      >
+                        {item.title}
+                      </h3>
+                      <p className={`text-sm leading-relaxed mb-4 line-clamp-2 ${
+                        theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                      }`}>{item.summary}</p>
+                      <div className="flex items-center gap-2 text-sm font-medium" style={{ color: '#007d73' }}>
+                        {t.readMore}
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
                   </motion.article>
                 ))}
@@ -231,40 +233,45 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className="flex items-start gap-6 p-6 rounded-xl transition-all cursor-pointer group"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.3)',
-                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                  }}
+                  className={`flex items-start gap-4 md:gap-6 p-4 md:p-6 rounded-xl transition-all cursor-pointer group ${
+                    theme === 'dark' ? 'bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/50' : 'bg-gray-50 hover:bg-gray-100'
+                  }`}
                 >
-                  <div 
-                    className="hidden sm:flex w-12 h-12 rounded-xl items-center justify-center flex-shrink-0"
-                    style={{ backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.5)' }}
-                  >
-                    <item.icon style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="w-6 h-6" />
+                  {/* Thumbnail */}
+                  <div className="relative w-24 h-24 md:w-32 md:h-24 rounded-lg overflow-hidden flex-shrink-0">
+                    <Image 
+                      src={item.image} 
+                      alt={item.title} 
+                      fill 
+                      className="object-cover group-hover:scale-105 transition-transform duration-300" 
+                    />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
                       <span 
-                        className="text-2xs font-medium uppercase tracking-wider"
+                        className="text-xs font-medium uppercase tracking-wider"
                         style={{ color: '#007d73' }}
                       >
                         {item.category}
                       </span>
-                      <span style={{ color: theme === 'light' ? '#d2d2d7' : '#4b5563' }}>•</span>
-                      <span className="text-xs" style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}>{formatDate(item.date, locale)}</span>
+                      <span className={theme === 'light' ? 'text-gray-300' : 'text-gray-600'}>•</span>
+                      <span className={`text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>{formatDate(item.date, locale)}</span>
                     </div>
                     <h3 
-                      className="font-display font-semibold mb-2 transition-colors group-hover:text-[#007d73]"
-                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      className={`font-display font-semibold mb-2 line-clamp-1 md:line-clamp-2 transition-colors group-hover:text-[#007d73] ${
+                        theme === 'dark' ? 'text-white' : 'text-gray-900'
+                      }`}
                     >
                       {item.title}
                     </h3>
-                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed line-clamp-2">{item.summary}</p>
+                    <p className={`text-sm leading-relaxed line-clamp-2 hidden md:block ${
+                      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                    }`}>{item.summary}</p>
                   </div>
                   <ArrowRight 
-                    className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-all" 
-                    style={{ color: theme === 'light' ? '#d2d2d7' : '#4b5563' }}
+                    className={`w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-all hidden md:block ${
+                      theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
+                    }`}
                   />
                 </motion.article>
               ))}

@@ -1700,10 +1700,9 @@
     "subtitle": "Clinical deployments, platform milestones, academic collaborations, and industry presence.",
     "categories": {
       "all": "All Updates",
-      "deployment": "Deployments",
-      "partnership": "Partnerships",
-      "milestone": "Milestones",
-      "conference": "Conferences"
+      "event": "Events",
+      "deployment": "New Centers",
+      "health": "Health Tips"
     },
     "featured": "Featured",
     "allUpdates": "All Updates",
