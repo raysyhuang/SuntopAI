@@ -1216,13 +1216,13 @@
     },
     "training": {
       "tag": "Digital Training",
-      "title": "Yirou Digital Platforms",
+      "title": "Yiro Digital Platforms",
       "subtitle": "Comprehensive digital training and health management support for medical teams and patients",
       "staffPlatform": {
-        "title": "Yirou Curriculum",
+        "title": "Yiro Curriculum",
         "target": "Medical Staff",
         "description": "Professional online training platform providing systematic continuing education and certification services for dialysis medical teams",
-        "link": "Visit Yirou Platform",
+        "link": "Visit YiroYiro.com",
         "features": [
           "Teaching Videos",
           "Live Courses",
@@ -1231,7 +1231,7 @@
         ]
       },
       "patientApp": {
-        "title": "Yirou Health",
+        "title": "Yiro Health",
         "target": "Patients",
         "description": "A mobile health platform designed for dialysis patients, helping them understand their condition, build social connections, and improve quality of life",
         "scanToDownload": "Scan to Download",
@@ -1242,7 +1242,7 @@
           "Points Mall"
         ]
       },
-      "provider": "Powered by Shang Ding Yi Quan Global Technology Co., Ltd."
+      "provider": "Powered by YiroYiro.com"
     },
     "rehabilitation": {
       "tag": "Dialysis Rehabilitation",
