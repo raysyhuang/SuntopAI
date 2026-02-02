@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Heart, Users, Globe, CalendarHeart, Sparkles, PartyPopper } from 'lucide-react'
+import { ArrowLeft, Heart, Users, Globe, CalendarHeart, Sparkles, PartyPopper, Cpu } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -167,7 +167,7 @@ export default function PatientCareClient({ locale, dictionary }: PatientCareCli
                 <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   {t.featured.description}
                 </p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-6">
                   {t.featured.benefits.map((benefit: string, index: number) => (
                     <li key={index} className="flex items-start gap-3">
                       <div className={`mt-1 w-5 h-5 rounded-full flex items-center justify-center ${
@@ -179,6 +179,22 @@ export default function PatientCareClient({ locale, dictionary }: PatientCareCli
                     </li>
                   ))}
                 </ul>
+                {/* Smart Feature Highlight */}
+                {t.featured.smartFeature && (
+                  <div className={`p-4 rounded-xl ${
+                    theme === 'dark' ? 'bg-white/5 border border-white/10' : 'bg-white/50 border border-rose-200'
+                  }`}>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Cpu className={`w-4 h-4 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
+                      <span className={`text-sm font-semibold ${theme === 'dark' ? 'text-rose-300' : 'text-rose-700'}`}>
+                        {t.featured.smartFeature.title}
+                      </span>
+                    </div>
+                    <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                      {t.featured.smartFeature.description}
+                    </p>
+                  </div>
+                )}
               </div>
               <div className="flex items-center justify-center">
                 <div className="relative w-64 h-64">

@@ -727,15 +727,19 @@
       }
     ],
     "featured": {
-      "tag": "Featured Service",
+      "tag": "Smart Dialysis Tourism",
       "title": "Dialysis Tourism",
-      "description": "Enabling patients to 'travel while on dialysis' is one of our signature services. Through our nationwide dialysis center network, patients can arrange dialysis treatments during their travels, no longer bound by treatment schedules.",
+      "description": "Enabling patients to 'travel while on dialysis' is one of our signature services. Through our smart dialysis platform, patient prescriptions, lab data, and medication records are standardized and transmitted to destination centers, while our smart supply chain synchronizes the same consumables for treatment continuity.",
       "benefits": [
+        "Standardized patient data transfer across centers",
+        "Smart supply chain consumable synchronization",
         "Nationwide dialysis center network support",
-        "Advance booking, seamless transitions",
-        "Professional medical team assurance",
         "Life doesn't stop for dialysis"
-      ]
+      ],
+      "smartFeature": {
+        "title": "Platform-Enabled",
+        "description": "Dialysis prescriptions, lab results, and medication records sync with one click - destination centers are prepared in advance for seamless treatment"
+      }
     },
     "association": {
       "tag": "Community Building",
@@ -755,16 +759,27 @@
     }
   },
   "vascularAccess": {
-    "tag": "Vascular Access Center",
-    "title": "Vascular Access Services",
-    "subtitle": "Following comprehensive vascular access intervention planning to ensure effective dialysis treatment",
+    "tag": "Smart Vascular Access Center",
+    "title": "AI-Assisted Vascular Access Services",
+    "subtitle": "Following comprehensive vascular access intervention planning, combined with AI-assisted screening and 5G remote consultation, to ensure effective dialysis treatment",
     "backToClinical": "Back to Clinical",
+    "smartFeature": {
+      "tag": "AI-Powered",
+      "title": "AI-Assisted Vascular Access Screening",
+      "description": "Ultrasound devices transmit images in real-time via 5G to our platform, where AI algorithms automatically analyze vascular conditions, identify stenosis risks, and generate standardized assessment reports to assist rapid clinical decision-making.",
+      "features": [
+        "5G real-time ultrasound transmission",
+        "AI automatic vascular analysis",
+        "Intelligent stenosis risk detection",
+        "Standardized report generation"
+      ]
+    },
     "servicesTitle": "Vascular Access Services",
     "servicesDescription": "Providing full-cycle vascular access services from pre-operative assessment to post-operative management",
     "services": [
       {
-        "title": "Pre-operative Assessment & Treatment",
-        "description": "Comprehensive evaluation of patient vascular conditions, developing personalized treatment plans"
+        "title": "AI-Assisted Pre-operative Assessment",
+        "description": "AI analyzes ultrasound images for comprehensive vascular condition evaluation and personalized treatment planning"
       },
       {
         "title": "Autologous AV Fistula Surgery",

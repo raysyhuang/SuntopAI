@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft, Activity, Stethoscope, Syringe, Heart, Shield, Clock, Users, Building2, ChevronLeft, ChevronRight, X } from 'lucide-react'
+import { ArrowLeft, Activity, Stethoscope, Syringe, Heart, Shield, Clock, Users, Building2, ChevronLeft, ChevronRight, X, Cpu, Wifi, Brain, FileText } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -87,6 +87,88 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
           </motion.div>
         </div>
       </section>
+
+      {/* AI Smart Feature Section */}
+      {t.smartFeature && (
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className={`rounded-3xl overflow-hidden ${
+                theme === 'dark' 
+                  ? 'bg-gradient-to-r from-teal-900/50 to-cyan-900/50 border border-teal-800/50' 
+                  : 'bg-gradient-to-r from-teal-50 to-cyan-50'
+              }`}
+            >
+              <div className="grid lg:grid-cols-2 gap-8 p-8 lg:p-12">
+                <div>
+                  <span className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium mb-4 ${
+                    theme === 'dark' ? 'bg-teal-500/20 text-teal-300' : 'bg-teal-100 text-teal-700'
+                  }`}>
+                    <Brain className="w-4 h-4" />
+                    {t.smartFeature.tag}
+                  </span>
+                  <h3 className={`text-2xl md:text-3xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {t.smartFeature.title}
+                  </h3>
+                  <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                    {t.smartFeature.description}
+                  </p>
+                  <div className="grid grid-cols-2 gap-4">
+                    {t.smartFeature.features.map((feature: string, index: number) => {
+                      const featureIcons = [Wifi, Cpu, Brain, FileText]
+                      const FeatureIcon = featureIcons[index % featureIcons.length]
+                      return (
+                        <div 
+                          key={index}
+                          className={`flex items-center gap-3 p-3 rounded-xl ${
+                            theme === 'dark' ? 'bg-white/5' : 'bg-white/50'
+                          }`}
+                        >
+                          <FeatureIcon className={`w-5 h-5 flex-shrink-0 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                          <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>{feature}</span>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className={`w-full max-w-md p-6 rounded-2xl ${
+                    theme === 'dark' ? 'bg-gray-800/50' : 'bg-white shadow-lg'
+                  }`}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${
+                        theme === 'dark' ? 'bg-teal-500/20' : 'bg-teal-100'
+                      }`}>
+                        <Wifi className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                      </div>
+                      <div>
+                        <div className={`text-sm font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>5G</div>
+                        <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>Real-time</div>
+                      </div>
+                    </div>
+                    <div className={`h-32 rounded-xl mb-4 flex items-center justify-center ${
+                      theme === 'dark' ? 'bg-gray-700/50' : 'bg-gray-100'
+                    }`}>
+                      <Activity className={`w-16 h-16 ${theme === 'dark' ? 'text-teal-500/50' : 'text-teal-300'}`} />
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <div className={`text-xs ${theme === 'dark' ? 'text-gray-400' : 'text-gray-500'}`}>AI Analysis</div>
+                      <div className={`px-2 py-1 rounded text-xs font-medium ${
+                        theme === 'dark' ? 'bg-green-500/20 text-green-400' : 'bg-green-100 text-green-700'
+                      }`}>
+                        Processing
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Services Section */}
       <section className="py-16">
