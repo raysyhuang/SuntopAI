@@ -220,6 +220,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 1: Center Management */}
           {t.fineManagement.parts.centerManagement && (
             <section 
+              id="in-center"
               className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
             >
@@ -325,6 +326,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 2: Patient Management */}
           {t.fineManagement.parts.patientManagement && (
             <section 
+              id="networked"
               className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
             >
@@ -431,6 +433,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           {/* Part 3: IT Infrastructure */}
           {t.fineManagement.parts.itInfrastructure && (
             <section 
+              id="decision-support"
               className="relative py-24"
               style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
             >
