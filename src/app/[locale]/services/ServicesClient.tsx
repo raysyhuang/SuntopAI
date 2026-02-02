@@ -46,20 +46,60 @@ const patientCareImages = [
   '/images/patient-care/holiday-events.png',
 ]
 
+// All expandable images
+const trainingImages = [
+  '/images/training/training-photo-1.jpg',
+  '/images/training/training-photo-2.jpg',
+  '/images/training/training-photo-3.jpg',
+]
+
+const onlineTrainingImages = [
+  '/images/training/online-training-1.png',
+  '/images/training/online-training-2.png',
+  '/images/training/online-training-3.png',
+]
+
+const nutritionImages = [
+  '/images/clinical/营养趣味猜谜活动.jpg',
+  '/images/clinical/营养趣味猜谜活动2.jpg',
+]
+
+const footCareImages = [
+  '/images/clinical/碳酸泉足浴.jpg',
+  '/images/clinical/碳酸泉效果.jpg',
+  '/images/clinical/足部筛查.jpg',
+  '/images/clinical/碳酸泉室.jpg',
+]
+
+const rehabilitationImages = [
+  '/images/clinical/康复运动设备.jpg',
+]
+
 export default function ServicesClient({ locale, dictionary }: ServicesClientProps) {
   const t = dictionary.services
   const { theme } = useTheme()
-  const [activeVascularImage, setActiveVascularImage] = useState<number | null>(null)
+  const [lightboxImages, setLightboxImages] = useState<string[]>([])
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null)
+
+  const openLightbox = (images: string[], index: number) => {
+    setLightboxImages(images)
+    setActiveImageIndex(index)
+  }
+
+  const closeLightbox = () => {
+    setActiveImageIndex(null)
+    setLightboxImages([])
+  }
 
   const handlePrev = () => {
-    if (activeVascularImage !== null) {
-      setActiveVascularImage(activeVascularImage === 0 ? vascularGalleryImages.length - 1 : activeVascularImage - 1)
+    if (activeImageIndex !== null) {
+      setActiveImageIndex(activeImageIndex === 0 ? lightboxImages.length - 1 : activeImageIndex - 1)
     }
   }
 
   const handleNext = () => {
-    if (activeVascularImage !== null) {
-      setActiveVascularImage(activeVascularImage === vascularGalleryImages.length - 1 ? 0 : activeVascularImage + 1)
+    if (activeImageIndex !== null) {
+      setActiveImageIndex(activeImageIndex === lightboxImages.length - 1 ? 0 : activeImageIndex + 1)
     }
   }
 
@@ -283,7 +323,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
-                onClick={() => setActiveVascularImage(index)}
+                onClick={() => openLightbox(vascularGalleryImages, index)}
               >
                 <Image
                   src={src}
@@ -472,15 +512,15 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   ))}
                 </div>
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/training-photo-1.jpg" alt="Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/training-photo-2.jpg" alt="Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/training-photo-3.jpg" alt="Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
+                  {trainingImages.map((src, index) => (
+                    <div 
+                      key={index}
+                      className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
+                      onClick={() => openLightbox(trainingImages, index)}
+                    >
+                      <Image src={src} alt="Training" width={200} height={150} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -536,15 +576,15 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   ))}
                 </div>
                 <div className="grid grid-cols-3 gap-2">
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/online-training-1.png" alt="Online Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/online-training-2.png" alt="Online Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
-                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                    <Image src="/images/training/online-training-3.png" alt="Online Training" width={200} height={150} className="w-full h-full object-cover" />
-                  </div>
+                  {onlineTrainingImages.map((src, index) => (
+                    <div 
+                      key={index}
+                      className="aspect-[4/3] rounded-lg overflow-hidden cursor-pointer group"
+                      onClick={() => openLightbox(onlineTrainingImages, index)}
+                    >
+                      <Image src={src} alt="Online Training" width={200} height={150} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
@@ -615,9 +655,11 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative aspect-[4/3] rounded-2xl overflow-hidden"
+                className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
+                onClick={() => openLightbox(rehabilitationImages, 0)}
               >
-                <Image src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" fill className="object-cover" />
+                <Image src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </motion.div>
             </div>
           </div>
@@ -705,12 +747,16 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
             >
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
-                <Image src="/images/clinical/营养趣味猜谜活动.jpg" alt="营养活动" fill className="object-cover" />
-              </div>
-              <div className="relative aspect-square rounded-2xl overflow-hidden">
-                <Image src="/images/clinical/营养趣味猜谜活动2.jpg" alt="营养活动" fill className="object-cover" />
-              </div>
+              {nutritionImages.map((src, index) => (
+                <div 
+                  key={index}
+                  className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
+                  onClick={() => openLightbox(nutritionImages, index)}
+                >
+                  <Image src={src} alt="营养活动" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                </div>
+              ))}
             </motion.div>
           </div>
         </div>
@@ -759,18 +805,16 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 viewport={{ once: true }}
                 className="grid grid-cols-2 gap-4"
               >
-                <div className="relative aspect-square rounded-2xl overflow-hidden">
-                  <Image src="/images/clinical/碳酸泉足浴.jpg" alt="碳酸泉足浴" fill className="object-cover" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden">
-                  <Image src="/images/clinical/碳酸泉效果.jpg" alt="碳酸泉效果" fill className="object-cover" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden">
-                  <Image src="/images/clinical/足部筛查.jpg" alt="足部筛查" fill className="object-cover" />
-                </div>
-                <div className="relative aspect-square rounded-2xl overflow-hidden">
-                  <Image src="/images/clinical/碳酸泉室.jpg" alt="碳酸泉室" fill className="object-cover" />
-                </div>
+                {footCareImages.map((src, index) => (
+                  <div 
+                    key={index}
+                    className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(footCareImages, index)}
+                  >
+                    <Image src={src} alt={`足部护理 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                  </div>
+                ))}
               </motion.div>
             </div>
           </div>
@@ -880,38 +924,47 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         </div>
       </section>
 
-      {/* Vascular Access Lightbox */}
-      {activeVascularImage !== null && (
+      {/* Image Lightbox */}
+      {activeImageIndex !== null && lightboxImages.length > 0 && (
         <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
-          onClick={() => setActiveVascularImage(null)}
+          onClick={closeLightbox}
         >
           <button
             className="absolute top-4 right-4 text-white/80 hover:text-white p-2"
-            onClick={() => setActiveVascularImage(null)}
+            onClick={closeLightbox}
           >
             <X className="w-8 h-8" />
           </button>
-          <button
-            className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
-            onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-          >
-            <ChevronLeft className="w-10 h-10" />
-          </button>
-          <button
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
-            onClick={(e) => { e.stopPropagation(); handleNext(); }}
-          >
-            <ChevronRight className="w-10 h-10" />
-          </button>
+          {lightboxImages.length > 1 && (
+            <>
+              <button
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
+                onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+              >
+                <ChevronLeft className="w-10 h-10" />
+              </button>
+              <button
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2"
+                onClick={(e) => { e.stopPropagation(); handleNext(); }}
+              >
+                <ChevronRight className="w-10 h-10" />
+              </button>
+            </>
+          )}
           <div className="relative max-w-4xl max-h-[80vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
             <Image
-              src={vascularGalleryImages[activeVascularImage]}
-              alt={`Gallery ${activeVascularImage + 1}`}
+              src={lightboxImages[activeImageIndex]}
+              alt={`Image ${activeImageIndex + 1}`}
               fill
               className="object-contain"
             />
           </div>
+          {lightboxImages.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
+              {activeImageIndex + 1} / {lightboxImages.length}
+            </div>
+          )}
         </div>
       )}
     </div>
