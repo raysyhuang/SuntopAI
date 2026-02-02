@@ -51,13 +51,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
     },
   ]
 
-  const impactStats = [
-    { value: '40%', label: t.stats.reduction, icon: Shield },
-    { value: '3x', label: t.stats.response, icon: Zap },
-    { value: '5s', label: t.stats.monitoring, icon: Activity },
-    { value: '3000+', label: t.stats.stations, icon: Server },
-  ]
-
   return (
     <div className="relative">
       {/* Hero Section */}
@@ -298,40 +291,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Impact Stats */}
-      <section className={`relative py-24 border-y ${
-        theme === 'dark'
-          ? 'bg-slate-925 border-slate-800/50'
-          : 'bg-gray-50 border-gray-200'
-      }`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {impactStats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 ${
-                  theme === 'dark' ? 'bg-accent-900/20' : 'bg-accent-50'
-                }`}>
-                  <stat.icon className={`w-6 h-6 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                </div>
-                <div className={`text-4xl md:text-5xl font-display font-semibold mb-2 ${
-                  theme === 'dark' ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {stat.value}
-                </div>
-                <div className={`text-sm ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why This Matters */}
       <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -387,6 +346,74 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           </div>
         </div>
       </section>
+
+      {/* Clinical Highlights Section */}
+      {t.clinicalHighlights && (
+        <section className={`relative py-24 ${
+          theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'
+        }`}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <span className="label-tag mb-4 inline-block">{t.clinicalHighlights.tag}</span>
+              <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>
+                {t.clinicalHighlights.title}
+              </h2>
+            </motion.div>
+
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+              {t.clinicalHighlights.items.map((item: any, index: number) => (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`rounded-2xl p-5 text-center ${
+                    theme === 'dark'
+                      ? 'bg-slate-900/50 border border-slate-800/50'
+                      : 'bg-white border border-gray-200 shadow-sm'
+                  }`}
+                >
+                  <div className={`text-3xl md:text-4xl font-display font-bold mb-2 ${
+                    theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
+                  }`}>
+                    {item.value}
+                  </div>
+                  <div className={`text-sm font-medium mb-1 ${
+                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                  }`}>
+                    {item.label}
+                  </div>
+                  <div className={`text-xs ${
+                    theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
+                  }`}>
+                    {item.detail}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link 
+                href={`/${locale}/clinical#results`}
+                className={`inline-flex items-center gap-2 text-sm font-medium ${
+                  theme === 'dark' ? 'text-accent-400 hover:text-accent-300' : 'text-accent-600 hover:text-accent-700'
+                }`}
+              >
+                {t.clinicalHighlights.cta}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Three-Door Router Section */}
       <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>

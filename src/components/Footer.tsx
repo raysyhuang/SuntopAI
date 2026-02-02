@@ -29,7 +29,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
     ],
     company: [
       { label: t.links.aboutUs, href: `/${locale}/company` },
-      { label: t.links.leadership, href: `/${locale}/company#leadership` },
+      { label: t.links.centers, href: `/${locale}/company#centers` },
       { label: t.links.news, href: `/${locale}/news` },
       { label: t.links.contact, href: `/${locale}/contact` },
     ],

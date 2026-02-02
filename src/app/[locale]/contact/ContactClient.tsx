@@ -90,7 +90,7 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
         style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
             {contactReasons.map((reason, index) => (
               <motion.div
                 key={reason.title}

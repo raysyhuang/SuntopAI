@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Server, Cloud, Shield, Settings, Lock, Globe, CheckCircle, ArrowRight, Package, Wrench, Truck, TrendingDown, Database, Brain, Cog, Activity, Wifi, Target, Cpu, Zap, GitBranch, Layers, Building2, Hospital, Building } from 'lucide-react'
+import { Server, Cloud, Shield, Settings, ArrowRight, Package, Wrench, Truck, TrendingDown, Brain, Wifi, Monitor, GitMerge, Compass, GraduationCap, CheckCircle } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -12,6 +12,24 @@ const supplyChainIcons: { [key: string]: React.ComponentType<{ className?: strin
   Wrench,
   Truck,
   TrendingDown,
+}
+
+const turnkeyIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
+  Compass,
+  GraduationCap,
+  Settings,
+}
+
+const archIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
+  Wifi,
+  Brain,
+  Monitor,
+}
+
+const deployIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
+  Cloud,
+  Server,
+  GitMerge,
 }
 
 interface DeploymentClientProps {
@@ -25,31 +43,9 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-const featureIcons = [Settings, Cloud, Server, Shield, Lock, Globe]
-
 export default function DeploymentClient({ locale, dictionary }: DeploymentClientProps) {
   const t = dictionary.deployment
   const { theme } = useTheme()
-
-  const capabilityIcons = [Server, Activity, Wifi, Shield, Activity, Target, Cpu, Zap, GitBranch, Layers, Target, Shield]
-
-  const platformLayers = t.architecture?.layers ? [
-    {
-      id: 'data',
-      icon: Database,
-      ...t.architecture.layers.data,
-    },
-    {
-      id: 'intelligence',
-      icon: Brain,
-      ...t.architecture.layers.intelligence,
-    },
-    {
-      id: 'automation',
-      icon: Cog,
-      ...t.architecture.layers.automation,
-    },
-  ] : []
 
   return (
     <div className="relative pt-20">
@@ -93,173 +89,47 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         </div>
       </section>
 
-      {/* Key Statement */}
-      <section 
-        className="relative py-24"
-        style={{ 
-          backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
-          borderTop: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)',
-          borderBottom: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)'
-        }}
-      >
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-2xl font-display"
-            style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-          >
-            {t.statement.split('.')[0]}.
-            <span style={{ color: '#007d73' }}> {t.statement.split('.').slice(1).join('.')}</span>
-          </motion.p>
-        </div>
-      </section>
-
-      {/* Platform Architecture - Moved up to show foundation first */}
-      {t.architecture && (
-        <>
-          <section className={`relative py-24 ${theme === 'dark' ? 'bg-slate-925' : 'bg-white'}`}>
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-16"
-              >
-                <span className="label-tag mb-4 inline-block">{t.architecture.tag}</span>
-                <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
-                  theme === 'dark' ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {t.architecture.title}
-                </h2>
-                <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
-                  {t.architecture.description}
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="relative mb-24"
-              >
-                <div className="flex justify-center items-center gap-4 md:gap-8 flex-wrap md:flex-nowrap">
-                  {platformLayers.map((layer, index) => (
-                    <div key={layer.id} className="flex items-center gap-4 md:gap-8">
-                      <div className="flex flex-col items-center">
-                        <div className={`w-24 h-24 md:w-32 md:h-32 rounded-2xl flex items-center justify-center ${
-                          theme === 'dark' 
-                            ? 'bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 glow-accent' 
-                            : 'bg-white border border-gray-200 shadow-lg'
-                        }`}>
-                          <layer.icon className={`w-10 h-10 md:w-12 md:h-12 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                        </div>
-                        <span className={`mt-4 font-medium text-sm text-center max-w-[120px] ${
-                          theme === 'dark' ? 'text-white' : 'text-gray-900'
-                        }`}>
-                          {layer.title}
-                        </span>
-                      </div>
-                      {index < platformLayers.length - 1 && (
-                        <div className="hidden md:flex items-center">
-                          <div className="w-12 h-px bg-gradient-to-r from-accent-600 to-accent-400" />
-                          <div className="w-2 h-2 bg-accent-400 rounded-full" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* Detailed Layer Sections */}
-          {platformLayers.map((layer, index) => (
-            <section
-              key={layer.id}
-              id={layer.id}
-              className={`relative py-24 ${
-                index % 2 === 0 
-                  ? (theme === 'light' ? 'bg-gray-50' : '') 
-                  : (theme === 'dark' ? 'bg-slate-925' : 'bg-white')
-              }`}
+      {/* Section Group 1: Technical Solution */}
+      {t.sectionGroups?.technical && (
+        <div 
+          className="relative py-8"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4"
             >
-              <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <div className={`grid lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                  <motion.div
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className={index % 2 === 1 ? 'lg:col-start-2' : ''}
-                  >
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center ${
-                        theme === 'dark' 
-                          ? 'bg-accent-900/30 border border-accent-800/30' 
-                          : 'bg-accent-50 border border-accent-200'
-                      }`}>
-                        <layer.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                      </div>
-                      <span className={`text-sm font-medium tracking-wider uppercase ${
-                        theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
-                      }`}>
-                        Layer {index + 1}
-                      </span>
-                    </div>
-                    <h2 className={`font-display text-4xl font-semibold tracking-tight mb-3 ${
-                      theme === 'dark' ? 'text-white' : 'text-gray-900'
-                    }`}>
-                      {layer.title}
-                    </h2>
-                    <p className={`text-xl mb-6 ${theme === 'dark' ? 'text-accent-400/80' : 'text-accent-600'}`}>{layer.subtitle}</p>
-                    <p className={`text-lg leading-relaxed mb-8 ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
-                      {layer.description}
-                    </p>
-                    <p className={`italic border-l-2 border-accent-600 pl-4 ${
-                      theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
-                    }`}>
-                      {layer.signal}
-                    </p>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className={`grid grid-cols-2 gap-4 ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}
-                  >
-                    {layer.capabilities.map((cap: string, capIndex: number) => {
-                      const IconComponent = capabilityIcons[(index * 4 + capIndex) % capabilityIcons.length]
-                      return (
-                        <motion.div
-                          key={cap}
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: capIndex * 0.1 }}
-                          className={`rounded-2xl p-6 ${
-                            theme === 'dark' 
-                              ? 'bg-slate-900/50 border border-slate-800/50' 
-                              : 'bg-white border border-gray-200 shadow-sm'
-                          }`}
-                        >
-                          <IconComponent className={`w-6 h-6 mb-3 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                          <p className={`text-sm ${theme === 'dark' ? 'text-neutral-300' : 'text-gray-700'}`}>{cap}</p>
-                        </motion.div>
-                      )
-                    })}
-                  </motion.div>
-                </div>
+              <span 
+                className="text-5xl md:text-6xl font-bold"
+                style={{ color: theme === 'light' ? 'rgba(0,125,115,0.15)' : 'rgba(45,212,191,0.15)' }}
+              >
+                {t.sectionGroups.technical.number}
+              </span>
+              <div>
+                <h2 
+                  className="font-display text-2xl font-semibold"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.sectionGroups.technical.title}
+                </h2>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
+                  {t.sectionGroups.technical.subtitle}
+                </p>
               </div>
-            </section>
-          ))}
-        </>
+            </motion.div>
+          </div>
+        </div>
       )}
 
-      {/* Technical Differentiators - Moved up to show advantages early */}
-      {t.differentiators && (
-        <section className={`relative py-24 ${theme === 'light' ? 'bg-white' : ''}`}>
+      {/* Architecture Section */}
+      {t.architecture && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -267,258 +137,317 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}>
-                {t.differentiators.title}
+              <span className="label-tag mb-6 inline-block">{t.architecture.tag}</span>
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.architecture.title}
               </h2>
-              <p className={`max-w-2xl mx-auto ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
-                {t.differentiators.description}
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
+                {t.architecture.subtitle}
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {t.differentiators.items.map((item: any, index: number) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`text-center rounded-2xl p-6 ${
-                    theme === 'dark' 
-                      ? 'bg-slate-900/50 border border-slate-800/50' 
-                      : 'bg-white border border-gray-200 shadow-sm'
-                  }`}
-                >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 ${
-                    theme === 'dark' 
-                      ? 'bg-accent-900/30 border border-accent-800/30' 
-                      : 'bg-accent-50 border border-accent-200'
-                  }`}>
-                    <span className={`font-display font-semibold ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`}>{index + 1}</span>
-                  </div>
-                  <h3 className={`font-display font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{item.title}</h3>
-                  <p className={`text-sm ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{item.description}</p>
-                </motion.div>
-              ))}
+            {/* Architecture Layers */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {t.architecture.layers.map((layer: any, index: number) => {
+                const IconComponent = archIcons[layer.icon] || Wifi
+                return (
+                  <motion.div
+                    key={layer.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="rounded-2xl p-6"
+                    style={{ 
+                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                      border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                    }}
+                  >
+                    <div 
+                      className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                      style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                    >
+                      <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
+                    </div>
+                    <div 
+                      className="text-xs font-medium mb-2"
+                      style={{ color: '#007d73' }}
+                    >
+                      Layer {index + 1}
+                    </div>
+                    <h3 
+                      className="font-display text-xl font-semibold mb-2"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
+                      {layer.title}
+                    </h3>
+                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm leading-relaxed mb-4">
+                      {layer.description}
+                    </p>
+                    <div className="grid grid-cols-2 gap-2">
+                      {layer.features.map((feature: string, fIndex: number) => (
+                        <div key={fIndex} className="flex items-start gap-2">
+                          <CheckCircle style={{ color: '#007d73' }} className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                          <span style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-xs">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
         </section>
       )}
 
-      {/* Deployment Features */}
-      <section 
-        className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 
-              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+      {/* Deployment Options */}
+      {t.deployment && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
             >
-              {t.features.title}
-            </h2>
-            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
-              {t.features.description}
-            </p>
-          </motion.div>
+              <span className="label-tag mb-6 inline-block">{t.deployment.tag}</span>
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.deployment.title}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
+                {t.deployment.subtitle}
+              </p>
+            </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {t.features.items.map((feature, index) => {
-              const IconComponent = featureIcons[index % featureIcons.length]
-              return (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-2xl p-6"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
-                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.06)' : 'none',
-                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                  }}
-                >
-                  <div 
-                    className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
-                    style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
-                  >
-                    <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
-                  </div>
-                  <h3 
-                    className="font-display font-semibold mb-2"
-                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                  >
-                    {feature.title}
-                  </h3>
-                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed">{feature.description}</p>
-                </motion.div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Deployment Process */}
-      <section 
-        className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 
-              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {t.process.title}
-            </h2>
-            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto">
-              {t.process.description}
-            </p>
-          </motion.div>
-
-          <div className="relative">
-            <div 
-              className="hidden lg:block absolute top-1/2 left-0 right-0 h-px -translate-y-1/2"
-              style={{ background: theme === 'light' ? 'linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent)' : 'linear-gradient(90deg, transparent, rgba(51,65,85,0.5), transparent)' }}
-            />
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {t.process.steps.map((process, index) => (
-                <motion.div
-                  key={process.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.15 }}
-                  className="relative"
-                >
-                  <div 
-                    className="text-center rounded-2xl p-6 relative z-10"
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {t.deployment.options.map((option: any, index: number) => {
+                const IconComponent = deployIcons[option.icon] || Cloud
+                return (
+                  <motion.div
+                    key={option.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="rounded-2xl p-6 text-center"
                     style={{ 
-                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
-                      boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                      backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                      boxShadow: theme === 'light' ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
                       border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                     }}
                   >
                     <div 
-                      className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                      style={{ 
-                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,1)',
-                        border: theme === 'light' ? '2px solid rgba(0,125,115,0.2)' : '1px solid rgba(51,65,85,0.8)'
-                      }}
+                      className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                      style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
                     >
-                      <span style={{ color: '#007d73' }} className="font-display text-2xl font-semibold">{process.step}</span>
+                      <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-7 h-7" />
                     </div>
                     <h3 
-                      className="font-display font-semibold mb-2"
+                      className="font-display text-lg font-semibold mb-2"
                       style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
                     >
-                      {process.title}
+                      {option.title}
                     </h3>
-                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed">{process.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm leading-relaxed">
+                      {option.description}
+                    </p>
+                  </motion.div>
+                )
+              })}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* Security & Compliance */}
-      <section 
-        className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* Section Group 2: Turnkey Services */}
+      {t.sectionGroups?.turnkey && (
+        <div 
+          className="relative py-8"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="flex items-center gap-4"
             >
-              <span className="label-tag mb-6 inline-block">{t.security.tag}</span>
-              <h2 
-                className="font-display text-4xl font-semibold tracking-tight mb-6"
-                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              <span 
+                className="text-5xl md:text-6xl font-bold"
+                style={{ color: theme === 'light' ? 'rgba(0,125,115,0.15)' : 'rgba(45,212,191,0.15)' }}
               >
-                {t.security.title}
-              </h2>
-              <p 
-                className="text-lg leading-relaxed mb-8"
-                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-              >
-                {t.security.description}
-              </p>
-              
-              <ul className="space-y-4">
-                {t.security.features.map((item, index) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center gap-3"
-                    style={{ color: theme === 'light' ? '#1d1d1f' : '#d1d5db' }}
-                  >
-                    <CheckCircle style={{ color: '#007d73' }} className="w-5 h-5 flex-shrink-0" />
-                    {item}
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div 
-                className="relative p-8 rounded-3xl"
-                style={{ 
-                  backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
-                  boxShadow: theme === 'light' ? '0 4px 24px rgba(0,125,115,0.08)' : 'none',
-                  border: theme === 'light' ? '1px solid rgba(0,125,115,0.1)' : '1px solid rgba(51,65,85,0.5)'
-                }}
-              >
-                <div className="grid grid-cols-2 gap-6">
-                  {Object.values(t.security.stats).map((item) => (
-                    <div 
-                      key={item.label} 
-                      className="text-center p-4 rounded-xl"
-                      style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)' }}
-                    >
-                      <div style={{ color: '#007d73' }} className="text-2xl font-display font-semibold mb-1">{item.value}</div>
-                      <div style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">{item.label}</div>
-                    </div>
-                  ))}
-                </div>
+                {t.sectionGroups.turnkey.number}
+              </span>
+              <div>
+                <h2 
+                  className="font-display text-2xl font-semibold"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.sectionGroups.turnkey.title}
+                </h2>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
+                  {t.sectionGroups.turnkey.subtitle}
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
-      </section>
+      )}
 
-      {/* Smart Supply Chain */}
-      {t.supplyChain && (
+      {/* Turnkey Services */}
+      {t.turnkeyServices && (
         <section 
           className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="label-tag mb-6 inline-block">{t.turnkeyServices.tag}</span>
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.turnkeyServices.title}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-3xl mx-auto text-lg">
+                {t.turnkeyServices.subtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {t.turnkeyServices.services.map((service: any, index: number) => {
+                const IconComponent = turnkeyIcons[service.icon] || Settings
+                return (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="rounded-2xl overflow-hidden"
+                    style={{ 
+                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                      border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                    }}
+                  >
+                    <div className="p-6">
+                      <div 
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                        style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                      >
+                        <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
+                      </div>
+                      <h3 
+                        className="font-display text-xl font-semibold mb-1"
+                        style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      >
+                        {service.title}
+                      </h3>
+                      <p style={{ color: '#007d73' }} className="text-sm font-medium mb-3">{service.subtitle}</p>
+                      <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm leading-relaxed mb-4">
+                        {service.description}
+                      </p>
+                      
+                      {/* Steps */}
+                      <div className="space-y-2 mb-4">
+                        {service.steps.slice(0, 4).map((step: any, stepIndex: number) => (
+                          <div key={stepIndex} className="flex items-start gap-2">
+                            <span 
+                              className="w-5 h-5 rounded-full flex items-center justify-center text-xs font-medium flex-shrink-0"
+                              style={{ 
+                                backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.2)',
+                                color: '#007d73'
+                              }}
+                            >
+                              {stepIndex + 1}
+                            </span>
+                            <span style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">
+                              {step.title}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Highlights */}
+                      <div className="flex flex-wrap gap-2">
+                        {service.highlights.slice(0, 3).map((highlight: string, hIndex: number) => (
+                          <span 
+                            key={hIndex}
+                            className="text-xs px-2 py-1 rounded-full"
+                            style={{ 
+                              backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)',
+                              color: theme === 'light' ? '#007d73' : '#2dd4bf'
+                            }}
+                          >
+                            {highlight}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section Group 3: Supply Chain */}
+      {t.sectionGroups?.supplyChain && (
+        <div 
+          className="relative py-8"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4"
+            >
+              <span 
+                className="text-5xl md:text-6xl font-bold"
+                style={{ color: theme === 'light' ? 'rgba(0,125,115,0.15)' : 'rgba(45,212,191,0.15)' }}
+              >
+                {t.sectionGroups.supplyChain.number}
+              </span>
+              <div>
+                <h2 
+                  className="font-display text-2xl font-semibold"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.sectionGroups.supplyChain.title}
+                </h2>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
+                  {t.sectionGroups.supplyChain.subtitle}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      )}
+
+      {/* Supply Chain Section */}
+      {t.supplyChain && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -534,13 +463,13 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               >
                 {t.supplyChain.title}
               </h2>
-              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-3xl mx-auto">
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-3xl mx-auto text-lg">
                 {t.supplyChain.subtitle}
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-16">
-              {t.supplyChain.features.map((feature, index) => {
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+              {t.supplyChain.features.map((feature: any, index: number) => {
                 const IconComponent = supplyChainIcons[feature.icon] || Package
                 return (
                   <motion.div
@@ -549,106 +478,301 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="rounded-2xl p-6"
+                    className="rounded-2xl p-5"
                     style={{ 
-                      backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
-                      boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
+                      backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                      boxShadow: theme === 'light' ? '0 4px 20px rgba(0,0,0,0.06)' : 'none',
                       border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                     }}
                   >
-                    <div className="flex items-start gap-4">
-                      <div 
-                        className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                        style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
-                      >
-                        <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <h3 
-                          className="font-display font-semibold mb-2"
-                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                        >
-                          {feature.title}
-                        </h3>
-                        <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm leading-relaxed mb-4">{feature.description}</p>
-                        <ul className="space-y-2">
-                          {feature.items.map((item: string, itemIndex: number) => (
-                            <li key={itemIndex} className="flex items-start gap-2 text-sm" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
-                              <CheckCircle style={{ color: '#007d73' }} className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                    <div 
+                      className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
+                      style={{ backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)' }}
+                    >
+                      <IconComponent style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }} className="w-5 h-5" />
                     </div>
+                    <h3 
+                      className="font-display text-base font-semibold mb-2"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
+                      {feature.title}
+                    </h3>
+                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm leading-relaxed mb-3">
+                      {feature.description}
+                    </p>
+                    <ul className="space-y-1">
+                      {feature.items.slice(0, 3).map((item: string, itemIndex: number) => (
+                        <li key={itemIndex} className="flex items-start gap-2">
+                          <CheckCircle style={{ color: '#007d73' }} className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                          <span style={{ color: theme === 'light' ? '#86868b' : '#71717a' }} className="text-xs">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
                   </motion.div>
                 )
               })}
             </div>
 
-            {/* Supply Chain Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
-            >
-              {Object.values(t.supplyChain.stats).map((stat) => (
-                <div 
-                  key={stat.label} 
-                  className="text-center p-6 rounded-xl"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
-                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                  }}
-                >
-                  <div style={{ color: '#007d73' }} className="text-3xl font-display font-semibold mb-2">{stat.value}</div>
-                  <div style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">{stat.label}</div>
+            {/* Stats */}
+            {t.supplyChain.stats && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+                {Object.entries(t.supplyChain.stats).map(([key, stat]: [string, any], index: number) => (
+                  <motion.div
+                    key={key}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="text-center p-4 rounded-xl"
+                    style={{ backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)' }}
+                  >
+                    <div 
+                      className="font-display text-2xl font-bold mb-1"
+                      style={{ color: '#007d73' }}
+                    >
+                      {stat.value}
+                    </div>
+                    <div style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
+                      {stat.label}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+
+            {/* Suppliers */}
+            {t.supplyChain.suppliers && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center mb-8">
+                  <span className="label-tag mb-4 inline-block">{t.supplyChain.suppliers.tag}</span>
+                  <h3 
+                    className="font-display text-2xl font-semibold mb-2"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                  >
+                    {t.supplyChain.suppliers.title}
+                  </h3>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm max-w-2xl mx-auto">
+                    {t.supplyChain.suppliers.subtitle}
+                  </p>
                 </div>
-              ))}
-            </motion.div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                  {t.supplyChain.suppliers.list.map((supplier: any, index: number) => (
+                    <motion.div
+                      key={supplier.nameEn}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.03 }}
+                      className="rounded-xl p-4 text-center"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
+                        boxShadow: theme === 'light' ? '0 2px 10px rgba(0,0,0,0.04)' : 'none',
+                        border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : '1px solid rgba(0,0,0,0.04)'
+                      }}
+                    >
+                      <div 
+                        className="font-semibold text-sm mb-0.5"
+                        style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                      >
+                        {supplier.name}
+                      </div>
+                      <div 
+                        className="text-xs"
+                        style={{ color: theme === 'light' ? '#86868b' : '#71717a' }}
+                      >
+                        {supplier.nameEn}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </div>
         </section>
       )}
+
+      {/* Section Group 3: Implementation Support */}
+      {t.sectionGroups?.implementation && (
+        <div 
+          className="relative py-8"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4"
+            >
+              <span 
+                className="text-5xl md:text-6xl font-bold"
+                style={{ color: theme === 'light' ? 'rgba(0,125,115,0.15)' : 'rgba(45,212,191,0.15)' }}
+              >
+                {t.sectionGroups.implementation.number}
+              </span>
+              <div>
+                <h2 
+                  className="font-display text-2xl font-semibold"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.sectionGroups.implementation.title}
+                </h2>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
+                  {t.sectionGroups.implementation.subtitle}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      )}
+
+      {/* Process & Security Combined */}
+      <section 
+        className="relative py-24"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Process */}
+            {t.process && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <span className="label-tag mb-4 inline-block">{t.process.tag}</span>
+                <h3 
+                  className="font-display text-2xl font-semibold mb-2"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.process.title}
+                </h3>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="mb-6 text-sm">
+                  {t.process.subtitle}
+                </p>
+                <div className="space-y-4">
+                  {t.process.steps.map((step: any, index: number) => (
+                    <div key={step.step} className="flex items-start gap-4">
+                      <div 
+                        className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.2)',
+                          color: '#007d73'
+                        }}
+                      >
+                        {step.step}
+                      </div>
+                      <div>
+                        <h4 
+                          className="font-semibold mb-1"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {step.title}
+                        </h4>
+                        <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Security */}
+            {t.security && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
+                <span className="label-tag mb-4 inline-block">{t.security.tag}</span>
+                <h3 
+                  className="font-display text-2xl font-semibold mb-2"
+                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                >
+                  {t.security.title}
+                </h3>
+                <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="mb-6 text-sm">
+                  {t.security.subtitle}
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {t.security.features.map((feature: any, index: number) => (
+                    <div 
+                      key={index}
+                      className="rounded-xl p-4"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                        border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                      }}
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <Shield style={{ color: '#007d73' }} className="w-4 h-4" />
+                        <span 
+                          className="font-medium text-sm"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {feature.title}
+                        </span>
+                      </div>
+                      <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-xs">
+                        {feature.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Cross Links */}
       {t.crossLinks && (
         <section 
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ 
+            backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
+            borderTop: theme === 'light' ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(51,65,85,0.5)'
+          }}
         >
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                { href: `/${locale}/platform`, ...t.crossLinks.platform },
-                { href: `/${locale}/clinical`, ...t.crossLinks.clinical },
-              ].map((link, i) => (
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8">
+              {Object.entries(t.crossLinks).map(([key, link]: [string, any]) => (
                 <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
+                  className="rounded-2xl p-8"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
                 >
-                  <Link 
-                    href={link.href} 
-                    className="block rounded-2xl p-6 group transition-all"
-                    style={{ 
-                      backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)',
-                      boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.04)' : 'none',
-                      border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                    }}
+                  <h3 
+                    className="font-display text-xl font-semibold mb-2"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
                   >
-                    <h3 
-                      className="font-display font-semibold mb-2 transition-colors group-hover:text-[#007d73]"
-                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                    >
-                      {link.title}
-                    </h3>
-                    <p style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm mb-4">{link.description}</p>
-                    <span className="inline-flex items-center gap-2 text-sm font-medium" style={{ color: '#007d73' }}>
-                      {link.button}
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
+                    {link.title}
+                  </h3>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="mb-4">
+                    {link.description}
+                  </p>
+                  <Link 
+                    href={`/${locale}/${key}`}
+                    className="inline-flex items-center gap-2 font-medium"
+                    style={{ color: '#007d73' }}
+                  >
+                    {link.button}
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
               ))}
@@ -656,34 +780,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
           </div>
         </section>
       )}
-
-      {/* CTA */}
-      <section 
-        className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
-      >
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 
-              className="font-display text-3xl font-semibold tracking-tight mb-4"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {t.cta.title}
-            </h2>
-            <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="mb-8">
-              {t.cta.description}
-            </p>
-            <Link href={`/${locale}/contact`} className="btn-primary">
-              {t.cta.button}
-              <ArrowRight size={18} />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
     </div>
   )
 }

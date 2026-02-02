@@ -58,47 +58,55 @@
       "monitoring": "Data collection interval",
       "stations": "Dialysis devices connected"
     },
+    "clinicalHighlights": {
+      "tag": "Clinically Proven",
+      "title": "Real Data, Real Improvements",
+      "items": [
+        { "value": "60%", "label": "Pre-shock patients reduced", "detail": "22.4% → 9.0%" },
+        { "value": "70%", "label": "Lab evaluation efficiency up", "detail": "8.3 min → 2.5 min" },
+        { "value": "71%", "label": "Iron deficiency reduced", "detail": "74.0% → 21.1%" },
+        { "value": "37%", "label": "Renal bone disease reduced", "detail": "48.4% → 30.7%" }
+      ],
+      "cta": "View Full Results"
+    },
     "why": {
       "tag": "The Problem We Solve",
       "title": "Dialysis is an experience-dependent medical and professional scenario",
       "description1": "Intradialytic hypotension (IDH) occurs in 20-30% of sessions. Volume overload leads to cardiovascular events. UF rate miscalculation causes cramping and hemodynamic instability. Dry weight assessment relies on clinical judgment with significant inter-physician variability.",
       "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events 15-30 minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
       "clinical": { "title": "IDH Prevention", "desc": "30% reduction in intradialytic hypotension through predictive alerts" },
-      "operational": { "title": "Deployed Scale", "desc": "50 smart dialysis centers, 30 self-operated, 3,000+ machines" },
+      "operational": { "title": "Deployed Scale", "desc": "30+ self-operated, 100+ partner centers, 50+ smart dialysis centers" },
       "strategic": { "title": "Clinical Outcomes", "desc": "Improved Kt/V adequacy, reduced hospitalization rates" },
       "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027, targeting 300 total" }
     },
     "router": {
-      "tag": "Explore by Role",
-      "title": "Choose Your Path",
-      "description": "Deep-dive into what matters most for your role",
+      "tag": "Learn More",
+      "title": "Explore Our Solutions",
+      "description": "From technical architecture to clinical applications, discover our smart dialysis platform",
       "doors": {
         "platform": {
-          "title": "Platform",
-          "audience": "For IT Directors & CTOs",
-          "question": "How does the system integrate?",
+          "title": "Platform Technology",
+          "question": "How does the system work?",
           "description": "Technical architecture, device connectivity, data infrastructure, and security design.",
           "cta": "View Platform"
         },
         "clinical": {
-          "title": "Clinical",
-          "audience": "For Physicians & Clinical Directors",
-          "question": "How does AI support clinical decisions?",
-          "description": "Real-world clinical applications, decision support capabilities, and refined management practices.",
+          "title": "Clinical Applications",
+          "question": "How does it improve care quality?",
+          "description": "Real-world clinical scenarios, decision support capabilities, and refined management practices.",
           "cta": "View Clinical"
         },
         "deployment": {
-          "title": "Deployment",
-          "audience": "For Operations & CFOs",
-          "question": "How do we deploy and scale?",
-          "description": "Implementation process, supply chain integration, and operational readiness.",
+          "title": "Implementation",
+          "question": "How to get started quickly?",
+          "description": "Implementation process, supply chain integration, and operational support.",
           "cta": "View Deployment"
         }
       }
     },
     "finalCta": {
       "title": "Already Deployed, Not Just a Concept",
-      "description": "Currently deployed in 50 smart dialysis centers, including 30 self-operated centers and 20+ landmark private and public hospitals. This is a system validated by real clinical practice."
+      "description": "Currently deployed across 30+ self-operated centers, 100+ partner centers, with 50+ upgraded to smart dialysis centers and 3,000+ connected devices. This is a system validated by real clinical practice."
     }
   },
   "platform": {
@@ -294,19 +302,19 @@
       "title": "Hospitals Using Our Platform",
       "description": "Numerous landmark hospitals have successfully implemented our digital hemodialysis management platform",
       "categories": {
+        "smartCenters": "Smart Dialysis Centers",
         "selfOperated": "Self-Operated Centers",
-        "publicHospitals": "Public Hospitals",
-        "privateHospitals": "Private Hospitals"
+        "partnerCenters": "Partner Centers"
       },
       "stats": {
-        "selfOperated": "50+",
-        "publicHospitals": "20+",
-        "privateHospitals": "30+"
+        "smartCenters": "50+",
+        "selfOperated": "30+",
+        "partnerCenters": "100+"
       },
       "descriptions": {
-        "selfOperated": "Self-operated smart dialysis centers",
-        "publicHospitals": "Landmark public hospitals",
-        "privateHospitals": "Renowned private hospitals"
+        "smartCenters": "Upgraded to smart dialysis centers",
+        "selfOperated": "Nationwide self-operated centers",
+        "partnerCenters": "Partner hospitals and centers"
       },
       "cta": {
         "title": "Join Our Partner Network",
@@ -325,54 +333,29 @@
       ]
     },
     "clinicalApplications": {
-      "tag": "Clinical Applications",
-      "title": "Real-World Clinical Scenarios",
-      "description": "From single centers to network operations, AI supports the dialysis care workflow with monitoring, early warning, and clinical decision support.",
-      "beforeAfter": {
-        "before": "Before",
-        "after": "After"
-      },
-      "aiRoleLabel": "AI's Role",
+      "tag": "Use Cases",
+      "title": "Platform Use Cases",
+      "description": "From standalone centers to chain networks, flexibly adapting to dialysis centers of all sizes",
       "apps": {
         "inCenter": {
-          "title": "Standalone Hemodialysis Centers",
-          "description": "Real-time monitoring with AI-enabled early warnings to support treatment safety and standardization in a single center.",
-          "outcomes": [
-            "Real-time monitoring throughout treatment",
-            "Early warning for abnormal trends",
-            "Reduced intradialytic adverse events",
-            "More standardized treatment quality"
-          ],
-          "before": "Periodic manual rounds and checks, with reactive response after problems occur",
-          "after": "Continuous monitoring with early warnings for emerging risks, supporting earlier clinical response",
-          "aiRole": "Analyzes vital signs and dialysis parameters to detect abnormal trends and early risk signals, then provides early warnings and decision-support prompts."
+          "title": "Standalone Centers",
+          "description": "Real-time monitoring and intelligent alerts to enhance treatment safety and standardization.",
+          "capabilities": ["Real-time data collection", "Abnormal trend alerts", "Treatment parameter optimization", "Quality metrics tracking"]
         },
         "networked": {
           "title": "Chain Dialysis Centers",
-          "description": "Centralized oversight and quality standardization across multiple sites to support scalable, unified operations.",
-          "outcomes": [
-            "Centralized oversight across sites",
-            "Standardized treatment quality",
-            "Scalable operations with governance",
-            "Support for regional or national expansion"
-          ],
-          "before": "Independent centers with variable quality and limited unified standards",
-          "after": "A unified platform enabling real-time visibility, standardized processes, and quality governance",
-          "aiRole": "Aggregates data across centers to identify patterns, establish quality benchmarks, and support consistent, standardized care delivery."
+          "description": "Centralized oversight and unified quality control to support scalable, standardized operations.",
+          "capabilities": ["Multi-center unified view", "Cross-center quality benchmarking", "Standard process replication", "Remote supervision support"]
         },
         "decision": {
-          "title": "Physician Decision Support",
-          "description": "Data-driven insights to support clinical decision-making.",
-          "outcomes": [
-            "Longitudinal patient trend analysis",
-            "Data-driven dry weight and UF insights",
-            "Reduced cognitive load during busy shifts",
-            "Objective support for clinical decisions"
-          ],
-          "before": "Manual review of scattered data, experience-dependent decisions",
-          "after": "AI-synthesized insights with trend analysis and risk stratification",
-          "aiRole": "Synthesizing multi-session patient data into actionable insights for treatment optimization and risk stratification."
+          "title": "Clinical Decision Support",
+          "description": "Data-driven insights to help physicians make more precise treatment decisions.",
+          "capabilities": ["Patient trend analysis", "Risk stratification", "Prescription optimization", "Adequacy monitoring"]
         }
+      },
+      "learnMore": {
+        "text": "Learn about detailed clinical applications and outcomes",
+        "link": "View Clinical Applications"
       }
     },
     "crossLinks": {
@@ -603,6 +586,82 @@
         }
       }
     },
+    "results": {
+      "tag": "Proven Results",
+      "title": "Clinically Validated Improvements",
+      "subtitle": "Quantifiable improvements from actual deployed centers.",
+      "categories": {
+        "rounds": {
+          "tag": "Digital Rounds",
+          "title": "Digital Ward Round Results",
+          "subtitle": "Digitalized rounding system improves BP management and risk prevention",
+          "metrics": [
+            {
+              "id": "bp",
+              "title": "Pre-dialysis Systolic BP",
+              "before": "145±22",
+              "after": "141±21",
+              "unit": "mmHg",
+              "improvement": "Improved",
+              "description": "Pre-dialysis blood pressure effectively controlled"
+            },
+            {
+              "id": "shock",
+              "title": "Pre-shock Patients",
+              "before": "22.4",
+              "after": "9.0",
+              "unit": "%",
+              "improvement": "60% Reduction",
+              "description": "High-risk pre-shock patients significantly reduced"
+            }
+          ]
+        },
+        "labs": {
+          "tag": "Lab Assessment",
+          "title": "Lab Results Assessment",
+          "subtitle": "AI-assisted lab analysis improves efficiency and patient management",
+          "metrics": [
+            {
+              "id": "time",
+              "title": "Lab Evaluation Time",
+              "before": "8.3",
+              "after": "2.5",
+              "unit": "min/patient",
+              "improvement": "70% Faster",
+              "description": "Per-patient lab evaluation time greatly reduced"
+            },
+            {
+              "id": "anemia",
+              "title": "Anemia Rate",
+              "before": "60.9",
+              "after": "41.3",
+              "unit": "%",
+              "improvement": "32% Reduction",
+              "description": "Anemia management significantly improved"
+            },
+            {
+              "id": "iron",
+              "title": "Iron Deficiency Rate",
+              "before": "74.0",
+              "after": "21.1",
+              "unit": "%",
+              "improvement": "71% Reduction",
+              "description": "Iron supplementation more precise and timely"
+            },
+            {
+              "id": "bone",
+              "title": "Renal Bone Disease Rate",
+              "before": "48.4",
+              "after": "30.7",
+              "unit": "%",
+              "improvement": "37% Reduction",
+              "description": "Bone metabolism abnormalities effectively controlled"
+            }
+          ]
+        }
+      },
+      "disclaimer": "Data from actual deployed centers. Results may vary by center."
+    },
     "gallery": {
       "tag": "In Practice",
       "title": "Clinical Care in the Real World",
@@ -635,101 +694,150 @@
   },
   "deployment": {
     "tag": "Deployment",
-    "title": "Designed for Real-World Dialysis Operations",
-    "subtitle": "Our systems are built to integrate into existing dialysis environments with minimal disruption and maximum flexibility.",
-    "statement": "This is not a concept system. It is designed for real dialysis environments.",
-    "architecture": {
-      "tag": "Technical Architecture",
-      "title": "Platform Architecture",
-      "description": "Three integrated layers working together to transform dialysis data into clinical intelligence and safe automation.",
-      "layers": {
-        "data": {
-          "title": "Device & Data Layer",
-          "subtitle": "The foundation of safe automation",
-          "description": "We connect dialysis machines, vital sign devices, and clinical systems to create a unified, real-time data layer across treatment sessions.",
-          "signal": "This layer ensures reliable, structured, and continuous data capture during every treatment.",
-          "capabilities": [
-            "Dialysis machines from multiple vendors",
-            "Blood pressure monitors & vital signs",
-            "High-frequency streaming data",
-            "Secure device connectivity"
-          ]
-        },
-        "intelligence": {
-          "title": "Intelligence Layer",
-          "subtitle": "Clinical intelligence built on real-world data",
-          "description": "Our AI models analyze trends, detect risk patterns, and generate clinically relevant insights during dialysis, not after complications occur.",
-          "signal": "The system augments clinical judgment rather than replacing it.",
-          "capabilities": [
-            "Intradialytic blood pressure trend analysis",
-            "Ultrafiltration risk detection",
-            "Personalized parameter recommendations",
-            "Early warning signals for adverse events"
-          ]
-        },
-        "automation": {
-          "title": "Automation & Control Layer",
-          "subtitle": "Execution with guardrails",
-          "description": "We enable assisted control, protocol enforcement, and remote supervision to reduce variability and operational burden while keeping clinicians in control.",
-          "signal": "Automation is applied only where safety, predictability, and clinical consensus exist.",
-          "capabilities": [
-            "Assisted dialysis parameter adjustment",
-            "Protocol-based automation",
-            "Workflow standardization",
-            "Remote monitoring and supervision"
-          ]
-        }
+    "title": "Smart Dialysis Center Construction & Deployment",
+    "subtitle": "From facility planning to system deployment, comprehensive support for dialysis center digital transformation.",
+    "sectionGroups": {
+      "technical": {
+        "number": "01",
+        "title": "Technical Solution",
+        "subtitle": "Platform architecture and deployment options"
+      },
+      "turnkey": {
+        "number": "02",
+        "title": "Turnkey Services",
+        "subtitle": "End-to-end support from planning to operations"
+      },
+      "supplyChain": {
+        "number": "03",
+        "title": "Supply Chain",
+        "subtitle": "One-stop equipment and consumables procurement"
+      },
+      "implementation": {
+        "number": "04",
+        "title": "Implementation Support",
+        "subtitle": "Deployment process and security compliance"
       }
     },
-    "differentiators": {
-      "title": "Our Platform's Advantages",
-      "description": "Technical and strategic advantages built for long-term dialysis transformation.",
-      "items": [
-        { "title": "Dialysis-Native Focus", "description": "Built specifically for dialysis, not adapted from general-purpose healthcare AI." },
-        { "title": "Deep Integration", "description": "Device-level and workflow-level connectivity across the entire care continuum." },
-        { "title": "Clinical Guardrails", "description": "Safety-first automation by design, not black-box AI." },
-        { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
+    "architecture": {
+      "tag": "Technical Architecture",
+      "title": "Dialysis IoT + AI Hub",
+      "subtitle": "Three-layer architecture working together to transform dialysis data into clinical intelligence",
+      "layers": [
+        {
+          "id": "iot",
+          "title": "Device IoT Layer",
+          "icon": "Wifi",
+          "description": "Connect dialysis machines, BP monitors, scales and other devices for real-time data collection and automatic transmission.",
+          "features": ["Multi-vendor compatibility", "High-frequency data capture", "Auto-transmission no manual entry", "Device status monitoring"]
+        },
+        {
+          "id": "intelligence",
+          "title": "Intelligence Layer",
+          "icon": "Brain",
+          "description": "AI models analyze trends, detect risks, and generate alerts and recommendations before complications occur.",
+          "features": ["Intradialytic hypotension prediction", "Ultrafiltration risk detection", "Adequacy assessment", "Personalized parameter recommendations"]
+        },
+        {
+          "id": "application",
+          "title": "Application & Control Layer",
+          "icon": "Monitor",
+          "description": "Central monitoring, smart terminals, and mobile apps work together for end-to-end visual management.",
+          "features": ["Central monitoring dashboard", "Bedside smart terminals", "Mobile rounding app", "Remote supervision support"]
+        }
       ]
     },
-    "features": {
-      "title": "Deployment-Ready by Design",
-      "description": "Built with the practical realities of healthcare IT, clinical workflows, and regulatory requirements in mind.",
-      "items": [
-        { "title": "Multi-Vendor Compatibility", "description": "Compatible with existing dialysis machine ecosystems from multiple manufacturers. No rip-and-replace required." },
-        { "title": "Flexible Deployment", "description": "On-premise, cloud, or hybrid deployment options to meet your infrastructure and compliance requirements." },
-        { "title": "Minimal Disruption", "description": "Incremental rollout designed to integrate into existing clinical workflows without operational downtime." },
-        { "title": "Security by Design", "description": "Enterprise-grade security architecture with encryption at rest and in transit, role-based access controls." },
-        { "title": "Regulatory Awareness", "description": "Built with healthcare regulatory requirements in mind, supporting compliance with local and international standards." },
-        { "title": "Scalable Architecture", "description": "From single centers to national networks, the platform scales without architectural changes." }
+    "deployment": {
+      "tag": "Deployment Options",
+      "title": "Flexible Deployment Options",
+      "subtitle": "Choose the deployment method that best fits your infrastructure and compliance requirements",
+      "options": [
+        {
+          "title": "Cloud Deployment",
+          "icon": "Cloud",
+          "description": "Low-cost rapid deployment with real-time updates, ideal for chain operations or cross-facility collaboration."
+        },
+        {
+          "title": "On-Premise Deployment",
+          "icon": "Server",
+          "description": "Meet strict data storage requirements with autonomous data operations and full data sovereignty."
+        },
+        {
+          "title": "Hybrid Deployment",
+          "icon": "GitMerge",
+          "description": "Balance management efficiency and data security with core data stored locally and applications in the cloud."
+        }
+      ]
+    },
+    "turnkeyServices": {
+      "tag": "Turnkey Solutions",
+      "title": "End-to-End Support from Planning to Launch",
+      "subtitle": "We don't just provide software and equipment—we deliver comprehensive dialysis center construction and upgrade services.",
+      "services": [
+        {
+          "id": "design",
+          "title": "Design & Planning",
+          "subtitle": "Scientific department planning and design",
+          "description": "Our design team, led by domestic and international designers, creates safe and comfortable medical environments for patients.",
+          "icon": "Compass",
+          "steps": [
+            { "title": "Market Research", "description": "Comprehensive market analysis" },
+            { "title": "Equipment Planning", "description": "Optimal equipment configuration" },
+            { "title": "Interior Design", "description": "Professional, humanized space design" },
+            { "title": "Requirements Integration", "description": "Integrate senior medical expertise" }
+          ],
+          "highlights": ["Rational layout with clear workflow", "National quality control compliance", "Human-centered design"]
+        },
+        {
+          "id": "training",
+          "title": "Staff Training",
+          "subtitle": "Comprehensive online and offline training",
+          "description": "From traditional department training to flexible online learning modes for continuous professional development.",
+          "icon": "GraduationCap",
+          "steps": [
+            { "title": "Expert On-Site Training", "description": "Professional guidance, systematic instruction" },
+            { "title": "Staff Workshops", "description": "Share insights, promote exchanges" },
+            { "title": "Clinical Practice", "description": "Enhance hands-on clinical skills" },
+            { "title": "Online Platform", "description": "Professional e-learning system" }
+          ],
+          "highlights": ["Complete theoretical and practical training", "Regional training bases", "Regular expert lectures"]
+        },
+        {
+          "id": "operations",
+          "title": "Operations Management",
+          "subtitle": "Professional and flexible management services",
+          "description": "Every aspect is tailored to client needs and actual conditions, providing comprehensive management support.",
+          "icon": "Settings",
+          "steps": [
+            { "title": "Department Systems", "description": "Standardized workflows" },
+            { "title": "Staff Management", "description": "Recruitment and team building" },
+            { "title": "Process Design", "description": "Efficient operational processes" },
+            { "title": "IT Infrastructure", "description": "Information system management" }
+          ],
+          "highlights": ["Financial advisory", "Technical support", "Quality control systems"]
+        }
       ]
     },
     "process": {
-      "title": "Deployment Process",
-      "description": "A structured, clinically supervised approach to implementation.",
+      "tag": "Implementation",
+      "title": "Structured Deployment Process",
+      "subtitle": "Phased implementation ensuring smooth transition",
       "steps": [
-        { "step": "01", "title": "Assessment", "description": "Evaluate current infrastructure, machine compatibility, and integration requirements." },
-        { "step": "02", "title": "Pilot Deployment", "description": "Limited deployment with select dialysis stations to validate integration and clinical workflows." },
-        { "step": "03", "title": "Clinical Validation", "description": "Work with clinical teams to fine-tune alerts, thresholds, and decision support parameters." },
-        { "step": "04", "title": "Scale & Optimize", "description": "Expand deployment across facilities with continuous monitoring and optimization." }
+        { "step": "01", "title": "Assessment", "description": "Evaluate existing equipment, infrastructure, and integration needs" },
+        { "step": "02", "title": "Pilot", "description": "Validate system integration and workflows at select stations" },
+        { "step": "03", "title": "Validation", "description": "Collaborate with clinical teams to tune parameters and alerts" },
+        { "step": "04", "title": "Rollout", "description": "Expand deployment with continuous optimization" }
       ]
     },
     "security": {
-      "tag": "Security & Compliance",
-      "title": "Enterprise-Grade Security",
-      "description": "Healthcare data demands the highest levels of protection. Our platform is built with security and compliance as foundational requirements, not afterthoughts.",
+      "tag": "Security",
+      "title": "Healthcare-Grade Data Security",
+      "subtitle": "Compliant with medical data security standards to protect patient privacy",
       "features": [
-        "End-to-end encryption for all data",
-        "Role-based access controls",
-        "Audit logging and traceability",
-        "Regular security assessments",
-        "Compliance-ready architecture"
-      ],
-      "stats": {
-        "encryption": { "label": "Data Encryption", "value": "AES-256" },
-        "access": { "label": "Access Control", "value": "RBAC" },
-        "audit": { "label": "Audit Logs", "value": "Complete" },
-        "compliance": { "label": "Compliance", "value": "Ready" }
-      }
+        { "title": "Encryption", "value": "AES-256 end-to-end encryption" },
+        { "title": "Access Control", "value": "Role-based permissions management" },
+        { "title": "Audit Trail", "value": "Complete operation logging" },
+        { "title": "Compliance", "value": "Meets healthcare data regulations" }
+      ]
     },
     "supplyChain": {
       "tag": "Smart Supply Chain",
@@ -766,6 +874,21 @@
         "waste": { "label": "Consumable Waste Reduction", "value": "35%" },
         "downtime": { "label": "Equipment Downtime Reduction", "value": "60%" },
         "efficiency": { "label": "Operational Efficiency Increase", "value": "40%" }
+      },
+      "suppliers": {
+        "tag": "Partners",
+        "title": "Supply Chain Partners",
+        "subtitle": "Long-term strategic partnerships with leading medical device manufacturers",
+        "list": [
+          { "name": "BAIN MEDICAL", "nameEn": "BAIN MEDICAL" },
+          { "name": "TORAY", "nameEn": "TORAY" },
+          { "name": "FRESENIUS", "nameEn": "FRESENIUS" },
+          { "name": "NIPRO", "nameEn": "NIPRO" },
+          { "name": "BOSTON SCIENTIFIC", "nameEn": "BOSTON SCIENTIFIC" },
+          { "name": "SANXIN", "nameEn": "SANXIN" },
+          { "name": "BIOLIGHT", "nameEn": "BIOLIGHT" },
+          { "name": "TIANYI", "nameEn": "TIANYI" }
+        ]
       }
     },
     "crossLinks": {
@@ -788,45 +911,294 @@
   },
   "company": {
     "tag": "About Us",
-    "title": "Deep AI Application in Dialysis",
-    "subtitle": "Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into an intelligent dialysis system.",
+    "title": "People First, Service Above All",
+    "subtitle": "Suntop Healthcare is a medical technology company focused on hemodialysis, building data infrastructure and system platforms to transform dialysis management from experience-dependent to data-driven.",
     "mission": {
       "title": "Mission",
-      "description": "Using AI, IoT and LLMs to upgrade dialysis—a high-risk medical scenario heavily dependent on human experience—into a predictable, interventionable, and scalably replicable smart dialysis system."
+      "headline": "People First, Service Above All",
+      "description": "Freeing clinicians to focus on decisions that require human judgment, ensuring patients receive consistent, safe care. Technology is the means. People are always the purpose."
     },
     "vision": {
       "title": "Vision",
-      "description": "From assisted driving to autonomous driving—enabling the system to complete more standardized decisions within clear boundaries, with physicians taking on more supervisory and final decision-making roles."
+      "headline": "Enhance Patient Quality of Life, Create Professional Value",
+      "description": "Extend the lives of kidney patients across China, enabling them to return to society and family."
     },
     "about": {
-      "title": "About Suntop AI",
+      "title": "About Suntop Healthcare",
       "paragraphs": [
-        "We are a company focused on deep AI application in dialysis. Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into a smarter, more automated, personalized, safer and more efficient intelligent dialysis system.",
-        "Starting from the data source, we've made all core dialysis room equipment IoT-enabled—dialysis machines, BP monitors, scales. We've connected 3,000+ dialysis devices, achieving structured data capture throughout the entire treatment process, deeply integrated with hospital HIS and LIS systems.",
-        "On this foundation, we've built a dialysis-specific customized LLM and proprietary AI Agent decision system, forming a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
-        "The system continuously provides decision support to physicians during treatment, including prescription adjustment recommendations, volume and ultrafiltration assessment, and prediction and warning of high-risk events like hypotension. These recommendations are not post-hoc analysis, but exist in real-time within the physician's workflow."
+        "Suntop Healthcare is a medical technology company focused on hemodialysis.",
+        "Founded on the principle of 'People First, Service Above All', we started with equipment supply, technical support, department operations management, and clinical care, gradually building a comprehensive service system covering the entire dialysis workflow. On this foundation, we developed our proprietary dialysis management system, making all core equipment—dialysis machines, BP monitors, scales—IoT-enabled, and integrating customized models and decision systems to achieve a complete closed loop from data collection, analysis, evaluation, recommendations to real-time feedback.",
+        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 50+ successfully upgraded to smart dialysis centers and 3,000+ connected dialysis devices. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
+        "We believe truly valuable healthcare innovation must simultaneously improve medical quality, reduce risk, and increase operational efficiency. Suntop Healthcare is driving the transformation of dialysis management from 'experience-driven' to 'data-driven', making dialysis safer, more efficient, and more sustainable."
       ]
     },
-    "values": {
-      "title": "Business Model",
-      "description": "Complete solution provider—we're not selling software, we're restructuring how dialysis centers operate.",
+    "businessModel": {
+      "tag": "Business Model",
+      "title": "Complete Solution Provider",
+      "subtitle": "We're not selling software, we're restructuring how dialysis centers operate.",
       "items": [
         { "title": "Turnkey Solutions", "description": "Complete smart dialysis center construction solutions, full support from planning to deployment." },
         { "title": "Equipment & Consumables", "description": "Providing dialysis equipment and consumables, ensuring device interoperability." },
         { "title": "Software & Hardware", "description": "Proprietary dialysis management system, AI LLM and IoT infrastructure." },
-        { "title": "Smart Supply Chain", "description": "Integrated smart supply chain system for better treatment outcomes, lower medical risk, and higher operational efficiency." }
+        { "title": "Smart Supply Chain", "description": "Integrated smart supply chain system for better treatment outcomes, lower medical risk, and higher operational efficiency." },
+        { "title": "Expansion Plan", "description": "Clear, replicable expansion path—targeting 300 centers within two years." }
       ]
     },
-    "leadership": {
-      "title": "Expansion Plan",
-      "description": "Clear, replicable expansion path—targeting 300 centers within two years.",
-      "note": "Already deployed, not just a concept—this is a system validated by real clinical practice."
-    },
     "stats": {
-      "founded": "Centers Deployed",
+      "founded": "Smart Dialysis Centers",
       "team": "Self-Operated",
-      "partners": "Partner Hospitals",
+      "partners": "Partner Centers",
       "stations": "Devices Connected"
+    },
+    "centers": {
+      "tag": "Center Network",
+      "title": "Nationwide Dialysis Center Network",
+      "subtitle": "30+ self-operated dialysis centers with unified standards, management, and quality systems",
+      "description": "As Suntop Healthcare's chain dialysis center brand, our centers are equipped with advanced dialysis equipment, dual-stage reverse osmosis water systems, and experienced professional medical teams to provide patients with continuous quality dialysis care.",
+      "viewAll": "View All Centers",
+      "moreComingSoon": "More centers coming soon",
+      "features": {
+        "equipment": "Advanced Equipment",
+        "equipmentDesc": "Full dialysis equipment suite with dual-stage RO water systems",
+        "team": "Professional Team",
+        "teamDesc": "Experienced dialysis specialist medical staff",
+        "environment": "Comfortable Environment",
+        "environmentDesc": "Human-centered design with home-like care experience"
+      },
+      "centerDetail": {
+        "location": "Address",
+        "contact": "Contact",
+        "area": "Area",
+        "features": "Features",
+        "gallery": "Center Gallery",
+        "backToList": "Back to Centers"
+      },
+      "list": [
+        {
+          "slug": "fuzhou-xingkang",
+          "name": "Fuzhou Xingkang Hemodialysis Center",
+          "shortName": "Fuzhou Xingkang",
+          "city": "Fuzhou",
+          "province": "Fujian",
+          "address": "No. 3 Xifeng Road, Fengcheng Town, Lianjiang County, Fuzhou, Fujian",
+          "area": "1300㎡",
+          "established": "2018",
+          "description": "Fuzhou Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems to ensure ultra-pure dialysis water quality.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "gallery": [
+            "/images/centers/fuzhou-xingkang/1.jpg",
+            "/images/centers/fuzhou-xingkang/2.jpg",
+            "/images/centers/fuzhou-xingkang/3.jpg",
+            "/images/centers/fuzhou-xingkang/4.jpg",
+            "/images/centers/fuzhou-xingkang/5.jpg",
+            "/images/centers/fuzhou-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "anhui-xingkang",
+          "name": "Anhui Xingkang Hemodialysis Center",
+          "shortName": "Anhui Xingkang",
+          "city": "Hefei",
+          "province": "Anhui",
+          "address": "Qiancheng Building, Northwest Corner of Huizhou Avenue and Fuzhou Road, Baohe District, Hefei, Anhui Province",
+          "contact": "Manager Chen 1505515908",
+          "area": "1000㎡",
+          "description": "Anhui Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems to ensure ultra-pure dialysis water quality, providing patients with reassuring medical care for Hefei Binhu and surrounding regions.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "gallery": [
+            "/images/centers/anhui-xingkang/1.jpg",
+            "/images/centers/anhui-xingkang/2.jpg",
+            "/images/centers/anhui-xingkang/3.jpg",
+            "/images/centers/anhui-xingkang/4.jpg",
+            "/images/centers/anhui-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "lujiang-xingkang",
+          "name": "Lujiang Xingkang Hemodialysis Center",
+          "shortName": "Lujiang Xingkang",
+          "city": "Lujiang",
+          "province": "Anhui",
+          "address": "No. 108 Luchao Road, Lujiang County, Anhui Province",
+          "area": "1100㎡",
+          "description": "Lujiang Xingkang provides professional dialysis services with advanced equipment and high-quality medical care.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/lujiang-xingkang/1.jpg",
+            "/images/centers/lujiang-xingkang/2.jpg",
+            "/images/centers/lujiang-xingkang/3.jpg",
+            "/images/centers/lujiang-xingkang/4.jpg",
+            "/images/centers/lujiang-xingkang/5.jpg",
+            "/images/centers/lujiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "hefei-pufukang",
+          "name": "Hefei Pufukang Hemodialysis Center",
+          "shortName": "Hefei Pufukang",
+          "city": "Hefei",
+          "province": "Anhui",
+          "address": "Intersection of Dengta Road and Nanfang Road, Shangpai Town, Feixi County, Hefei, Anhui Province",
+          "contact": "Manager Chen 1505515908",
+          "area": "2000㎡",
+          "description": "Hefei Pufukang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems, providing ultra-pure dialysis water quality and reassuring medical care for patients in Hefei and surrounding regions.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "gallery": [
+            "/images/centers/hefei-pufukang/1.jpg",
+            "/images/centers/hefei-pufukang/2.jpg",
+            "/images/centers/hefei-pufukang/3.jpg",
+            "/images/centers/hefei-pufukang/4.jpg",
+            "/images/centers/hefei-pufukang/5.jpg",
+            "/images/centers/hefei-pufukang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhaoqing-xingkang",
+          "name": "Zhaoqing Xingkang Hemodialysis Center",
+          "shortName": "Zhaoqing Xingkang",
+          "city": "Zhaoqing",
+          "province": "Guangdong",
+          "address": "Shengshi Building, No. 28 Jianshe 2nd Road, Duanzhou District, Zhaoqing",
+          "area": "686㎡",
+          "description": "Zhaoqing Xingkang provides professional dialysis care with advanced equipment and experienced medical team.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/zhaoqing-xingkang/1.jpg",
+            "/images/centers/zhaoqing-xingkang/2.jpg",
+            "/images/centers/zhaoqing-xingkang/3.jpg",
+            "/images/centers/zhaoqing-xingkang/4.jpg",
+            "/images/centers/zhaoqing-xingkang/5.jpg",
+            "/images/centers/zhaoqing-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhongshan-shenkang",
+          "name": "Zhongshan Shenkang Hemodialysis Center",
+          "shortName": "Zhongshan Shenkang",
+          "city": "Zhongshan",
+          "province": "Guangdong",
+          "address": "No. 88 Sunwen East Road, Shiqi District, Zhongshan, Guangdong",
+          "area": "625㎡",
+          "description": "Zhongshan Shenkang Hemodialysis Center features advanced dialysis machines and dual-stage reverse osmosis water systems for ultra-pure dialysis water quality.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/zhongshan-shenkang/1.jpg",
+            "/images/centers/zhongshan-shenkang/2.jpg",
+            "/images/centers/zhongshan-shenkang/3.jpg",
+            "/images/centers/zhongshan-shenkang/4.jpg",
+            "/images/centers/zhongshan-shenkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "heilongjiang-xingkang",
+          "name": "Heilongjiang Xingkang Hemodialysis Center",
+          "shortName": "Heilongjiang Xingkang",
+          "city": "Harbin",
+          "province": "Heilongjiang",
+          "address": "No. 621 Hongqi Street, Daowai District, Harbin",
+          "description": "Heilongjiang Xingkang features nephrology, clinical laboratory, pharmacy, ultrasound, and ECG departments.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/heilongjiang-xingkang/1.jpg",
+            "/images/centers/heilongjiang-xingkang/2.jpg",
+            "/images/centers/heilongjiang-xingkang/3.jpg",
+            "/images/centers/heilongjiang-xingkang/4.jpg",
+            "/images/centers/heilongjiang-xingkang/5.jpg",
+            "/images/centers/heilongjiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "harbin-yuhua",
+          "name": "Harbin Yuhua Hemodialysis Center",
+          "shortName": "Harbin Yuhua",
+          "city": "Harbin",
+          "province": "Heilongjiang",
+          "address": "No. 621 Hongqi Street, Daowai District, Harbin",
+          "area": "2250㎡",
+          "description": "Harbin Yuhua Hemodialysis Center features advanced dialysis machines and dual-stage reverse osmosis systems, providing high-quality dialysis services for Harbin and surrounding regions.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/harbin-yuhua/1.jpg",
+            "/images/centers/harbin-yuhua/2.jpg",
+            "/images/centers/harbin-yuhua/3.jpg",
+            "/images/centers/harbin-yuhua/4.jpg",
+            "/images/centers/harbin-yuhua/5.jpg"
+          ]
+        },
+        {
+          "slug": "zhenjiang-xingkang",
+          "name": "Zhenjiang Xingkang Hemodialysis Center",
+          "shortName": "Zhenjiang Xingkang",
+          "city": "Zhenjiang",
+          "province": "Jiangsu",
+          "address": "Zhenjiang, Jiangsu Province",
+          "description": "Zhenjiang Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems, providing ultra-pure dialysis water quality and reassuring medical care for patients in Zhenjiang and surrounding regions.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "gallery": [
+            "/images/centers/zhenjiang-xingkang/1.jpg",
+            "/images/centers/zhenjiang-xingkang/2.jpg",
+            "/images/centers/zhenjiang-xingkang/3.jpg",
+            "/images/centers/zhenjiang-xingkang/4.jpg",
+            "/images/centers/zhenjiang-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "linshu-xingkang",
+          "name": "Linshu Xingkang Hemodialysis Center",
+          "shortName": "Linshu Xingkang",
+          "city": "Linshu",
+          "province": "Shandong",
+          "address": "West Side of Changlin Street, Linshu County, Linyi City, Shandong Province",
+          "area": "2000㎡",
+          "description": "Linshu Xingkang features advanced dialysis machines and dual-stage reverse osmosis systems for high-quality dialysis care.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/linshu-xingkang/1.jpg",
+            "/images/centers/linshu-xingkang/2.jpg",
+            "/images/centers/linshu-xingkang/3.jpg",
+            "/images/centers/linshu-xingkang/4.jpg",
+            "/images/centers/linshu-xingkang/5.jpg",
+            "/images/centers/linshu-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "liaoning-xingkang",
+          "name": "Liaoning Xingkang Hemodialysis Center",
+          "shortName": "Liaoning Xingkang",
+          "city": "Shenyang",
+          "province": "Liaoning",
+          "address": "No. 61 Beishuncheng Road, Shenhe District, Shenyang",
+          "area": "1600㎡",
+          "description": "Liaoning Xingkang provides professional dialysis care for patients in the Liaoning region.",
+          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "gallery": [
+            "/images/centers/liaoning-xingkang/1.jpg",
+            "/images/centers/liaoning-xingkang/2.jpg",
+            "/images/centers/liaoning-xingkang/3.jpg",
+            "/images/centers/liaoning-xingkang/4.jpg",
+            "/images/centers/liaoning-xingkang/5.jpg",
+            "/images/centers/liaoning-xingkang/6.jpg"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "tag": "Partner Hospitals",
+      "title": "National Partner Hospital Network",
+      "subtitle": "Partnering with quality healthcare institutions to enhance dialysis service quality",
+      "description": "We have established deep partnerships with over 100 hospitals nationwide to provide professional dialysis service support for more patients.",
+      "list": [
+        { "name": "Hunan Wangwang Hospital", "province": "Hunan" },
+        { "name": "Zhejiang Xinan International Hospital", "province": "Zhejiang" },
+        { "name": "Xiamen Chang Gung Hospital", "province": "Fujian" },
+        { "name": "Guangxi Yulin Guinan Hospital", "province": "Guangxi", "note": "Zhongzhu Medical" },
+        { "name": "Xinzheng Huaxin Minsheng Hospital", "province": "Henan" },
+        { "name": "Haining Kanghua Hospital", "province": "Zhejiang", "note": "Innovation Medical" },
+        { "name": "Lianyungang Sheng'an Hospital", "province": "Jiangsu" },
+        { "name": "Xinjin Zhihui Hospital", "province": "Sichuan" },
+        { "name": "Dongying Xinlicheng Geriatric Hospital", "province": "Shandong" }
+      ],
+      "more": "And more partner hospitals..."
     },
     "contact": {
       "tag": "Contact",
@@ -960,7 +1332,7 @@
       "networked": "Networked Centers",
       "decisionSupport": "Decision Support",
       "aboutUs": "About Us",
-      "leadership": "Leadership",
+      "centers": "Dialysis Centers",
       "news": "News",
       "contact": "Contact"
     },

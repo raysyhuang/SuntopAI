@@ -82,6 +82,17 @@
       "monitoring": "数据采集频率",
       "stations": "已连接透析设备"
     },
+    "clinicalHighlights": {
+      "tag": "临床验证",
+      "title": "真实数据，真实改善",
+      "items": [
+        { "value": "60%", "label": "休克前期患者下降", "detail": "22.4% → 9.0%" },
+        { "value": "70%", "label": "化验评估效率提升", "detail": "8.3分钟 → 2.5分钟" },
+        { "value": "71%", "label": "缺铁患者比例下降", "detail": "74.0% → 21.1%" },
+        { "value": "37%", "label": "肾性骨病患者下降", "detail": "48.4% → 30.7%" }
+      ],
+      "cta": "查看完整成效数据"
+    },
     "why": {
       "tag": "我们解决的问题",
       "title": "透析是强依赖经验的医疗和专业场景",
@@ -93,7 +104,7 @@
       },
       "operational": {
         "title": "部署规模",
-        "desc": "50家智慧透析中心，30家自营，3000+台设备"
+        "desc": "30+家自营中心，100+家合作中心，50+家智慧透析中心"
       },
       "strategic": {
         "title": "临床成效",
@@ -105,36 +116,33 @@
       }
     },
     "router": {
-      "tag": "按角色探索",
-      "title": "选择您的路径",
-      "description": "深入了解与您角色最相关的内容",
+      "tag": "深入了解",
+      "title": "探索我们的解决方案",
+      "description": "从技术架构到临床应用，全方位了解智慧透析平台",
       "doors": {
         "platform": {
-          "title": "平台",
-          "audience": "面向IT总监与CTO",
-          "question": "系统如何集成？",
+          "title": "平台技术",
+          "question": "系统如何运作？",
           "description": "技术架构、设备连接、数据基础设施和安全设计。",
           "cta": "查看平台"
         },
         "clinical": {
-          "title": "临床",
-          "audience": "面向医师与临床主任",
-          "question": "AI如何支持临床决策？",
-          "description": "真实临床应用、决策支持能力和精细化管理实践。",
+          "title": "临床应用",
+          "question": "如何提升医疗质量？",
+          "description": "真实临床场景、决策支持能力和精细化管理实践。",
           "cta": "查看临床应用"
         },
         "deployment": {
-          "title": "部署",
-          "audience": "面向运营与CFO",
-          "question": "如何部署和扩展？",
-          "description": "实施流程、供应链整合和运营就绪。",
+          "title": "落地部署",
+          "question": "如何快速实施？",
+          "description": "实施流程、供应链整合和运营支持。",
           "cta": "查看部署"
         }
       }
     },
     "finalCta": {
       "title": "已经落地，而不是概念",
-      "description": "目前已落地50家智慧透析中心，其中30家为自营透析中心，另有20多家标志性民营医院与公立医院。这是一个已经被真实临床验证的系统。"
+      "description": "目前全国布局30+家自营透析中心，100+家合作中心，其中50+家已升级为智慧透析中心，连接3000+台透析设备。这是一个已经被真实临床验证的系统。"
     }
   },
   "platform": {
@@ -147,55 +155,30 @@
       "guardrails": "临床护栏"
     },
     "clinicalApplications": {
-      "tag": "临床应用场景",
-      "title": "AI平台的临床应用",
-      "description": "从单中心到网络化运营，AI赋能透析治疗全流程",
+      "tag": "应用场景",
+      "title": "平台适用场景",
+      "description": "从单中心到连锁网络，灵活适配不同规模的透析中心",
       "apps": {
         "inCenter": {
-          "title": "单体血液透析中心",
-          "description": "为单中心提供实时监测与AI智能预警，提升治疗安全性与标准化水平。",
-          "outcomes": [
-            "治疗全程实时监测",
-            "异常情况主动预警",
-            "透析不良事件减少",
-            "治疗质量标准化"
-          ],
-          "before": "人工定期巡视，问题发生后被动应对",
-          "after": "AI持续监测，异常趋势提前预警，主动干预",
-          "aiRole": "实时分析生命体征与透析参数，识别异常趋势与早期风险信号，触发主动预警与干预建议。"
+          "title": "单体透析中心",
+          "description": "实时监测与智能预警，提升治疗安全性与标准化水平。",
+          "capabilities": ["实时数据采集", "异常趋势预警", "治疗参数优化", "质量指标追踪"]
         },
         "networked": {
           "title": "连锁透析中心",
-          "description": "为连锁中心提供集中监管与质量标准化，支撑规模化扩张与统一运营。",
-          "outcomes": [
-            "多中心集中监管",
-            "治疗质量标准化",
-            "规模化运营不失控",
-            "支持区域或全国网络扩展"
-          ],
-          "before": "各中心独立运营，质量参差不齐，缺乏统一标准",
-          "after": "统一平台，实时监管，标准流程，质量可控",
-          "aiRole": "汇聚所有中心数据，识别最佳实践模式，建立质控基准，确保治疗标准统一执行。"
+          "description": "集中监管与统一质控，支撑规模化扩张与标准化运营。",
+          "capabilities": ["多中心统一视图", "跨中心质量对标", "标准流程复制", "远程监督支持"]
         },
         "decision": {
-          "title": "医生决策支持",
-          "description": "支持临床决策的数据驱动洞察。",
-          "outcomes": [
-            "纵向患者趋势分析",
-            "数据驱动的干体重和超滤洞察",
-            "减少繁忙班次的认知负担",
-            "临床决策的客观支持"
-          ],
-          "before": "手动审查分散数据，依赖经验的决策",
-          "after": "AI合成洞察，包含趋势分析和风险分层",
-          "aiRole": "将多次会话患者数据合成为可操作的洞察，用于治疗优化和风险分层。"
+          "title": "临床决策支持",
+          "description": "数据驱动的洞察，辅助医生做出更精准的治疗决策。",
+          "capabilities": ["患者趋势分析", "风险分层评估", "处方优化建议", "充分性监测"]
         }
       },
-      "beforeAfter": {
-        "before": "之前",
-        "after": "之后"
-      },
-      "aiRoleLabel": "AI的作用"
+      "learnMore": {
+        "text": "了解详细临床应用与成效",
+        "link": "查看临床应用"
+      }
     },
     "architecture": {
       "title": "平台架构",
@@ -409,19 +392,19 @@
       "title": "已导入医院列表",
       "description": "已有众多标杆性医院成功导入我们的数字化血液透析管理平台",
       "categories": {
-        "selfOperated": "自营透析中心",
-        "publicHospitals": "公立医院",
-        "privateHospitals": "民营医院"
+        "smartCenters": "智慧透析中心",
+        "selfOperated": "自营中心",
+        "partnerCenters": "合作中心"
       },
       "stats": {
-        "selfOperated": "50+",
-        "publicHospitals": "20+",
-        "privateHospitals": "30+"
+        "smartCenters": "50+",
+        "selfOperated": "30+",
+        "partnerCenters": "100+"
       },
       "descriptions": {
-        "selfOperated": "自营智慧透析中心",
-        "publicHospitals": "标杆性公立医院",
-        "privateHospitals": "知名民营医院"
+        "smartCenters": "已升级为智慧透析中心",
+        "selfOperated": "全国自营透析中心",
+        "partnerCenters": "合作医院与中心"
       },
       "cta": {
         "title": "加入我们的合作网络",
@@ -611,6 +594,82 @@
         }
       }
     },
+    "results": {
+      "tag": "成效数据",
+      "title": "经临床验证的改善成效",
+      "subtitle": "基于实际部署中心的临床数据，展示系统带来的可量化改善。",
+      "categories": {
+        "rounds": {
+          "tag": "信息化查房",
+          "title": "信息化查房成效",
+          "subtitle": "数字化查房系统提升血压管理与风险预防",
+          "metrics": [
+            {
+              "id": "bp",
+              "title": "透前收缩压",
+              "before": "145±22",
+              "after": "141±21",
+              "unit": "mmHg",
+              "improvement": "改善",
+              "description": "透析前收缩期血压得到有效控制"
+            },
+            {
+              "id": "shock",
+              "title": "休克前期患者",
+              "before": "22.4",
+              "after": "9.0",
+              "unit": "%",
+              "improvement": "下降60%",
+              "description": "休克前期高危患者比例大幅降低"
+            }
+          ]
+        },
+        "labs": {
+          "tag": "化验评估",
+          "title": "化验结果评估成效",
+          "subtitle": "AI辅助化验分析提升效率与患者管理",
+          "metrics": [
+            {
+              "id": "time",
+              "title": "化验评估时间",
+              "before": "8.3",
+              "after": "2.5",
+              "unit": "分钟/患者",
+              "improvement": "效率提升70%",
+              "description": "每位患者化验评估时间大幅缩短"
+            },
+            {
+              "id": "anemia",
+              "title": "贫血患者比例",
+              "before": "60.9",
+              "after": "41.3",
+              "unit": "%",
+              "improvement": "下降32%",
+              "description": "贫血管理明显改善"
+            },
+            {
+              "id": "iron",
+              "title": "缺铁患者比例",
+              "before": "74.0",
+              "after": "21.1",
+              "unit": "%",
+              "improvement": "下降71%",
+              "description": "铁剂补充更加精准及时"
+            },
+            {
+              "id": "bone",
+              "title": "肾性骨病患者比例",
+              "before": "48.4",
+              "after": "30.7",
+              "unit": "%",
+              "improvement": "下降37%",
+              "description": "骨代谢异常得到有效控制"
+            }
+          ]
+        }
+      },
+      "disclaimer": "数据来源于实际部署中心的临床统计，具体效果因中心情况而异。"
+    },
     "gallery": {
       "tag": "真实场景",
       "title": "临床一线与患者关怀",
@@ -682,95 +741,167 @@
     }
   },
   "deployment": {
-    "tag": "部署",
-    "title": "为真实透析运营而设计",
-    "subtitle": "我们的系统旨在以最小干扰和最大灵活性集成到现有透析环境中。",
-    "statement": "这不是一个概念系统。它是为真实透析环境设计的。",
-    "features": {
-      "title": "从设计阶段即可部署",
-      "description": "考虑到医疗IT、临床工作流程和监管要求的实际现实而构建。",
-      "items": [
+    "tag": "部署方案",
+    "title": "智慧透析中心建设与部署",
+    "subtitle": "从科室规划到系统部署，提供透析中心数字化升级的全流程支持。",
+    "sectionGroups": {
+      "technical": {
+        "number": "01",
+        "title": "技术方案",
+        "subtitle": "平台架构与部署选项"
+      },
+      "turnkey": {
+        "number": "02",
+        "title": "整体服务",
+        "subtitle": "从规划到运营的全流程支持"
+      },
+      "supplyChain": {
+        "number": "03",
+        "title": "供应链",
+        "subtitle": "设备耗材一站式采购"
+      },
+      "implementation": {
+        "number": "04",
+        "title": "实施保障",
+        "subtitle": "部署流程与安全合规"
+      }
+    },
+    "architecture": {
+      "tag": "技术架构",
+      "title": "透析物联网 + AI中枢",
+      "subtitle": "三层架构协同工作，将透析数据转化为临床智能",
+      "layers": [
         {
-          "title": "多厂商兼容性",
-          "description": "与多个制造商的现有透析设备生态系统兼容。无需更换设备。"
+          "id": "iot",
+          "title": "设备物联层",
+          "icon": "Wifi",
+          "description": "连接透析机、血压计、体重秤等设备，实时采集治疗数据，自动传输至系统。",
+          "features": ["多厂商设备兼容", "高频数据采集", "自动传输免录入", "设备状态监控"]
         },
         {
-          "title": "灵活部署",
-          "description": "本地、云端或混合部署选项，满足您的基础设施和合规要求。"
+          "id": "intelligence",
+          "title": "智能分析层",
+          "icon": "Brain",
+          "description": "AI模型分析趋势、检测风险，在并发症发生前生成预警与处置建议。",
+          "features": ["透析中低血压预测", "超滤风险检测", "充分性评估", "个性化参数推荐"]
         },
         {
-          "title": "最小干扰",
-          "description": "渐进式部署，旨在无运营停机时间地集成到现有临床工作流程中。"
+          "id": "application",
+          "title": "应用与控制层",
+          "icon": "Monitor",
+          "description": "中央监控、智慧终端、移动端协同，实现全流程可视化管理。",
+          "features": ["中央监控大屏", "床旁智慧终端", "移动查房应用", "远程监督支持"]
+        }
+      ]
+    },
+    "deployment": {
+      "tag": "部署方式",
+      "title": "灵活的部署选项",
+      "subtitle": "根据您的基础设施和合规要求，选择最适合的部署方式",
+      "options": [
+        {
+          "title": "云部署",
+          "icon": "Cloud",
+          "description": "低成本快速上线，系统实时更新，适合连锁或跨机构协作。"
         },
         {
-          "title": "设计安全",
-          "description": "企业级安全架构，包括静态和传输加密、基于角色的访问控制。"
+          "title": "本地部署",
+          "icon": "Server",
+          "description": "满足严苛数据存储要求，自主数据运维，完全数据自主可控。"
         },
         {
-          "title": "监管意识",
-          "description": "考虑医疗监管要求构建，支持符合本地和国际标准。"
+          "title": "混合部署",
+          "icon": "GitMerge",
+          "description": "兼顾管理效率与数据安全，核心数据本地存储，应用层云端部署。"
+        }
+      ]
+    },
+    "turnkeyServices": {
+      "tag": "整体建设方案",
+      "title": "从规划到落地的全流程支持",
+      "subtitle": "我们不只是提供软件和设备，而是提供透析中心整体建设与升级的全方位服务。",
+      "services": [
+        {
+          "id": "design",
+          "title": "设计规划",
+          "subtitle": "科学合理的科室规划设计",
+          "description": "拥有国内外设计师带领的科室设计团队，以为肾友创造安全舒适的医疗环境为目标。",
+          "icon": "Compass",
+          "steps": [
+            { "title": "市场调查", "description": "全面细致的市场调研分析" },
+            { "title": "设备规划", "description": "根据需求配置最优设备方案" },
+            { "title": "室内设计", "description": "专业新颖的人性化空间设计" },
+            { "title": "需求整合", "description": "综合资深医疗人才意见" }
+          ],
+          "highlights": ["布局合理，动线清晰", "符合国家质控标准", "人性化科室设计"]
         },
         {
-          "title": "可扩展架构",
-          "description": "从单个中心到全国网络，平台无需架构更改即可扩展。"
+          "id": "training",
+          "title": "人员培训",
+          "subtitle": "线上线下全方位培训体系",
+          "description": "从传统的科室培训和医护人员交流学习，延伸到灵活多样的线上学习模式。",
+          "icon": "GraduationCap",
+          "steps": [
+            { "title": "专家驻场授课", "description": "专业指导，系统培训" },
+            { "title": "医护培训座谈", "description": "分享医学心得，促进交流" },
+            { "title": "科室进驻实验", "description": "提升临床实战技能" },
+            { "title": "线上学习平台", "description": "医柔课纲专业培训系统" }
+          ],
+          "highlights": ["完善的理论与实践培训", "多个区域培训基地", "定期专家讲座与国际交流"]
+        },
+        {
+          "id": "operations",
+          "title": "经营管理",
+          "subtitle": "专业灵活的运营管理服务",
+          "description": "每一个环节都将以客户需求及实际情况作考量，提供全方位管理支持。",
+          "icon": "Settings",
+          "steps": [
+            { "title": "科室制度建立", "description": "标准化部门工作流程" },
+            { "title": "医护人员管理", "description": "医疗人才招聘与团队建设" },
+            { "title": "作业流程建立", "description": "高效运营流程设计" },
+            { "title": "信息化系统管理", "description": "IT系统基础设施建设" }
+          ],
+          "highlights": ["财务管理顾问", "技术支持服务", "质量控制体系"]
         }
       ]
     },
     "process": {
-      "title": "部署流程",
-      "description": "结构化、临床监督下的实施方法。",
+      "tag": "实施流程",
+      "title": "结构化部署流程",
+      "subtitle": "分阶段实施，确保平稳过渡",
       "steps": [
         {
           "step": "01",
-          "title": "评估",
-          "description": "评估当前基础设施、设备兼容性和集成要求。"
+          "title": "需求评估",
+          "description": "评估现有设备、基础设施与集成需求"
         },
         {
           "step": "02",
           "title": "试点部署",
-          "description": "在选定的透析站进行有限部署，验证集成和临床工作流程。"
+          "description": "选定透析站验证系统集成与工作流程"
         },
         {
           "step": "03",
           "title": "临床验证",
-          "description": "与临床团队合作，微调警报、阈值和决策支持参数。"
+          "description": "与临床团队协作调优参数与预警阈值"
         },
         {
           "step": "04",
-          "title": "扩展与优化",
-          "description": "通过持续监测和优化，在各设施扩展部署。"
+          "title": "全面推广",
+          "description": "扩展部署并持续优化"
         }
       ]
     },
     "security": {
-      "tag": "安全与合规",
-      "title": "企业级安全",
-      "description": "医疗数据需要最高级别的保护。我们的平台将安全和合规作为基础要求而非事后考虑。",
+      "tag": "安全合规",
+      "title": "医疗级数据安全",
+      "subtitle": "符合医疗数据安全标准，保障患者隐私",
       "features": [
-        "所有数据端到端加密",
-        "基于角色的访问控制",
-        "审计日志和可追溯性",
-        "定期安全评估",
-        "合规就绪架构"
-      ],
-      "stats": {
-        "encryption": {
-          "label": "数据加密",
-          "value": "AES-256"
-        },
-        "access": {
-          "label": "访问控制",
-          "value": "RBAC"
-        },
-        "audit": {
-          "label": "审计日志",
-          "value": "完整"
-        },
-        "compliance": {
-          "label": "合规性",
-          "value": "就绪"
-        }
-      }
+        { "title": "数据加密", "value": "AES-256端到端加密" },
+        { "title": "访问控制", "value": "基于角色的权限管理" },
+        { "title": "审计追溯", "value": "完整操作日志记录" },
+        { "title": "合规就绪", "value": "符合医疗数据法规要求" }
+      ]
     },
     "supplyChain": {
       "tag": "智慧供应链",
@@ -839,72 +970,22 @@
           "label": "运营效率提升",
           "value": "40%"
         }
+      },
+      "suppliers": {
+        "tag": "合作伙伴",
+        "title": "供应链合作伙伴",
+        "subtitle": "与国内外领先医疗器械厂商建立长期战略合作",
+        "list": [
+          { "name": "贝恩医疗", "nameEn": "BAIN MEDICAL" },
+          { "name": "日本东丽", "nameEn": "TORAY" },
+          { "name": "费森尤斯", "nameEn": "FRESENIUS" },
+          { "name": "尼普洛", "nameEn": "NIPRO" },
+          { "name": "波士顿科学", "nameEn": "BOSTON SCIENTIFIC" },
+          { "name": "三鑫医疗", "nameEn": "SANXIN" },
+          { "name": "宝莱特", "nameEn": "BIOLIGHT" },
+          { "name": "天益医疗", "nameEn": "TIANYI" }
+        ]
       }
-    },
-    "architecture": {
-      "tag": "技术架构",
-      "title": "平台架构",
-      "description": "三个集成层协同工作，将透析数据转化为临床智能和安全自动化。",
-      "layers": {
-        "data": {
-          "title": "设备与数据层",
-          "subtitle": "安全自动化的基础",
-          "description": "我们连接透析设备、生命体征设备和临床系统，在整个治疗过程中创建统一的实时数据层。",
-          "signal": "该层确保在每次治疗期间进行可靠、结构化和连续的数据采集。",
-          "capabilities": [
-            "多厂商透析设备",
-            "血压监测仪和生命体征",
-            "高频流式数据",
-            "安全设备连接"
-          ]
-        },
-        "intelligence": {
-          "title": "智能层",
-          "subtitle": "基于真实数据构建的临床智能",
-          "description": "我们的AI模型分析趋势、检测风险模式，并在透析过程中而非并发症发生后生成临床相关洞察。",
-          "signal": "系统增强而非取代临床判断。",
-          "capabilities": [
-            "透析中血压趋势分析",
-            "超滤风险检测",
-            "个性化参数推荐",
-            "不良事件早期预警信号"
-          ]
-        },
-        "automation": {
-          "title": "自动化与控制层",
-          "subtitle": "带护栏的执行",
-          "description": "我们实现辅助控制、协议执行和远程监督，在保持临床医生控制权的同时减少差异和运营负担。",
-          "signal": "自动化仅在安全性、可预测性和临床共识存在的情况下应用。",
-          "capabilities": [
-            "辅助透析参数调整",
-            "基于协议的自动化",
-            "工作流程标准化",
-            "远程监测和监督"
-          ]
-        }
-      }
-    },
-    "differentiators": {
-      "title": "我们平台的优势",
-      "description": "为长期透析变革构建的技术和战略优势。",
-      "items": [
-        {
-          "title": "透析原生聚焦",
-          "description": "专为透析构建，而非从通用医疗AI改编。"
-        },
-        {
-          "title": "深度整合",
-          "description": "贯穿整个护理流程的设备级和工作流程级连接。"
-        },
-        {
-          "title": "临床护栏",
-          "description": "以安全为先的自动化设计，而非黑盒AI。"
-        },
-        {
-          "title": "规模化就绪",
-          "description": "为多中心网络设计，而非单站点试点。"
-        }
-      ]
     },
     "crossLinks": {
       "platform": {
@@ -926,28 +1007,31 @@
   },
   "company": {
     "tag": "关于我们",
-    "title": "专注于AI在透析领域的深度应用",
-    "subtitle": "我们通过自主研发的透析管理系统，结合定制化大模型、AI Agent与IoT技术，把传统高度依赖人工经验的透析治疗，升级为智慧透析体系。",
+    "title": "以人为本，服务至上",
+    "subtitle": "杏泰医疗是一家专注于血液透析领域的医疗科技公司，通过数据基础设施与系统平台，让透析管理从依赖经验走向数据驱动。",
     "mission": {
       "title": "使命",
-      "description": "用AI、IoT和大模型，把透析这个高度依赖人工经验的高风险医疗场景，升级为可预测、可干预、可规模复制的智慧透析系统。"
+      "headline": "以人为本，服务至上",
+      "description": "让医护人员专注于需要人类判断的临床决策，让患者获得更一致、更安全的透析照护。技术是手段，人始终是目的。"
     },
     "vision": {
       "title": "愿景",
-      "description": "从辅助驾驶到自动驾驶——让系统在明确边界内完成更多标准化决策，医生更多扮演监管与最终决策角色。"
+      "headline": "提升肾友生活品质，创造中心专业价值",
+      "description": "让全中国的肾友生命得以延续，进而回归社会与家庭。"
     },
     "about": {
-      "title": "关于Suntop AI",
+      "title": "关于杏泰医疗",
       "paragraphs": [
-        "我们是一家专注于人工智能在透析领域深度应用的公司。通过自主研发的透析管理系统，结合定制化大模型、AI Agent与IoT技术，把传统高度依赖人工经验的透析治疗，升级为更自动化、更个性化、更安全、更高效的智慧透析体系。",
-        "我们从数据源头入手，将透析机、血压计、体重秤等透析室内核心设备全部物联网化。已接入3000+台透析设备，实现治疗全过程的结构化数据采集，并深度融合医院的HIS与LIS系统。",
-        "在此基础上，我们构建了面向透析场景定制的大模型和自主研发的AI Agent决策系统，形成一条从数据采集、分析、评估、建议到实时反馈的完整链条。",
-        "系统可以在治疗过程中持续给医生提供决策支持，包括处方调整建议、容量与超滤评估、低血压等高风险事件的预测与预警。这些建议不是事后分析，而是实时存在于医生的工作流程中。"
+        "杏泰医疗是一家专注于血液透析领域的医疗科技公司。",
+        "我们秉承「以人为本，服务至上」的创业初心，从产品设备供应、技术支持维护、科室运营管理、临床医疗照护起步，逐步构建了覆盖透析全流程的服务体系。在此基础上，我们自主研发了透析管理系统，将透析机、血压计、体重秤等核心设备全部物联网化，并融合定制化模型与决策系统，实现从数据采集、分析、评估、建议到实时反馈的完整闭环。",
+        "目前，我们在全国拥有30余家自营透析中心和100余家合作中心，其中50余家已成功升级为智慧透析中心，连接超过3000台透析设备。系统在治疗过程中持续为医生提供临床决策支持，包括透析中低血压预警、超滤率优化建议、干体重评估等，这些建议不是事后分析，而是实时嵌入医生的工作流程。",
+        "我们相信，真正有价值的医疗创新，必须同时提升医疗质量、降低医疗风险、提高运营效率。杏泰医疗正在推动透析管理从「经验驱动」走向「数据驱动」，让透析治疗更安全、更高效、更可持续。"
       ]
     },
-    "values": {
-      "title": "商业模式",
-      "description": "整体解决方案型——我们不是在卖一个软件，而是在重构透析中心的运行方式。",
+    "businessModel": {
+      "tag": "商业模式",
+      "title": "整体解决方案型",
+      "subtitle": "我们不是在卖一个软件，而是在重构透析中心的运行方式。",
       "items": [
         {
           "title": "整体建设方案",
@@ -964,19 +1048,277 @@
         {
           "title": "智慧供应链",
           "description": "结合智慧供应链体系，实现更好的治疗效果、更低的医疗风险、更高的运营效率。"
+        },
+        {
+          "title": "扩张规划",
+          "description": "明确、可复制的扩张路径，两年内达到300家规模。"
         }
       ]
     },
-    "leadership": {
-      "title": "扩张规划",
-      "description": "明确、可复制的扩张路径，两年内达到300家规模。",
-      "note": "已经落地，而不是概念——这是一个已经被真实临床验证的系统。"
-    },
     "stats": {
-      "founded": "已落地中心",
+      "founded": "智慧透析中心",
       "team": "自营中心",
-      "partners": "合作医院",
+      "partners": "合作中心",
       "stations": "已连接设备"
+    },
+    "centers": {
+      "tag": "直营中心网络",
+      "title": "全国透析中心布局",
+      "subtitle": "覆盖全国30+家自营透析中心，统一标准、统一管理、统一质量体系",
+      "description": "作为杏泰医疗旗下连锁透析中心品牌，我们的中心配有全套先进透析设备、双级反渗净水系统和经验丰富的专业医护团队，为患者提供持续优质的透析照护。",
+      "viewAll": "查看全部中心",
+      "moreComingSoon": "更多中心持续增加中",
+      "features": {
+        "equipment": "先进设备配置",
+        "equipmentDesc": "全套透析机器设备与双级反渗净水系统",
+        "team": "专业医护团队",
+        "teamDesc": "经验丰富的透析专科医护人员",
+        "environment": "舒适就医环境",
+        "environmentDesc": "人性化设计，居家式护理体验"
+      },
+      "centerDetail": {
+        "location": "地址",
+        "contact": "联系方式",
+        "area": "面积",
+        "features": "中心特色",
+        "gallery": "中心环境",
+        "backToList": "返回中心列表"
+      },
+      "list": [
+        {
+          "slug": "fuzhou-xingkang",
+          "name": "福州杏康血液透析中心",
+          "shortName": "福州杏康",
+          "city": "福州",
+          "province": "福建",
+          "address": "福建省福州市连江县凤城镇西凤路3号",
+          "contact": "周经理 1316295406",
+          "area": "1300㎡",
+          "established": "2018",
+          "description": "福州杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
+          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "gallery": [
+            "/images/centers/fuzhou-xingkang/1.jpg",
+            "/images/centers/fuzhou-xingkang/2.jpg",
+            "/images/centers/fuzhou-xingkang/3.jpg",
+            "/images/centers/fuzhou-xingkang/4.jpg",
+            "/images/centers/fuzhou-xingkang/5.jpg",
+            "/images/centers/fuzhou-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "anhui-xingkang",
+          "name": "安徽杏康血液透析中心",
+          "shortName": "安徽杏康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市包河区徽州大道与福州路交口西北角千城大厦",
+          "contact": "陈经理 1505515908",
+          "area": "1000㎡",
+          "description": "安徽杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。以国家标准为核心，结合杏泰医疗多年积累总结的管理理念和合肥滨湖当地居民生活就医习惯等实际情况，为合肥滨湖及其周边地区的肾友提供持续优质化的专业透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "gallery": [
+            "/images/centers/anhui-xingkang/1.jpg",
+            "/images/centers/anhui-xingkang/2.jpg",
+            "/images/centers/anhui-xingkang/3.jpg",
+            "/images/centers/anhui-xingkang/4.jpg",
+            "/images/centers/anhui-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "lujiang-xingkang",
+          "name": "庐江杏康血液透析中心",
+          "shortName": "庐江杏康",
+          "city": "庐江",
+          "province": "安徽",
+          "address": "安徽省庐江县庐巢路108号莲花商业文化广场",
+          "contact": "陈经理 1505515908",
+          "area": "1100㎡",
+          "description": "庐江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，为庐江及周边地区患者提供专业的透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/lujiang-xingkang/1.jpg",
+            "/images/centers/lujiang-xingkang/2.jpg",
+            "/images/centers/lujiang-xingkang/3.jpg",
+            "/images/centers/lujiang-xingkang/4.jpg",
+            "/images/centers/lujiang-xingkang/5.jpg",
+            "/images/centers/lujiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "hefei-pufukang",
+          "name": "合肥普福康血液透析中心",
+          "shortName": "合肥普福康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市肥西县上派镇灯塔路与南方路交叉口",
+          "contact": "陈经理 1505515908",
+          "area": "2000㎡",
+          "description": "合肥普福康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。在先进的医疗设备配备基础上，搭配经验丰富的专业透析医护团队，为合肥及其周边地区的肾友提供持续优质化的专业透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "gallery": [
+            "/images/centers/hefei-pufukang/1.jpg",
+            "/images/centers/hefei-pufukang/2.jpg",
+            "/images/centers/hefei-pufukang/3.jpg",
+            "/images/centers/hefei-pufukang/4.jpg",
+            "/images/centers/hefei-pufukang/5.jpg",
+            "/images/centers/hefei-pufukang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhaoqing-xingkang",
+          "name": "肇庆杏康血液透析中心",
+          "shortName": "肇庆杏康",
+          "city": "肇庆",
+          "province": "广东",
+          "address": "肇庆市端州区建设二路28号盛世大厦",
+          "contact": "李经理 1890305928",
+          "area": "686㎡",
+          "description": "肇庆杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，为肇庆及周边地区患者提供专业的透析照护服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/zhaoqing-xingkang/1.jpg",
+            "/images/centers/zhaoqing-xingkang/2.jpg",
+            "/images/centers/zhaoqing-xingkang/3.jpg",
+            "/images/centers/zhaoqing-xingkang/4.jpg",
+            "/images/centers/zhaoqing-xingkang/5.jpg",
+            "/images/centers/zhaoqing-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhongshan-shenkang",
+          "name": "中山肾康血液透析中心",
+          "shortName": "中山肾康",
+          "city": "中山",
+          "province": "广东",
+          "address": "广东省中山市石岐区孙文东路88号",
+          "contact": "李经理 18903059289",
+          "area": "625㎡",
+          "description": "中山肾康血液透析中心配有先进的透析机器和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/zhongshan-shenkang/1.jpg",
+            "/images/centers/zhongshan-shenkang/2.jpg",
+            "/images/centers/zhongshan-shenkang/3.jpg",
+            "/images/centers/zhongshan-shenkang/4.jpg",
+            "/images/centers/zhongshan-shenkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "heilongjiang-xingkang",
+          "name": "黑龙江杏康血液透析中心",
+          "shortName": "黑龙江杏康",
+          "city": "哈尔滨",
+          "province": "黑龙江",
+          "address": "哈尔滨市道外区红旗大街621号",
+          "contact": "杨经理 1560489313",
+          "area": "1800㎡",
+          "description": "黑龙江杏康血液透析中心设有肾内科、医学检验科、药房、超声、心电等重点科室，为东北地区患者提供专业的透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/heilongjiang-xingkang/1.jpg",
+            "/images/centers/heilongjiang-xingkang/2.jpg",
+            "/images/centers/heilongjiang-xingkang/3.jpg",
+            "/images/centers/heilongjiang-xingkang/4.jpg",
+            "/images/centers/heilongjiang-xingkang/5.jpg",
+            "/images/centers/heilongjiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "harbin-yuhua",
+          "name": "哈尔滨誉华血液透析中心",
+          "shortName": "哈尔滨誉华",
+          "city": "哈尔滨",
+          "province": "黑龙江",
+          "address": "哈尔滨市道外区红旗大街621号",
+          "contact": "杨经理 1560489313",
+          "area": "2250㎡",
+          "description": "哈尔滨誉华血液透析中心配有先进的透析机器和双级反渗净水系统，双重保障透析用水品质，为哈尔滨及其周边地区的肾友提供持续优质化的专业透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/harbin-yuhua/1.jpg",
+            "/images/centers/harbin-yuhua/2.jpg",
+            "/images/centers/harbin-yuhua/3.jpg",
+            "/images/centers/harbin-yuhua/4.jpg",
+            "/images/centers/harbin-yuhua/5.jpg"
+          ]
+        },
+        {
+          "slug": "zhenjiang-xingkang",
+          "name": "镇江杏康血液透析中心",
+          "shortName": "镇江杏康",
+          "city": "镇江",
+          "province": "江苏",
+          "address": "江苏省镇江市",
+          "description": "镇江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机器和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。为镇江及周边地区患者提供持续优质化的专业透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "gallery": [
+            "/images/centers/zhenjiang-xingkang/1.jpg",
+            "/images/centers/zhenjiang-xingkang/2.jpg",
+            "/images/centers/zhenjiang-xingkang/3.jpg",
+            "/images/centers/zhenjiang-xingkang/4.jpg",
+            "/images/centers/zhenjiang-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "linshu-xingkang",
+          "name": "临沭杏康血液透析中心",
+          "shortName": "临沭杏康",
+          "city": "临沭",
+          "province": "山东",
+          "address": "山东省临沂市临沭县城常林大街西侧",
+          "contact": "孟经理 15054936765",
+          "area": "2000㎡",
+          "description": "临沭杏康血液透析中心配有先进的透析机器和双级反渗净水系统，为临沭及周边地区患者提供专业的透析服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/linshu-xingkang/1.jpg",
+            "/images/centers/linshu-xingkang/2.jpg",
+            "/images/centers/linshu-xingkang/3.jpg",
+            "/images/centers/linshu-xingkang/4.jpg",
+            "/images/centers/linshu-xingkang/5.jpg",
+            "/images/centers/linshu-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "liaoning-xingkang",
+          "name": "辽宁杏康血液透析中心",
+          "shortName": "辽宁杏康",
+          "city": "沈阳",
+          "province": "辽宁",
+          "address": "沈阳市沈河区北顺城路61号",
+          "contact": "刘经理 17640220000",
+          "area": "1600㎡",
+          "description": "辽宁杏康血液透析中心为辽宁地区患者提供专业的透析照护服务。",
+          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "gallery": [
+            "/images/centers/liaoning-xingkang/1.jpg",
+            "/images/centers/liaoning-xingkang/2.jpg",
+            "/images/centers/liaoning-xingkang/3.jpg",
+            "/images/centers/liaoning-xingkang/4.jpg",
+            "/images/centers/liaoning-xingkang/5.jpg",
+            "/images/centers/liaoning-xingkang/6.jpg"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "tag": "合作医院",
+      "title": "全国合作医院网络",
+      "subtitle": "携手优质医疗机构，共同提升透析服务品质",
+      "description": "我们与全国100+家医院建立了深度合作关系，为更多患者提供专业的透析服务支持。",
+      "list": [
+        { "name": "湖南旺旺医院", "province": "湖南" },
+        { "name": "浙江新安国际医院", "province": "浙江" },
+        { "name": "厦门长庚医院", "province": "福建" },
+        { "name": "广西玉林市桂南医院", "province": "广西", "note": "中珠医疗" },
+        { "name": "新郑华信民生医院", "province": "河南" },
+        { "name": "海宁康华医院", "province": "浙江", "note": "创新医疗" },
+        { "name": "连云港圣安医院", "province": "江苏" },
+        { "name": "新津志辉医院", "province": "四川" },
+        { "name": "东营新里程老年医院", "province": "山东" }
+      ],
+      "more": "及更多合作医院..."
     },
     "contact": {
       "tag": "联系我们",
@@ -1128,7 +1470,7 @@
       "networked": "连锁透析中心",
       "decisionSupport": "决策支持",
       "aboutUs": "关于我们",
-      "leadership": "领导团队",
+      "centers": "透析中心",
       "news": "新闻",
       "contact": "联系我们"
     },

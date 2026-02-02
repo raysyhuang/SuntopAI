@@ -52,6 +52,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
     medicalRecords: '/images/bp-weight-assistant.jpg',
     labReminder: '/images/lab-reminder.jpg',
     fourItemMonitoring: '/images/four-item-monitoring.jpg',
+    qualityControl: '/images/clinical-stats-evaluation.png',
   }
 
   return (
@@ -104,7 +105,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
         </div>
       </section>
 
-      {/* Clinical Applications Section - Moved here to show value FIRST */}
+      {/* Platform Use Cases Section - Simplified */}
       {t.clinicalApplications && (
         <section className={`relative py-24 ${theme === 'dark' ? 'bg-slate-925' : 'bg-white'}`}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -125,7 +126,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               </p>
             </motion.div>
 
-            <div className="space-y-16">
+            <div className="grid md:grid-cols-3 gap-6">
               {Object.entries(t.clinicalApplications.apps).map(([key, app]: [string, any], index) => (
                 <motion.div
                   key={key}
@@ -133,76 +134,60 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className={`rounded-2xl p-8 md:p-12 ${
+                  className={`rounded-2xl p-6 ${
                     theme === 'dark' 
                       ? 'bg-slate-900/50 border border-slate-800' 
                       : 'bg-gray-50 border border-gray-200'
                   }`}
                 >
-                  <h3 className={`font-display text-2xl md:text-3xl font-semibold mb-3 ${
+                  <h3 className={`font-display text-xl font-semibold mb-3 ${
                     theme === 'dark' ? 'text-white' : 'text-gray-900'
                   }`}>
                     {app.title}
                   </h3>
-                  <p className={`text-lg mb-8 ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
                     {app.description}
                   </p>
-
-                  <div className="grid md:grid-cols-2 gap-8 mb-8">
-                    <div>
-                      <h4 className={`font-semibold mb-4 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`}>
-                        {locale === 'zh-CN' ? '关键成果' : locale === 'zh-TW' ? '關鍵成果' : locale === 'ja' ? '主要成果' : 'Key Outcomes'}
-                      </h4>
-                      <ul className="space-y-2">
-                        {app.outcomes.map((outcome: string, i: number) => (
-                          <li key={i} className={`flex items-start gap-2 text-sm ${
-                            theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-                          }`}>
-                            <span className="text-accent-500 mt-0.5">•</span>
-                            {outcome}
-                          </li>
-                        ))}
-                      </ul>
+                  
+                  {app.capabilities && (
+                    <div className="flex flex-wrap gap-2">
+                      {app.capabilities.map((cap: string, i: number) => (
+                        <span 
+                          key={i}
+                          className={`text-xs px-2 py-1 rounded-full ${
+                            theme === 'dark' 
+                              ? 'bg-accent-900/30 text-accent-400 border border-accent-800/30' 
+                              : 'bg-accent-50 text-accent-700 border border-accent-200'
+                          }`}
+                        >
+                          {cap}
+                        </span>
+                      ))}
                     </div>
-
-                    <div>
-                      <div className="space-y-4">
-                        <div className={`rounded-xl p-4 ${
-                          theme === 'dark' ? 'bg-red-900/20 border border-red-800/30' : 'bg-red-50 border border-red-200'
-                        }`}>
-                          <h5 className={`font-semibold mb-2 text-sm ${theme === 'dark' ? 'text-red-400' : 'text-red-600'}`}>
-                            {t.clinicalApplications.beforeAfter.before}
-                          </h5>
-                          <p className={`text-sm ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>{app.before}</p>
-                        </div>
-                        <div className={`rounded-xl p-4 ${
-                          theme === 'dark' ? 'bg-emerald-900/20 border border-emerald-800/30' : 'bg-emerald-50 border border-emerald-200'
-                        }`}>
-                          <h5 className={`font-semibold mb-2 text-sm ${theme === 'dark' ? 'text-emerald-400' : 'text-emerald-600'}`}>
-                            {t.clinicalApplications.beforeAfter.after}
-                          </h5>
-                          <p className={`text-sm ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>{app.after}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className={`rounded-xl p-6 ${
-                    theme === 'dark' 
-                      ? 'bg-accent-900/10 border border-accent-800/30' 
-                      : 'bg-accent-50 border border-accent-200'
-                  }`}>
-                    <h5 className={`font-semibold mb-2 flex items-center gap-2 ${
-                      theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
-                    }`}>
-                      <Brain className="w-5 h-5" />
-                      {t.clinicalApplications.aiRoleLabel}
-                    </h5>
-                    <p className={`text-sm ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>{app.aiRole}</p>
-                  </div>
+                  )}
                 </motion.div>
               ))}
             </div>
+
+            {/* Link to Clinical Page */}
+            {t.clinicalApplications.learnMore && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-center mt-12"
+              >
+                <Link 
+                  href={`/${locale}/clinical`}
+                  className={`inline-flex items-center gap-2 font-medium ${
+                    theme === 'dark' ? 'text-accent-400 hover:text-accent-300' : 'text-accent-600 hover:text-accent-700'
+                  }`}
+                >
+                  {t.clinicalApplications.learnMore.text}
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
+            )}
           </div>
         </section>
       )}
@@ -402,7 +387,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               ))}
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
               {t.monitoringSystem.features.map((feature: any, index: number) => {
                 const IconComponent = monitoringIcons[feature.icon] || Activity
                 return (
@@ -431,29 +416,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 )
               })}
             </div>
-
-            {/* Monitoring Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
-            >
-              {Object.entries(t.monitoringSystem.stats).map(([key, stat]: [string, any]) => (
-                <div key={key} className={`text-center p-6 rounded-xl ${
-                  theme === 'dark' 
-                    ? 'bg-slate-900/50 border border-slate-800' 
-                    : 'bg-white border border-gray-200 shadow-sm'
-                }`}>
-                  <div className={`text-3xl md:text-4xl font-display font-semibold mb-2 ${
-                    theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
-                  }`}>
-                    {stat.value}
-                  </div>
-                  <div className={`text-sm ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{stat.label}</div>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </section>
       )}
@@ -479,25 +441,25 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-12">
               {[
                 { 
                   icon: Building2, 
+                  title: t.partners.categories.smartCenters, 
+                  value: t.partners.stats.smartCenters,
+                  desc: t.partners.descriptions.smartCenters
+                },
+                { 
+                  icon: Hospital, 
                   title: t.partners.categories.selfOperated, 
                   value: t.partners.stats.selfOperated,
                   desc: t.partners.descriptions.selfOperated
                 },
                 { 
-                  icon: Hospital, 
-                  title: t.partners.categories.publicHospitals, 
-                  value: t.partners.stats.publicHospitals,
-                  desc: t.partners.descriptions.publicHospitals
-                },
-                { 
                   icon: Building, 
-                  title: t.partners.categories.privateHospitals, 
-                  value: t.partners.stats.privateHospitals,
-                  desc: t.partners.descriptions.privateHospitals
+                  title: t.partners.categories.partnerCenters, 
+                  value: t.partners.stats.partnerCenters,
+                  desc: t.partners.descriptions.partnerCenters
                 },
               ].map((item, i) => (
                 <motion.div

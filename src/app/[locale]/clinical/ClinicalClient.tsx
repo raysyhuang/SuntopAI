@@ -264,7 +264,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                   </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   {Object.entries(t.fineManagement.parts.centerManagement.sections).map(([key, section]: [string, any], index) => {
                     const IconComponent = sectionIcons[section.icon] || Shield
                     return (
@@ -370,7 +370,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                   </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   {Object.entries(t.fineManagement.parts.patientManagement.sections).map(([key, section]: [string, any], index) => {
                     const IconComponent = sectionIcons[section.icon] || Heart
                     return (
@@ -478,7 +478,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                   </motion.div>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                   {Object.entries(t.fineManagement.parts.itInfrastructure.sections).map(([key, section]: [string, any], index) => {
                     const IconComponent = sectionIcons[section.icon] || Monitor
                     return (
@@ -536,6 +536,115 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
             </section>
           )}
         </>
+      )}
+
+      {/* Clinical Results / Proven Outcomes */}
+      {t.results && (
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <span className="label-tag mb-6 inline-block">{t.results.tag}</span>
+              <h2 
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {t.results.title}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="max-w-2xl mx-auto text-lg">
+                {t.results.subtitle}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              {Object.entries(t.results.categories).map(([key, category]: [string, any], catIndex) => (
+                <motion.div
+                  key={key}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: catIndex * 0.1 }}
+                  className="rounded-2xl p-6 md:p-8"
+                  style={{ 
+                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                  }}
+                >
+                  <span className="label-tag mb-4 inline-block">{category.tag}</span>
+                  <h3 
+                    className="font-display text-xl md:text-2xl font-semibold mb-2"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                  >
+                    {category.title}
+                  </h3>
+                  <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm mb-6">
+                    {category.subtitle}
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {category.metrics.map((metric: any, index: number) => (
+                      <div 
+                        key={metric.id}
+                        className="rounded-xl p-4"
+                        style={{ 
+                          backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.8)',
+                          boxShadow: theme === 'light' ? '0 2px 8px rgba(0,0,0,0.04)' : 'none',
+                          border: theme === 'dark' ? '1px solid rgba(51,65,85,0.3)' : 'none'
+                        }}
+                      >
+                        <div className="text-xs font-medium mb-2" style={{ color: theme === 'light' ? '#86868b' : '#71717a' }}>
+                          {metric.title}
+                        </div>
+                        <div className="flex items-baseline gap-2 mb-2">
+                          <span 
+                            className="text-lg line-through"
+                            style={{ color: theme === 'light' ? '#d1d1d6' : '#52525b' }}
+                          >
+                            {metric.before}
+                          </span>
+                          <span className="text-lg" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>→</span>
+                          <span 
+                            className="text-2xl font-bold"
+                            style={{ color: '#007d73' }}
+                          >
+                            {metric.after}
+                          </span>
+                          <span className="text-sm" style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
+                            {metric.unit}
+                          </span>
+                        </div>
+                        <div 
+                          className="inline-flex items-center gap-1 text-xs px-2 py-1 rounded-full"
+                          style={{ 
+                            backgroundColor: 'rgba(0,125,115,0.1)',
+                            color: '#007d73'
+                          }}
+                        >
+                          <TrendingUp className="w-3 h-3" />
+                          {metric.improvement}
+                        </div>
+                        <p className="text-xs mt-2" style={{ color: theme === 'light' ? '#86868b' : '#71717a' }}>
+                          {metric.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <p className="text-center text-xs" style={{ color: theme === 'light' ? '#86868b' : '#52525b' }}>
+              {t.results.disclaimer}
+            </p>
+          </div>
+        </section>
       )}
 
       {/* Clinical Gallery */}

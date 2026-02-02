@@ -64,41 +64,38 @@
       "description1": "透析中低血壓(IDH)發生率高達20-30%。容量超負荷導致心血管事件。超過濾率計算不當引起痙攣和血流動力學不穩定。乾體重評估依賴臨床經驗，醫師間差異顯著。",
       "description2": "我們的AI系統分析血壓趨勢、超過濾耐受模式和歷史治療資料，在IDH發生前15-30分鐘預警，優化超過濾曲線，並提供循證的乾體重建議。",
       "clinical": { "title": "IDH預防", "desc": "透過預測性預警，透析中低血壓減少30%" },
-      "operational": { "title": "部署規模", "desc": "50家智慧透析中心，30家自營，3000+台設備" },
+      "operational": { "title": "部署規模", "desc": "30+家自營中心，100+家合作中心，50+家智慧透析中心" },
       "strategic": { "title": "臨床成效", "desc": "Kt/V充分性提升，住院率下降" },
       "longterm": { "title": "發展規劃", "desc": "2026年新增100家，2027年新增150家，目標300家" }
     },
     "router": {
-      "tag": "按角色探索",
-      "title": "選擇您的路徑",
-      "description": "深入了解與您角色最相關的內容",
+      "tag": "深入了解",
+      "title": "探索我們的解決方案",
+      "description": "從技術架構到臨床應用，全方位了解智慧透析平台",
       "doors": {
         "platform": {
-          "title": "平台",
-          "audience": "面向IT總監與CTO",
-          "question": "系統如何整合？",
+          "title": "平台技術",
+          "question": "系統如何運作？",
           "description": "技術架構、設備連接、資料基礎設施和安全設計。",
           "cta": "查看平台"
         },
         "clinical": {
-          "title": "臨床",
-          "audience": "面向醫師與臨床主任",
-          "question": "AI如何支援臨床決策？",
-          "description": "真實臨床應用、決策支援能力和精細化管理實踐。",
+          "title": "臨床應用",
+          "question": "如何提升醫療品質？",
+          "description": "真實臨床場景、決策支援能力和精細化管理實踐。",
           "cta": "查看臨床應用"
         },
         "deployment": {
-          "title": "部署",
-          "audience": "面向營運與CFO",
-          "question": "如何部署和擴展？",
-          "description": "實施流程、供應鏈整合和營運就緒。",
+          "title": "落地部署",
+          "question": "如何快速實施？",
+          "description": "實施流程、供應鏈整合和營運支援。",
           "cta": "查看部署"
         }
       }
     },
     "finalCta": {
       "title": "已經落地，而不是概念",
-      "description": "目前已落地50家智慧透析中心，其中30家為自營透析中心，另有20多家標誌性民營醫院與公立醫院。這是一個已經被真實臨床驗證的系統。"
+      "description": "目前全國佈局30+家自營透析中心，100+家合作中心，其中50+家已升級為智慧透析中心，連接3000+台透析設備。這是一個已經被真實臨床驗證的系統。"
     }
   },
   "platform": {
@@ -638,6 +635,77 @@
     "title": "為真實透析營運而設計",
     "subtitle": "我們的系統旨在以最小干擾和最大彈性整合到現有透析環境中。",
     "statement": "這不是一個概念系統。它是為真實透析環境設計的。",
+    "sectionGroups": {
+      "technical": {
+        "number": "01",
+        "title": "技術方案",
+        "subtitle": "平台架構與部署選項"
+      },
+      "turnkey": {
+        "number": "02",
+        "title": "整體服務",
+        "subtitle": "從規劃到營運的全流程支援"
+      },
+      "supplyChain": {
+        "number": "03",
+        "title": "供應鏈",
+        "subtitle": "設備耗材一站式採購"
+      },
+      "implementation": {
+        "number": "04",
+        "title": "實施保障",
+        "subtitle": "部署流程與安全合規"
+      }
+    },
+    "turnkeyServices": {
+      "tag": "整體建設方案",
+      "title": "從規劃到落地的全流程支援",
+      "subtitle": "我們不只是提供軟體和設備，而是提供透析中心整體建設與升級的全方位服務。",
+      "services": [
+        {
+          "id": "design",
+          "title": "設計規劃",
+          "subtitle": "科學合理的科室規劃設計",
+          "description": "擁有國內外設計師帶領的科室設計團隊，以為腎友創造安全舒適的醫療環境為目標。",
+          "icon": "Compass",
+          "steps": [
+            { "title": "市場調查", "description": "全面細緻的市場調研分析" },
+            { "title": "設備規劃", "description": "根據需求配置最優設備方案" },
+            { "title": "室內設計", "description": "專業新穎的人性化空間設計" },
+            { "title": "需求整合", "description": "綜合資深醫療人才意見" }
+          ],
+          "highlights": ["佈局合理，動線清晰", "符合國家質控標準", "人性化科室設計"]
+        },
+        {
+          "id": "training",
+          "title": "人員培訓",
+          "subtitle": "線上線下全方位培訓體系",
+          "description": "從傳統的科室培訓和醫護人員交流學習，延伸到靈活多樣的線上學習模式。",
+          "icon": "GraduationCap",
+          "steps": [
+            { "title": "專家駐場授課", "description": "專業指導，系統培訓" },
+            { "title": "醫護培訓座談", "description": "分享醫學心得，促進交流" },
+            { "title": "科室進駐實驗", "description": "提升臨床實戰技能" },
+            { "title": "線上學習平台", "description": "醫柔課綱專業培訓系統" }
+          ],
+          "highlights": ["完善的理論與實踐培訓", "多個區域培訓基地", "定期專家講座與國際交流"]
+        },
+        {
+          "id": "operations",
+          "title": "經營管理",
+          "subtitle": "專業靈活的營運管理服務",
+          "description": "每一個環節都將以客戶需求及實際情況作考量，提供全方位管理支援。",
+          "icon": "Settings",
+          "steps": [
+            { "title": "科室制度建立", "description": "標準化部門工作流程" },
+            { "title": "醫護人員管理", "description": "醫療人才招聘與團隊建設" },
+            { "title": "作業流程建立", "description": "高效營運流程設計" },
+            { "title": "資訊化系統管理", "description": "IT系統基礎設施建設" }
+          ],
+          "highlights": ["財務管理顧問", "技術支援服務", "品質控制體系"]
+        }
+      ]
+    },
     "architecture": {
       "tag": "技術架構",
       "title": "平台架構",
@@ -788,23 +856,25 @@
   },
   "company": {
     "tag": "關於我們",
-    "title": "專注於AI在透析領域的深度應用",
-    "subtitle": "我們透過自主研發的透析管理系統，結合客製化大模型、AI Agent與IoT技術，把傳統高度依賴人工經驗的透析治療，升級為智慧透析體系。",
+    "title": "以人為本，服務至上",
+    "subtitle": "杏泰醫療是一家專注於血液透析領域的醫療科技公司，透過資料基礎設施與系統平台，讓透析管理從依賴經驗走向資料驅動。",
     "mission": {
       "title": "使命",
-      "description": "用AI、IoT和大模型，把透析這個高度依賴人工經驗的高風險醫療場景，升級為可預測、可干預、可規模複製的智慧透析系統。"
+      "headline": "以人為本，服務至上",
+      "description": "讓醫護人員專注於需要人類判斷的臨床決策，讓病患獲得更一致、更安全的透析照護。技術是手段，人始終是目的。"
     },
     "vision": {
       "title": "願景",
-      "description": "從輔助駕駛到自動駕駛——讓系統在明確邊界內完成更多標準化決策，醫師更多扮演監管與最終決策角色。"
+      "headline": "提升腎友生活品質，創造中心專業價值",
+      "description": "讓全中國的腎友生命得以延續，進而回歸社會與家庭。"
     },
     "about": {
-      "title": "關於Suntop AI",
+      "title": "關於杏泰醫療",
       "paragraphs": [
-        "我們是一家專注於人工智慧在透析領域深度應用的公司。透過自主研發的透析管理系統，結合客製化大模型、AI Agent與IoT技術，把傳統高度依賴人工經驗的透析治療，升級為更自動化、更個人化、更安全、更高效的智慧透析體系。",
-        "我們從資料源頭入手，將透析機、血壓計、體重計等透析室內核心設備全部物聯網化。已接入3000+台透析設備，實現治療全過程的結構化資料擷取，並深度融合醫院的HIS與LIS系統。",
-        "在此基礎上，我們構建了面向透析場景客製的大模型和自主研發的AI Agent決策系統，形成一條從資料擷取、分析、評估、建議到即時回饋的完整鏈條。",
-        "系統可以在治療過程中持續給醫師提供決策支援，包括處方調整建議、容量與超過濾評估、低血壓等高風險事件的預測與預警。這些建議不是事後分析，而是即時存在於醫師的工作流程中。"
+        "杏泰醫療是一家專注於血液透析領域的醫療科技公司。",
+        "我們秉承「以人為本，服務至上」的創業初心，從產品設備供應、技術支援維護、科室營運管理、臨床醫療照護起步，逐步構建了涵蓋透析全流程的服務體系。在此基礎上，我們自主研發了透析管理系統，將透析機、血壓計、體重計等核心設備全部物聯網化，並融合客製化模型與決策系統，實現從資料擷取、分析、評估、建議到即時回饋的完整閉環。",
+        "目前，我們在全國擁有30餘家自營透析中心和100餘家合作中心，其中50餘家已成功升級為智慧透析中心，連接超過3000台透析設備。系統在治療過程中持續為醫師提供臨床決策支援，包括透析中低血壓預警、超過濾率優化建議、乾體重評估等，這些建議不是事後分析，而是即時嵌入醫師的工作流程。",
+        "我們相信，真正有價值的醫療創新，必須同時提升醫療品質、降低醫療風險、提高營運效率。杏泰醫療正在推動透析管理從「經驗驅動」走向「資料驅動」，讓透析治療更安全、更高效、更可持續。"
       ]
     },
     "values": {
@@ -823,10 +893,234 @@
       "note": "已經落地，而不是概念——這是一個已經被真實臨床驗證的系統。"
     },
     "stats": {
-      "founded": "已落地中心",
+      "founded": "智慧透析中心",
       "team": "自營中心",
-      "partners": "合作醫院",
+      "partners": "合作中心",
       "stations": "已連接設備"
+    },
+    "centers": {
+      "tag": "直營中心網路",
+      "title": "全國透析中心佈局",
+      "subtitle": "涵蓋全國30+家自營透析中心，統一標準、統一管理、統一品質體系",
+      "description": "作為杏泰醫療旗下連鎖透析中心品牌，我們的中心配有全套先進透析設備、雙級反滲淨水系統和經驗豐富的專業醫護團隊，為病患提供持續優質的透析照護。",
+      "viewAll": "查看全部中心",
+      "moreComingSoon": "更多中心持續增加中",
+      "features": {
+        "equipment": "先進設備配置",
+        "equipmentDesc": "全套透析機器設備與雙級反滲淨水系統",
+        "team": "專業醫護團隊",
+        "teamDesc": "經驗豐富的透析專科醫護人員",
+        "environment": "舒適就醫環境",
+        "environmentDesc": "人性化設計，居家式護理體驗"
+      },
+      "centerDetail": {
+        "location": "地址",
+        "contact": "聯繫方式",
+        "area": "面積",
+        "features": "中心特色",
+        "gallery": "中心環境",
+        "backToList": "返回中心列表"
+      },
+      "list": [
+        {
+          "slug": "fuzhou-xingkang",
+          "name": "福州杏康血液透析中心",
+          "shortName": "福州杏康",
+          "city": "福州",
+          "province": "福建",
+          "address": "福建省福州市連江縣鳳城鎮西鳳路3號",
+          "area": "1300㎡",
+          "established": "2018",
+          "description": "福州杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機器和雙級反滲淨水系統，雙重保障透析用水品質，提供超高純度透析用水，給予病患更加安心的醫療照護。",
+          "features": ["個性化設計", "客製化服務", "居家式環境", "高品質中央氧氣供應系統"],
+          "gallery": [
+            "/images/centers/fuzhou-xingkang/1.jpg",
+            "/images/centers/fuzhou-xingkang/2.jpg",
+            "/images/centers/fuzhou-xingkang/3.jpg",
+            "/images/centers/fuzhou-xingkang/4.jpg",
+            "/images/centers/fuzhou-xingkang/5.jpg",
+            "/images/centers/fuzhou-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "anhui-xingkang",
+          "name": "安徽杏康血液透析中心",
+          "shortName": "安徽杏康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市",
+          "description": "安徽杏康血液透析中心秉承杏泰醫療的服務理念，配有先進的透析設備和專業醫護團隊，為安徽地區病患提供優質透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"]
+        },
+        {
+          "slug": "lujiang-xingkang",
+          "name": "廬江杏康血液透析中心",
+          "shortName": "廬江杏康",
+          "city": "廬江",
+          "province": "安徽",
+          "address": "安徽省廬江縣廬巢路108號蓮花商業文化廣場",
+          "area": "1100㎡",
+          "description": "廬江杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機器和雙級反滲淨水系統，為廬江及周邊地區病患提供專業的透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/lujiang-xingkang/1.jpg",
+            "/images/centers/lujiang-xingkang/2.jpg",
+            "/images/centers/lujiang-xingkang/3.jpg",
+            "/images/centers/lujiang-xingkang/4.jpg",
+            "/images/centers/lujiang-xingkang/5.jpg",
+            "/images/centers/lujiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "hefei-pufukang",
+          "name": "合肥普福康血液透析中心",
+          "shortName": "合肥普福康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市",
+          "description": "合肥普福康血液透析中心致力於為合肥市民提供高品質的透析醫療服務，打造舒適的就醫環境。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"]
+        },
+        {
+          "slug": "zhaoqing-xingkang",
+          "name": "肇慶杏康血液透析中心",
+          "shortName": "肇慶杏康",
+          "city": "肇慶",
+          "province": "廣東",
+          "address": "肇慶市端州區建設二路28號盛世大廈",
+          "area": "686㎡",
+          "description": "肇慶杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機器和雙級反滲淨水系統，為肇慶及周邊地區提供專業的透析照護服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/zhaoqing-xingkang/1.jpg",
+            "/images/centers/zhaoqing-xingkang/2.jpg",
+            "/images/centers/zhaoqing-xingkang/3.jpg",
+            "/images/centers/zhaoqing-xingkang/4.jpg",
+            "/images/centers/zhaoqing-xingkang/5.jpg",
+            "/images/centers/zhaoqing-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhongshan-shenkang",
+          "name": "中山腎康血液透析中心",
+          "shortName": "中山腎康",
+          "city": "中山",
+          "province": "廣東",
+          "address": "廣東省中山市石岐區孫文東路88號",
+          "area": "625㎡",
+          "description": "中山腎康血液透析中心配有先進的透析機器和雙級反滲淨水系統，雙重保障透析用水品質，提供超高純度透析用水，給予病患更加安心的醫療照護。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/zhongshan-shenkang/1.jpg",
+            "/images/centers/zhongshan-shenkang/2.jpg",
+            "/images/centers/zhongshan-shenkang/3.jpg",
+            "/images/centers/zhongshan-shenkang/4.jpg",
+            "/images/centers/zhongshan-shenkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "heilongjiang-xingkang",
+          "name": "黑龍江杏康血液透析中心",
+          "shortName": "黑龍江杏康",
+          "city": "哈爾濱",
+          "province": "黑龍江",
+          "address": "哈爾濱市道外區紅旗大街621號",
+          "description": "黑龍江杏康血液透析中心設有腎內科、醫學檢驗科、藥房、超聲、心電等重點科室，為東北地區病患提供專業的透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/heilongjiang-xingkang/1.jpg",
+            "/images/centers/heilongjiang-xingkang/2.jpg",
+            "/images/centers/heilongjiang-xingkang/3.jpg",
+            "/images/centers/heilongjiang-xingkang/4.jpg",
+            "/images/centers/heilongjiang-xingkang/5.jpg",
+            "/images/centers/heilongjiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "harbin-yuhua",
+          "name": "哈爾濱譽華血液透析中心",
+          "shortName": "哈爾濱譽華",
+          "city": "哈爾濱",
+          "province": "黑龍江",
+          "address": "哈爾濱市道外區紅旗大街621號",
+          "area": "2250㎡",
+          "description": "哈爾濱譽華血液透析中心配有先進的透析機器和雙級反滲淨水系統，為哈爾濱及周邊地區提供持續優質化的專業透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/harbin-yuhua/1.jpg",
+            "/images/centers/harbin-yuhua/2.jpg",
+            "/images/centers/harbin-yuhua/3.jpg",
+            "/images/centers/harbin-yuhua/4.jpg",
+            "/images/centers/harbin-yuhua/5.jpg"
+          ]
+        },
+        {
+          "slug": "zhenjiang-xingkang",
+          "name": "鎮江杏康血液透析中心",
+          "shortName": "鎮江杏康",
+          "city": "鎮江",
+          "province": "江蘇",
+          "address": "江蘇省鎮江市",
+          "description": "鎮江杏康血液透析中心為鎮江及周邊地區病患提供專業的透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"]
+        },
+        {
+          "slug": "linshu-xingkang",
+          "name": "臨沭杏康血液透析中心",
+          "shortName": "臨沭杏康",
+          "city": "臨沭",
+          "province": "山東",
+          "address": "山東省臨沂市臨沭縣城常林大街西側",
+          "area": "2000㎡",
+          "description": "臨沭杏康血液透析中心配有先進的透析機器和雙級反滲淨水系統，為臨沭及周邊地區病患提供專業的透析服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/linshu-xingkang/1.jpg",
+            "/images/centers/linshu-xingkang/2.jpg",
+            "/images/centers/linshu-xingkang/3.jpg",
+            "/images/centers/linshu-xingkang/4.jpg",
+            "/images/centers/linshu-xingkang/5.jpg",
+            "/images/centers/linshu-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "liaoning-xingkang",
+          "name": "遼寧杏康血液透析中心",
+          "shortName": "遼寧杏康",
+          "city": "瀋陽",
+          "province": "遼寧",
+          "address": "瀋陽市瀋河區北順城路61號",
+          "area": "1600㎡",
+          "description": "遼寧杏康血液透析中心為遼寧地區病患提供專業的透析照護服務。",
+          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "gallery": [
+            "/images/centers/liaoning-xingkang/1.jpg",
+            "/images/centers/liaoning-xingkang/2.jpg",
+            "/images/centers/liaoning-xingkang/3.jpg",
+            "/images/centers/liaoning-xingkang/4.jpg",
+            "/images/centers/liaoning-xingkang/5.jpg",
+            "/images/centers/liaoning-xingkang/6.jpg"
+          ]
+        }
+      ]
+    },
+    "partners": {
+      "tag": "合作醫院",
+      "title": "全國合作醫院網絡",
+      "subtitle": "攜手優質醫療機構，共同提升透析服務品質",
+      "description": "我們與全國100+家醫院建立了深度合作關係，為更多病患提供專業的透析服務支援。",
+      "list": [
+        { "name": "湖南旺旺醫院", "province": "湖南" },
+        { "name": "浙江新安國際醫院", "province": "浙江" },
+        { "name": "廈門長庚醫院", "province": "福建" },
+        { "name": "廣西玉林市桂南醫院", "province": "廣西", "note": "中珠醫療" },
+        { "name": "新鄭華信民生醫院", "province": "河南" },
+        { "name": "海寧康華醫院", "province": "浙江", "note": "創新醫療" },
+        { "name": "連雲港聖安醫院", "province": "江蘇" },
+        { "name": "新津志輝醫院", "province": "四川" },
+        { "name": "東營新里程老年醫院", "province": "山東" }
+      ],
+      "more": "及更多合作醫院..."
     },
     "contact": {
       "tag": "聯繫我們",
@@ -960,7 +1254,7 @@
       "networked": "網路中心",
       "decisionSupport": "決策支援",
       "aboutUs": "關於我們",
-      "leadership": "領導團隊",
+      "centers": "透析中心",
       "news": "新聞",
       "contact": "聯繫我們"
     },
