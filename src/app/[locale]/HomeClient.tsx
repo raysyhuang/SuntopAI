@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { ArrowRight, Database, Brain, Cog, Shield, TrendingUp, Users, Activity, Zap, Server } from 'lucide-react'
+import { ArrowRight, Database, Brain, Cog, Shield, TrendingUp, Users, Activity, Zap, Server, Cpu, Stethoscope, PackageCheck } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -384,6 +384,91 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 </div>
               ))}
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Three-Door Router Section */}
+      <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <span className="label-tag mb-6 inline-block">{t.router.tag}</span>
+            <h2 className={`font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
+              {t.router.title}
+            </h2>
+            <p className={`text-lg max-w-2xl mx-auto ${
+              theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
+            }`}>
+              {t.router.description}
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Cpu, key: 'platform', href: `/${locale}/platform` },
+              { icon: Stethoscope, key: 'clinical', href: `/${locale}/clinical` },
+              { icon: PackageCheck, key: 'deployment', href: `/${locale}/deployment` },
+            ].map((door, index) => {
+              const doorData = t.router.doors[door.key as keyof typeof t.router.doors]
+              return (
+                <motion.div
+                  key={door.key}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Link 
+                    href={door.href}
+                    className={`block rounded-2xl p-8 h-full transition-all duration-300 ${
+                      theme === 'dark'
+                        ? 'bg-slate-900/50 border border-slate-800/50 hover:border-accent-700/50 hover:bg-slate-900/70'
+                        : 'bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:border-accent-300'
+                    }`}
+                  >
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
+                      theme === 'dark'
+                        ? 'bg-accent-900/30 border border-accent-800/30'
+                        : 'bg-accent-50 border border-accent-200'
+                    }`}>
+                      <door.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                    </div>
+                    
+                    <h3 className={`font-display text-2xl font-semibold mb-4 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {doorData.title}
+                    </h3>
+                    
+                    <p className={`text-lg font-medium mb-4 ${
+                      theme === 'dark' ? 'text-neutral-300' : 'text-gray-700'
+                    }`}>
+                      {doorData.question}
+                    </p>
+                    
+                    <p className={`mb-6 leading-relaxed ${
+                      theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
+                    }`}>
+                      {doorData.description}
+                    </p>
+                    
+                    <div className={`inline-flex items-center gap-2 font-medium ${
+                      theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
+                    }`}>
+                      {doorData.cta}
+                      <ArrowRight size={16} />
+                    </div>
+                  </Link>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>

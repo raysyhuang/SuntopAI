@@ -60,13 +60,41 @@
     },
     "why": {
       "tag": "The Problem We Solve",
-      "title": "Dialysis is a high-frequency, high-risk, experience-dependent medical scenario",
+      "title": "Dialysis is an experience-dependent medical and professional scenario",
       "description1": "Intradialytic hypotension (IDH) occurs in 20-30% of sessions. Volume overload leads to cardiovascular events. UF rate miscalculation causes cramping and hemodynamic instability. Dry weight assessment relies on clinical judgment with significant inter-physician variability.",
       "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events 15-30 minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
       "clinical": { "title": "IDH Prevention", "desc": "30% reduction in intradialytic hypotension through predictive alerts" },
       "operational": { "title": "Deployed Scale", "desc": "50 smart dialysis centers, 30 self-operated, 3,000+ machines" },
       "strategic": { "title": "Clinical Outcomes", "desc": "Improved Kt/V adequacy, reduced hospitalization rates" },
       "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027, targeting 300 total" }
+    },
+    "router": {
+      "tag": "Explore by Role",
+      "title": "Choose Your Path",
+      "description": "Deep-dive into what matters most for your role",
+      "doors": {
+        "platform": {
+          "title": "Platform",
+          "audience": "For IT Directors & CTOs",
+          "question": "How does the system integrate?",
+          "description": "Technical architecture, device connectivity, data infrastructure, and security design.",
+          "cta": "View Platform"
+        },
+        "clinical": {
+          "title": "Clinical",
+          "audience": "For Physicians & Clinical Directors",
+          "question": "How does AI support clinical decisions?",
+          "description": "Real-world clinical applications, decision support capabilities, and refined management practices.",
+          "cta": "View Clinical"
+        },
+        "deployment": {
+          "title": "Deployment",
+          "audience": "For Operations & CFOs",
+          "question": "How do we deploy and scale?",
+          "description": "Implementation process, supply chain integration, and operational readiness.",
+          "cta": "View Deployment"
+        }
+      }
     },
     "finalCta": {
       "title": "Already Deployed, Not Just a Concept",
