@@ -526,14 +526,14 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               className="flex flex-col items-center justify-center"
             >
               <div 
-                className="relative w-64 h-auto cursor-pointer mb-6"
+                className="relative w-80 lg:w-96 h-auto cursor-pointer mb-6"
                 onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
               >
                 <Image 
                   src="/images/health-app/iphone-mockup.png" 
                   alt="App Preview" 
-                  width={256}
-                  height={512}
+                  width={384}
+                  height={768}
                   className="object-contain"
                 />
               </div>
