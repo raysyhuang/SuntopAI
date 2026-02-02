@@ -769,7 +769,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <section 
           id="foot-care" 
           className="py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -828,7 +828,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <section 
           id="skin-care" 
           className="py-24"
-          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
