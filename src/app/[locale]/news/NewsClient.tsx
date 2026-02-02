@@ -1,8 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Calendar, ArrowRight, Building2, Users, Heart, Utensils } from 'lucide-react'
+import { Calendar, ArrowRight, Building2, Users, Heart, Utensils, X } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
@@ -10,6 +11,17 @@ import { useTheme } from '@/components/ThemeProvider'
 interface NewsClientProps {
   locale: Locale
   dictionary: Dictionary
+}
+
+interface NewsItem {
+  id: number
+  category: string
+  icon: React.ComponentType<{ className?: string }>
+  date: string
+  featured: boolean
+  image: string
+  title: string
+  summary: string
 }
 
 const fadeInUp = {
@@ -67,6 +79,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
   const t = dictionary.news
   const content = newsContent[locale] || newsContent.en
   const { theme } = useTheme()
+  const [selectedArticle, setSelectedArticle] = useState<NewsItem | null>(null)
 
   const categories = [
     { id: 'all', label: t.categories.all },
@@ -78,7 +91,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
   const enrichedNewsItems = newsItems.map((item, index) => ({
     ...item,
     ...content[index],
-  }))
+  })) as NewsItem[]
 
   return (
     <div className="relative pt-20">
@@ -170,6 +183,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
+                    onClick={() => setSelectedArticle(item)}
                     className={`group cursor-pointer rounded-2xl overflow-hidden ${
                       theme === 'dark' ? 'bg-slate-800/50 border border-slate-700/50' : 'bg-white shadow-lg'
                     }`}
@@ -233,6 +247,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
+                  onClick={() => setSelectedArticle(item)}
                   className={`flex items-start gap-4 md:gap-6 p-4 md:p-6 rounded-xl transition-all cursor-pointer group ${
                     theme === 'dark' ? 'bg-slate-800/30 border border-slate-700/50 hover:bg-slate-800/50' : 'bg-gray-50 hover:bg-gray-100'
                   }`}
@@ -318,6 +333,73 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
           </motion.div>
         </div>
       </section>
+
+      {/* Article Modal */}
+      {selectedArticle && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          onClick={() => setSelectedArticle(null)}
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className={`relative max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-2xl ${
+              theme === 'dark' ? 'bg-slate-900' : 'bg-white'
+            }`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setSelectedArticle(null)}
+              className={`absolute top-4 right-4 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
+                theme === 'dark' ? 'bg-slate-800 hover:bg-slate-700 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
+              }`}
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Image */}
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src={selectedArticle.image}
+                alt={selectedArticle.title}
+                fill
+                className="object-cover rounded-t-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent rounded-t-2xl" />
+              <div className="absolute bottom-4 left-6 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/20 backdrop-blur-sm">
+                  <selectedArticle.icon className="w-5 h-5 text-white" />
+                </div>
+                <div className="flex items-center gap-2 text-sm text-white/90">
+                  <Calendar className="w-4 h-4" />
+                  {formatDate(selectedArticle.date, locale)}
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 md:p-8">
+              <span 
+                className="text-xs font-medium uppercase tracking-wider mb-3 inline-block"
+                style={{ color: '#007d73' }}
+              >
+                {selectedArticle.category}
+              </span>
+              <h2 className={`font-display text-2xl md:text-3xl font-semibold mb-4 ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>
+                {selectedArticle.title}
+              </h2>
+              <p className={`text-base leading-relaxed ${
+                theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+              }`}>
+                {selectedArticle.summary}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </div>
   )
 }
