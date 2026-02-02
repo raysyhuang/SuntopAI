@@ -1,6 +1,5 @@
-import { getDictionary } from '@/i18n/get-dictionary'
+import { redirect } from 'next/navigation'
 import type { Locale } from '@/i18n/config'
-import PatientCareClient from './PatientCareClient'
 
 export default async function PatientCarePage({
   params,
@@ -8,7 +7,5 @@ export default async function PatientCarePage({
   params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
-  const dictionary = await getDictionary(locale)
-
-  return <PatientCareClient locale={locale} dictionary={dictionary} />
+  redirect(`/${locale}/services#patient-care`)
 }

@@ -1,6 +1,5 @@
-import { getDictionary } from '@/i18n/get-dictionary'
+import { redirect } from 'next/navigation'
 import type { Locale } from '@/i18n/config'
-import VascularAccessClient from './VascularAccessClient'
 
 export default async function VascularAccessPage({
   params,
@@ -8,7 +7,5 @@ export default async function VascularAccessPage({
   params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
-  const dictionary = await getDictionary(locale)
-
-  return <VascularAccessClient locale={locale} dictionary={dictionary} />
+  redirect(`/${locale}/services#vascular-access`)
 }

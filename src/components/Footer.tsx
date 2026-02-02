@@ -26,13 +26,23 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.inCenter, href: `/${locale}/clinical#in-center` },
       { label: t.links.networked, href: `/${locale}/clinical#networked` },
       { label: t.links.decisionSupport, href: `/${locale}/clinical#decision-support` },
-      { label: t.links.patientCare, href: `/${locale}/clinical/patient-care` },
-      { label: t.links.vascularAccess, href: `/${locale}/clinical/vascular-access` },
+    ],
+    deployment: [
+      { label: t.links.architecture, href: `/${locale}/deployment#architecture` },
+      { label: t.links.implementation, href: `/${locale}/deployment#implementation` },
+      { label: t.links.supplyChain, href: `/${locale}/deployment#supply-chain` },
+    ],
+    services: [
+      { label: t.links.vascularAccess, href: `/${locale}/services#vascular-access` },
+      { label: t.links.patientCare, href: `/${locale}/services#patient-care` },
+      { label: t.links.nutrition, href: `/${locale}/services#nutrition` },
+      { label: t.links.footCare, href: `/${locale}/services#foot-care` },
+      { label: t.links.skinCare, href: `/${locale}/services#skin-care` },
+      { label: t.links.training, href: `/${locale}/services#training` },
     ],
     company: [
       { label: t.links.aboutUs, href: `/${locale}/company` },
       { label: t.links.centers, href: `/${locale}/company#centers` },
-      { label: t.links.training, href: `/${locale}/deployment#training` },
       { label: t.links.news, href: `/${locale}/news` },
       { label: t.links.contact, href: `/${locale}/contact` },
     ],
@@ -45,7 +55,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
         : 'bg-gray-50 border-gray-200'
     }`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link href={`/${locale}`} className="flex items-center gap-3 mb-6">
@@ -119,6 +129,52 @@ export default function Footer({ locale, dictionary }: FooterProps) {
             }`}>{t.clinical}</h4>
             <ul className="space-y-3">
               {footerLinks.clinical.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm transition-colors ${
+                      theme === 'dark'
+                        ? 'text-neutral-400 hover:text-accent-400'
+                        : 'text-gray-600 hover:text-accent-600'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Deployment Links */}
+          <div>
+            <h4 className={`font-display font-semibold text-sm mb-4 ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>{t.deployment}</h4>
+            <ul className="space-y-3">
+              {footerLinks.deployment.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm transition-colors ${
+                      theme === 'dark'
+                        ? 'text-neutral-400 hover:text-accent-400'
+                        : 'text-gray-600 hover:text-accent-600'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className={`font-display font-semibold text-sm mb-4 ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>{t.services}</h4>
+            <ul className="space-y-3">
+              {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

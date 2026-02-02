@@ -26,6 +26,7 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
     { href: `/${locale}/platform`, label: dictionary.nav.platform },
     { href: `/${locale}/clinical`, label: dictionary.nav.clinical },
     { href: `/${locale}/deployment`, label: dictionary.nav.deployment },
+    { href: `/${locale}/services`, label: dictionary.nav.services },
     { href: `/${locale}/company`, label: dictionary.nav.company },
     { href: `/${locale}/news`, label: dictionary.nav.news },
     { href: `/${locale}/contact`, label: dictionary.nav.contact },

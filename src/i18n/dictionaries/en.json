@@ -4,6 +4,7 @@
     "platform": "Platform",
     "clinical": "Clinical",
     "deployment": "Deployment",
+    "services": "Services",
     "company": "Company",
     "news": "News",
     "contact": "Contact"
@@ -1123,6 +1124,236 @@
       "button": "Schedule a Discussion"
     }
   },
+  "services": {
+    "tag": "Services",
+    "title": "Technology-Enabled Services, Creating Value",
+    "subtitle": "Beyond treatment itself, providing vascular access, patient care, professional training and more comprehensive service support for kidney patients, while continuously expanding health management services and technology-enabled applications.",
+    "serviceCards": [
+      {
+        "id": "vascular-access",
+        "title": "Vascular Access Services",
+        "description": "AI-assisted vascular access screening, 5G remote consultation, ensuring effective dialysis treatment",
+        "icon": "Activity"
+      },
+      {
+        "id": "patient-care",
+        "title": "Patient Care Services",
+        "description": "Dialysis tourism, patient association events, life doesn't stop for dialysis",
+        "icon": "Heart"
+      },
+      {
+        "id": "nutrition",
+        "title": "Dialysis Nutrition",
+        "description": "Professional nutritionist guidance, personalized meal plans, scientific diet for recovery",
+        "icon": "Utensils"
+      },
+      {
+        "id": "rehabilitation",
+        "title": "Dialysis Rehabilitation",
+        "description": "AI posture analysis, scientific exercise rehabilitation, improving quality of life",
+        "icon": "Dumbbell"
+      },
+      {
+        "id": "foot-care",
+        "title": "Foot Care Services",
+        "description": "Carbonic acid bath, professional foot screening, diabetic foot complication prevention",
+        "icon": "Footprints"
+      },
+      {
+        "id": "skin-care",
+        "title": "Skin Care Services",
+        "description": "Professional products for itching relief and moisturizing dialysis-related skin issues",
+        "icon": "Smile"
+      },
+      {
+        "id": "training",
+        "title": "Professional Training",
+        "description": "Online and offline combined, building professional dialysis medical teams",
+        "icon": "GraduationCap"
+      }
+    ],
+    "vascularAccess": {
+      "tag": "Smart Vascular Access",
+      "title": "AI-Assisted Vascular Access Services",
+      "subtitle": "Following comprehensive vascular access intervention planning, combined with AI-assisted screening and 5G remote consultation, to ensure effective dialysis treatment",
+      "smartFeature": {
+        "tag": "AI-Powered",
+        "title": "AI-Assisted Vascular Access Screening",
+        "description": "Ultrasound devices transmit images in real-time via 5G to our platform, where AI algorithms automatically analyze vascular conditions, identify stenosis risks, and generate standardized assessment reports.",
+        "features": [
+          "5G real-time ultrasound transmission",
+          "AI automatic vascular analysis",
+          "Intelligent stenosis risk detection",
+          "Standardized report generation"
+        ]
+      },
+      "servicesSummary": {
+        "title": "Comprehensive Vascular Access Services",
+        "description": "Providing AI-assisted pre-operative assessment, autologous/prosthetic AV fistula surgery, central venous catheter insertion, thrombosis and aneurysm management, and minimally invasive interventions, ensuring each patient receives the optimal vascular access solution.",
+        "highlights": ["AI-assisted assessment & planning", "Multiple access establishment options", "Complication management & intervention"]
+      }
+    },
+    "patientCare": {
+      "tag": "Patient Care",
+      "title": "Patient Care Services",
+      "subtitle": "Walking together, journey for love. Life doesn't stop for dialysis.",
+      "activitiesSummary": {
+        "title": "Diverse Patient Activities",
+        "description": "We regularly host kidney friend associations, online expert livestreams, holiday celebrations and more, strengthening interaction among medical staff, patients, and families to build a warm dialysis community.",
+        "highlights": ["Patient associations & online interactions", "Holiday events & humanistic care", "Opening ceremonies for new beginnings"]
+      },
+      "smartFeature": {
+        "tag": "Smart Dialysis Tourism",
+        "title": "Dialysis Tourism",
+        "description": "Enabling patients to 'travel while on dialysis' is one of our signature services. Through our smart dialysis platform, patient prescriptions, lab data, and medication records are standardized and transmitted to destination centers, while our smart supply chain synchronizes the same consumables.",
+        "benefits": [
+          "Standardized patient data transfer across centers",
+          "Smart supply chain consumable synchronization",
+          "Nationwide dialysis center network support",
+          "Life doesn't stop for dialysis"
+        ]
+      }
+    },
+    "training": {
+      "tag": "Professional Training",
+      "title": "Professional Training System",
+      "subtitle": "Online and offline combined, building professional dialysis medical teams",
+      "offline": {
+        "title": "Offline Training",
+        "description": "Comprehensive theoretical and practical training system",
+        "pillars": [
+          { "title": "Expert On-Site Teaching", "description": "Professional guidance, systematic instruction" },
+          { "title": "Medical Staff Training Sessions", "description": "Share medical insights, promote exchanges" },
+          { "title": "Department-Based Practice", "description": "Enhance clinical practical skills" },
+          { "title": "Exchange Services", "description": "Gather medical talent, share medical advances" }
+        ]
+      },
+      "online": {
+        "title": "Online Training",
+        "description": "Professional training via Yirou Platform",
+        "link": "Visit Yirou Platform",
+        "features": [
+          { "title": "Medical Knowledge Dissemination", "description": "Regular announcements, livestream teaching" },
+          { "title": "Medical Insights Sharing", "description": "Online interaction, transcending space limitations" },
+          { "title": "Professional Development", "description": "Collaborate with renowned experts" },
+          { "title": "Online Exchange", "description": "Platform-based knowledge connections" }
+        ]
+      }
+    },
+    "rehabilitation": {
+      "tag": "Dialysis Rehabilitation",
+      "title": "Dialysis Rehabilitation Services",
+      "subtitle": "Through AI technology and professional rehabilitation guidance, helping kidney patients improve physical condition and quality of life",
+      "intro": "Dialysis patients often face muscle loss and declining physical fitness. We combine AI posture analysis technology with professional rehabilitation guidance to provide personalized exercise rehabilitation programs.",
+      "smartFeature": {
+        "tag": "AI Powered",
+        "title": "AI Posture & Gait Analysis",
+        "description": "Using AI visual recognition technology, automatically analyze patients' posture and walking gait, assess muscle strength, balance ability, and motor function to provide scientific basis for personalized rehabilitation plans.",
+        "features": [
+          "AI automatic posture analysis",
+          "Gait and motor function assessment",
+          "Muscle strength and balance detection",
+          "Rehabilitation progress tracking and comparison"
+        ]
+      },
+      "services": [
+        { "title": "Posture Assessment", "description": "AI-assisted analysis of patient standing and sitting posture, identifying muscle imbalance and postural abnormalities" },
+        { "title": "Gait Detection", "description": "Assess lower limb function, balance ability, and fall risk through walking analysis" },
+        { "title": "Personalized Rehabilitation", "description": "Develop exercise rehabilitation plans tailored to patient's physical condition based on assessment results" },
+        { "title": "Rehabilitation Guidance", "description": "Professional rehabilitation therapists provide on-site guidance to ensure safe and effective exercise" },
+        { "title": "Equipment Training", "description": "Professional rehabilitation equipment for systematic physical training" },
+        { "title": "Progress Tracking", "description": "Regular re-evaluation and dynamic adjustment of training plans based on rehabilitation progress" }
+      ],
+      "benefits": {
+        "title": "Benefits of Rehabilitation Training",
+        "items": [
+          { "title": "Improve Muscle Strength", "description": "Combat dialysis-related muscle loss, maintain and enhance muscle function" },
+          { "title": "Enhance Cardiopulmonary Function", "description": "Moderate aerobic exercise improves cardiovascular health and exercise endurance" },
+          { "title": "Increase Balance Ability", "description": "Reduce fall risk and improve safety in daily activities" },
+          { "title": "Improve Quality of Life", "description": "Enhance mental state and independence, boost confidence" }
+        ]
+      }
+    },
+    "nutrition": {
+      "tag": "Dialysis Nutrition",
+      "title": "Dialysis Nutrition Management",
+      "subtitle": "Proper nutrition is not only key to maintaining body function, but also a powerful weapon for improving quality of life and fighting disease",
+      "brand": "XinXiWang",
+      "intro": "In partnership with 'XinXiWang' nutrition brand, we provide professional nutrition management services. Through the 'Nutrition Defense' campaign, medical staff provide bedside education while professional nutritionists share nutrition knowledge.",
+      "smartFeature": {
+        "tag": "Smart Nutrition",
+        "title": "Intelligent Nutritional Assessment",
+        "description": "The system automatically integrates patient lab results, dialysis parameters, and dietary records to calculate nutritional status scores, identify malnutrition risks, and generate personalized protein intake and dietary improvement recommendations.",
+        "features": [
+          "Multi-dimensional nutritional indicator analysis",
+          "Intelligent nutritional status scoring",
+          "Precise protein intake calculation",
+          "Personalized meal plan generation"
+        ]
+      },
+      "services": [
+        {
+          "title": "Professional Guidance, Interactive Sessions",
+          "description": "Professional nutritionists provide targeted education activities, offering precise nutrition knowledge. Nutritionists address common misconceptions among dialysis patients, such as improper protein intake, poor fluid control, and excessive potassium and phosphorus intake."
+        },
+        {
+          "title": "Bedside Education, Personalized Service",
+          "description": "During daily dialysis sessions, medical staff provide bedside education, accompanying patients during treatment while educating on dietary knowledge, reinforcing understanding and memory of nutritional guidelines."
+        },
+        {
+          "title": "One-on-One Professional Consultation",
+          "description": "Patients can communicate face-to-face with nutritionists, raising questions and concerns about their diet, receiving personalized professional answers and suggestions to improve dietary treatment compliance."
+        }
+      ],
+      "importance": {
+        "title": "Why Dietary Management Matters",
+        "items": [
+          { "title": "Maintain Nutritional Balance", "description": "Dialysis causes nutrient loss. Proper dietary management supplements protein, vitamins and other nutrients, maintaining nitrogen balance and boosting immunity." },
+          { "title": "Control Metabolic Waste", "description": "By controlling dietary potassium and phosphorus intake, metabolic waste production is reduced, easing kidney burden and avoiding complications like hyperkalemia and hyperphosphatemia." },
+          { "title": "Improve Cardiovascular Function", "description": "Proper diet helps control blood lipids and blood pressure, reducing cardiovascular disease risk." }
+        ]
+      },
+      "tips": {
+        "title": "Nutrition Supplement Guidelines",
+        "items": [
+          { "title": "Individualized Approach", "description": "Develop personalized nutrition plans based on patient age, weight, dialysis method, residual kidney function and complications" },
+          { "title": "Balanced Diet", "description": "Diversify food choices, properly combine various nutrients, avoid excess or deficiency of single foods" },
+          { "title": "Monitor and Adjust", "description": "Regularly monitor blood counts, biochemical markers, and nutritional indicators, adjusting nutrition plans based on results" }
+        ]
+      }
+    },
+    "footCare": {
+      "tag": "Foot Care",
+      "title": "Diabetic Foot Care Services",
+      "subtitle": "Establishing regular foot screening protocols combined with carbonic acid bath therapy for professional foot health management",
+      "intro": "Diabetic foot is a common complication among dialysis patients. We establish comprehensive foot screening protocols, checking lower limb arterial pulses, skin color, cracks, nail conditions, combined with ankle-brachial index testing for risk level assessment.",
+      "services": [
+        { "title": "Foot Health Screening", "description": "Regular checks of lower limb arterial pulses, skin conditions, nail health, maintaining complete foot health records" },
+        { "title": "Risk Level Assessment", "description": "Combined with ankle-brachial index (ABI) testing, automatic risk classification by the system" },
+        { "title": "Carbonic Acid Bath", "description": "Professional carbonic acid bath therapy promoting lower limb circulation and improving foot conditions" },
+        { "title": "High-Risk Monitoring", "description": "Priority monitoring for high-risk patients, wound photography and comparison analysis" }
+      ],
+      "highlights": ["Regular screening & risk assessment", "Professional carbonic bath care", "AI-assisted image comparison"]
+    },
+    "skinCare": {
+      "tag": "Skin Care",
+      "title": "Dialysis Skin Care Services",
+      "subtitle": "Professional products and care plans addressing common skin concerns in dialysis patients",
+      "brand": "Ecoand",
+      "intro": "In partnership with 'Ecoand' professional skin care brand, we provide targeted skin care products and solutions for dialysis patients, addressing common issues like skin itching and moisturizing difficulties.",
+      "services": [
+        { "title": "Itch Management", "description": "Professional anti-itch products and care guidance for dialysis-related skin itching" },
+        { "title": "Moisturizing Care", "description": "Professional moisturizing products to improve skin dryness and restore skin barrier function" },
+        { "title": "Skin Health Assessment", "description": "Regular skin condition evaluation to develop personalized care plans" }
+      ],
+      "highlights": ["Professional anti-itch products", "Deep moisturizing care", "Personalized care plans"]
+    },
+    "cta": {
+      "title": "Learn More About Our Services",
+      "description": "Our professional team is ready to provide consultation and service support.",
+      "button": "Contact Us"
+    }
+  },
   "company": {
     "tag": "About Us",
     "title": "People First, Service Above All",
@@ -1536,6 +1767,8 @@
     "description": "AI-driven dialysis intelligence and automation. Building the operating system for next-generation dialysis care.",
     "platform": "Platform",
     "clinical": "Clinical",
+    "deployment": "Deployment",
+    "services": "Services",
     "company": "Company",
     "links": {
       "techOverview": "Technology Overview",
@@ -1545,9 +1778,16 @@
       "inCenter": "Center Management",
       "networked": "Patient Management",
       "decisionSupport": "IT Infrastructure",
-      "patientCare": "Patient Care",
+      "architecture": "Architecture",
+      "implementation": "Implementation",
+      "supplyChain": "Smart Supply Chain",
       "vascularAccess": "Vascular Access",
-      "training": "Staff Training",
+      "patientCare": "Patient Care",
+      "rehabilitation": "Dialysis Rehab",
+      "nutrition": "Dialysis Nutrition",
+      "footCare": "Foot Care",
+      "skinCare": "Skin Care",
+      "training": "Professional Training",
       "aboutUs": "About Us",
       "centers": "Dialysis Centers",
       "news": "News",
