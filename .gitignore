@@ -46,5 +46,8 @@ next-env.d.ts
 # Video projects (Remotion)
 video/
 
+# PDF slides generator
+pdf-slides/
+
 # Reference materials (not for production)
 references/

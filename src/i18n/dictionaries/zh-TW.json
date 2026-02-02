@@ -58,6 +58,17 @@
       "monitoring": "資料採集頻率",
       "stations": "已連接透析設備"
     },
+    "clinicalHighlights": {
+      "tag": "臨床驗證",
+      "title": "真實數據，真實改善",
+      "items": [
+        { "value": "60%", "label": "休克前期患者下降", "detail": "22.4% → 9.0%" },
+        { "value": "70%", "label": "化驗評估效率提升", "detail": "8.3分鐘 → 2.5分鐘" },
+        { "value": "71%", "label": "缺鐵患者比例下降", "detail": "74.0% → 21.1%" },
+        { "value": "37%", "label": "腎性骨病患者下降", "detail": "48.4% → 30.7%" }
+      ],
+      "cta": "查看完整成效數據"
+    },
     "why": {
       "tag": "我們解決的問題",
       "title": "透析是強依賴經驗的醫療和專業場景",
@@ -291,19 +302,19 @@
       "title": "已導入醫院列表",
       "description": "已有眾多標杆性醫院成功導入我們的數位化血液透析管理平台",
       "categories": {
-        "selfOperated": "自營透析中心",
-        "publicHospitals": "公立醫院",
-        "privateHospitals": "民營醫院"
+        "smartCenters": "智慧透析中心",
+        "selfOperated": "自營中心",
+        "partnerCenters": "合作中心"
       },
       "stats": {
-        "selfOperated": "50+",
-        "publicHospitals": "20+",
-        "privateHospitals": "30+"
+        "smartCenters": "50+",
+        "selfOperated": "30+",
+        "partnerCenters": "100+"
       },
       "descriptions": {
-        "selfOperated": "自營智慧透析中心",
-        "publicHospitals": "標杆性公立醫院",
-        "privateHospitals": "知名民營醫院"
+        "smartCenters": "已智慧化升級",
+        "selfOperated": "自營透析中心",
+        "partnerCenters": "合作醫院與機構"
       },
       "cta": {
         "title": "加入我們的合作網路",
@@ -370,6 +381,10 @@
           "after": "AI合成的洞察與趨勢分析和風險分層",
           "aiRole": "將多次會話患者資料合成為可操作的洞察，以優化治療和風險分層。"
         }
+      },
+      "learnMore": {
+        "text": "了解詳細臨床應用與成效",
+        "link": "查看臨床應用"
       }
     },
     "crossLinks": {
@@ -600,6 +615,82 @@
         }
       }
     },
+    "results": {
+      "tag": "臨床驗證",
+      "title": "真實數據，真實改善",
+      "subtitle": "來自實際部署中心的可量化改善成果",
+      "categories": {
+        "rounds": {
+          "tag": "數位查房",
+          "title": "數位查房成效",
+          "subtitle": "數位化查房系統改善血壓管理與風險預防",
+          "metrics": [
+            {
+              "id": "bp",
+              "title": "透析前收縮壓",
+              "before": "145±22",
+              "after": "141±21",
+              "unit": "mmHg",
+              "improvement": "改善",
+              "description": "透析前血壓有效管控"
+            },
+            {
+              "id": "shock",
+              "title": "休克前期患者",
+              "before": "22.4",
+              "after": "9.0",
+              "unit": "%",
+              "improvement": "減少60%",
+              "description": "高危休克前期患者顯著減少"
+            }
+          ]
+        },
+        "labs": {
+          "tag": "化驗評估",
+          "title": "化驗結果評估成效",
+          "subtitle": "AI輔助化驗分析提升效率與患者管理",
+          "metrics": [
+            {
+              "id": "time",
+              "title": "化驗評估時間",
+              "before": "8.3",
+              "after": "2.5",
+              "unit": "分鐘/人",
+              "improvement": "縮短70%",
+              "description": "單位患者化驗評估時間大幅縮短"
+            },
+            {
+              "id": "anemia",
+              "title": "貧血率",
+              "before": "60.9",
+              "after": "41.3",
+              "unit": "%",
+              "improvement": "下降32%",
+              "description": "貧血管理顯著改善"
+            },
+            {
+              "id": "iron",
+              "title": "鐵缺乏率",
+              "before": "74.0",
+              "after": "21.1",
+              "unit": "%",
+              "improvement": "下降71%",
+              "description": "鐵劑補充更加精準及時"
+            },
+            {
+              "id": "bone",
+              "title": "腎性骨病率",
+              "before": "48.4",
+              "after": "30.7",
+              "unit": "%",
+              "improvement": "下降37%",
+              "description": "骨代謝異常有效管控"
+            }
+          ]
+        }
+      },
+      "disclaimer": "數據來自實際部署中心，結果可能因中心而異。"
+    },
     "gallery": {
       "tag": "實景展示",
       "title": "臨床一線與患者關懷",
@@ -657,6 +748,56 @@
         "subtitle": "部署流程與安全合規"
       }
     },
+    "architecture": {
+      "tag": "技術架構",
+      "title": "透析物聯網 + AI中樞",
+      "subtitle": "三層架構協同工作，將透析資料轉化為臨床智能",
+      "layers": [
+        {
+          "id": "iot",
+          "title": "設備物聯層",
+          "icon": "Wifi",
+          "description": "連接透析機、血壓計、體重秤等設備，即時採集治療資料，自動傳輸至系統。",
+          "features": ["多廠商設備相容", "高頻資料採集", "自動傳輸免錄入", "設備狀態監控"]
+        },
+        {
+          "id": "ai",
+          "title": "AI智能層",
+          "icon": "Brain",
+          "description": "分析透析資料，產生風險預測與臨床建議。",
+          "features": ["透析中低血壓預測", "超濾最佳化", "個性化建議", "早期預警"]
+        },
+        {
+          "id": "app",
+          "title": "應用層",
+          "icon": "Layers",
+          "description": "直接整合到醫師工作流程的洞察、警示與決策支援。",
+          "features": ["即時警示", "臨床報告", "品質儀表板", "行動存取"]
+        }
+      ]
+    },
+    "deployment": {
+      "tag": "部署方式",
+      "title": "靈活的部署選項",
+      "subtitle": "根據您的基礎設施和合規要求，選擇最適合的部署方式",
+      "options": [
+        {
+          "title": "雲端部署",
+          "icon": "Cloud",
+          "description": "低成本快速上線，系統即時更新，適合連鎖或跨機構協作。"
+        },
+        {
+          "title": "本地部署",
+          "icon": "Server",
+          "description": "滿足嚴格資料儲存要求，自主資料運維，完全資料自主可控。"
+        },
+        {
+          "title": "混合部署",
+          "icon": "GitMerge",
+          "description": "兼顧管理效率與資料安全，核心資料本地儲存，應用層雲端部署。"
+        }
+      ]
+    },
     "turnkeyServices": {
       "tag": "整體建設方案",
       "title": "從規劃到落地的全流程支援",
@@ -708,46 +849,31 @@
     },
     "architecture": {
       "tag": "技術架構",
-      "title": "平台架構",
-      "description": "三個整合層協同工作，將透析資料轉化為臨床智能和安全自動化。",
-      "layers": {
-        "data": {
-          "title": "設備與資料層",
-          "subtitle": "安全自動化的基礎",
-          "description": "我們連接透析設備、生命體徵設備和臨床系統，在整個治療過程中創建統一的即時資料層。",
-          "signal": "該層確保在每次治療期間進行可靠、結構化和連續的資料採集。",
-          "capabilities": [
-            "多廠商透析設備",
-            "血壓監測儀和生命體徵",
-            "高頻串流資料",
-            "安全設備連接"
-          ]
+      "title": "透析物聯網 + AI中樞",
+      "subtitle": "三層架構協同工作，將透析資料轉化為臨床智能",
+      "layers": [
+        {
+          "id": "iot",
+          "title": "設備物聯層",
+          "icon": "Wifi",
+          "description": "連接透析機、血壓計、體重秤等設備，即時採集治療資料，自動傳輸至系統。",
+          "features": ["多廠商設備相容", "高頻資料採集", "自動傳輸免錄入", "設備狀態監控"]
         },
-        "intelligence": {
-          "title": "智能層",
-          "subtitle": "基於真實資料構建的臨床智能",
-          "description": "我們的AI模型分析趨勢、檢測風險模式，並在透析過程中而非併發症發生後生成臨床相關洞察。",
-          "signal": "系統增強而非取代臨床判斷。",
-          "capabilities": [
-            "透析中血壓趨勢分析",
-            "超過濾風險檢測",
-            "個性化參數推薦",
-            "不良事件早期預警信號"
-          ]
+        {
+          "id": "ai",
+          "title": "AI智能層",
+          "icon": "Brain",
+          "description": "分析透析資料，產生風險預測與臨床建議。",
+          "features": ["透析中低血壓預測", "超濾最佳化", "個性化建議", "早期預警"]
         },
-        "automation": {
-          "title": "自動化與控制層",
-          "subtitle": "帶護欄的執行",
-          "description": "我們實現輔助控制、協議執行和遠端監督，在保持臨床醫師控制權的同時減少差異和營運負擔。",
-          "signal": "自動化僅在安全性、可預測性和臨床共識存在的情況下應用。",
-          "capabilities": [
-            "輔助透析參數調整",
-            "基於協議的自動化",
-            "工作流程標準化",
-            "遠端監測和監督"
-          ]
+        {
+          "id": "app",
+          "title": "應用層",
+          "icon": "Layers",
+          "description": "直接整合到醫師工作流程的洞察、警示與決策支援。",
+          "features": ["即時警示", "臨床報告", "品質儀表板", "行動存取"]
         }
-      }
+      ]
     },
     "differentiators": {
       "title": "我們平台的優勢",
@@ -772,8 +898,9 @@
       ]
     },
     "process": {
-      "title": "部署流程",
-      "description": "結構化、臨床監督下的實施方法。",
+      "tag": "實施流程",
+      "title": "結構化部署流程",
+      "subtitle": "分階段實施，確保平穩過渡",
       "steps": [
         { "step": "01", "title": "評估", "description": "評估目前基礎設施、設備相容性和整合要求。" },
         { "step": "02", "title": "試點部署", "description": "在選定的透析站進行有限部署，驗證整合和臨床工作流程。" },
@@ -782,22 +909,15 @@
       ]
     },
     "security": {
-      "tag": "安全與合規",
-      "title": "企業級安全",
-      "description": "醫療資料需要最高級別的保護。我們的平台將安全和合規作為基礎要求而非事後考慮。",
+      "tag": "安全合規",
+      "title": "醫療級資料安全",
+      "subtitle": "符合醫療資料安全標準，保障患者隱私",
       "features": [
-        "所有資料端到端加密",
-        "基於角色的存取控制",
-        "稽核日誌和可追溯性",
-        "定期安全評估",
-        "合規就緒架構"
-      ],
-      "stats": {
-        "encryption": { "label": "資料加密", "value": "AES-256" },
-        "access": { "label": "存取控制", "value": "RBAC" },
-        "audit": { "label": "稽核日誌", "value": "完整" },
-        "compliance": { "label": "合規性", "value": "就緒" }
-      }
+        { "title": "資料加密", "value": "AES-256端到端加密" },
+        { "title": "存取控制", "value": "基於角色的權限管理" },
+        { "title": "稽核追溯", "value": "完整操作日誌記錄" },
+        { "title": "合規就緒", "value": "符合醫療資料法規要求" }
+      ]
     },
     "supplyChain": {
       "tag": "智慧供應鏈",
@@ -834,6 +954,21 @@
         "waste": { "label": "耗材浪費減少", "value": "35%" },
         "downtime": { "label": "設備停機減少", "value": "60%" },
         "efficiency": { "label": "營運效率提升", "value": "40%" }
+      },
+      "suppliers": {
+        "tag": "合作夥伴",
+        "title": "供應鏈合作夥伴",
+        "subtitle": "與國內外領先醫療器材廠商建立長期策略合作",
+        "list": [
+          { "name": "貝恩醫療", "nameEn": "BAIN MEDICAL" },
+          { "name": "日本東麗", "nameEn": "TORAY" },
+          { "name": "費森尤斯", "nameEn": "FRESENIUS" },
+          { "name": "尼普洛", "nameEn": "NIPRO" },
+          { "name": "波士頓科學", "nameEn": "BOSTON SCIENTIFIC" },
+          { "name": "三鑫醫療", "nameEn": "SANXIN" },
+          { "name": "寶萊特", "nameEn": "BIOLIGHT" },
+          { "name": "天益醫療", "nameEn": "TIANYI" }
+        ]
       }
     },
     "crossLinks": {
