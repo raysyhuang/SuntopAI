@@ -265,37 +265,23 @@
       }
     },
     "monitoringSystem": {
-      "tag": "Dialysis Central Monitoring System",
-      "title": "Smart Monitoring: From Rounds to Early Warning",
-      "subtitle": "Real-time data capture, tiered early warnings, centralized visualization",
-      "description": "Data from dialysis machines, blood pressure monitors, and scales can be uploaded automatically in real time and displayed centrally. Algorithms analyze vital signs and dialysis parameters to highlight abnormal trends and generate tiered early warnings. This supports earlier recognition and timely clinical response within established workflows.",
-      "features": [
-        {
-          "title": "Real-Time Data Synchronization",
-          "icon": "Activity",
-          "description": "Dialysis machine and vital-sign device data can be uploaded and synchronized automatically to reduce manual entry and improve timeliness."
-        },
-        {
-          "title": "Tiered Risk Alerts",
-          "icon": "AlertTriangle",
-          "description": "Risk status is visualized with tiered, color-coded indicators so abnormal trends can be recognized at a glance."
-        },
-        {
-          "title": "Central Monitoring Dashboard",
-          "icon": "Monitor",
-          "description": "A centralized view of patient status helps staff quickly identify which stations may require attention."
-        },
-        {
-          "title": "Smart Bedside Terminal",
-          "icon": "Cpu",
-          "description": "A bedside terminal integrated into the workflow to present real-time data, reminders, and decision-support prompts."
-        }
-      ],
-      "stats": {
-        "response": { "label": "Response Time", "value": "<30s" },
-        "coverage": { "label": "Monitoring Coverage", "value": "100%" },
-        "alerts": { "label": "Alert Accuracy", "value": "95%" },
-        "uptime": { "label": "System Uptime", "value": "99.9%" }
+      "centralMonitoring": {
+        "tag": "Central Monitoring System",
+        "title": "Smart Monitoring: From Rounds to Early Warning",
+        "description": "Risk status is visualized with tiered, color-coded indicators so abnormal trends can be recognized at a glance. A centralized view of patient status helps staff quickly identify which stations may require attention.",
+        "images": [
+          { "label": "Central Monitoring System" },
+          { "label": "Treatment Status Monitoring" }
+        ]
+      },
+      "bedsideTerminal": {
+        "tag": "Smart Bedside Terminal",
+        "title": "Intelligent Bedside Terminal for Clinical Workflow",
+        "description": "A bedside terminal integrated into the workflow to present real-time data, reminders, and decision-support prompts. Dialysis machine and vital-sign device data can be uploaded and synchronized automatically to reduce manual entry and improve timeliness.",
+        "images": [
+          { "label": "Smart Bedside Terminal" },
+          { "label": "Four-Item Monitoring" }
+        ]
       }
     },
     "partners": {

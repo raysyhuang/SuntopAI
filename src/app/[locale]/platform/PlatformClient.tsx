@@ -33,12 +33,6 @@ const moduleIcons: { [key: string]: any } = {
   fourItemMonitoring: Monitor,
 }
 
-const monitoringIcons: { [key: string]: any } = {
-  Activity: Activity,
-  AlertTriangle: AlertTriangle,
-  Monitor: Monitor,
-  Cpu: Cpu,
-}
 
 export default function PlatformClient({ locale, dictionary }: PlatformClientProps) {
   const t = dictionary.platform
@@ -330,92 +324,108 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
       {t.monitoringSystem && (
         <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <span className="label-tag mb-4 inline-block">{t.monitoringSystem.tag}</span>
-              <h2 
-                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-3"
-                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            {/* Central Monitoring Subsection */}
+            {t.monitoringSystem.centralMonitoring && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-20"
               >
-                {t.monitoringSystem.title}
-              </h2>
-              <p className="text-lg mb-4 font-medium" style={{ color: '#007d73' }}>{t.monitoringSystem.subtitle}</p>
-              <p 
-                className="max-w-3xl mx-auto text-lg"
-                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-              >
-                {t.monitoringSystem.description}
-              </p>
-            </motion.div>
-
-            {/* Monitoring System Images Gallery */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-6 mb-12"
-            >
-              {[
-                { src: '/images/central-monitoring.jpg', label: locale === 'zh-CN' ? '中央监控系统' : locale === 'zh-TW' ? '中央監控系統' : locale === 'ja' ? '中央監視システム' : 'Central Monitoring System' },
-                { src: '/images/monitoring-treatment-status.jpg', label: locale === 'zh-CN' ? '治疗状态监控' : locale === 'zh-TW' ? '治療狀態監控' : locale === 'ja' ? '治療状態監視' : 'Treatment Status Monitoring' },
-                { src: '/images/smart-terminal.jpg', label: locale === 'zh-CN' ? '智慧床旁终端' : locale === 'zh-TW' ? '智慧床旁終端' : locale === 'ja' ? 'スマートベッドサイド端末' : 'Smart Bedside Terminal' },
-                { src: '/images/four-item-monitoring.jpg', label: locale === 'zh-CN' ? '四项监测' : locale === 'zh-TW' ? '四項監測' : locale === 'ja' ? '4項目モニタリング' : 'Four-Item Monitoring' },
-              ].map((item, i) => (
-                <div 
-                  key={i} 
-                  className="rounded-2xl overflow-hidden"
-                  style={{ 
-                    backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.8)',
-                    boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
-                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
-                  }}
-                >
-                  <img src={item.src} alt={item.label} className="w-full h-64 object-cover" />
-                  <div className="p-4">
-                    <p 
-                      className="font-medium"
-                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-                    >
-                      {item.label}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
-
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
-              {t.monitoringSystem.features.map((feature: any, index: number) => {
-                const IconComponent = monitoringIcons[feature.icon] || Activity
-                return (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`text-center rounded-2xl p-6 ${
-                      theme === 'dark' 
-                        ? 'bg-slate-900/50 border border-slate-800/50' 
-                        : 'bg-white border border-gray-200 shadow-sm'
-                    }`}
+                <div className="text-center mb-10">
+                  <span className="label-tag mb-4 inline-block">{t.monitoringSystem.centralMonitoring.tag}</span>
+                  <h2 
+                    className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
                   >
-                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 ${
-                      theme === 'dark' 
-                        ? 'bg-accent-900/30 border border-accent-800/30' 
-                        : 'bg-accent-50 border border-accent-200'
-                    }`}>
-                      <IconComponent className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                    {t.monitoringSystem.centralMonitoring.title}
+                  </h2>
+                  <p 
+                    className="max-w-3xl mx-auto text-lg"
+                    style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                  >
+                    {t.monitoringSystem.centralMonitoring.description}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { src: '/images/central-monitoring.jpg', label: t.monitoringSystem.centralMonitoring.images[0].label },
+                    { src: '/images/monitoring-treatment-status.jpg', label: t.monitoringSystem.centralMonitoring.images[1].label },
+                  ].map((item, i) => (
+                    <div 
+                      key={i} 
+                      className="rounded-2xl overflow-hidden"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.8)',
+                        boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
+                        border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                      }}
+                    >
+                      <img src={item.src} alt={item.label} className="w-full h-64 object-cover" />
+                      <div className="p-4">
+                        <p 
+                          className="font-medium"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {item.label}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className={`font-display font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{feature.title}</h3>
-                    <p className={`text-sm ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{feature.description}</p>
-                  </motion.div>
-                )
-              })}
-            </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+
+            {/* Bedside Terminal Subsection */}
+            {t.monitoringSystem.bedsideTerminal && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center mb-10">
+                  <span className="label-tag mb-4 inline-block">{t.monitoringSystem.bedsideTerminal.tag}</span>
+                  <h2 
+                    className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                  >
+                    {t.monitoringSystem.bedsideTerminal.title}
+                  </h2>
+                  <p 
+                    className="max-w-3xl mx-auto text-lg"
+                    style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                  >
+                    {t.monitoringSystem.bedsideTerminal.description}
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {[
+                    { src: '/images/smart-terminal.jpg', label: t.monitoringSystem.bedsideTerminal.images[0].label },
+                    { src: '/images/four-item-monitoring.jpg', label: t.monitoringSystem.bedsideTerminal.images[1].label },
+                  ].map((item, i) => (
+                    <div 
+                      key={i} 
+                      className="rounded-2xl overflow-hidden"
+                      style={{ 
+                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.8)',
+                        boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
+                        border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
+                      }}
+                    >
+                      <img src={item.src} alt={item.label} className="w-full h-64 object-cover" />
+                      <div className="p-4">
+                        <p 
+                          className="font-medium"
+                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                        >
+                          {item.label}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </div>
         </section>
       )}
