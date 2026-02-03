@@ -254,14 +254,44 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4">
+            {/* Mobile: 2x2 Grid Layout */}
+            <div className="grid grid-cols-2 gap-6 md:hidden">
               {[
                 { icon: Server, ...t.flow.steps.machines },
                 { icon: Database, ...t.flow.steps.data },
                 { icon: Brain, ...t.flow.steps.ai },
                 { icon: Cog, ...t.flow.steps.automation },
               ].map((step, index) => (
-                <div key={step.label} className="flex items-center gap-4 md:gap-8">
+                <motion.div
+                  key={step.label}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex flex-col items-center text-center"
+                >
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-3 ${
+                    theme === 'dark'
+                      ? 'bg-slate-900 border border-slate-700 glow-accent'
+                      : 'bg-white border border-gray-200 shadow-lg'
+                  }`}>
+                    <step.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                  </div>
+                  <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{step.label}</span>
+                  <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Desktop: Horizontal Flow with Arrows */}
+            <div className="hidden md:flex items-center justify-between gap-4">
+              {[
+                { icon: Server, ...t.flow.steps.machines },
+                { icon: Database, ...t.flow.steps.data },
+                { icon: Brain, ...t.flow.steps.ai },
+                { icon: Cog, ...t.flow.steps.automation },
+              ].map((step, index) => (
+                <div key={step.label} className="flex items-center gap-8">
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -280,9 +310,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                     <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
                   </motion.div>
                   {index < 3 && (
-                    <div className="hidden md:block">
-                      <ArrowRight className={`w-6 h-6 ${theme === 'dark' ? 'text-accent-600' : 'text-accent-500'}`} />
-                    </div>
+                    <ArrowRight className={`w-6 h-6 ${theme === 'dark' ? 'text-accent-600' : 'text-accent-500'}`} />
                   )}
                 </div>
               ))}

@@ -353,30 +353,31 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`p-8 rounded-2xl mb-12 ${
+            className={`p-6 md:p-8 rounded-2xl mb-12 ${
               theme === 'dark' ? 'bg-slate-800/50' : 'bg-white shadow-sm'
             }`}
           >
-            <div className="flex items-start gap-6">
-              <div className="grid grid-cols-3 gap-2 flex-shrink-0">
+            <div className="flex flex-col md:flex-row md:items-start gap-6">
+              {/* Icons - horizontal on mobile, grid on desktop */}
+              <div className="flex justify-center md:justify-start gap-3 md:grid md:grid-cols-3 md:gap-2 flex-shrink-0">
                 {patientCareImages.slice(0, 3).map((src, idx) => (
-                  <div key={idx} className="w-16 h-16 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center overflow-hidden">
-                    <Image src={src} alt="" width={50} height={50} className="object-contain" />
+                  <div key={idx} className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center overflow-hidden">
+                    <Image src={src} alt="" width={50} height={50} className="object-contain w-10 h-10 md:w-[50px] md:h-[50px]" />
                   </div>
                 ))}
               </div>
-              <div className="flex-1">
-                <h3 className={`text-xl font-semibold mb-3 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className={`text-lg md:text-xl font-semibold mb-3 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t.patientCare.activitiesSummary?.title}
                 </h3>
-                <p className={`mb-4 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`mb-4 text-sm md:text-base ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   {t.patientCare.activitiesSummary?.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap justify-center md:justify-start gap-2">
                   {t.patientCare.activitiesSummary?.highlights?.map((highlight: string, index: number) => (
                     <span 
                       key={index}
-                      className={`px-3 py-1.5 rounded-full text-sm ${
+                      className={`px-3 py-1.5 rounded-full text-xs md:text-sm ${
                         theme === 'dark' ? 'bg-rose-500/20 text-rose-300' : 'bg-rose-100 text-rose-700'
                       }`}
                     >
