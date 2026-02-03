@@ -276,11 +276,63 @@
       },
       "bedsideTerminal": {
         "tag": "Smart Bedside Terminal",
-        "title": "Intelligent Bedside Terminal for Clinical Workflow",
-        "description": "A bedside terminal integrated into the workflow to present real-time data, reminders, and decision-support prompts. Dialysis machine and vital-sign device data can be uploaded and synchronized automatically to reduce manual entry and improve timeliness.",
+        "title": "Smart Bedside Terminal — Empowering Every Dialysis Machine with a \"Digital Brain\"",
+        "description": "In traditional hemodialysis workflows, clinical staff often need to check data across multiple systems. The smart bedside terminal redefines the boundaries of bedside devices. It is not just a hardware extension, but a smart navigator deeply integrated into the entire clinical workflow, guiding staff toward more precise and efficient operations.",
         "images": [
           { "label": "Smart Bedside Terminal" },
           { "label": "Four-Item Monitoring" }
+        ],
+        "sectionTitle": "Core Value: Full-Scenario Guided Clinical Experience",
+        "features": [
+          {
+            "title": "Pre-Dialysis Preparation",
+            "subtitle": "Precise Matching, Zero-Risk Priming",
+            "intro": "During the preparation phase, the terminal serves as a \"verification expert,\" automatically syncing patient treatment plans:",
+            "items": [
+              {
+                "title": "Automatic Supply Verification",
+                "description": "Displays real-time information on required dialyzer models, needle specifications, anticoagulant dosages, and other key details — nurses can match supplies precisely without reviewing medical records."
+              },
+              {
+                "title": "Priming Process Guidance",
+                "description": "Provides standardized guidance during the tubing priming process, ensuring every preparation step is accurate."
+              }
+            ]
+          },
+          {
+            "title": "During Dialysis",
+            "subtitle": "Real-Time Monitoring, Intelligent Early Warning",
+            "intro": "Once dialysis begins, the terminal becomes an information extension of the machine:",
+            "items": [
+              {
+                "title": "Closed-Loop Monitoring Data",
+                "description": "Automatically collects and displays core indicators such as blood pressure fluctuations and four-item monitoring data."
+              },
+              {
+                "title": "AI Risk Analysis",
+                "description": "Not only alerts to potential risks during treatment, but also uses AI algorithms to analyze the root cause, helping nurses address issues proactively rather than reactively."
+              },
+              {
+                "title": "Real-Time Order Confirmation",
+                "description": "Medication orders and temporary adjustments during dialysis can be confirmed with one click on the terminal, greatly simplifying the nurse's workflow."
+              }
+            ]
+          },
+          {
+            "title": "Physician Rounds",
+            "subtitle": "Key Indicators, Doctor's Dashboard",
+            "intro": "Physicians no longer need to review cumbersome records — the bedside terminal serves as the data hub:",
+            "items": [
+              {
+                "title": "Multi-Dimensional Data Dashboard",
+                "description": "Displays a summary of the patient's real-time parameters, historical comparisons, and core biochemical indicators for the day."
+              },
+              {
+                "title": "Rapid Clinical Decision-Making",
+                "description": "Helps physicians quickly grasp the patient's condition at the bedside, improving rounds efficiency and medical safety."
+              }
+            ]
+          }
         ]
       }
     },

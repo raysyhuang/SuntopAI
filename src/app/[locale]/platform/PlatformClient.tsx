@@ -386,19 +386,21 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 <div className="text-center mb-10">
                   <span className="label-tag mb-4 inline-block">{t.monitoringSystem.bedsideTerminal.tag}</span>
                   <h2 
-                    className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                    className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-4"
                     style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
                   >
                     {t.monitoringSystem.bedsideTerminal.title}
                   </h2>
                   <p 
-                    className="max-w-3xl mx-auto text-lg"
+                    className="max-w-4xl mx-auto text-base md:text-lg leading-relaxed"
                     style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
                   >
                     {t.monitoringSystem.bedsideTerminal.description}
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
+
+                {/* Images */}
+                <div className="grid md:grid-cols-2 gap-6 mb-16">
                   {[
                     { src: '/images/smart-terminal.jpg', label: t.monitoringSystem.bedsideTerminal.images[0].label },
                     { src: '/images/four-item-monitoring.jpg', label: t.monitoringSystem.bedsideTerminal.images[1].label },
@@ -424,6 +426,91 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                     </div>
                   ))}
                 </div>
+
+                {/* Features Section */}
+                {t.monitoringSystem.bedsideTerminal.features && (
+                  <>
+                    <h3 
+                      className="font-display text-xl md:text-2xl font-semibold text-center mb-10"
+                      style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}
+                    >
+                      {t.monitoringSystem.bedsideTerminal.sectionTitle}
+                    </h3>
+                    
+                    <div className="grid md:grid-cols-3 gap-6">
+                      {t.monitoringSystem.bedsideTerminal.features.map((feature: any, index: number) => (
+                        <motion.div
+                          key={feature.title}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 }}
+                          className={`rounded-2xl p-6 ${
+                            theme === 'dark' 
+                              ? 'bg-slate-900/50 border border-slate-800' 
+                              : 'bg-white border border-gray-200 shadow-sm'
+                          }`}
+                        >
+                          <div className="mb-4">
+                            <span 
+                              className="inline-block px-3 py-1 rounded-full text-sm font-medium mb-2"
+                              style={{ 
+                                backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)',
+                                color: theme === 'light' ? '#007d73' : '#2dd4bf'
+                              }}
+                            >
+                              {index + 1}
+                            </span>
+                            <h4 
+                              className="font-display text-lg font-semibold"
+                              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                            >
+                              {feature.title}
+                            </h4>
+                            <p 
+                              className="text-sm font-medium"
+                              style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}
+                            >
+                              {feature.subtitle}
+                            </p>
+                          </div>
+                          
+                          <p 
+                            className="text-sm mb-4"
+                            style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                          >
+                            {feature.intro}
+                          </p>
+                          
+                          <div className="space-y-3">
+                            {feature.items.map((item: any, itemIndex: number) => (
+                              <div 
+                                key={itemIndex}
+                                className="rounded-xl p-3"
+                                style={{ 
+                                  backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)',
+                                }}
+                              >
+                                <h5 
+                                  className="font-medium text-sm mb-1"
+                                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                                >
+                                  {item.title}
+                                </h5>
+                                <p 
+                                  className="text-xs leading-relaxed"
+                                  style={{ color: theme === 'light' ? '#86868b' : '#94a3b8' }}
+                                >
+                                  {item.description}
+                                </p>
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </>
+                )}
               </motion.div>
             )}
           </div>
