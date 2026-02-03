@@ -52,6 +52,20 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   
+  // Force HTTPS in production
+  const forwardedProto = request.headers.get('x-forwarded-proto')
+  const host = request.headers.get('host') || ''
+  
+  if (
+    forwardedProto === 'http' && 
+    !host.includes('localhost') && 
+    !host.includes('127.0.0.1')
+  ) {
+    const httpsUrl = new URL(request.url)
+    httpsUrl.protocol = 'https:'
+    return NextResponse.redirect(httpsUrl, 301)
+  }
+  
   // Check if pathname is missing locale
   const pathnameIsMissingLocale = locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
