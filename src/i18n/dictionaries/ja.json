@@ -12,10 +12,11 @@
   "home": {
     "tag": "スマート透析プラットフォーム",
     "hero": {
-      "title1": "AI駆動型透析インテリジェンス",
-      "title2": "と自動化",
-      "subtitle": "アシスト運転から自動運転へ",
-      "description": "独自開発の透析管理システムに、カスタマイズされた大規模言語モデル、AIエージェント、IoT技術を組み合わせ、従来の人間の経験に大きく依存していた透析治療を、より自動化され、個別化され、安全で効率的なスマート透析システムへアップグレードします。"
+      "title1": "AI駆動の",
+      "title2": "スマート透析",
+      "subtitle": "すべての透析治療をより安全に",
+      "description": "アシスト運転から自動運転へ — IoTデータ収集、専用AIエンジン、リアルタイム臨床意思決定支援により、透析を経験駆動からデータ駆動へ。",
+      "stats": "50+センター導入済み | 3000+台透析装置 | エビデンスに基づく医療"
     },
     "cta": {
       "explore": "プラットフォームを見る",
@@ -29,7 +30,7 @@
       "description": "データソースから始めて、データ収集、分析、評価、推奨、リアルタイムフィードバックまでの完全なチェーンを構築しました。",
       "iot": {
         "title": "IoTデータインフラ",
-        "description": "透析装置、血圧計、体重計などコア機器を完全IoT化。3,000台以上接続、5秒ごとの高頻度データ取得。",
+        "description": "透析装置、血圧計、体重計などコア機器を完全IoT化。3,000台以上の透析装置を接続、毎分の高頻度データ取得。",
         "features": ["3,000台以上接続", "HIS/LIS/EMR連携", "構造化臨床データパイプライン"]
       },
       "ai": {
@@ -45,7 +46,7 @@
     },
     "flow": {
       "title": "装置 → データ → AI → 臨床アクション",
-      "description": "透析装置から5秒ごとにリアルタイムデータストリーミング、血圧モニター、体重計、検査結果と統合。AIエンジンが透析中トレンドを分析し、医師ワークフローに直接アクショナブルなアラートを配信。",
+      "description": "透析装置から毎分リアルタイムデータストリーミング、血圧モニター、体重計、検査結果と統合。AIエンジンが透析中トレンドを分析し、医師ワークフローに直接アクショナブルなアラートを配信。",
       "steps": {
         "machines": { "label": "透析装置", "sublabel": "血圧/UF/血流" },
         "data": { "label": "臨床データレイク", "sublabel": "検査/バイタル/処方" },
@@ -68,17 +69,33 @@
         { "value": "71%", "label": "鉄欠乏患者減少", "detail": "74.0% → 21.1%" },
         { "value": "37%", "label": "腎性骨疾患患者減少", "detail": "48.4% → 30.7%" }
       ],
-      "cta": "完全な成果データを見る"
+      "cta": "完全な成果データを見る",
+      "footnote": "杏泰医療自社運営透析センターのデータに基づく、2024-2025",
+      "deployment": {
+        "title": "検証済みの導入規模",
+        "items": [
+          { "value": "30+", "label": "自社運営センター" },
+          { "value": "100+", "label": "提携センター" },
+          { "value": "50+", "label": "スマート透析センター" },
+          { "value": "3000+", "label": "接続済み透析装置" }
+        ]
+      }
     },
     "why": {
       "tag": "解決する課題",
-      "title": "透析は経験依存の医療・専門シナリオです",
-      "description1": "透析中低血圧(IDH)は20-30%のセッションで発生。容量過負荷は心血管イベントを引き起こす。UF率の誤算は痙攣と血行動態不安定を引き起こす。ドライウェイト評価は臨床判断に依存し、医師間で大きなばらつきがある。",
-      "description2": "当社のAIシステムは血圧トレンド、UF耐性パターン、過去の治療データを分析し、IDH発生の15-30分前に予測、UFプロファイリングを最適化し、エビデンスに基づくドライウェイト推奨を提供します。",
-      "clinical": { "title": "IDH予防", "desc": "予測アラートにより透析中低血圧を30%削減" },
-      "operational": { "title": "導入規模", "desc": "30+自社運営、100+提携センター、50+スマート透析センター" },
-      "strategic": { "title": "臨床アウトカム", "desc": "Kt/V充分性向上、入院率低下" },
-      "longterm": { "title": "成長計画", "desc": "2026年に100、2027年に150以上、目標300センター" }
+      "title": "従来の透析が直面する臨床的課題",
+      "description1": "透析中低血圧(IDH)は15-30%のセッションで発生し¹、心筋スタニング、脳白質虚血性障害などの臓器障害を引き起こします²。研究によると、透析中の収縮期血圧最低値<90mmHgは死亡率と有意に関連し³、UF率>10ml/h/kgは死亡リスクを9%増加させます⁴。また、ドライウェイト評価は経験に大きく依存し、医師間で判断にばらつきがあります。",
+      "references": [
+        "1. Daugirdas JT. Measuring Intradialytic Hypotension to Improve Quality of Care. J Am Soc Nephrol 2015;26:512-514",
+        "2. McIntyre CW. Hemodialysis-Associated Cardiomyopathy: A Newly Defined Disease Entity. Semin Dial 2014;27:87-97",
+        "3. Flythe JE, et al. Association of Mortality Risk with Various Definitions of Intradialytic Hypotension. J Am Soc Nephrol 2015;26:724-734",
+        "4. Saran R, et al. Longer treatment time and slower ultrafiltration in hemodialysis: associations with reduced mortality in the DOPPS. Kidney Int 2006;69:1222-1228"
+      ],
+      "description2": "当社のAIシステムは血圧トレンド、UF耐性パターン、過去の治療データを分析し、IDH発生の数分前に予測、UFプロファイリングを最適化し、エビデンスに基づくドライウェイト推奨を提供します。",
+      "clinical": { "title": "IDH予防", "desc": "予測アラートにより透析中低血圧を削減" },
+      "operational": { "title": "ドライウェイト管理", "desc": "データ駆動のドライウェイト評価、医師間のばらつきを軽減" },
+      "strategic": { "title": "リスク検出", "desc": "多次元分析で潜在的な合併症リスクを早期発見" },
+      "longterm": { "title": "データ駆動ケア", "desc": "経験駆動からデータ駆動の精密透析管理への転換" }
     },
     "router": {
       "tag": "詳しく見る",
@@ -253,7 +270,7 @@
           "features": [
             {
               "title": "血圧とKt/Vモニタリング",
-              "description": "4G血圧計でリアルタイム送信、トレンドチャート自動生成で低血圧アラート。Kt/Vは機器直接読み取りまたはAI計算で透析適正度を確保。"
+              "description": "4G血圧計でリアルタイム送信、トレンドチャート自動生成で低血圧アラート。Kt/Vは機器直接読み取りまたはAI計算で透析適正度を確保(KDOQIガイドライン目標: Kt/V≥1.2)。"
             },
             {
               "title": "血液量と温度モニタリング",
@@ -1144,12 +1161,6 @@
           "items": ["透析1回あたりのコスト計算", "消耗品使用効率分析", "人件費最適化提案", "リアルタイムROI追跡"]
         }
       ],
-      "stats": {
-        "inventory": { "label": "在庫精度", "value": "99.5%" },
-        "waste": { "label": "消耗品廃棄削減", "value": "35%" },
-        "downtime": { "label": "設備ダウンタイム削減", "value": "60%" },
-        "efficiency": { "label": "運用効率向上", "value": "40%" }
-      },
       "suppliers": {
         "tag": "パートナー",
         "title": "サプライチェーンパートナー",

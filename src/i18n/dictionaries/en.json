@@ -12,10 +12,11 @@
   "home": {
     "tag": "Smart Dialysis Platform",
     "hero": {
-      "title1": "AI-Driven Dialysis Intelligence",
-      "title2": "and Automation",
-      "subtitle": "From Assisted Driving to Autonomous Driving",
-      "description": "Through our proprietary dialysis management system, combined with customized LLMs, AI Agents and IoT technology, we upgrade traditional experience-dependent dialysis treatment into a smarter, more automated, personalized, safer and more efficient intelligent dialysis system."
+      "title1": "AI-Driven",
+      "title2": "Smart Dialysis",
+      "subtitle": "Making Every Dialysis Treatment Safer",
+      "description": "From assisted to autonomous — through IoT data collection, specialized AI engine, and real-time clinical decision support, we transform dialysis from experience-driven to data-driven.",
+      "stats": "50+ Centers Deployed | 3000+ Dialysis Machines | Evidence-Based Medicine"
     },
     "cta": {
       "explore": "Explore Platform",
@@ -29,7 +30,7 @@
       "description": "Starting from the data source, we've built a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
       "iot": {
         "title": "IoT Data Infrastructure",
-        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis devices connected with high-frequency streaming (every 5 seconds).",
+        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis machines connected with high-frequency data streaming every minute.",
         "features": ["3,000+ devices connected", "HIS/LIS/EMR integration", "Structured clinical data pipeline"]
       },
       "ai": {
@@ -45,7 +46,7 @@
     },
     "flow": {
       "title": "Device → Data → AI → Clinical Action",
-      "description": "Real-time data streaming every 5 seconds from dialysis machines, integrated with BP monitors, weight scales, and lab results. AI engine analyzes intradialytic trends and delivers actionable alerts directly into physician workflow.",
+      "description": "Real-time data streaming every minute from dialysis machines, integrated with BP monitors, weight scales, and lab results. AI engine analyzes intradialytic trends and delivers actionable alerts directly into physician workflow.",
       "steps": {
         "machines": { "label": "Dialysis Machines", "sublabel": "BP, UF, Blood Flow" },
         "data": { "label": "Clinical Data Lake", "sublabel": "Labs, Vitals, Rx" },
@@ -68,17 +69,33 @@
         { "value": "71%", "label": "Iron deficiency reduced", "detail": "74.0% → 21.1%" },
         { "value": "37%", "label": "Renal bone disease reduced", "detail": "48.4% → 30.7%" }
       ],
-      "cta": "View Full Results"
+      "cta": "View Full Results",
+      "footnote": "Based on data from Suntop-operated dialysis centers, 2024-2025",
+      "deployment": {
+        "title": "Validated Deployment Scale",
+        "items": [
+          { "value": "30+", "label": "Self-operated Centers" },
+          { "value": "100+", "label": "Partner Centers" },
+          { "value": "50+", "label": "Smart Dialysis Centers" },
+          { "value": "3000+", "label": "Connected Machines" }
+        ]
+      }
     },
     "why": {
       "tag": "The Problem We Solve",
-      "title": "Dialysis is an experience-dependent medical and professional scenario",
-      "description1": "Intradialytic hypotension (IDH) occurs in 20-30% of sessions. Volume overload leads to cardiovascular events. UF rate miscalculation causes cramping and hemodynamic instability. Dry weight assessment relies on clinical judgment with significant inter-physician variability.",
-      "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events 15-30 minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
-      "clinical": { "title": "IDH Prevention", "desc": "30% reduction in intradialytic hypotension through predictive alerts" },
-      "operational": { "title": "Deployed Scale", "desc": "30+ self-operated, 100+ partner centers, 50+ smart dialysis centers" },
-      "strategic": { "title": "Clinical Outcomes", "desc": "Improved Kt/V adequacy, reduced hospitalization rates" },
-      "longterm": { "title": "Growth Plan", "desc": "100 new centers in 2026, 150+ in 2027, targeting 300 total" }
+      "title": "Core Clinical Challenges in Traditional Dialysis",
+      "description1": "Intradialytic hypotension (IDH) occurs in 15-30% of sessions¹, causing myocardial stunning, ischemic brain white matter injury, and other organ damage². Studies show that nadir systolic BP <90 mmHg during dialysis is significantly associated with mortality³, and ultrafiltration rates >10 ml/h/kg increase mortality risk by 9%⁴. Additionally, dry weight assessment is highly experience-dependent, with significant variability between physicians.",
+      "references": [
+        "1. Daugirdas JT. Measuring Intradialytic Hypotension to Improve Quality of Care. J Am Soc Nephrol 2015;26:512-514",
+        "2. McIntyre CW. Hemodialysis-Associated Cardiomyopathy: A Newly Defined Disease Entity. Semin Dial 2014;27:87-97",
+        "3. Flythe JE, et al. Association of Mortality Risk with Various Definitions of Intradialytic Hypotension. J Am Soc Nephrol 2015;26:724-734",
+        "4. Saran R, et al. Longer treatment time and slower ultrafiltration in hemodialysis: associations with reduced mortality in the DOPPS. Kidney Int 2006;69:1222-1228"
+      ],
+      "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
+      "clinical": { "title": "IDH Prevention", "desc": "Reduced intradialytic hypotension through predictive alerts" },
+      "operational": { "title": "Dry Weight Management", "desc": "Data-driven dry weight assessment, reducing inter-physician variability" },
+      "strategic": { "title": "Risk Detection", "desc": "Multi-dimensional analysis to identify potential complication risks early" },
+      "longterm": { "title": "Data-Driven Care", "desc": "Transforming dialysis from experience-driven to data-driven precision management" }
     },
     "router": {
       "tag": "Learn More",
@@ -107,7 +124,7 @@
     },
     "finalCta": {
       "title": "Already Deployed, Not Just a Concept",
-      "description": "Currently deployed across 30+ self-operated centers, 100+ partner centers, with 50+ upgraded to smart dialysis centers and 3,000+ connected devices. This is a system validated by real clinical practice."
+      "description": "Currently deployed across 30+ self-operated centers, 100+ partner centers, with 50+ upgraded to smart dialysis centers and 3,000+ connected dialysis machines. This is a system validated by real clinical practice."
     }
   },
   "platform": {
@@ -253,7 +270,7 @@
           "features": [
             {
               "title": "BP & Kt/V Monitoring",
-              "description": "4G BP monitors with real-time transmission and auto-generated trend charts for hypotension alerts; Kt/V via direct machine reading or AI calculation to ensure dialysis adequacy."
+              "description": "4G BP monitors with real-time transmission and auto-generated trend charts for hypotension alerts; Kt/V via direct machine reading or AI calculation to ensure dialysis adequacy (KDOQI guideline target: Kt/V ≥1.2)."
             },
             {
               "title": "Blood Volume & Temperature Monitoring",
@@ -1064,12 +1081,6 @@
           "items": ["Per-dialysis cost accounting", "Consumable usage efficiency analysis", "Labor cost optimization suggestions", "Real-time ROI tracking"]
         }
       ],
-      "stats": {
-        "inventory": { "label": "Inventory Accuracy", "value": "99.5%" },
-        "waste": { "label": "Consumable Waste Reduction", "value": "35%" },
-        "downtime": { "label": "Equipment Downtime Reduction", "value": "60%" },
-        "efficiency": { "label": "Operational Efficiency Increase", "value": "40%" }
-      },
       "suppliers": {
         "tag": "Partners",
         "title": "Supply Chain Partners",
@@ -1403,7 +1414,7 @@
       "paragraphs": [
         "Suntop Healthcare is a medical technology company focused on hemodialysis.",
         "Founded on the principle of 'People First, Service Above All', we started with equipment supply, technical support, department operations management, and clinical care, gradually building a comprehensive service system covering the entire dialysis workflow. On this foundation, we developed our proprietary dialysis management system, making all core equipment—dialysis machines, BP monitors, scales—IoT-enabled, and integrating customized models and decision systems to achieve a complete closed loop from data collection, analysis, evaluation, recommendations to real-time feedback.",
-        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 50+ successfully upgraded to smart dialysis centers and 3,000+ connected dialysis devices. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
+        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 50+ successfully upgraded to smart dialysis centers and 3,000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
         "We believe truly valuable healthcare innovation must simultaneously improve medical quality, reduce risk, and increase operational efficiency. Suntop Healthcare is driving the transformation of dialysis management from 'experience-driven' to 'data-driven', making dialysis safer, more efficient, and more sustainable."
       ]
     },

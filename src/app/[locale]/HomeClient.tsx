@@ -125,6 +125,21 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 {t.cta.contact}
               </Link>
             </motion.div>
+
+            {t.hero.stats && (
+              <motion.div
+                variants={fadeInUp}
+                className={`mt-12 pt-8 border-t ${
+                  theme === 'dark' ? 'border-slate-800' : 'border-gray-200'
+                }`}
+              >
+                <p className={`text-sm font-medium tracking-wide ${
+                  theme === 'dark' ? 'text-neutral-400' : 'text-gray-500'
+                }`}>
+                  {t.hero.stats}
+                </p>
+              </motion.div>
+            )}
           </motion.div>
 
           <motion.div
@@ -148,179 +163,10 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Pillars Section */}
+      {/* Why This Matters - Problem Statement */}
       <section className={`relative py-32 ${
         theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'
       }`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20"
-          >
-            <span className="label-tag mb-6 inline-block">{t.pillars.tag}</span>
-            <h2 className={`font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
-            }`}>
-              {t.pillars.title}
-            </h2>
-            <p className={`text-lg max-w-2xl mx-auto ${
-              theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-            }`}>
-              {t.pillars.description}
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pillars.map((pillar, index) => (
-              <motion.div
-                key={pillar.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`rounded-2xl p-8 transition-all duration-300 ${
-                  theme === 'dark'
-                    ? 'bg-slate-900/50 border border-slate-800/50 hover:border-accent-700/30 hover:bg-slate-900/70'
-                    : 'bg-white border border-gray-200 shadow-sm hover:shadow-lg hover:border-accent-300'
-                }`}
-              >
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors ${
-                  theme === 'dark'
-                    ? 'bg-accent-900/30 border border-accent-800/30 group-hover:bg-accent-900/50'
-                    : 'bg-accent-50 border border-accent-200'
-                }`}>
-                  <pillar.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                </div>
-                <h3 className={`font-display text-xl font-semibold mb-3 ${
-                  theme === 'dark' ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {pillar.title}
-                </h3>
-                <p className={`mb-6 leading-relaxed ${
-                  theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-                }`}>
-                  {pillar.description}
-                </p>
-                <ul className="space-y-2">
-                  {pillar.features.map((feature) => (
-                    <li
-                      key={feature}
-                      className={`flex items-center gap-2 text-sm ${
-                        theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
-                      }`}
-                    >
-                      <div className="w-1 h-1 bg-accent-500 rounded-full" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Platform Flow Diagram */}
-      <section className={`relative py-32 overflow-hidden ${
-        theme === 'light' ? 'bg-white' : ''
-      }`}>
-        {theme === 'dark' && <div className="absolute inset-0 grid-pattern opacity-50" />}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className={`font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
-            }`}>
-              {t.flow.title}
-            </h2>
-            <p className={`text-lg max-w-2xl mx-auto ${
-              theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-            }`}>
-              {t.flow.description}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            {/* Mobile: 2x2 Grid Layout */}
-            <div className="grid grid-cols-2 gap-6 md:hidden">
-              {[
-                { icon: Server, ...t.flow.steps.machines },
-                { icon: Database, ...t.flow.steps.data },
-                { icon: Brain, ...t.flow.steps.ai },
-                { icon: Cog, ...t.flow.steps.automation },
-              ].map((step, index) => (
-                <motion.div
-                  key={step.label}
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex flex-col items-center text-center"
-                >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-3 ${
-                    theme === 'dark'
-                      ? 'bg-slate-900 border border-slate-700 glow-accent'
-                      : 'bg-white border border-gray-200 shadow-lg'
-                  }`}>
-                    <step.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                  </div>
-                  <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{step.label}</span>
-                  <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* Desktop: Horizontal Flow with Arrows */}
-            <div className="hidden md:flex items-center justify-between gap-4">
-              {[
-                { icon: Server, ...t.flow.steps.machines },
-                { icon: Database, ...t.flow.steps.data },
-                { icon: Brain, ...t.flow.steps.ai },
-                { icon: Cog, ...t.flow.steps.automation },
-              ].map((step, index) => (
-                <div key={step.label} className="flex items-center gap-8">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.15 }}
-                    className="flex flex-col items-center"
-                  >
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center mb-4 ${
-                      theme === 'dark'
-                        ? 'bg-slate-900 border border-slate-700 glow-accent'
-                        : 'bg-white border border-gray-200 shadow-lg'
-                    }`}>
-                      <step.icon className={`w-8 h-8 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
-                    </div>
-                    <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{step.label}</span>
-                    <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
-                  </motion.div>
-                  {index < 3 && (
-                    <ArrowRight className={`w-6 h-6 ${theme === 'dark' ? 'text-accent-600' : 'text-accent-500'}`} />
-                  )}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why This Matters */}
-      <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -344,6 +190,24 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
               }`}>
                 {t.why.description2}
               </p>
+              {t.why.references && (
+                <div className={`mt-6 pt-4 border-t ${
+                  theme === 'dark' ? 'border-neutral-700' : 'border-gray-200'
+                }`}>
+                  <p className={`text-xs font-medium mb-2 ${
+                    theme === 'dark' ? 'text-neutral-500' : 'text-gray-400'
+                  }`}>
+                    References
+                  </p>
+                  <div className={`text-xs leading-relaxed space-y-1 ${
+                    theme === 'dark' ? 'text-neutral-500' : 'text-gray-400'
+                  }`}>
+                    {t.why.references.map((ref: string, index: number) => (
+                      <p key={index} className="italic">{ref}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
             </motion.div>
 
             <motion.div
@@ -354,9 +218,9 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             >
               {[
                 { icon: Shield, ...t.why.clinical },
-                { icon: TrendingUp, ...t.why.operational },
-                { icon: Users, ...t.why.strategic },
-                { icon: Activity, ...t.why.longterm },
+                { icon: Activity, ...t.why.operational },
+                { icon: Brain, ...t.why.strategic },
+                { icon: Database, ...t.why.longterm },
               ].map((item) => (
                 <div key={item.title} className={`rounded-2xl p-6 transition-all ${
                   theme === 'dark'
@@ -371,6 +235,162 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 </div>
               ))}
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Platform Section - Combined */}
+      <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
+        {theme === 'dark' && <div className="absolute inset-0 grid-pattern opacity-30" />}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="label-tag mb-6 inline-block">{t.pillars.tag}</span>
+            <h2 className={`font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 ${
+              theme === 'dark' ? 'text-white' : 'text-gray-900'
+            }`}>
+              {t.pillars.title}
+            </h2>
+            <p className={`text-lg max-w-2xl mx-auto ${
+              theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
+            }`}>
+              {t.pillars.description}
+            </p>
+          </motion.div>
+
+          {/* Flow Diagram - Visual Pipeline */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            {/* Mobile: 2x2 Grid */}
+            <div className="grid grid-cols-2 gap-4 md:hidden">
+              {[
+                { icon: Server, ...t.flow.steps.machines },
+                { icon: Database, ...t.flow.steps.data },
+                { icon: Brain, ...t.flow.steps.ai },
+                { icon: Cog, ...t.flow.steps.automation },
+              ].map((step, index) => (
+                <motion.div
+                  key={step.label}
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className={`flex flex-col items-center text-center p-4 rounded-xl ${
+                    theme === 'dark' ? 'bg-slate-900/50' : 'bg-gray-50'
+                  }`}
+                >
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-2 ${
+                    theme === 'dark'
+                      ? 'bg-accent-900/30 border border-accent-800/30'
+                      : 'bg-accent-50 border border-accent-200'
+                  }`}>
+                    <step.icon className={`w-6 h-6 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                  </div>
+                  <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{step.label}</span>
+                  <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
+                </motion.div>
+              ))}
+            </div>
+            
+            {/* Desktop: Horizontal Flow */}
+            <div className="hidden md:flex items-center justify-center gap-4">
+              {[
+                { icon: Server, ...t.flow.steps.machines },
+                { icon: Database, ...t.flow.steps.data },
+                { icon: Brain, ...t.flow.steps.ai },
+                { icon: Cog, ...t.flow.steps.automation },
+              ].map((step, index) => (
+                <div key={step.label} className="flex items-center gap-4">
+                  <motion.div
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.15 }}
+                    className={`flex flex-col items-center p-6 rounded-xl ${
+                      theme === 'dark' ? 'bg-slate-900/50' : 'bg-gray-50'
+                    }`}
+                  >
+                    <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-3 ${
+                      theme === 'dark'
+                        ? 'bg-accent-900/30 border border-accent-800/30'
+                        : 'bg-accent-50 border border-accent-200'
+                    }`}>
+                      <step.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                    </div>
+                    <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>{step.label}</span>
+                    <span className={`text-xs ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{step.sublabel}</span>
+                  </motion.div>
+                  {index < 3 && (
+                    <ArrowRight className={`w-5 h-5 ${theme === 'dark' ? 'text-accent-600' : 'text-accent-400'}`} />
+                  )}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Three Pillars */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {pillars.map((pillar, index) => (
+              <motion.div
+                key={pillar.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`rounded-2xl p-6 ${
+                  theme === 'dark'
+                    ? 'bg-slate-900/50 border border-slate-800/50'
+                    : 'bg-white border border-gray-200 shadow-sm'
+                }`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                    theme === 'dark'
+                      ? 'bg-accent-900/30 border border-accent-800/30'
+                      : 'bg-accent-50 border border-accent-200'
+                  }`}>
+                    <pillar.icon className={`w-5 h-5 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className={`font-display text-lg font-semibold mb-2 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {pillar.title}
+                    </h3>
+                    <p className={`text-sm leading-relaxed mb-3 ${
+                      theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
+                    }`}>
+                      {pillar.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {pillar.features.map((feature) => (
+                        <span
+                          key={feature}
+                          className={`text-xs px-2 py-1 rounded-full ${
+                            theme === 'dark' 
+                              ? 'bg-slate-800 text-neutral-400' 
+                              : 'bg-gray-100 text-gray-600'
+                          }`}
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -439,11 +459,53 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
+            
+            {t.clinicalHighlights.footnote && (
+              <p className={`text-center text-xs mt-6 italic ${
+                theme === 'dark' ? 'text-neutral-500' : 'text-gray-400'
+              }`}>
+                {t.clinicalHighlights.footnote}
+              </p>
+            )}
+
+            {/* Deployment Stats */}
+            {t.clinicalHighlights.deployment && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className={`mt-12 pt-10 border-t ${
+                  theme === 'dark' ? 'border-slate-800' : 'border-gray-200'
+                }`}
+              >
+                <h3 className={`text-center text-sm font-medium mb-6 ${
+                  theme === 'dark' ? 'text-neutral-400' : 'text-gray-500'
+                }`}>
+                  {t.clinicalHighlights.deployment.title}
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {t.clinicalHighlights.deployment.items.map((item: any, index: number) => (
+                    <div key={item.label} className="text-center">
+                      <div className={`text-2xl md:text-3xl font-display font-bold mb-1 ${
+                        theme === 'dark' ? 'text-white' : 'text-gray-900'
+                      }`}>
+                        {item.value}
+                      </div>
+                      <div className={`text-xs ${
+                        theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'
+                      }`}>
+                        {item.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </div>
         </section>
       )}
 
-      {/* Three-Door Router Section */}
+      {/* Explore & CTA Section */}
       <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -465,7 +527,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               { icon: Cpu, key: 'platform', href: `/${locale}/platform` },
               { icon: Stethoscope, key: 'clinical', href: `/${locale}/clinical` },
@@ -496,59 +558,37 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                       <door.icon className={`w-7 h-7 ${theme === 'dark' ? 'text-accent-400' : 'text-accent-600'}`} />
                     </div>
                     
-                    <h3 className={`font-display text-2xl font-semibold mb-4 ${
+                    <h3 className={`font-display text-xl font-semibold mb-3 ${
                       theme === 'dark' ? 'text-white' : 'text-gray-900'
                     }`}>
                       {doorData.title}
                     </h3>
                     
-                    <p className={`text-lg font-medium mb-4 ${
-                      theme === 'dark' ? 'text-neutral-300' : 'text-gray-700'
-                    }`}>
-                      {doorData.question}
-                    </p>
-                    
-                    <p className={`mb-6 leading-relaxed ${
+                    <p className={`text-sm mb-4 leading-relaxed ${
                       theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
                     }`}>
                       {doorData.description}
                     </p>
                     
-                    <div className={`inline-flex items-center gap-2 font-medium ${
+                    <div className={`inline-flex items-center gap-2 text-sm font-medium ${
                       theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
                     }`}>
                       {doorData.cta}
-                      <ArrowRight size={16} />
+                      <ArrowRight size={14} />
                     </div>
                   </Link>
                 </motion.div>
               )
             })}
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className={`relative py-32 ${
-        theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'
-      }`}>
-        {theme === 'dark' && <div className="absolute inset-0 radial-gradient opacity-50" />}
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative z-10">
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            className="text-center"
           >
-            <h2 className={`font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6 ${
-              theme === 'dark' ? 'text-white' : 'text-gray-900'
-            }`}>
-              {t.finalCta.title}
-            </h2>
-            <p className={`text-lg mb-10 max-w-2xl mx-auto ${
-              theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'
-            }`}>
-              {t.finalCta.description}
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/company#contact`} className="btn-primary">
                 {t.cta.start}

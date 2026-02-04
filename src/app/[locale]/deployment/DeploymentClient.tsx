@@ -516,32 +516,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               })}
             </div>
 
-            {/* Stats */}
-            {t.supplyChain.stats && (
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-                {Object.entries(t.supplyChain.stats).map(([key, stat]: [string, any], index: number) => (
-                  <motion.div
-                    key={key}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="text-center p-4 rounded-xl"
-                    style={{ backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(15,23,42,0.5)' }}
-                  >
-                    <div 
-                      className="font-display text-2xl font-bold mb-1"
-                      style={{ color: '#007d73' }}
-                    >
-                      {stat.value}
-                    </div>
-                    <div style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }} className="text-sm">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
 
             {/* Suppliers */}
             {t.supplyChain.suppliers && (
