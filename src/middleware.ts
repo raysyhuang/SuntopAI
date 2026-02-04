@@ -61,8 +61,8 @@ export function middleware(request: NextRequest) {
     !host.includes('localhost') && 
     !host.includes('127.0.0.1')
   ) {
-    const httpsUrl = new URL(request.url)
-    httpsUrl.protocol = 'https:'
+    // Use host header to construct URL (request.url may return internal dyno address on Heroku)
+    const httpsUrl = new URL(request.nextUrl.pathname + request.nextUrl.search, `https://${host}`)
     return NextResponse.redirect(httpsUrl, 301)
   }
   
