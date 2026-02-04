@@ -819,6 +819,7 @@
     "title": "AI-Assisted Vascular Access Services",
     "subtitle": "Following comprehensive vascular access intervention planning, combined with AI-assisted screening and 5G remote consultation, to ensure effective dialysis treatment",
     "backToClinical": "Back to Clinical",
+    "backToServices": "Back to Services",
     "smartFeature": {
       "tag": "AI-Powered",
       "title": "AI-Assisted Vascular Access Screening",
@@ -1239,7 +1240,8 @@
       "servicesSummary": {
         "title": "Comprehensive Vascular Access Services",
         "description": "Providing AI-assisted pre-operative assessment, autologous/prosthetic AV fistula surgery, central venous catheter insertion, thrombosis and aneurysm management, and minimally invasive interventions, ensuring each patient receives the optimal vascular access solution.",
-        "highlights": ["AI-assisted assessment & planning", "Multiple access establishment options", "Complication management & intervention"]
+        "highlights": ["AI-assisted assessment & planning", "Multiple access establishment options", "Complication management & intervention"],
+        "learnMore": "Learn More About Vascular Access"
       }
     },
     "patientCare": {

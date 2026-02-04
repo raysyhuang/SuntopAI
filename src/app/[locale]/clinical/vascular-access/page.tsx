@@ -7,5 +7,5 @@ export default async function VascularAccessPage({
   params: Promise<{ locale: Locale }>
 }) {
   const { locale } = await params
-  redirect(`/${locale}/services#vascular-access`)
+  redirect(`/${locale}/services/vascular-access`)
 }

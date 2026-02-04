@@ -323,6 +323,26 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               </motion.div>
             ))}
           </div>
+
+          {/* Learn More Link */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-10 text-center"
+          >
+            <Link
+              href={`/${locale}/services/vascular-access`}
+              className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
+                theme === 'dark' 
+                  ? 'text-teal-400 hover:text-teal-300' 
+                  : 'text-teal-600 hover:text-teal-700'
+              }`}
+            >
+              {t.vascularAccess.servicesSummary?.learnMore || 'Learn More About Vascular Access'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
