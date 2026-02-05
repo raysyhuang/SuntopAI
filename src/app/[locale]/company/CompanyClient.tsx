@@ -48,7 +48,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -167,7 +167,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
       {/* About */}
       <section 
         className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
@@ -236,7 +236,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
         <section 
           id="centers"
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -399,7 +399,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
           <section 
             id="contact"
             className="relative py-24"
-            style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+            style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <motion.div
@@ -464,7 +464,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
           {/* Contact Form & Info */}
           <section 
             className="relative py-24"
-            style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+            style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="grid lg:grid-cols-5 gap-12">

@@ -53,10 +53,10 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
 
   return (
     <div className="relative">
-      {/* Hero Section */}
+      {/* Hero Section - White/Dark */}
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#fbfbfd' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
       >
         {theme === 'dark' && (
           <>
@@ -163,10 +163,11 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Why This Matters - Problem Statement */}
-      <section className={`relative py-32 ${
-        theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'
-      }`}>
+      {/* Why This Matters - Problem Statement - Gray/Darker */}
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -239,8 +240,11 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Technology Platform Section - Combined */}
-      <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
+      {/* Technology Platform Section - White/Dark */}
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
+      >
         {theme === 'dark' && <div className="absolute inset-0 grid-pattern opacity-30" />}
         <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
           {/* Header */}
@@ -395,11 +399,12 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* Clinical Highlights Section */}
+      {/* Clinical Highlights Section - Gray/Darker */}
       {t.clinicalHighlights && (
-        <section className={`relative py-24 ${
-          theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'
-        }`}>
+        <section 
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
+        >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -505,8 +510,11 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </section>
       )}
 
-      {/* Explore & CTA Section */}
-      <section className={`relative py-32 ${theme === 'light' ? 'bg-white' : ''}`}>
+      {/* Explore & CTA Section - White/Dark */}
+      <section 
+        className="relative py-32"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
+      >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -96,7 +96,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>

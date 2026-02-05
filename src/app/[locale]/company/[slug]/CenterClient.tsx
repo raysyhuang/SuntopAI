@@ -65,7 +65,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -334,7 +334,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       {center.gallery && center.gallery.length > 0 && (
         <section 
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -381,7 +381,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       {/* CTA */}
       <section 
         className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.div

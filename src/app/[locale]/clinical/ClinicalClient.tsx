@@ -108,7 +108,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -222,7 +222,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
             <section 
               id="in-center"
               className="relative py-24"
-              style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+              style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
@@ -435,7 +435,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
             <section 
               id="decision-support"
               className="relative py-24"
-              style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+              style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
             >
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
@@ -782,7 +782,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
       {t.crossLinks && (
         <section 
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#ffffff' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-6">

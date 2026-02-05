@@ -41,7 +41,7 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
       {/* Hero Section */}
       <section
         className="relative py-16 md:py-20"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800" />

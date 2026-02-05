@@ -46,7 +46,7 @@ export default function CentersListClient({ locale, dictionary }: CentersListCli
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>

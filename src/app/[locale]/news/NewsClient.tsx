@@ -95,7 +95,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
       {/* Hero */}
       <section 
         className="relative py-32 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -276,7 +276,7 @@ export default function NewsClient({ locale, dictionary }: NewsClientProps) {
       {/* Subscribe Section */}
       <section 
         className="relative py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-2xl mx-auto px-6 lg:px-8 text-center">
           <motion.div

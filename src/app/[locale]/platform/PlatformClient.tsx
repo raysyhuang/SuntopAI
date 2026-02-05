@@ -52,7 +52,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
   return (
     <div className="relative pt-20">
       {/* Hero Section */}
-      <section className={`relative py-32 overflow-hidden`} style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}>
+      <section className="relative py-32 overflow-hidden" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
         {theme === 'dark' && (
           <>
             <div className="absolute inset-0 grid-pattern" />
@@ -101,7 +101,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Platform Use Cases Section - Simplified */}
       {t.clinicalApplications && (
-        <section className={`relative py-24 ${theme === 'dark' ? 'bg-slate-925' : 'bg-white'}`}>
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -188,7 +188,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Core Modules Section */}
       {t.coreModules && (
-        <section id="data" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}>
+        <section id="data" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -322,7 +322,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Monitoring System Section */}
       {t.monitoringSystem && (
-        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}>
+        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Central Monitoring Subsection */}
             {t.monitoringSystem.centralMonitoring && (
@@ -519,7 +519,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Cross Links */}
       {t.crossLinks && (
-        <section className={`relative py-24 ${theme === 'dark' ? 'bg-slate-925' : 'bg-gray-50'}`}>
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-6">
               {[

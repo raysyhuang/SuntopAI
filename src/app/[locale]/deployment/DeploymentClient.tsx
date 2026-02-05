@@ -53,7 +53,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {/* Hero */}
       <section 
         className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -210,7 +210,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {t.deployment && (
         <section 
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -275,7 +275,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {t.sectionGroups?.turnkey && (
         <div 
           className="relative py-8"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -448,7 +448,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {t.supplyChain && (
         <section 
           className="relative py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
@@ -576,7 +576,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {t.sectionGroups?.implementation && (
         <div 
           className="relative py-8"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div

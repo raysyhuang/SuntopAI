@@ -47,7 +47,7 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
       {/* Hero */}
       <section 
         className="relative py-32 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         {theme === 'dark' && (
           <>
@@ -127,7 +127,7 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
       {/* Contact Form & Info */}
       <section 
         className="relative py-32"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : undefined }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
