@@ -1512,6 +1512,81 @@
           ]
         },
         {
+          "slug": "anhui-xingkang",
+          "name": "安徽杏康血液透析センター",
+          "shortName": "安徽杏康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市包河区徽州大道と福州路交差点北西角千城大厦",
+          "area": "1000㎡",
+          "description": "安徽杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、超高純度の透析用水を提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境", "中央酸素供給"],
+          "gallery": [
+            "/images/centers/anhui-xingkang/1.jpg",
+            "/images/centers/anhui-xingkang/2.jpg",
+            "/images/centers/anhui-xingkang/3.jpg",
+            "/images/centers/anhui-xingkang/4.jpg",
+            "/images/centers/anhui-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "lujiang-xingkang",
+          "name": "廬江杏康血液透析センター",
+          "shortName": "廬江杏康",
+          "city": "廬江",
+          "province": "安徽",
+          "address": "安徽省廬江県廬巣路108号蓮花商業文化広場",
+          "area": "1100㎡",
+          "description": "廬江杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、廬江及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/lujiang-xingkang/1.jpg",
+            "/images/centers/lujiang-xingkang/2.jpg",
+            "/images/centers/lujiang-xingkang/3.jpg",
+            "/images/centers/lujiang-xingkang/4.jpg",
+            "/images/centers/lujiang-xingkang/5.jpg",
+            "/images/centers/lujiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "hefei-pufukang",
+          "name": "合肥普福康血液透析センター",
+          "shortName": "合肥普福康",
+          "city": "合肥",
+          "province": "安徽",
+          "address": "安徽省合肥市肥西県上派鎮灯塔路と南方路交差点",
+          "area": "2000㎡",
+          "description": "合肥普福康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、合肥及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境", "中央酸素供給"],
+          "gallery": [
+            "/images/centers/hefei-pufukang/1.jpg",
+            "/images/centers/hefei-pufukang/2.jpg",
+            "/images/centers/hefei-pufukang/3.jpg",
+            "/images/centers/hefei-pufukang/4.jpg",
+            "/images/centers/hefei-pufukang/5.jpg",
+            "/images/centers/hefei-pufukang/6.jpg"
+          ]
+        },
+        {
+          "slug": "zhaoqing-xingkang",
+          "name": "肇慶杏康血液透析センター",
+          "shortName": "肇慶杏康",
+          "city": "肇慶",
+          "province": "広東",
+          "address": "肇慶市端州区建設二路28号盛世大厦",
+          "area": "686㎡",
+          "description": "肇慶杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、肇慶及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/zhaoqing-xingkang/1.jpg",
+            "/images/centers/zhaoqing-xingkang/2.jpg",
+            "/images/centers/zhaoqing-xingkang/3.jpg",
+            "/images/centers/zhaoqing-xingkang/4.jpg",
+            "/images/centers/zhaoqing-xingkang/5.jpg",
+            "/images/centers/zhaoqing-xingkang/6.jpg"
+          ]
+        },
+        {
           "slug": "zhongshan-shenkang",
           "name": "中山腎康血液透析センター",
           "shortName": "中山腎康",
@@ -1527,6 +1602,98 @@
             "/images/centers/zhongshan-shenkang/3.jpg",
             "/images/centers/zhongshan-shenkang/4.jpg",
             "/images/centers/zhongshan-shenkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "heilongjiang-xingkang",
+          "name": "黒龍江杏康血液透析センター",
+          "shortName": "黒龍江杏康",
+          "city": "ハルビン",
+          "province": "黒龍江",
+          "address": "ハルビン市道外区紅旗大街621号",
+          "area": "1800㎡",
+          "description": "黒龍江杏康血液透析センターは、腎臓内科、検査科、薬局、超音波、心電図などの重点科室を設置し、東北地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/heilongjiang-xingkang/1.jpg",
+            "/images/centers/heilongjiang-xingkang/2.jpg",
+            "/images/centers/heilongjiang-xingkang/3.jpg",
+            "/images/centers/heilongjiang-xingkang/4.jpg",
+            "/images/centers/heilongjiang-xingkang/5.jpg",
+            "/images/centers/heilongjiang-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "harbin-yuhua",
+          "name": "ハルビン誉華血液透析センター",
+          "shortName": "ハルビン誉華",
+          "city": "ハルビン",
+          "province": "黒龍江",
+          "address": "ハルビン市道外区紅旗大街621号",
+          "area": "2250㎡",
+          "description": "ハルビン誉華血液透析センターは、先進の透析装置と二段式逆浸透水システムを備え、ハルビン及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/harbin-yuhua/1.jpg",
+            "/images/centers/harbin-yuhua/2.jpg",
+            "/images/centers/harbin-yuhua/3.jpg",
+            "/images/centers/harbin-yuhua/4.jpg",
+            "/images/centers/harbin-yuhua/5.jpg"
+          ]
+        },
+        {
+          "slug": "zhenjiang-xingkang",
+          "name": "鎮江杏康血液透析センター",
+          "shortName": "鎮江杏康",
+          "city": "鎮江",
+          "province": "江蘇",
+          "address": "江蘇省鎮江市",
+          "description": "鎮江杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、鎮江及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境", "中央酸素供給"],
+          "gallery": [
+            "/images/centers/zhenjiang-xingkang/1.jpg",
+            "/images/centers/zhenjiang-xingkang/2.jpg",
+            "/images/centers/zhenjiang-xingkang/3.jpg",
+            "/images/centers/zhenjiang-xingkang/4.jpg",
+            "/images/centers/zhenjiang-xingkang/5.jpg"
+          ]
+        },
+        {
+          "slug": "linshu-xingkang",
+          "name": "臨沭杏康血液透析センター",
+          "shortName": "臨沭杏康",
+          "city": "臨沭",
+          "province": "山東",
+          "address": "山東省臨沂市臨沭県城常林大街西側",
+          "area": "2000㎡",
+          "description": "臨沭杏康血液透析センターは、先進の透析装置と二段式逆浸透水システムを備え、臨沭及び周辺地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/linshu-xingkang/1.jpg",
+            "/images/centers/linshu-xingkang/2.jpg",
+            "/images/centers/linshu-xingkang/3.jpg",
+            "/images/centers/linshu-xingkang/4.jpg",
+            "/images/centers/linshu-xingkang/5.jpg",
+            "/images/centers/linshu-xingkang/6.jpg"
+          ]
+        },
+        {
+          "slug": "liaoning-xingkang",
+          "name": "遼寧杏康血液透析センター",
+          "shortName": "遼寧杏康",
+          "city": "瀋陽",
+          "province": "遼寧",
+          "address": "瀋陽市瀋河区北順城路61号",
+          "area": "1600㎡",
+          "description": "遼寧杏康血液透析センターは、遼寧地域の患者に専門的な透析サービスを提供します。",
+          "features": ["個別化設計", "カスタマイズサービス", "ホームライク環境"],
+          "gallery": [
+            "/images/centers/liaoning-xingkang/1.jpg",
+            "/images/centers/liaoning-xingkang/2.jpg",
+            "/images/centers/liaoning-xingkang/3.jpg",
+            "/images/centers/liaoning-xingkang/4.jpg",
+            "/images/centers/liaoning-xingkang/5.jpg",
+            "/images/centers/liaoning-xingkang/6.jpg"
           ]
         }
       ]
