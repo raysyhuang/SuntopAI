@@ -1842,5 +1842,171 @@
       "terms": "Terms of Service",
       "compliance": "Compliance"
     }
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "date": "February 2025",
+    "intro": "Suntop Healthcare Corp. (\"Suntop\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "content": "We may collect information about you in a variety of ways, including:",
+        "items": [
+          "Personal identification information (name, email address, phone number)",
+          "Medical and health information when you use our hemodialysis services",
+          "Device and usage data when you interact with our digital platforms",
+          "Communication records when you contact our support team"
+        ]
+      },
+      {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to:",
+        "items": [
+          "Provide, maintain, and improve our healthcare services",
+          "Process and manage your treatment records",
+          "Communicate with you about services, updates, and support",
+          "Comply with legal obligations and healthcare regulations",
+          "Ensure the safety and security of our systems"
+        ]
+      },
+      {
+        "title": "Data Security",
+        "content": "We implement appropriate technical and organizational measures to protect your personal information, including:",
+        "items": [
+          "Encryption of data in transit and at rest",
+          "Access controls and authentication mechanisms",
+          "Regular security assessments and audits",
+          "Staff training on data protection practices"
+        ]
+      },
+      {
+        "title": "Data Retention",
+        "content": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements. Medical records are retained in accordance with applicable healthcare regulations."
+      },
+      {
+        "title": "Your Rights",
+        "content": "Depending on your location, you may have certain rights regarding your personal information, including:",
+        "items": [
+          "Access to your personal data",
+          "Correction of inaccurate information",
+          "Deletion of your data (subject to legal requirements)",
+          "Objection to certain processing activities"
+        ]
+      },
+      {
+        "title": "Contact Us",
+        "content": "If you have questions about this Privacy Policy or our data practices, please contact us at the information provided on our Contact page."
+      }
+    ]
+  },
+  "termsPage": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated",
+    "date": "February 2025",
+    "intro": "Welcome to Suntop Healthcare Corp. By accessing or using our services, you agree to be bound by these Terms of Service. Please read them carefully.",
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "content": "By accessing our website, using our healthcare services, or interacting with our digital platforms, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy."
+      },
+      {
+        "title": "Description of Services",
+        "content": "Suntop provides intelligent healthcare technology solutions, including:",
+        "items": [
+          "Hemodialysis center management systems",
+          "AI-assisted clinical decision support tools",
+          "Patient care and monitoring platforms",
+          "Healthcare facility consulting services"
+        ]
+      },
+      {
+        "title": "Medical Disclaimer",
+        "content": "Our technology platforms are designed to assist healthcare professionals in their clinical practice. They do not replace professional medical judgment. All medical decisions should be made by qualified healthcare providers. Suntop is not responsible for clinical decisions made using our platforms."
+      },
+      {
+        "title": "User Responsibilities",
+        "content": "When using our services, you agree to:",
+        "items": [
+          "Provide accurate and complete information",
+          "Maintain the confidentiality of your account credentials",
+          "Use our services in compliance with applicable laws",
+          "Not attempt to circumvent security measures",
+          "Report any security vulnerabilities you discover"
+        ]
+      },
+      {
+        "title": "Intellectual Property",
+        "content": "All content, software, and technology provided through our services are the property of Suntop or its licensors and are protected by intellectual property laws. You may not copy, modify, distribute, or reverse engineer any part of our services without express written permission."
+      },
+      {
+        "title": "Limitation of Liability",
+        "content": "To the maximum extent permitted by law, Suntop shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for our services in the twelve months preceding the claim."
+      },
+      {
+        "title": "Modifications",
+        "content": "We reserve the right to modify these Terms of Service at any time. We will notify users of material changes through our website or other communication channels. Your continued use of our services after such modifications constitutes acceptance of the updated terms."
+      },
+      {
+        "title": "Governing Law",
+        "content": "These Terms of Service shall be governed by and construed in accordance with the laws of the People's Republic of China. Any disputes arising from these terms shall be resolved through the courts of competent jurisdiction."
+      }
+    ]
+  },
+  "compliancePage": {
+    "title": "Compliance",
+    "lastUpdated": "Last Updated",
+    "date": "February 2025",
+    "intro": "Suntop Healthcare Corp. is committed to maintaining the highest standards of regulatory compliance and data security in healthcare technology.",
+    "sections": [
+      {
+        "title": "Healthcare Regulations",
+        "content": "Our products and services comply with applicable healthcare regulations, including:",
+        "items": [
+          "National Medical Products Administration (NMPA) requirements",
+          "Medical device software regulations",
+          "Healthcare facility operational standards",
+          "Clinical data management guidelines"
+        ]
+      },
+      {
+        "title": "Data Protection",
+        "content": "We adhere to comprehensive data protection standards:",
+        "items": [
+          "Personal Information Protection Law (PIPL) of China",
+          "Cybersecurity Law of the People's Republic of China",
+          "Healthcare data security regulations",
+          "International data protection best practices"
+        ]
+      },
+      {
+        "title": "Quality Management",
+        "content": "Our quality management system ensures consistent delivery of safe and effective healthcare technology:",
+        "items": [
+          "ISO 13485 Medical Devices Quality Management",
+          "ISO 27001 Information Security Management",
+          "Regular internal and external audits",
+          "Continuous improvement processes"
+        ]
+      },
+      {
+        "title": "Security Measures",
+        "content": "We implement robust security measures to protect healthcare data:",
+        "items": [
+          "End-to-end encryption for data transmission",
+          "Multi-factor authentication",
+          "Regular penetration testing and vulnerability assessments",
+          "24/7 security monitoring and incident response"
+        ]
+      },
+      {
+        "title": "Training & Awareness",
+        "content": "All Suntop employees receive regular training on compliance requirements, data protection, and security best practices. We maintain a culture of compliance throughout our organization."
+      },
+      {
+        "title": "Reporting Concerns",
+        "content": "If you have concerns about compliance or wish to report a potential issue, please contact us through our official channels. We take all reports seriously and investigate them thoroughly."
+      }
+    ]
   }
 }
