@@ -1259,6 +1259,7 @@
     "title": "テクノロジーが実現するサービス、価値を創造",
     "subtitle": "治療を超えて、血管アクセス、患者ケア、専門研修など、腎臓病患者に包括的なサービスサポートを提供し、健康管理サービスとテクノロジー活用を継続的に拡大しています。",
     "serviceCards": [
+      { "id": "operation-service", "title": "共同運営サービス", "description": "病院と提携して透析センターを共同運営、設備・技術・運営ノウハウを提供", "icon": "Building2" },
       { "id": "vascular-access", "title": "血管アクセスサービス", "description": "AI支援血管アクセススクリーニング、5G遠隔コンサルテーション", "icon": "Activity" },
       { "id": "patient-care", "title": "患者ケアサービス", "description": "透析旅行、患者交流会など、透析のために生活を止めない", "icon": "Heart" },
       { "id": "nutrition", "title": "透析栄養管理", "description": "専門栄養士の指導、個別食事プラン、科学的な食事で回復をサポート", "icon": "Utensils" },
@@ -1267,6 +1268,66 @@
       { "id": "skin-care", "title": "スキンケアサービス", "description": "透析関連皮膚問題のための専門製品とケア", "icon": "Smile" },
       { "id": "training", "title": "専門研修システム", "description": "オンラインとオフラインを組み合わせ、専門透析医療チームを育成", "icon": "GraduationCap" }
     ],
+    "operationService": {
+      "tag": "スマート透析センター",
+      "title": "共同運営サービス",
+      "subtitle": "病院と提携して透析センターを共同運営、従来の透析センターを最新のスマート透析センターへ変革",
+      "whatWeProvide": {
+        "title": "トータルソリューション",
+        "items": [
+          {
+            "title": "設備・消耗品",
+            "description": "透析機、透析器、RO水処理システム、全消耗品を含む完全な透析インフラ",
+            "icon": "Server"
+          },
+          {
+            "title": "技術統合",
+            "description": "完全なAI・IoTプラットフォーム、病院のHIS・LISシステムとシームレスに連携し、データ統合管理を実現",
+            "icon": "Cpu"
+          },
+          {
+            "title": "運営ノウハウ",
+            "description": "経営コンサルティング、品質管理基準、当社チェーンネットワークの経験に基づく運営ベストプラクティス",
+            "icon": "Settings"
+          },
+          {
+            "title": "研修・サポート",
+            "description": "包括的な研修体系と継続的な専門家サポートで、臨床・運営レベルを向上",
+            "icon": "GraduationCap"
+          }
+        ]
+      },
+      "benefits": [
+          "臨床品質と患者安全の向上",
+          "運営効率の改善とコスト削減",
+          "データ駆動型意思決定と継続的改善",
+          "サービス能力と規模の拡大"
+        ],
+      "partners": {
+        "title": "提携センター 100+ 施設",
+        "list": [
+          {
+            "name": "Hunan Want Want Hospital",
+            "nameZh": "湖南旺旺医院",
+            "beds": "180"
+          },
+          {
+            "name": "Zhejiang Xin'an International Hospital",
+            "nameZh": "浙江新安国際医院",
+            "beds": "150"
+          },
+          {
+            "name": "Guangxi Guinan Hospital",
+            "nameZh": "広西桂南医院",
+            "beds": "110"
+          }
+        ],
+        "bedsLabel": "床"
+      },
+      "gallery": {
+        "title": "提携センター施設"
+      }
+    },
     "vascularAccess": {
       "tag": "スマート血管アクセス",
       "title": "AI支援血管アクセスサービス",
@@ -1852,6 +1913,7 @@
       "architecture": "技術アーキテクチャ",
       "implementation": "導入プロセス",
       "supplyChain": "スマートサプライチェーン",
+      "smartCenter": "スマート透析センター",
       "vascularAccess": "血管アクセス",
       "patientCare": "患者ケア",
       "rehabilitation": "透析リハビリ",

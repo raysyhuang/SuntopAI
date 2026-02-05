@@ -1252,6 +1252,12 @@
     "subtitle": "超越治疗本身，为肾友提供血管通路、患者关怀、专业培训等全方位服务支持，并持续拓展更多健康管理服务，探索更多科技赋能服务的应用。",
     "serviceCards": [
       {
+        "id": "operation-service",
+        "title": "共建运营服务",
+        "description": "与医院合作共建透析中心，提供设备、技术和运营专业支持",
+        "icon": "Building2"
+      },
+      {
         "id": "vascular-access",
         "title": "血管通路服务",
         "description": "AI辅助血管通路筛查，5G远程会诊，确保透析治疗有效进行",
@@ -1294,6 +1300,66 @@
         "icon": "GraduationCap"
       }
     ],
+    "operationService": {
+      "tag": "智慧透析中心",
+      "title": "共建运营服务",
+      "subtitle": "与医院合作共建透析中心，将传统透析中心打造成现代化智慧透析中心",
+      "whatWeProvide": {
+        "title": "整体解决方案",
+        "items": [
+          {
+            "title": "设备与耗材",
+            "description": "完整的透析基础设施，包括透析机、透析器、RO水处理系统及全部耗材",
+            "icon": "Server"
+          },
+          {
+            "title": "技术整合",
+            "description": "完整的AI和IoT平台，与医院HIS、LIS系统无缝对接，实现数据统一管理",
+            "icon": "Cpu"
+          },
+          {
+            "title": "运营专业能力",
+            "description": "管理咨询、质量控制规范，以及源自我们连锁网络经验的运营最佳实践",
+            "icon": "Settings"
+          },
+          {
+            "title": "培训与支持",
+            "description": "全面的培训体系和持续的专家支持，提升临床和运营水平",
+            "icon": "GraduationCap"
+          }
+        ]
+      },
+      "benefits": [
+          "提升临床质量和患者安全",
+          "提高运营效率和降低成本",
+          "数据驱动决策和持续改进",
+          "扩大服务能力和服务规模"
+        ],
+      "partners": {
+        "title": "合作中心 100+ 家",
+        "list": [
+          {
+            "name": "Hunan Want Want Hospital",
+            "nameZh": "湖南旺旺医院",
+            "beds": "180"
+          },
+          {
+            "name": "Zhejiang Xin'an International Hospital",
+            "nameZh": "浙江新安国际医院",
+            "beds": "150"
+          },
+          {
+            "name": "Guangxi Guinan Hospital",
+            "nameZh": "广西桂南医院",
+            "beds": "110"
+          }
+        ],
+        "bedsLabel": "床"
+      },
+      "gallery": {
+        "title": "合作中心实景"
+      }
+    },
     "vascularAccess": {
       "tag": "智慧血管通路",
       "title": "AI辅助血管通路服务",
@@ -1938,6 +2004,7 @@
       "architecture": "技术架构",
       "implementation": "部署流程",
       "supplyChain": "智慧供应链",
+      "smartCenter": "智慧透析中心",
       "vascularAccess": "血管通路",
       "patientCare": "肾友关怀",
       "rehabilitation": "透析康复",

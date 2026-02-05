@@ -33,6 +33,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.supplyChain, href: `/${locale}/deployment#supply-chain` },
     ],
     services: [
+      { label: t.links.smartCenter, href: `/${locale}/services#operation-service` },
       { label: t.links.vascularAccess, href: `/${locale}/services#vascular-access` },
       { label: t.links.patientCare, href: `/${locale}/services#patient-care` },
       { label: t.links.nutrition, href: `/${locale}/services#nutrition` },

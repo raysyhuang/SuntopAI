@@ -1180,6 +1180,12 @@
     "subtitle": "Beyond treatment itself, providing vascular access, patient care, professional training and more comprehensive service support for kidney patients, while continuously expanding health management services and technology-enabled applications.",
     "serviceCards": [
       {
+        "id": "operation-service",
+        "title": "Co-built Operation Services",
+        "description": "Partner with hospitals to co-operate dialysis centers, providing equipment, technology, and expertise",
+        "icon": "Building2"
+      },
+      {
         "id": "vascular-access",
         "title": "Vascular Access Services",
         "description": "AI-assisted vascular access screening, 5G remote consultation, ensuring effective dialysis treatment",
@@ -1222,6 +1228,66 @@
         "icon": "GraduationCap"
       }
     ],
+    "operationService": {
+      "tag": "Smart Dialysis Center",
+      "title": "Co-built Operation Services",
+      "subtitle": "Partner with hospitals to co-operate dialysis centers, transforming traditional facilities into modern smart dialysis centers",
+      "whatWeProvide": {
+        "title": "Complete Solution",
+        "items": [
+          {
+            "title": "Equipment & Supplies",
+            "description": "Complete dialysis infrastructure including dialysis machines, dialyzers, RO water treatment systems, and all consumables",
+            "icon": "Server"
+          },
+          {
+            "title": "Technology Integration",
+            "description": "Full AI and IoT platform seamlessly integrated with hospital HIS and LIS systems for unified data management",
+            "icon": "Cpu"
+          },
+          {
+            "title": "Operational Expertise",
+            "description": "Management consulting, quality control protocols, and operational best practices from our network experience",
+            "icon": "Settings"
+          },
+          {
+            "title": "Training & Support",
+            "description": "Comprehensive training programs and ongoing expert support to elevate clinical and operational standards",
+            "icon": "GraduationCap"
+          }
+        ]
+      },
+      "benefits": [
+          "Enhanced clinical quality and patient safety",
+          "Improved operational efficiency and reduced costs",
+          "Data-driven decision making and continuous improvement",
+          "Expanded service capacity and scale"
+        ],
+      "partners": {
+        "title": "100+ Partner Centers",
+        "list": [
+          {
+            "name": "Hunan Want Want Hospital",
+            "nameZh": "湖南旺旺医院",
+            "beds": "180"
+          },
+          {
+            "name": "Zhejiang Xin'an International Hospital",
+            "nameZh": "浙江新安国际医院",
+            "beds": "150"
+          },
+          {
+            "name": "Guangxi Guinan Hospital",
+            "nameZh": "广西桂南医院",
+            "beds": "110"
+          }
+        ],
+        "bedsLabel": "beds"
+      },
+      "gallery": {
+        "title": "Partner Center Facilities"
+      }
+    },
     "vascularAccess": {
       "tag": "Smart Vascular Access",
       "title": "AI-Assisted Vascular Access Services",
@@ -1824,6 +1890,7 @@
       "architecture": "Architecture",
       "implementation": "Implementation",
       "supplyChain": "Smart Supply Chain",
+      "smartCenter": "Smart Dialysis Center",
       "vascularAccess": "Vascular Access",
       "patientCare": "Patient Care",
       "rehabilitation": "Dialysis Rehab",

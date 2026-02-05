@@ -9,7 +9,7 @@ import {
   FileText, Cpu, Video, BookOpen, CalendarHeart, Sparkles, 
   PartyPopper, Utensils, Footprints, Smile, ArrowRight,
   ChevronLeft, ChevronRight, X, Dumbbell, PersonStanding, Footprints as FootIcon,
-  Smartphone, QrCode
+  Smartphone, QrCode, Building2, Server, Settings, Check
 } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
@@ -62,6 +62,34 @@ const footCareImages = [
 const rehabilitationImages = [
   '/images/clinical/康复运动设备.jpg',
 ]
+
+const skinCareImages = [
+  '/images/services/skincare/soothing-balm.png',
+  '/images/services/skincare/body-lotion.png',
+]
+
+const patientCareTravelImages = [
+  '/images/services/patient-care/christmas-event.png',
+  '/images/services/patient-care/travel-group-1.png',
+  '/images/services/patient-care/hospital-welcome.png',
+  '/images/services/patient-care/travel-group-2.png',
+]
+
+// Partnership/operation service images
+const partnershipImages = [
+  '/images/partnership/corridor.jpg',
+  '/images/partnership/treatment-floor.jpg',
+  '/images/partnership/building.jpg',
+  '/images/partnership/center-5.png',
+]
+
+// Icon mapping for operation service items
+const operationIcons: { [key: string]: React.ComponentType<{ className?: string }> } = {
+  Server,
+  Cpu,
+  Settings,
+  GraduationCap,
+}
 
 export default function ServicesClient({ locale, dictionary }: ServicesClientProps) {
   const t = dictionary.services
@@ -134,7 +162,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       </section>
 
       {/* Service Navigation Cards */}
-      <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}>
+      <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {t.serviceCards.map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
@@ -174,11 +202,175 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         </div>
       </section>
 
-      {/* Section 1: Vascular Access */}
+      {/* Section: Operation Service - Hospital Partnership */}
+      {t.operationService && (
+        <section 
+          id="operation-service" 
+          className="py-24"
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            {/* Header with Benefits */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <span className="label-tag mb-4 inline-block">{t.operationService.tag}</span>
+              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                {t.operationService.title}
+              </h2>
+              <p className={`text-lg max-w-3xl mb-8 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                {t.operationService.subtitle}
+              </p>
+              {/* Benefits as inline badges */}
+              {t.operationService.benefits && (
+                <div className="flex flex-wrap gap-3">
+                  {t.operationService.benefits?.map((benefit: string, index: number) => (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                      className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm ${
+                        theme === 'dark' 
+                          ? 'bg-teal-500/15 text-teal-300 border border-teal-500/30' 
+                          : 'bg-teal-50 text-teal-700 border border-teal-200'
+                      }`}
+                    >
+                      <span className={`${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>✓</span>
+                      {benefit}
+                    </motion.span>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+
+            {/* Two Column Layout: Solutions + Gallery */}
+            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+              {/* Left: Solution Cards */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <h3 className={`font-display text-xl font-semibold mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  {t.operationService.whatWeProvide?.title}
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  {t.operationService.whatWeProvide?.items?.map((item: { title: string; description: string; icon: string }, index: number) => {
+                    const IconComponent = operationIcons[item.icon] || Server
+                    return (
+                      <motion.div
+                        key={item.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                        className={`p-5 rounded-xl ${
+                          theme === 'dark' 
+                            ? 'bg-slate-800/50 border border-slate-700/50' 
+                            : 'bg-white border border-gray-200 shadow-sm'
+                        }`}
+                      >
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
+                          theme === 'dark' ? 'bg-teal-500/20' : 'bg-teal-50'
+                        }`}>
+                          <IconComponent className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                        </div>
+                        <h4 className={`font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                          {item.title}
+                        </h4>
+                        <p className={`text-sm leading-relaxed ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                          {item.description}
+                        </p>
+                      </motion.div>
+                    )
+                  })}
+                </div>
+              </motion.div>
+
+              {/* Right: Gallery Preview */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <h3 className={`font-display text-xl font-semibold mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  {t.operationService.gallery?.title}
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {partnershipImages.slice(0, 4).map((img, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.05 }}
+                      className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
+                      onClick={() => openLightbox(partnershipImages, index)}
+                    >
+                      <Image
+                        src={img}
+                        alt={`Partner center ${index + 1}`}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Partner Centers - Compact */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className={`rounded-2xl p-6 ${
+                theme === 'dark' ? 'bg-gradient-to-r from-teal-500/10 to-blue-500/10 border border-teal-500/20' : 'bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-100'
+              }`}
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                  <h3 className={`font-display text-xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                    {t.operationService.partners?.title}
+                  </h3>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  {t.operationService.partners?.list?.map((partner: { name: string; nameZh: string; beds: string }, index: number) => (
+                    <div 
+                      key={partner.nameZh} 
+                      className={`flex items-center gap-2 px-4 py-2 rounded-full ${
+                        theme === 'dark' ? 'bg-white/10' : 'bg-white shadow-sm'
+                      }`}
+                    >
+                      <Building2 className={`w-4 h-4 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                      <span className={`font-medium text-sm ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                        {locale === 'en' ? partner.name : partner.nameZh}
+                      </span>
+                      <span className={`text-xs px-2 py-0.5 rounded-full ${
+                        theme === 'dark' ? 'bg-teal-500/20 text-teal-300' : 'bg-teal-100 text-teal-700'
+                      }`}>
+                        {partner.beds}{t.operationService.partners?.bedsLabel}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 2: Vascular Access */}
       <section 
         id="vascular-access" 
         className="py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -350,7 +542,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       <section 
         id="patient-care" 
         className="py-24"
-        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
@@ -379,10 +571,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           >
             <div className="flex flex-col md:flex-row md:items-start gap-6">
               {/* Icons - horizontal on mobile, grid on desktop */}
-              <div className="flex justify-center md:justify-start gap-3 md:grid md:grid-cols-3 md:gap-2 flex-shrink-0">
+              <div className="flex justify-center md:justify-start gap-2 md:grid md:grid-cols-3 md:gap-2 flex-shrink-0">
                 {patientCareImages.slice(0, 3).map((src, idx) => (
-                  <div key={idx} className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center overflow-hidden">
-                    <Image src={src} alt="" width={50} height={50} className="object-contain w-10 h-10 md:w-[50px] md:h-[50px]" />
+                  <div key={idx} className="w-11 h-11 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center overflow-hidden">
+                    <Image src={src} alt="" width={36} height={36} className="object-contain w-8 h-8 md:w-9 md:h-9" />
                   </div>
                 ))}
               </div>
@@ -420,8 +612,8 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 : 'bg-gradient-to-r from-rose-50 to-pink-50'
             }`}
           >
-            <div className="grid lg:grid-cols-2 gap-8 items-center">
-              <div>
+            <div className="grid lg:grid-cols-5 gap-8 items-center">
+              <div className="lg:col-span-2">
                 <div className="flex items-center gap-2 mb-4">
                   <Cpu className={`w-5 h-5 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} />
                   <span className={`text-sm font-semibold ${theme === 'dark' ? 'text-rose-300' : 'text-rose-700'}`}>
@@ -431,26 +623,29 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 <h3 className={`text-2xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t.patientCare.smartFeature.title}
                 </h3>
-                <p className={`mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`mb-5 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
                   {t.patientCare.smartFeature.description}
                 </p>
                 <ul className="space-y-2">
                   {t.patientCare.smartFeature.benefits.map((benefit: string, index: number) => (
-                    <li key={index} className="flex items-center gap-2">
-                      <span className={`text-sm ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>✓</span>
+                    <li key={index} className="flex items-start gap-2">
+                      <span className={`text-sm mt-0.5 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>✓</span>
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{benefit}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="flex justify-center">
-                <Image
-                  src="/images/patient-care/dialysis-tourism.png"
-                  alt={t.patientCare.smartFeature.title}
-                  width={200}
-                  height={200}
-                  className="object-contain"
-                />
+              <div className="lg:col-span-3 grid grid-cols-2 gap-3">
+                {patientCareTravelImages.map((src, index) => (
+                  <div 
+                    key={index}
+                    className="relative aspect-video rounded-xl overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(patientCareTravelImages, index)}
+                  >
+                    <Image src={src} alt={`透析旅游活动 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+                  </div>
+                ))}
               </div>
             </div>
           </motion.div>
@@ -461,7 +656,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       <section 
         id="training" 
         className="py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* Content Grid - Left: Text, Right: App Preview */}
@@ -587,7 +782,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <section 
           id="rehabilitation" 
           className="py-24"
-          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -660,7 +855,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       <section 
         id="nutrition" 
         className="py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -757,7 +952,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <section 
           id="foot-care" 
           className="py-24"
-          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -816,71 +1011,90 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <section 
           id="skin-care" 
           className="py-24"
-          style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <span className="label-tag mb-4 inline-block">{t.skinCare.tag}</span>
-              <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                {t.skinCare.title}
-              </h2>
-              <p className={`text-lg max-w-3xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                {t.skinCare.subtitle}
-              </p>
-            </motion.div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <span className="label-tag mb-4 inline-block">{t.skinCare.tag}</span>
+                <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  {t.skinCare.title}
+                </h2>
+                <p className={`text-lg mb-6 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {t.skinCare.subtitle}
+                </p>
+                <p className={`mb-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {t.skinCare.intro}
+                </p>
+                
+                {/* Service Cards */}
+                <div className="space-y-4 mb-6">
+                  {t.skinCare.services?.map((service: { title: string; description: string }, index: number) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      className={`p-4 rounded-xl ${
+                        theme === 'dark' ? 'bg-slate-800/50' : 'bg-gray-50'
+                      }`}
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                          theme === 'dark' ? 'bg-purple-500/20' : 'bg-purple-100'
+                        }`}>
+                          <Smile className={`w-5 h-5 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`} />
+                        </div>
+                        <div>
+                          <h4 className={`font-semibold mb-1 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                            {service.title}
+                          </h4>
+                          <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                            {service.description}
+                          </p>
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`text-base max-w-4xl mx-auto text-center mb-12 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}
-            >
-              {t.skinCare.intro}
-            </motion.p>
-
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {t.skinCare.services?.map((service: { title: string; description: string }, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`p-6 rounded-2xl ${
-                    theme === 'dark' ? 'bg-slate-800/50' : 'bg-gray-50'
-                  }`}
-                >
-                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    theme === 'dark' ? 'bg-purple-500/20' : 'bg-purple-100'
-                  }`}>
-                    <Smile className={`w-6 h-6 ${theme === 'dark' ? 'text-purple-400' : 'text-purple-600'}`} />
+                <div className="flex flex-wrap gap-2">
+                  {t.skinCare.highlights?.map((highlight: string, index: number) => (
+                    <span 
+                      key={index}
+                      className={`px-3 py-1.5 rounded-full text-sm ${
+                        theme === 'dark' ? 'bg-purple-500/20 text-purple-300' : 'bg-purple-100 text-purple-700'
+                      }`}
+                    >
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+              
+              {/* Image Gallery - Right Side */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-2 gap-4"
+              >
+                {skinCareImages.map((src, index) => (
+                  <div 
+                    key={index}
+                    className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
+                    onClick={() => openLightbox(skinCareImages, index)}
+                  >
+                    <Image src={src} alt={`皮肤护理产品 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
-                  <h4 className={`font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
-                    {service.title}
-                  </h4>
-                  <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
-                    {service.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="flex justify-center flex-wrap gap-2">
-              {t.skinCare.highlights?.map((highlight: string, index: number) => (
-                <span 
-                  key={index}
-                  className={`px-4 py-2 rounded-full text-sm font-medium ${
-                    theme === 'dark' ? 'bg-purple-500/20 text-purple-300' : 'bg-purple-100 text-purple-700'
-                  }`}
-                >
-                  {highlight}
-                </span>
-              ))}
+                ))}
+              </motion.div>
             </div>
           </div>
         </section>
@@ -889,7 +1103,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       {/* CTA */}
       <section 
         className="py-24"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b' }}
+        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
