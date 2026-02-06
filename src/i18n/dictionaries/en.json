@@ -1198,16 +1198,22 @@
         "icon": "Heart"
       },
       {
-        "id": "nutrition",
-        "title": "Dialysis Nutrition",
-        "description": "Professional nutritionist guidance, personalized meal plans, scientific diet for recovery",
-        "icon": "Utensils"
+        "id": "training",
+        "title": "Professional Training",
+        "description": "Online and offline combined, building professional dialysis medical teams",
+        "icon": "GraduationCap"
       },
       {
         "id": "rehabilitation",
         "title": "Dialysis Rehabilitation",
         "description": "AI posture analysis, scientific exercise rehabilitation, improving quality of life",
         "icon": "Dumbbell"
+      },
+      {
+        "id": "nutrition",
+        "title": "Dialysis Nutrition",
+        "description": "Professional nutritionist guidance, personalized meal plans, scientific diet for recovery",
+        "icon": "Utensils"
       },
       {
         "id": "foot-care",
@@ -1220,12 +1226,6 @@
         "title": "Skin Care Services",
         "description": "Professional products for itching relief and moisturizing dialysis-related skin issues",
         "icon": "Smile"
-      },
-      {
-        "id": "training",
-        "title": "Professional Training",
-        "description": "Online and offline combined, building professional dialysis medical teams",
-        "icon": "GraduationCap"
       }
     ],
     "operationService": {

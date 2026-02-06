@@ -1262,11 +1262,11 @@
       { "id": "operation-service", "title": "共同運営サービス", "description": "病院と提携して透析センターを共同運営、設備・技術・運営ノウハウを提供", "icon": "Building2" },
       { "id": "vascular-access", "title": "血管アクセスサービス", "description": "AI支援血管アクセススクリーニング、5G遠隔コンサルテーション", "icon": "Activity" },
       { "id": "patient-care", "title": "患者ケアサービス", "description": "透析旅行、患者交流会など、透析のために生活を止めない", "icon": "Heart" },
-      { "id": "nutrition", "title": "透析栄養管理", "description": "専門栄養士の指導、個別食事プラン、科学的な食事で回復をサポート", "icon": "Utensils" },
+      { "id": "training", "title": "専門研修システム", "description": "オンラインとオフラインを組み合わせ、専門透析医療チームを育成", "icon": "GraduationCap" },
       { "id": "rehabilitation", "title": "透析リハビリサービス", "description": "AI姿勢分析、科学的運動リハビリ、生活の質向上", "icon": "Dumbbell" },
+      { "id": "nutrition", "title": "透析栄養管理", "description": "専門栄養士の指導、個別食事プラン、科学的な食事で回復をサポート", "icon": "Utensils" },
       { "id": "foot-care", "title": "フットケアサービス", "description": "炭酸泉足浴、専門的フットスクリーニング、糖尿病性足病変予防", "icon": "Footprints" },
-      { "id": "skin-care", "title": "スキンケアサービス", "description": "透析関連皮膚問題のための専門製品とケア", "icon": "Smile" },
-      { "id": "training", "title": "専門研修システム", "description": "オンラインとオフラインを組み合わせ、専門透析医療チームを育成", "icon": "GraduationCap" }
+      { "id": "skin-care", "title": "スキンケアサービス", "description": "透析関連皮膚問題のための専門製品とケア", "icon": "Smile" }
     ],
     "operationService": {
       "tag": "スマート透析センター",

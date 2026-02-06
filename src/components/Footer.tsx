@@ -36,10 +36,11 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.smartCenter, href: `/${locale}/services#operation-service` },
       { label: t.links.vascularAccess, href: `/${locale}/services#vascular-access` },
       { label: t.links.patientCare, href: `/${locale}/services#patient-care` },
+      { label: t.links.training, href: `/${locale}/services#training` },
+      { label: t.links.rehabilitation, href: `/${locale}/services#rehabilitation` },
       { label: t.links.nutrition, href: `/${locale}/services#nutrition` },
       { label: t.links.footCare, href: `/${locale}/services#foot-care` },
       { label: t.links.skinCare, href: `/${locale}/services#skin-care` },
-      { label: t.links.training, href: `/${locale}/services#training` },
     ],
     company: [
       { label: t.links.aboutUs, href: `/${locale}/company` },

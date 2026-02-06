@@ -1262,11 +1262,11 @@
       { "id": "operation-service", "title": "共建運營服務", "description": "與醫院合作共建透析中心，提供設備、技術和運營專業支持", "icon": "Building2" },
       { "id": "vascular-access", "title": "血管通路服務", "description": "AI輔助血管通路篩查，5G遠距會診，確保透析治療有效進行", "icon": "Activity" },
       { "id": "patient-care", "title": "腎友關懷服務", "description": "透析旅遊、腎友聯誼會等活動，讓生活不因透析而停止", "icon": "Heart" },
-      { "id": "nutrition", "title": "透析營養管理", "description": "專業營養師指導，個人化膳食方案，科學飲食助力康復", "icon": "Utensils" },
+      { "id": "training", "title": "專業培訓體系", "description": "線上線下結合，打造專業透析醫護團隊", "icon": "GraduationCap" },
       { "id": "rehabilitation", "title": "透析康復服務", "description": "AI體態分析，科學運動康復，提升生活品質", "icon": "Dumbbell" },
+      { "id": "nutrition", "title": "透析營養管理", "description": "專業營養師指導，個人化膳食方案，科學飲食助力康復", "icon": "Utensils" },
       { "id": "foot-care", "title": "足部護理服務", "description": "碳酸泉足浴，專業足部篩查，預防糖尿病足併發症", "icon": "Footprints" },
-      { "id": "skin-care", "title": "皮膚管理服務", "description": "專業產品緩解皮膚瘙癢，改善透析相關皮膚問題", "icon": "Smile" },
-      { "id": "training", "title": "專業培訓體系", "description": "線上線下結合，打造專業透析醫護團隊", "icon": "GraduationCap" }
+      { "id": "skin-care", "title": "皮膚管理服務", "description": "專業產品緩解皮膚瘙癢，改善透析相關皮膚問題", "icon": "Smile" }
     ],
     "operationService": {
       "tag": "智慧透析中心",

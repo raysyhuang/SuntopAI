@@ -64,8 +64,10 @@ const rehabilitationImages = [
 ]
 
 const skinCareImages = [
-  '/images/services/skincare/soothing-balm.png',
-  '/images/services/skincare/body-lotion.png',
+  '/images/skincare/body-lotion.png',
+  '/images/skincare/aroma-bomb.png',
+  '/images/skincare/soothing-balm.png',
+  '/images/skincare/lotion-tube.png',
 ]
 
 const patientCareTravelImages = [

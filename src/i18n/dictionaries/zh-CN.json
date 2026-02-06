@@ -1270,16 +1270,22 @@
         "icon": "Heart"
       },
       {
-        "id": "nutrition",
-        "title": "透析营养管理",
-        "description": "专业营养师指导，个性化膳食方案，科学饮食助力康复",
-        "icon": "Utensils"
+        "id": "training",
+        "title": "专业培训体系",
+        "description": "线上线下结合，打造专业透析医护团队",
+        "icon": "GraduationCap"
       },
       {
         "id": "rehabilitation",
         "title": "透析康复服务",
         "description": "AI体态分析，科学运动康复，提升生活质量",
         "icon": "Dumbbell"
+      },
+      {
+        "id": "nutrition",
+        "title": "透析营养管理",
+        "description": "专业营养师指导，个性化膳食方案，科学饮食助力康复",
+        "icon": "Utensils"
       },
       {
         "id": "foot-care",
@@ -1292,12 +1298,6 @@
         "title": "皮肤管理服务",
         "description": "专业产品缓解皮肤瘙痒，改善透析相关皮肤问题",
         "icon": "Smile"
-      },
-      {
-        "id": "training",
-        "title": "专业培训体系",
-        "description": "线上线下结合，打造专业透析医护团队",
-        "icon": "GraduationCap"
       }
     ],
     "operationService": {
