@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import Link from 'next/link'
 import { 
   Activity, Heart, Users, GraduationCap, Globe, Wifi, Brain, 
@@ -314,14 +313,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                       className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
                       onClick={() => openLightbox(partnershipImages, index)}
                     >
-                      <Image
+                      <img
                         src={img}
                         alt={`Partner center ${index + 1}`}
-                        fill
-                        sizes="(max-width: 768px) 50vw, 25vw"
-                        loading="lazy"
-                        quality={85}
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     </motion.div>
@@ -510,14 +505,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
                 onClick={() => openLightbox(vascularGalleryImages, index)}
               >
-                <Image
+                <img
                   src={src}
                   alt={`${t.vascularAccess.title} ${index + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  loading="lazy"
-                  quality={85}
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </motion.div>
@@ -582,7 +573,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               <div className="flex justify-center md:justify-start gap-2 md:grid md:grid-cols-3 md:gap-2 flex-shrink-0">
                 {patientCareImages.slice(0, 3).map((src, idx) => (
                   <div key={idx} className="w-11 h-11 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-rose-100 to-pink-100 flex items-center justify-center overflow-hidden">
-                    <Image src={src} alt="" width={36} height={36} className="object-contain w-8 h-8 md:w-9 md:h-9" />
+                    <img src={src} alt="" className="object-contain w-8 h-8 md:w-9 md:h-9" />
                   </div>
                 ))}
               </div>
@@ -650,7 +641,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-video rounded-xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(patientCareTravelImages, index)}
                   >
-                    <Image src={src} alt={`透析旅游活动 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 33vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={src} alt={`透析旅游活动 ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -753,13 +744,9 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 className="relative w-full max-w-md h-auto cursor-pointer mb-6"
                 onClick={() => openLightbox(['/images/health-app/iphone-mockup.png'], 0)}
               >
-                <Image 
+                <img 
                   src="/images/health-app/iphone-mockup.png" 
-                  alt="App Preview" 
-                  width={500}
-                  height={1000}
-                  loading="lazy"
-                  quality={85}
+                  alt="App Preview"
                   className="object-contain w-full"
                 />
               </div>
@@ -768,14 +755,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   className="relative w-24 h-24 rounded-lg overflow-hidden cursor-pointer"
                   onClick={() => openLightbox(['/images/health-app/wechat-qr-code.png'], 0)}
                 >
-                  <Image 
+                  <img 
                     src="/images/health-app/wechat-qr-code.png" 
-                    alt="QR Code" 
-                    fill
-                    sizes="96px"
-                    loading="lazy"
-                    quality={85}
-                    className="object-contain"
+                    alt="QR Code"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="flex items-center gap-1">
@@ -856,7 +839,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
                 onClick={() => openLightbox(rehabilitationImages, 0)}
               >
-                <Image src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <img src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </motion.div>
             </div>
@@ -951,7 +934,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                   onClick={() => openLightbox(nutritionImages, index)}
                 >
-                  <Image src={src} alt="营养活动" fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <img src={src} alt="营养活动" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                 </div>
               ))}
@@ -1009,7 +992,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(footCareImages, index)}
                   >
-                    <Image src={src} alt={`足部护理 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={src} alt={`足部护理 ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -1103,7 +1086,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(skinCareImages, index)}
                   >
-                    <Image src={src} alt={`皮肤护理产品 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <img src={src} alt={`皮肤护理产品 ${index + 1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -1170,13 +1153,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             </>
           )}
           <div className="relative max-w-4xl max-h-[80vh] w-full h-full" onClick={(e) => e.stopPropagation()}>
-            <Image
+            <img
               src={lightboxImages[activeImageIndex]}
               alt={`Image ${activeImageIndex + 1}`}
-              fill
-              sizes="(max-width: 1024px) 100vw, 80vw"
-              quality={90}
-              className="object-contain"
+              className="max-h-[75vh] w-full object-contain"
             />
           </div>
           {lightboxImages.length > 1 && (
