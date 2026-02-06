@@ -318,6 +318,9 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                         src={img}
                         alt={`Partner center ${index + 1}`}
                         fill
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                        loading="lazy"
+                        quality={85}
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -511,6 +514,9 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   src={src}
                   alt={`${t.vascularAccess.title} ${index + 1}`}
                   fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  loading="lazy"
+                  quality={85}
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
@@ -644,7 +650,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-video rounded-xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(patientCareTravelImages, index)}
                   >
-                    <Image src={src} alt={`透析旅游活动 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <Image src={src} alt={`透析旅游活动 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 33vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -752,6 +758,8 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   alt="App Preview" 
                   width={500}
                   height={1000}
+                  loading="lazy"
+                  quality={85}
                   className="object-contain w-full"
                 />
               </div>
@@ -763,7 +771,10 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   <Image 
                     src="/images/health-app/wechat-qr-code.png" 
                     alt="QR Code" 
-                    fill 
+                    fill
+                    sizes="96px"
+                    loading="lazy"
+                    quality={85}
                     className="object-contain"
                   />
                 </div>
@@ -845,7 +856,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
                 onClick={() => openLightbox(rehabilitationImages, 0)}
               >
-                <Image src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                <Image src="/images/clinical/康复运动设备.jpg" alt="康复运动设备" fill sizes="(max-width: 1024px) 100vw, 50vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
               </motion.div>
             </div>
@@ -940,7 +951,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                   onClick={() => openLightbox(nutritionImages, index)}
                 >
-                  <Image src={src} alt="营养活动" fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <Image src={src} alt="营养活动" fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                 </div>
               ))}
@@ -998,7 +1009,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(footCareImages, index)}
                   >
-                    <Image src={src} alt={`足部护理 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <Image src={src} alt={`足部护理 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -1092,7 +1103,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     className="relative aspect-square rounded-2xl overflow-hidden cursor-pointer group"
                     onClick={() => openLightbox(skinCareImages, index)}
                   >
-                    <Image src={src} alt={`皮肤护理产品 ${index + 1}`} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                    <Image src={src} alt={`皮肤护理产品 ${index + 1}`} fill sizes="(max-width: 1024px) 50vw, 25vw" loading="lazy" quality={85} className="object-cover group-hover:scale-105 transition-transform duration-300" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
                   </div>
                 ))}
@@ -1163,6 +1174,8 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               src={lightboxImages[activeImageIndex]}
               alt={`Image ${activeImageIndex + 1}`}
               fill
+              sizes="(max-width: 1024px) 100vw, 80vw"
+              quality={90}
               className="object-contain"
             />
           </div>
