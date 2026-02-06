@@ -81,7 +81,7 @@ export default async function LocaleLayout({
   return (
     <>
       <Navigation locale={locale} dictionary={dictionary} />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1" role="main">
         {children}
       </main>
       <Footer locale={locale} dictionary={dictionary} />

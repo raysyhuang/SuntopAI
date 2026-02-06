@@ -1085,7 +1085,7 @@
       "suppliers": {
         "tag": "Partners",
         "title": "Supply Chain Partners",
-        "subtitle": "Long-term strategic partnerships with leading medical device manufacturers",
+        "subtitle": "Long-term strategic partnerships with renowned medical device manufacturers",
         "list": [
           { "name": "BAIN MEDICAL", "nameEn": "BAIN MEDICAL" },
           { "name": "TORAY", "nameEn": "TORAY" },
@@ -1914,56 +1914,75 @@
     "title": "Privacy Policy",
     "lastUpdated": "Last Updated",
     "date": "February 2025",
-    "intro": "Suntop Healthcare Corp. (\"Suntop\", \"we\", \"us\", or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services.",
+    "intro": "Suntop Healthcare Corp. (\"Suntop\", \"we\", \"us\", or \"our\") is committed to protecting your privacy and ensuring the security of your personal and health information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, visit our website, or interact with our healthcare technology platforms.",
     "sections": [
       {
-        "title": "Information We Collect",
-        "content": "We may collect information about you in a variety of ways, including:",
-        "items": [
-          "Personal identification information (name, email address, phone number)",
-          "Medical and health information when you use our hemodialysis services",
-          "Device and usage data when you interact with our digital platforms",
-          "Communication records when you contact our support team"
-        ]
+        "title": "Scope and Applicability",
+        "content": "This Privacy Policy applies to all individuals who visit our website or use our digital platforms, receive healthcare services through facilities using our technology, interact with our patient care and monitoring systems, communicate with our customer service or support teams, or apply for employment or business partnerships with us."
+      },
+      {
+        "title": "Types of Information We Collect",
+        "content": "We collect several categories of information to provide and improve our services. This includes personal identifiers such as name, email address, phone number, mailing address, date of birth, and government-issued ID numbers. We also collect protected health information (PHI), including medical history, treatment records, lab results, diagnostic information, medication lists, vital signs, and dialysis treatment data. Additionally, we gather account information (username, password, preferences, and authentication credentials), device information (IP address, browser type, operating system, and device identifiers), usage data (pages visited, features used, time spent on platform, and interaction patterns), communication records (emails, chat logs, phone recordings where permitted, and support tickets), and payment information (billing address, payment method details, and transaction history processed through secure third-party payment processors)."
+      },
+      {
+        "title": "How We Collect Information",
+        "content": "We collect information through various methods: directly from you when you create an account, fill out forms, or communicate with us; automatically through cookies, web beacons, and similar tracking technologies; from healthcare providers and facilities that use our platforms; from third-party service providers and business partners; and through IoT medical devices integrated with our systems."
       },
       {
         "title": "How We Use Your Information",
-        "content": "We use the information we collect to:",
-        "items": [
-          "Provide, maintain, and improve our healthcare services",
-          "Process and manage your treatment records",
-          "Communicate with you about services, updates, and support",
-          "Comply with legal obligations and healthcare regulations",
-          "Ensure the safety and security of our systems"
-        ]
+        "content": "We use the information we collect for providing, maintaining, and improving our healthcare technology services; processing and managing patient treatment records and clinical workflows; enabling AI-assisted clinical decision support features; communicating with you about services, updates, alerts, and support; personalizing your experience and providing relevant content; conducting research and analytics to improve patient outcomes; complying with legal obligations, healthcare regulations, and industry standards; preventing fraud, ensuring security, and protecting our legal rights; and processing payments and managing billing relationships."
+      },
+      {
+        "title": "Cookies and Tracking Technologies",
+        "content": "We use cookies and similar technologies to enhance your experience. Essential cookies are required for basic website functionality and security. Performance cookies help us understand how visitors interact with our website. Functional cookies remember your preferences and settings. Analytics cookies collect anonymized data for statistical analysis. You can manage cookie preferences through your browser settings, though disabling certain cookies may limit functionality."
+      },
+      {
+        "title": "Information Sharing and Disclosure",
+        "content": "We may share your information with healthcare providers and facilities for treatment coordination; with service providers who perform services on our behalf under strict confidentiality agreements; with business partners for integrated healthcare solutions; as required by law, court order, or government regulation; to protect our rights, property, or safety, or that of our users; in connection with a merger, acquisition, or sale of assets with appropriate safeguards; and with your explicit consent for any other purpose."
+      },
+      {
+        "title": "Third-Party Services",
+        "content": "Our services may integrate with third-party platforms including analytics providers such as Google Analytics for website traffic analysis, cloud infrastructure providers for data storage and processing, payment processors for secure transaction handling, and communication platforms for customer support. These third parties have their own privacy policies, and we encourage you to review them."
+      },
+      {
+        "title": "International Data Transfers",
+        "content": "Your information may be transferred to and processed in countries other than your country of residence. We implement appropriate safeguards for international transfers, including Standard Contractual Clauses approved by relevant authorities, data processing agreements with appropriate security provisions, compliance with applicable cross-border data transfer regulations, and encryption and security measures for data in transit."
       },
       {
         "title": "Data Security",
-        "content": "We implement appropriate technical and organizational measures to protect your personal information, including:",
-        "items": [
-          "Encryption of data in transit and at rest",
-          "Access controls and authentication mechanisms",
-          "Regular security assessments and audits",
-          "Staff training on data protection practices"
-        ]
+        "content": "We implement comprehensive security measures to protect your information, including AES-256 encryption for data at rest and TLS 1.3 for data in transit, multi-factor authentication and role-based access controls, regular security assessments, penetration testing, and vulnerability scans, 24/7 security monitoring and incident response capabilities, employee security training and background checks, physical security controls at data center facilities, and regular backup procedures and disaster recovery planning."
       },
       {
         "title": "Data Retention",
-        "content": "We retain your personal information for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements. Medical records are retained in accordance with applicable healthcare regulations."
+        "content": "We retain your information according to specific guidelines. Active account data is retained while your account is active and for a reasonable period thereafter. Medical records are retained in accordance with applicable healthcare regulations, typically 6-10 years after the last treatment. Transaction records are retained for 7 years for financial and tax compliance. Aggregated and anonymized analytics data may be retained indefinitely. Upon request, we will delete or anonymize your data, subject to legal retention requirements."
       },
       {
-        "title": "Your Rights",
-        "content": "Depending on your location, you may have certain rights regarding your personal information, including:",
-        "items": [
-          "Access to your personal data",
-          "Correction of inaccurate information",
-          "Deletion of your data (subject to legal requirements)",
-          "Objection to certain processing activities"
-        ]
+        "title": "HIPAA Notice (United States)",
+        "content": "For users in the United States, we comply with the Health Insurance Portability and Accountability Act (HIPAA). We maintain appropriate administrative, physical, and technical safeguards for protected health information (PHI). We enter into Business Associate Agreements (BAAs) with covered entities and provide breach notification as required by HIPAA and state laws. Patients have rights to access, amend, and receive an accounting of disclosures of their PHI. For a complete Notice of Privacy Practices, please contact us."
+      },
+      {
+        "title": "California Privacy Rights (CCPA/CPRA)",
+        "content": "California residents have specific rights under the California Consumer Privacy Act and California Privacy Rights Act. These include the Right to Know (request information about the categories and specific pieces of personal information we have collected), Right to Delete (request deletion of your personal information, subject to certain exceptions), Right to Correct (request correction of inaccurate personal information), Right to Opt-Out (opt out of the sale or sharing of personal information—note that we do not sell personal information), and Right to Non-Discrimination (we will not discriminate against you for exercising your privacy rights). To exercise these rights, contact us at privacy@suntopai.com."
+      },
+      {
+        "title": "European Privacy Rights (GDPR)",
+        "content": "If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have rights under GDPR including: Right of Access to obtain confirmation of whether we process your data and access to that data; Right to Rectification to request correction of inaccurate or incomplete data; Right to Erasure to request deletion of your data in certain circumstances; Right to Restrict Processing to request limitation of processing in certain circumstances; Right to Data Portability to receive your data in a structured, commonly used format; Right to Object to processing based on legitimate interests or for direct marketing; Right to Withdraw Consent at any time where processing is based on consent; and Right to Lodge a Complaint with a supervisory authority."
+      },
+      {
+        "title": "Children's Privacy",
+        "content": "Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children without parental consent. If we learn we have collected information from a child without verification of parental consent, we will delete it. Healthcare services for minors are provided through their parents or legal guardians, who may contact us to review, delete, or stop collection of their child's information."
+      },
+      {
+        "title": "Data Breach Notification",
+        "content": "In the event of a data breach affecting your personal information, we will notify affected individuals within the timeframes required by applicable law (typically 72 hours for GDPR, 60 days for HIPAA). The notification will include the nature of the breach, types of data affected, and steps we are taking. We will provide guidance on steps you can take to protect yourself. We maintain comprehensive incident response procedures and regularly test our response capabilities."
+      },
+      {
+        "title": "Policy Changes",
+        "content": "We may update this Privacy Policy from time to time. Material changes will be communicated via email or prominent notice on our website. The \"Last Updated\" date at the top indicates when the policy was last revised. Your continued use of our services after changes constitutes acceptance of the updated policy. We encourage you to review this policy periodically."
       },
       {
         "title": "Contact Us",
-        "content": "If you have questions about this Privacy Policy or our data practices, please contact us at the information provided on our Contact page."
+        "content": "If you have questions about this Privacy Policy or wish to exercise your privacy rights, please contact us by email at privacy@suntopai.com, or reach our Data Protection Officer at dpo@suntopai.com. You may also write to Suntop Healthcare Corp., Privacy Team, at our corporate address. For HIPAA-related inquiries, please email hipaa@suntopai.com. We will respond to your request within 30 days or as required by applicable law."
       }
     ]
   },
@@ -1971,52 +1990,107 @@
     "title": "Terms of Service",
     "lastUpdated": "Last Updated",
     "date": "February 2025",
-    "intro": "Welcome to Suntop Healthcare Corp. By accessing or using our services, you agree to be bound by these Terms of Service. Please read them carefully.",
+    "intro": "Welcome to Suntop Healthcare Corp. (\"Suntop\", \"we\", \"us\", or \"our\"). These Terms of Service (\"Terms\") govern your access to and use of our website, applications, platforms, and services. By accessing or using our services, you agree to be bound by these Terms. Please read them carefully before using our services.",
     "sections": [
       {
         "title": "Acceptance of Terms",
-        "content": "By accessing our website, using our healthcare services, or interacting with our digital platforms, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy."
+        "content": "By accessing our website, creating an account, using our healthcare technology services, or interacting with our digital platforms, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service, our Privacy Policy, and any additional terms and conditions that may apply to specific services. If you do not agree to these Terms, you may not access or use our services."
+      },
+      {
+        "title": "Eligibility",
+        "content": "To use our services, you must be at least 18 years of age (or the age of majority in your jurisdiction) and have the legal capacity to enter into binding agreements. You must not be prohibited from using our services under applicable law. If you are using our services on behalf of an organization, you represent that you have the authority to bind that organization to these Terms. Healthcare professionals using our clinical platforms must hold valid licenses in their respective jurisdictions."
+      },
+      {
+        "title": "Account Registration",
+        "content": "To access certain features of our services, you may need to create an account. You must provide accurate, current, and complete information during registration and are responsible for maintaining the confidentiality of your account credentials. You must notify us immediately of any unauthorized use of your account. You may not share your account or transfer it to another person without our consent. We reserve the right to suspend or terminate accounts that violate these Terms, and you are responsible for all activities that occur under your account."
       },
       {
         "title": "Description of Services",
-        "content": "Suntop provides intelligent healthcare technology solutions, including:",
-        "items": [
-          "Hemodialysis center management systems",
-          "AI-assisted clinical decision support tools",
-          "Patient care and monitoring platforms",
-          "Healthcare facility consulting services"
-        ]
+        "content": "Suntop provides intelligent healthcare technology solutions, including AI-powered hemodialysis center management systems, clinical decision support tools and AI-assisted diagnostics, patient care coordination and monitoring platforms, IoT medical device integration and data management, healthcare facility consulting and operational optimization, training and education resources for healthcare professionals, and analytics and reporting dashboards for clinical outcomes."
       },
       {
         "title": "Medical Disclaimer",
-        "content": "Our technology platforms are designed to assist healthcare professionals in their clinical practice. They do not replace professional medical judgment. All medical decisions should be made by qualified healthcare providers. Suntop is not responsible for clinical decisions made using our platforms."
+        "content": "IMPORTANT: Our technology platforms are designed to assist healthcare professionals in their clinical practice and are not intended to replace professional medical judgment. Our AI-assisted tools provide recommendations based on available data but do not constitute medical advice. All clinical decisions must be made by qualified, licensed healthcare providers. Suntop is not responsible for clinical decisions made using our platforms, and our services do not create a doctor-patient relationship between Suntop and any individual. In case of a medical emergency, contact emergency services immediately. Healthcare providers remain solely responsible for patient care and treatment decisions."
       },
       {
         "title": "User Responsibilities",
-        "content": "When using our services, you agree to:",
-        "items": [
-          "Provide accurate and complete information",
-          "Maintain the confidentiality of your account credentials",
-          "Use our services in compliance with applicable laws",
-          "Not attempt to circumvent security measures",
-          "Report any security vulnerabilities you discover"
-        ]
+        "content": "When using our services, you agree to provide accurate, truthful, and complete information and to maintain the security and confidentiality of your account credentials. You agree to use our services only for lawful purposes and in compliance with applicable laws, and not to attempt to gain unauthorized access to our systems or other users' accounts. You shall not interfere with or disrupt the integrity or performance of our services and will report any security vulnerabilities or suspicious activity you discover. You must comply with all applicable healthcare regulations and professional standards and respect the intellectual property rights of Suntop and third parties."
       },
       {
-        "title": "Intellectual Property",
-        "content": "All content, software, and technology provided through our services are the property of Suntop or its licensors and are protected by intellectual property laws. You may not copy, modify, distribute, or reverse engineer any part of our services without express written permission."
+        "title": "Prohibited Conduct",
+        "content": "You agree not to engage in any of the following prohibited activities: using our services for any illegal purpose or in violation of any laws; impersonating any person or entity or falsely claiming affiliation with any person or entity; uploading or transmitting viruses, malware, or other malicious code; attempting to reverse engineer, decompile, or disassemble our software; scraping, data mining, or using automated systems to access our services without permission; interfering with security features or circumventing access controls; harassing, threatening, or intimidating other users; using our services to send spam or unauthorized commercial communications; violating the privacy or intellectual property rights of others; or reselling or redistributing our services without authorization."
+      },
+      {
+        "title": "Intellectual Property Rights",
+        "content": "All content, software, technology, and materials provided through our services are protected by intellectual property laws. Our services, including all software, algorithms, designs, text, graphics, and logos, are owned by Suntop or its licensors. You are granted a limited, non-exclusive, non-transferable license to use our services as intended. You may not copy, modify, distribute, sell, or lease any part of our services without express written permission, nor may you reverse engineer, decompile, or attempt to extract source code from our software. All trademarks, service marks, and trade names are the property of their respective owners. Any feedback or suggestions you provide may be used by us without obligation to you."
+      },
+      {
+        "title": "Third-Party Links and Services",
+        "content": "Our services may contain links to third-party websites or integrate with third-party services. We are not responsible for the content, accuracy, or practices of third-party sites, and third-party services are governed by their own terms and privacy policies. Your use of third-party services is at your own risk, and we do not endorse or assume liability for any third-party content or services. You should review the terms and policies of any third-party services you use."
+      },
+      {
+        "title": "Payment Terms",
+        "content": "If you purchase services from us, fees are as specified in your service agreement or on our website. All fees are non-refundable unless otherwise specified or required by law. You authorize us to charge your designated payment method for all fees due. We may change our fees upon reasonable notice, and continued use constitutes acceptance. Late payments may incur interest and collection costs as permitted by law, and disputed charges must be reported within 30 days of the billing date."
+      },
+      {
+        "title": "Confidentiality",
+        "content": "Both parties agree to maintain the confidentiality of proprietary information. You agree not to disclose our confidential information, including technical specifications, pricing, and business strategies. We agree to protect your confidential information in accordance with our Privacy Policy. Confidentiality obligations do not apply to information that is publicly available or independently developed. Healthcare-related confidentiality obligations are governed by applicable regulations such as HIPAA."
+      },
+      {
+        "title": "Indemnification",
+        "content": "You agree to indemnify, defend, and hold harmless Suntop, its affiliates, officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or relating to your use of our services, your violation of these Terms, your violation of any rights of another party (including intellectual property rights), your violation of any applicable laws or regulations, any content you submit or transmit through our services, and any clinical decisions made using our platforms (for healthcare provider users)."
+      },
+      {
+        "title": "Disclaimer of Warranties",
+        "content": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, OUR SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT WARRANTIES OF ANY KIND. WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT OUR SERVICES WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, NOR DO WE WARRANT THE ACCURACY, COMPLETENESS, OR RELIABILITY OF ANY CONTENT. YOU USE OUR SERVICES AT YOUR OWN RISK. SOME JURISDICTIONS DO NOT ALLOW DISCLAIMER OF IMPLIED WARRANTIES, SO SOME OF THE ABOVE MAY NOT APPLY TO YOU."
       },
       {
         "title": "Limitation of Liability",
-        "content": "To the maximum extent permitted by law, Suntop shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services. Our total liability shall not exceed the amount paid by you for our services in the twelve months preceding the claim."
+        "content": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, SUNTOP SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING DAMAGES FOR LOSS OF PROFITS, DATA, GOODWILL, OR OTHER INTANGIBLE LOSSES. OUR TOTAL LIABILITY SHALL NOT EXCEED THE GREATER OF (A) THE AMOUNT PAID BY YOU FOR OUR SERVICES IN THE TWELVE MONTHS PRECEDING THE CLAIM, OR (B) $100 USD. THESE LIMITATIONS APPLY REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT, TORT, OR OTHERWISE). SOME JURISDICTIONS DO NOT ALLOW LIMITATION OF LIABILITY, SO SOME OF THE ABOVE MAY NOT APPLY TO YOU."
       },
       {
-        "title": "Modifications",
-        "content": "We reserve the right to modify these Terms of Service at any time. We will notify users of material changes through our website or other communication channels. Your continued use of our services after such modifications constitutes acceptance of the updated terms."
+        "title": "Dispute Resolution and Arbitration",
+        "content": "Any disputes arising out of or relating to these Terms shall be resolved as follows. First, before initiating formal proceedings, you agree to contact us and attempt to resolve the dispute informally for at least 30 days. If informal resolution fails, disputes shall be resolved by binding arbitration administered by a recognized arbitration institution. Arbitration shall be conducted in English, and the arbitrator's decision shall be final and binding. You may opt out of arbitration by notifying us in writing within 30 days of accepting these Terms. Small claims court actions and injunctive relief for intellectual property violations are excluded from arbitration requirements."
+      },
+      {
+        "title": "Class Action Waiver",
+        "content": "YOU AND SUNTOP AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Unless both you and Suntop agree otherwise, the arbitrator may not consolidate more than one person's claims and may not otherwise preside over any form of a representative or class proceeding."
+      },
+      {
+        "title": "Termination",
+        "content": "Either party may terminate this agreement. You may stop using our services and close your account at any time. We may suspend or terminate your access for violation of these Terms or for any reason with reasonable notice, and we may immediately terminate access for serious violations, illegal activity, or to protect other users. Upon termination, your right to use our services ceases immediately. Provisions that by their nature should survive termination will survive, such as indemnification and limitation of liability. We may retain certain data as required by law or for legitimate business purposes."
+      },
+      {
+        "title": "Modifications to Terms",
+        "content": "We reserve the right to modify these Terms at any time. Material changes will be communicated via email or prominent notice on our website at least 30 days in advance. Non-material changes may be made at any time and will be reflected in the updated Terms. Your continued use of our services after changes take effect constitutes acceptance. If you do not agree to the modified Terms, you must stop using our services. The \"Last Updated\" date at the top indicates when these Terms were last revised."
+      },
+      {
+        "title": "Severability",
+        "content": "If any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions will continue in full force and effect. The invalid provision will be modified to the minimum extent necessary to make it valid and enforceable while preserving its original intent."
+      },
+      {
+        "title": "Entire Agreement",
+        "content": "These Terms, together with our Privacy Policy and any other agreements expressly incorporated by reference, constitute the entire agreement between you and Suntop regarding your use of our services. These Terms supersede all prior agreements, communications, and understandings, whether written or oral."
+      },
+      {
+        "title": "Assignment",
+        "content": "You may not assign or transfer your rights or obligations under these Terms without our prior written consent. We may assign our rights and obligations to an affiliate or in connection with a merger, acquisition, or sale of assets. Any attempted assignment in violation of this section is void."
+      },
+      {
+        "title": "Force Majeure",
+        "content": "Neither party shall be liable for any failure or delay in performance due to circumstances beyond its reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, epidemics, pandemics, strikes, or failures of third-party infrastructure."
+      },
+      {
+        "title": "Notices",
+        "content": "All notices under these Terms shall be provided as follows: Notices to you will be sent to the email address associated with your account or posted on our website. Notices to us should be sent to legal@suntopai.com or by mail to Suntop Healthcare Corp., Legal Department, at our corporate address. Notices are deemed received when sent by email (upon transmission) or 3 business days after mailing."
       },
       {
         "title": "Governing Law",
-        "content": "These Terms of Service shall be governed by and construed in accordance with the laws of the People's Republic of China. Any disputes arising from these terms shall be resolved through the courts of competent jurisdiction."
+        "content": "These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where Suntop maintains its principal place of business, without regard to conflict of law principles. For users outside this jurisdiction, local consumer protection laws may apply to the extent required by law."
+      },
+      {
+        "title": "Contact Us",
+        "content": "If you have questions about these Terms of Service, please contact us by email at legal@suntopai.com or customer support at support@suntopai.com. You may also write to Suntop Healthcare Corp., Legal Department, at our corporate address. We aim to respond to all inquiries within 5 business days."
       }
     ]
   },
@@ -2024,55 +2098,75 @@
     "title": "Compliance",
     "lastUpdated": "Last Updated",
     "date": "February 2025",
-    "intro": "Suntop Healthcare Corp. is committed to maintaining the highest standards of regulatory compliance and data security in healthcare technology.",
+    "intro": "Suntop Healthcare Corp. is committed to maintaining rigorous standards of regulatory compliance, data security, and ethical business practices in healthcare technology. We continuously invest in compliance infrastructure to ensure our services meet or exceed industry standards and regulatory requirements.",
     "sections": [
       {
-        "title": "Healthcare Regulations",
-        "content": "Our products and services comply with applicable healthcare regulations, including:",
-        "items": [
-          "National Medical Products Administration (NMPA) requirements",
-          "Medical device software regulations",
-          "Healthcare facility operational standards",
-          "Clinical data management guidelines"
-        ]
+        "title": "Regulatory Framework Overview",
+        "content": "Our compliance program is designed to meet the requirements of multiple regulatory frameworks across different jurisdictions, including healthcare regulations (HIPAA, GDPR, PIPL, and local healthcare laws), medical device regulations (FDA, NMPA, CE marking requirements), data protection and privacy laws (CCPA, GDPR, PIPL), information security standards (ISO 27001, SOC 2), quality management standards (ISO 13485, ISO 9001), and industry-specific guidelines."
       },
       {
-        "title": "Data Protection",
-        "content": "We adhere to comprehensive data protection standards:",
-        "items": [
-          "Personal Information Protection Law (PIPL) of China",
-          "Cybersecurity Law of the People's Republic of China",
-          "Healthcare data security regulations",
-          "International data protection best practices"
-        ]
+        "title": "HIPAA Compliance (United States)",
+        "content": "For operations in the United States, we maintain comprehensive HIPAA compliance. This includes adherence to the Privacy Rule with policies and procedures to protect Protected Health Information (PHI), and the Security Rule with administrative, physical, and technical safeguards for electronic PHI. We follow the Breach Notification Rule with procedures for timely notification in case of data breaches and execute Business Associate Agreements (BAAs) with all covered entities and subcontractors. We apply the Minimum Necessary Standard, limiting access to PHI to what is required for each function. We conduct regular HIPAA risk assessments and remediation, have designated Privacy and Security Officers, and provide annual workforce training on HIPAA requirements."
       },
       {
-        "title": "Quality Management",
-        "content": "Our quality management system ensures consistent delivery of safe and effective healthcare technology:",
-        "items": [
-          "ISO 13485 Medical Devices Quality Management",
-          "ISO 27001 Information Security Management",
-          "Regular internal and external audits",
-          "Continuous improvement processes"
-        ]
+        "title": "SOC 2 Type II Compliance",
+        "content": "We maintain SOC 2 Type II certification, demonstrating our commitment to security and operational excellence. Our controls address security (systems are protected against unauthorized access), availability (systems are available for operation as committed), processing integrity (system processing is complete, accurate, and authorized), confidentiality (information designated as confidential is protected), and privacy (personal information is collected, used, retained, and disclosed in conformity with commitments). We undergo annual third-party audits by independent CPA firms and maintain continuous monitoring and control testing throughout the year."
       },
       {
-        "title": "Security Measures",
-        "content": "We implement robust security measures to protect healthcare data:",
-        "items": [
-          "End-to-end encryption for data transmission",
-          "Multi-factor authentication",
-          "Regular penetration testing and vulnerability assessments",
-          "24/7 security monitoring and incident response"
-        ]
+        "title": "GDPR Compliance (European Union)",
+        "content": "For users in the European Economic Area, we comply with the General Data Protection Regulation. We ensure lawful basis for processing based on consent, contract, legal obligation, or legitimate interests. We have mechanisms to honor data subject rights including access, rectification, erasure, and portability requests. We conduct Data Protection Impact Assessments (DPIAs) for high-risk processing activities and have a designated Data Protection Officer (DPO) for GDPR compliance oversight. We maintain records of processing activities for all data processing operations, implement Standard Contractual Clauses and appropriate safeguards for cross-border transfers, apply privacy by design principles in system development, and maintain 72-hour breach notification procedures for supervisory authority notification."
       },
       {
-        "title": "Training & Awareness",
-        "content": "All Suntop employees receive regular training on compliance requirements, data protection, and security best practices. We maintain a culture of compliance throughout our organization."
+        "title": "FDA and Medical Device Regulations",
+        "content": "Our software and platforms comply with applicable medical device regulations including FDA 21 CFR Part 820 (Quality System Regulation for medical devices), FDA Software as a Medical Device (SaMD) guidelines, IEC 62304 (medical device software lifecycle processes), and IEC 62443 (industrial automation and control systems security). We also comply with National Medical Products Administration (NMPA) requirements in China and CE marking requirements for EU medical device compliance. We implement risk management per ISO 14971 and maintain clinical evaluation and post-market surveillance procedures."
       },
       {
-        "title": "Reporting Concerns",
-        "content": "If you have concerns about compliance or wish to report a potential issue, please contact us through our official channels. We take all reports seriously and investigate them thoroughly."
+        "title": "China Data Protection (PIPL & CSL)",
+        "content": "For operations in China, we comply with local data protection regulations including the Personal Information Protection Law (PIPL) for comprehensive personal data protection, the Cybersecurity Law (CSL) for network security and data localization requirements, and the Data Security Law (DSL) for data classification and protection measures. We adhere to healthcare data security regulations and guidelines, conduct cross-border data transfer assessments where required, and maintain local data storage and processing capabilities."
+      },
+      {
+        "title": "Quality Management System",
+        "content": "Our quality management system ensures consistent delivery of safe and effective healthcare technology. We are certified to ISO 13485:2016 (Medical Devices Quality Management System) and ISO 9001:2015 (Quality Management System). Our system includes design controls and change management procedures, supplier quality management and vendor assessments, Corrective and Preventive Action (CAPA) processes, document control and records management, management review and continuous improvement, and regular internal audits and external certification audits."
+      },
+      {
+        "title": "Information Security Management",
+        "content": "We maintain robust information security controls aligned with ISO 27001:2022 (Information Security Management System) and ISO 27701 (Privacy Information Management). Our technical controls include AES-256 encryption for data at rest and TLS 1.3 encryption for data in transit, multi-factor authentication (MFA) requirements, role-based access control (RBAC), and Security Information and Event Management (SIEM). We conduct regular penetration testing and vulnerability assessments and maintain 24/7 Security Operations Center (SOC) monitoring."
+      },
+      {
+        "title": "Business Continuity and Disaster Recovery",
+        "content": "We maintain comprehensive business continuity plans to ensure service availability. Our Business Continuity Plan (BCP) includes defined Recovery Time Objectives (RTO), and our Disaster Recovery Plan (DRP) includes defined Recovery Point Objectives (RPO). We operate geographically distributed data centers for redundancy, implement regular backup procedures with encrypted off-site storage, and conduct annual business continuity testing and tabletop exercises. We maintain incident response procedures and escalation protocols, communication plans for stakeholder notification, and provide a 99.9% uptime Service Level Agreement (SLA)."
+      },
+      {
+        "title": "Vendor and Third-Party Risk Management",
+        "content": "We carefully manage risks associated with third-party vendors and service providers through due diligence assessments before vendor onboarding, security and compliance requirements in vendor contracts, regular vendor security assessments and audits, Business Associate Agreements with healthcare data vendors, data processing agreements with sub-processors, continuous monitoring of vendor security posture, vendor incident response coordination procedures, and annual vendor risk reassessments."
+      },
+      {
+        "title": "Employee Training and Awareness",
+        "content": "All Suntop employees receive comprehensive compliance training including annual HIPAA privacy and security training, data protection and GDPR awareness training, information security awareness training, secure coding practices for development teams, phishing simulation and social engineering awareness, role-specific compliance training, new hire orientation on compliance requirements, and regular updates on regulatory changes and requirements."
+      },
+      {
+        "title": "Certifications and Attestations",
+        "content": "We maintain the following certifications and compliance attestations: ISO 27001:2022 for Information Security Management (Certified), ISO 13485:2016 for Medical Devices Quality Management (Certified), SOC 2 Type II for Security, Availability, and Confidentiality (Attested annually), HIPAA Business Associate compliance (Self-attested with third-party assessments), GDPR data protection compliance (Self-attested with DPO oversight), CE Marking for EU Medical Device compliance where applicable, and NMPA Registration for China medical device approval where applicable."
+      },
+      {
+        "title": "Audit Reports and Documentation",
+        "content": "We provide compliance documentation to qualified parties. SOC 2 Type II reports are available under NDA to enterprise customers. ISO certification documents are available upon request. We provide security questionnaire responses for vendor assessments, Data Processing Addendums (DPAs) for GDPR compliance, Business Associate Agreements (BAAs) for HIPAA compliance, and penetration test executive summaries upon request. Contact compliance@suntopai.com for documentation requests."
+      },
+      {
+        "title": "Incident Response",
+        "content": "We maintain comprehensive incident response procedures including 24/7 incident detection and response capabilities, defined incident classification and severity levels, escalation procedures and communication protocols, forensic investigation and root cause analysis, breach notification within regulatory timeframes, post-incident review and lessons learned, and regular incident response drills and tabletop exercises."
+      },
+      {
+        "title": "Ethics and Anti-Corruption",
+        "content": "We maintain high ethical standards in all business dealings through a Code of Business Conduct and Ethics for all employees, anti-bribery and anti-corruption policies, conflict of interest disclosure requirements, gifts and entertainment guidelines, fair competition and antitrust compliance, and whistleblower protection with anonymous reporting channels."
+      },
+      {
+        "title": "Reporting Compliance Concerns",
+        "content": "If you have concerns about compliance or wish to report a potential issue, please contact us by email at compliance@suntopai.com, or use our Compliance Hotline which is available for anonymous reporting. You may also reach our Data Protection Officer at dpo@suntopai.com or report security incidents to security@suntopai.com. All reports are investigated thoroughly and confidentially, and whistleblower protections apply to good-faith reports."
+      },
+      {
+        "title": "Continuous Improvement",
+        "content": "We are committed to continuous improvement of our compliance program through regular review and updates to policies and procedures, monitoring of regulatory changes and emerging requirements, feedback incorporation from audits and assessments, investment in compliance technology and automation, engagement with industry groups and regulatory bodies, and benchmarking against industry standards."
       }
     ]
   }

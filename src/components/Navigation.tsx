@@ -89,17 +89,20 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
               </span>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation and Utilities */}
             <div className="hidden lg:flex items-center gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`nav-link ${isActive(link.href) ? 'nav-link-active' : ''}`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <nav className="flex items-center gap-6" aria-label="Main navigation">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`nav-link ${isActive(link.href) ? 'nav-link-active' : ''}`}
+                    aria-current={isActive(link.href) ? 'page' : undefined}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
 
               {/* Theme Toggle */}
               <button
@@ -256,6 +259,7 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
                           ? 'text-accent-500'
                           : theme === 'dark' ? 'text-neutral-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
                       }`}
+                      aria-current={isActive(link.href) ? 'page' : undefined}
                     >
                       {link.label}
                     </Link>

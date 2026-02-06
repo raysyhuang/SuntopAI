@@ -3,6 +3,7 @@ import { Outfit, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import StructuredData from '@/components/StructuredData'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -100,7 +101,15 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} light`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
+        {/* Skip to main content link for accessibility */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-teal-600 focus:text-white focus:rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
+        >
+          Skip to main content
+        </a>
         <GoogleAnalytics />
+        <StructuredData />
         <ThemeProvider>
           {children}
         </ThemeProvider>
