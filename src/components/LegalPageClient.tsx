@@ -88,7 +88,7 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
               }`}
             >
               <ArrowLeft className="w-4 h-4" />
-              {locale === 'en' ? 'Back to Home' : locale === 'ja' ? 'ホームに戻る' : '返回首页'}
+              {locale === 'en' ? 'Back to Home' : locale === 'ja' ? 'ホームに戻る' : locale === 'zh-TW' ? '返回首頁' : '返回首页'}
             </Link>
           </motion.div>
 

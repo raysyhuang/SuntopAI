@@ -31,27 +31,51 @@
       "iot": {
         "title": "IoT Data Infrastructure",
         "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis machines connected with high-frequency data streaming every minute.",
-        "features": ["3,000+ devices connected", "HIS/LIS/EMR integration", "Structured clinical data pipeline"]
+        "features": [
+          "3,000+ devices connected",
+          "HIS/LIS/EMR integration",
+          "Structured clinical data pipeline"
+        ]
       },
       "ai": {
         "title": "Dialysis-Specific AI Engine",
         "description": "Customized LLM trained on dialysis clinical data, combined with AI Agent for IDH prediction, UF rate optimization, and dry weight assessment.",
-        "features": ["IDH risk prediction", "UF rate optimization", "Dry weight trending"]
+        "features": [
+          "IDH risk prediction",
+          "UF rate optimization",
+          "Dry weight trending"
+        ]
       },
       "automation": {
         "title": "Real-Time Clinical Decision Support",
         "description": "Continuous intradialytic monitoring with alerts for BP trends, UF tolerance, access flow, and Kt/V adequacy. Prescription adjustment recommendations integrated into physician workflow.",
-        "features": ["Intradialytic BP analysis", "UF & volume management", "Adequacy monitoring (Kt/V)"]
+        "features": [
+          "Intradialytic BP analysis",
+          "UF & volume management",
+          "Adequacy monitoring (Kt/V)"
+        ]
       }
     },
     "flow": {
       "title": "Device → Data → AI → Clinical Action",
       "description": "Real-time data streaming every minute from dialysis machines, integrated with BP monitors, weight scales, and lab results. AI engine analyzes intradialytic trends and delivers actionable alerts directly into physician workflow.",
       "steps": {
-        "machines": { "label": "Dialysis Machines", "sublabel": "BP, UF, Blood Flow" },
-        "data": { "label": "Clinical Data Lake", "sublabel": "Labs, Vitals, Rx" },
-        "ai": { "label": "AI Analytics", "sublabel": "IDH, UF, Kt/V" },
-        "automation": { "label": "Clinical Alerts", "sublabel": "Real-time CDSS" }
+        "machines": {
+          "label": "Dialysis Machines",
+          "sublabel": "BP, UF, Blood Flow"
+        },
+        "data": {
+          "label": "Clinical Data Lake",
+          "sublabel": "Labs, Vitals, Rx"
+        },
+        "ai": {
+          "label": "AI Analytics",
+          "sublabel": "IDH, UF, Kt/V"
+        },
+        "automation": {
+          "label": "Clinical Alerts",
+          "sublabel": "Real-time CDSS"
+        }
       }
     },
     "stats": {
@@ -64,20 +88,48 @@
       "tag": "Clinically Proven",
       "title": "Real Data, Real Improvements",
       "items": [
-        { "value": "60%", "label": "Pre-shock patients reduced", "detail": "22.4% → 9.0%" },
-        { "value": "70%", "label": "Lab evaluation efficiency up", "detail": "8.3 min → 2.5 min" },
-        { "value": "71%", "label": "Iron deficiency reduced", "detail": "74.0% → 21.1%" },
-        { "value": "37%", "label": "Renal bone disease reduced", "detail": "48.4% → 30.7%" }
+        {
+          "value": "60%",
+          "label": "Pre-shock patients reduced",
+          "detail": "22.4% → 9.0%"
+        },
+        {
+          "value": "70%",
+          "label": "Lab evaluation efficiency up",
+          "detail": "8.3 min → 2.5 min"
+        },
+        {
+          "value": "71%",
+          "label": "Iron deficiency reduced",
+          "detail": "74.0% → 21.1%"
+        },
+        {
+          "value": "37%",
+          "label": "Renal bone disease reduced",
+          "detail": "48.4% → 30.7%"
+        }
       ],
       "cta": "View Full Results",
       "footnote": "Based on data from Suntop-operated dialysis centers, 2024-2025",
       "deployment": {
         "title": "Validated Deployment Scale",
         "items": [
-          { "value": "30+", "label": "Self-operated Centers" },
-          { "value": "100+", "label": "Partner Centers" },
-          { "value": "50+", "label": "Smart Dialysis Centers" },
-          { "value": "3000+", "label": "Connected Machines" }
+          {
+            "value": "30+",
+            "label": "Self-operated Centers"
+          },
+          {
+            "value": "100+",
+            "label": "Partner Centers"
+          },
+          {
+            "value": "50+",
+            "label": "Smart Dialysis Centers"
+          },
+          {
+            "value": "3000+",
+            "label": "Connected Machines"
+          }
         ]
       }
     },
@@ -92,10 +144,22 @@
         "4. Saran R, et al. Longer treatment time and slower ultrafiltration in hemodialysis: associations with reduced mortality in the DOPPS. Kidney Int 2006;69:1222-1228"
       ],
       "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
-      "clinical": { "title": "IDH Prevention", "desc": "Reduced intradialytic hypotension through predictive alerts" },
-      "operational": { "title": "Dry Weight Management", "desc": "Data-driven dry weight assessment, reducing inter-physician variability" },
-      "strategic": { "title": "Risk Detection", "desc": "Multi-dimensional analysis to identify potential complication risks early" },
-      "longterm": { "title": "Data-Driven Care", "desc": "Transforming dialysis from experience-driven to data-driven precision management" }
+      "clinical": {
+        "title": "IDH Prevention",
+        "desc": "Reduced intradialytic hypotension through predictive alerts"
+      },
+      "operational": {
+        "title": "Dry Weight Management",
+        "desc": "Data-driven dry weight assessment, reducing inter-physician variability"
+      },
+      "strategic": {
+        "title": "Risk Detection",
+        "desc": "Multi-dimensional analysis to identify potential complication risks early"
+      },
+      "longterm": {
+        "title": "Data-Driven Care",
+        "desc": "Transforming dialysis from experience-driven to data-driven precision management"
+      }
     },
     "router": {
       "tag": "Learn More",
@@ -287,8 +351,12 @@
         "title": "Smart Monitoring: From Rounds to Early Warning",
         "description": "Risk status is visualized with tiered, color-coded indicators so abnormal trends can be recognized at a glance. A centralized view of patient status helps staff quickly identify which stations may require attention.",
         "images": [
-          { "label": "Central Monitoring System" },
-          { "label": "Treatment Status Monitoring" }
+          {
+            "label": "Central Monitoring System"
+          },
+          {
+            "label": "Treatment Status Monitoring"
+          }
         ]
       },
       "bedsideTerminal": {
@@ -296,8 +364,12 @@
         "title": "Smart Bedside Terminal — Empowering Every Dialysis Machine with a \"Digital Brain\"",
         "description": "In traditional hemodialysis workflows, clinical staff often need to check data across multiple systems. The smart bedside terminal redefines the boundaries of bedside devices. It is not just a hardware extension, but a smart navigator deeply integrated into the entire clinical workflow, guiding staff toward more precise and efficient operations.",
         "images": [
-          { "label": "Smart Bedside Terminal" },
-          { "label": "Four-Item Monitoring" }
+          {
+            "label": "Smart Bedside Terminal"
+          },
+          {
+            "label": "Four-Item Monitoring"
+          }
         ],
         "sectionTitle": "Core Value: Full-Scenario Guided Clinical Experience",
         "features": [
@@ -382,10 +454,22 @@
       "title": "Our Platform's Advantages",
       "description": "Technical and strategic advantages built for long-term dialysis transformation.",
       "items": [
-        { "title": "Dialysis-Native Focus", "description": "Built specifically for dialysis, not adapted from generic healthcare AI." },
-        { "title": "Deep Integration", "description": "Machine-level and workflow-level connectivity across the care continuum." },
-        { "title": "Clinical Guardrails", "description": "Automation with safety-first design, not black-box AI." },
-        { "title": "Scale-Ready", "description": "Designed for multi-center networks, not single-site pilots." }
+        {
+          "title": "Dialysis-Native Focus",
+          "description": "Built specifically for dialysis, not adapted from generic healthcare AI."
+        },
+        {
+          "title": "Deep Integration",
+          "description": "Machine-level and workflow-level connectivity across the care continuum."
+        },
+        {
+          "title": "Clinical Guardrails",
+          "description": "Automation with safety-first design, not black-box AI."
+        },
+        {
+          "title": "Scale-Ready",
+          "description": "Designed for multi-center networks, not single-site pilots."
+        }
       ]
     },
     "clinicalApplications": {
@@ -396,17 +480,32 @@
         "inCenter": {
           "title": "Standalone Centers",
           "description": "Real-time monitoring and intelligent alerts to enhance treatment safety and standardization.",
-          "capabilities": ["Real-time data collection", "Abnormal trend alerts", "Treatment parameter optimization", "Quality metrics tracking"]
+          "capabilities": [
+            "Real-time data collection",
+            "Abnormal trend alerts",
+            "Treatment parameter optimization",
+            "Quality metrics tracking"
+          ]
         },
         "networked": {
           "title": "Chain Dialysis Centers",
           "description": "Centralized oversight and unified quality control to support scalable, standardized operations.",
-          "capabilities": ["Multi-center unified view", "Cross-center quality benchmarking", "Standard process replication", "Remote supervision support"]
+          "capabilities": [
+            "Multi-center unified view",
+            "Cross-center quality benchmarking",
+            "Standard process replication",
+            "Remote supervision support"
+          ]
         },
         "decision": {
           "title": "Clinical Decision Support",
           "description": "Data-driven insights to help physicians make more precise treatment decisions.",
-          "capabilities": ["Patient trend analysis", "Risk stratification", "Prescription optimization", "Adequacy monitoring"]
+          "capabilities": [
+            "Patient trend analysis",
+            "Risk stratification",
+            "Prescription optimization",
+            "Adequacy monitoring"
+          ]
         }
       },
       "learnMore": {
@@ -723,28 +822,68 @@
       "title": "Clinical Care in the Real World",
       "subtitle": "Real scenes from partner centers covering education, rehab, and standardized care.",
       "groups": {
-        "education": { "title": "Patient Education & Communication" },
-        "quality": { "title": "Quality & Standardized Operations" },
-        "engagement": { "title": "Patient Engagement Activities" },
-        "rehab": { "title": "Rehab & Specialty Care" },
-        "training": { "title": "Training & Capability Building" }
+        "education": {
+          "title": "Patient Education & Communication"
+        },
+        "quality": {
+          "title": "Quality & Standardized Operations"
+        },
+        "engagement": {
+          "title": "Patient Engagement Activities"
+        },
+        "rehab": {
+          "title": "Rehab & Specialty Care"
+        },
+        "training": {
+          "title": "Training & Capability Building"
+        }
       },
       "items": {
-        "educationLibrary": { "title": "Patient Education Library" },
-        "patientReport": { "title": "Patient Report Booklet" },
-        "nutritionActivity": { "title": "Nutrition Game Activity" },
-        "nutritionActivityTwo": { "title": "Nutrition Education Event" },
-        "rehabRoom": { "title": "Rehab Exercise Room" },
-        "carbonicBath": { "title": "Carbonic Foot Bath" },
-        "carbonicRoom": { "title": "Carbonic Bath Room" },
-        "carbonicEffect": { "title": "Carbonic Bath Results" },
-        "trainingPocketGuide": { "title": "Training Pocket Guide" },
-        "trainingMaterial": { "title": "Training Materials" },
-        "labResultsExplanation": { "title": "Lab Results Explanation" },
-        "labResultsLiaoning": { "title": "Bedside Lab Explanation" },
-        "dailySharing": { "title": "Daily Meeting Sharing" },
-        "qualityAlliance": { "title": "Quality Control Meeting" },
-        "standardizedOps": { "title": "Standardized Procedures" }
+        "educationLibrary": {
+          "title": "Patient Education Library"
+        },
+        "patientReport": {
+          "title": "Patient Report Booklet"
+        },
+        "nutritionActivity": {
+          "title": "Nutrition Game Activity"
+        },
+        "nutritionActivityTwo": {
+          "title": "Nutrition Education Event"
+        },
+        "rehabRoom": {
+          "title": "Rehab Exercise Room"
+        },
+        "carbonicBath": {
+          "title": "Carbonic Foot Bath"
+        },
+        "carbonicRoom": {
+          "title": "Carbonic Bath Room"
+        },
+        "carbonicEffect": {
+          "title": "Carbonic Bath Results"
+        },
+        "trainingPocketGuide": {
+          "title": "Training Pocket Guide"
+        },
+        "trainingMaterial": {
+          "title": "Training Materials"
+        },
+        "labResultsExplanation": {
+          "title": "Lab Results Explanation"
+        },
+        "labResultsLiaoning": {
+          "title": "Bedside Lab Explanation"
+        },
+        "dailySharing": {
+          "title": "Daily Meeting Sharing"
+        },
+        "qualityAlliance": {
+          "title": "Quality Control Meeting"
+        },
+        "standardizedOps": {
+          "title": "Standardized Procedures"
+        }
       }
     }
   },
@@ -941,21 +1080,36 @@
           "title": "Device IoT Layer",
           "icon": "Wifi",
           "description": "Connect dialysis machines, BP monitors, scales and other devices for real-time data collection and automatic transmission.",
-          "features": ["Multi-vendor compatibility", "High-frequency data capture", "Auto-transmission no manual entry", "Device status monitoring"]
+          "features": [
+            "Multi-vendor compatibility",
+            "High-frequency data capture",
+            "Auto-transmission no manual entry",
+            "Device status monitoring"
+          ]
         },
         {
           "id": "intelligence",
           "title": "Intelligence Layer",
           "icon": "Brain",
           "description": "AI models analyze trends, detect risks, and generate alerts and recommendations before complications occur.",
-          "features": ["Intradialytic hypotension prediction", "Ultrafiltration risk detection", "Adequacy assessment", "Personalized parameter recommendations"]
+          "features": [
+            "Intradialytic hypotension prediction",
+            "Ultrafiltration risk detection",
+            "Adequacy assessment",
+            "Personalized parameter recommendations"
+          ]
         },
         {
           "id": "application",
           "title": "Application & Control Layer",
           "icon": "Monitor",
           "description": "Central monitoring, smart terminals, and mobile apps work together for end-to-end visual management.",
-          "features": ["Central monitoring dashboard", "Bedside smart terminals", "Mobile rounding app", "Remote supervision support"]
+          "features": [
+            "Central monitoring dashboard",
+            "Bedside smart terminals",
+            "Mobile rounding app",
+            "Remote supervision support"
+          ]
         }
       ]
     },
@@ -993,12 +1147,28 @@
           "description": "Our design team, led by domestic and international designers, creates safe and comfortable medical environments for patients.",
           "icon": "Compass",
           "steps": [
-            { "title": "Market Research", "description": "Comprehensive market analysis" },
-            { "title": "Equipment Planning", "description": "Optimal equipment configuration" },
-            { "title": "Interior Design", "description": "Professional, humanized space design" },
-            { "title": "Requirements Integration", "description": "Integrate senior medical expertise" }
+            {
+              "title": "Market Research",
+              "description": "Comprehensive market analysis"
+            },
+            {
+              "title": "Equipment Planning",
+              "description": "Optimal equipment configuration"
+            },
+            {
+              "title": "Interior Design",
+              "description": "Professional, humanized space design"
+            },
+            {
+              "title": "Requirements Integration",
+              "description": "Integrate senior medical expertise"
+            }
           ],
-          "highlights": ["Rational layout with clear workflow", "National quality control compliance", "Human-centered design"]
+          "highlights": [
+            "Rational layout with clear workflow",
+            "National quality control compliance",
+            "Human-centered design"
+          ]
         },
         {
           "id": "training",
@@ -1007,12 +1177,28 @@
           "description": "From traditional department training to flexible online learning modes for continuous professional development.",
           "icon": "GraduationCap",
           "steps": [
-            { "title": "Expert On-Site Training", "description": "Professional guidance, systematic instruction" },
-            { "title": "Staff Workshops", "description": "Share insights, promote exchanges" },
-            { "title": "Clinical Practice", "description": "Enhance hands-on clinical skills" },
-            { "title": "Online Platform", "description": "Professional e-learning system" }
+            {
+              "title": "Expert On-Site Training",
+              "description": "Professional guidance, systematic instruction"
+            },
+            {
+              "title": "Staff Workshops",
+              "description": "Share insights, promote exchanges"
+            },
+            {
+              "title": "Clinical Practice",
+              "description": "Enhance hands-on clinical skills"
+            },
+            {
+              "title": "Online Platform",
+              "description": "Professional e-learning system"
+            }
           ],
-          "highlights": ["Complete theoretical and practical training", "Regional training bases", "Regular expert lectures"]
+          "highlights": [
+            "Complete theoretical and practical training",
+            "Regional training bases",
+            "Regular expert lectures"
+          ]
         },
         {
           "id": "operations",
@@ -1021,12 +1207,28 @@
           "description": "Every aspect is tailored to client needs and actual conditions, providing comprehensive management support.",
           "icon": "Settings",
           "steps": [
-            { "title": "Department Systems", "description": "Standardized workflows" },
-            { "title": "Staff Management", "description": "Recruitment and team building" },
-            { "title": "Process Design", "description": "Efficient operational processes" },
-            { "title": "IT Infrastructure", "description": "Information system management" }
+            {
+              "title": "Department Systems",
+              "description": "Standardized workflows"
+            },
+            {
+              "title": "Staff Management",
+              "description": "Recruitment and team building"
+            },
+            {
+              "title": "Process Design",
+              "description": "Efficient operational processes"
+            },
+            {
+              "title": "IT Infrastructure",
+              "description": "Information system management"
+            }
           ],
-          "highlights": ["Financial advisory", "Technical support", "Quality control systems"]
+          "highlights": [
+            "Financial advisory",
+            "Technical support",
+            "Quality control systems"
+          ]
         }
       ]
     },
@@ -1035,10 +1237,26 @@
       "title": "Structured Deployment Process",
       "subtitle": "Phased implementation ensuring smooth transition",
       "steps": [
-        { "step": "01", "title": "Assessment", "description": "Evaluate existing equipment, infrastructure, and integration needs" },
-        { "step": "02", "title": "Pilot", "description": "Validate system integration and workflows at select stations" },
-        { "step": "03", "title": "Validation", "description": "Collaborate with clinical teams to tune parameters and alerts" },
-        { "step": "04", "title": "Rollout", "description": "Expand deployment with continuous optimization" }
+        {
+          "step": "01",
+          "title": "Assessment",
+          "description": "Evaluate existing equipment, infrastructure, and integration needs"
+        },
+        {
+          "step": "02",
+          "title": "Pilot",
+          "description": "Validate system integration and workflows at select stations"
+        },
+        {
+          "step": "03",
+          "title": "Validation",
+          "description": "Collaborate with clinical teams to tune parameters and alerts"
+        },
+        {
+          "step": "04",
+          "title": "Rollout",
+          "description": "Expand deployment with continuous optimization"
+        }
       ]
     },
     "security": {
@@ -1046,10 +1264,22 @@
       "title": "Healthcare-Grade Data Security",
       "subtitle": "Compliant with medical data security standards to protect patient privacy",
       "features": [
-        { "title": "Encryption", "value": "AES-256 end-to-end encryption" },
-        { "title": "Access Control", "value": "Role-based permissions management" },
-        { "title": "Audit Trail", "value": "Complete operation logging" },
-        { "title": "Compliance", "value": "Meets healthcare data regulations" }
+        {
+          "title": "Encryption",
+          "value": "AES-256 end-to-end encryption"
+        },
+        {
+          "title": "Access Control",
+          "value": "Role-based permissions management"
+        },
+        {
+          "title": "Audit Trail",
+          "value": "Complete operation logging"
+        },
+        {
+          "title": "Compliance",
+          "value": "Meets healthcare data regulations"
+        }
       ]
     },
     "supplyChain": {
@@ -1061,25 +1291,45 @@
           "title": "Smart Consumables Management",
           "icon": "Package",
           "description": "AI predicts consumable usage, auto-triggers restocking, preventing shortages or expiration waste.",
-          "items": ["Intelligent prediction for dialyzers, blood tubing sets", "Automatic restocking alerts", "Batch tracing and expiry management", "Cost analysis and optimization suggestions"]
+          "items": [
+            "Intelligent prediction for dialyzers, blood tubing sets",
+            "Automatic restocking alerts",
+            "Batch tracing and expiry management",
+            "Cost analysis and optimization suggestions"
+          ]
         },
         {
           "title": "Predictive Equipment Maintenance",
           "icon": "Wrench",
           "description": "Based on equipment operation data, AI predicts maintenance needs, reducing unplanned downtime.",
-          "items": ["Real-time dialysis machine status monitoring", "Predictive maintenance reminders", "Early fault warnings", "Digitalized maintenance records"]
+          "items": [
+            "Real-time dialysis machine status monitoring",
+            "Predictive maintenance reminders",
+            "Early fault warnings",
+            "Digitalized maintenance records"
+          ]
         },
         {
           "title": "Logistics Optimization",
           "icon": "Truck",
           "description": "Smart dispatch and delivery, delivery robots for in-hospital logistics.",
-          "items": ["Multi-center delivery route optimization", "Delivery robots for in-hospital logistics", "Real-time inventory visualization", "Emergency allocation response"]
+          "items": [
+            "Multi-center delivery route optimization",
+            "Delivery robots for in-hospital logistics",
+            "Real-time inventory visualization",
+            "Emergency allocation response"
+          ]
         },
         {
           "title": "Cost Control Analysis",
           "icon": "TrendingDown",
           "description": "Comprehensive cost monitoring and analysis for lean operations.",
-          "items": ["Per-dialysis cost accounting", "Consumable usage efficiency analysis", "Labor cost optimization suggestions", "Real-time ROI tracking"]
+          "items": [
+            "Per-dialysis cost accounting",
+            "Consumable usage efficiency analysis",
+            "Labor cost optimization suggestions",
+            "Real-time ROI tracking"
+          ]
         }
       ],
       "suppliers": {
@@ -1087,14 +1337,38 @@
         "title": "Supply Chain Partners",
         "subtitle": "Long-term strategic partnerships with renowned medical device manufacturers",
         "list": [
-          { "name": "BAIN MEDICAL", "nameEn": "BAIN MEDICAL" },
-          { "name": "TORAY", "nameEn": "TORAY" },
-          { "name": "FRESENIUS", "nameEn": "FRESENIUS" },
-          { "name": "NIPRO", "nameEn": "NIPRO" },
-          { "name": "BOSTON SCIENTIFIC", "nameEn": "BOSTON SCIENTIFIC" },
-          { "name": "SANXIN", "nameEn": "SANXIN" },
-          { "name": "BIOLIGHT", "nameEn": "BIOLIGHT" },
-          { "name": "TIANYI", "nameEn": "TIANYI" }
+          {
+            "name": "BAIN MEDICAL",
+            "nameEn": "BAIN MEDICAL"
+          },
+          {
+            "name": "TORAY",
+            "nameEn": "TORAY"
+          },
+          {
+            "name": "FRESENIUS",
+            "nameEn": "FRESENIUS"
+          },
+          {
+            "name": "NIPRO",
+            "nameEn": "NIPRO"
+          },
+          {
+            "name": "BOSTON SCIENTIFIC",
+            "nameEn": "BOSTON SCIENTIFIC"
+          },
+          {
+            "name": "SANXIN",
+            "nameEn": "SANXIN"
+          },
+          {
+            "name": "BIOLIGHT",
+            "nameEn": "BIOLIGHT"
+          },
+          {
+            "name": "TIANYI",
+            "nameEn": "TIANYI"
+          }
         ]
       }
     },
@@ -1178,6 +1452,7 @@
     "tag": "Services",
     "title": "Technology-Enabled Services, Creating Value",
     "subtitle": "Beyond treatment itself, providing vascular access, patient care, professional training and more comprehensive service support for kidney patients, while continuously expanding health management services and technology-enabled applications.",
+    "newBadge": "New",
     "serviceCards": [
       {
         "id": "operation-service",
@@ -1258,11 +1533,11 @@
         ]
       },
       "benefits": [
-          "Enhanced clinical quality and patient safety",
-          "Improved operational efficiency and reduced costs",
-          "Data-driven decision making and continuous improvement",
-          "Expanded service capacity and scale"
-        ],
+        "Enhanced clinical quality and patient safety",
+        "Improved operational efficiency and reduced costs",
+        "Data-driven decision making and continuous improvement",
+        "Expanded service capacity and scale"
+      ],
       "partners": {
         "title": "100+ Partner Centers",
         "list": [
@@ -1306,7 +1581,11 @@
       "servicesSummary": {
         "title": "Comprehensive Vascular Access Services",
         "description": "Providing AI-assisted pre-operative assessment, autologous/prosthetic AV fistula surgery, central venous catheter insertion, thrombosis and aneurysm management, and minimally invasive interventions, ensuring each patient receives the optimal vascular access solution.",
-        "highlights": ["AI-assisted assessment & planning", "Multiple access establishment options", "Complication management & intervention"],
+        "highlights": [
+          "AI-assisted assessment & planning",
+          "Multiple access establishment options",
+          "Complication management & intervention"
+        ],
         "learnMore": "Learn More About Vascular Access"
       }
     },
@@ -1317,7 +1596,11 @@
       "activitiesSummary": {
         "title": "Diverse Patient Activities",
         "description": "We regularly host kidney friend associations, online expert livestreams, holiday celebrations and more, strengthening interaction among medical staff, patients, and families to build a warm dialysis community.",
-        "highlights": ["Patient associations & online interactions", "Holiday events & humanistic care", "Opening ceremonies for new beginnings"]
+        "highlights": [
+          "Patient associations & online interactions",
+          "Holiday events & humanistic care",
+          "Opening ceremonies for new beginnings"
+        ]
       },
       "smartFeature": {
         "tag": "Smart Dialysis Tourism",
@@ -1366,20 +1649,50 @@
         ]
       },
       "services": [
-        { "title": "Posture Assessment", "description": "AI-assisted analysis of patient standing and sitting posture, identifying muscle imbalance and postural abnormalities" },
-        { "title": "Gait Detection", "description": "Assess lower limb function, balance ability, and fall risk through walking analysis" },
-        { "title": "Personalized Rehabilitation", "description": "Develop exercise rehabilitation plans tailored to patient's physical condition based on assessment results" },
-        { "title": "Rehabilitation Guidance", "description": "Professional rehabilitation therapists provide on-site guidance to ensure safe and effective exercise" },
-        { "title": "Equipment Training", "description": "Professional rehabilitation equipment for systematic physical training" },
-        { "title": "Progress Tracking", "description": "Regular re-evaluation and dynamic adjustment of training plans based on rehabilitation progress" }
+        {
+          "title": "Posture Assessment",
+          "description": "AI-assisted analysis of patient standing and sitting posture, identifying muscle imbalance and postural abnormalities"
+        },
+        {
+          "title": "Gait Detection",
+          "description": "Assess lower limb function, balance ability, and fall risk through walking analysis"
+        },
+        {
+          "title": "Personalized Rehabilitation",
+          "description": "Develop exercise rehabilitation plans tailored to patient's physical condition based on assessment results"
+        },
+        {
+          "title": "Rehabilitation Guidance",
+          "description": "Professional rehabilitation therapists provide on-site guidance to ensure safe and effective exercise"
+        },
+        {
+          "title": "Equipment Training",
+          "description": "Professional rehabilitation equipment for systematic physical training"
+        },
+        {
+          "title": "Progress Tracking",
+          "description": "Regular re-evaluation and dynamic adjustment of training plans based on rehabilitation progress"
+        }
       ],
       "benefits": {
         "title": "Benefits of Rehabilitation Training",
         "items": [
-          { "title": "Improve Muscle Strength", "description": "Combat dialysis-related muscle loss, maintain and enhance muscle function" },
-          { "title": "Enhance Cardiopulmonary Function", "description": "Moderate aerobic exercise improves cardiovascular health and exercise endurance" },
-          { "title": "Increase Balance Ability", "description": "Reduce fall risk and improve safety in daily activities" },
-          { "title": "Improve Quality of Life", "description": "Enhance mental state and independence, boost confidence" }
+          {
+            "title": "Improve Muscle Strength",
+            "description": "Combat dialysis-related muscle loss, maintain and enhance muscle function"
+          },
+          {
+            "title": "Enhance Cardiopulmonary Function",
+            "description": "Moderate aerobic exercise improves cardiovascular health and exercise endurance"
+          },
+          {
+            "title": "Increase Balance Ability",
+            "description": "Reduce fall risk and improve safety in daily activities"
+          },
+          {
+            "title": "Improve Quality of Life",
+            "description": "Enhance mental state and independence, boost confidence"
+          }
         ]
       }
     },
@@ -1417,17 +1730,35 @@
       "importance": {
         "title": "Why Dietary Management Matters",
         "items": [
-          { "title": "Maintain Nutritional Balance", "description": "Dialysis causes nutrient loss. Proper dietary management supplements protein, vitamins and other nutrients, maintaining nitrogen balance and boosting immunity." },
-          { "title": "Control Metabolic Waste", "description": "By controlling dietary potassium and phosphorus intake, metabolic waste production is reduced, easing kidney burden and avoiding complications like hyperkalemia and hyperphosphatemia." },
-          { "title": "Improve Cardiovascular Function", "description": "Proper diet helps control blood lipids and blood pressure, reducing cardiovascular disease risk." }
+          {
+            "title": "Maintain Nutritional Balance",
+            "description": "Dialysis causes nutrient loss. Proper dietary management supplements protein, vitamins and other nutrients, maintaining nitrogen balance and boosting immunity."
+          },
+          {
+            "title": "Control Metabolic Waste",
+            "description": "By controlling dietary potassium and phosphorus intake, metabolic waste production is reduced, easing kidney burden and avoiding complications like hyperkalemia and hyperphosphatemia."
+          },
+          {
+            "title": "Improve Cardiovascular Function",
+            "description": "Proper diet helps control blood lipids and blood pressure, reducing cardiovascular disease risk."
+          }
         ]
       },
       "tips": {
         "title": "Nutrition Supplement Guidelines",
         "items": [
-          { "title": "Individualized Approach", "description": "Develop personalized nutrition plans based on patient age, weight, dialysis method, residual kidney function and complications" },
-          { "title": "Balanced Diet", "description": "Diversify food choices, properly combine various nutrients, avoid excess or deficiency of single foods" },
-          { "title": "Monitor and Adjust", "description": "Regularly monitor blood counts, biochemical markers, and nutritional indicators, adjusting nutrition plans based on results" }
+          {
+            "title": "Individualized Approach",
+            "description": "Develop personalized nutrition plans based on patient age, weight, dialysis method, residual kidney function and complications"
+          },
+          {
+            "title": "Balanced Diet",
+            "description": "Diversify food choices, properly combine various nutrients, avoid excess or deficiency of single foods"
+          },
+          {
+            "title": "Monitor and Adjust",
+            "description": "Regularly monitor blood counts, biochemical markers, and nutritional indicators, adjusting nutrition plans based on results"
+          }
         ]
       }
     },
@@ -1437,12 +1768,28 @@
       "subtitle": "Establishing regular foot screening protocols combined with carbonic acid bath therapy for professional foot health management",
       "intro": "Diabetic foot is a common complication among dialysis patients. We establish comprehensive foot screening protocols, checking lower limb arterial pulses, skin color, cracks, nail conditions, combined with ankle-brachial index testing for risk level assessment.",
       "services": [
-        { "title": "Foot Health Screening", "description": "Regular checks of lower limb arterial pulses, skin conditions, nail health, maintaining complete foot health records" },
-        { "title": "Risk Level Assessment", "description": "Combined with ankle-brachial index (ABI) testing, automatic risk classification by the system" },
-        { "title": "Carbonic Acid Bath", "description": "Professional carbonic acid bath therapy promoting lower limb circulation and improving foot conditions" },
-        { "title": "High-Risk Monitoring", "description": "Priority monitoring for high-risk patients, wound photography and comparison analysis" }
+        {
+          "title": "Foot Health Screening",
+          "description": "Regular checks of lower limb arterial pulses, skin conditions, nail health, maintaining complete foot health records"
+        },
+        {
+          "title": "Risk Level Assessment",
+          "description": "Combined with ankle-brachial index (ABI) testing, automatic risk classification by the system"
+        },
+        {
+          "title": "Carbonic Acid Bath",
+          "description": "Professional carbonic acid bath therapy promoting lower limb circulation and improving foot conditions"
+        },
+        {
+          "title": "High-Risk Monitoring",
+          "description": "Priority monitoring for high-risk patients, wound photography and comparison analysis"
+        }
       ],
-      "highlights": ["Regular screening & risk assessment", "Professional carbonic bath care", "AI-assisted image comparison"]
+      "highlights": [
+        "Regular screening & risk assessment",
+        "Professional carbonic bath care",
+        "AI-assisted image comparison"
+      ]
     },
     "skinCare": {
       "tag": "Skin Care",
@@ -1451,16 +1798,98 @@
       "brand": "Ecoand",
       "intro": "In partnership with 'Ecoand' professional skin care brand, we provide targeted skin care products and solutions for dialysis patients, addressing common issues like skin itching and moisturizing difficulties.",
       "services": [
-        { "title": "Itch Management", "description": "Professional anti-itch products and care guidance for dialysis-related skin itching" },
-        { "title": "Moisturizing Care", "description": "Professional moisturizing products to improve skin dryness and restore skin barrier function" },
-        { "title": "Skin Health Assessment", "description": "Regular skin condition evaluation to develop personalized care plans" }
+        {
+          "title": "Itch Management",
+          "description": "Professional anti-itch products and care guidance for dialysis-related skin itching"
+        },
+        {
+          "title": "Moisturizing Care",
+          "description": "Professional moisturizing products to improve skin dryness and restore skin barrier function"
+        },
+        {
+          "title": "Skin Health Assessment",
+          "description": "Regular skin condition evaluation to develop personalized care plans"
+        }
       ],
-      "highlights": ["Professional anti-itch products", "Deep moisturizing care", "Personalized care plans"]
+      "highlights": [
+        "Professional anti-itch products",
+        "Deep moisturizing care",
+        "Personalized care plans"
+      ]
     },
     "cta": {
       "title": "Learn More About Our Services",
       "description": "Our professional team is ready to provide consultation and service support.",
       "button": "Contact Us"
+    },
+    "patientTravel": {
+      "tag": "Patient Services",
+      "title": "Travel While Receiving Treatment",
+      "subtitle": "Experience the beauty of Chinese culture across our nationwide dialysis network",
+      "description": "Through our nationwide network of dialysis centers, we provide peace-of-mind 'Travel While Receiving Treatment' services. Wherever you are, you can receive high-quality, standardized dialysis care, making dialysis no longer a barrier to travel.",
+      "hero": {
+        "title": "Life Doesn't Stop for Dialysis",
+        "subtitle": "Explore China, Enjoy Dialysis",
+        "features": [
+          "150+ dialysis centers nationwide",
+          "Unified quality standards",
+          "Nearby tourist attraction recommendations",
+          "Convenient center search and booking"
+        ]
+      },
+      "map": {
+        "title": "Nationwide Dialysis Center Distribution",
+        "subtitle": "Click the map to explore dialysis centers and plan your travel route",
+        "filters": {
+          "allProvinces": "All Provinces",
+          "allTypes": "All Types",
+          "directOnly": "Direct Centers Only",
+          "partnerOnly": "Partner Hospitals Only",
+          "searchPlaceholder": "Search city or center name",
+          "filterTitle": "Filter Centers",
+          "clearFilters": "Clear Filters",
+          "centersCount": "centers",
+          "provincesSelected": "provinces selected",
+          "filterButton": "Filter"
+        },
+        "legend": {
+          "direct": "Direct Centers",
+          "partner": "Partner Hospitals"
+        }
+      },
+      "tourism": {
+        "tag": "Featured Tourism",
+        "title": "Perfect Combination of Dialysis and Tourism",
+        "subtitle": "Explore local culture and beauty while receiving high-quality dialysis treatment",
+        "viewDetails": "View Details",
+        "nearbyAttractions": "Nearby Attractions"
+      },
+      "howItWorks": {
+        "title": "How to Use Travel While Receiving Treatment Service",
+        "steps": [
+          {
+            "title": "Choose Destination",
+            "description": "Browse dialysis centers nationwide on the map, choose your desired city"
+          },
+          {
+            "title": "View Center Details",
+            "description": "Learn about the center's equipment, services, and nearby tourist attractions"
+          },
+          {
+            "title": "Contact and Book",
+            "description": "Book dialysis time in advance via phone or online"
+          },
+          {
+            "title": "Travel with Peace of Mind",
+            "description": "Enjoy high-quality, standardized dialysis services during your journey"
+          }
+        ]
+      },
+      "cta": {
+        "title": "Start Planning Your Journey",
+        "description": "Browse the map, explore dialysis centers nationwide, and let dialysis no longer be a barrier to travel.",
+        "button": "Browse Map"
+      }
     }
   },
   "company": {
@@ -1491,11 +1920,26 @@
       "title": "Complete Solution Provider",
       "subtitle": "We're not selling software, we're restructuring how dialysis centers operate.",
       "items": [
-        { "title": "Turnkey Solutions", "description": "Complete smart dialysis center construction solutions, full support from planning to deployment." },
-        { "title": "Equipment & Consumables", "description": "Providing dialysis equipment and consumables, ensuring device interoperability." },
-        { "title": "Software & Hardware", "description": "Proprietary dialysis management system, AI LLM and IoT infrastructure." },
-        { "title": "Smart Supply Chain", "description": "Integrated smart supply chain system for better treatment outcomes, lower medical risk, and higher operational efficiency." },
-        { "title": "Expansion Plan", "description": "Clear, replicable expansion path—targeting 300 centers within two years." }
+        {
+          "title": "Turnkey Solutions",
+          "description": "Complete smart dialysis center construction solutions, full support from planning to deployment."
+        },
+        {
+          "title": "Equipment & Consumables",
+          "description": "Providing dialysis equipment and consumables, ensuring device interoperability."
+        },
+        {
+          "title": "Software & Hardware",
+          "description": "Proprietary dialysis management system, AI LLM and IoT infrastructure."
+        },
+        {
+          "title": "Smart Supply Chain",
+          "description": "Integrated smart supply chain system for better treatment outcomes, lower medical risk, and higher operational efficiency."
+        },
+        {
+          "title": "Expansion Plan",
+          "description": "Clear, replicable expansion path—targeting 300 centers within two years."
+        }
       ]
     },
     "stats": {
@@ -1525,7 +1969,10 @@
         "area": "Area",
         "features": "Features",
         "gallery": "Center Gallery",
-        "backToList": "Back to Centers"
+        "backToList": "Back to Centers",
+        "tourism": "Nearby Attractions",
+        "tourismSubtitle": "Discover local highlights between treatments",
+        "distanceLabel": "from center"
       },
       "list": [
         {
@@ -1538,7 +1985,12 @@
           "area": "1300㎡",
           "established": "2018",
           "description": "Fuzhou Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems to ensure ultra-pure dialysis water quality.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment",
+            "Central Oxygen Supply"
+          ],
           "gallery": [
             "/images/centers/fuzhou-xingkang/1.jpg",
             "/images/centers/fuzhou-xingkang/2.jpg",
@@ -1546,6 +1998,33 @@
             "/images/centers/fuzhou-xingkang/4.jpg",
             "/images/centers/fuzhou-xingkang/5.jpg",
             "/images/centers/fuzhou-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Fuzhou, the capital of Fujian Province, boasts over 2,200 years of history as a culturally rich city where mountains and rivers converge. Home to the renowned Three Lanes and Seven Alleys, Drum Mountain, and abundant hot spring resources, Fuzhou is known as the 'Hot Spring City.' As a key starting point of the Maritime Silk Road, it offers visitors a blend of heritage, nature, and distinctive Min cuisine.",
+          "tourism": [
+            {
+              "name": "Three Lanes and Seven Alleys",
+              "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
+              "description": "A nationally renowned historic street featuring well-preserved Ming and Qing dynasty architecture, known as a living fossil of ancient Chinese urban planning.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Drum Mountain",
+              "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
+              "description": "A famous mountain east of the city, home to the thousand-year-old Yongquan Temple, numerous cliff inscriptions, and panoramic views of Fuzhou and the Min River.",
+              "distance": "15 km"
+            },
+            {
+              "name": "West Lake Park",
+              "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
+              "description": "The oldest park in Fuzhou's urban area, dating back to the Jin Dynasty, offering beautiful lake scenery and a peaceful retreat for locals and visitors alike.",
+              "distance": "3 km"
+            },
+            {
+              "name": "Min River Night Cruise",
+              "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
+              "description": "A scenic boat tour along the illuminated Min River waterfront, passing landmarks like Zhongzhou Island and Jiefang Bridge.",
+              "distance": "4 km"
+            }
           ]
         },
         {
@@ -1558,13 +2037,45 @@
           "contact": "Manager Chen 1505515908",
           "area": "1000㎡",
           "description": "Anhui Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems to ensure ultra-pure dialysis water quality, providing patients with reassuring medical care for Hefei Binhu and surrounding regions.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment",
+            "Central Oxygen Supply"
+          ],
           "gallery": [
             "/images/centers/anhui-xingkang/1.jpg",
             "/images/centers/anhui-xingkang/2.jpg",
             "/images/centers/anhui-xingkang/3.jpg",
             "/images/centers/anhui-xingkang/4.jpg",
             "/images/centers/anhui-xingkang/5.jpg"
+          ],
+          "tourismIntro": "Hefei, the capital of Anhui Province, sits at the heart of the Yangtze River Delta city cluster — a vibrant metropolis blending a thousand years of history with modern innovation. Home to the cultural legacy of Judge Bao, the scenic shores of Chaohu Lake, and a thriving tech industry, Hefei offers a rich mix of leisure and cultural experiences whether you are staying briefly or throughout a course of treatment.",
+          "tourism": [
+            {
+              "name": "Swan Lake Park",
+              "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
+              "description": "An iconic urban park in Hefei's Government District with expansive lake views, scenic greenways, and relaxing walking paths.",
+              "distance": "3.5 km"
+            },
+            {
+              "name": "Lord Bao Park",
+              "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
+              "description": "A historic cultural park honoring Bao Zheng, the renowned Song Dynasty judge, featuring the Bao Zheng Memorial Hall and Qingfeng Pavilion.",
+              "distance": "4.2 km"
+            },
+            {
+              "name": "Sanhe Ancient Town",
+              "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
+              "description": "A 2,500-year-old water town with well-preserved ancient streets, bridges, and traditional residences showcasing Jiangnan heritage.",
+              "distance": "35 km"
+            },
+            {
+              "name": "Chaohu Lake Scenic Area",
+              "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
+              "description": "One of China's five great freshwater lakes, offering scenic mountain and lake views, hot springs, and a tranquil retreat.",
+              "distance": "60 km"
+            }
           ]
         },
         {
@@ -1576,7 +2087,11 @@
           "address": "No. 108 Luchao Road, Lujiang County, Anhui Province",
           "area": "1100㎡",
           "description": "Lujiang Xingkang provides professional dialysis services with advanced equipment and high-quality medical care.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/lujiang-xingkang/1.jpg",
             "/images/centers/lujiang-xingkang/2.jpg",
@@ -1584,6 +2099,33 @@
             "/images/centers/lujiang-xingkang/4.jpg",
             "/images/centers/lujiang-xingkang/5.jpg",
             "/images/centers/lujiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Lujiang County sits on the southern shore of Chaohu Lake in central Anhui, a land of deep history and natural beauty. As the hometown of the legendary Three Kingdoms general Zhou Yu, Lujiang offers hot springs, scenic mountains, and a tranquil atmosphere ideal for rest and recovery.",
+          "tourism": [
+            {
+              "name": "Tangchi Hot Springs",
+              "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
+              "description": "An ancient hot spring town with over a thousand years of history, featuring mineral-rich waters ideal for relaxation and rejuvenation.",
+              "distance": "20 km"
+            },
+            {
+              "name": "Yefu Mountain",
+              "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
+              "description": "A national forest park said to be where the legendary Spring and Autumn swordsmith Ou Yezi once forged swords, featuring lush scenery and ancient temples.",
+              "distance": "15 km"
+            },
+            {
+              "name": "Tomb of Zhou Yu",
+              "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
+              "description": "The resting place of the legendary Three Kingdoms general Zhou Yu, set among ancient trees — an important site for Chinese history enthusiasts.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Chaohu Lake Scenic Area",
+              "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
+              "description": "One of China's five great freshwater lakes with beautiful scenery, rich wetland ecology, and attractions including Zhongmiao Temple and Mushan Island.",
+              "distance": "30 km"
+            }
           ]
         },
         {
@@ -1596,7 +2138,12 @@
           "contact": "Manager Chen 1505515908",
           "area": "2000㎡",
           "description": "Hefei Pufukang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems, providing ultra-pure dialysis water quality and reassuring medical care for patients in Hefei and surrounding regions.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment",
+            "Central Oxygen Supply"
+          ],
           "gallery": [
             "/images/centers/hefei-pufukang/1.jpg",
             "/images/centers/hefei-pufukang/2.jpg",
@@ -1604,6 +2151,33 @@
             "/images/centers/hefei-pufukang/4.jpg",
             "/images/centers/hefei-pufukang/5.jpg",
             "/images/centers/hefei-pufukang/6.jpg"
+          ],
+          "tourismIntro": "Hefei, the capital of Anhui Province, sits at the heart of the Yangtze River Delta city cluster — a vibrant metropolis blending ancient heritage with modern innovation. Home to the historic Xiaoyaojin Park from the Three Kingdoms era and the scenic Dashu Mountain, Hefei offers a rich mix of leisure and cultural experiences.",
+          "tourism": [
+            {
+              "name": "Xiaoyaojin Park",
+              "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
+              "description": "A historic park on the site of a famous Three Kingdoms battlefield where General Zhang Liao achieved his legendary victory, featuring lush greenery and ancient relics.",
+              "distance": "3 km"
+            },
+            {
+              "name": "Anhui Provincial Museum",
+              "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
+              "description": "A national first-class museum with extensive collections showcasing Anhui's history and culture from ancient times to the modern era.",
+              "distance": "4 km"
+            },
+            {
+              "name": "Dashu Mountain Forest Park",
+              "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
+              "description": "The highest peak in urban Hefei with dense forest coverage, a green oasis for hiking and connecting with nature.",
+              "distance": "12 km"
+            },
+            {
+              "name": "Hefei Wildlife Park",
+              "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
+              "description": "An eco-friendly wildlife park at the foot of Dashu Mountain, home to diverse animal species and ideal for family outings.",
+              "distance": "15 km"
+            }
           ]
         },
         {
@@ -1615,7 +2189,11 @@
           "address": "Shengshi Building, No. 28 Jianshe 2nd Road, Duanzhou District, Zhaoqing",
           "area": "686㎡",
           "description": "Zhaoqing Xingkang provides professional dialysis care with advanced equipment and experienced medical team.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/zhaoqing-xingkang/1.jpg",
             "/images/centers/zhaoqing-xingkang/2.jpg",
@@ -1623,6 +2201,33 @@
             "/images/centers/zhaoqing-xingkang/4.jpg",
             "/images/centers/zhaoqing-xingkang/5.jpg",
             "/images/centers/zhaoqing-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Zhaoqing, a nationally designated historic and cultural city in Guangdong Province, lies along the Xi River and is a cradle of Lingnan culture. Home to the Seven Star Crags and Dinghu Mountain — both national scenic areas — Zhaoqing is celebrated as an 'oasis on the Tropic of Cancer,' blending natural splendor with rich cultural heritage including Duan inkstone craftsmanship and ancient Song Dynasty walls.",
+          "tourism": [
+            {
+              "name": "Seven Star Crags",
+              "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
+              "description": "Seven limestone peaks arranged like the Big Dipper constellation, mirrored in surrounding lakes — known as the 'foremost wonder of Lingnan.'",
+              "distance": "3 km"
+            },
+            {
+              "name": "Dinghu Mountain",
+              "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
+              "description": "China's first national nature reserve, dubbed the 'Emerald on the Tropic of Cancer' with 98% forest coverage and rich biodiversity.",
+              "distance": "18 km"
+            },
+            {
+              "name": "Star Lake Wetland Park",
+              "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
+              "description": "A national wetland park where red-crowned cranes and rare bird species thrive amid crystal-clear lake waters and lush natural surroundings.",
+              "distance": "4 km"
+            },
+            {
+              "name": "Ancient Song Dynasty City Wall",
+              "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
+              "description": "A rare surviving Song Dynasty brick city wall in Guangdong, bearing witness to over a thousand years of Zhaoqing's history.",
+              "distance": "2 km"
+            }
           ]
         },
         {
@@ -1634,13 +2239,44 @@
           "address": "No. 88 Sunwen East Road, Shiqi District, Zhongshan, Guangdong",
           "area": "625㎡",
           "description": "Zhongshan Shenkang Hemodialysis Center features advanced dialysis machines and dual-stage reverse osmosis water systems for ultra-pure dialysis water quality.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/zhongshan-shenkang/1.jpg",
             "/images/centers/zhongshan-shenkang/2.jpg",
             "/images/centers/zhongshan-shenkang/3.jpg",
             "/images/centers/zhongshan-shenkang/4.jpg",
             "/images/centers/zhongshan-shenkang/5.jpg"
+          ],
+          "tourismIntro": "Zhongshan, a prefecture-level city at the heart of the Pearl River Delta in Guangdong, is the hometown of Dr. Sun Yat-sen, the great pioneer of China's democratic revolution. The city blends the charm of a Lingnan water town with rich modern revolutionary heritage, offering refined gardens, renowned cuisine, and cultural landmarks.",
+          "tourism": [
+            {
+              "name": "Sun Yat-sen's Former Residence",
+              "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
+              "description": "A nationally protected heritage site showcasing the life and revolutionary history of Dr. Sun Yat-sen — Zhongshan's most significant cultural landmark.",
+              "distance": "25 km"
+            },
+            {
+              "name": "Zhan Garden",
+              "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
+              "description": "The largest private classical garden in Lingnan, blending Suzhou-Hangzhou garden aesthetics with Lingnan architectural style in an elegant setting.",
+              "distance": "10 km"
+            },
+            {
+              "name": "Zimaling Park",
+              "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
+              "description": "Zhongshan's largest comprehensive urban park with lakes, gardens, and recreational facilities — a perfect spot for leisurely strolls.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Sunwen West Road Pedestrian Street",
+              "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
+              "description": "A century-old commercial street blending Chinese and Western architectural styles, famous for its distinctive arcade buildings and local culture.",
+              "distance": "3 km"
+            }
           ]
         },
         {
@@ -1651,7 +2287,11 @@
           "province": "Heilongjiang",
           "address": "No. 621 Hongqi Street, Daowai District, Harbin",
           "description": "Heilongjiang Xingkang features nephrology, clinical laboratory, pharmacy, ultrasound, and ECG departments.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/heilongjiang-xingkang/1.jpg",
             "/images/centers/heilongjiang-xingkang/2.jpg",
@@ -1659,6 +2299,33 @@
             "/images/centers/heilongjiang-xingkang/4.jpg",
             "/images/centers/heilongjiang-xingkang/5.jpg",
             "/images/centers/heilongjiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Harbin, the capital of Heilongjiang Province, is known as the 'Oriental Paris' and the 'Ice City.' This metropolis blends Chinese and Russian cultural heritage, boasting distinctive European architecture and a world-famous ice and snow culture. From the century-old cobblestones of Central Avenue to the Byzantine domes of Saint Sophia Cathedral, Harbin is a uniquely charming northern city.",
+          "tourism": [
+            {
+              "name": "Central Avenue",
+              "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
+              "description": "One of Asia's longest pedestrian streets, featuring European architectural styles spanning multiple eras — dubbed an 'open-air museum of architecture.'",
+              "distance": "5 km"
+            },
+            {
+              "name": "Saint Sophia Cathedral",
+              "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
+              "description": "One of the largest Orthodox churches in the Far East, featuring Byzantine architecture and standing as Harbin's most iconic landmark.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Sun Island",
+              "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
+              "description": "A scenic ecological zone on the Songhua River — lush gardens in summer, stunning snow sculptures in winter — rated a national 5A tourist attraction.",
+              "distance": "10 km"
+            },
+            {
+              "name": "Harbin Ice and Snow World",
+              "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
+              "description": "The world's largest ice and snow theme park, open each winter with monumental ice sculptures illuminated in dazzling colors.",
+              "distance": "25 km"
+            }
           ]
         },
         {
@@ -1670,13 +2337,44 @@
           "address": "No. 621 Hongqi Street, Daowai District, Harbin",
           "area": "2250㎡",
           "description": "Harbin Yuhua Hemodialysis Center features advanced dialysis machines and dual-stage reverse osmosis systems, providing high-quality dialysis services for Harbin and surrounding regions.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/harbin-yuhua/1.jpg",
             "/images/centers/harbin-yuhua/2.jpg",
             "/images/centers/harbin-yuhua/3.jpg",
             "/images/centers/harbin-yuhua/4.jpg",
             "/images/centers/harbin-yuhua/5.jpg"
+          ],
+          "tourismIntro": "Harbin, the capital of Heilongjiang Province, is China's northernmost provincial capital with distinct seasons and snowy winters. Famous for its unique ice culture, European flair, and hearty northeastern cuisine, Harbin offers unforgettable experiences from the Songhua River promenade to the century-old architecture of the Daowai district.",
+          "tourism": [
+            {
+              "name": "Songhua River Promenade",
+              "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
+              "description": "Harbin's 'Mother River' with scenic greenways for walking and cycling, and exciting ice activities on the frozen surface in winter.",
+              "distance": "4 km"
+            },
+            {
+              "name": "Siberian Tiger Park",
+              "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
+              "description": "The world's largest Siberian tiger breeding base, where visitors can observe over a hundred majestic tigers up close.",
+              "distance": "15 km"
+            },
+            {
+              "name": "Gogol Street",
+              "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
+              "description": "A cultural district named after the Russian writer Gogol, lined with European-style buildings, cozy cafes, and bookshops.",
+              "distance": "3 km"
+            },
+            {
+              "name": "Dragon Tower",
+              "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
+              "description": "Asia's tallest steel tower at 336 meters, featuring observation decks and a revolving restaurant with 360-degree panoramic views of Harbin.",
+              "distance": "8 km"
+            }
           ]
         },
         {
@@ -1687,13 +2385,45 @@
           "province": "Jiangsu",
           "address": "Zhenjiang, Jiangsu Province",
           "description": "Zhenjiang Xingkang Hemodialysis Center features a high-quality central oxygen supply system, advanced dialysis machines, and dual-stage reverse osmosis water systems, providing ultra-pure dialysis water quality and reassuring medical care for patients in Zhenjiang and surrounding regions.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment", "Central Oxygen Supply"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment",
+            "Central Oxygen Supply"
+          ],
           "gallery": [
             "/images/centers/zhenjiang-xingkang/1.jpg",
             "/images/centers/zhenjiang-xingkang/2.jpg",
             "/images/centers/zhenjiang-xingkang/3.jpg",
             "/images/centers/zhenjiang-xingkang/4.jpg",
             "/images/centers/zhenjiang-xingkang/5.jpg"
+          ],
+          "tourismIntro": "Zhenjiang, a city in Jiangsu Province at the confluence of the Yangtze River and the Grand Canal, has been a strategic stronghold for over 3,000 years. Known for its claim to 'the finest river and mountain scenery under heaven,' Zhenjiang weaves legendary tales — from the White Snake legend at Jinshan Temple to ancient Three Kingdoms sites at Beigushan — into a magnificent historical tapestry.",
+          "tourism": [
+            {
+              "name": "Jinshan Temple",
+              "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
+              "description": "A thousand-year-old temple dating to the Eastern Jin Dynasty, the legendary setting of the 'White Snake' tale — built into the hillside with imposing grandeur.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Xijin Ferry Ancient Street",
+              "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
+              "description": "A thousand-year-old ferry crossing turned historic district, preserving architecture from the Tang and Song dynasties — called the 'Museum of Ancient Chinese Ferries.'",
+              "distance": "4 km"
+            },
+            {
+              "name": "Beigushan Mountain",
+              "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
+              "description": "The site of the legendary Sun-Liu alliance during the Three Kingdoms era, famous for its 'Finest Scenery Under Heaven' inscription and sweeping Yangtze views.",
+              "distance": "6 km"
+            },
+            {
+              "name": "Jiaoshan Island",
+              "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
+              "description": "The only island mountain surrounded by water in the Yangtze River, known as the 'Floating Jade,' featuring precious stone stele collections and towering ancient trees.",
+              "distance": "10 km"
+            }
           ]
         },
         {
@@ -1705,7 +2435,11 @@
           "address": "West Side of Changlin Street, Linshu County, Linyi City, Shandong Province",
           "area": "2000㎡",
           "description": "Linshu Xingkang features advanced dialysis machines and dual-stage reverse osmosis systems for high-quality dialysis care.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/linshu-xingkang/1.jpg",
             "/images/centers/linshu-xingkang/2.jpg",
@@ -1713,6 +2447,33 @@
             "/images/centers/linshu-xingkang/4.jpg",
             "/images/centers/linshu-xingkang/5.jpg",
             "/images/centers/linshu-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Linshu County, in southeastern Shandong Province at the southern foot of the Yimeng Mountains, is a historic town rich in natural beauty and folk traditions. From the scenic Cangma Mountain to the intangible cultural heritage of willow weaving, and the magnificent red tourism resources of the surrounding Yimeng region, Linshu offers a unique and authentic travel experience.",
+          "tourism": [
+            {
+              "name": "Cangma Mountain Scenic Area",
+              "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
+              "description": "A national 3A-rated scenic area with rolling green hills, flowing streams, and attractions including the Jade Garden and WWII memorial.",
+              "distance": "10 km"
+            },
+            {
+              "name": "Willow Weaving Cultural Park",
+              "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
+              "description": "A cultural park showcasing Linshu's nationally recognized intangible heritage of willow weaving, with hands-on craft experiences.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Mengshan Mountain Scenic Area",
+              "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
+              "description": "The core scenic zone of the Yimeng Mountain UNESCO Global Geopark, with Guimeng Peak rising to 1,156 meters amid dense forests and fresh mountain air.",
+              "distance": "80 km"
+            },
+            {
+              "name": "Underground Grand Canyon",
+              "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
+              "description": "One of China's largest karst caves stretching 6,100 meters, featuring an underground river drift and spectacular geological formations.",
+              "distance": "60 km"
+            }
           ]
         },
         {
@@ -1724,7 +2485,11 @@
           "address": "No. 61 Beishuncheng Road, Shenhe District, Shenyang",
           "area": "1600㎡",
           "description": "Liaoning Xingkang provides professional dialysis care for patients in the Liaoning region.",
-          "features": ["Personalized Design", "Customized Services", "Home-like Environment"],
+          "features": [
+            "Personalized Design",
+            "Customized Services",
+            "Home-like Environment"
+          ],
           "gallery": [
             "/images/centers/liaoning-xingkang/1.jpg",
             "/images/centers/liaoning-xingkang/2.jpg",
@@ -1732,6 +2497,33 @@
             "/images/centers/liaoning-xingkang/4.jpg",
             "/images/centers/liaoning-xingkang/5.jpg",
             "/images/centers/liaoning-xingkang/6.jpg"
+          ],
+          "tourismIntro": "Shenyang, the capital of Liaoning Province, is the political, economic, and cultural center of Northeast China. As the birthplace of the Qing Dynasty, Shenyang is home to the UNESCO-listed Shenyang Imperial Palace and Zhaoling Tomb, carrying a rich Manchu cultural legacy. The city seamlessly blends the grandeur of an ancient capital with the vibrant energy of a modern metropolis.",
+          "tourism": [
+            {
+              "name": "Shenyang Imperial Palace",
+              "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
+              "description": "A UNESCO World Heritage Site and former palace of Qing founders Nurhaci and Hong Taiji — one of only two imperial palace complexes in China.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Beiling Park (Zhaoling Tomb)",
+              "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
+              "description": "The mausoleum of Qing Emperor Hong Taiji and Shenyang's largest park, featuring towering ancient pines and majestic tomb architecture.",
+              "distance": "8 km"
+            },
+            {
+              "name": "Marshal Zhang's Mansion",
+              "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
+              "description": "The official residence of warlord Zhang Zuolin and his son Zhang Xueliang, showcasing the dramatic modern history of Northeast China.",
+              "distance": "5 km"
+            },
+            {
+              "name": "Shenyang Expo Garden",
+              "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
+              "description": "The venue of the 2006 World Horticultural Exposition spanning 246 hectares, with year-round floral displays and a premier urban ecological retreat.",
+              "distance": "20 km"
+            }
           ]
         }
       ]
@@ -1742,15 +2534,44 @@
       "subtitle": "Partnering with quality healthcare institutions to enhance dialysis service quality",
       "description": "We have established deep partnerships with over 100 hospitals nationwide to provide professional dialysis service support for more patients.",
       "list": [
-        { "name": "Hunan Wangwang Hospital", "province": "Hunan" },
-        { "name": "Zhejiang Xinan International Hospital", "province": "Zhejiang" },
-        { "name": "Xiamen Chang Gung Hospital", "province": "Fujian" },
-        { "name": "Guangxi Yulin Guinan Hospital", "province": "Guangxi", "note": "Zhongzhu Medical" },
-        { "name": "Xinzheng Huaxin Minsheng Hospital", "province": "Henan" },
-        { "name": "Haining Kanghua Hospital", "province": "Zhejiang", "note": "Innovation Medical" },
-        { "name": "Lianyungang Sheng'an Hospital", "province": "Jiangsu" },
-        { "name": "Xinjin Zhihui Hospital", "province": "Sichuan" },
-        { "name": "Dongying Xinlicheng Geriatric Hospital", "province": "Shandong" }
+        {
+          "name": "Hunan Wangwang Hospital",
+          "province": "Hunan"
+        },
+        {
+          "name": "Zhejiang Xinan International Hospital",
+          "province": "Zhejiang"
+        },
+        {
+          "name": "Xiamen Chang Gung Hospital",
+          "province": "Fujian"
+        },
+        {
+          "name": "Guangxi Yulin Guinan Hospital",
+          "province": "Guangxi",
+          "note": "Zhongzhu Medical"
+        },
+        {
+          "name": "Xinzheng Huaxin Minsheng Hospital",
+          "province": "Henan"
+        },
+        {
+          "name": "Haining Kanghua Hospital",
+          "province": "Zhejiang",
+          "note": "Innovation Medical"
+        },
+        {
+          "name": "Lianyungang Sheng'an Hospital",
+          "province": "Jiangsu"
+        },
+        {
+          "name": "Xinjin Zhihui Hospital",
+          "province": "Sichuan"
+        },
+        {
+          "name": "Dongying Xinlicheng Geriatric Hospital",
+          "province": "Shandong"
+        }
       ],
       "more": "And more partner hospitals..."
     },
@@ -1759,9 +2580,18 @@
       "title": "Let's Connect",
       "subtitle": "For clinical collaboration, deployment discussions, or strategic partnerships, we welcome the opportunity to connect.",
       "reasons": {
-        "clinical": { "title": "Clinical Partnership", "description": "Interested in deploying our platform at your dialysis center or network." },
-        "investment": { "title": "Investment Inquiry", "description": "Strategic investors aligned with healthcare transformation." },
-        "collaboration": { "title": "Strategic Collaboration", "description": "Equipment manufacturers, healthcare systems, or research institutions." }
+        "clinical": {
+          "title": "Clinical Partnership",
+          "description": "Interested in deploying our platform at your dialysis center or network."
+        },
+        "investment": {
+          "title": "Investment Inquiry",
+          "description": "Strategic investors aligned with healthcare transformation."
+        },
+        "collaboration": {
+          "title": "Strategic Collaboration",
+          "description": "Equipment manufacturers, healthcare systems, or research institutions."
+        }
       },
       "form": {
         "title": "Send a Message",
@@ -1829,9 +2659,18 @@
     "title": "Let's Connect",
     "subtitle": "For clinical collaboration, deployment discussions, or strategic partnerships, we welcome the opportunity to connect.",
     "reasons": {
-      "clinical": { "title": "Clinical Partnership", "description": "Interested in deploying our platform at your dialysis center or network." },
-      "investment": { "title": "Investment Inquiry", "description": "Strategic investors aligned with healthcare transformation." },
-      "collaboration": { "title": "Strategic Collaboration", "description": "Equipment manufacturers, healthcare systems, or research institutions." }
+      "clinical": {
+        "title": "Clinical Partnership",
+        "description": "Interested in deploying our platform at your dialysis center or network."
+      },
+      "investment": {
+        "title": "Investment Inquiry",
+        "description": "Strategic investors aligned with healthcare transformation."
+      },
+      "collaboration": {
+        "title": "Strategic Collaboration",
+        "description": "Equipment manufacturers, healthcare systems, or research institutions."
+      }
     },
     "form": {
       "title": "Send a Message",

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Leaflet CSS */
+@import 'leaflet/dist/leaflet.css';
+
 @layer base {
   /* Dark Theme (Default) */
   :root, .dark {
@@ -442,4 +445,150 @@
 /* Light mode glow - subtle */
 .light .glow-accent {
   box-shadow: 0 8px 32px rgba(0, 125, 115, 0.12);
+}
+
+/* Leaflet Map Customization - Dark Mode */
+.dark .leaflet-container {
+  font-family: inherit;
+  background: #0f172a !important;
+}
+
+.dark .leaflet-popup-content-wrapper {
+  background: #0f172a !important;
+  color: #f1f5f9 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7) !important;
+  padding: 0 !important;
+  border: 1px solid #334155 !important;
+}
+
+.dark .leaflet-popup-content {
+  margin: 0 !important;
+  min-width: 250px;
+}
+
+.dark .leaflet-popup-tip {
+  background: #0f172a !important;
+  border: 1px solid #334155 !important;
+}
+
+.dark .leaflet-popup-close-button {
+  color: #cbd5e1 !important;
+  font-size: 24px !important;
+  padding: 8px 12px !important;
+}
+
+.dark .leaflet-popup-close-button:hover {
+  color: #f1f5f9 !important;
+}
+
+.dark .leaflet-popup a {
+  color: #5eead4 !important;
+}
+
+.dark .leaflet-popup a:hover {
+  color: #99f6e4 !important;
+}
+
+/* OSM tiles - Dark mode via CSS filter */
+.osm-dark .leaflet-tile-pane {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+/* Map controls - Dark */
+.dark .leaflet-control-zoom a {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.dark .leaflet-control-zoom a:hover {
+  background: #334155 !important;
+  color: #fff !important;
+}
+
+.dark .leaflet-control-attribution {
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: #94a3b8 !important;
+  font-size: 10px !important;
+}
+
+.dark .leaflet-control-attribution a {
+  color: #5eead4 !important;
+}
+
+/* Leaflet Map Customization - Light Mode */
+.light .leaflet-container {
+  font-family: inherit;
+  background: #f8fafc !important;
+}
+
+.light .leaflet-popup-content-wrapper {
+  background: #ffffff !important;
+  color: #1e293b !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12) !important;
+  padding: 0 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.light .leaflet-popup-content {
+  margin: 0 !important;
+  min-width: 250px;
+}
+
+.light .leaflet-popup-tip {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.light .leaflet-popup-close-button {
+  color: #64748b !important;
+  font-size: 24px !important;
+  padding: 8px 12px !important;
+}
+
+.light .leaflet-popup-close-button:hover {
+  color: #1e293b !important;
+}
+
+.light .leaflet-popup a {
+  color: #007d73 !important;
+}
+
+.light .leaflet-popup a:hover {
+  color: #006b62 !important;
+}
+
+/* Map controls - Light */
+.light .leaflet-control-zoom a {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #1e293b !important;
+}
+
+.light .leaflet-control-zoom a:hover {
+  background: #f1f5f9 !important;
+  color: #000 !important;
+}
+
+.light .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #64748b !important;
+  font-size: 10px !important;
+}
+
+.light .leaflet-control-attribution a {
+  color: #007d73 !important;
+}
+
+/* Marker icons */
+.marker-icon {
+  background: transparent;
+  border: none;
+}
+
+.marker-cluster-custom {
+  background: transparent !important;
+  border: none !important;
 }

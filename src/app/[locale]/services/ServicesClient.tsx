@@ -162,13 +162,41 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         </div>
       </section>
 
-      {/* Service Navigation Cards */}
+      {/* Service Navigation Cards - 3x3 Grid */}
       <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Patient Travel Service - Links to dedicated page */}
+            <Link
+              href={`/${locale}/services/patient-travel`}
+              className={`group p-4 rounded-2xl transition-all hover:-translate-y-1 relative ${
+                theme === 'dark'
+                  ? 'bg-slate-800/50 hover:bg-slate-800 border-2 border-teal-500/40 hover:border-teal-500/60'
+                  : 'bg-gray-50 hover:bg-white hover:shadow-lg border-2 border-teal-200 hover:border-teal-300'
+              }`}
+            >
+              <div className="absolute top-2 right-2">
+                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${theme === 'dark' ? 'bg-teal-500/30 text-teal-300' : 'bg-teal-500 text-white'}`}>
+                  {dictionary.services.newBadge || '新功能'}
+                </span>
+              </div>
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
+                theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
+              }`}>
+                <Globe className={`w-4 h-4 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+              </div>
+              <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                {dictionary.services.patientTravel?.title || '边走边透'}
+              </h3>
+              <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} line-clamp-2`}>
+                {dictionary.services.patientTravel?.hero?.subtitle || '探索中国，享受透析'}
+              </p>
+            </Link>
+
+            {/* Regular service cards */}
             {t.serviceCards.map((card: { id: string; title: string; description: string; icon: string }, index: number) => {
               const icons: { [key: string]: React.ComponentType<{ className?: string }> } = {
-                Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile
+                Activity, Heart, GraduationCap, Utensils, Dumbbell, Footprints, Smile, Building2
               }
               const Icon = icons[card.icon] || Activity
               return (
@@ -179,21 +207,21 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
-                  className={`group p-5 rounded-2xl transition-all hover:-translate-y-1 ${
-                    theme === 'dark' 
-                      ? 'bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50' 
-                      : 'bg-gray-50 hover:bg-white hover:shadow-lg'
+                  className={`group p-4 rounded-2xl transition-all hover:-translate-y-1 ${
+                    theme === 'dark'
+                      ? 'bg-slate-800/50 hover:bg-slate-800 border border-slate-700/50'
+                      : 'bg-gray-50 hover:bg-white hover:shadow-lg border border-gray-200'
                   }`}
                 >
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
                     theme === 'dark' ? 'bg-teal-500/15' : 'bg-teal-50'
                   }`}>
-                    <Icon className={`w-5 h-5 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
+                    <Icon className={`w-4 h-4 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} />
                   </div>
-                  <h3 className={`font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                  <h3 className={`font-semibold mb-1.5 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                     {card.title}
                   </h3>
-                  <p className={`text-sm leading-relaxed ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                  <p className={`text-sm ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'} line-clamp-2`}>
                     {card.description}
                   </p>
                 </motion.a>
@@ -647,6 +675,26 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 ))}
               </div>
             </div>
+          </motion.div>
+
+          {/* Learn More Link */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-10 text-center"
+          >
+            <Link
+              href={`/${locale}/services/patient-travel`}
+              className={`inline-flex items-center gap-1 text-sm font-medium transition-colors ${
+                theme === 'dark'
+                  ? 'text-rose-400 hover:text-rose-300'
+                  : 'text-rose-600 hover:text-rose-700'
+              }`}
+            >
+              {dictionary.services.patientTravel?.cta?.button || '了解更多边走边透服务'}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         </div>
       </section>

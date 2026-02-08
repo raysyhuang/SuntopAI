@@ -31,27 +31,51 @@
       "iot": {
         "title": "IoT資料基礎設施",
         "description": "透析機、血壓計、體重計等核心設備全部物聯網化，已接入3000+台透析機，每分鐘高頻資料擷取。",
-        "features": ["3000+台設備接入", "HIS/LIS/EMR系統整合", "結構化臨床資料管道"]
+        "features": [
+          "3000+台設備接入",
+          "HIS/LIS/EMR系統整合",
+          "結構化臨床資料管道"
+        ]
       },
       "ai": {
         "title": "透析專用AI引擎",
         "description": "基於透析臨床資料訓練的客製化大模型，結合AI Agent實現IDH預測、超過濾率優化和乾體重評估。",
-        "features": ["IDH風險預測", "超過濾率優化", "乾體重趨勢分析"]
+        "features": [
+          "IDH風險預測",
+          "超過濾率優化",
+          "乾體重趨勢分析"
+        ]
       },
       "automation": {
         "title": "即時臨床決策支援",
         "description": "透析中持續監測血壓趨勢、超過濾耐受、通路血流和Kt/V充分性，處方調整建議直接整合到醫師工作流程。",
-        "features": ["透析中血壓分析", "超過濾與容量管理", "充分性監測(Kt/V)"]
+        "features": [
+          "透析中血壓分析",
+          "超過濾與容量管理",
+          "充分性監測(Kt/V)"
+        ]
       }
     },
     "flow": {
       "title": "設備 → 資料 → AI → 臨床行動",
       "description": "透析設備每分鐘即時資料流傳輸，整合血壓監測、體重計和檢驗結果。AI引擎分析透析中趨勢，直接向醫師工作流程發送可操作預警。",
       "steps": {
-        "machines": { "label": "透析設備", "sublabel": "血壓/超過濾/血流" },
-        "data": { "label": "臨床資料湖", "sublabel": "檢驗/生命徵象/處方" },
-        "ai": { "label": "AI分析", "sublabel": "IDH/超過濾/Kt/V" },
-        "automation": { "label": "臨床預警", "sublabel": "即時CDSS" }
+        "machines": {
+          "label": "透析設備",
+          "sublabel": "血壓/超過濾/血流"
+        },
+        "data": {
+          "label": "臨床資料湖",
+          "sublabel": "檢驗/生命徵象/處方"
+        },
+        "ai": {
+          "label": "AI分析",
+          "sublabel": "IDH/超過濾/Kt/V"
+        },
+        "automation": {
+          "label": "臨床預警",
+          "sublabel": "即時CDSS"
+        }
       }
     },
     "stats": {
@@ -64,20 +88,48 @@
       "tag": "臨床驗證",
       "title": "真實數據，真實改善",
       "items": [
-        { "value": "60%", "label": "休克前期患者下降", "detail": "22.4% → 9.0%" },
-        { "value": "70%", "label": "化驗評估效率提升", "detail": "8.3分鐘 → 2.5分鐘" },
-        { "value": "71%", "label": "缺鐵患者比例下降", "detail": "74.0% → 21.1%" },
-        { "value": "37%", "label": "腎性骨病患者下降", "detail": "48.4% → 30.7%" }
+        {
+          "value": "60%",
+          "label": "休克前期患者下降",
+          "detail": "22.4% → 9.0%"
+        },
+        {
+          "value": "70%",
+          "label": "化驗評估效率提升",
+          "detail": "8.3分鐘 → 2.5分鐘"
+        },
+        {
+          "value": "71%",
+          "label": "缺鐵患者比例下降",
+          "detail": "74.0% → 21.1%"
+        },
+        {
+          "value": "37%",
+          "label": "腎性骨病患者下降",
+          "detail": "48.4% → 30.7%"
+        }
       ],
       "cta": "查看完整成效數據",
       "footnote": "數據來源：杏泰醫療自營透析中心，2024-2025",
       "deployment": {
         "title": "已驗證的部署規模",
         "items": [
-          { "value": "30+", "label": "自營透析中心" },
-          { "value": "100+", "label": "合作透析中心" },
-          { "value": "50+", "label": "智慧透析中心" },
-          { "value": "3000+", "label": "已連接透析機" }
+          {
+            "value": "30+",
+            "label": "自營透析中心"
+          },
+          {
+            "value": "100+",
+            "label": "合作透析中心"
+          },
+          {
+            "value": "50+",
+            "label": "智慧透析中心"
+          },
+          {
+            "value": "3000+",
+            "label": "已連接透析機"
+          }
         ]
       }
     },
@@ -92,10 +144,22 @@
         "4. Saran R, et al. Longer treatment time and slower ultrafiltration in hemodialysis: associations with reduced mortality in the DOPPS. Kidney Int 2006;69:1222-1228"
       ],
       "description2": "我們的AI系統分析血壓趨勢、超過濾耐受模式和歷史治療資料，在IDH發生前數分鐘預警，優化超過濾曲線，並提供循證的乾體重建議。",
-      "clinical": { "title": "IDH預防", "desc": "透過預測性預警，減少透析中低血壓的發生" },
-      "operational": { "title": "乾體重管理", "desc": "數據驅動的乾體重評估，減少醫師間判斷差異" },
-      "strategic": { "title": "風險預警", "desc": "多維度指標分析，提前識別潛在併發症風險" },
-      "longterm": { "title": "數據驅動", "desc": "從經驗驅動轉向數據驅動的精準透析管理" }
+      "clinical": {
+        "title": "IDH預防",
+        "desc": "透過預測性預警，減少透析中低血壓的發生"
+      },
+      "operational": {
+        "title": "乾體重管理",
+        "desc": "數據驅動的乾體重評估，減少醫師間判斷差異"
+      },
+      "strategic": {
+        "title": "風險預警",
+        "desc": "多維度指標分析，提前識別潛在併發症風險"
+      },
+      "longterm": {
+        "title": "數據驅動",
+        "desc": "從經驗驅動轉向數據驅動的精準透析管理"
+      }
     },
     "router": {
       "tag": "深入了解",
@@ -287,8 +351,12 @@
         "title": "智慧監護，從巡視到預警的升級",
         "description": "以顏色分級與視覺化介面呈現風險等級，讓異常趨勢一目了然。集中顯示各床位病患狀態，協助快速定位需要關注的站點，優化護理資源分配。",
         "images": [
-          { "label": "中央監控系統" },
-          { "label": "治療狀態監控" }
+          {
+            "label": "中央監控系統"
+          },
+          {
+            "label": "治療狀態監控"
+          }
         ]
       },
       "bedsideTerminal": {
@@ -296,8 +364,12 @@
         "title": "床旁智慧終端——賦能透析設備，讓每一台透析機都擁有「數位大腦」",
         "description": "在傳統的血液透析流程中，醫護人員往往需要在透析機、血液透析系統間反覆查看資料。床旁智慧終端的出現，重新定義了床旁設備的功能邊界。它不僅是硬體的延伸，更是深度融入臨床全流程的智慧導航儀，引導醫護人員實現更精準、更高效的操作。",
         "images": [
-          { "label": "智慧床旁終端" },
-          { "label": "四項監測" }
+          {
+            "label": "智慧床旁終端"
+          },
+          {
+            "label": "四項監測"
+          }
         ],
         "sectionTitle": "核心價值：全場景導航式醫護體驗",
         "features": [
@@ -382,10 +454,22 @@
       "title": "我們平台的優勢",
       "description": "為長期透析變革構建的技術和策略優勢。",
       "items": [
-        { "title": "透析原生聚焦", "description": "專為透析構建，而非從通用醫療AI改編。" },
-        { "title": "深度整合", "description": "貫穿整個護理流程的設備級和工作流程級連接。" },
-        { "title": "臨床護欄", "description": "以安全為先的自動化設計，而非黑盒AI。" },
-        { "title": "規模化就緒", "description": "為多中心網路設計，而非單站點試點。" }
+        {
+          "title": "透析原生聚焦",
+          "description": "專為透析構建，而非從通用醫療AI改編。"
+        },
+        {
+          "title": "深度整合",
+          "description": "貫穿整個護理流程的設備級和工作流程級連接。"
+        },
+        {
+          "title": "臨床護欄",
+          "description": "以安全為先的自動化設計，而非黑盒AI。"
+        },
+        {
+          "title": "規模化就緒",
+          "description": "為多中心網路設計，而非單站點試點。"
+        }
       ]
     },
     "clinicalApplications": {
@@ -752,28 +836,68 @@
       "title": "臨床一線與患者關懷",
       "subtitle": "來自合作中心的真實場景，涵蓋宣教、復健與標準化服務。",
       "groups": {
-        "education": { "title": "患者教育與溝通" },
-        "quality": { "title": "質控與標準化營運" },
-        "engagement": { "title": "患者參與活動" },
-        "rehab": { "title": "復健與特色照護" },
-        "training": { "title": "培訓與能力建設" }
+        "education": {
+          "title": "患者教育與溝通"
+        },
+        "quality": {
+          "title": "質控與標準化營運"
+        },
+        "engagement": {
+          "title": "患者參與活動"
+        },
+        "rehab": {
+          "title": "復健與特色照護"
+        },
+        "training": {
+          "title": "培訓與能力建設"
+        }
       },
       "items": {
-        "educationLibrary": { "title": "患者宣教資料庫" },
-        "patientReport": { "title": "患者說明用報告書" },
-        "nutritionActivity": { "title": "營養趣味猜謎活動" },
-        "nutritionActivityTwo": { "title": "營養宣教互動活動" },
-        "rehabRoom": { "title": "復健運動設備" },
-        "carbonicBath": { "title": "碳酸泉足浴" },
-        "carbonicRoom": { "title": "碳酸泉室" },
-        "carbonicEffect": { "title": "碳酸泉效果" },
-        "trainingPocketGuide": { "title": "教育培訓用口袋書" },
-        "trainingMaterial": { "title": "培訓教材" },
-        "labResultsExplanation": { "title": "化驗結果說明" },
-        "labResultsLiaoning": { "title": "化驗結果床旁說明" },
-        "dailySharing": { "title": "每日例會經驗分享" },
-        "qualityAlliance": { "title": "質控小組會議" },
-        "standardizedOps": { "title": "標準化操作流程" }
+        "educationLibrary": {
+          "title": "患者宣教資料庫"
+        },
+        "patientReport": {
+          "title": "患者說明用報告書"
+        },
+        "nutritionActivity": {
+          "title": "營養趣味猜謎活動"
+        },
+        "nutritionActivityTwo": {
+          "title": "營養宣教互動活動"
+        },
+        "rehabRoom": {
+          "title": "復健運動設備"
+        },
+        "carbonicBath": {
+          "title": "碳酸泉足浴"
+        },
+        "carbonicRoom": {
+          "title": "碳酸泉室"
+        },
+        "carbonicEffect": {
+          "title": "碳酸泉效果"
+        },
+        "trainingPocketGuide": {
+          "title": "教育培訓用口袋書"
+        },
+        "trainingMaterial": {
+          "title": "培訓教材"
+        },
+        "labResultsExplanation": {
+          "title": "化驗結果說明"
+        },
+        "labResultsLiaoning": {
+          "title": "化驗結果床旁說明"
+        },
+        "dailySharing": {
+          "title": "每日例會經驗分享"
+        },
+        "qualityAlliance": {
+          "title": "質控小組會議"
+        },
+        "standardizedOps": {
+          "title": "標準化操作流程"
+        }
       }
     }
   },
@@ -971,21 +1095,36 @@
           "title": "設備物聯層",
           "icon": "Wifi",
           "description": "連接透析機、血壓計、體重秤等設備，即時採集治療資料，自動傳輸至系統。",
-          "features": ["多廠商設備相容", "高頻資料採集", "自動傳輸免錄入", "設備狀態監控"]
+          "features": [
+            "多廠商設備相容",
+            "高頻資料採集",
+            "自動傳輸免錄入",
+            "設備狀態監控"
+          ]
         },
         {
           "id": "ai",
           "title": "AI智能層",
           "icon": "Brain",
           "description": "分析透析資料，產生風險預測與臨床建議。",
-          "features": ["透析中低血壓預測", "超濾最佳化", "個性化建議", "早期預警"]
+          "features": [
+            "透析中低血壓預測",
+            "超濾最佳化",
+            "個性化建議",
+            "早期預警"
+          ]
         },
         {
           "id": "app",
           "title": "應用層",
           "icon": "Layers",
           "description": "直接整合到醫師工作流程的洞察、警示與決策支援。",
-          "features": ["即時警示", "臨床報告", "品質儀表板", "行動存取"]
+          "features": [
+            "即時警示",
+            "臨床報告",
+            "品質儀表板",
+            "行動存取"
+          ]
         }
       ]
     },
@@ -1023,12 +1162,28 @@
           "description": "擁有國內外設計師帶領的科室設計團隊，以為腎友創造安全舒適的醫療環境為目標。",
           "icon": "Compass",
           "steps": [
-            { "title": "市場調查", "description": "全面細緻的市場調研分析" },
-            { "title": "設備規劃", "description": "根據需求配置優化設備方案" },
-            { "title": "室內設計", "description": "專業新穎的人性化空間設計" },
-            { "title": "需求整合", "description": "綜合資深醫療人才意見" }
+            {
+              "title": "市場調查",
+              "description": "全面細緻的市場調研分析"
+            },
+            {
+              "title": "設備規劃",
+              "description": "根據需求配置優化設備方案"
+            },
+            {
+              "title": "室內設計",
+              "description": "專業新穎的人性化空間設計"
+            },
+            {
+              "title": "需求整合",
+              "description": "綜合資深醫療人才意見"
+            }
           ],
-          "highlights": ["佈局合理，動線清晰", "符合國家質控標準", "人性化科室設計"]
+          "highlights": [
+            "佈局合理，動線清晰",
+            "符合國家質控標準",
+            "人性化科室設計"
+          ]
         },
         {
           "id": "training",
@@ -1037,12 +1192,28 @@
           "description": "從傳統的科室培訓和醫護人員交流學習，延伸到靈活多樣的線上學習模式。",
           "icon": "GraduationCap",
           "steps": [
-            { "title": "專家駐場授課", "description": "專業指導，系統培訓" },
-            { "title": "醫護培訓座談", "description": "分享醫學心得，促進交流" },
-            { "title": "科室進駐實驗", "description": "提升臨床實戰技能" },
-            { "title": "線上學習平台", "description": "醫柔課綱專業培訓系統" }
+            {
+              "title": "專家駐場授課",
+              "description": "專業指導，系統培訓"
+            },
+            {
+              "title": "醫護培訓座談",
+              "description": "分享醫學心得，促進交流"
+            },
+            {
+              "title": "科室進駐實驗",
+              "description": "提升臨床實戰技能"
+            },
+            {
+              "title": "線上學習平台",
+              "description": "醫柔課綱專業培訓系統"
+            }
           ],
-          "highlights": ["完善的理論與實踐培訓", "多個區域培訓基地", "定期專家講座與國際交流"]
+          "highlights": [
+            "完善的理論與實踐培訓",
+            "多個區域培訓基地",
+            "定期專家講座與國際交流"
+          ]
         },
         {
           "id": "operations",
@@ -1051,40 +1222,28 @@
           "description": "每一個環節都將以客戶需求及實際情況作考量，提供全方位管理支援。",
           "icon": "Settings",
           "steps": [
-            { "title": "科室制度建立", "description": "標準化部門工作流程" },
-            { "title": "醫護人員管理", "description": "醫療人才招聘與團隊建設" },
-            { "title": "作業流程建立", "description": "高效營運流程設計" },
-            { "title": "資訊化系統管理", "description": "IT系統基礎設施建設" }
+            {
+              "title": "科室制度建立",
+              "description": "標準化部門工作流程"
+            },
+            {
+              "title": "醫護人員管理",
+              "description": "醫療人才招聘與團隊建設"
+            },
+            {
+              "title": "作業流程建立",
+              "description": "高效營運流程設計"
+            },
+            {
+              "title": "資訊化系統管理",
+              "description": "IT系統基礎設施建設"
+            }
           ],
-          "highlights": ["財務管理顧問", "技術支援服務", "品質控制體系"]
-        }
-      ]
-    },
-    "architecture": {
-      "tag": "技術架構",
-      "title": "透析物聯網 + AI中樞",
-      "subtitle": "三層架構協同工作，將透析資料轉化為臨床智能",
-      "layers": [
-        {
-          "id": "iot",
-          "title": "設備物聯層",
-          "icon": "Wifi",
-          "description": "連接透析機、血壓計、體重秤等設備，即時採集治療資料，自動傳輸至系統。",
-          "features": ["多廠商設備相容", "高頻資料採集", "自動傳輸免錄入", "設備狀態監控"]
-        },
-        {
-          "id": "ai",
-          "title": "AI智能層",
-          "icon": "Brain",
-          "description": "分析透析資料，產生風險預測與臨床建議。",
-          "features": ["透析中低血壓預測", "超濾最佳化", "個性化建議", "早期預警"]
-        },
-        {
-          "id": "app",
-          "title": "應用層",
-          "icon": "Layers",
-          "description": "直接整合到醫師工作流程的洞察、警示與決策支援。",
-          "features": ["即時警示", "臨床報告", "品質儀表板", "行動存取"]
+          "highlights": [
+            "財務管理顧問",
+            "技術支援服務",
+            "品質控制體系"
+          ]
         }
       ]
     },
@@ -1092,22 +1251,52 @@
       "title": "我們平台的優勢",
       "description": "為長期透析變革構建的技術和策略優勢。",
       "items": [
-        { "title": "透析原生聚焦", "description": "專為透析構建，而非從通用醫療AI改編。" },
-        { "title": "深度整合", "description": "貫穿整個護理流程的設備級和工作流程級連接。" },
-        { "title": "臨床護欄", "description": "以安全為先的自動化設計，而非黑盒AI。" },
-        { "title": "規模化就緒", "description": "為多中心網路設計，而非單站點試點。" }
+        {
+          "title": "透析原生聚焦",
+          "description": "專為透析構建，而非從通用醫療AI改編。"
+        },
+        {
+          "title": "深度整合",
+          "description": "貫穿整個護理流程的設備級和工作流程級連接。"
+        },
+        {
+          "title": "臨床護欄",
+          "description": "以安全為先的自動化設計，而非黑盒AI。"
+        },
+        {
+          "title": "規模化就緒",
+          "description": "為多中心網路設計，而非單站點試點。"
+        }
       ]
     },
     "features": {
       "title": "從設計階段即可部署",
       "description": "考慮到醫療IT、臨床工作流程和監管要求的實際現實而構建。",
       "items": [
-        { "title": "多廠商相容性", "description": "與多個製造商的現有透析設備生態系統相容。無需更換設備。" },
-        { "title": "彈性部署", "description": "本地、雲端或混合部署選項，滿足您的基礎設施和合規要求。" },
-        { "title": "最小干擾", "description": "漸進式部署，旨在無營運停機時間地整合到現有臨床工作流程中。" },
-        { "title": "設計安全", "description": "企業級安全架構，包括靜態和傳輸加密、基於角色的存取控制。" },
-        { "title": "監管意識", "description": "考慮醫療監管要求構建，支援符合本地和國際標準。" },
-        { "title": "可擴展架構", "description": "從單個中心到全國網路，平台無需架構更改即可擴展。" }
+        {
+          "title": "多廠商相容性",
+          "description": "與多個製造商的現有透析設備生態系統相容。無需更換設備。"
+        },
+        {
+          "title": "彈性部署",
+          "description": "本地、雲端或混合部署選項，滿足您的基礎設施和合規要求。"
+        },
+        {
+          "title": "最小干擾",
+          "description": "漸進式部署，旨在無營運停機時間地整合到現有臨床工作流程中。"
+        },
+        {
+          "title": "設計安全",
+          "description": "企業級安全架構，包括靜態和傳輸加密、基於角色的存取控制。"
+        },
+        {
+          "title": "監管意識",
+          "description": "考慮醫療監管要求構建，支援符合本地和國際標準。"
+        },
+        {
+          "title": "可擴展架構",
+          "description": "從單個中心到全國網路，平台無需架構更改即可擴展。"
+        }
       ]
     },
     "process": {
@@ -1115,10 +1304,26 @@
       "title": "結構化部署流程",
       "subtitle": "分階段實施，確保平穩過渡",
       "steps": [
-        { "step": "01", "title": "評估", "description": "評估目前基礎設施、設備相容性和整合要求。" },
-        { "step": "02", "title": "試點部署", "description": "在選定的透析站進行有限部署，驗證整合和臨床工作流程。" },
-        { "step": "03", "title": "臨床驗證", "description": "與臨床團隊合作，微調警報、閾值和決策支援參數。" },
-        { "step": "04", "title": "擴展與最佳化", "description": "透過持續監測和最佳化，在各設施擴展部署。" }
+        {
+          "step": "01",
+          "title": "評估",
+          "description": "評估目前基礎設施、設備相容性和整合要求。"
+        },
+        {
+          "step": "02",
+          "title": "試點部署",
+          "description": "在選定的透析站進行有限部署，驗證整合和臨床工作流程。"
+        },
+        {
+          "step": "03",
+          "title": "臨床驗證",
+          "description": "與臨床團隊合作，微調警報、閾值和決策支援參數。"
+        },
+        {
+          "step": "04",
+          "title": "擴展與最佳化",
+          "description": "透過持續監測和最佳化，在各設施擴展部署。"
+        }
       ]
     },
     "security": {
@@ -1126,10 +1331,22 @@
       "title": "醫療級資料安全",
       "subtitle": "符合醫療資料安全標準，保障患者隱私",
       "features": [
-        { "title": "資料加密", "value": "AES-256端到端加密" },
-        { "title": "存取控制", "value": "基於角色的權限管理" },
-        { "title": "稽核追溯", "value": "完整操作日誌記錄" },
-        { "title": "合規就緒", "value": "符合醫療資料法規要求" }
+        {
+          "title": "資料加密",
+          "value": "AES-256端到端加密"
+        },
+        {
+          "title": "存取控制",
+          "value": "基於角色的權限管理"
+        },
+        {
+          "title": "稽核追溯",
+          "value": "完整操作日誌記錄"
+        },
+        {
+          "title": "合規就緒",
+          "value": "符合醫療資料法規要求"
+        }
       ]
     },
     "supplyChain": {
@@ -1141,25 +1358,45 @@
           "title": "智能耗材管理",
           "icon": "Package",
           "description": "AI預測耗材使用量，自動觸發補貨，避免缺貨或過期浪費。",
-          "items": ["透析器、血路管等耗材智能預測", "自動補貨提醒", "批次追溯與效期管理", "成本分析與優化建議"]
+          "items": [
+            "透析器、血路管等耗材智能預測",
+            "自動補貨提醒",
+            "批次追溯與效期管理",
+            "成本分析與優化建議"
+          ]
         },
         {
           "title": "設備維護預測",
           "icon": "Wrench",
           "description": "基於設備運行資料，AI預測維護需求，減少非計劃停機。",
-          "items": ["透析機運行狀態即時監控", "預測性維護提醒", "故障早期預警", "維護記錄數位化管理"]
+          "items": [
+            "透析機運行狀態即時監控",
+            "預測性維護提醒",
+            "故障早期預警",
+            "維護記錄數位化管理"
+          ]
         },
         {
           "title": "物流配送優化",
           "icon": "Truck",
           "description": "智能調度配送，送貨機器人輔助院內物流。",
-          "items": ["多中心配送路線優化", "送貨機器人院內配送", "即時庫存可視化", "緊急調配響應"]
+          "items": [
+            "多中心配送路線優化",
+            "送貨機器人院內配送",
+            "即時庫存可視化",
+            "緊急調配響應"
+          ]
         },
         {
           "title": "成本控制分析",
           "icon": "TrendingDown",
           "description": "全面成本監控與分析，助力精實營運。",
-          "items": ["單次透析成本核算", "耗材使用效率分析", "人力成本優化建議", "ROI即時追蹤"]
+          "items": [
+            "單次透析成本核算",
+            "耗材使用效率分析",
+            "人力成本優化建議",
+            "ROI即時追蹤"
+          ]
         }
       ],
       "suppliers": {
@@ -1167,14 +1404,38 @@
         "title": "供應鏈合作夥伴",
         "subtitle": "與國內外知名醫療器材廠商建立長期策略合作",
         "list": [
-          { "name": "貝恩醫療", "nameEn": "BAIN MEDICAL" },
-          { "name": "日本東麗", "nameEn": "TORAY" },
-          { "name": "費森尤斯", "nameEn": "FRESENIUS" },
-          { "name": "尼普洛", "nameEn": "NIPRO" },
-          { "name": "波士頓科學", "nameEn": "BOSTON SCIENTIFIC" },
-          { "name": "三鑫醫療", "nameEn": "SANXIN" },
-          { "name": "寶萊特", "nameEn": "BIOLIGHT" },
-          { "name": "天益醫療", "nameEn": "TIANYI" }
+          {
+            "name": "貝恩醫療",
+            "nameEn": "BAIN MEDICAL"
+          },
+          {
+            "name": "日本東麗",
+            "nameEn": "TORAY"
+          },
+          {
+            "name": "費森尤斯",
+            "nameEn": "FRESENIUS"
+          },
+          {
+            "name": "尼普洛",
+            "nameEn": "NIPRO"
+          },
+          {
+            "name": "波士頓科學",
+            "nameEn": "BOSTON SCIENTIFIC"
+          },
+          {
+            "name": "三鑫醫療",
+            "nameEn": "SANXIN"
+          },
+          {
+            "name": "寶萊特",
+            "nameEn": "BIOLIGHT"
+          },
+          {
+            "name": "天益醫療",
+            "nameEn": "TIANYI"
+          }
         ]
       }
     },
@@ -1258,15 +1519,56 @@
     "tag": "特色服務",
     "title": "科技賦能服務，服務建立價值",
     "subtitle": "超越治療本身，為腎友提供血管通路、患者關懷、專業培訓等全方位服務支持，並持續拓展更多健康管理服務，探索更多科技賦能服務的應用。",
+    "newBadge": "新功能",
     "serviceCards": [
-      { "id": "operation-service", "title": "共建運營服務", "description": "與醫院合作共建透析中心，提供設備、技術和運營專業支持", "icon": "Building2" },
-      { "id": "vascular-access", "title": "血管通路服務", "description": "AI輔助血管通路篩查，5G遠距會診，確保透析治療有效進行", "icon": "Activity" },
-      { "id": "patient-care", "title": "腎友關懷服務", "description": "透析旅遊、腎友聯誼會等活動，讓生活不因透析而停止", "icon": "Heart" },
-      { "id": "training", "title": "專業培訓體系", "description": "線上線下結合，打造專業透析醫護團隊", "icon": "GraduationCap" },
-      { "id": "rehabilitation", "title": "透析康復服務", "description": "AI體態分析，科學運動康復，提升生活品質", "icon": "Dumbbell" },
-      { "id": "nutrition", "title": "透析營養管理", "description": "專業營養師指導，個人化膳食方案，科學飲食助力康復", "icon": "Utensils" },
-      { "id": "foot-care", "title": "足部護理服務", "description": "碳酸泉足浴，專業足部篩查，預防糖尿病足併發症", "icon": "Footprints" },
-      { "id": "skin-care", "title": "皮膚管理服務", "description": "專業產品緩解皮膚瘙癢，改善透析相關皮膚問題", "icon": "Smile" }
+      {
+        "id": "operation-service",
+        "title": "共建運營服務",
+        "description": "與醫院合作共建透析中心，提供設備、技術和運營專業支持",
+        "icon": "Building2"
+      },
+      {
+        "id": "vascular-access",
+        "title": "血管通路服務",
+        "description": "AI輔助血管通路篩查，5G遠距會診，確保透析治療有效進行",
+        "icon": "Activity"
+      },
+      {
+        "id": "patient-care",
+        "title": "腎友關懷服務",
+        "description": "透析旅遊、腎友聯誼會等活動，讓生活不因透析而停止",
+        "icon": "Heart"
+      },
+      {
+        "id": "training",
+        "title": "專業培訓體系",
+        "description": "線上線下結合，打造專業透析醫護團隊",
+        "icon": "GraduationCap"
+      },
+      {
+        "id": "rehabilitation",
+        "title": "透析康復服務",
+        "description": "AI體態分析，科學運動康復，提升生活品質",
+        "icon": "Dumbbell"
+      },
+      {
+        "id": "nutrition",
+        "title": "透析營養管理",
+        "description": "專業營養師指導，個人化膳食方案，科學飲食助力康復",
+        "icon": "Utensils"
+      },
+      {
+        "id": "foot-care",
+        "title": "足部護理服務",
+        "description": "碳酸泉足浴，專業足部篩查，預防糖尿病足併發症",
+        "icon": "Footprints"
+      },
+      {
+        "id": "skin-care",
+        "title": "皮膚管理服務",
+        "description": "專業產品緩解皮膚瘙癢，改善透析相關皮膚問題",
+        "icon": "Smile"
+      }
     ],
     "operationService": {
       "tag": "智慧透析中心",
@@ -1298,11 +1600,11 @@
         ]
       },
       "benefits": [
-          "提升臨床品質和患者安全",
-          "提高營運效率和降低成本",
-          "數據驅動決策和持續改進",
-          "擴大服務能力和服務規模"
-        ],
+        "提升臨床品質和患者安全",
+        "提高營運效率和降低成本",
+        "數據驅動決策和持續改進",
+        "擴大服務能力和服務規模"
+      ],
       "partners": {
         "title": "合作中心 100+ 家",
         "list": [
@@ -1336,12 +1638,21 @@
         "tag": "AI賦能",
         "title": "AI輔助血管通路篩查",
         "description": "超音波設備透過5G即時傳輸影像至平台，AI演算法自動分析血管條件、識別狹窄風險，生成標準化評估報告，輔助醫師快速決策。",
-        "features": ["5G即時超音波影像傳輸", "AI自動血管條件分析", "狹窄風險智慧識別", "標準化評估報告生成"]
+        "features": [
+          "5G即時超音波影像傳輸",
+          "AI自動血管條件分析",
+          "狹窄風險智慧識別",
+          "標準化評估報告生成"
+        ]
       },
       "servicesSummary": {
         "title": "全方位血管通路服務",
         "description": "提供從AI輔助術前評估、自體/人工動靜脈瘻管手術、中心靜脈導管置入，到血栓及瘤樣擴張併發症處理、微創介入手術等全流程服務，確保每位患者獲得最適合的血管通路方案。",
-        "highlights": ["AI輔助評估與方案制定", "多種血管通路建立方案", "併發症處理與微創介入"],
+        "highlights": [
+          "AI輔助評估與方案制定",
+          "多種血管通路建立方案",
+          "併發症處理與微創介入"
+        ],
         "learnMore": "了解更多血管通路服務"
       }
     },
@@ -1352,13 +1663,22 @@
       "activitiesSummary": {
         "title": "豐富多彩的腎友活動",
         "description": "我們定期舉辦腎友聯誼會、線上專家直播、節日慶祝活動等，加強醫護人員、腎友與家屬之間的互動交流，構建溫暖的透析大家庭，傳遞溫暖與希望。",
-        "highlights": ["腎友聯誼會與線上互動", "節日活動與人文關懷", "開幕儀式見證新起點"]
+        "highlights": [
+          "腎友聯誼會與線上互動",
+          "節日活動與人文關懷",
+          "開幕儀式見證新起點"
+        ]
       },
       "smartFeature": {
         "tag": "智慧透析旅遊",
         "title": "透析旅遊",
         "description": "讓腎友實現「邊走邊透」是我們的一大服務特色。透過智慧透析平台，患者的透析處方、化驗數據、用藥記錄等關鍵資訊可標準化傳輸至目的地中心，智慧供應鏈同步調配相同品牌耗材。",
-        "benefits": ["患者數據標準化跨中心傳輸", "智慧供應鏈同步調配耗材", "全國透析中心網路支援", "讓生活不因透析而停止"]
+        "benefits": [
+          "患者數據標準化跨中心傳輸",
+          "智慧供應鏈同步調配耗材",
+          "全國透析中心網路支援",
+          "讓生活不因透析而停止"
+        ]
       }
     },
     "training": {
@@ -1396,20 +1716,50 @@
         ]
       },
       "services": [
-        { "title": "體態評估與分析", "description": "AI輔助分析患者站姿、坐姿等體態問題，識別肌肉失衡與姿勢異常" },
-        { "title": "步態運動檢測", "description": "透過步行分析評估患者下肢功能、平衡能力及跌倒風險" },
-        { "title": "個人化康復方案", "description": "基於評估結果，制定適合患者身體狀況的運動康復計畫" },
-        { "title": "康復運動指導", "description": "專業康復師現場指導，確保運動安全有效" },
-        { "title": "康復設備訓練", "description": "配備專業康復運動設備，提供系統化的體能訓練" },
-        { "title": "效果追蹤與調整", "description": "定期複評，根據康復進度動態調整訓練方案" }
+        {
+          "title": "體態評估與分析",
+          "description": "AI輔助分析患者站姿、坐姿等體態問題，識別肌肉失衡與姿勢異常"
+        },
+        {
+          "title": "步態運動檢測",
+          "description": "透過步行分析評估患者下肢功能、平衡能力及跌倒風險"
+        },
+        {
+          "title": "個人化康復方案",
+          "description": "基於評估結果，制定適合患者身體狀況的運動康復計畫"
+        },
+        {
+          "title": "康復運動指導",
+          "description": "專業康復師現場指導，確保運動安全有效"
+        },
+        {
+          "title": "康復設備訓練",
+          "description": "配備專業康復運動設備，提供系統化的體能訓練"
+        },
+        {
+          "title": "效果追蹤與調整",
+          "description": "定期複評，根據康復進度動態調整訓練方案"
+        }
       ],
       "benefits": {
         "title": "康復訓練的益處",
         "items": [
-          { "title": "改善肌肉力量", "description": "對抗透析相關的肌肉流失，維持和增強肌肉功能" },
-          { "title": "提升心肺功能", "description": "適度有氧運動改善心血管健康，提高運動耐力" },
-          { "title": "增強平衡能力", "description": "降低跌倒風險，提高日常活動的安全性" },
-          { "title": "改善生活品質", "description": "提升精神狀態和生活獨立性，增強自信心" }
+          {
+            "title": "改善肌肉力量",
+            "description": "對抗透析相關的肌肉流失，維持和增強肌肉功能"
+          },
+          {
+            "title": "提升心肺功能",
+            "description": "適度有氧運動改善心血管健康，提高運動耐力"
+          },
+          {
+            "title": "增強平衡能力",
+            "description": "降低跌倒風險，提高日常活動的安全性"
+          },
+          {
+            "title": "改善生活品質",
+            "description": "提升精神狀態和生活獨立性，增強自信心"
+          }
         ]
       }
     },
@@ -1431,24 +1781,51 @@
         ]
       },
       "services": [
-        { "title": "專業指導，現場互動", "description": "邀請專業營養師開展宣教活動，為腎友提供專業、精準的營養知識。營養師針對透析腎友常見的營養誤區，如蛋白質攝入不當、水分控制不佳、鉀磷攝入過量等問題進行詳細講解。" },
-        { "title": "床旁宣教，貼心服務", "description": "在日常透析生活中，安排醫護人員給腎友們做床旁宣教，既能陪伴腎友們度過上機時間，也能宣教飲食知識，加深大家對營養飲食的了解與記憶。" },
-        { "title": "一對一專業解答", "description": "腎友們可以與營養師進行面對面的交流，提出自己在飲食中遇到的困惑和問題，得到一對一的專業解答和建議，提高對飲食治療的依從性。" }
+        {
+          "title": "專業指導，現場互動",
+          "description": "邀請專業營養師開展宣教活動，為腎友提供專業、精準的營養知識。營養師針對透析腎友常見的營養誤區，如蛋白質攝入不當、水分控制不佳、鉀磷攝入過量等問題進行詳細講解。"
+        },
+        {
+          "title": "床旁宣教，貼心服務",
+          "description": "在日常透析生活中，安排醫護人員給腎友們做床旁宣教，既能陪伴腎友們度過上機時間，也能宣教飲食知識，加深大家對營養飲食的了解與記憶。"
+        },
+        {
+          "title": "一對一專業解答",
+          "description": "腎友們可以與營養師進行面對面的交流，提出自己在飲食中遇到的困惑和問題，得到一對一的專業解答和建議，提高對飲食治療的依從性。"
+        }
       ],
       "importance": {
         "title": "膳食管理的必要性",
         "items": [
-          { "title": "維持營養平衡", "description": "透析會導致腎友體內營養物質流失，合理膳食管理能補充蛋白質、維生素等營養成分，維持身體氮平衡，提高免疫力。" },
-          { "title": "控制代謝廢物", "description": "透過控制飲食中鉀、磷等元素攝入，可減少代謝廢物產生，減輕腎臟負擔，避免高鉀血症、高磷血症等併發症。" },
-          { "title": "改善心血管功能", "description": "合理膳食有助於控制血脂、血壓，降低心血管疾病發生風險。" }
+          {
+            "title": "維持營養平衡",
+            "description": "透析會導致腎友體內營養物質流失，合理膳食管理能補充蛋白質、維生素等營養成分，維持身體氮平衡，提高免疫力。"
+          },
+          {
+            "title": "控制代謝廢物",
+            "description": "透過控制飲食中鉀、磷等元素攝入，可減少代謝廢物產生，減輕腎臟負擔，避免高鉀血症、高磷血症等併發症。"
+          },
+          {
+            "title": "改善心血管功能",
+            "description": "合理膳食有助於控制血脂、血壓，降低心血管疾病發生風險。"
+          }
         ]
       },
       "tips": {
         "title": "營養補充注意事項",
         "items": [
-          { "title": "個體化原則", "description": "依據腎友年齡、體重、透析方式、殘餘腎功能及併發症等個體情況制定個人化營養方案" },
-          { "title": "飲食均衡", "description": "食物應多樣化，合理搭配各類營養物質，避免單一食物過量或不足" },
-          { "title": "監測與調整", "description": "定期監測血常規、生化指標、營養指標等，根據結果及時調整營養補充方案" }
+          {
+            "title": "個體化原則",
+            "description": "依據腎友年齡、體重、透析方式、殘餘腎功能及併發症等個體情況制定個人化營養方案"
+          },
+          {
+            "title": "飲食均衡",
+            "description": "食物應多樣化，合理搭配各類營養物質，避免單一食物過量或不足"
+          },
+          {
+            "title": "監測與調整",
+            "description": "定期監測血常規、生化指標、營養指標等，根據結果及時調整營養補充方案"
+          }
         ]
       }
     },
@@ -1458,12 +1835,28 @@
       "subtitle": "建立定期的足部篩查流程，結合碳酸泉足浴療法，為腎友提供專業的足部健康管理",
       "intro": "糖尿病足是透析患者常見的併發症之一。我們建立完善的足部篩查流程，檢查下肢動脈搏動、皮膚顏色、裂紋、指甲狀況等客觀指標，結合足踝動脈指數檢查進行風險分級評估。",
       "services": [
-        { "title": "足部健康篩查", "description": "定期檢查下肢動脈搏動、皮膚狀況、指甲健康等，建立完整的足部健康檔案" },
-        { "title": "風險分級評估", "description": "結合足踝動脈指數（ABI）檢查，系統自動進行風險等級分類" },
-        { "title": "碳酸泉足浴", "description": "專業碳酸泉足浴療法，促進下肢血液循環，改善足部狀況" },
-        { "title": "高危患者監控", "description": "對高風險患者實施重點監控，患處拍照存檔與對比分析" }
+        {
+          "title": "足部健康篩查",
+          "description": "定期檢查下肢動脈搏動、皮膚狀況、指甲健康等，建立完整的足部健康檔案"
+        },
+        {
+          "title": "風險分級評估",
+          "description": "結合足踝動脈指數（ABI）檢查，系統自動進行風險等級分類"
+        },
+        {
+          "title": "碳酸泉足浴",
+          "description": "專業碳酸泉足浴療法，促進下肢血液循環，改善足部狀況"
+        },
+        {
+          "title": "高危患者監控",
+          "description": "對高風險患者實施重點監控，患處拍照存檔與對比分析"
+        }
       ],
-      "highlights": ["定期篩查與風險評估", "碳酸泉專業護理", "AI輔助影像對比分析"]
+      "highlights": [
+        "定期篩查與風險評估",
+        "碳酸泉專業護理",
+        "AI輔助影像對比分析"
+      ]
     },
     "skinCare": {
       "tag": "皮膚管理",
@@ -1472,16 +1865,98 @@
       "brand": "Ecoand",
       "intro": "我們與「Ecoand」專業皮膚護理品牌合作，為透析患者提供針對性的皮膚護理產品和方案，幫助解決皮膚瘙癢、保濕困難等常見問題。",
       "services": [
-        { "title": "皮膚瘙癢管理", "description": "針對透析相關皮膚瘙癢，提供專業止癢產品和護理指導" },
-        { "title": "保濕護理方案", "description": "專業保濕產品，改善皮膚乾燥問題，恢復皮膚屏障功能" },
-        { "title": "皮膚健康評估", "description": "定期評估皮膚狀況，制定個人化護理方案" }
+        {
+          "title": "皮膚瘙癢管理",
+          "description": "針對透析相關皮膚瘙癢，提供專業止癢產品和護理指導"
+        },
+        {
+          "title": "保濕護理方案",
+          "description": "專業保濕產品，改善皮膚乾燥問題，恢復皮膚屏障功能"
+        },
+        {
+          "title": "皮膚健康評估",
+          "description": "定期評估皮膚狀況，制定個人化護理方案"
+        }
       ],
-      "highlights": ["專業止癢產品", "深層保濕護理", "個人化護理方案"]
+      "highlights": [
+        "專業止癢產品",
+        "深層保濕護理",
+        "個人化護理方案"
+      ]
     },
     "cta": {
       "title": "了解更多服務詳情",
       "description": "我們的專業團隊隨時為您提供諮詢與服務支援。",
       "button": "聯繫我們"
+    },
+    "patientTravel": {
+      "tag": "患者服務",
+      "title": "邊走邊透",
+      "subtitle": "在全國透析網絡中，感受中國文化之美",
+      "description": "通過我們覆蓋全國的透析中心網絡，為您提供安心的「邊走邊透」服務。無論您身在何處，都能獲得高品質、標準化的透析治療,讓透析不再成為旅行的障礙。",
+      "hero": {
+        "title": "讓生活不因透析而停止",
+        "subtitle": "探索中國，享受透析",
+        "features": [
+          "150+ 覆蓋全國的透析中心",
+          "統一標準的透析品質",
+          "周邊旅遊景點推薦",
+          "便捷的中心查詢與預約"
+        ]
+      },
+      "map": {
+        "title": "全國透析中心分布",
+        "subtitle": "點擊地圖探索透析中心，規劃您的旅行路線",
+        "filters": {
+          "allProvinces": "全部省份",
+          "allTypes": "全部類型",
+          "directOnly": "僅直營中心",
+          "partnerOnly": "僅合作醫院",
+          "searchPlaceholder": "搜尋城市或中心名稱",
+          "filterTitle": "篩選中心",
+          "clearFilters": "清除篩選",
+          "centersCount": "個中心",
+          "provincesSelected": "個省份已選",
+          "filterButton": "篩選"
+        },
+        "legend": {
+          "direct": "直營中心",
+          "partner": "合作醫院"
+        }
+      },
+      "tourism": {
+        "tag": "特色旅遊",
+        "title": "透析與旅遊的完美結合",
+        "subtitle": "在接受高品質透析治療的同時，探索當地的文化與美景",
+        "viewDetails": "查看詳情",
+        "nearbyAttractions": "周邊景點"
+      },
+      "howItWorks": {
+        "title": "如何使用邊走邊透服務",
+        "steps": [
+          {
+            "title": "選擇目的地",
+            "description": "在地圖上瀏覽全國透析中心，選擇您想去的城市"
+          },
+          {
+            "title": "查看中心詳情",
+            "description": "了解中心的設備、服務和周邊旅遊景點"
+          },
+          {
+            "title": "聯絡預約",
+            "description": "通過電話或線上方式提前預約透析時間"
+          },
+          {
+            "title": "安心旅行",
+            "description": "在旅途中享受高品質、標準化的透析服務"
+          }
+        ]
+      },
+      "cta": {
+        "title": "開始規劃您的旅行",
+        "description": "瀏覽地圖，探索全國透析中心，讓透析不再成為旅行的障礙。",
+        "button": "瀏覽地圖"
+      }
     }
   },
   "company": {
@@ -1511,10 +1986,22 @@
       "title": "商業模式",
       "description": "整體解決方案型——我們不是在賣一個軟體，而是在重構透析中心的運行方式。",
       "items": [
-        { "title": "整體建設方案", "description": "提供智慧透析中心整體建設方案，從規劃到落地全流程支援。" },
-        { "title": "設備與耗材", "description": "提供透析所需的設備、耗材，確保設備互聯互通。" },
-        { "title": "軟體與硬體", "description": "自主研發的透析管理系統、AI大模型和IoT基礎設施。" },
-        { "title": "智慧供應鏈", "description": "結合智慧供應鏈體系，實現更好的治療效果、更低的醫療風險、更高的營運效率。" }
+        {
+          "title": "整體建設方案",
+          "description": "提供智慧透析中心整體建設方案，從規劃到落地全流程支援。"
+        },
+        {
+          "title": "設備與耗材",
+          "description": "提供透析所需的設備、耗材，確保設備互聯互通。"
+        },
+        {
+          "title": "軟體與硬體",
+          "description": "自主研發的透析管理系統、AI大模型和IoT基礎設施。"
+        },
+        {
+          "title": "智慧供應鏈",
+          "description": "結合智慧供應鏈體系，實現更好的治療效果、更低的醫療風險、更高的營運效率。"
+        }
       ]
     },
     "leadership": {
@@ -1549,7 +2036,10 @@
         "area": "面積",
         "features": "中心特色",
         "gallery": "中心環境",
-        "backToList": "返回中心列表"
+        "backToList": "返回中心列表",
+        "tourism": "周邊景點",
+        "tourismSubtitle": "治療之餘，探索周邊精彩",
+        "distanceLabel": "距中心"
       },
       "list": [
         {
@@ -1562,7 +2052,12 @@
           "area": "1300㎡",
           "established": "2018",
           "description": "福州杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機和雙級反滲淨水系統，雙重保障透析用水品質，提供超高純度透析用水，給予病患更加安心的醫療照護。",
-          "features": ["個性化設計", "客製化服務", "居家式環境", "高品質中央氧氣供應系統"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境",
+            "高品質中央氧氣供應系統"
+          ],
           "gallery": [
             "/images/centers/fuzhou-xingkang/1.jpg",
             "/images/centers/fuzhou-xingkang/2.jpg",
@@ -1570,6 +2065,33 @@
             "/images/centers/fuzhou-xingkang/4.jpg",
             "/images/centers/fuzhou-xingkang/5.jpg",
             "/images/centers/fuzhou-xingkang/6.jpg"
+          ],
+          "tourismIntro": "福州，福建省省會，有著2200多年建城史，是一座山水相依、古韻悠長的歷史文化名城。這裡三山鼎峙、閩江穿城，擁有三坊七巷、鼓山湧泉等眾多名勝古蹟，溫泉資源豐富，素有“溫泉之城”美譽。福州也是海上絲綢之路的重要起點城市，閩菜文化源遠流長。",
+          "tourism": [
+            {
+              "name": "三坊七巷",
+              "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
+              "description": "中國歷史文化名街，保存完好的明清古建築群，被譽為「中國城市里坊制度活化石」。",
+              "distance": "5 km"
+            },
+            {
+              "name": "鼓山",
+              "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
+              "description": "福州市東郊名山，山上有千年古剎湧泉寺，摩崖石刻眾多，登頂可俯瞰福州全城與閩江。",
+              "distance": "15 km"
+            },
+            {
+              "name": "西湖公園",
+              "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
+              "description": "福州市區歷史最悠久的公園，始建於晉代，湖光山色秀美，是市民休閒的好去處。",
+              "distance": "3 km"
+            },
+            {
+              "name": "閩江夜遊",
+              "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
+              "description": "乘船遊覽閩江兩岸燈火輝煌的城市夜景，途經中洲島、解放大橋等標誌性景觀。",
+              "distance": "4 km"
+            }
           ]
         },
         {
@@ -1580,7 +2102,38 @@
           "province": "安徽",
           "address": "安徽省合肥市",
           "description": "安徽杏康血液透析中心秉承杏泰醫療的服務理念，配有先進的透析設備和專業醫護團隊，為安徽地區病患提供優質透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"]
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
+          "tourismIntro": "合肥，安徽省省會，地處長三角城市群核心區域，是一座融合千年歷史底蘊與現代科技創新的活力之城。這裡有包拯故里的廉政文化、環巢湖的湖光山色，也有蓬勃發展的新興產業。無論是短暫停留還是長期治療，合肥都能為您提供豐富的休閒與文化體驗。",
+          "tourism": [
+            {
+              "name": "合肥天鵝湖",
+              "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
+              "description": "合肥政務區標誌性城市公園，湖面開闊，綠道環繞，適合散步與休憩。",
+              "distance": "3.5 km"
+            },
+            {
+              "name": "包公園",
+              "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
+              "description": "紀念北宋名臣包拯的歷史文化園區，包含包公祠、清風閣等景點。",
+              "distance": "4.2 km"
+            },
+            {
+              "name": "三河古鎮",
+              "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
+              "description": "擁有2500年歷史的江南水鄉古鎮，古街、古橋、古民居保存完好。",
+              "distance": "35 km"
+            },
+            {
+              "name": "巢湖風景區",
+              "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
+              "description": "中國五大淡水湖之一，湖光山色秀麗，溫泉資源豐富，是休閒度假勝地。",
+              "distance": "60 km"
+            }
+          ]
         },
         {
           "slug": "lujiang-xingkang",
@@ -1591,7 +2144,11 @@
           "address": "安徽省廬江縣廬巢路108號蓮花商業文化廣場",
           "area": "1100㎡",
           "description": "廬江杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機和雙級反滲淨水系統，為廬江及周邊地區病患提供專業的透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/lujiang-xingkang/1.jpg",
             "/images/centers/lujiang-xingkang/2.jpg",
@@ -1599,6 +2156,33 @@
             "/images/centers/lujiang-xingkang/4.jpg",
             "/images/centers/lujiang-xingkang/5.jpg",
             "/images/centers/lujiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "廬江縣位於安徽省中部，地處巢湖南岸，歷史悠久、人傑地靈。這裡是三國名將周瑜故里，擁有豐富的溫泉資源和秀美的山水風光。冶父山的禪意幽深、湯池溫泉的舒適愜意，讓廬江成為修身養性的理想之地。",
+          "tourism": [
+            {
+              "name": "湯池溫泉",
+              "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
+              "description": "千年溫泉古鎮，水質優良，富含多種礦物質，是放鬆身心的天然療養勝地。",
+              "distance": "20 km"
+            },
+            {
+              "name": "冶父山",
+              "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
+              "description": "國家森林公園，相傳為春秋鑄劍大師歐冶子鑄劍之地，山勢秀麗，古剎幽深。",
+              "distance": "15 km"
+            },
+            {
+              "name": "周瑜墓",
+              "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
+              "description": "三國名將周瑜安息之地，園內古木參天，是了解三國文化的重要歷史遺跡。",
+              "distance": "5 km"
+            },
+            {
+              "name": "巢湖風景區",
+              "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
+              "description": "中國五大淡水湖之一，湖光山色秀麗，濕地生態豐富，可遊覽中廟、姥山島等景點。",
+              "distance": "30 km"
+            }
           ]
         },
         {
@@ -1609,7 +2193,38 @@
           "province": "安徽",
           "address": "安徽省合肥市",
           "description": "合肥普福康血液透析中心致力於為合肥市民提供高品質的透析醫療服務，打造舒適的就醫環境。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"]
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
+          "tourismIntro": "合肥，安徽省省會，地處長三角城市群核心區域，是一座融合千年歷史底蘊與現代科技創新的活力之城。這裡有三國故地逍遙津、巍巍大蜀山，也有蓬勃發展的科教產業。無論是短暫停留還是長期治療，合肥都能為您提供豐富的休閒與文化體驗。",
+          "tourism": [
+            {
+              "name": "逍遙津公園",
+              "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
+              "description": "三國古戰場遺址公園，張遼威震逍遙津的故事就發生在這裡，園內綠樹成蔭、古蹟眾多。",
+              "distance": "3 km"
+            },
+            {
+              "name": "安徽省博物院",
+              "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
+              "description": "國家一級博物館，館藏豐富，展示安徽從遠古到近現代的歷史文化精華。",
+              "distance": "4 km"
+            },
+            {
+              "name": "大蜀山國家森林公園",
+              "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
+              "description": "合肥市區最高峰，森林覆蓋率高，是登山健身、親近自然的城市綠肺。",
+              "distance": "12 km"
+            },
+            {
+              "name": "合肥野生動物園",
+              "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
+              "description": "大蜀山腳下的生態型動物園，園內動物種類豐富，適合家庭遊覽與親子活動。",
+              "distance": "15 km"
+            }
+          ]
         },
         {
           "slug": "zhaoqing-xingkang",
@@ -1620,7 +2235,11 @@
           "address": "肇慶市端州區建設二路28號盛世大廈",
           "area": "686㎡",
           "description": "肇慶杏康血液透析中心配有高品質中央氧氣供應系統、先進的透析機和雙級反滲淨水系統，為肇慶及周邊地區提供專業的透析照護服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/zhaoqing-xingkang/1.jpg",
             "/images/centers/zhaoqing-xingkang/2.jpg",
@@ -1628,6 +2247,33 @@
             "/images/centers/zhaoqing-xingkang/4.jpg",
             "/images/centers/zhaoqing-xingkang/5.jpg",
             "/images/centers/zhaoqing-xingkang/6.jpg"
+          ],
+          "tourismIntro": "肇慶，廣東省歷史文化名城，地處西江中游，是嶺南文化的重要發祥地之一。這裡擁有七星岩、鼎湖山兩大國家級風景名勝區，自然風光秀美，被譽為「北回歸線上的綠洲」。端硯文化、宋代古城牆等豐富的人文資源，讓肇慶兼具自然之美與文化之韻。",
+          "tourism": [
+            {
+              "name": "七星岩",
+              "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
+              "description": "七座石灰岩峰巒如北斗七星排列，湖山相映，被譽為「嶺南第一奇觀」。",
+              "distance": "3 km"
+            },
+            {
+              "name": "鼎湖山",
+              "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
+              "description": "中國第一個國家級自然保護區，被譽為「北回歸線上的綠寶石」，森林覆蓋率達98%。",
+              "distance": "18 km"
+            },
+            {
+              "name": "星湖濕地公園",
+              "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
+              "description": "國家濕地公園，丹頂鶴與多種珍稀鳥類棲息於此，湖水清澈，生態環境優美。",
+              "distance": "4 km"
+            },
+            {
+              "name": "宋城牆",
+              "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
+              "description": "始建於宋代的古城牆遺址，是廣東僅存的宋代磚城牆，見證了肇慶千年的滄桑變遷。",
+              "distance": "2 km"
+            }
           ]
         },
         {
@@ -1639,13 +2285,44 @@
           "address": "廣東省中山市石岐區孫文東路88號",
           "area": "625㎡",
           "description": "中山腎康血液透析中心配有先進的透析機和雙級反滲淨水系統，雙重保障透析用水品質，提供超高純度透析用水，給予病患更加安心的醫療照護。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/zhongshan-shenkang/1.jpg",
             "/images/centers/zhongshan-shenkang/2.jpg",
             "/images/centers/zhongshan-shenkang/3.jpg",
             "/images/centers/zhongshan-shenkang/4.jpg",
             "/images/centers/zhongshan-shenkang/5.jpg"
+          ],
+          "tourismIntro": "中山市，廣東省地級市，地處珠三角核心區域，是偉大的民主革命先驅孫中山先生的故鄉。這座城市兼具嶺南水鄉的柔美與近代革命文化的厚重，既有精緻的園林與美食，也有豐富的紅色文化資源。",
+          "tourism": [
+            {
+              "name": "孫中山故居",
+              "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
+              "description": "全國重點文物保護單位，展示孫中山先生成長與革命的歷史，是中山最重要的文化地標。",
+              "distance": "25 km"
+            },
+            {
+              "name": "中山詹園",
+              "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
+              "description": "嶺南最大的私家古典園林，融合蘇杭園林精華與嶺南建築風格，景色雅致。",
+              "distance": "10 km"
+            },
+            {
+              "name": "紫馬嶺公園",
+              "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
+              "description": "中山市最大的綜合性城市公園，園內湖泊、花園、遊樂設施齊全，是休閒散步的好去處。",
+              "distance": "5 km"
+            },
+            {
+              "name": "孫文西路步行街",
+              "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
+              "description": "融合中西建築風格的百年商業老街，騎樓建築獨具特色，是品味中山文化的好地方。",
+              "distance": "3 km"
+            }
           ]
         },
         {
@@ -1656,7 +2333,11 @@
           "province": "黑龍江",
           "address": "哈爾濱市道外區紅旗大街621號",
           "description": "黑龍江杏康血液透析中心設有腎內科、醫學檢驗科、藥房、超聲、心電等重點科室，為東北地區病患提供專業的透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/heilongjiang-xingkang/1.jpg",
             "/images/centers/heilongjiang-xingkang/2.jpg",
@@ -1664,6 +2345,33 @@
             "/images/centers/heilongjiang-xingkang/4.jpg",
             "/images/centers/heilongjiang-xingkang/5.jpg",
             "/images/centers/heilongjiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "哈爾濱，黑龍江省省會，素有「東方小巴黎」「冰城」之稱。這座城市融合了中俄文化精華，擁有獨特的歐式建築群和世界聞名的冰雪文化。中央大街的百年石板路、聖索菲亞教堂的拜占庭穹頂，以及冬日裡璀璨的冰雪大世界，讓哈爾濱成為一座別具魅力的北國名城。",
+          "tourism": [
+            {
+              "name": "中央大街",
+              "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
+              "description": "亞洲最長的步行街之一，匯集歐洲各時期建築風格，被譽為「建築藝術博物館」。",
+              "distance": "5 km"
+            },
+            {
+              "name": "聖索菲亞教堂",
+              "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
+              "description": "遠東地區最大的東正教堂之一，拜占庭式建築風格，是哈爾濱的標誌性建築。",
+              "distance": "5 km"
+            },
+            {
+              "name": "太陽島",
+              "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
+              "description": "松花江上的生態風景區，夏季綠樹花海，冬季雪雕藝術，是國家5A級旅遊景區。",
+              "distance": "10 km"
+            },
+            {
+              "name": "哈爾濱冰雪大世界",
+              "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
+              "description": "世界最大的冰雪主題樂園，每年冬季開放，冰雕雪塑規模宏大、流光溢彩。",
+              "distance": "25 km"
+            }
           ]
         },
         {
@@ -1675,13 +2383,44 @@
           "address": "哈爾濱市道外區紅旗大街621號",
           "area": "2250㎡",
           "description": "哈爾濱譽華血液透析中心配有先進的透析機和雙級反滲淨水系統，為哈爾濱及周邊地區提供持續優質化的專業透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/harbin-yuhua/1.jpg",
             "/images/centers/harbin-yuhua/2.jpg",
             "/images/centers/harbin-yuhua/3.jpg",
             "/images/centers/harbin-yuhua/4.jpg",
             "/images/centers/harbin-yuhua/5.jpg"
+          ],
+          "tourismIntro": "哈爾濱，黑龍江省省會，是中國緯度最高的省會城市，四季分明，冬日銀裝素裹。這座城市以獨特的冰雪文化、歐陸風情和東北美食聞名遐邇。松花江畔的悠閒時光、老道外的百年建築，都是哈爾濱獨有的城市記憶。",
+          "tourism": [
+            {
+              "name": "松花江畔",
+              "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
+              "description": "哈爾濱的母親河，江畔綠道適合散步騎行，冬季江面可體驗冰上活動。",
+              "distance": "4 km"
+            },
+            {
+              "name": "東北虎林園",
+              "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
+              "description": "世界最大的東北虎繁育基地，可近距離觀賞百餘隻東北虎的雄姿。",
+              "distance": "15 km"
+            },
+            {
+              "name": "果戈里大街",
+              "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
+              "description": "以俄國作家果戈里命名的文化街區，歐式建築林立，咖啡館與書店遍布。",
+              "distance": "3 km"
+            },
+            {
+              "name": "龍塔",
+              "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
+              "description": "亞洲第一高鋼塔，高336米，設有觀光平台和旋轉餐廳，可360度俯瞰哈爾濱全景。",
+              "distance": "8 km"
+            }
           ]
         },
         {
@@ -1692,7 +2431,38 @@
           "province": "江蘇",
           "address": "江蘇省鎮江市",
           "description": "鎮江杏康血液透析中心為鎮江及周邊地區病患提供專業的透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"]
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
+          "tourismIntro": "鎮江，江蘇省地級市，位於長江與京杭大運河交匯處，自古就是兵家必爭的戰略要地。這座有著3000多年歷史的文化名城，以「天下第一江山」聞名，金山寺的白蛇傳說、西津渡的千年古渡、北固山的三國遺跡，構成了一幅壯麗的歷史畫卷。",
+          "tourism": [
+            {
+              "name": "金山寺",
+              "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
+              "description": "始建於東晉的千年古剎，白蛇傳「水漫金山」故事的發生地，依山而建，氣勢恢宏。",
+              "distance": "5 km"
+            },
+            {
+              "name": "西津渡",
+              "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
+              "description": "千年古渡口歷史街區，保存了唐宋以來的古建築群，被譽為「中國古渡博物館」。",
+              "distance": "4 km"
+            },
+            {
+              "name": "北固山",
+              "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
+              "description": "三國時期孫劉聯姻之地，「天下第一江山」石刻名聞天下，登頂可覽長江壯景。",
+              "distance": "6 km"
+            },
+            {
+              "name": "焦山",
+              "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
+              "description": "長江中唯一四面環水的島嶼山林，有「江中浮玉」之稱，山上碑林珍貴、古木參天。",
+              "distance": "10 km"
+            }
+          ]
         },
         {
           "slug": "linshu-xingkang",
@@ -1703,7 +2473,11 @@
           "address": "山東省臨沂市臨沭縣城常林大街西側",
           "area": "2000㎡",
           "description": "臨沭杏康血液透析中心配有先進的透析機和雙級反滲淨水系統，為臨沭及周邊地區病患提供專業的透析服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/linshu-xingkang/1.jpg",
             "/images/centers/linshu-xingkang/2.jpg",
@@ -1711,6 +2485,33 @@
             "/images/centers/linshu-xingkang/4.jpg",
             "/images/centers/linshu-xingkang/5.jpg",
             "/images/centers/linshu-xingkang/6.jpg"
+          ],
+          "tourismIntro": "臨沭縣位於山東省東南部，地處沂蒙山區南麓，是一座歷史悠久的魯南小城。這裡山水秀麗、民風淳樸，蒼馬山的自然風光、柳編工藝的非遺傳承，以及周邊沂蒙山區壯美的紅色旅遊資源，共同構成了臨沭獨特的旅遊魅力。",
+          "tourism": [
+            {
+              "name": "蒼馬山風景區",
+              "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
+              "description": "國家3A級旅遊景區，山巒疊翠，溪流潺潺，有玉聖園、抗日紀念館等多處景點。",
+              "distance": "10 km"
+            },
+            {
+              "name": "柳編文化園",
+              "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
+              "description": "展示臨沭國家級非遺柳編工藝的文化園區，可體驗傳統柳編手工製作。",
+              "distance": "5 km"
+            },
+            {
+              "name": "蒙山風景區",
+              "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
+              "description": "沂蒙山世界地質公園核心景區，主峰龜蒙頂海拔1156米，山高林密、空氣清新。",
+              "distance": "80 km"
+            },
+            {
+              "name": "地下大峽谷",
+              "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
+              "description": "中國特大型溶洞之一，全長6100米，洞內有暗河漂流，地質景觀奇特壯麗。",
+              "distance": "60 km"
+            }
           ]
         },
         {
@@ -1722,7 +2523,11 @@
           "address": "瀋陽市瀋河區北順城路61號",
           "area": "1600㎡",
           "description": "遼寧杏康血液透析中心為遼寧地區病患提供專業的透析照護服務。",
-          "features": ["個性化設計", "客製化服務", "居家式環境"],
+          "features": [
+            "個性化設計",
+            "客製化服務",
+            "居家式環境"
+          ],
           "gallery": [
             "/images/centers/liaoning-xingkang/1.jpg",
             "/images/centers/liaoning-xingkang/2.jpg",
@@ -1730,6 +2535,33 @@
             "/images/centers/liaoning-xingkang/4.jpg",
             "/images/centers/liaoning-xingkang/5.jpg",
             "/images/centers/liaoning-xingkang/6.jpg"
+          ],
+          "tourismIntro": "瀋陽，遼寧省省會，是中國東北地區的政治、經濟與文化中心。作為清朝的發祥地，瀋陽擁有世界文化遺產瀋陽故宮和清昭陵，積澱了豐厚的滿族文化底蘊。這座城市既有古都的莊嚴大氣，也有現代都市的蓬勃活力。",
+          "tourism": [
+            {
+              "name": "瀋陽故宮",
+              "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
+              "description": "世界文化遺產，清太祖努爾哈赤和清太宗皇太極的皇宮，中國僅存的兩大宮殿建築群之一。",
+              "distance": "5 km"
+            },
+            {
+              "name": "北陵公園（清昭陵）",
+              "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
+              "description": "清太宗皇太極的陵寢，瀋陽最大的公園，古松參天，陵寢建築莊嚴肅穆。",
+              "distance": "8 km"
+            },
+            {
+              "name": "張氏帥府",
+              "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
+              "description": "東北軍閥張作霖和張學良父子的官邸和私宅，展示了近代東北的風雲歷史。",
+              "distance": "5 km"
+            },
+            {
+              "name": "瀋陽世博園",
+              "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
+              "description": "2006年世界園藝博覽會舉辦地，佔地246公頃，四季花卉繽紛，是城市生態休閒勝地。",
+              "distance": "20 km"
+            }
           ]
         }
       ]
@@ -1740,15 +2572,44 @@
       "subtitle": "攜手優質醫療機構，共同提升透析服務品質",
       "description": "我們與全國100+家醫院建立了深度合作關係，為更多病患提供專業的透析服務支援。",
       "list": [
-        { "name": "湖南旺旺醫院", "province": "湖南" },
-        { "name": "浙江新安國際醫院", "province": "浙江" },
-        { "name": "廈門長庚醫院", "province": "福建" },
-        { "name": "廣西玉林市桂南醫院", "province": "廣西", "note": "中珠醫療" },
-        { "name": "新鄭華信民生醫院", "province": "河南" },
-        { "name": "海寧康華醫院", "province": "浙江", "note": "創新醫療" },
-        { "name": "連雲港聖安醫院", "province": "江蘇" },
-        { "name": "新津志輝醫院", "province": "四川" },
-        { "name": "東營新里程老年醫院", "province": "山東" }
+        {
+          "name": "湖南旺旺醫院",
+          "province": "湖南"
+        },
+        {
+          "name": "浙江新安國際醫院",
+          "province": "浙江"
+        },
+        {
+          "name": "廈門長庚醫院",
+          "province": "福建"
+        },
+        {
+          "name": "廣西玉林市桂南醫院",
+          "province": "廣西",
+          "note": "中珠醫療"
+        },
+        {
+          "name": "新鄭華信民生醫院",
+          "province": "河南"
+        },
+        {
+          "name": "海寧康華醫院",
+          "province": "浙江",
+          "note": "創新醫療"
+        },
+        {
+          "name": "連雲港聖安醫院",
+          "province": "江蘇"
+        },
+        {
+          "name": "新津志輝醫院",
+          "province": "四川"
+        },
+        {
+          "name": "東營新里程老年醫院",
+          "province": "山東"
+        }
       ],
       "more": "及更多合作醫院..."
     },
@@ -1757,9 +2618,18 @@
       "title": "建立聯繫",
       "subtitle": "對於臨床合作、部署討論或策略合作夥伴關係，我們歡迎與您聯繫。",
       "reasons": {
-        "clinical": { "title": "臨床合作", "description": "有興趣在您的透析中心或網路部署我們的平台。" },
-        "investment": { "title": "投資諮詢", "description": "與醫療變革保持一致的策略投資者。" },
-        "collaboration": { "title": "策略合作", "description": "設備製造商、醫療系統或研究機構。" }
+        "clinical": {
+          "title": "臨床合作",
+          "description": "有興趣在您的透析中心或網路部署我們的平台。"
+        },
+        "investment": {
+          "title": "投資諮詢",
+          "description": "與醫療變革保持一致的策略投資者。"
+        },
+        "collaboration": {
+          "title": "策略合作",
+          "description": "設備製造商、醫療系統或研究機構。"
+        }
       },
       "form": {
         "title": "發送訊息",
@@ -1827,9 +2697,18 @@
     "title": "建立聯繫",
     "subtitle": "對於臨床合作、部署討論或策略合作夥伴關係，我們歡迎與您聯繫。",
     "reasons": {
-      "clinical": { "title": "臨床合作", "description": "有興趣在您的透析中心或網路部署我們的平台。" },
-      "investment": { "title": "投資諮詢", "description": "與醫療變革保持一致的策略投資者。" },
-      "collaboration": { "title": "策略合作", "description": "設備製造商、醫療系統或研究機構。" }
+      "clinical": {
+        "title": "臨床合作",
+        "description": "有興趣在您的透析中心或網路部署我們的平台。"
+      },
+      "investment": {
+        "title": "投資諮詢",
+        "description": "與醫療變革保持一致的策略投資者。"
+      },
+      "collaboration": {
+        "title": "策略合作",
+        "description": "設備製造商、醫療系統或研究機構。"
+      }
     },
     "form": {
       "title": "發送訊息",

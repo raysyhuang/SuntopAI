@@ -8,6 +8,13 @@ import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
 
+interface TourismSpot {
+  name: string
+  image: string
+  description: string
+  distance: string
+}
+
 interface Center {
   slug: string
   name: string
@@ -21,6 +28,8 @@ interface Center {
   description: string
   features: string[]
   gallery?: string[]
+  tourism?: TourismSpot[]
+  tourismIntro?: string
 }
 
 interface CenterClientProps {
@@ -378,8 +387,96 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
         </section>
       )}
 
+      {/* Tourism */}
+      {center.tourism && center.tourism.length > 0 && (
+        <section
+          className="relative py-24"
+          style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+        >
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2
+                className="font-display text-2xl font-semibold mb-3"
+                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+              >
+                {centerLabels.tourism || '周边景点'}
+              </h2>
+              <p style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}>
+                {centerLabels.tourismSubtitle || '治疗之余，探索周边精彩'}
+              </p>
+              {center.tourismIntro && (
+                <p
+                  className="mt-4 text-base leading-relaxed max-w-3xl"
+                  style={{ color: theme === 'light' ? '#424245' : '#d4d4d8' }}
+                >
+                  {center.tourismIntro}
+                </p>
+              )}
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {center.tourism.map((spot, index) => (
+                <motion.div
+                  key={spot.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="rounded-2xl overflow-hidden"
+                  style={{
+                    backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(15,23,42,0.5)',
+                    border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none',
+                    boxShadow: theme === 'light' ? '0 4px 20px rgba(0,0,0,0.08)' : 'none'
+                  }}
+                >
+                  <div
+                    className="aspect-[4/3] overflow-hidden cursor-zoom-in"
+                    onClick={() => setActiveGalleryItem({ src: spot.image, alt: spot.name })}
+                  >
+                    <img
+                      src={spot.image}
+                      alt={spot.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3
+                      className="font-semibold text-lg mb-2"
+                      style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    >
+                      {spot.name}
+                    </h3>
+                    <p
+                      className="text-sm mb-3 leading-relaxed"
+                      style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    >
+                      {spot.description}
+                    </p>
+                    <div
+                      className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-full"
+                      style={{
+                        backgroundColor: theme === 'light' ? 'rgba(0,125,115,0.1)' : 'rgba(20,184,166,0.15)',
+                        color: theme === 'light' ? '#007d73' : '#2dd4bf'
+                      }}
+                    >
+                      <MapPin className="w-3.5 h-3.5" />
+                      {centerLabels.distanceLabel || '距中心'} {spot.distance}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
-      <section 
+      <section
         className="relative py-24"
         style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
       >

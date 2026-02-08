@@ -88,20 +88,48 @@
       "tag": "临床验证",
       "title": "真实数据，真实改善",
       "items": [
-        { "value": "60%", "label": "休克前期患者下降", "detail": "22.4% → 9.0%" },
-        { "value": "70%", "label": "化验评估效率提升", "detail": "8.3分钟 → 2.5分钟" },
-        { "value": "71%", "label": "缺铁患者比例下降", "detail": "74.0% → 21.1%" },
-        { "value": "37%", "label": "肾性骨病患者下降", "detail": "48.4% → 30.7%" }
+        {
+          "value": "60%",
+          "label": "休克前期患者下降",
+          "detail": "22.4% → 9.0%"
+        },
+        {
+          "value": "70%",
+          "label": "化验评估效率提升",
+          "detail": "8.3分钟 → 2.5分钟"
+        },
+        {
+          "value": "71%",
+          "label": "缺铁患者比例下降",
+          "detail": "74.0% → 21.1%"
+        },
+        {
+          "value": "37%",
+          "label": "肾性骨病患者下降",
+          "detail": "48.4% → 30.7%"
+        }
       ],
       "cta": "查看完整成效数据",
       "footnote": "数据来源：杏泰医疗自营透析中心，2024-2025",
       "deployment": {
         "title": "已验证的部署规模",
         "items": [
-          { "value": "30+", "label": "自营透析中心" },
-          { "value": "100+", "label": "合作透析中心" },
-          { "value": "50+", "label": "智慧透析中心" },
-          { "value": "3000+", "label": "已连接透析机" }
+          {
+            "value": "30+",
+            "label": "自营透析中心"
+          },
+          {
+            "value": "100+",
+            "label": "合作透析中心"
+          },
+          {
+            "value": "50+",
+            "label": "智慧透析中心"
+          },
+          {
+            "value": "3000+",
+            "label": "已连接透析机"
+          }
         ]
       }
     },
@@ -180,17 +208,32 @@
         "inCenter": {
           "title": "单体透析中心",
           "description": "实时监测与智能预警，提升治疗安全性与标准化水平。",
-          "capabilities": ["实时数据采集", "异常趋势预警", "治疗参数优化", "质量指标追踪"]
+          "capabilities": [
+            "实时数据采集",
+            "异常趋势预警",
+            "治疗参数优化",
+            "质量指标追踪"
+          ]
         },
         "networked": {
           "title": "连锁透析中心",
           "description": "集中监管与统一质控，支撑规模化扩张与标准化运营。",
-          "capabilities": ["多中心统一视图", "跨中心质量对标", "标准流程复制", "远程监督支持"]
+          "capabilities": [
+            "多中心统一视图",
+            "跨中心质量对标",
+            "标准流程复制",
+            "远程监督支持"
+          ]
         },
         "decision": {
           "title": "临床决策支持",
           "description": "数据驱动的洞察，辅助医生做出更精准的治疗决策。",
-          "capabilities": ["患者趋势分析", "风险分层评估", "处方优化建议", "充分性监测"]
+          "capabilities": [
+            "患者趋势分析",
+            "风险分层评估",
+            "处方优化建议",
+            "充分性监测"
+          ]
         }
       },
       "learnMore": {
@@ -365,8 +408,12 @@
         "title": "中央监控系统",
         "description": "基于生命体征与透析参数的智能分析，通过颜色分级直观呈现患者风险等级，异常状态一目了然。护士工作站集中显示所有床位患者状态，快速识别高风险患者，优化护理资源分配。",
         "images": [
-          { "label": "中央监控系统" },
-          { "label": "治疗状态监控" }
+          {
+            "label": "中央监控系统"
+          },
+          {
+            "label": "治疗状态监控"
+          }
         ]
       },
       "bedsideTerminal": {
@@ -374,8 +421,12 @@
         "title": "床旁智能终端",
         "description": "赋能透析设备，让每一台透析机都拥有「数字大脑」。它不仅是硬件的延伸，更是深度融入临床全流程的智慧导航仪，引导医护人员实现更精准、更高效的操作。",
         "images": [
-          { "label": "智慧床旁终端" },
-          { "label": "四项监测" }
+          {
+            "label": "智慧床旁终端"
+          },
+          {
+            "label": "四项监测"
+          }
         ],
         "sectionTitle": "全流程覆盖",
         "features": [
@@ -977,21 +1028,36 @@
           "title": "设备物联层",
           "icon": "Wifi",
           "description": "连接透析机、血压计、体重秤等设备，实时采集治疗数据，自动传输至系统。",
-          "features": ["多厂商设备兼容", "高频数据采集", "自动传输免录入", "设备状态监控"]
+          "features": [
+            "多厂商设备兼容",
+            "高频数据采集",
+            "自动传输免录入",
+            "设备状态监控"
+          ]
         },
         {
           "id": "intelligence",
           "title": "智能分析层",
           "icon": "Brain",
           "description": "AI模型分析趋势、检测风险，在并发症发生前生成预警与处置建议。",
-          "features": ["透析中低血压预测", "超滤风险检测", "充分性评估", "个性化参数推荐"]
+          "features": [
+            "透析中低血压预测",
+            "超滤风险检测",
+            "充分性评估",
+            "个性化参数推荐"
+          ]
         },
         {
           "id": "application",
           "title": "应用与控制层",
           "icon": "Monitor",
           "description": "中央监控、智慧终端、移动端协同，实现全流程可视化管理。",
-          "features": ["中央监控大屏", "床旁智慧终端", "移动查房应用", "远程监督支持"]
+          "features": [
+            "中央监控大屏",
+            "床旁智慧终端",
+            "移动查房应用",
+            "远程监督支持"
+          ]
         }
       ]
     },
@@ -1029,12 +1095,28 @@
           "description": "拥有国内外设计师带领的科室设计团队，以为肾友创造安全舒适的医疗环境为目标。",
           "icon": "Compass",
           "steps": [
-            { "title": "市场调查", "description": "全面细致的市场调研分析" },
-            { "title": "设备规划", "description": "根据需求配置优化设备方案" },
-            { "title": "室内设计", "description": "专业新颖的人性化空间设计" },
-            { "title": "需求整合", "description": "综合资深医疗人才意见" }
+            {
+              "title": "市场调查",
+              "description": "全面细致的市场调研分析"
+            },
+            {
+              "title": "设备规划",
+              "description": "根据需求配置优化设备方案"
+            },
+            {
+              "title": "室内设计",
+              "description": "专业新颖的人性化空间设计"
+            },
+            {
+              "title": "需求整合",
+              "description": "综合资深医疗人才意见"
+            }
           ],
-          "highlights": ["布局合理，动线清晰", "符合国家质控标准", "人性化科室设计"]
+          "highlights": [
+            "布局合理，动线清晰",
+            "符合国家质控标准",
+            "人性化科室设计"
+          ]
         },
         {
           "id": "training",
@@ -1043,12 +1125,28 @@
           "description": "从传统的科室培训和医护人员交流学习，延伸到灵活多样的线上学习模式。",
           "icon": "GraduationCap",
           "steps": [
-            { "title": "专家驻场授课", "description": "专业指导，系统培训" },
-            { "title": "医护培训座谈", "description": "分享医学心得，促进交流" },
-            { "title": "科室进驻实验", "description": "提升临床实战技能" },
-            { "title": "线上学习平台", "description": "医柔课纲专业培训系统" }
+            {
+              "title": "专家驻场授课",
+              "description": "专业指导，系统培训"
+            },
+            {
+              "title": "医护培训座谈",
+              "description": "分享医学心得，促进交流"
+            },
+            {
+              "title": "科室进驻实验",
+              "description": "提升临床实战技能"
+            },
+            {
+              "title": "线上学习平台",
+              "description": "医柔课纲专业培训系统"
+            }
           ],
-          "highlights": ["完善的理论与实践培训", "多个区域培训基地", "定期专家讲座与国际交流"]
+          "highlights": [
+            "完善的理论与实践培训",
+            "多个区域培训基地",
+            "定期专家讲座与国际交流"
+          ]
         },
         {
           "id": "operations",
@@ -1057,12 +1155,28 @@
           "description": "每一个环节都将以客户需求及实际情况作考量，提供全方位管理支持。",
           "icon": "Settings",
           "steps": [
-            { "title": "科室制度建立", "description": "标准化部门工作流程" },
-            { "title": "医护人员管理", "description": "医疗人才招聘与团队建设" },
-            { "title": "作业流程建立", "description": "高效运营流程设计" },
-            { "title": "信息化系统管理", "description": "IT系统基础设施建设" }
+            {
+              "title": "科室制度建立",
+              "description": "标准化部门工作流程"
+            },
+            {
+              "title": "医护人员管理",
+              "description": "医疗人才招聘与团队建设"
+            },
+            {
+              "title": "作业流程建立",
+              "description": "高效运营流程设计"
+            },
+            {
+              "title": "信息化系统管理",
+              "description": "IT系统基础设施建设"
+            }
           ],
-          "highlights": ["财务管理顾问", "技术支持服务", "质量控制体系"]
+          "highlights": [
+            "财务管理顾问",
+            "技术支持服务",
+            "质量控制体系"
+          ]
         }
       ]
     },
@@ -1098,10 +1212,22 @@
       "title": "医疗级数据安全",
       "subtitle": "符合医疗数据安全标准，保障患者隐私",
       "features": [
-        { "title": "数据加密", "value": "AES-256端到端加密" },
-        { "title": "访问控制", "value": "基于角色的权限管理" },
-        { "title": "审计追溯", "value": "完整操作日志记录" },
-        { "title": "合规就绪", "value": "符合医疗数据法规要求" }
+        {
+          "title": "数据加密",
+          "value": "AES-256端到端加密"
+        },
+        {
+          "title": "访问控制",
+          "value": "基于角色的权限管理"
+        },
+        {
+          "title": "审计追溯",
+          "value": "完整操作日志记录"
+        },
+        {
+          "title": "合规就绪",
+          "value": "符合医疗数据法规要求"
+        }
       ]
     },
     "supplyChain": {
@@ -1159,14 +1285,38 @@
         "title": "供应链合作伙伴",
         "subtitle": "与国内外知名医疗器械厂商建立长期战略合作",
         "list": [
-          { "name": "贝恩医疗", "nameEn": "BAIN MEDICAL" },
-          { "name": "日本东丽", "nameEn": "TORAY" },
-          { "name": "费森尤斯", "nameEn": "FRESENIUS" },
-          { "name": "尼普洛", "nameEn": "NIPRO" },
-          { "name": "波士顿科学", "nameEn": "BOSTON SCIENTIFIC" },
-          { "name": "三鑫医疗", "nameEn": "SANXIN" },
-          { "name": "宝莱特", "nameEn": "BIOLIGHT" },
-          { "name": "天益医疗", "nameEn": "TIANYI" }
+          {
+            "name": "贝恩医疗",
+            "nameEn": "BAIN MEDICAL"
+          },
+          {
+            "name": "日本东丽",
+            "nameEn": "TORAY"
+          },
+          {
+            "name": "费森尤斯",
+            "nameEn": "FRESENIUS"
+          },
+          {
+            "name": "尼普洛",
+            "nameEn": "NIPRO"
+          },
+          {
+            "name": "波士顿科学",
+            "nameEn": "BOSTON SCIENTIFIC"
+          },
+          {
+            "name": "三鑫医疗",
+            "nameEn": "SANXIN"
+          },
+          {
+            "name": "宝莱特",
+            "nameEn": "BIOLIGHT"
+          },
+          {
+            "name": "天益医疗",
+            "nameEn": "TIANYI"
+          }
         ]
       }
     },
@@ -1250,6 +1400,7 @@
     "tag": "特色服务",
     "title": "科技赋能服务，服务创造价值",
     "subtitle": "超越治疗本身，为肾友提供血管通路、患者关怀、专业培训等全方位服务支持，并持续拓展更多健康管理服务，探索更多科技赋能服务的应用。",
+    "newBadge": "新功能",
     "serviceCards": [
       {
         "id": "operation-service",
@@ -1330,11 +1481,11 @@
         ]
       },
       "benefits": [
-          "提升临床质量和患者安全",
-          "提高运营效率和降低成本",
-          "数据驱动决策和持续改进",
-          "扩大服务能力和服务规模"
-        ],
+        "提升临床质量和患者安全",
+        "提高运营效率和降低成本",
+        "数据驱动决策和持续改进",
+        "扩大服务能力和服务规模"
+      ],
       "partners": {
         "title": "合作中心 100+ 家",
         "list": [
@@ -1378,7 +1529,11 @@
       "servicesSummary": {
         "title": "全方位血管通路服务",
         "description": "提供从AI辅助术前评估、自体/人工动静脉瘘管手术、中心静脉导管置入，到血栓及瘤样扩张合并症处理、微创介入手术等全流程服务，确保每位患者获得最适合的血管通路方案。",
-        "highlights": ["AI辅助术前评估与方案制定", "多种血管通路建立方案", "并发症处理与微创介入"],
+        "highlights": [
+          "AI辅助术前评估与方案制定",
+          "多种血管通路建立方案",
+          "并发症处理与微创介入"
+        ],
         "learnMore": "了解更多血管通路服务"
       }
     },
@@ -1389,7 +1544,11 @@
       "activitiesSummary": {
         "title": "丰富多彩的肾友活动",
         "description": "我们定期举办肾友联谊会、线上专家直播、节日庆祝活动等，加强医护人员、肾友与家属之间的互动交流，构建温暖的透析大家庭，传递温暖与希望。",
-        "highlights": ["肾友联谊会与线上互动", "节日活动与人文关怀", "开幕仪式见证新起点"]
+        "highlights": [
+          "肾友联谊会与线上互动",
+          "节日活动与人文关怀",
+          "开幕仪式见证新起点"
+        ]
       },
       "smartFeature": {
         "tag": "智慧透析旅游",
@@ -1438,20 +1597,50 @@
         ]
       },
       "services": [
-        { "title": "体态评估与分析", "description": "AI辅助分析患者站姿、坐姿等体态问题，识别肌肉失衡与姿势异常" },
-        { "title": "步态运动检测", "description": "通过步行分析评估患者下肢功能、平衡能力及跌倒风险" },
-        { "title": "个性化康复方案", "description": "基于评估结果，制定适合患者身体状况的运动康复计划" },
-        { "title": "康复运动指导", "description": "专业康复师现场指导，确保运动安全有效" },
-        { "title": "康复设备训练", "description": "配备专业康复运动设备，提供系统化的体能训练" },
-        { "title": "效果追踪与调整", "description": "定期复评，根据康复进度动态调整训练方案" }
+        {
+          "title": "体态评估与分析",
+          "description": "AI辅助分析患者站姿、坐姿等体态问题，识别肌肉失衡与姿势异常"
+        },
+        {
+          "title": "步态运动检测",
+          "description": "通过步行分析评估患者下肢功能、平衡能力及跌倒风险"
+        },
+        {
+          "title": "个性化康复方案",
+          "description": "基于评估结果，制定适合患者身体状况的运动康复计划"
+        },
+        {
+          "title": "康复运动指导",
+          "description": "专业康复师现场指导，确保运动安全有效"
+        },
+        {
+          "title": "康复设备训练",
+          "description": "配备专业康复运动设备，提供系统化的体能训练"
+        },
+        {
+          "title": "效果追踪与调整",
+          "description": "定期复评，根据康复进度动态调整训练方案"
+        }
       ],
       "benefits": {
         "title": "康复训练的益处",
         "items": [
-          { "title": "改善肌肉力量", "description": "对抗透析相关的肌肉流失，维持和增强肌肉功能" },
-          { "title": "提升心肺功能", "description": "适度有氧运动改善心血管健康，提高运动耐力" },
-          { "title": "增强平衡能力", "description": "降低跌倒风险，提高日常活动的安全性" },
-          { "title": "改善生活质量", "description": "提升精神状态和生活独立性，增强自信心" }
+          {
+            "title": "改善肌肉力量",
+            "description": "对抗透析相关的肌肉流失，维持和增强肌肉功能"
+          },
+          {
+            "title": "提升心肺功能",
+            "description": "适度有氧运动改善心血管健康，提高运动耐力"
+          },
+          {
+            "title": "增强平衡能力",
+            "description": "降低跌倒风险，提高日常活动的安全性"
+          },
+          {
+            "title": "改善生活质量",
+            "description": "提升精神状态和生活独立性，增强自信心"
+          }
         ]
       }
     },
@@ -1489,17 +1678,35 @@
       "importance": {
         "title": "膳食管理的必要性",
         "items": [
-          { "title": "维持营养平衡", "description": "透析会导致肾友体内营养物质流失，合理膳食管理能补充蛋白质、维生素等营养成分，维持身体氮平衡，提高免疫力。" },
-          { "title": "控制代谢废物", "description": "通过控制饮食中钾、磷等元素摄入，可减少代谢废物产生，减轻肾脏负担，避免高钾血症、高磷血症等并发症。" },
-          { "title": "改善心血管功能", "description": "合理膳食有助于控制血脂、血压，降低心血管疾病发生风险。" }
+          {
+            "title": "维持营养平衡",
+            "description": "透析会导致肾友体内营养物质流失，合理膳食管理能补充蛋白质、维生素等营养成分，维持身体氮平衡，提高免疫力。"
+          },
+          {
+            "title": "控制代谢废物",
+            "description": "通过控制饮食中钾、磷等元素摄入，可减少代谢废物产生，减轻肾脏负担，避免高钾血症、高磷血症等并发症。"
+          },
+          {
+            "title": "改善心血管功能",
+            "description": "合理膳食有助于控制血脂、血压，降低心血管疾病发生风险。"
+          }
         ]
       },
       "tips": {
         "title": "营养补充注意事项",
         "items": [
-          { "title": "个体化原则", "description": "依据肾友年龄、体重、透析方式、残余肾功能及并发症等个体情况制定个性化营养方案" },
-          { "title": "饮食均衡", "description": "食物应多样化，合理搭配各类营养物质，避免单一食物过量或不足" },
-          { "title": "监测与调整", "description": "定期监测血常规、生化指标、营养指标等，根据结果及时调整营养补充方案" }
+          {
+            "title": "个体化原则",
+            "description": "依据肾友年龄、体重、透析方式、残余肾功能及并发症等个体情况制定个性化营养方案"
+          },
+          {
+            "title": "饮食均衡",
+            "description": "食物应多样化，合理搭配各类营养物质，避免单一食物过量或不足"
+          },
+          {
+            "title": "监测与调整",
+            "description": "定期监测血常规、生化指标、营养指标等，根据结果及时调整营养补充方案"
+          }
         ]
       }
     },
@@ -1509,12 +1716,28 @@
       "subtitle": "建立定期的足部筛查流程，结合碳酸泉足浴疗法，为肾友提供专业的足部健康管理",
       "intro": "糖尿病足是透析患者常见的并发症之一。我们建立完善的足部筛查流程，检查下肢动脉搏动、皮肤颜色、裂纹、指甲状况等客观指标，结合足踝动脉指数检查进行风险分级评估。",
       "services": [
-        { "title": "足部健康筛查", "description": "定期检查下肢动脉搏动、皮肤状况、指甲健康等，建立完整的足部健康档案" },
-        { "title": "风险分级评估", "description": "结合足踝动脉指数（ABI）检查，系统自动进行风险等级分类" },
-        { "title": "碳酸泉足浴", "description": "专业碳酸泉足浴疗法，促进下肢血液循环，改善足部状况" },
-        { "title": "高危患者监控", "description": "对高风险患者实施重点监控，患处拍照存档与对比分析" }
+        {
+          "title": "足部健康筛查",
+          "description": "定期检查下肢动脉搏动、皮肤状况、指甲健康等，建立完整的足部健康档案"
+        },
+        {
+          "title": "风险分级评估",
+          "description": "结合足踝动脉指数（ABI）检查，系统自动进行风险等级分类"
+        },
+        {
+          "title": "碳酸泉足浴",
+          "description": "专业碳酸泉足浴疗法，促进下肢血液循环，改善足部状况"
+        },
+        {
+          "title": "高危患者监控",
+          "description": "对高风险患者实施重点监控，患处拍照存档与对比分析"
+        }
       ],
-      "highlights": ["定期筛查与风险评估", "碳酸泉专业护理", "AI辅助影像对比分析"]
+      "highlights": [
+        "定期筛查与风险评估",
+        "碳酸泉专业护理",
+        "AI辅助影像对比分析"
+      ]
     },
     "skinCare": {
       "tag": "皮肤管理",
@@ -1523,16 +1746,98 @@
       "brand": "Ecoand",
       "intro": "我们与「Ecoand」专业皮肤护理品牌合作，为透析患者提供针对性的皮肤护理产品和方案，帮助解决皮肤瘙痒、保湿困难等常见问题。",
       "services": [
-        { "title": "皮肤瘙痒管理", "description": "针对透析相关皮肤瘙痒，提供专业止痒产品和护理指导" },
-        { "title": "保湿护理方案", "description": "专业保湿产品，改善皮肤干燥问题，恢复皮肤屏障功能" },
-        { "title": "皮肤健康评估", "description": "定期评估皮肤状况，制定个性化护理方案" }
+        {
+          "title": "皮肤瘙痒管理",
+          "description": "针对透析相关皮肤瘙痒，提供专业止痒产品和护理指导"
+        },
+        {
+          "title": "保湿护理方案",
+          "description": "专业保湿产品，改善皮肤干燥问题，恢复皮肤屏障功能"
+        },
+        {
+          "title": "皮肤健康评估",
+          "description": "定期评估皮肤状况，制定个性化护理方案"
+        }
       ],
-      "highlights": ["专业止痒产品", "深层保湿护理", "个性化护理方案"]
+      "highlights": [
+        "专业止痒产品",
+        "深层保湿护理",
+        "个性化护理方案"
+      ]
     },
     "cta": {
       "title": "了解更多服务详情",
       "description": "我们的专业团队随时为您提供咨询与服务支持。",
       "button": "联系我们"
+    },
+    "patientTravel": {
+      "tag": "患者服务",
+      "title": "边走边透",
+      "subtitle": "在全国透析网络中，感受中国文化之美",
+      "description": "通过我们覆盖全国的透析中心网络，为您提供安心的「边走边透」服务。无论您身在何处，都能获得高质量、标准化的透析治疗，让透析不再成为旅行的障碍。",
+      "hero": {
+        "title": "让生活不因透析而停止",
+        "subtitle": "探索中国，享受透析",
+        "features": [
+          "150+ 覆盖全国的透析中心",
+          "统一标准的透析质量",
+          "周边旅游景点推荐",
+          "便捷的中心查询与预约"
+        ]
+      },
+      "map": {
+        "title": "全国透析中心分布",
+        "subtitle": "点击地图探索透析中心，规划您的旅行路线",
+        "filters": {
+          "allProvinces": "全部省份",
+          "allTypes": "全部类型",
+          "directOnly": "仅直营中心",
+          "partnerOnly": "仅合作医院",
+          "searchPlaceholder": "搜索城市或中心名称",
+          "filterTitle": "筛选中心",
+          "clearFilters": "清除筛选",
+          "centersCount": "个中心",
+          "provincesSelected": "个省份已选",
+          "filterButton": "筛选"
+        },
+        "legend": {
+          "direct": "直营中心",
+          "partner": "合作医院"
+        }
+      },
+      "tourism": {
+        "tag": "特色旅游",
+        "title": "透析与旅游的完美结合",
+        "subtitle": "在接受高质量透析治疗的同时，探索当地的文化与美景",
+        "viewDetails": "查看详情",
+        "nearbyAttractions": "周边景点"
+      },
+      "howItWorks": {
+        "title": "如何使用边走边透服务",
+        "steps": [
+          {
+            "title": "选择目的地",
+            "description": "在地图上浏览全国透析中心，选择您想去的城市"
+          },
+          {
+            "title": "查看中心详情",
+            "description": "了解中心的设备、服务和周边旅游景点"
+          },
+          {
+            "title": "联系预约",
+            "description": "通过电话或线上方式提前预约透析时间"
+          },
+          {
+            "title": "安心旅行",
+            "description": "在旅途中享受高质量、标准化的透析服务"
+          }
+        ]
+      },
+      "cta": {
+        "title": "开始规划您的旅行",
+        "description": "浏览地图，探索全国透析中心，让透析不再成为旅行的障碍。",
+        "button": "浏览地图"
+      }
     }
   },
   "company": {
@@ -1612,7 +1917,10 @@
         "area": "面积",
         "features": "中心特色",
         "gallery": "中心环境",
-        "backToList": "返回中心列表"
+        "backToList": "返回中心列表",
+        "tourism": "周边景点",
+        "tourismSubtitle": "治疗之余，探索周边精彩",
+        "distanceLabel": "距中心"
       },
       "list": [
         {
@@ -1626,7 +1934,12 @@
           "area": "1300㎡",
           "established": "2018",
           "description": "福州杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
-          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境",
+            "高品质中央氧气供应系统"
+          ],
           "gallery": [
             "/images/centers/fuzhou-xingkang/1.jpg",
             "/images/centers/fuzhou-xingkang/2.jpg",
@@ -1634,6 +1947,33 @@
             "/images/centers/fuzhou-xingkang/4.jpg",
             "/images/centers/fuzhou-xingkang/5.jpg",
             "/images/centers/fuzhou-xingkang/6.jpg"
+          ],
+          "tourismIntro": "福州，福建省省会，有着2200多年建城史，是一座山水相依、古韵悠长的历史文化名城。这里三山鼎峙、闽江穿城，拥有三坊七巷、鼓山涌泉等众多名胜古迹，温泉资源丰富，素有“温泉之城”美誉。福州也是海上丝绸之路的重要起点城市，闽菜文化源远流长。",
+          "tourism": [
+            {
+              "name": "三坊七巷",
+              "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
+              "description": "中国历史文化名街，保存完好的明清古建筑群，被誉为“中国城市里坊制度活化石”。",
+              "distance": "5 km"
+            },
+            {
+              "name": "鼓山",
+              "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
+              "description": "福州市东郊名山，山上有千年古刹涌泉寺，摩崖石刻众多，登顶可俯瞰福州全城与闽江。",
+              "distance": "15 km"
+            },
+            {
+              "name": "西湖公园",
+              "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
+              "description": "福州市区历史最悠久的公园，始建于晋代，湖光山色秀美，是市民休闲的好去处。",
+              "distance": "3 km"
+            },
+            {
+              "name": "闽江夜游",
+              "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
+              "description": "乘船游览闽江两岸灯火辉煌的城市夜景，途经中洲岛、解放大桥等标志性景观。",
+              "distance": "4 km"
+            }
           ]
         },
         {
@@ -1646,13 +1986,45 @@
           "contact": "陈经理 1505515908",
           "area": "1000㎡",
           "description": "安徽杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。以国家标准为核心，结合杏泰医疗多年积累总结的管理理念和合肥滨湖当地居民生活就医习惯等实际情况，为合肥滨湖及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境",
+            "高品质中央氧气供应系统"
+          ],
           "gallery": [
             "/images/centers/anhui-xingkang/1.jpg",
             "/images/centers/anhui-xingkang/2.jpg",
             "/images/centers/anhui-xingkang/3.jpg",
             "/images/centers/anhui-xingkang/4.jpg",
             "/images/centers/anhui-xingkang/5.jpg"
+          ],
+          "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有包拯故里的廉政文化、环巢湖的湖光山色，也有蓬勃发展的新兴产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
+          "tourism": [
+            {
+              "name": "合肥天鹅湖",
+              "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
+              "description": "合肥政务区标志性城市公园，湖面开阔，绿道环绕，适合散步与休憩。",
+              "distance": "3.5 km"
+            },
+            {
+              "name": "包公园",
+              "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
+              "description": "纪念北宋名臣包拯的历史文化园区，包含包公祠、清风阁等景点。",
+              "distance": "4.2 km"
+            },
+            {
+              "name": "三河古镇",
+              "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
+              "description": "拥有2500年历史的江南水乡古镇，古街、古桥、古民居保存完好。",
+              "distance": "35 km"
+            },
+            {
+              "name": "巢湖风景区",
+              "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
+              "description": "中国五大淡水湖之一，湖光山色秀丽，温泉资源丰富，是休闲度假胜地。",
+              "distance": "60 km"
+            }
           ]
         },
         {
@@ -1665,7 +2037,11 @@
           "contact": "陈经理 1505515908",
           "area": "1100㎡",
           "description": "庐江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为庐江及周边地区患者提供专业的透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/lujiang-xingkang/1.jpg",
             "/images/centers/lujiang-xingkang/2.jpg",
@@ -1673,6 +2049,33 @@
             "/images/centers/lujiang-xingkang/4.jpg",
             "/images/centers/lujiang-xingkang/5.jpg",
             "/images/centers/lujiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "庐江县位于安徽省中部，地处巢湖南岸，历史悠久、人杰地灵。这里是三国名将周瑜故里，拥有丰富的温泉资源和秀美的山水风光。冶父山的禅意幽深、汤池温泉的舒适惬意，让庐江成为修身养性的理想之地。",
+          "tourism": [
+            {
+              "name": "汤池温泉",
+              "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
+              "description": "千年温泉古镇，水质优良，富含多种矿物质，是放松身心的天然疗养胜地。",
+              "distance": "20 km"
+            },
+            {
+              "name": "冶父山",
+              "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
+              "description": "国家森林公园，相传为春秋铸剑大师欧冶子铸剑之地，山势秀丽，古刹幽深。",
+              "distance": "15 km"
+            },
+            {
+              "name": "周瑜墓",
+              "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
+              "description": "三国名将周瑜安息之地，园内古木参天，是了解三国文化的重要历史遗迹。",
+              "distance": "5 km"
+            },
+            {
+              "name": "巢湖风景区",
+              "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
+              "description": "中国五大淡水湖之一，湖光山色秀丽，湿地生态丰富，可游览中庙、姥山岛等景点。",
+              "distance": "30 km"
+            }
           ]
         },
         {
@@ -1685,7 +2088,12 @@
           "contact": "陈经理 1505515908",
           "area": "2000㎡",
           "description": "合肥普福康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。在先进的医疗设备配备基础上，搭配经验丰富的专业透析医护团队，为合肥及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境",
+            "高品质中央氧气供应系统"
+          ],
           "gallery": [
             "/images/centers/hefei-pufukang/1.jpg",
             "/images/centers/hefei-pufukang/2.jpg",
@@ -1693,6 +2101,33 @@
             "/images/centers/hefei-pufukang/4.jpg",
             "/images/centers/hefei-pufukang/5.jpg",
             "/images/centers/hefei-pufukang/6.jpg"
+          ],
+          "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有三国故地逍遥津、巍巍大蜀山，也有蓬勃发展的科教产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
+          "tourism": [
+            {
+              "name": "逍遥津公园",
+              "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
+              "description": "三国古战场遗址公园，张辽威震逍遥津的故事就发生在这里，园内绿树成荫、古迹众多。",
+              "distance": "3 km"
+            },
+            {
+              "name": "安徽省博物院",
+              "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
+              "description": "国家一级博物馆，馆藏丰富，展示安徽从远古到近现代的历史文化精华。",
+              "distance": "4 km"
+            },
+            {
+              "name": "大蜀山国家森林公园",
+              "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
+              "description": "合肥市区最高峰，森林覆盖率高，是登山健身、亲近自然的城市绿肺。",
+              "distance": "12 km"
+            },
+            {
+              "name": "合肥野生动物园",
+              "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
+              "description": "大蜀山脚下的生态型动物园，园内动物种类丰富，适合家庭游览与亲子活动。",
+              "distance": "15 km"
+            }
           ]
         },
         {
@@ -1705,7 +2140,11 @@
           "contact": "李经理 1890305928",
           "area": "686㎡",
           "description": "肇庆杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为肇庆及周边地区患者提供专业的透析照护服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/zhaoqing-xingkang/1.jpg",
             "/images/centers/zhaoqing-xingkang/2.jpg",
@@ -1713,6 +2152,33 @@
             "/images/centers/zhaoqing-xingkang/4.jpg",
             "/images/centers/zhaoqing-xingkang/5.jpg",
             "/images/centers/zhaoqing-xingkang/6.jpg"
+          ],
+          "tourismIntro": "肇庆，广东省历史文化名城，地处西江中游，是岭南文化的重要发祥地之一。这里拥有七星岩、鼎湖山两大国家级风景名胜区，自然风光秀美，被誉为“北回归线上的绿洲”。端砚文化、宋代古城墙等丰富的人文资源，让肇庆兼具自然之美与文化之韵。",
+          "tourism": [
+            {
+              "name": "七星岩",
+              "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
+              "description": "七座石灰岩峰峦如北斗七星排列，湖山相映，被誉为“岭南第一奇观”。",
+              "distance": "3 km"
+            },
+            {
+              "name": "鼎湖山",
+              "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
+              "description": "中国第一个国家级自然保护区，被誉为“北回归线上的绿宝石”，森林覆盖率达98%。",
+              "distance": "18 km"
+            },
+            {
+              "name": "星湖湿地公园",
+              "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
+              "description": "国家湿地公园，丹顶鹤与多种珍稀鸟类栖息于此，湖水清澈，生态环境优美。",
+              "distance": "4 km"
+            },
+            {
+              "name": "宋城墙",
+              "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
+              "description": "始建于宋代的古城墙遗址，是广东仅存的宋代砖城墙，见证了肇庆千年的沧桑变迁。",
+              "distance": "2 km"
+            }
           ]
         },
         {
@@ -1725,13 +2191,44 @@
           "contact": "李经理 18903059289",
           "area": "625㎡",
           "description": "中山肾康血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/zhongshan-shenkang/1.jpg",
             "/images/centers/zhongshan-shenkang/2.jpg",
             "/images/centers/zhongshan-shenkang/3.jpg",
             "/images/centers/zhongshan-shenkang/4.jpg",
             "/images/centers/zhongshan-shenkang/5.jpg"
+          ],
+          "tourismIntro": "中山市，广东省地级市，地处珠三角核心区域，是伟大的民主革命先驱孙中山先生的故乡。这座城市兼具岭南水乡的柔美与近代革命文化的厚重，既有精致的园林与美食，也有丰富的红色文化资源。",
+          "tourism": [
+            {
+              "name": "孙中山故居",
+              "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
+              "description": "全国重点文物保护单位，展示孙中山先生成长与革命的历史，是中山最重要的文化地标。",
+              "distance": "25 km"
+            },
+            {
+              "name": "中山詹园",
+              "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
+              "description": "岭南最大的私家古典园林，融合苏杭园林精华与岭南建筑风格，景色雅致。",
+              "distance": "10 km"
+            },
+            {
+              "name": "紫马岭公园",
+              "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
+              "description": "中山市最大的综合性城市公园，园内湖泊、花园、游乐设施齐全，是休闲散步的好去处。",
+              "distance": "5 km"
+            },
+            {
+              "name": "孙文西路步行街",
+              "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
+              "description": "融合中西建筑风格的百年商业老街，骑楼建筑独具特色，是品味中山文化的好地方。",
+              "distance": "3 km"
+            }
           ]
         },
         {
@@ -1744,7 +2241,11 @@
           "contact": "杨经理 1560489313",
           "area": "1800㎡",
           "description": "黑龙江杏康血液透析中心设有肾内科、医学检验科、药房、超声、心电等重点科室，为东北地区患者提供专业的透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/heilongjiang-xingkang/1.jpg",
             "/images/centers/heilongjiang-xingkang/2.jpg",
@@ -1752,6 +2253,33 @@
             "/images/centers/heilongjiang-xingkang/4.jpg",
             "/images/centers/heilongjiang-xingkang/5.jpg",
             "/images/centers/heilongjiang-xingkang/6.jpg"
+          ],
+          "tourismIntro": "哈尔滨，黑龙江省省会，素有“东方小巴黎”“冰城”之称。这座城市融合了中俄文化精华，拥有独特的欧式建筑群和世界闻名的冰雪文化。中央大街的百年石板路、圣索菲亚教堂的拜占庭穹顶，以及冬日里璀璨的冰雪大世界，让哈尔滨成为一座别具魅力的北国名城。",
+          "tourism": [
+            {
+              "name": "中央大街",
+              "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
+              "description": "亚洲最长的步行街之一，汇集欧洲各时期建筑风格，被誉为“建筑艺术博物馆”。",
+              "distance": "5 km"
+            },
+            {
+              "name": "圣索菲亚教堂",
+              "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
+              "description": "远东地区最大的东正教堂之一，拜占庭式建筑风格，是哈尔滨的标志性建筑。",
+              "distance": "5 km"
+            },
+            {
+              "name": "太阳岛",
+              "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
+              "description": "松花江上的生态风景区，夏季绿树花海，冬季雪雕艺术，是国家5A级旅游景区。",
+              "distance": "10 km"
+            },
+            {
+              "name": "哈尔滨冰雪大世界",
+              "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
+              "description": "世界最大的冰雪主题乐园，每年冬季开放，冰雕雪塑规模宏大、流光溢彩。",
+              "distance": "25 km"
+            }
           ]
         },
         {
@@ -1764,13 +2292,44 @@
           "contact": "杨经理 1560489313",
           "area": "2250㎡",
           "description": "哈尔滨誉华血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，为哈尔滨及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/harbin-yuhua/1.jpg",
             "/images/centers/harbin-yuhua/2.jpg",
             "/images/centers/harbin-yuhua/3.jpg",
             "/images/centers/harbin-yuhua/4.jpg",
             "/images/centers/harbin-yuhua/5.jpg"
+          ],
+          "tourismIntro": "哈尔滨，黑龙江省省会，是中国纬度最高的省会城市，四季分明，冬日银装素裹。这座城市以独特的冰雪文化、欧陆风情和东北美食闻名遐迩。松花江畔的悠闲时光、老道外的百年建筑，都是哈尔滨独有的城市记忆。",
+          "tourism": [
+            {
+              "name": "松花江畔",
+              "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
+              "description": "哈尔滨的母亲河，江畔绿道适合散步骑行，冬季江面可体验冰上活动。",
+              "distance": "4 km"
+            },
+            {
+              "name": "东北虎林园",
+              "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
+              "description": "世界最大的东北虎繁育基地，可近距离观赏百余只东北虎的雄姿。",
+              "distance": "15 km"
+            },
+            {
+              "name": "果戈里大街",
+              "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
+              "description": "以俄国作家果戈里命名的文化街区，欧式建筑林立，咖啡馆与书店遍布。",
+              "distance": "3 km"
+            },
+            {
+              "name": "龙塔",
+              "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
+              "description": "亚洲第一高钢塔，高336米，设有观光平台和旋转餐厅，可360度俯瞰哈尔滨全景。",
+              "distance": "8 km"
+            }
           ]
         },
         {
@@ -1781,13 +2340,45 @@
           "province": "江苏",
           "address": "江苏省镇江市",
           "description": "镇江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。为镇江及周边地区患者提供持续优质化的专业透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境", "高品质中央氧气供应系统"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境",
+            "高品质中央氧气供应系统"
+          ],
           "gallery": [
             "/images/centers/zhenjiang-xingkang/1.jpg",
             "/images/centers/zhenjiang-xingkang/2.jpg",
             "/images/centers/zhenjiang-xingkang/3.jpg",
             "/images/centers/zhenjiang-xingkang/4.jpg",
             "/images/centers/zhenjiang-xingkang/5.jpg"
+          ],
+          "tourismIntro": "镇江，江苏省地级市，位于长江与京杭大运河交汇处，自古就是兵家必争的战略要地。这座有着3000多年历史的文化名城，以“天下第一江山”闻名，金山寺的白蛇传说、西津渡的千年古渡、北固山的三国遗迹，构成了一幅壮丽的历史画卷。",
+          "tourism": [
+            {
+              "name": "金山寺",
+              "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
+              "description": "始建于东晋的千年古刹，白蛇传“水漫金山”故事的发生地，依山而建，气势恢宏。",
+              "distance": "5 km"
+            },
+            {
+              "name": "西津渡",
+              "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
+              "description": "千年古渡口历史街区，保存了唐宋以来的古建筑群，被誉为“中国古渡博物馆”。",
+              "distance": "4 km"
+            },
+            {
+              "name": "北固山",
+              "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
+              "description": "三国时期孙刘联姻之地，“天下第一江山”石刻名闻天下，登顶可览长江壮景。",
+              "distance": "6 km"
+            },
+            {
+              "name": "焦山",
+              "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
+              "description": "长江中唯一四面环水的岛屿山林，有“江中浮玉”之称，山上碑林珍贵、古木参天。",
+              "distance": "10 km"
+            }
           ]
         },
         {
@@ -1800,7 +2391,11 @@
           "contact": "孟经理 15054936765",
           "area": "2000㎡",
           "description": "临沭杏康血液透析中心配有先进的透析机和双级反渗净水系统，为临沭及周边地区患者提供专业的透析服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/linshu-xingkang/1.jpg",
             "/images/centers/linshu-xingkang/2.jpg",
@@ -1808,6 +2403,33 @@
             "/images/centers/linshu-xingkang/4.jpg",
             "/images/centers/linshu-xingkang/5.jpg",
             "/images/centers/linshu-xingkang/6.jpg"
+          ],
+          "tourismIntro": "临沭县位于山东省东南部，地处沂蒙山区南麓，是一座历史悠久的鲁南小城。这里山水秀丽、民风淳朴，苍马山的自然风光、柳编工艺的非遗传承，以及周边沂蒙山区壮美的红色旅游资源，共同构成了临沭独特的旅游魅力。",
+          "tourism": [
+            {
+              "name": "苍马山风景区",
+              "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
+              "description": "国家3A级旅游景区，山峦叠翠，溪流潺潺，有玉圣园、抗日纪念馆等多处景点。",
+              "distance": "10 km"
+            },
+            {
+              "name": "柳编文化园",
+              "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
+              "description": "展示临沭国家级非遗柳编工艺的文化园区，可体验传统柳编手工制作。",
+              "distance": "5 km"
+            },
+            {
+              "name": "蒙山风景区",
+              "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
+              "description": "沂蒙山世界地质公园核心景区，主峰龟蒙顶海拔1156米，山高林密、空气清新。",
+              "distance": "80 km"
+            },
+            {
+              "name": "地下大峡谷",
+              "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
+              "description": "中国特大型溶洞之一，全长6100米，洞内有暗河漂流，地质景观奇特壮丽。",
+              "distance": "60 km"
+            }
           ]
         },
         {
@@ -1820,7 +2442,11 @@
           "contact": "刘经理 17640220000",
           "area": "1600㎡",
           "description": "辽宁杏康血液透析中心为辽宁地区患者提供专业的透析照护服务。",
-          "features": ["个性化设计", "定制化服务", "居家式环境"],
+          "features": [
+            "个性化设计",
+            "定制化服务",
+            "居家式环境"
+          ],
           "gallery": [
             "/images/centers/liaoning-xingkang/1.jpg",
             "/images/centers/liaoning-xingkang/2.jpg",
@@ -1828,6 +2454,33 @@
             "/images/centers/liaoning-xingkang/4.jpg",
             "/images/centers/liaoning-xingkang/5.jpg",
             "/images/centers/liaoning-xingkang/6.jpg"
+          ],
+          "tourismIntro": "沈阳，辽宁省省会，是中国东北地区的政治、经济与文化中心。作为清朝的发祥地，沈阳拥有世界文化遗产沈阳故宫和清昭陵，积淀了丰厚的满族文化底蕴。这座城市既有古都的庄严大气，也有现代都市的蓬勃活力。",
+          "tourism": [
+            {
+              "name": "沈阳故宫",
+              "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
+              "description": "世界文化遗产，清太祖努尔哈赤和清太宗皇太极的皇宫，中国仅存的两大宫殿建筑群之一。",
+              "distance": "5 km"
+            },
+            {
+              "name": "北陵公园（清昭陵）",
+              "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
+              "description": "清太宗皇太极的陵寝，沈阳最大的公园，古松参天，陵寝建筑庄严肃穆。",
+              "distance": "8 km"
+            },
+            {
+              "name": "张氏帅府",
+              "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
+              "description": "东北军阀张作霖和张学良父子的官邸和私宅，展示了近代东北的风云历史。",
+              "distance": "5 km"
+            },
+            {
+              "name": "沈阳世博园",
+              "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
+              "description": "2006年世界园艺博览会举办地，占地246公顷，四季花卉缤纷，是城市生态休闲胜地。",
+              "distance": "20 km"
+            }
           ]
         }
       ]
@@ -1838,15 +2491,44 @@
       "subtitle": "携手优质医疗机构，共同提升透析服务品质",
       "description": "我们与全国100+家医院建立了深度合作关系，为更多患者提供专业的透析服务支持。",
       "list": [
-        { "name": "湖南旺旺医院", "province": "湖南" },
-        { "name": "浙江新安国际医院", "province": "浙江" },
-        { "name": "厦门长庚医院", "province": "福建" },
-        { "name": "广西玉林市桂南医院", "province": "广西", "note": "中珠医疗" },
-        { "name": "新郑华信民生医院", "province": "河南" },
-        { "name": "海宁康华医院", "province": "浙江", "note": "创新医疗" },
-        { "name": "连云港圣安医院", "province": "江苏" },
-        { "name": "新津志辉医院", "province": "四川" },
-        { "name": "东营新里程老年医院", "province": "山东" }
+        {
+          "name": "湖南旺旺医院",
+          "province": "湖南"
+        },
+        {
+          "name": "浙江新安国际医院",
+          "province": "浙江"
+        },
+        {
+          "name": "厦门长庚医院",
+          "province": "福建"
+        },
+        {
+          "name": "广西玉林市桂南医院",
+          "province": "广西",
+          "note": "中珠医疗"
+        },
+        {
+          "name": "新郑华信民生医院",
+          "province": "河南"
+        },
+        {
+          "name": "海宁康华医院",
+          "province": "浙江",
+          "note": "创新医疗"
+        },
+        {
+          "name": "连云港圣安医院",
+          "province": "江苏"
+        },
+        {
+          "name": "新津志辉医院",
+          "province": "四川"
+        },
+        {
+          "name": "东营新里程老年医院",
+          "province": "山东"
+        }
       ],
       "more": "及更多合作医院..."
     },

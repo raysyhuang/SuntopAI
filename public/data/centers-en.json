@@ -1,0 +1,200 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-08",
+  "centers": [
+    {
+      "id": "fuzhou-xingkang-001",
+      "slug": "fuzhou-xingkang",
+      "type": "direct",
+      "name": "Fuzhou Xingkang Hemodialysis Center",
+      "shortName": "Fuzhou Xingkang",
+      "city": "Fuzhou",
+      "province": "Fujian",
+      "coordinates": {
+        "lat": 26.1954,
+        "lng": 119.5056
+      },
+      "address": "No. 3 Xifeng Road, Fengcheng Town, Lianjiang County, Fuzhou, Fujian Province",
+      "contact": "Manager Zhou 1316295406",
+      "area": "1300㎡",
+      "established": "2018",
+      "description": "Fuzhou Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system to ensure ultra-high purity dialysis water.",
+      "features": [
+        "Personalized design",
+        "Customized services",
+        "Home-like environment",
+        "High-quality central oxygen supply"
+      ],
+      "gallery": [
+        "/images/centers/fuzhou-xingkang/1.jpg",
+        "/images/centers/fuzhou-xingkang/2.jpg",
+        "/images/centers/fuzhou-xingkang/3.jpg"
+      ],
+      "tourismIntro": "Fuzhou, the capital of Fujian Province, has a history of over 2,200 years and is a historical and cultural city where mountains and waters blend.",
+      "tourism": [
+        {
+          "name": "Three Lanes and Seven Alleys",
+          "type": "Historical Culture",
+          "distance": "5 km",
+          "description": "A well-preserved Ming and Qing dynasty architectural complex"
+        },
+        {
+          "name": "Drum Mountain",
+          "type": "Natural Scenery",
+          "distance": "10 km",
+          "description": "The highest peak in Fuzhou, home to Yongquan Temple"
+        }
+      ]
+    },
+    {
+      "id": "liaoning-xingkang-002",
+      "slug": "liaoning-xingkang",
+      "type": "direct",
+      "name": "Liaoning Xingkang Hemodialysis Center",
+      "shortName": "Liaoning Xingkang",
+      "city": "Shenyang",
+      "province": "Liaoning",
+      "coordinates": {
+        "lat": 41.7922,
+        "lng": 123.4328
+      },
+      "address": "No. 61 Beishuncheng Road, Shenhe District, Shenyang",
+      "contact": "Manager Liu 17640220000",
+      "area": "1600㎡",
+      "description": "Liaoning Xingkang Hemodialysis Center provides professional dialysis care services for patients in the Liaoning region.",
+      "features": [
+        "Personalized design",
+        "Customized services",
+        "Home-like environment"
+      ],
+      "tourismIntro": "Shenyang, the capital of Liaoning Province, is the political, economic, and cultural center of Northeast China.",
+      "tourism": [
+        {
+          "name": "Shenyang Imperial Palace",
+          "type": "Historical Culture",
+          "distance": "5 km",
+          "description": "UNESCO World Heritage Site, the imperial palace of Emperor Nurhaci"
+        }
+      ]
+    },
+    {
+      "id": "hunan-wangwang-partner-001",
+      "type": "partner",
+      "name": "Hunan Want Want Hospital",
+      "city": "Changsha",
+      "province": "Hunan",
+      "coordinates": {
+        "lat": 28.2282,
+        "lng": 112.9388
+      },
+      "address": "Yuhua District, Changsha, Hunan Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "zhejiang-xinan-partner-002",
+      "type": "partner",
+      "name": "Zhejiang Xin'an International Hospital",
+      "city": "Hangzhou",
+      "province": "Zhejiang",
+      "coordinates": {
+        "lat": 30.2741,
+        "lng": 120.1551
+      },
+      "address": "Hangzhou, Zhejiang Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "fujian-changgeng-partner-003",
+      "type": "partner",
+      "name": "Xiamen Chang Gung Hospital",
+      "city": "Xiamen",
+      "province": "Fujian",
+      "coordinates": {
+        "lat": 24.4798,
+        "lng": 118.0894
+      },
+      "address": "Haicang District, Xiamen, Fujian Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "guangxi-guinan-partner-004",
+      "type": "partner",
+      "name": "Guangxi Yulin Guinan Hospital",
+      "city": "Yulin",
+      "province": "Guangxi",
+      "coordinates": {
+        "lat": 22.6293,
+        "lng": 110.1507
+      },
+      "address": "Yulin, Guangxi Zhuang Autonomous Region",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services.",
+      "note": "Zhongzhu Medical"
+    },
+    {
+      "id": "henan-huaxin-partner-005",
+      "type": "partner",
+      "name": "Xinzheng Huaxin Minsheng Hospital",
+      "city": "Xinzheng",
+      "province": "Henan",
+      "coordinates": {
+        "lat": 34.3959,
+        "lng": 113.7408
+      },
+      "address": "Xinzheng, Henan Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "zhejiang-kanghua-partner-006",
+      "type": "partner",
+      "name": "Haining Kanghua Hospital",
+      "city": "Haining",
+      "province": "Zhejiang",
+      "coordinates": {
+        "lat": 30.5251,
+        "lng": 120.6804
+      },
+      "address": "Haining, Jiaxing, Zhejiang Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services.",
+      "note": "Innovative Medical"
+    },
+    {
+      "id": "jiangsu-shengan-partner-007",
+      "type": "partner",
+      "name": "Lianyungang Sheng'an Hospital",
+      "city": "Lianyungang",
+      "province": "Jiangsu",
+      "coordinates": {
+        "lat": 34.5968,
+        "lng": 119.2216
+      },
+      "address": "Lianyungang, Jiangsu Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "sichuan-zhihui-partner-008",
+      "type": "partner",
+      "name": "Xinjin Zhihui Hospital",
+      "city": "Chengdu",
+      "province": "Sichuan",
+      "coordinates": {
+        "lat": 30.5702,
+        "lng": 103.8129
+      },
+      "address": "Xinjin District, Chengdu, Sichuan Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    },
+    {
+      "id": "shandong-xinlicheng-partner-009",
+      "type": "partner",
+      "name": "Dongying Xinlicheng Geriatric Hospital",
+      "city": "Dongying",
+      "province": "Shandong",
+      "coordinates": {
+        "lat": 37.4337,
+        "lng": 118.6753
+      },
+      "address": "Dongying, Shandong Province",
+      "description": "A quality medical institution in deep cooperation with us, providing professional dialysis services."
+    }
+  ]
+}

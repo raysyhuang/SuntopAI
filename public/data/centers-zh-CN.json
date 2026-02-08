@@ -1,0 +1,710 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-08T12:00:00Z",
+  "centers": [
+    {
+      "id": "fuzhou-xingkang-001",
+      "slug": "fuzhou-xingkang",
+      "type": "direct",
+      "name": "福州杏康血液透析中心",
+      "shortName": "福州杏康",
+      "city": "福州",
+      "province": "福建",
+      "coordinates": {
+        "lat": 26.1954,
+        "lng": 119.5056
+      },
+      "address": "福建省福州市连江县凤城镇西凤路3号",
+      "contact": "周经理 1316295406",
+      "area": "1300㎡",
+      "established": "2018",
+      "description": "福州杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境",
+        "高品质中央氧气供应系统"
+      ],
+      "gallery": [
+        "/images/centers/fuzhou-xingkang/1.jpg",
+        "/images/centers/fuzhou-xingkang/2.jpg",
+        "/images/centers/fuzhou-xingkang/3.jpg"
+      ],
+      "tourismIntro": "福州，福建省省会，有着2200多年建城史，是一座山水相依、古韵悠长的历史文化名城。",
+      "tourism": [
+        {
+          "name": "三坊七巷",
+          "type": "历史文化",
+          "distance": "5 km",
+          "description": "中国历史文化名街，保存完好的明清古建筑群"
+        },
+        {
+          "name": "鼓山",
+          "type": "自然风光",
+          "distance": "10 km",
+          "description": "福州市区最高峰，涌泉寺为闽刹之冠"
+        }
+      ]
+    },
+    {
+      "id": "liaoning-xingkang-002",
+      "slug": "liaoning-xingkang",
+      "type": "direct",
+      "name": "辽宁杏康血液透析中心",
+      "shortName": "辽宁杏康",
+      "city": "沈阳",
+      "province": "辽宁",
+      "coordinates": {
+        "lat": 41.7922,
+        "lng": 123.4328
+      },
+      "address": "沈阳市沈河区北顺城路61号",
+      "contact": "刘经理 17640220000",
+      "area": "1600㎡",
+      "description": "辽宁杏康血液透析中心为辽宁地区患者提供专业的透析照护服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "tourismIntro": "沈阳，辽宁省省会，是中国东北地区的政治、经济与文化中心。",
+      "tourism": [
+        {
+          "name": "沈阳故宫",
+          "type": "历史文化",
+          "distance": "5 km",
+          "description": "世界文化遗产，清太祖努尔哈赤和清太宗皇太极的皇宫"
+        }
+      ]
+    },
+    {
+      "id": "anhui-xingkang-003",
+      "slug": "anhui-xingkang",
+      "type": "direct",
+      "name": "安徽杏康血液透析中心",
+      "shortName": "安徽杏康",
+      "city": "合肥",
+      "province": "安徽",
+      "coordinates": {
+        "lat": 31.8206,
+        "lng": 117.2272
+      },
+      "address": "安徽省合肥市包河区徽州大道与福州路交口西北角千城大厦",
+      "contact": "陈经理 1505515908",
+      "area": "1000㎡",
+      "description": "安徽杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。以国家标准为核心，结合杏泰医疗多年积累总结的管理理念和合肥滨湖当地居民生活就医习惯等实际情况，为合肥滨湖及其周边地区的肾友提供持续优质化的专业透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境",
+        "高品质中央氧气供应系统"
+      ],
+      "gallery": [
+        "/images/centers/anhui-xingkang/1.jpg",
+        "/images/centers/anhui-xingkang/2.jpg",
+        "/images/centers/anhui-xingkang/3.jpg",
+        "/images/centers/anhui-xingkang/4.jpg",
+        "/images/centers/anhui-xingkang/5.jpg"
+      ],
+      "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有包拯故里的廉政文化、环巢湖的湖光山色，也有蓬勃发展的新兴产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
+      "tourism": [
+        {
+          "name": "合肥天鹅湖",
+          "type": "旅游景点",
+          "distance": "3.5 km",
+          "description": "合肥政务区标志性城市公园，湖面开阔，绿道环绕，适合散步与休憩。"
+        },
+        {
+          "name": "包公园",
+          "type": "旅游景点",
+          "distance": "4.2 km",
+          "description": "纪念北宋名臣包拯的历史文化园区，包含包公祠、清风阁等景点。"
+        },
+        {
+          "name": "三河古镇",
+          "type": "旅游景点",
+          "distance": "35 km",
+          "description": "拥有2500年历史的江南水乡古镇，古街、古桥、古民居保存完好。"
+        },
+        {
+          "name": "巢湖风景区",
+          "type": "旅游景点",
+          "distance": "60 km",
+          "description": "中国五大淡水湖之一，湖光山色秀丽，温泉资源丰富，是休闲度假胜地。"
+        }
+      ]
+    },
+    {
+      "id": "lujiang-xingkang-004",
+      "slug": "lujiang-xingkang",
+      "type": "direct",
+      "name": "庐江杏康血液透析中心",
+      "shortName": "庐江杏康",
+      "city": "庐江",
+      "province": "安徽",
+      "coordinates": {
+        "lat": 31.2545,
+        "lng": 117.2873
+      },
+      "address": "安徽省庐江县庐巢路108号莲花商业文化广场",
+      "contact": "陈经理 1505515908",
+      "area": "1100㎡",
+      "description": "庐江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为庐江及周边地区患者提供专业的透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/lujiang-xingkang/1.jpg",
+        "/images/centers/lujiang-xingkang/2.jpg",
+        "/images/centers/lujiang-xingkang/3.jpg",
+        "/images/centers/lujiang-xingkang/4.jpg",
+        "/images/centers/lujiang-xingkang/5.jpg",
+        "/images/centers/lujiang-xingkang/6.jpg"
+      ],
+      "tourismIntro": "庐江县位于安徽省中部，地处巢湖南岸，历史悠久、人杰地灵。这里是三国名将周瑜故里，拥有丰富的温泉资源和秀美的山水风光。冶父山的禅意幽深、汤池温泉的舒适惬意，让庐江成为修身养性的理想之地。",
+      "tourism": [
+        {
+          "name": "汤池温泉",
+          "type": "旅游景点",
+          "distance": "20 km",
+          "description": "千年温泉古镇，水质优良，富含多种矿物质，是放松身心的天然疗养胜地。"
+        },
+        {
+          "name": "冶父山",
+          "type": "旅游景点",
+          "distance": "15 km",
+          "description": "国家森林公园，相传为春秋铸剑大师欧冶子铸剑之地，山势秀丽，古刹幽深。"
+        },
+        {
+          "name": "周瑜墓",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "三国名将周瑜安息之地，园内古木参天，是了解三国文化的重要历史遗迹。"
+        },
+        {
+          "name": "巢湖风景区",
+          "type": "旅游景点",
+          "distance": "30 km",
+          "description": "中国五大淡水湖之一，湖光山色秀丽，湿地生态丰富，可游览中庙、姥山岛等景点。"
+        }
+      ]
+    },
+    {
+      "id": "hefei-pufukang-005",
+      "slug": "hefei-pufukang",
+      "type": "direct",
+      "name": "合肥普福康血液透析中心",
+      "shortName": "合肥普福康",
+      "city": "合肥",
+      "province": "安徽",
+      "coordinates": {
+        "lat": 31.8206,
+        "lng": 117.2272
+      },
+      "address": "安徽省合肥市肥西县上派镇灯塔路与南方路交叉口",
+      "contact": "陈经理 1505515908",
+      "area": "2000㎡",
+      "description": "合肥普福康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。在先进的医疗设备配备基础上，搭配经验丰富的专业透析医护团队，为合肥及其周边地区的肾友提供持续优质化的专业透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境",
+        "高品质中央氧气供应系统"
+      ],
+      "gallery": [
+        "/images/centers/hefei-pufukang/1.jpg",
+        "/images/centers/hefei-pufukang/2.jpg",
+        "/images/centers/hefei-pufukang/3.jpg",
+        "/images/centers/hefei-pufukang/4.jpg",
+        "/images/centers/hefei-pufukang/5.jpg",
+        "/images/centers/hefei-pufukang/6.jpg"
+      ],
+      "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有三国故地逍遥津、巍巍大蜀山，也有蓬勃发展的科教产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
+      "tourism": [
+        {
+          "name": "逍遥津公园",
+          "type": "旅游景点",
+          "distance": "3 km",
+          "description": "三国古战场遗址公园，张辽威震逍遥津的故事就发生在这里，园内绿树成荫、古迹众多。"
+        },
+        {
+          "name": "安徽省博物院",
+          "type": "旅游景点",
+          "distance": "4 km",
+          "description": "国家一级博物馆，馆藏丰富，展示安徽从远古到近现代的历史文化精华。"
+        },
+        {
+          "name": "大蜀山国家森林公园",
+          "type": "旅游景点",
+          "distance": "12 km",
+          "description": "合肥市区最高峰，森林覆盖率高，是登山健身、亲近自然的城市绿肺。"
+        },
+        {
+          "name": "合肥野生动物园",
+          "type": "旅游景点",
+          "distance": "15 km",
+          "description": "大蜀山脚下的生态型动物园，园内动物种类丰富，适合家庭游览与亲子活动。"
+        }
+      ]
+    },
+    {
+      "id": "zhaoqing-xingkang-006",
+      "slug": "zhaoqing-xingkang",
+      "type": "direct",
+      "name": "肇庆杏康血液透析中心",
+      "shortName": "肇庆杏康",
+      "city": "肇庆",
+      "province": "广东",
+      "coordinates": {
+        "lat": 23.0469,
+        "lng": 112.4659
+      },
+      "address": "肇庆市端州区建设二路28号盛世大厦",
+      "contact": "李经理 1890305928",
+      "area": "686㎡",
+      "description": "肇庆杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为肇庆及周边地区患者提供专业的透析照护服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/zhaoqing-xingkang/1.jpg",
+        "/images/centers/zhaoqing-xingkang/2.jpg",
+        "/images/centers/zhaoqing-xingkang/3.jpg",
+        "/images/centers/zhaoqing-xingkang/4.jpg",
+        "/images/centers/zhaoqing-xingkang/5.jpg",
+        "/images/centers/zhaoqing-xingkang/6.jpg"
+      ],
+      "tourismIntro": "肇庆，广东省历史文化名城，地处西江中游，是岭南文化的重要发祥地之一。这里拥有七星岩、鼎湖山两大国家级风景名胜区，自然风光秀美，被誉为“北回归线上的绿洲”。端砚文化、宋代古城墙等丰富的人文资源，让肇庆兼具自然之美与文化之韵。",
+      "tourism": [
+        {
+          "name": "七星岩",
+          "type": "旅游景点",
+          "distance": "3 km",
+          "description": "七座石灰岩峰峦如北斗七星排列，湖山相映，被誉为“岭南第一奇观”。"
+        },
+        {
+          "name": "鼎湖山",
+          "type": "旅游景点",
+          "distance": "18 km",
+          "description": "中国第一个国家级自然保护区，被誉为“北回归线上的绿宝石”，森林覆盖率达98%。"
+        },
+        {
+          "name": "星湖湿地公园",
+          "type": "旅游景点",
+          "distance": "4 km",
+          "description": "国家湿地公园，丹顶鹤与多种珍稀鸟类栖息于此，湖水清澈，生态环境优美。"
+        },
+        {
+          "name": "宋城墙",
+          "type": "旅游景点",
+          "distance": "2 km",
+          "description": "始建于宋代的古城墙遗址，是广东仅存的宋代砖城墙，见证了肇庆千年的沧桑变迁。"
+        }
+      ]
+    },
+    {
+      "id": "zhongshan-shenkang-007",
+      "slug": "zhongshan-shenkang",
+      "type": "direct",
+      "name": "中山肾康血液透析中心",
+      "shortName": "中山肾康",
+      "city": "中山",
+      "province": "广东",
+      "coordinates": {
+        "lat": 22.5211,
+        "lng": 113.3927
+      },
+      "address": "广东省中山市石岐区孙文东路88号",
+      "contact": "李经理 18903059289",
+      "area": "625㎡",
+      "description": "中山肾康血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/zhongshan-shenkang/1.jpg",
+        "/images/centers/zhongshan-shenkang/2.jpg",
+        "/images/centers/zhongshan-shenkang/3.jpg",
+        "/images/centers/zhongshan-shenkang/4.jpg",
+        "/images/centers/zhongshan-shenkang/5.jpg"
+      ],
+      "tourismIntro": "中山市，广东省地级市，地处珠三角核心区域，是伟大的民主革命先驱孙中山先生的故乡。这座城市兼具岭南水乡的柔美与近代革命文化的厚重，既有精致的园林与美食，也有丰富的红色文化资源。",
+      "tourism": [
+        {
+          "name": "孙中山故居",
+          "type": "旅游景点",
+          "distance": "25 km",
+          "description": "全国重点文物保护单位，展示孙中山先生成长与革命的历史，是中山最重要的文化地标。"
+        },
+        {
+          "name": "中山詹园",
+          "type": "旅游景点",
+          "distance": "10 km",
+          "description": "岭南最大的私家古典园林，融合苏杭园林精华与岭南建筑风格，景色雅致。"
+        },
+        {
+          "name": "紫马岭公园",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "中山市最大的综合性城市公园，园内湖泊、花园、游乐设施齐全，是休闲散步的好去处。"
+        },
+        {
+          "name": "孙文西路步行街",
+          "type": "旅游景点",
+          "distance": "3 km",
+          "description": "融合中西建筑风格的百年商业老街，骑楼建筑独具特色，是品味中山文化的好地方。"
+        }
+      ]
+    },
+    {
+      "id": "heilongjiang-xingkang-008",
+      "slug": "heilongjiang-xingkang",
+      "type": "direct",
+      "name": "黑龙江杏康血液透析中心",
+      "shortName": "黑龙江杏康",
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "coordinates": {
+        "lat": 45.756,
+        "lng": 126.6426
+      },
+      "address": "哈尔滨市道外区红旗大街621号",
+      "contact": "杨经理 1560489313",
+      "area": "1800㎡",
+      "description": "黑龙江杏康血液透析中心设有肾内科、医学检验科、药房、超声、心电等重点科室，为东北地区患者提供专业的透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/heilongjiang-xingkang/1.jpg",
+        "/images/centers/heilongjiang-xingkang/2.jpg",
+        "/images/centers/heilongjiang-xingkang/3.jpg",
+        "/images/centers/heilongjiang-xingkang/4.jpg",
+        "/images/centers/heilongjiang-xingkang/5.jpg",
+        "/images/centers/heilongjiang-xingkang/6.jpg"
+      ],
+      "tourismIntro": "哈尔滨，黑龙江省省会，素有“东方小巴黎”“冰城”之称。这座城市融合了中俄文化精华，拥有独特的欧式建筑群和世界闻名的冰雪文化。中央大街的百年石板路、圣索菲亚教堂的拜占庭穹顶，以及冬日里璀璨的冰雪大世界，让哈尔滨成为一座别具魅力的北国名城。",
+      "tourism": [
+        {
+          "name": "中央大街",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "亚洲最长的步行街之一，汇集欧洲各时期建筑风格，被誉为“建筑艺术博物馆”。"
+        },
+        {
+          "name": "圣索菲亚教堂",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "远东地区最大的东正教堂之一，拜占庭式建筑风格，是哈尔滨的标志性建筑。"
+        },
+        {
+          "name": "太阳岛",
+          "type": "旅游景点",
+          "distance": "10 km",
+          "description": "松花江上的生态风景区，夏季绿树花海，冬季雪雕艺术，是国家5A级旅游景区。"
+        },
+        {
+          "name": "哈尔滨冰雪大世界",
+          "type": "旅游景点",
+          "distance": "25 km",
+          "description": "世界最大的冰雪主题乐园，每年冬季开放，冰雕雪塑规模宏大、流光溢彩。"
+        }
+      ]
+    },
+    {
+      "id": "harbin-yuhua-009",
+      "slug": "harbin-yuhua",
+      "type": "direct",
+      "name": "哈尔滨誉华血液透析中心",
+      "shortName": "哈尔滨誉华",
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "coordinates": {
+        "lat": 45.756,
+        "lng": 126.6426
+      },
+      "address": "哈尔滨市道外区红旗大街621号",
+      "contact": "杨经理 1560489313",
+      "area": "2250㎡",
+      "description": "哈尔滨誉华血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，为哈尔滨及其周边地区的肾友提供持续优质化的专业透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/harbin-yuhua/1.jpg",
+        "/images/centers/harbin-yuhua/2.jpg",
+        "/images/centers/harbin-yuhua/3.jpg",
+        "/images/centers/harbin-yuhua/4.jpg",
+        "/images/centers/harbin-yuhua/5.jpg"
+      ],
+      "tourismIntro": "哈尔滨，黑龙江省省会，是中国纬度最高的省会城市，四季分明，冬日银装素裹。这座城市以独特的冰雪文化、欧陆风情和东北美食闻名遐迩。松花江畔的悠闲时光、老道外的百年建筑，都是哈尔滨独有的城市记忆。",
+      "tourism": [
+        {
+          "name": "松花江畔",
+          "type": "旅游景点",
+          "distance": "4 km",
+          "description": "哈尔滨的母亲河，江畔绿道适合散步骑行，冬季江面可体验冰上活动。"
+        },
+        {
+          "name": "东北虎林园",
+          "type": "旅游景点",
+          "distance": "15 km",
+          "description": "世界最大的东北虎繁育基地，可近距离观赏百余只东北虎的雄姿。"
+        },
+        {
+          "name": "果戈里大街",
+          "type": "旅游景点",
+          "distance": "3 km",
+          "description": "以俄国作家果戈里命名的文化街区，欧式建筑林立，咖啡馆与书店遍布。"
+        },
+        {
+          "name": "龙塔",
+          "type": "旅游景点",
+          "distance": "8 km",
+          "description": "亚洲第一高钢塔，高336米，设有观光平台和旋转餐厅，可360度俯瞰哈尔滨全景。"
+        }
+      ]
+    },
+    {
+      "id": "zhenjiang-xingkang-010",
+      "slug": "zhenjiang-xingkang",
+      "type": "direct",
+      "name": "镇江杏康血液透析中心",
+      "shortName": "镇江杏康",
+      "city": "镇江",
+      "province": "江苏",
+      "coordinates": {
+        "lat": 32.1865,
+        "lng": 119.4258
+      },
+      "address": "江苏省镇江市",
+      "description": "镇江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。为镇江及周边地区患者提供持续优质化的专业透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境",
+        "高品质中央氧气供应系统"
+      ],
+      "gallery": [
+        "/images/centers/zhenjiang-xingkang/1.jpg",
+        "/images/centers/zhenjiang-xingkang/2.jpg",
+        "/images/centers/zhenjiang-xingkang/3.jpg",
+        "/images/centers/zhenjiang-xingkang/4.jpg",
+        "/images/centers/zhenjiang-xingkang/5.jpg"
+      ],
+      "tourismIntro": "镇江，江苏省地级市，位于长江与京杭大运河交汇处，自古就是兵家必争的战略要地。这座有着3000多年历史的文化名城，以“天下第一江山”闻名，金山寺的白蛇传说、西津渡的千年古渡、北固山的三国遗迹，构成了一幅壮丽的历史画卷。",
+      "tourism": [
+        {
+          "name": "金山寺",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "始建于东晋的千年古刹，白蛇传“水漫金山”故事的发生地，依山而建，气势恢宏。"
+        },
+        {
+          "name": "西津渡",
+          "type": "旅游景点",
+          "distance": "4 km",
+          "description": "千年古渡口历史街区，保存了唐宋以来的古建筑群，被誉为“中国古渡博物馆”。"
+        },
+        {
+          "name": "北固山",
+          "type": "旅游景点",
+          "distance": "6 km",
+          "description": "三国时期孙刘联姻之地，“天下第一江山”石刻名闻天下，登顶可览长江壮景。"
+        },
+        {
+          "name": "焦山",
+          "type": "旅游景点",
+          "distance": "10 km",
+          "description": "长江中唯一四面环水的岛屿山林，有“江中浮玉”之称，山上碑林珍贵、古木参天。"
+        }
+      ]
+    },
+    {
+      "id": "linshu-xingkang-011",
+      "slug": "linshu-xingkang",
+      "type": "direct",
+      "name": "临沭杏康血液透析中心",
+      "shortName": "临沭杏康",
+      "city": "临沭",
+      "province": "山东",
+      "coordinates": {
+        "lat": 34.9208,
+        "lng": 118.6503
+      },
+      "address": "山东省临沂市临沭县城常林大街西侧",
+      "contact": "孟经理 15054936765",
+      "area": "2000㎡",
+      "description": "临沭杏康血液透析中心配有先进的透析机和双级反渗净水系统，为临沭及周边地区患者提供专业的透析服务。",
+      "features": [
+        "个性化设计",
+        "定制化服务",
+        "居家式环境"
+      ],
+      "gallery": [
+        "/images/centers/linshu-xingkang/1.jpg",
+        "/images/centers/linshu-xingkang/2.jpg",
+        "/images/centers/linshu-xingkang/3.jpg",
+        "/images/centers/linshu-xingkang/4.jpg",
+        "/images/centers/linshu-xingkang/5.jpg",
+        "/images/centers/linshu-xingkang/6.jpg"
+      ],
+      "tourismIntro": "临沭县位于山东省东南部，地处沂蒙山区南麓，是一座历史悠久的鲁南小城。这里山水秀丽、民风淳朴，苍马山的自然风光、柳编工艺的非遗传承，以及周边沂蒙山区壮美的红色旅游资源，共同构成了临沭独特的旅游魅力。",
+      "tourism": [
+        {
+          "name": "苍马山风景区",
+          "type": "旅游景点",
+          "distance": "10 km",
+          "description": "国家3A级旅游景区，山峦叠翠，溪流潺潺，有玉圣园、抗日纪念馆等多处景点。"
+        },
+        {
+          "name": "柳编文化园",
+          "type": "旅游景点",
+          "distance": "5 km",
+          "description": "展示临沭国家级非遗柳编工艺的文化园区，可体验传统柳编手工制作。"
+        },
+        {
+          "name": "蒙山风景区",
+          "type": "旅游景点",
+          "distance": "80 km",
+          "description": "沂蒙山世界地质公园核心景区，主峰龟蒙顶海拔1156米，山高林密、空气清新。"
+        },
+        {
+          "name": "地下大峡谷",
+          "type": "旅游景点",
+          "distance": "60 km",
+          "description": "中国特大型溶洞之一，全长6100米，洞内有暗河漂流，地质景观奇特壮丽。"
+        }
+      ]
+    },
+    {
+      "id": "hunan-wangwang-partner-001",
+      "type": "partner",
+      "name": "湖南旺旺医院",
+      "city": "长沙",
+      "province": "湖南",
+      "coordinates": {
+        "lat": 28.2282,
+        "lng": 112.9388
+      },
+      "address": "湖南省长沙市雨花区",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "zhejiang-xinan-partner-002",
+      "type": "partner",
+      "name": "浙江新安国际医院",
+      "city": "杭州",
+      "province": "浙江",
+      "coordinates": {
+        "lat": 30.2741,
+        "lng": 120.1551
+      },
+      "address": "浙江省杭州市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "fujian-changgeng-partner-003",
+      "type": "partner",
+      "name": "厦门长庚医院",
+      "city": "厦门",
+      "province": "福建",
+      "coordinates": {
+        "lat": 24.4798,
+        "lng": 118.0894
+      },
+      "address": "福建省厦门市海沧区",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "guangxi-guinan-partner-004",
+      "type": "partner",
+      "name": "广西玉林市桂南医院",
+      "city": "玉林",
+      "province": "广西",
+      "coordinates": {
+        "lat": 22.6293,
+        "lng": 110.1507
+      },
+      "address": "广西壮族自治区玉林市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。",
+      "note": "中珠医疗"
+    },
+    {
+      "id": "henan-huaxin-partner-005",
+      "type": "partner",
+      "name": "新郑华信民生医院",
+      "city": "新郑",
+      "province": "河南",
+      "coordinates": {
+        "lat": 34.3959,
+        "lng": 113.7408
+      },
+      "address": "河南省新郑市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "zhejiang-kanghua-partner-006",
+      "type": "partner",
+      "name": "海宁康华医院",
+      "city": "海宁",
+      "province": "浙江",
+      "coordinates": {
+        "lat": 30.5251,
+        "lng": 120.6804
+      },
+      "address": "浙江省嘉兴市海宁市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。",
+      "note": "创新医疗"
+    },
+    {
+      "id": "jiangsu-shengan-partner-007",
+      "type": "partner",
+      "name": "连云港圣安医院",
+      "city": "连云港",
+      "province": "江苏",
+      "coordinates": {
+        "lat": 34.5968,
+        "lng": 119.2216
+      },
+      "address": "江苏省连云港市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "sichuan-zhihui-partner-008",
+      "type": "partner",
+      "name": "新津志辉医院",
+      "city": "成都",
+      "province": "四川",
+      "coordinates": {
+        "lat": 30.5702,
+        "lng": 103.8129
+      },
+      "address": "四川省成都市新津区",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    },
+    {
+      "id": "shandong-xinlicheng-partner-009",
+      "type": "partner",
+      "name": "东营新里程老年医院",
+      "city": "东营",
+      "province": "山东",
+      "coordinates": {
+        "lat": 37.4337,
+        "lng": 118.6753
+      },
+      "address": "山东省东营市",
+      "description": "与我们深度合作的优质医疗机构，提供专业透析服务。"
+    }
+  ]
+}
