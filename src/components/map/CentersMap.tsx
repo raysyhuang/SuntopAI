@@ -6,6 +6,8 @@ import type { LatLngBoundsExpression } from 'leaflet'
 import type { Center } from '@/types/center'
 import { MarkerCluster } from './MarkerCluster'
 import 'leaflet/dist/leaflet.css'
+import 'leaflet.markercluster/dist/MarkerCluster.css'
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 
 interface CentersMapProps {
   centers: Center[]

@@ -185,12 +185,9 @@ export function MapFilters({
               {provinces.map(province => (
                 <label
                   key={province}
-                  className="flex items-center gap-3 px-4 py-2 cursor-pointer transition-colors"
-                  style={{
-                    ':hover': {
-                      backgroundColor: theme === 'light' ? '#f3f4f6' : '#334155'
-                    }
-                  }}
+                  className={`flex items-center gap-3 px-4 py-2 cursor-pointer transition-colors ${
+                    theme === 'light' ? 'hover:bg-gray-100' : 'hover:bg-slate-700'
+                  }`}
                 >
                   <input
                     type="checkbox"
