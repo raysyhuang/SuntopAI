@@ -1,0 +1,264 @@
+[  699542ms] [ERROR] ./node_modules/react-leaflet-cluster/dist/index.js
+Error: ENOENT: no such file or directory, open '/Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/react-leaflet-cluster/dist/index.js'
+
+Import trace for requested module:
+./node_modules/react-leaflet-cluster/dist/index.js
+./src/components/map/MarkerCluster.tsx
+./src/components/map/CentersMap.tsx
+./src/app/[locale]/services/patient-travel/PatientTravelClient.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  702975ms] [ERROR] ./node_modules/react-leaflet-cluster/dist/index.js
+Error: ENOENT: no such file or directory, open '/Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/react-leaflet-cluster/dist/index.js'
+
+Import trace for requested module:
+./node_modules/react-leaflet-cluster/dist/index.js
+./src/components/map/MarkerCluster.tsx
+./src/components/map/CentersMap.tsx
+./src/app/[locale]/services/patient-travel/PatientTravelClient.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/app-index.js:32
+[  724883ms] [WARNING] ./src/components/map/MarkerCluster.tsx
+Attempted import error: 'createPopupContent' is not exported from './MapPopup' (imported as 'createPopupContent').
+
+Import trace for requested module:
+./src/components/map/MarkerCluster.tsx
+./src/components/map/CentersMap.tsx
+./src/app/[locale]/services/patient-travel/PatientTravelClient.tsx @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/components/react-dev-overlay/app/hot-reloader-client.js:226
+[  818837ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1770560793189' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[  818967ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1770560793680' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[  819020ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1770560793680' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[  819072ms] Event
+[  848934ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang?_rsc=1b296:0
+[  848973ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang?_rsc=1b296:0
+[  849002ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang?_rsc=1b296:0
+[  849094ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[  849380ms] Error: Cannot find module './948.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at __webpack_require__.f.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:198:28)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:162:22)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/[slug]/page.js:1:21773)
+    at Object.<anonymous> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/[slug]/page.js:1:21830)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at requirePage (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:103:84)
+    at async loadComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:714:36)
+    at async DevServer.findPageComponents (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/base-server.js:1962:32)
+    at async DevServer.pipeImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:272:17)
+    at async DevServer.handleRequestImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/base-server.js:818:17)
+    at async (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/next-dev-server.js:339:20)
+    at async Span.traceAsyncFn (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/trace/trace.js:154:20)
+    at async DevServer.handleRequest (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/next-dev-server.js:336:24)
+    at async invokeRender (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js:179:21)
+    at async handleRequest (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js:359:24)
+    at async requestHandlerImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js:383:13)
+    at async Server.requestListener (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js:141:13)
+[  890542ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[  893590ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[  894061ms] Error: Cannot find module './682.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/[slug]/page.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at __webpack_require__.f.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:198:28)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:162:22)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at requirePage (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:72:65)
+    at async loadComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:714:36)
+[ 1149855ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[ 1150136ms] Error: Cannot find module './682.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at __webpack_require__.f.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:198:28)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:111:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:162:22)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at requirePage (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:72:65)
+    at async loadComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:714:36)
+[ 1164066ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[ 1164365ms] Error: Cannot find module './682.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/[slug]/page.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at __webpack_require__.f.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:203:28)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:167:22)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at requirePage (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:72:65)
+    at async loadComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:714:36)
+[ 1165536ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company/anhui-xingkang:0
+[ 1166005ms] Error: Cannot find module './682.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/[slug]/page.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-middleware.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/hot-reloader-webpack.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/router-server.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/lib/start-server.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at __webpack_require__.f.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:203:28)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:116:40)
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:115:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js:167:22)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:335)
+    at Object.<anonymous> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/pages/_document.js:1:376)
+    at Module._compile (node:internal/modules/cjs/loader:1734:14)
+    at Object..js (node:internal/modules/cjs/loader:1899:10)
+    at Module.load (node:internal/modules/cjs/loader:1469:32)
+    at Function._load (node:internal/modules/cjs/loader:1286:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+    at requirePage (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js:109:84)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:72:65)
+    at async loadComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js:71:33)
+    at async DevServer.findPageComponentsImpl (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/next-server.js:714:36)
