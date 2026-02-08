@@ -97,10 +97,8 @@ export function CentersMap({ centers, isDarkTheme, locale, selectedCenterId, onC
       }}
       scrollWheelZoom={true}
       zoomControl={true}
-      tap={true} // Enable tap for mobile
-      tapTolerance={15} // Increase tap tolerance for better mobile UX
       dragging={true}
-      touchZoom={true} // Enable pinch zoom
+      touchZoom={true} // Enable pinch zoom on mobile
     >
       <TileLayer
         attribution={tileAttribution}
