@@ -1452,7 +1452,6 @@
     "tag": "Services",
     "title": "Technology-Enabled Services, Creating Value",
     "subtitle": "Beyond treatment itself, providing vascular access, patient care, professional training and more comprehensive service support for kidney patients, while continuously expanding health management services and technology-enabled applications.",
-    "newBadge": "New",
     "serviceCards": [
       {
         "id": "operation-service",
@@ -1845,12 +1844,7 @@
           "allTypes": "All Types",
           "directOnly": "Direct Centers Only",
           "partnerOnly": "Partner Hospitals Only",
-          "searchPlaceholder": "Search city or center name",
-          "filterTitle": "Filter Centers",
-          "clearFilters": "Clear Filters",
-          "centersCount": "centers",
-          "provincesSelected": "provinces selected",
-          "filterButton": "Filter"
+          "searchPlaceholder": "Search city or center name"
         },
         "legend": {
           "direct": "Direct Centers",

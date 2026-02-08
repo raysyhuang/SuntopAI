@@ -1,0 +1,47 @@
+[    5622ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon-16x16.png:0
+[ 1133151ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company?_rsc=11vyj:0
+[ 1133585ms] [ERROR] Refused to apply style from 'http://localhost:3000/_next/static/css/app/layout.css?v=1770540052582' because its MIME type ('text/html') is not a supported stylesheet MIME type, and strict MIME checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133609ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app-pages-internals.js:0
+[ 1133609ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app-pages-internals.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133609ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/error.js:0
+[ 1133609ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/error.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133609ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/not-found.js:0
+[ 1133609ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/not-found.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133609ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/main-app.js?v=1770540052582:0
+[ 1133610ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/main-app.js?v=1770540052582' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133610ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/%5Blocale%5D/company/page.js:0
+[ 1133610ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/%5Blocale%5D/company/page.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1133617ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/chunks/app/%5Blocale%5D/layout.js:0
+[ 1133617ms] [ERROR] Refused to execute script from 'http://localhost:3000/_next/static/chunks/app/%5Blocale%5D/layout.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. @ http://localhost:3000/zh-CN/company:0
+[ 1136753ms] [WARNING] The resource http://localhost:3000/_next/static/media/bb3ef058b751a6ad-s.p.woff2 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ http://localhost:3000/zh-CN/company#main-content:0
+[ 1138783ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/zh-CN/company#main-content:0
+[ 1138973ms] Error: Cannot find module './vendor-chunks/framer-motion.js'
+Require stack:
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/webpack-runtime.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/.next/server/app/[locale]/company/page.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/load-components.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/build/utils.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/dev/static-paths-worker.js
+- /Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/compiled/jest-worker/processChild.js
+    at Function.<anonymous> (node:internal/modules/cjs/loader:1405:15)
+    at <unknown> (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:55:36)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1061:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1066:22)
+    at Function._load (node:internal/modules/cjs/loader:1215:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1491:12)
+    at mod.require (file:///Users/rayhuang/Documents/Python Project/SuntopAI/node_modules/next/dist/server/require-hook.js:65:28)
+    at require (node:internal/modules/helpers:135:16)
+[ 1139051ms] [ERROR] Loading plugin data from 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0ic3ZnIj48dGV4dCB4PSIxMCIgeT0iMjAiIGlkPSJzdmctbGluay10ZXh0Ij50ZXh0PC90ZXh0Pjwvc3ZnPg==' violates the following Content Security Policy directive: "default-src 'self'". Note that 'object-src' was not explicitly set, so 'default-src' is used as a fallback. The action has been blocked. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/components/Overlay/maintain--tab-focus.js:236
+[ 1139051ms] [ERROR] Loading plugin data from 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBpZD0ic3ZnIj48dGV4dCB4PSIxMCIgeT0iMjAiIGlkPSJzdmctbGluay10ZXh0Ij50ZXh0PC90ZXh0Pjwvc3ZnPg==' violates the following Content Security Policy directive: "default-src 'self'". Note that 'object-src' was not explicitly set, so 'default-src' is used as a fallback. The action has been blocked. @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/internal/components/Overlay/maintain--tab-focus.js:236
+[ 1204946ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed:  @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[ 1205956ms] [ERROR] WebSocket connection to 'ws://localhost:3000/_next/webpack-hmr' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/websocket.js:63
+[ 1224465ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/webpack/54cf7e1dfbc53a7d.webpack.hot-update.json:0
+[ 1224466ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[ 1224598ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/webpack/54cf7e1dfbc53a7d.webpack.hot-update.json:0
+[ 1224599ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[ 1225959ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3000/_next/static/webpack/54cf7e1dfbc53a7d.webpack.hot-update.json:0
+[ 1225959ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ webpack-internal:///./node_modules/next/dist/client/components/react-dev-overlay/pages/hot-reloader-client.js:349
+[ 1226999ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3000/favicon-16x16.png:0

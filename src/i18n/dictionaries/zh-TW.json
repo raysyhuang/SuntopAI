@@ -1519,7 +1519,6 @@
     "tag": "特色服務",
     "title": "科技賦能服務，服務建立價值",
     "subtitle": "超越治療本身，為腎友提供血管通路、患者關懷、專業培訓等全方位服務支持，並持續拓展更多健康管理服務，探索更多科技賦能服務的應用。",
-    "newBadge": "新功能",
     "serviceCards": [
       {
         "id": "operation-service",
@@ -1912,12 +1911,7 @@
           "allTypes": "全部類型",
           "directOnly": "僅直營中心",
           "partnerOnly": "僅合作醫院",
-          "searchPlaceholder": "搜尋城市或中心名稱",
-          "filterTitle": "篩選中心",
-          "clearFilters": "清除篩選",
-          "centersCount": "個中心",
-          "provincesSelected": "個省份已選",
-          "filterButton": "篩選"
+          "searchPlaceholder": "搜尋城市或中心名稱"
         },
         "legend": {
           "direct": "直營中心",

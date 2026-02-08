@@ -1400,7 +1400,6 @@
     "tag": "特色服务",
     "title": "科技赋能服务，服务创造价值",
     "subtitle": "超越治疗本身，为肾友提供血管通路、患者关怀、专业培训等全方位服务支持，并持续拓展更多健康管理服务，探索更多科技赋能服务的应用。",
-    "newBadge": "新功能",
     "serviceCards": [
       {
         "id": "operation-service",
@@ -1793,12 +1792,7 @@
           "allTypes": "全部类型",
           "directOnly": "仅直营中心",
           "partnerOnly": "仅合作医院",
-          "searchPlaceholder": "搜索城市或中心名称",
-          "filterTitle": "筛选中心",
-          "clearFilters": "清除筛选",
-          "centersCount": "个中心",
-          "provincesSelected": "个省份已选",
-          "filterButton": "筛选"
+          "searchPlaceholder": "搜索城市或中心名称"
         },
         "legend": {
           "direct": "直营中心",

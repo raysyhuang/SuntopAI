@@ -177,7 +177,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             >
               <div className="absolute top-2 right-2">
                 <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${theme === 'dark' ? 'bg-teal-500/30 text-teal-300' : 'bg-teal-500 text-white'}`}>
-                  {dictionary.services.newBadge || '新功能'}
+                  新功能
                 </span>
               </div>
               <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-3 ${
