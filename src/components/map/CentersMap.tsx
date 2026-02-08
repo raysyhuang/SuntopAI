@@ -91,9 +91,16 @@ export function CentersMap({ centers, isDarkTheme, locale, selectedCenterId, onC
       bounds={bounds}
       boundsOptions={{ padding: [50, 50] }}
       className={`w-full h-full rounded-xl overflow-hidden${isChinese && theme === 'dark' ? ' osm-dark' : ''}`}
-      style={{ minHeight: '500px' }}
+      style={{ 
+        minHeight: '500px',
+        touchAction: 'none' // Prevent page scroll when touching map
+      }}
       scrollWheelZoom={true}
       zoomControl={true}
+      tap={true} // Enable tap for mobile
+      tapTolerance={15} // Increase tap tolerance for better mobile UX
+      dragging={true}
+      touchZoom={true} // Enable pinch zoom
     >
       <TileLayer
         attribution={tileAttribution}

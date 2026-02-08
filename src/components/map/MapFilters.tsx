@@ -48,6 +48,24 @@ export function MapFilters({
   const [isProvinceSectionOpen, setIsProvinceSectionOpen] = useState(false)
   const [isCenterListOpen, setIsCenterListOpen] = useState(true)
   const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false)
+  const [isDesktop, setIsDesktop] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  // Wait for client-side hydration
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  // Detect desktop/mobile
+  useEffect(() => {
+    if (!isClient) return
+    const checkSize = () => {
+      setIsDesktop(window.innerWidth >= 1024)
+    }
+    checkSize()
+    window.addEventListener('resize', checkSize)
+    return () => window.removeEventListener('resize', checkSize)
+  }, [isClient])
 
   // Simplified search state - no IME blocking
   const [searchValue, setSearchValue] = useState(searchQuery)
@@ -127,21 +145,26 @@ export function MapFilters({
         {filteredCenters.map(center => (
           <div
             key={center.id}
-            className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
-              theme === 'light' ? 'hover:bg-gray-50 hover:shadow-sm' : 'hover:bg-slate-800/80'
+            className={`p-3 rounded-lg cursor-pointer transition-all duration-200 touch-manipulation ${
+              theme === 'light' ? 'hover:bg-gray-50 hover:shadow-sm active:bg-gray-100' : 'hover:bg-slate-800/80 active:bg-slate-700'
             }`}
             style={{
               backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b',
-              border: `1px solid ${theme === 'light' ? '#e5e7eb' : '#334155'}`
+              border: `1px solid ${theme === 'light' ? '#e5e7eb' : '#334155'}`,
+              WebkitTapHighlightColor: 'transparent' // Remove iOS tap highlight
             }}
             onClick={() => {
               // Notify parent to focus on this center on the map
               if (onCenterClick) {
                 onCenterClick(center.id)
               }
-              // Scroll map into view
-              const mapEl = document.querySelector('.leaflet-container')
-              if (mapEl) mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              // Close mobile filters if open
+              setIsMobileFiltersOpen(false)
+              // Scroll map into view on mobile
+              setTimeout(() => {
+                const mapEl = document.querySelector('.leaflet-container')
+                if (mapEl) mapEl.scrollIntoView({ behavior: 'smooth', block: 'center' })
+              }, 100)
             }}
           >
             <div className="flex items-start justify-between gap-2 mb-1">
@@ -379,15 +402,16 @@ export function MapFilters({
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <div
-        className="hidden lg:flex lg:flex-col w-80 border-r"
-        style={{
-          backgroundColor: theme === 'light' ? '#f9fafb' : '#0f172a',
-          borderColor: theme === 'light' ? '#e5e7eb' : '#1e293b',
-          height: '700px'
-        }}
-      >
+      {/* Desktop Sidebar - Only render on desktop after client hydration */}
+      {isClient && isDesktop && (
+        <div
+          className="flex flex-col w-80 border-r"
+          style={{
+            backgroundColor: theme === 'light' ? '#f9fafb' : '#0f172a',
+            borderColor: theme === 'light' ? '#e5e7eb' : '#1e293b',
+            height: '100%'
+          }}
+        >
         <div className="flex-shrink-0 p-6 pb-4 border-b" style={{ borderColor: theme === 'light' ? '#e5e7eb' : '#1e293b' }}>
           <h3
             className="text-lg font-semibold"
@@ -400,12 +424,17 @@ export function MapFilters({
           <FiltersContent />
         </div>
       </div>
+      )}
 
-      {/* Mobile Floating Button */}
-      <div className="lg:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-20">
+      {/* Mobile Floating Button - Only visible on mobile after client hydration */}
+      {isClient && !isDesktop && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-20">
         <button
           onClick={() => setIsMobileFiltersOpen(true)}
-          className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full shadow-lg flex items-center gap-2 transition-all active:scale-95"
+          className="px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-full shadow-xl flex items-center gap-2 transition-all active:scale-95 backdrop-blur-sm"
+          style={{
+            boxShadow: '0 10px 25px -5px rgba(0, 125, 115, 0.3), 0 8px 10px -6px rgba(0, 125, 115, 0.2)'
+          }}
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
@@ -413,20 +442,33 @@ export function MapFilters({
           <span className="font-medium">{dictionary.map.filters.filterButton || '筛选'} ({resultCount})</span>
         </button>
       </div>
+      )}
 
-      {/* Mobile Bottom Sheet */}
-      {isMobileFiltersOpen && (
+      {/* Mobile Bottom Sheet - Improved scrolling */}
+      {isClient && !isDesktop && isMobileFiltersOpen && (
         <div
-          className="lg:hidden fixed inset-0 z-30"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="fixed inset-0 z-30"
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
           onClick={() => setIsMobileFiltersOpen(false)}
         >
           <div
-            className="absolute bottom-0 left-0 right-0 rounded-t-2xl flex flex-col max-h-[85vh]"
-            style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
+            className="absolute bottom-0 left-0 right-0 rounded-t-2xl flex flex-col"
+            style={{ 
+              backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
+              maxHeight: '90vh',
+              height: 'auto'
+            }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex-shrink-0 flex items-center justify-between p-6 pb-4 border-b" style={{ borderColor: theme === 'light' ? '#e5e7eb' : '#1e293b' }}>
+            {/* Drag Handle */}
+            <div className="flex-shrink-0 pt-3 pb-2 flex justify-center">
+              <div 
+                className="w-12 h-1.5 rounded-full"
+                style={{ backgroundColor: theme === 'light' ? '#d1d5db' : '#334155' }}
+              />
+            </div>
+
+            <div className="flex-shrink-0 flex items-center justify-between px-6 pb-4 border-b" style={{ borderColor: theme === 'light' ? '#e5e7eb' : '#1e293b' }}>
               <h3
                 className="text-lg font-semibold"
                 style={{ color: theme === 'light' ? '#111827' : '#f1f5f9' }}
@@ -436,14 +478,22 @@ export function MapFilters({
               <button
                 onClick={() => setIsMobileFiltersOpen(false)}
                 style={{ color: theme === 'light' ? '#6b7280' : '#94a3b8' }}
-                className="hover:opacity-80 transition-opacity"
+                className="hover:opacity-80 transition-opacity -mr-2"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
             </div>
-            <div className="flex-1 min-h-0 p-6 pt-4">
+            
+            {/* Scrollable content with touch optimization */}
+            <div 
+              className="flex-1 min-h-0 p-6 pt-4 overflow-y-auto overscroll-contain"
+              style={{
+                WebkitOverflowScrolling: 'touch', // Smooth iOS scrolling
+                touchAction: 'pan-y' // Only allow vertical scrolling
+              }}
+            >
               <FiltersContent />
             </div>
           </div>

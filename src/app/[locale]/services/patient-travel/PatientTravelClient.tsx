@@ -100,19 +100,19 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
       </section>
 
       {/* Map Section */}
-      <section id="map" className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
-        <div className="container mx-auto px-6">
+      <section id="map" className="py-8 lg:py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
+        <div className="container mx-auto lg:px-6">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-6 lg:mb-8 px-6">
               <h2
-                className="font-display text-3xl md:text-4xl font-semibold mb-4"
+                className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 lg:mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
               >
                 {dict.map.title}
               </h2>
               <p
-                className="text-lg max-w-2xl mx-auto"
+                className="text-base lg:text-lg max-w-2xl mx-auto"
                 style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
               >
                 {dict.map.subtitle}
@@ -121,9 +121,11 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
 
             {/* Map Container */}
             <div
-              className="flex flex-col lg:flex-row gap-0 rounded-xl overflow-hidden"
+              className="flex flex-col lg:flex-row gap-0 lg:rounded-xl overflow-hidden relative"
               style={{
-                height: '700px',
+                height: 'calc(100vh - 180px)', // Mobile-friendly: responsive height
+                minHeight: '500px',
+                maxHeight: '900px',
                 backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a',
                 border: `1px solid ${theme === 'light' ? '#e5e7eb' : '#1e293b'}`,
                 boxShadow: theme === 'light' ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' : 'none'
