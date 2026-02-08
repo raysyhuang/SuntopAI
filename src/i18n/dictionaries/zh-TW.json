@@ -1910,9 +1910,16 @@
         "filters": {
           "allProvinces": "全部省份",
           "allTypes": "全部類型",
-          "directOnly": "僅直營中心",
-          "partnerOnly": "僅合作醫院",
-          "searchPlaceholder": "搜尋城市或中心名稱"
+          "directOnly": "直營中心",
+          "partnerOnly": "合作醫院",
+          "searchPlaceholder": "搜尋城市或中心名稱",
+          "filterTitle": "篩選中心",
+          "clearFilters": "清除篩選",
+          "centersCount": "個中心",
+          "provincesSelected": "個省份已選",
+          "filterButton": "篩選",
+          "centerList": "中心列表",
+          "tourismNearby": "周邊旅遊"
         },
         "legend": {
           "direct": "直營中心",

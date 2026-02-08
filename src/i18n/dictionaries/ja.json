@@ -1910,9 +1910,16 @@
         "filters": {
           "allProvinces": "すべての省",
           "allTypes": "すべてのタイプ",
-          "directOnly": "直営センターのみ",
-          "partnerOnly": "提携病院のみ",
-          "searchPlaceholder": "都市またはセンター名を検索"
+          "directOnly": "直営センター",
+          "partnerOnly": "提携病院",
+          "searchPlaceholder": "都市またはセンター名を検索",
+          "filterTitle": "センター絞り込み",
+          "clearFilters": "フィルターをクリア",
+          "centersCount": "センター",
+          "provincesSelected": "省が選択済み",
+          "filterButton": "絞り込み",
+          "centerList": "センター一覧",
+          "tourismNearby": "周辺観光"
         },
         "legend": {
           "direct": "直営センター",

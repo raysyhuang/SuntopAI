@@ -1791,9 +1791,16 @@
         "filters": {
           "allProvinces": "全部省份",
           "allTypes": "全部类型",
-          "directOnly": "仅直营中心",
-          "partnerOnly": "仅合作医院",
-          "searchPlaceholder": "搜索城市或中心名称"
+          "directOnly": "直营中心",
+          "partnerOnly": "合作医院",
+          "searchPlaceholder": "搜索城市或中心名称",
+          "filterTitle": "筛选中心",
+          "clearFilters": "清除筛选",
+          "centersCount": "个中心",
+          "provincesSelected": "个省份已选",
+          "filterButton": "筛选",
+          "centerList": "中心列表",
+          "tourismNearby": "周边旅游"
         },
         "legend": {
           "direct": "直营中心",

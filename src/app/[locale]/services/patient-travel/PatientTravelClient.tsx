@@ -48,6 +48,9 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
     provinces,
     hasActiveFilters
   } = useMapFilters(centers)
+  
+  // State for selected center (to focus on map)
+  const [selectedCenterId, setSelectedCenterId] = useState<string | null>(null)
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#020617' }}>
@@ -82,21 +85,16 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
               {dict.hero.subtitle}
             </p>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
-              {dict.hero.features.map((feature: string, index: number) => (
-                <div
-                  key={index}
-                  className={`px-6 py-4 rounded-lg text-sm ${
-                    theme === 'dark'
-                      ? 'bg-slate-800/50 border border-slate-700/50 text-slate-300'
-                      : 'bg-white shadow-sm text-gray-700'
-                  }`}
-                >
-                  {feature}
-                </div>
-              ))}
-            </div>
+            {/* CTA Button */}
+            <a
+              href="#map"
+              className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-white rounded-lg font-medium transition-colors"
+            >
+              {dict.cta.button}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -144,6 +142,9 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
                 hasActiveFilters={hasActiveFilters}
                 resultCount={filteredCenters.length}
                 dictionary={dict}
+                filteredCenters={filteredCenters}
+                locale={locale}
+                onCenterClick={setSelectedCenterId}
               />
 
               {/* Map - z-0 creates stacking context so Leaflet z-indexes stay contained */}
@@ -161,7 +162,13 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
                   </div>
                 ) : (
                   <>
-                    <CentersMap centers={filteredCenters} isDarkTheme={theme === 'dark'} locale={locale} />
+                    <CentersMap 
+                      centers={filteredCenters} 
+                      isDarkTheme={theme === 'dark'} 
+                      locale={locale}
+                      selectedCenterId={selectedCenterId}
+                      onCenterSelect={setSelectedCenterId}
+                    />
                     <MapLegend dictionary={dict} />
                   </>
                 )}
@@ -226,35 +233,6 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2
-              className="font-display text-3xl md:text-4xl font-semibold mb-4"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {dict.cta.title}
-            </h2>
-            <p
-              className="text-lg mb-8"
-              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-            >
-              {dict.cta.description}
-            </p>
-            <a
-              href="#map"
-              className="btn-primary inline-flex items-center gap-2 px-8 py-3 text-white rounded-lg font-medium transition-colors"
-            >
-              {dict.cta.button}
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </a>
           </div>
         </div>
       </section>

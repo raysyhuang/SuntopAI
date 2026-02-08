@@ -1,7 +1,7 @@
 import type { Center } from '@/types/center'
 
 // Creates HTML string for Leaflet popup (always white background, use dark text)
-export function createPopupContent(center: Center): string {
+export function createPopupContent(center: Center, locale: string = 'zh-CN'): string {
   const typeBadgeStyle = center.type === 'direct'
     ? 'background:rgba(0,125,115,0.1);color:#007d73;border:1px solid rgba(0,125,115,0.25)'
     : 'background:rgba(139,92,246,0.1);color:#7c3aed;border:1px solid rgba(139,92,246,0.25)'
@@ -9,7 +9,7 @@ export function createPopupContent(center: Center): string {
 
   const hasTourism = center.tourism && center.tourism.length > 0
 
-  let html = `<div style="padding:8px;font-family:Inter,system-ui,sans-serif">`
+  let html = `<div style="padding:8px;padding-right:28px;font-family:Inter,system-ui,sans-serif">`
 
   // Header
   html += `<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px">`
@@ -41,7 +41,7 @@ export function createPopupContent(center: Center): string {
 
   // Link to detail page
   if (center.type === 'direct' && center.slug) {
-    html += `<a href="/company/${center.slug}" style="font-size:0.875rem;color:#007d73;text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-weight:500">`
+    html += `<a href="/${locale}/company/${center.slug}?from=map" style="font-size:0.875rem;color:#007d73;text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-weight:500">`
     html += `查看详情`
     html += `<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>`
     html += `</a>`

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { ArrowLeft, MapPin, Phone, Ruler, CheckCircle, Building2 } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
@@ -56,6 +57,17 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
   }
   const { theme } = useTheme()
   const [activeGalleryItem, setActiveGalleryItem] = useState<{ src: string; alt: string } | null>(null)
+  const searchParams = useSearchParams()
+  const from = searchParams.get('from')
+  
+  // Determine back link based on where user came from
+  const backLink = from === 'map' 
+    ? `/${locale}/services/patient-travel#map` 
+    : `/${locale}/company/centers`
+  
+  const backLabel = from === 'map'
+    ? (dictionary.services?.patientTravel?.map?.title || '返回地图')
+    : centerLabels.backToList
 
   // Close lightbox on escape key
   useEffect(() => {
@@ -92,12 +104,12 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
           >
             <motion.div variants={fadeInUp} className="mb-6">
               <Link 
-                href={`/${locale}/company#centers`}
+                href={backLink}
                 className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
                 style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}
               >
                 <ArrowLeft className="w-4 h-4" />
-                {centerLabels.backToList}
+                {backLabel}
               </Link>
             </motion.div>
             
