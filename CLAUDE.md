@@ -112,6 +112,11 @@ Located in `src/components/`:
 - `StructuredData.tsx` - JSON-LD for SEO
 - `ThemeProvider.tsx` - Theme context
 - `LegalPageClient.tsx` - Reusable legal page layout (privacy, terms, compliance)
+- `map/CentersMap.tsx` - Leaflet map with theme-aware tiles (CartoDB for en/ja, OSM for zh-CN/zh-TW)
+- `map/MarkerCluster.tsx` - Marker clustering using leaflet.markercluster (imperative, not React wrapper)
+- `map/MapPopup.tsx` - HTML string popup generator (always dark text on white Leaflet popup)
+- `map/MapFilters.tsx` - Province/type/search filters with dictionary-driven labels
+- `map/MapLegend.tsx` - Map legend overlay
 
 ### Styling & Design System
 
@@ -126,35 +131,74 @@ Located in `src/components/`:
 
 **This is the most critical constraint in the codebase.**
 
+**Audience**: nephrologists, hospital directors, regulators, medical investors. Tone must be professional, calm, precise. No internal jargon, shorthand, or engineering slang. Priority: **safety > clarity > elegance**.
+
 When editing any medical/clinical content (web copy, i18n dictionaries, marketing text):
 
-### Apply clinical-regulatory-i18n skill requirements
+### Non-negotiable rules
 
-See `.cursor/skills/clinical-regulatory-i18n/` for full documentation.
+#### 1) Clinical augmentation only (never autonomous)
 
-**Non-negotiable rules:**
+The system **supports** clinicians; it does not act as a clinician.
 
-1. **Clinical augmentation only** - system supports/assists clinicians, never acts autonomously
-   - ✅ "clinical decision support", "assist clinical judgment", "early warning", "treatment suggestion (for reference)"
-   - ❌ "diagnose", "AI decides", "autonomous treatment", "AI controls dialysis", "guarantees outcomes"
+**Preferred (safe) phrasing:**
+- "clinical decision support"
+- "assist clinical judgment"
+- "provide risk explanation / risk factors"
+- "early warning / early risk warning"
+- "treatment suggestion (for reference; clinician confirmation required)"
+- "workflow guidance / care pathway reference"
 
-2. **Regulatory-safe language**
-   - Conservative, clinically accepted phrasing
-   - No black-box framing ("unknown logic but accurate")
-   - No exaggerated claims or marketing buzzwords
+**Hard-banned words/phrases** (rewrite immediately if present):
+- "diagnose/diagnosis (autonomously)", "treat/treatment (autonomously)", "prescribe", "order", "execute medical orders"
+- "AI decides", "AI determines the regimen", "AI controls dialysis", "automatic treatment"
+- "fully replaces physicians/nurses", "autonomous"
+- "guarantees outcomes", "zero risk", "eliminates errors"
+- "black-box", "unknown logic but accurate"
 
-3. **zh-CN.json is semantic master**
-   - Edit meaning in `zh-CN.json` first
-   - Propagate same meaning to `en.json`, `ja.json`, `zh-TW.json`
-   - Never introduce new concepts in non-Chinese files
+**Safe rewrite templates:**
+- "The system provides **clinical decision support** for …"
+- "The system **assists clinicians** in reviewing … and **explains risk factors** …"
+- "The system provides **early risk warning** signals based on …; **final decisions remain with clinicians**."
+- "Suggested actions are **for reference** and require clinician confirmation."
 
-4. **Terminology consistency**
-   - Use canonical mappings from `.cursor/skills/clinical-regulatory-i18n/GLOSSARY.md`
-   - Examples: 临床决策支持 → Clinical Decision Support, 辅助判断 → Assist clinical judgment
+#### 2) zh-CN.json is the semantic source of truth
 
-5. **QA checklist**
-   - Run checks from `.cursor/skills/clinical-regulatory-i18n/QA_CHECKLIST.md`
-   - Verify no autonomy language, no regulatory exaggeration, semantic alignment across languages
+- Edit meaning in `zh-CN.json` first
+- Propagate same meaning to `en.json`, `ja.json`, `zh-TW.json`
+- Never introduce new concepts in non-Chinese files
+- Never rename, remove, add, re-order, or restructure JSON keys — only modify string values
+
+#### 3) Terminology glossary (canonical mappings)
+
+| zh-CN | English | zh-TW | Japanese | Notes |
+|-------|---------|-------|----------|-------|
+| 临床决策支持 | Clinical Decision Support | 臨床決策支持 | 臨床意思決定支援 | Avoid "clinical decision making by AI" |
+| 辅助判断 | Assist clinical judgment | 輔助判斷 | 臨床判断を補助 | Keep clinician-in-the-loop |
+| 质控模块 | Quality Control Module | 質控模組 | 品質管理モジュール | Prefer "quality management" in medical context |
+| 风险预警 | Early risk warning | 風險預警（早期） | リスクの早期警告 | Avoid "predicts with certainty" |
+
+Do not invent new terminology mappings — use the table above or extend it explicitly.
+
+### QA checklist (run on every medical/i18n edit)
+
+**Safety / regulatory (must pass):**
+- [ ] No claims of autonomous diagnosis, treatment, prescribing, or executing medical orders
+- [ ] No wording implying AI replaces physicians or "decides" treatment independently
+- [ ] No exaggerated claims (guaranteed outcomes, zero risk, eliminates errors)
+- [ ] AI capabilities described as clinical decision support only
+- [ ] Any "suggestion/recommendation" framed as **for reference** with clinician confirmation
+
+**Multilingual consistency (must pass):**
+- [ ] `zh-CN.json` updated first as semantic source of truth
+- [ ] `en.json`, `ja.json`, `zh-TW.json` match exact meaning and intent
+- [ ] No concept exists in other languages that is absent from `zh-CN.json`
+- [ ] Terminology aligns with glossary table above
+
+**JSON integrity (must pass):**
+- [ ] No key renames, removals, additions, or restructuring
+- [ ] Only string values changed
+- [ ] JSON remains valid
 
 ### Editing i18n dictionaries workflow
 
@@ -162,7 +206,7 @@ See `.cursor/skills/clinical-regulatory-i18n/` for full documentation.
 2. Keep same keys and structure (no add/remove/reorder)
 3. Update `en.json`, `ja.json`, `zh-TW.json` with exact same meaning
 4. Ensure valid JSON output
-5. Run QA checklist
+5. Run QA checklist above
 
 ## Security & Performance
 
@@ -222,8 +266,11 @@ All pages under `src/app/[locale]/`:
 - `/platform` - Platform architecture - `PlatformClient.tsx`
 - `/clinical/*` - Clinical applications (patient-care, vascular-access)
 - `/deployment` - Integration and deployment - `DeploymentClient.tsx`
-- `/services` - Service offerings
+- `/services` - Service offerings (3x3 grid)
+- `/services/patient-travel` - Interactive Leaflet map with 150+ dialysis centers
 - `/company` - About, mission, values
+- `/company/[slug]` - Individual center detail pages with tourism galleries
+- `/company/centers` - All centers listing
 - `/news` - News listing and individual articles (`/news/[slug]`)
 - `/contact` - Contact form - `ContactClient.tsx`
 - `/privacy`, `/terms`, `/compliance` - Legal pages (use `LegalPageClient.tsx`)
@@ -242,6 +289,14 @@ From README.md - **institutional tone suitable for hospitals, investors, regulat
 - Main branch: `main`
 - Recent commits show focus on performance (image optimization), SEO, legal pages, i18n
 - Follow existing commit style: descriptive, action-oriented messages
+
+## Deployment
+
+- Hosted on **Heroku** (heroku/nodejs buildpack, Heroku-24 stack)
+- Node engine: `20.x` (specified in `package.json`)
+- Heroku runs `npm install` (strict peer deps) then `npm run build`
+- **No `--legacy-peer-deps`** — all dependencies must have compatible peer deps
+- Use `leaflet.markercluster` (not `react-leaflet-cluster`) to avoid peer conflicts with react-leaflet v4
 
 ## Common Pitfalls
 
