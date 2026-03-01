@@ -18,6 +18,14 @@ dist
 .DS_Store
 *.pem
 
+# Debug screenshots (root-level only, not public/ or src/)
+/*.png
+/*.jpg
+/*.jpeg
+
+# Playwright MCP artifacts
+.playwright-mcp/
+
 # Debug
 npm-debug.log*
 yarn-debug.log*

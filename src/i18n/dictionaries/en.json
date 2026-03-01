@@ -342,6 +342,22 @@
             }
           ],
           "aiHighlight": "AI calculation + direct device capture, full tracking and trend analysis of four indicators"
+        },
+        "qualityControl": {
+          "title": "Quality Control Module",
+          "subtitle": "Structured, visual continuous quality management",
+          "description": "The system automatically aggregates lab results, treatment parameters, and key process indicators into a structured, visual quality control database for dialysis quality assessment, issue tracking, and continuous improvement.",
+          "features": [
+            {
+              "title": "Automated Data Aggregation",
+              "description": "Automatically collects and integrates lab results, dialysis parameters, vital signs, and other multi-dimensional data to build a structured quality control database."
+            },
+            {
+              "title": "Visual QC Dashboard",
+              "description": "Presents quality indicators through charts and trend analysis, supporting rapid issue identification and continuous improvement."
+            }
+          ],
+          "aiHighlight": "Automated quality control data aggregation, supporting standardized execution and continuous improvement"
         }
       }
     },
@@ -450,28 +466,6 @@
         "button": "Contact Us"
       }
     },
-    "differentiators": {
-      "title": "Our Platform's Advantages",
-      "description": "Technical and strategic advantages built for long-term dialysis transformation.",
-      "items": [
-        {
-          "title": "Dialysis-Native Focus",
-          "description": "Built specifically for dialysis, not adapted from generic healthcare AI."
-        },
-        {
-          "title": "Deep Integration",
-          "description": "Machine-level and workflow-level connectivity across the care continuum."
-        },
-        {
-          "title": "Clinical Guardrails",
-          "description": "Automation with safety-first design, not black-box AI."
-        },
-        {
-          "title": "Scale-Ready",
-          "description": "Designed for multi-center networks, not single-site pilots."
-        }
-      ]
-    },
     "clinicalApplications": {
       "tag": "Use Cases",
       "title": "Platform Use Cases",
@@ -530,52 +524,6 @@
     "tag": "Clinical Applications",
     "title": "AI-Enabled Refined Management",
     "subtitle": "Comprehensive dialysis center management through AI platform, ensuring medical quality, operational efficiency, and patient satisfaction.",
-    "apps": {
-      "inCenter": {
-        "title": "In-Center Hemodialysis",
-        "description": "Real-time monitoring and AI-powered alerts for safer dialysis sessions.",
-        "outcomes": [
-          "Continuous monitoring during treatment",
-          "Real-time alerts for instability",
-          "Reduced intradialytic adverse events",
-          "Improved consistency across shifts"
-        ],
-        "before": "Periodic manual checks, reactive intervention after events occur",
-        "after": "Continuous AI monitoring with proactive alerts before complications",
-        "aiRole": "Continuous analysis of vital signs and machine parameters to detect early warning signs and trigger proactive interventions."
-      },
-      "networked": {
-        "title": "Networked Dialysis Centers",
-        "description": "Centralized oversight and standardized quality across multiple sites.",
-        "outcomes": [
-          "Centralized oversight across multiple sites",
-          "Standardized treatment quality",
-          "Scalable operations without loss of control",
-          "Support for regional or national networks"
-        ],
-        "before": "Siloed centers with variable quality and no unified oversight",
-        "after": "Unified platform enabling real-time visibility and standardization",
-        "aiRole": "Aggregated intelligence across all connected centers to identify patterns, benchmark performance, and ensure consistent care delivery."
-      },
-      "decision": {
-        "title": "Physician Decision Support",
-        "description": "Data-driven insights to support clinical decision-making.",
-        "outcomes": [
-          "Longitudinal patient trend analysis",
-          "Data-driven dry weight and UF insights",
-          "Reduced cognitive load during busy shifts",
-          "Objective support for clinical decisions"
-        ],
-        "before": "Manual review of scattered data, experience-dependent decisions",
-        "after": "AI-synthesized insights with trend analysis and risk stratification",
-        "aiRole": "Synthesizing multi-session patient data into actionable insights for treatment optimization and risk stratification."
-      }
-    },
-    "beforeAfter": {
-      "before": "Before",
-      "after": "After"
-    },
-    "aiRoleLabel": "AI's Role",
     "statement": {
       "title": "Clinical Augmentation, Not Replacement",
       "description": "Our platform is designed to augment clinical expertise, not replace it. Every AI recommendation and automated action is built with clinical guardrails, transparency, and physician oversight as core design principles.",
