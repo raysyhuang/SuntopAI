@@ -6,6 +6,16 @@
 @import 'leaflet/dist/leaflet.css';
 
 @layer base {
+  /* Prevent horizontal scroll on mobile */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   /* Dark Theme (Default) */
   :root, .dark {
     --background: 10 15 26;
