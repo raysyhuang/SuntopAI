@@ -10,13 +10,68 @@
     "contact": "Contact"
   },
   "home": {
-    "tag": "Smart Dialysis Platform",
+    "tag": "Digital Hemodialysis Center",
     "hero": {
-      "title1": "AI-Driven",
-      "title2": "Smart Dialysis",
-      "subtitle": "Making Every Dialysis Treatment Safer",
-      "description": "From assisted to autonomous — through IoT data collection, specialized AI engine, and real-time clinical decision support, we transform dialysis from experience-driven to data-driven.",
-      "stats": "50+ Centers Deployed | 3000+ Dialysis Machines | Evidence-Based Medicine"
+      "title1": "The real-time operating layer",
+      "title2": "for dialysis centers",
+      "subtitle": "Connect treatment devices, support infrastructure, environment, and clinical data into one risk-control operating layer.",
+      "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
+      "stats": "50+ smart dialysis centers | 3000+ connected machines | Cloud / local / hybrid deployment",
+      "badges": [
+        "Whole-center IoT",
+        "AI risk control",
+        "Asset performance",
+        "Flexible deployment"
+      ],
+      "panel": {
+        "label": "Center Operating View",
+        "title": "One view for dialysis-center operations",
+        "rows": [
+          {
+            "label": "Connected scope",
+            "value": "Devices + environment + support systems"
+          },
+          {
+            "label": "Risk model",
+            "value": "Before / during / after treatment"
+          },
+          {
+            "label": "Alarm strategy",
+            "value": "9 machine + 20+ dynamic rules"
+          },
+          {
+            "label": "Deployment",
+            "value": "Cloud / local / hybrid"
+          }
+        ],
+        "mapTitle": "Digital dialysis-center topology",
+        "mapStatus": "Live sync",
+        "mapRows": [
+          "Dialysis machines + bedside terminals",
+          "Water / fluid / power systems",
+          "Environment + hospital systems"
+        ],
+        "alarmTitle": "Risk Control Center",
+        "alarmDescription": "Machine alarms, vital signs, four-item monitoring, and historical trends are combined into a traceable risk-control loop."
+      },
+      "metrics": [
+        {
+          "value": "50+",
+          "label": "Smart dialysis centers"
+        },
+        {
+          "value": "3000+",
+          "label": "Connected machines"
+        },
+        {
+          "value": "9 + 20+",
+          "label": "Core and dynamic alarms"
+        },
+        {
+          "value": "4 items",
+          "label": "Model-based monitoring"
+        }
+      ]
     },
     "cta": {
       "explore": "Explore Platform",
@@ -26,55 +81,55 @@
     },
     "pillars": {
       "tag": "Core Capabilities",
-      "title": "Complete Closed-Loop from Data Source to Clinical Decision",
-      "description": "Starting from the data source, we've built a complete chain from data collection, analysis, evaluation, recommendations to real-time feedback.",
+      "title": "From device data to clinical and operational closed loops",
+      "description": "Whole-center IoT becomes the foundation for data capture, AI analysis, alarm escalation, bedside execution, and quality-control review.",
       "iot": {
-        "title": "IoT Data Infrastructure",
-        "description": "Full IoT integration of dialysis machines, BP monitors, scales and core dialysis room equipment. 3,000+ dialysis machines connected with high-frequency data streaming every minute.",
+        "title": "Whole-center IoT data infrastructure",
+        "description": "Connect dialysis machines, bedside terminals, vital-sign devices, support systems, environmental sensors, and hospital systems into a center-level real-time data layer.",
         "features": [
-          "3,000+ devices connected",
-          "HIS/LIS/EMR integration",
-          "Structured clinical data pipeline"
+          "Machines and bedside terminals",
+          "Water / fluid / power / environment",
+          "HIS/LIS/EMR integration"
         ]
       },
       "ai": {
-        "title": "Dialysis-Specific AI Engine",
-        "description": "Customized LLM trained on dialysis clinical data, combined with AI Agent for IDH prediction, UF rate optimization, and dry weight assessment.",
+        "title": "Dialysis-specific AI and risk models",
+        "description": "Build models around IDH, UF tolerance, dry weight, four-item monitoring, and alarm review while keeping clinical explainability and physician oversight central.",
         "features": [
-          "IDH risk prediction",
-          "UF rate optimization",
-          "Dry weight trending"
+          "IDH risk warning",
+          "UF and volume management",
+          "Four-item monitoring models"
         ]
       },
       "automation": {
-        "title": "Real-Time Clinical Decision Support",
-        "description": "Continuous intradialytic monitoring with alerts for BP trends, UF tolerance, access flow, and Kt/V adequacy. Prescription adjustment recommendations integrated into physician workflow.",
+        "title": "Bedside loop and operational control",
+        "description": "Bring alerts, order confirmation, supply checks, quality metrics, and asset performance into one execution loop to reduce manual switching and missed steps.",
         "features": [
-          "Intradialytic BP analysis",
-          "UF & volume management",
-          "Adequacy monitoring (Kt/V)"
+          "Bedside terminal workflow",
+          "Alarm escalation loop",
+          "Asset performance management"
         ]
       }
     },
     "flow": {
-      "title": "Device → Data → AI → Clinical Action",
-      "description": "Real-time data streaming every minute from dialysis machines, integrated with BP monitors, weight scales, and lab results. AI engine analyzes intradialytic trends and delivers actionable alerts directly into physician workflow.",
+      "title": "Center devices → Data platform → AI center → Clinical and operational action",
+      "description": "Continuous data from treatment devices and center infrastructure enters a unified data platform, is analyzed by the AI risk center, and is pushed into bedside, central monitoring, quality-control, and management workflows.",
       "steps": {
         "machines": {
-          "label": "Dialysis Machines",
-          "sublabel": "BP, UF, Blood Flow"
+          "label": "Center devices",
+          "sublabel": "Dialysis / water / environment"
         },
         "data": {
-          "label": "Clinical Data Lake",
-          "sublabel": "Labs, Vitals, Rx"
+          "label": "Data platform",
+          "sublabel": "Hospital systems + device streams"
         },
         "ai": {
-          "label": "AI Analytics",
-          "sublabel": "IDH, UF, Kt/V"
+          "label": "AI risk center",
+          "sublabel": "Predict / assess / review"
         },
         "automation": {
-          "label": "Clinical Alerts",
-          "sublabel": "Real-time CDSS"
+          "label": "Closed-loop action",
+          "sublabel": "Bedside / physician / QC"
         }
       }
     },
@@ -187,8 +242,134 @@
       }
     },
     "finalCta": {
-      "title": "Already Deployed, Not Just a Concept",
-      "description": "Currently deployed across 30+ self-operated centers, 100+ partner centers, with 50+ upgraded to smart dialysis centers and 3,000+ connected dialysis machines. This is a system validated by real clinical practice."
+      "title": "Not a single software product: a digital dialysis-center solution",
+      "description": "Unify dialysis IoT, AI risk control, bedside closed loops, and asset performance in one operating layer for safer, more traceable center operations."
+    },
+    "center": {
+      "tag": "Digital Center Foundation",
+      "title": "From connected dialysis machines to coordinated center operations",
+      "description": "A dialysis center reaches beyond the dialysis machine. Water treatment, centralized fluid supply, electrical and environmental systems, blood pressure and ultrasound devices, hospital IT, and bedside terminals all feed into the same data layer — a unified, traceable view of how the center operates.",
+      "systems": {
+        "dialysis": {
+          "title": "Dialysis treatment devices",
+          "description": "Connect dialysis machines, BP, weight, four-item monitoring, and bedside terminals into a real-time treatment data foundation."
+        },
+        "infrastructure": {
+          "title": "Support infrastructure",
+          "description": "Bring water treatment, centralized fluid supply, power, air disinfection, and environmental sensors out of manual inspection silos."
+        },
+        "bedside": {
+          "title": "Bedside execution terminal",
+          "description": "Move order checks, supply matching, priming guidance, confirmations, and risk prompts to the machine side."
+        },
+        "operations": {
+          "title": "Operations and quality control",
+          "description": "Unify asset performance, alarm review, quality metrics, and multi-center oversight in one operating view."
+        }
+      },
+      "operatingLayer": {
+        "title": "Software + hardware + data services as one solution",
+        "description": "One digital foundation supports connectivity, monitoring, AI analysis, bedside execution, quality control, and remote management, reducing duplicated entry and delayed response across fragmented systems.",
+        "items": [
+          "Device access",
+          "Data middle platform",
+          "AI risk center",
+          "Bedside loop",
+          "Asset performance",
+          "Multi-center oversight"
+        ]
+      }
+    },
+    "preview": {
+      "tag": "Live operations",
+      "title": "The center, in one live view",
+      "description": "Every chair, every treatment, every response — consolidated into a single shared view that helps nurses and charge staff coordinate in real time.",
+      "dashboard": {
+        "title": "Center operations · Suntop AI",
+        "status": "Live",
+        "patientLabel": "Patient",
+        "alertsLabel": "In progress",
+        "statuses": {
+          "active": "Active",
+          "prep": "Prep",
+          "done": "Done",
+          "alert": "Alert"
+        },
+        "alerts": [
+          "M-03 · Downward BP trend — nurse has been notified to review",
+          "M-06 · Ultrafiltration tolerance confirmed — proceeding on prescription",
+          "M-01 · Recommend re-checking consumable match and anticoagulation"
+        ],
+        "stationCount": "52",
+        "stationLabel": "Stations live",
+        "riskLoop": [
+          "Before",
+          "During",
+          "After"
+        ],
+        "proof": [
+          {
+            "value": "9",
+            "label": "machine alarm groups"
+          },
+          {
+            "value": "20+",
+            "label": "dynamic rules"
+          },
+          {
+            "value": "5s",
+            "label": "data interval"
+          }
+        ],
+        "operationsLabel": "Operations pulse",
+        "operations": [
+          {
+            "label": "Chair utilization",
+            "value": "86%"
+          },
+          {
+            "label": "Equipment uptime",
+            "value": "99.2%"
+          },
+          {
+            "label": "Open reviews",
+            "value": "12"
+          }
+        ]
+      }
+    },
+    "risk": {
+      "tag": "Risk Control Center",
+      "title": "Move from seeing abnormalities to handling risks earlier",
+      "description": "Risk control across the full dialysis workflow — pre-treatment preparation, dynamic warning during treatment, and post-treatment review — giving clinical teams the information to identify and address risk at every stage.",
+      "stages": {
+        "before": {
+          "title": "Before treatment",
+          "description": "Verify patient, prescription, supplies, anticoagulation, and priming steps to reduce preparation mismatch risk."
+        },
+        "during": {
+          "title": "During treatment",
+          "description": "Combine BP trends, UF tolerance, machine status, four-item monitoring, and dynamic alarms so nurses can intervene earlier."
+        },
+        "after": {
+          "title": "After treatment",
+          "description": "Capture alarms, interventions, indicator changes, and quality-control outcomes for physician review and center improvement."
+        }
+      },
+      "alarmTitle": "9 machine alarms + 20+ dynamic/custom alarms",
+      "alarmDescription": "Core dialysis-machine alarms are combined with configurable workflow rules, risk thresholds, and patient profiles so teams can tune escalation logic without losing traceability.",
+      "alarms": [
+        "BP trends",
+        "UF tolerance",
+        "Blood volume",
+        "Blood temperature",
+        "Kt/V",
+        "Water treatment",
+        "Fluid supply",
+        "Power status",
+        "Environment",
+        "Order confirmation"
+      ]
     }
   },
   "platform": {

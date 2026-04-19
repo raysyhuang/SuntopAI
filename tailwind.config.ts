@@ -40,7 +40,27 @@ const config: Config = {
           700: '#404040',
           800: '#262626',
           900: '#171717',
-        }
+        },
+        // Institutional navy — Stripe-adapted heading and dark-section color
+        ink: {
+          50: '#f4f6f9',
+          100: '#e5edf5',
+          200: '#cdd8e6',
+          300: '#9fb0c4',
+          400: '#64748d',
+          500: '#3f506a',
+          600: '#273951',
+          700: '#1a2a42',
+          800: '#0d1d33',
+          900: '#061b31',
+          950: '#0b1624',
+        },
+      },
+      boxShadow: {
+        'stripe-sm': '0 1px 2px rgba(15, 76, 70, 0.06), 0 1px 3px rgba(6, 27, 49, 0.05)',
+        'stripe-md': '0 6px 16px -4px rgba(15, 76, 70, 0.08), 0 2px 6px -2px rgba(6, 27, 49, 0.05)',
+        'stripe-lg': '0 30px 45px -30px rgba(15, 76, 70, 0.18), 0 18px 36px -18px rgba(6, 27, 49, 0.12)',
+        'stripe-ring': '0 0 0 1px rgba(6, 27, 49, 0.06), 0 1px 2px rgba(6, 27, 49, 0.04)',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
