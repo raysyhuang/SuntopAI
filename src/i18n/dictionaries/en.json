@@ -381,64 +381,6 @@
         }
       }
     },
-    "dashboard": {
-      "tag": "Live operations",
-      "title": "The center, in one live view",
-      "description": "Every chair, every treatment, every response — consolidated into a single shared view that helps nurses and charge staff coordinate in real time.",
-      "dashboard": {
-        "title": "Center operations · Suntop AI",
-        "status": "Live",
-        "patientLabel": "Patient",
-        "alertsLabel": "In progress",
-        "statuses": {
-          "active": "Active",
-          "prep": "Prep",
-          "done": "Done",
-          "alert": "Alert"
-        },
-        "alerts": [
-          "M-03 · Downward BP trend — nurse has been notified to review",
-          "M-06 · Ultrafiltration tolerance confirmed — proceeding on prescription",
-          "M-01 · Recommend re-checking consumable match and anticoagulation"
-        ],
-        "stationCount": "52",
-        "stationLabel": "Stations live",
-        "riskLoop": [
-          "Before",
-          "During",
-          "After"
-        ],
-        "proof": [
-          {
-            "value": "9",
-            "label": "machine alarm groups"
-          },
-          {
-            "value": "20+",
-            "label": "dynamic rules"
-          },
-          {
-            "value": "5s",
-            "label": "data interval"
-          }
-        ],
-        "operationsLabel": "Operations pulse",
-        "operations": [
-          {
-            "label": "Chair utilization",
-            "value": "86%"
-          },
-          {
-            "label": "Equipment uptime",
-            "value": "99.2%"
-          },
-          {
-            "label": "Open reviews",
-            "value": "12"
-          }
-        ]
-      }
-    },
     "monitoringSystem": {
       "centralMonitoring": {
         "tag": "Central Monitoring System",

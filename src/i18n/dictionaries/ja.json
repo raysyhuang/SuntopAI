@@ -381,64 +381,6 @@
         }
       }
     },
-    "dashboard": {
-      "tag": "リアルタイム運用",
-      "title": "中心の稼働状況を一画面で把握",
-      "description": "各ベッド、各治療の進行状況、各対応メモを同一のビューに集約し、看護師と管理者のリアルタイムな協働を支援します。",
-      "dashboard": {
-        "title": "中心運用 · Suntop AI",
-        "status": "ライブ同期",
-        "patientLabel": "患者",
-        "alertsLabel": "対応中",
-        "statuses": {
-          "active": "治療中",
-          "prep": "準備",
-          "done": "完了",
-          "alert": "早期警告"
-        },
-        "alerts": [
-          "M-03 · 血圧が下降傾向 — 看護師へ確認依頼を送信済み",
-          "M-06 · 限外ろ過耐性の評価完了 — 処方通りに進行",
-          "M-01 · 消耗品の整合性と抗凝固設定の再確認を推奨"
-        ],
-        "stationCount": "52",
-        "stationLabel": "ベッド稼働中",
-        "riskLoop": [
-          "事前予測",
-          "治療中通知",
-          "事後分析"
-        ],
-        "proof": [
-          {
-            "value": "9",
-            "label": "機器アラーム群"
-          },
-          {
-            "value": "20+",
-            "label": "動的ルール"
-          },
-          {
-            "value": "5秒",
-            "label": "データ間隔"
-          }
-        ],
-        "operationsLabel": "運用パルス",
-        "operations": [
-          {
-            "label": "ベッド稼働率",
-            "value": "86%"
-          },
-          {
-            "label": "機器稼働率",
-            "value": "99.2%"
-          },
-          {
-            "label": "未レビュー",
-            "value": "12"
-          }
-        ]
-      }
-    },
     "monitoringSystem": {
       "centralMonitoring": {
         "tag": "透析中央監視システム",

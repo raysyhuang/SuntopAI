@@ -422,64 +422,6 @@
         }
       }
     },
-    "dashboard": {
-      "tag": "实时运行",
-      "title": "一屏掌握中心的运行状态",
-      "description": "每一台机位、每一次治疗进度、每一条处置提示，集中在同一个视图里，辅助护士与调度主任协同决策。",
-      "dashboard": {
-        "title": "中心运行 · Suntop AI",
-        "status": "实时同步",
-        "patientLabel": "患者",
-        "alertsLabel": "正在处理",
-        "statuses": {
-          "active": "治疗中",
-          "prep": "准备",
-          "done": "完成",
-          "alert": "预警"
-        },
-        "alerts": [
-          "M-03 · 血压趋势偏低，已通知护士复核",
-          "M-06 · 超滤耐受评估完成，可按既定处方推进",
-          "M-01 · 建议复核耗材匹配与抗凝设定"
-        ],
-        "stationCount": "52",
-        "stationLabel": "机位在线",
-        "riskLoop": [
-          "事前预警",
-          "事中提醒",
-          "事后分析"
-        ],
-        "proof": [
-          {
-            "value": "9",
-            "label": "机台报警类"
-          },
-          {
-            "value": "20+",
-            "label": "动态规则"
-          },
-          {
-            "value": "5秒",
-            "label": "数据间隔"
-          }
-        ],
-        "operationsLabel": "运营脉搏",
-        "operations": [
-          {
-            "label": "机位利用率",
-            "value": "86%"
-          },
-          {
-            "label": "设备在线率",
-            "value": "99.2%"
-          },
-          {
-            "label": "待复盘事件",
-            "value": "12"
-          }
-        ]
-      }
-    },
     "monitoringSystem": {
       "centralMonitoring": {
         "tag": "透析中央监控系统",

@@ -10,7 +10,6 @@ import {
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
-import { CenterDashboard } from '@/components/ui/CenterDashboard'
 
 interface PlatformClientProps {
   locale: Locale
@@ -321,48 +320,9 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
         </section>
       )}
 
-      {/* Operations Dashboard Preview */}
-      {t.dashboard && (
-        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-3xl mb-10"
-            >
-              {t.dashboard.tag && (
-                <span className="label-tag mb-4 inline-block">{t.dashboard.tag}</span>
-              )}
-              <h2
-                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
-                style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
-              >
-                {t.dashboard.title}
-              </h2>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
-              >
-                {t.dashboard.description}
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-            >
-              <CenterDashboard dict={t.dashboard.dashboard} />
-            </motion.div>
-          </div>
-        </section>
-      )}
-
       {/* Monitoring System Section */}
       {t.monitoringSystem && (
-        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
+        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Central Monitoring Subsection */}
             {t.monitoringSystem.centralMonitoring && (
@@ -559,7 +519,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Cross Links */}
       {t.crossLinks && (
-        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-6">
               {[

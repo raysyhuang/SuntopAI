@@ -381,64 +381,6 @@
         }
       }
     },
-    "dashboard": {
-      "tag": "即時運行",
-      "title": "一屏掌握中心的運行狀態",
-      "description": "每一台機位、每一次治療進度、每一條處置提示，集中在同一個視圖裡，輔助護士與調度主任協同決策。",
-      "dashboard": {
-        "title": "中心運行 · Suntop AI",
-        "status": "即時同步",
-        "patientLabel": "患者",
-        "alertsLabel": "正在處理",
-        "statuses": {
-          "active": "治療中",
-          "prep": "準備",
-          "done": "完成",
-          "alert": "預警"
-        },
-        "alerts": [
-          "M-03 · 血壓趨勢偏低，已通知護士複核",
-          "M-06 · 超濾耐受評估完成，可按既定處方推進",
-          "M-01 · 建議複核耗材匹配與抗凝設定"
-        ],
-        "stationCount": "52",
-        "stationLabel": "機位在線",
-        "riskLoop": [
-          "事前預警",
-          "事中提醒",
-          "事後分析"
-        ],
-        "proof": [
-          {
-            "value": "9",
-            "label": "機台警報類"
-          },
-          {
-            "value": "20+",
-            "label": "動態規則"
-          },
-          {
-            "value": "5秒",
-            "label": "資料間隔"
-          }
-        ],
-        "operationsLabel": "營運脈搏",
-        "operations": [
-          {
-            "label": "機位利用率",
-            "value": "86%"
-          },
-          {
-            "label": "設備在線率",
-            "value": "99.2%"
-          },
-          {
-            "label": "待複盤事件",
-            "value": "12"
-          }
-        ]
-      }
-    },
     "monitoringSystem": {
       "centralMonitoring": {
         "tag": "透析中央監控系統",
