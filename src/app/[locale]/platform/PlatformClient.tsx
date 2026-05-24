@@ -10,6 +10,7 @@ import {
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import { CenterDashboard } from '@/components/ui/CenterDashboard'
 
 interface PlatformClientProps {
   locale: Locale
@@ -52,7 +53,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
   return (
     <div className="relative pt-20">
       {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
+      <section className="relative py-32 overflow-hidden" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
         {theme === 'dark' && (
           <>
             <div className="absolute inset-0 grid-pattern" />
@@ -73,14 +74,14 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
             <motion.h1
               variants={fadeInUp}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff', letterSpacing: '-0.025em' }}
+              style={{ color: theme === 'light' ? '#141413' : '#ffffff', letterSpacing: '-0.025em' }}
             >
               {t.title}
             </motion.h1>
             <motion.p
               variants={fadeInUp}
               className="text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto"
-              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+              style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
             >
               {t.subtitle}
             </motion.p>
@@ -91,7 +92,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               {[t.features.native, t.features.realtime, t.features.guardrails].map((feature, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#007d73' }} />
-                  <span className="text-sm font-medium" style={{ color: theme === 'light' ? '#1d1d1f' : '#a1a1aa' }}>{feature}</span>
+                  <span className="text-sm font-medium" style={{ color: theme === 'light' ? '#141413' : '#a1a1aa' }}>{feature}</span>
                 </div>
               ))}
             </motion.div>
@@ -101,7 +102,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Platform Use Cases Section - Simplified */}
       {t.clinicalApplications && (
-        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -111,11 +112,11 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
             >
               <span className="label-tag mb-4 inline-block">{t.clinicalApplications.tag}</span>
               <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
+                theme === 'dark' ? 'text-white' : '[color:#141413]'
               }`}>
                 {t.clinicalApplications.title}
               </h2>
-              <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+              <p className={`max-w-2xl mx-auto text-lg ${theme === 'dark' ? 'text-neutral-400' : '[color:#5e5d59]'}`}>
                 {t.clinicalApplications.description}
               </p>
             </motion.div>
@@ -131,15 +132,15 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                   className={`rounded-2xl p-6 ${
                     theme === 'dark' 
                       ? 'bg-slate-900/50 border border-slate-800' 
-                      : 'bg-gray-50 border border-gray-200'
+                      : 'bg-[#faf9f5] border border-[#f0eee6]'
                   }`}
                 >
                   <h3 className={`font-display text-xl font-semibold mb-3 ${
-                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    theme === 'dark' ? 'text-white' : '[color:#141413]'
                   }`}>
                     {app.title}
                   </h3>
-                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}`}>
+                  <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-400' : '[color:#5e5d59]'}`}>
                     {app.description}
                   </p>
                   
@@ -188,7 +189,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Core Modules Section */}
       {t.coreModules && (
-        <section id="data" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
+        <section id="data" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -199,13 +200,13 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               <span className="label-tag mb-4 inline-block">{t.coreModules.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
-                style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
               >
                 {t.coreModules.title}
               </h2>
               <p 
                 className="max-w-2xl mx-auto text-lg"
-                style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
               >
                 {t.coreModules.description}
               </p>
@@ -234,7 +235,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                         <div>
                           <h3 
                             className="font-display text-xl font-semibold"
-                            style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                            style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                           >
                             {module.title}
                           </h3>
@@ -243,7 +244,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       </div>
                       <p 
                         className="mb-6 leading-relaxed text-base"
-                        style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                        style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
                       >
                         {module.description}
                       </p>
@@ -253,19 +254,19 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                             key={featureIndex} 
                             className="rounded-xl p-4"
                             style={{ 
-                              backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)',
+                              backgroundColor: theme === 'light' ? '#f0eee6' : 'rgba(30,41,59,0.5)',
                               border: theme === 'light' ? 'none' : '1px solid rgba(51,65,85,0.5)'
                             }}
                           >
                             <h4 
                               className="font-medium mb-1"
-                              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                              style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                             >
                               {feature.title}
                             </h4>
                             <p 
                               className="text-sm"
-                              style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}
+                              style={{ color: theme === 'light' ? '#5e5d59' : '#94a3b8' }}
                             >
                               {feature.description}
                             </p>
@@ -288,7 +289,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       <div 
                         className="aspect-video rounded-2xl overflow-hidden"
                         style={{ 
-                          backgroundColor: theme === 'light' ? '#f5f5f7' : '#1e293b',
+                          backgroundColor: theme === 'light' ? '#f0eee6' : '#1e293b',
                           boxShadow: theme === 'light' ? '0 4px 20px rgba(0,0,0,0.08)' : 'none',
                           border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                         }}
@@ -306,7 +307,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                                 className="w-16 h-16 mx-auto mb-4"
                                 style={{ color: theme === 'light' ? '#007d73' : 'rgba(45,212,191,0.5)' }}
                               />
-                              <p style={{ color: theme === 'light' ? '#86868b' : '#64748b' }} className="text-sm">{module.title}</p>
+                              <p style={{ color: theme === 'light' ? '#87867f' : '#64748b' }} className="text-sm">{module.title}</p>
                             </div>
                           </div>
                         )}
@@ -320,9 +321,48 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
         </section>
       )}
 
+      {/* Operations Dashboard Preview */}
+      {t.dashboard && (
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="max-w-3xl mb-10"
+            >
+              {t.dashboard.tag && (
+                <span className="label-tag mb-4 inline-block">{t.dashboard.tag}</span>
+              )}
+              <h2
+                className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
+                style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
+              >
+                {t.dashboard.title}
+              </h2>
+              <p
+                className="text-lg leading-relaxed"
+                style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
+              >
+                {t.dashboard.description}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55 }}
+            >
+              <CenterDashboard dict={t.dashboard.dashboard} />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* Monitoring System Section */}
       {t.monitoringSystem && (
-        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>
+        <section id="intelligence" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Central Monitoring Subsection */}
             {t.monitoringSystem.centralMonitoring && (
@@ -336,13 +376,13 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                   <span className="label-tag mb-4 inline-block">{t.monitoringSystem.centralMonitoring.tag}</span>
                   <h2 
                     className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
-                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                   >
                     {t.monitoringSystem.centralMonitoring.title}
                   </h2>
                   <p 
                     className="max-w-3xl mx-auto text-lg"
-                    style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
                   >
                     {t.monitoringSystem.centralMonitoring.description}
                   </p>
@@ -356,7 +396,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       key={i} 
                       className="rounded-2xl overflow-hidden"
                       style={{ 
-                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.8)',
+                        backgroundColor: theme === 'light' ? '#faf9f5' : 'rgba(30,41,59,0.8)',
                         boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
                         border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                       }}
@@ -365,7 +405,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       <div className="p-4">
                         <p 
                           className="font-medium"
-                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                          style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                         >
                           {item.label}
                         </p>
@@ -387,13 +427,13 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                   <span className="label-tag mb-4 inline-block">{t.monitoringSystem.bedsideTerminal.tag}</span>
                   <h2 
                     className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-4"
-                    style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                    style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                   >
                     {t.monitoringSystem.bedsideTerminal.title}
                   </h2>
                   <p 
                     className="max-w-4xl mx-auto text-base md:text-lg leading-relaxed"
-                    style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                    style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
                   >
                     {t.monitoringSystem.bedsideTerminal.description}
                   </p>
@@ -409,7 +449,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       key={i} 
                       className="rounded-2xl overflow-hidden"
                       style={{ 
-                        backgroundColor: theme === 'light' ? '#ffffff' : 'rgba(30,41,59,0.8)',
+                        backgroundColor: theme === 'light' ? '#faf9f5' : 'rgba(30,41,59,0.8)',
                         boxShadow: theme === 'light' ? '0 2px 12px rgba(0,0,0,0.08)' : 'none',
                         border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                       }}
@@ -418,7 +458,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       <div className="p-4">
                         <p 
                           className="font-medium"
-                          style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                          style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                         >
                           {item.label}
                         </p>
@@ -448,7 +488,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                           className={`rounded-2xl p-6 ${
                             theme === 'dark' 
                               ? 'bg-slate-900/50 border border-slate-800' 
-                              : 'bg-white border border-gray-200 shadow-sm'
+                              : 'bg-[#faf9f5] border border-[#f0eee6] shadow-whisper'
                           }`}
                         >
                           <div className="mb-4">
@@ -463,7 +503,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                             </span>
                             <h4 
                               className="font-display text-lg font-semibold"
-                              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                              style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                             >
                               {feature.title}
                             </h4>
@@ -477,7 +517,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                           
                           <p 
                             className="text-sm mb-4"
-                            style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
+                            style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
                           >
                             {feature.intro}
                           </p>
@@ -488,18 +528,18 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                                 key={itemIndex}
                                 className="rounded-xl p-3"
                                 style={{ 
-                                  backgroundColor: theme === 'light' ? '#f5f5f7' : 'rgba(30,41,59,0.5)',
+                                  backgroundColor: theme === 'light' ? '#f0eee6' : 'rgba(30,41,59,0.5)',
                                 }}
                               >
                                 <h5 
                                   className="font-medium text-sm mb-1"
-                                  style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+                                  style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
                                 >
                                   {item.title}
                                 </h5>
                                 <p 
                                   className="text-xs leading-relaxed"
-                                  style={{ color: theme === 'light' ? '#86868b' : '#94a3b8' }}
+                                  style={{ color: theme === 'light' ? '#87867f' : '#94a3b8' }}
                                 >
                                   {item.description}
                                 </p>
@@ -519,7 +559,7 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
 
       {/* Cross Links */}
       {t.crossLinks && (
-        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}>
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-6">
               {[
@@ -535,14 +575,14 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                   <Link href={link.href} className={`block rounded-2xl p-6 group transition-colors ${
                     theme === 'dark' 
                       ? 'bg-slate-900/50 border border-slate-800/50 hover:border-accent-500/50' 
-                      : 'bg-white border border-gray-200 shadow-sm hover:border-accent-300'
+                      : 'bg-[#faf9f5] border border-[#f0eee6] shadow-whisper hover:border-accent-300 hover:shadow-whisper-lg'
                   }`}>
                     <h3 className={`font-display font-semibold mb-2 transition-colors ${
-                      theme === 'dark' ? 'text-white group-hover:text-accent-400' : 'text-gray-900 group-hover:text-accent-600'
+                      theme === 'dark' ? 'text-white group-hover:text-accent-400' : '[color:#141413] group-hover:text-accent-600'
                     }`}>
                       {link.title}
                     </h3>
-                    <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-500' : 'text-gray-500'}`}>{link.description}</p>
+                    <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-500' : '[color:#87867f]'}`}>{link.description}</p>
                     <span className={`inline-flex items-center gap-2 text-sm font-medium ${
                       theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
                     }`}>

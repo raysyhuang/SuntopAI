@@ -81,12 +81,13 @@
     font-feature-settings: "ss01", "ss02", "cv01";
   }
 
-  /* Light mode body - Apple style */
+  /* Light mode body - Warm parchment (Claude-inspired hybrid) */
   .light body {
     @apply antialiased;
-    background-color: #ffffff;
-    color: #1d1d1f;
+    background-color: #f5f4ed;
+    color: #141413;
     font-feature-settings: "ss01", "ss02", "cv01";
+    line-height: 1.6;
   }
 
   .dark ::selection {
@@ -140,10 +141,15 @@
   }
 
   .light .gradient-text {
-    background: linear-gradient(90deg, #007d73 0%, #00a693 50%, #007d73 100%);
+    background: linear-gradient(95deg, #0f766e 0%, #14b8a6 60%, #0f766e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-style: italic;
+  }
+
+  .dark .gradient-text {
+    font-style: italic;
   }
 
   .gradient-border {
@@ -219,34 +225,36 @@
     color: #007d73;
   }
 
-  /* Buttons - Apple style */
+  /* Buttons — generously rounded, warm hybrid */
   .btn-primary {
-    @apply inline-flex items-center gap-2 px-6 py-3 font-medium rounded-full transition-all duration-200;
+    @apply inline-flex items-center gap-2 px-6 py-3 font-medium rounded-xl transition-all duration-200;
     background-color: #007d73;
     color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 125, 115, 0.4), 0 1px 2px rgba(0, 125, 115, 0.15);
   }
 
   .btn-primary:hover {
     background-color: #006b62;
+    box-shadow: 0 0 0 1px rgba(0, 125, 115, 0.5), 0 4px 16px rgba(0, 125, 115, 0.18);
   }
 
   .dark .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-accent-600/50 text-neutral-300 hover:text-white rounded-full transition-all duration-200;
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-slate-700 hover:border-accent-600/50 text-neutral-300 hover:text-white rounded-xl transition-all duration-200;
   }
 
   .light .btn-secondary {
-    @apply inline-flex items-center gap-2 px-6 py-3 rounded-full transition-all duration-200;
-    background-color: transparent;
-    color: #007d73;
-    border: 1px solid #007d73;
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-200;
+    background-color: #faf9f5;
+    color: #141413;
+    box-shadow: 0 0 0 1px #e8e6dc;
   }
 
   .light .btn-secondary:hover {
-    background-color: #007d73;
-    color: #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px #d1cfc5;
   }
 
-  /* Label tags - Apple style */
+  /* Label tags / eyebrow */
   .dark .label-tag {
     @apply inline-flex items-center px-3 py-1 text-2xs font-medium tracking-wider uppercase bg-accent-900/30 text-accent-400 rounded-full border border-accent-800/30;
   }
@@ -257,12 +265,12 @@
     padding: 0.375rem 0.875rem;
     font-size: 0.6875rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #007d73;
-    background-color: rgba(0, 125, 115, 0.08);
+    background-color: rgba(0, 125, 115, 0.07);
     border-radius: 9999px;
-    border: none;
+    border: 1px solid rgba(0, 125, 115, 0.16);
   }
 
   /* Theme toggle button */
@@ -284,13 +292,13 @@
     background-color: rgba(0, 0, 0, 0.08);
   }
 
-  /* Apple-style section backgrounds for light mode */
+  /* Warm hybrid section backgrounds for light mode */
   .light .section-white {
-    background-color: #ffffff;
+    background-color: #faf9f5;
   }
 
   .light .section-gray {
-    background-color: #f5f5f7;
+    background-color: #f5f4ed;
   }
 
   /* Apple-style typography for light mode */
@@ -381,26 +389,26 @@
     font-feature-settings: "tnum";
   }
 
-  /* Stripe-adapted display typography — weight 300, zero letter-spacing */
+  /* Editorial serif display typography (Claude-inspired) — single weight 500, tight line-height */
   .display-sm,
   .display-md,
   .display-lg {
-    font-family: var(--font-outfit), system-ui, sans-serif;
-    font-weight: 300;
-    letter-spacing: 0;
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 500;
+    letter-spacing: -0.005em;
   }
-  .display-sm { font-size: 1.5rem; line-height: 1.2; }
-  .display-md { font-size: 1.875rem; line-height: 1.15; }
-  .display-lg { font-size: 2rem; line-height: 1.12; }
+  .display-sm { font-size: 1.625rem; line-height: 1.20; }
+  .display-md { font-size: 2rem;     line-height: 1.18; }
+  .display-lg { font-size: 2.25rem;  line-height: 1.12; }
   @media (min-width: 768px) {
-    .display-sm { font-size: 1.75rem; }
-    .display-md { font-size: 2.25rem; }
-    .display-lg { font-size: 2.75rem; }
-  }
-  @media (min-width: 1024px) {
     .display-sm { font-size: 1.875rem; }
     .display-md { font-size: 2.625rem; }
     .display-lg { font-size: 3.25rem; }
+  }
+  @media (min-width: 1024px) {
+    .display-sm { font-size: 2rem; }
+    .display-md { font-size: 3rem;     line-height: 1.14; }
+    .display-lg { font-size: 4rem;     line-height: 1.10; }
   }
 
   .animate-delay-100 {

@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  ArrowRight, Database, Brain, Cog, TrendingUp, Activity, Server, Cpu,
-  Stethoscope, PackageCheck, Monitor, Bell, ClipboardList, Wifi,
+  ArrowRight, Database, Brain, Cog, Activity, Server, Cpu,
+  Stethoscope, PackageCheck, Shield,
 } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
@@ -13,8 +13,6 @@ import { Section } from '@/components/ui/Section'
 import { Card } from '@/components/ui/Card'
 import { Stat } from '@/components/ui/Stat'
 import { Badge } from '@/components/ui/Badge'
-import { FeatureCard } from '@/components/ui/FeatureCard'
-import { CenterDashboard } from '@/components/ui/CenterDashboard'
 
 interface HomeClientProps {
   locale: Locale
@@ -38,29 +36,16 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
   const { theme } = useTheme()
   const isLight = theme === 'light'
 
-  const headingClass = isLight ? 'text-ink-900' : 'text-white'
-  const bodyClass = isLight ? 'text-ink-400' : 'text-neutral-400'
-  const mutedClass = isLight ? 'text-ink-400' : 'text-neutral-500'
-  const labelClass = isLight ? 'text-ink-600' : 'text-neutral-300'
-  const hairlineClass = isLight ? 'border-ink-100' : 'border-slate-800'
+  // Warm hybrid: warm grays in light mode; cool slate retained in dark for institutional feel
+  const headingClass = isLight ? '[color:#141413]' : 'text-white'
+  const bodyClass = isLight ? '[color:#5e5d59]' : 'text-neutral-400'
+  const mutedClass = isLight ? '[color:#87867f]' : 'text-neutral-500'
+  const hairlineClass = isLight ? '[border-color:#e8e6dc]' : 'border-slate-800'
 
   const pillars = [
     { icon: Database, title: t.pillars.iot.title, description: t.pillars.iot.description, features: t.pillars.iot.features },
     { icon: Brain, title: t.pillars.ai.title, description: t.pillars.ai.description, features: t.pillars.ai.features },
     { icon: Cog, title: t.pillars.automation.title, description: t.pillars.automation.description, features: t.pillars.automation.features },
-  ]
-
-  const centerSystems = [
-    { icon: Server, ...t.center.systems.dialysis },
-    { icon: Wifi, ...t.center.systems.infrastructure },
-    { icon: Activity, ...t.center.systems.bedside },
-    { icon: Monitor, ...t.center.systems.operations },
-  ]
-
-  const riskStages = [
-    { icon: ClipboardList, ...t.risk.stages.before },
-    { icon: Bell, ...t.risk.stages.during },
-    { icon: TrendingUp, ...t.risk.stages.after },
   ]
 
   const flowSteps = [
@@ -70,138 +55,79 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
     { icon: Cog, ...t.flow.steps.automation },
   ]
 
+  const whyCards = [
+    { icon: Shield, ...t.why.clinical },
+    { icon: Activity, ...t.why.operational },
+    { icon: Brain, ...t.why.strategic },
+    { icon: Database, ...t.why.longterm },
+  ]
+
   return (
     <div className="relative">
       {/* ───────────── Hero ───────────── */}
       <section
         className="relative min-h-screen flex items-center"
-        style={{ backgroundColor: isLight ? '#ffffff' : '#0b1624' }}
+        style={{ backgroundColor: isLight ? '#f5f4ed' : '#0b1624' }}
       >
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 py-24 lg:py-28 w-full">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 py-24 lg:py-28 w-full">
           <motion.div
             initial="initial"
             animate="animate"
             variants={staggerContainer}
-            className="grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-center"
           >
-            <div>
-              <motion.div variants={fadeInUp} className="mb-6">
-                <Badge variant="eyebrow">{t.tag}</Badge>
-              </motion.div>
-
-              <motion.h1
-                variants={fadeInUp}
-                className={`display-lg mb-6 text-balance ${headingClass}`}
-              >
-                {t.hero.title1}
-                <br />
-                <span className="gradient-text">{t.hero.title2}</span>
-              </motion.h1>
-
-              <motion.p
-                variants={fadeInUp}
-                className={`text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-6 ${
-                  isLight ? 'text-ink-600' : 'text-neutral-200'
-                }`}
-              >
-                {t.hero.subtitle}
-              </motion.p>
-
-              <motion.p
-                variants={fadeInUp}
-                className={`text-base leading-relaxed max-w-2xl mb-8 ${bodyClass}`}
-              >
-                {t.hero.description}
-              </motion.p>
-
-              <motion.div variants={fadeInUp} className="flex flex-wrap gap-2 mb-10">
-                {t.hero.badges.map((badge) => (
-                  <Badge key={badge} variant="neutral">{badge}</Badge>
-                ))}
-              </motion.div>
-
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-3">
-                <Link href={`/${locale}/platform`} className="btn-primary">
-                  {t.cta.explore}
-                  <ArrowRight size={18} aria-hidden="true" />
-                </Link>
-                <Link href={`/${locale}/company#contact`} className="btn-secondary">
-                  {t.cta.contact}
-                </Link>
-              </motion.div>
-
-              {t.hero.stats && (
-                <motion.div
-                  variants={fadeInUp}
-                  className={`mt-10 pt-6 border-t ${hairlineClass}`}
-                >
-                  <p className={`text-sm font-medium ${mutedClass}`}>{t.hero.stats}</p>
-                </motion.div>
-              )}
-            </div>
-
-            <motion.div variants={fadeInUp}>
-              <Card elevated className="p-6 md:p-7">
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  <div>
-                    <div className={`text-[10px] uppercase tracking-[0.14em] font-medium mb-2 ${
-                      isLight ? 'text-accent-700' : 'text-accent-300'
-                    }`}>
-                      {t.hero.panel.label}
-                    </div>
-                    <h2 className={`font-display font-light text-xl leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                      {t.hero.panel.title}
-                    </h2>
-                  </div>
-                  <div className={`h-10 w-10 rounded flex items-center justify-center flex-shrink-0 ${
-                    isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                  }`}>
-                    <Activity className={`h-5 w-5 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
-                  </div>
-                </div>
-
-                <div className={`grid grid-cols-2 gap-x-5 gap-y-4 mb-6 pb-6 border-b ${hairlineClass}`}>
-                  {t.hero.panel.rows.map((row) => (
-                    <div key={row.label}>
-                      <div className={`text-[11px] ${mutedClass}`}>{row.label}</div>
-                      <div className={`font-display font-light tabular-nums text-xl mt-1 ${headingClass}`} style={{ letterSpacing: 0 }}>
-                        {row.value}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <div className={`mb-6 pb-6 border-b ${hairlineClass}`}>
-                  <div className="flex items-center justify-between gap-4 mb-3">
-                    <span className={`text-xs font-medium ${labelClass}`}>{t.hero.panel.mapTitle}</span>
-                    <span className={`text-[11px] ${mutedClass}`}>{t.hero.panel.mapStatus}</span>
-                  </div>
-                  <div className="space-y-2">
-                    {t.hero.panel.mapRows.map((row, index) => (
-                      <div key={row} className="flex items-center gap-3">
-                        <div className={`h-[5px] rounded-full ${
-                          index === 1 ? 'w-8 bg-amber-400' : 'w-8 bg-accent-500'
-                        }`} />
-                        <div className={`h-[5px] flex-1 rounded-full ${isLight ? 'bg-ink-100' : 'bg-slate-700'}`} />
-                        <span className={`w-24 text-[11px] text-right ${mutedClass}`}>{row}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-amber-400 flex-shrink-0" aria-hidden="true" />
-                  <div>
-                    <p className={`text-xs font-semibold ${isLight ? 'text-amber-700' : 'text-amber-200'}`}>
-                      {t.hero.panel.alarmTitle}
-                    </p>
-                    <p className={`text-xs mt-1 leading-relaxed ${bodyClass}`}>
-                      {t.hero.panel.alarmDescription}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+            <motion.div variants={fadeInUp} className="mb-6">
+              <Badge variant="eyebrow">{t.tag}</Badge>
             </motion.div>
+
+            <motion.h1
+              variants={fadeInUp}
+              className={`display-lg mb-6 text-balance ${headingClass}`}
+            >
+              {t.hero.title1}
+              <br />
+              <span className="gradient-text">{t.hero.title2}</span>
+            </motion.h1>
+
+            <motion.p
+              variants={fadeInUp}
+              className={`text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-6 ${
+                isLight ? '[color:#3d3d3a]' : 'text-neutral-200'
+              }`}
+            >
+              {t.hero.subtitle}
+            </motion.p>
+
+            <motion.p
+              variants={fadeInUp}
+              className={`text-base leading-relaxed max-w-2xl mb-8 ${bodyClass}`}
+            >
+              {t.hero.description}
+            </motion.p>
+
+            <motion.div variants={fadeInUp} className="flex flex-wrap gap-2 mb-10">
+              {t.hero.badges.map((badge) => (
+                <Badge key={badge} variant="neutral">{badge}</Badge>
+              ))}
+            </motion.div>
+
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-3">
+              <Link href={`/${locale}/platform`} className="btn-primary">
+                {t.cta.explore}
+                <ArrowRight size={18} aria-hidden="true" />
+              </Link>
+              <Link href={`/${locale}/company#contact`} className="btn-secondary">
+                {t.cta.contact}
+              </Link>
+            </motion.div>
+
+            {t.hero.stats && (
+              <motion.div
+                variants={fadeInUp}
+                className={`mt-10 pt-6 border-t ${hairlineClass}`}
+              >
+                <p className={`text-sm font-medium ${mutedClass}`}>{t.hero.stats}</p>
+              </motion.div>
+            )}
           </motion.div>
 
           {t.hero.metrics && t.hero.metrics.length > 0 && (
@@ -210,7 +136,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className={`grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 mt-16 border-t border-b ${
-                isLight ? 'border-ink-100 divide-ink-100' : 'border-slate-800 divide-slate-800'
+                isLight ? 'border-[#e8e6dc] divide-[#e8e6dc]' : 'border-slate-800 divide-slate-800'
               }`}
             >
               {t.hero.metrics.map((metric) => (
@@ -223,92 +149,64 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* ───────────── Digital Center ───────────── */}
+      {/* ───────────── Why This Matters ───────────── */}
       <Section tone="subtle">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mb-12"
-        >
-          <Badge variant="eyebrow" className="mb-5">{t.center.tag}</Badge>
-          <h2 className={`display-md mb-5 ${headingClass}`}>{t.center.title}</h2>
-          <p className={`text-base md:text-lg leading-relaxed ${bodyClass}`}>{t.center.description}</p>
-        </motion.div>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+          >
+            <Badge variant="eyebrow" className="mb-5">{t.why.tag}</Badge>
+            <h2 className={`display-md mb-6 ${headingClass}`}>{t.why.title}</h2>
+            <p className={`text-base md:text-lg leading-relaxed mb-6 ${bodyClass}`}>
+              {t.why.description1}
+            </p>
+            <p className={`text-base md:text-lg leading-relaxed ${bodyClass}`}>
+              {t.why.description2}
+            </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
-          {centerSystems.map((system, index) => (
-            <motion.div
-              key={system.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.06 }}
-            >
-              <FeatureCard icon={system.icon} title={system.title} description={system.description} />
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          <Card className="p-6 md:p-8">
-            <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-8 items-start">
-              <div>
-                <h3 className={`font-display font-light text-2xl mb-3 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                  {t.center.operatingLayer.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${bodyClass}`}>
-                  {t.center.operatingLayer.description}
+            {t.why.references && t.why.references.length > 0 && (
+              <div className={`mt-6 pt-4 border-t ${hairlineClass}`}>
+                <p className={`text-[11px] uppercase tracking-[0.14em] font-medium mb-2 ${mutedClass}`}>
+                  References
                 </p>
+                <div className={`text-xs leading-relaxed space-y-1 ${mutedClass}`}>
+                  {t.why.references.map((ref: string, index: number) => (
+                    <p key={index} className="italic">{ref}</p>
+                  ))}
+                </div>
               </div>
-              <div className="grid sm:grid-cols-3 gap-2">
-                {t.center.operatingLayer.items.map((item) => (
-                  <div
-                    key={item}
-                    className={`rounded px-3 py-2.5 text-sm font-medium border ${
-                      isLight
-                        ? 'bg-ink-50 border-ink-100 text-ink-700'
-                        : 'bg-slate-800/60 border-slate-700/60 text-neutral-300'
-                    }`}
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Card>
-        </motion.div>
-      </Section>
+            )}
+          </motion.div>
 
-      {/* ───────────── Live Dashboard Preview ───────────── */}
-      <Section tone="light">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mb-10"
-        >
-          <Badge variant="eyebrow" className="mb-5">{t.preview.tag}</Badge>
-          <h2 className={`display-md mb-5 ${headingClass}`}>{t.preview.title}</h2>
-          <p className={`text-base md:text-lg leading-relaxed ${bodyClass}`}>{t.preview.description}</p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.55 }}
-        >
-          <CenterDashboard dict={t.preview.dashboard} />
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55 }}
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          >
+            {whyCards.map((item) => (
+              <Card key={item.title} className="h-full">
+                <div className={`w-9 h-9 rounded flex items-center justify-center mb-4 ${
+                  isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
+                }`}>
+                  <item.icon className={`w-4 h-4 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
+                </div>
+                <h3 className={`font-display font-medium text-lg mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
+                  {item.title}
+                </h3>
+                <p className={`text-sm leading-relaxed ${bodyClass}`}>{item.desc}</p>
+              </Card>
+            ))}
+          </motion.div>
+        </div>
       </Section>
 
       {/* ───────────── Technology Platform Pillars ───────────── */}
-      <Section tone="subtle">
+      <Section tone="light">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -339,7 +237,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
                 className={`flex flex-col items-center text-center p-4 rounded border ${
-                  isLight ? 'bg-white border-ink-100' : 'bg-slate-900/40 border-slate-800/60'
+                  isLight ? 'bg-[#faf9f5] border-[#f0eee6]' : 'bg-slate-900/40 border-slate-800/60'
                 }`}
               >
                 <div className={`w-10 h-10 rounded flex items-center justify-center mb-2 ${
@@ -362,7 +260,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.12 }}
                   className={`flex flex-col items-center px-6 py-5 rounded border min-w-[150px] ${
-                    isLight ? 'bg-white border-ink-100 shadow-stripe-sm' : 'bg-slate-900/40 border-slate-800/60'
+                    isLight ? 'bg-[#faf9f5] border-[#f0eee6] shadow-whisper' : 'bg-slate-900/40 border-slate-800/60'
                   }`}
                 >
                   <div className={`w-11 h-11 rounded flex items-center justify-center mb-2 ${
@@ -399,7 +297,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                     <pillar.icon className={`w-4 h-4 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className={`font-display font-light text-lg mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
+                    <h3 className={`font-display font-medium text-lg mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
                       {pillar.title}
                     </h3>
                     <p className={`text-sm leading-relaxed mb-4 ${bodyClass}`}>
@@ -418,66 +316,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </Section>
 
-      {/* ───────────── Risk Control ───────────── */}
-      <Section tone="light">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mb-12"
-        >
-          <Badge variant="eyebrow" className="mb-5">{t.risk.tag}</Badge>
-          <h2 className={`display-md mb-5 ${headingClass}`}>{t.risk.title}</h2>
-          <p className={`text-base md:text-lg leading-relaxed ${bodyClass}`}>{t.risk.description}</p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-5 items-start">
-          <div className="grid md:grid-cols-3 gap-5">
-            {riskStages.map((stage, index) => (
-              <motion.div
-                key={stage.title}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.06 }}
-              >
-                <FeatureCard
-                  icon={stage.icon}
-                  title={stage.title}
-                  description={stage.description}
-                  eyebrow={['01', '02', '03'][index]}
-                />
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <Card className="p-6">
-              <div className="flex items-start gap-3 mb-5">
-                <span className="mt-2 h-2 w-2 rounded-full bg-amber-400 flex-shrink-0" aria-hidden="true" />
-                <div>
-                  <h3 className={`font-display font-light text-xl mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                    {t.risk.alarmTitle}
-                  </h3>
-                  <p className={`text-sm leading-relaxed ${bodyClass}`}>
-                    {t.risk.alarmDescription}
-                  </p>
-                </div>
-              </div>
-              <div className={`pt-5 border-t ${hairlineClass} flex flex-wrap gap-1.5`}>
-                {t.risk.alarms.map((alarm) => (
-                  <Badge key={alarm} variant="neutral">{alarm}</Badge>
-                ))}
-              </div>
-            </Card>
-          </motion.div>
-        </div>
-      </Section>
-
       {/* ───────────── Clinical Highlights ───────────── */}
       {t.clinicalHighlights && (
         <Section tone="subtle">
@@ -492,7 +330,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           </motion.div>
 
           <div className={`grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 border rounded-md overflow-hidden ${
-            isLight ? 'border-ink-100 divide-ink-100' : 'border-slate-800 divide-slate-800'
+            isLight ? 'border-[#e8e6dc] divide-[#e8e6dc]' : 'border-slate-800 divide-slate-800'
           }`}>
             {t.clinicalHighlights.items.map((item: any, index: number) => (
               <motion.div
@@ -501,10 +339,10 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className={`px-6 py-7 ${isLight ? 'bg-white' : 'bg-slate-900/40'}`}
+                className={`px-6 py-7 ${isLight ? 'bg-[#faf9f5]' : 'bg-slate-900/40'}`}
               >
                 <div
-                  className={`font-display font-light tabular-nums text-3xl md:text-4xl leading-none mb-3 ${
+                  className={`font-display font-medium tabular-nums text-3xl md:text-4xl leading-none mb-3 ${
                     isLight ? 'text-accent-700' : 'text-accent-300'
                   }`}
                   style={{ letterSpacing: 0 }}
@@ -589,7 +427,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                   href={door.href}
                   className={`group block h-full rounded-md border p-6 transition-[border-color,box-shadow,background-color] ${
                     isLight
-                      ? 'bg-white border-ink-100 shadow-stripe-sm hover:shadow-stripe-md hover:border-accent-200'
+                      ? 'bg-[#faf9f5] border-[#f0eee6] shadow-whisper hover:shadow-whisper-lg hover:border-accent-200'
                       : 'bg-slate-900/40 border-slate-800/60 hover:border-accent-700/50 hover:bg-slate-900/60'
                   }`}
                 >
@@ -598,7 +436,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                   }`}>
                     <door.icon className={`w-5 h-5 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
                   </div>
-                  <h3 className={`font-display font-light text-xl mb-3 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
+                  <h3 className={`font-display font-medium text-xl mb-3 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
                     {doorData.title}
                   </h3>
                   <p className={`text-sm leading-relaxed mb-5 ${bodyClass}`}>

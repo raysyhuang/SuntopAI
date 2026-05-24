@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Outfit, Inter, JetBrains_Mono } from 'next/font/google'
+import { Outfit, Inter, JetBrains_Mono, Newsreader } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
@@ -14,6 +14,15 @@ const outfit = Outfit({
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+// Editorial serif for headlines — Claude-inspired warm hybrid
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-serif',
   display: 'swap',
 })
 
@@ -99,7 +108,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="zh-CN" className={`${outfit.variable} ${inter.variable} ${jetbrainsMono.variable} light`} suppressHydrationWarning>
+    <html lang="zh-CN" className={`${outfit.variable} ${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} light`} suppressHydrationWarning>
       <body className="min-h-screen flex flex-col">
         {/* Skip to main content link for accessibility */}
         <a

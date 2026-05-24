@@ -15,26 +15,30 @@ export function Card({ children, elevated = false, tone = 'default', className =
   const { theme } = useTheme()
   const Tag = as
 
-  const base = 'rounded-md border p-6 transition-shadow duration-200'
+  const base = 'rounded-2xl border p-6 md:p-7 transition-shadow duration-200'
 
   let surface = ''
   if (tone === 'inverse') {
     surface = theme === 'light'
-      ? 'bg-ink-900 border-ink-800 text-white'
+      ? 'border-transparent text-white'
       : 'bg-ink-950 border-ink-900 text-white'
+    // dark inverse card on light theme — use Anthropic Near Black
+    if (theme === 'light') {
+      surface = 'border-transparent text-white [background-color:#141413]'
+    }
   } else if (tone === 'subtle') {
     surface = theme === 'light'
-      ? 'bg-ink-50 border-ink-100'
+      ? '[background-color:#f5f4ed] [border-color:#e8e6dc]'
       : 'bg-slate-900/40 border-slate-800/70'
   } else {
     surface = theme === 'light'
-      ? 'bg-white border-ink-100'
+      ? '[background-color:#faf9f5] [border-color:#f0eee6]'
       : 'bg-slate-900/55 border-slate-800/70'
   }
 
   const shadow = elevated
-    ? (theme === 'light' ? 'shadow-stripe-lg' : 'shadow-stripe-md')
-    : (theme === 'light' ? 'shadow-stripe-sm' : '')
+    ? (theme === 'light' ? 'shadow-whisper-lg' : 'shadow-stripe-md')
+    : (theme === 'light' ? 'shadow-whisper' : '')
 
   return (
     <Tag className={`${base} ${surface} ${shadow} ${className}`}>

@@ -55,16 +55,37 @@ const config: Config = {
           900: '#061b31',
           950: '#0b1624',
         },
+        // Warm Claude-inspired palette for light surfaces
+        warm: {
+          parchment: '#f5f4ed',  // primary page bg
+          ivory: '#faf9f5',      // card surface
+          sand: '#e8e6dc',       // warm light gray surface
+          border: '#f0eee6',     // subtle warm border
+          'border-strong': '#e8e6dc',
+          // text grays with yellow-brown undertone
+          'ink-900': '#141413',  // primary text — warm near-black
+          'ink-700': '#3d3d3a',  // dark warm
+          'ink-600': '#4d4c48',  // charcoal warm
+          'ink-500': '#5e5d59',  // olive gray (secondary body)
+          'ink-400': '#87867f',  // stone gray (tertiary)
+          'ink-300': '#b0aea5',  // warm silver
+        },
       },
       boxShadow: {
         'stripe-sm': '0 1px 2px rgba(15, 76, 70, 0.06), 0 1px 3px rgba(6, 27, 49, 0.05)',
         'stripe-md': '0 6px 16px -4px rgba(15, 76, 70, 0.08), 0 2px 6px -2px rgba(6, 27, 49, 0.05)',
         'stripe-lg': '0 30px 45px -30px rgba(15, 76, 70, 0.18), 0 18px 36px -18px rgba(6, 27, 49, 0.12)',
         'stripe-ring': '0 0 0 1px rgba(6, 27, 49, 0.06), 0 1px 2px rgba(6, 27, 49, 0.04)',
+        // Claude-inspired ring shadows (border-as-shadow)
+        'ring-warm': '0 0 0 1px #e8e6dc',
+        'ring-warm-strong': '0 0 0 1px #d1cfc5',
+        'whisper': '0 4px 24px rgba(0, 0, 0, 0.05)',
+        'whisper-lg': '0 12px 40px rgba(0, 0, 0, 0.06)',
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-outfit)', 'system-ui', 'sans-serif'],
+        display: ['var(--font-serif)', 'Georgia', 'serif'],
+        'display-sans': ['var(--font-outfit)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       fontSize: {

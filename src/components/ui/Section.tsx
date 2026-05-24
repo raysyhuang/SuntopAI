@@ -12,10 +12,11 @@ interface SectionProps {
   id?: string
 }
 
+// Warm hybrid: parchment / ivory alternation in light; institutional slate in dark
 const TONE_BG: Record<Tone, { light: string; dark: string }> = {
-  light:  { light: '#ffffff', dark: '#0b1624' },
-  subtle: { light: '#f5f5f7', dark: '#0f172a' },
-  dark:   { light: '#0b1624', dark: '#060d18' },
+  light:  { light: '#faf9f5', dark: '#0b1624' }, // ivory
+  subtle: { light: '#f5f4ed', dark: '#0f172a' }, // parchment
+  dark:   { light: '#141413', dark: '#060d18' }, // anthropic near-black
 }
 
 export function Section({ children, tone = 'light', className = '', id }: SectionProps) {
@@ -25,7 +26,7 @@ export function Section({ children, tone = 'light', className = '', id }: Sectio
   return (
     <section
       id={id}
-      className={`relative py-24 md:py-28 ${className}`}
+      className={`relative py-28 md:py-36 ${className}`}
       style={{ backgroundColor: bg }}
     >
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">

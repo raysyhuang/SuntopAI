@@ -23,37 +23,6 @@
         "Asset performance",
         "Flexible deployment"
       ],
-      "panel": {
-        "label": "Center Operating View",
-        "title": "One view for dialysis-center operations",
-        "rows": [
-          {
-            "label": "Connected scope",
-            "value": "Devices + environment + support systems"
-          },
-          {
-            "label": "Risk model",
-            "value": "Before / during / after treatment"
-          },
-          {
-            "label": "Alarm strategy",
-            "value": "9 machine + 20+ dynamic rules"
-          },
-          {
-            "label": "Deployment",
-            "value": "Cloud / local / hybrid"
-          }
-        ],
-        "mapTitle": "Digital dialysis-center topology",
-        "mapStatus": "Live sync",
-        "mapRows": [
-          "Dialysis machines + bedside terminals",
-          "Water / fluid / power systems",
-          "Environment + hospital systems"
-        ],
-        "alarmTitle": "Risk Control Center",
-        "alarmDescription": "Machine alarms, vital signs, four-item monitoring, and historical trends are combined into a traceable risk-control loop."
-      },
       "metrics": [
         {
           "value": "50+",
@@ -244,132 +213,6 @@
     "finalCta": {
       "title": "Not a single software product: a digital dialysis-center solution",
       "description": "Unify dialysis IoT, AI risk control, bedside closed loops, and asset performance in one operating layer for safer, more traceable center operations."
-    },
-    "center": {
-      "tag": "Digital Center Foundation",
-      "title": "From connected dialysis machines to coordinated center operations",
-      "description": "A dialysis center reaches beyond the dialysis machine. Water treatment, centralized fluid supply, electrical and environmental systems, blood pressure and ultrasound devices, hospital IT, and bedside terminals all feed into the same data layer — a unified, traceable view of how the center operates.",
-      "systems": {
-        "dialysis": {
-          "title": "Dialysis treatment devices",
-          "description": "Connect dialysis machines, BP, weight, four-item monitoring, and bedside terminals into a real-time treatment data foundation."
-        },
-        "infrastructure": {
-          "title": "Support infrastructure",
-          "description": "Bring water treatment, centralized fluid supply, power, air disinfection, and environmental sensors out of manual inspection silos."
-        },
-        "bedside": {
-          "title": "Bedside execution terminal",
-          "description": "Move order checks, supply matching, priming guidance, confirmations, and risk prompts to the machine side."
-        },
-        "operations": {
-          "title": "Operations and quality control",
-          "description": "Unify asset performance, alarm review, quality metrics, and multi-center oversight in one operating view."
-        }
-      },
-      "operatingLayer": {
-        "title": "Software + hardware + data services as one solution",
-        "description": "One digital foundation supports connectivity, monitoring, AI analysis, bedside execution, quality control, and remote management, reducing duplicated entry and delayed response across fragmented systems.",
-        "items": [
-          "Device access",
-          "Data middle platform",
-          "AI risk center",
-          "Bedside loop",
-          "Asset performance",
-          "Multi-center oversight"
-        ]
-      }
-    },
-    "preview": {
-      "tag": "Live operations",
-      "title": "The center, in one live view",
-      "description": "Every chair, every treatment, every response — consolidated into a single shared view that helps nurses and charge staff coordinate in real time.",
-      "dashboard": {
-        "title": "Center operations · Suntop AI",
-        "status": "Live",
-        "patientLabel": "Patient",
-        "alertsLabel": "In progress",
-        "statuses": {
-          "active": "Active",
-          "prep": "Prep",
-          "done": "Done",
-          "alert": "Alert"
-        },
-        "alerts": [
-          "M-03 · Downward BP trend — nurse has been notified to review",
-          "M-06 · Ultrafiltration tolerance confirmed — proceeding on prescription",
-          "M-01 · Recommend re-checking consumable match and anticoagulation"
-        ],
-        "stationCount": "52",
-        "stationLabel": "Stations live",
-        "riskLoop": [
-          "Before",
-          "During",
-          "After"
-        ],
-        "proof": [
-          {
-            "value": "9",
-            "label": "machine alarm groups"
-          },
-          {
-            "value": "20+",
-            "label": "dynamic rules"
-          },
-          {
-            "value": "5s",
-            "label": "data interval"
-          }
-        ],
-        "operationsLabel": "Operations pulse",
-        "operations": [
-          {
-            "label": "Chair utilization",
-            "value": "86%"
-          },
-          {
-            "label": "Equipment uptime",
-            "value": "99.2%"
-          },
-          {
-            "label": "Open reviews",
-            "value": "12"
-          }
-        ]
-      }
-    },
-    "risk": {
-      "tag": "Risk Control Center",
-      "title": "Move from seeing abnormalities to handling risks earlier",
-      "description": "Risk control across the full dialysis workflow — pre-treatment preparation, dynamic warning during treatment, and post-treatment review — giving clinical teams the information to identify and address risk at every stage.",
-      "stages": {
-        "before": {
-          "title": "Before treatment",
-          "description": "Verify patient, prescription, supplies, anticoagulation, and priming steps to reduce preparation mismatch risk."
-        },
-        "during": {
-          "title": "During treatment",
-          "description": "Combine BP trends, UF tolerance, machine status, four-item monitoring, and dynamic alarms so nurses can intervene earlier."
-        },
-        "after": {
-          "title": "After treatment",
-          "description": "Capture alarms, interventions, indicator changes, and quality-control outcomes for physician review and center improvement."
-        }
-      },
-      "alarmTitle": "9 machine alarms + 20+ dynamic/custom alarms",
-      "alarmDescription": "Core dialysis-machine alarms are combined with configurable workflow rules, risk thresholds, and patient profiles so teams can tune escalation logic without losing traceability.",
-      "alarms": [
-        "BP trends",
-        "UF tolerance",
-        "Blood volume",
-        "Blood temperature",
-        "Kt/V",
-        "Water treatment",
-        "Fluid supply",
-        "Power status",
-        "Environment",
-        "Order confirmation"
-      ]
     }
   },
   "platform": {
@@ -540,6 +383,64 @@
           ],
           "aiHighlight": "Automated quality control data aggregation, supporting standardized execution and continuous improvement"
         }
+      }
+    },
+    "dashboard": {
+      "tag": "Live operations",
+      "title": "The center, in one live view",
+      "description": "Every chair, every treatment, every response — consolidated into a single shared view that helps nurses and charge staff coordinate in real time.",
+      "dashboard": {
+        "title": "Center operations · Suntop AI",
+        "status": "Live",
+        "patientLabel": "Patient",
+        "alertsLabel": "In progress",
+        "statuses": {
+          "active": "Active",
+          "prep": "Prep",
+          "done": "Done",
+          "alert": "Alert"
+        },
+        "alerts": [
+          "M-03 · Downward BP trend — nurse has been notified to review",
+          "M-06 · Ultrafiltration tolerance confirmed — proceeding on prescription",
+          "M-01 · Recommend re-checking consumable match and anticoagulation"
+        ],
+        "stationCount": "52",
+        "stationLabel": "Stations live",
+        "riskLoop": [
+          "Before",
+          "During",
+          "After"
+        ],
+        "proof": [
+          {
+            "value": "9",
+            "label": "machine alarm groups"
+          },
+          {
+            "value": "20+",
+            "label": "dynamic rules"
+          },
+          {
+            "value": "5s",
+            "label": "data interval"
+          }
+        ],
+        "operationsLabel": "Operations pulse",
+        "operations": [
+          {
+            "label": "Chair utilization",
+            "value": "86%"
+          },
+          {
+            "label": "Equipment uptime",
+            "value": "99.2%"
+          },
+          {
+            "label": "Open reviews",
+            "value": "12"
+          }
+        ]
       }
     },
     "monitoringSystem": {

@@ -14,8 +14,8 @@ interface BadgeProps {
 export function Badge({ children, variant = 'neutral', className = '' }: BadgeProps) {
   const { theme } = useTheme()
 
-  const base = 'inline-flex items-center rounded px-[6px] py-[2px] text-[11px] font-medium leading-[1.4]'
-  const uppercase = variant === 'eyebrow' ? 'uppercase tracking-[0.14em] text-[10px] py-[3px] px-[8px]' : ''
+  const base = 'inline-flex items-center rounded-full px-[10px] py-[3px] text-[11px] font-medium leading-[1.4] font-sans'
+  const uppercase = variant === 'eyebrow' ? 'uppercase tracking-[0.14em] text-[10px] py-[5px] px-[12px]' : ''
 
   let tone = ''
   if (variant === 'eyebrow' || variant === 'accent') {
@@ -28,7 +28,7 @@ export function Badge({ children, variant = 'neutral', className = '' }: BadgePr
       : 'bg-amber-950/30 text-amber-200 border border-amber-900/40'
   } else {
     tone = theme === 'light'
-      ? 'bg-ink-50 text-ink-700 border border-ink-100'
+      ? '[background-color:#f0eee6] [color:#4d4c48] [border-color:#e8e6dc] border'
       : 'bg-slate-800/60 text-neutral-300 border border-slate-700/70'
   }
 
