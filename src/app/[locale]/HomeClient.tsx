@@ -149,61 +149,78 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </section>
 
-      {/* ───────────── Why This Matters ───────────── */}
-      <Section tone="subtle">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-          >
-            <Badge variant="eyebrow" className="mb-5">{t.why.tag}</Badge>
-            <h2 className={`display-md mb-6 ${headingClass}`}>{t.why.title}</h2>
-            <p className={`text-base md:text-lg leading-relaxed mb-6 ${bodyClass}`}>
-              {t.why.description1}
-            </p>
-            <p className={`text-base md:text-lg leading-relaxed ${bodyClass}`}>
-              {t.why.description2}
-            </p>
-
-            {t.why.references && t.why.references.length > 0 && (
-              <div className={`mt-6 pt-4 border-t ${hairlineClass}`}>
-                <p className={`text-[11px] uppercase tracking-[0.14em] font-medium mb-2 ${mutedClass}`}>
-                  References
-                </p>
-                <div className={`text-xs leading-relaxed space-y-1 ${mutedClass}`}>
-                  {t.why.references.map((ref: string, index: number) => (
-                    <p key={index} className="italic">{ref}</p>
-                  ))}
-                </div>
+      {/* ───────────── Why This Matters — DARK INTERLUDE ───────────── */}
+      <section
+        className="relative py-28 md:py-36"
+        style={{ backgroundColor: isLight ? '#141413' : '#060d18' }}
+      >
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55 }}
+            >
+              {/* Editorial chapter marker */}
+              <div className="flex items-center gap-3 mb-6">
+                <span className="h-px w-10 bg-[#3d3d3a]" aria-hidden="true" />
+                <span className="text-[10px] uppercase tracking-[0.18em] font-medium text-[#b0aea5]">
+                  {t.why.tag}
+                </span>
               </div>
-            )}
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55 }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-          >
-            {whyCards.map((item) => (
-              <Card key={item.title} className="h-full">
-                <div className={`w-9 h-9 rounded flex items-center justify-center mb-4 ${
-                  isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                }`}>
-                  <item.icon className={`w-4 h-4 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
+              <h2 className="display-lg mb-8 text-[#faf9f5]">
+                {t.why.title}
+              </h2>
+
+              {/* Editorial serif body — long-form essay typography */}
+              <p className="font-display text-lg md:text-xl leading-[1.65] mb-6 text-[#d6d4c8]">
+                {t.why.description1}
+              </p>
+              <p className="font-display text-lg md:text-xl leading-[1.65] text-[#d6d4c8]">
+                {t.why.description2}
+              </p>
+
+              {t.why.references && t.why.references.length > 0 && (
+                <div className="mt-8 pt-5 border-t border-[#3d3d3a]">
+                  <p className="text-[10px] uppercase tracking-[0.18em] font-medium mb-3 text-[#87867f]">
+                    References
+                  </p>
+                  <div className="text-xs leading-relaxed space-y-1.5 text-[#87867f] font-display italic">
+                    {t.why.references.map((ref: string, index: number) => (
+                      <p key={index}>{ref}</p>
+                    ))}
+                  </div>
                 </div>
-                <h3 className={`font-display font-medium text-lg mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                  {item.title}
-                </h3>
-                <p className={`text-sm leading-relaxed ${bodyClass}`}>{item.desc}</p>
-              </Card>
-            ))}
-          </motion.div>
+              )}
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 24 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55 }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+            >
+              {whyCards.map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-[#30302e] p-6 md:p-7 bg-[#1c1c1a] transition-colors hover:border-[#4d4c48]"
+                >
+                  <div className="w-9 h-9 rounded flex items-center justify-center mb-4 bg-accent-900/30 border border-accent-800/40">
+                    <item.icon className="w-4 h-4 text-accent-300" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-display font-medium text-lg mb-2 leading-snug text-[#faf9f5]" style={{ letterSpacing: 0 }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-[#b0aea5]">{item.desc}</p>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </div>
-      </Section>
+      </section>
 
       {/* ───────────── Technology Platform Pillars ───────────── */}
       <Section tone="light">
@@ -214,8 +231,14 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-14"
         >
-          <Badge variant="eyebrow" className="mb-5">{t.pillars.tag}</Badge>
-          <h2 className={`display-md mb-5 ${headingClass}`}>{t.pillars.title}</h2>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+            <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
+              {t.pillars.tag}
+            </span>
+            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+          </div>
+          <h2 className={`display-lg mb-5 ${headingClass}`}>{t.pillars.title}</h2>
           <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${bodyClass}`}>
             {t.pillars.description}
           </p>
@@ -325,8 +348,15 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <Badge variant="eyebrow" className="mb-4">{t.clinicalHighlights.tag}</Badge>
-            <h2 className={`display-md ${headingClass}`}>{t.clinicalHighlights.title}</h2>
+            {/* Editorial chapter marker */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+              <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
+                {t.clinicalHighlights.tag}
+              </span>
+              <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+            </div>
+            <h2 className={`display-lg mb-5 ${headingClass}`}>{t.clinicalHighlights.title}</h2>
           </motion.div>
 
           <div className={`grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 border rounded-md overflow-hidden ${
@@ -401,8 +431,14 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <Badge variant="eyebrow" className="mb-5">{t.router.tag}</Badge>
-          <h2 className={`display-md mb-5 ${headingClass}`}>{t.router.title}</h2>
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+            <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
+              {t.router.tag}
+            </span>
+            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
+          </div>
+          <h2 className={`display-lg mb-5 ${headingClass}`}>{t.router.title}</h2>
           <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${bodyClass}`}>
             {t.router.description}
           </p>
