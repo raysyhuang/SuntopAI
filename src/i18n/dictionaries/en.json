@@ -16,7 +16,7 @@
       "title2": "for dialysis centers",
       "subtitle": "Connect treatment devices, support infrastructure, environment, and clinical data into one risk-control operating layer.",
       "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
-      "stats": "50+ smart dialysis centers | 3000+ connected machines | Cloud / local / hybrid deployment",
+      "stats": "100+ smart dialysis centers | 5000+ connected machines | Cloud / local / hybrid deployment",
       "badges": [
         "Whole-center IoT",
         "AI risk control",
@@ -25,20 +25,16 @@
       ],
       "metrics": [
         {
-          "value": "50+",
+          "value": "100+",
           "label": "Smart dialysis centers"
         },
         {
-          "value": "3000+",
+          "value": "5000+",
           "label": "Connected machines"
         },
         {
-          "value": "9 + 20+",
+          "value": "20+",
           "label": "Core and dynamic alarms"
-        },
-        {
-          "value": "4 items",
-          "label": "Model-based monitoring"
         }
       ]
     },
@@ -147,11 +143,11 @@
             "label": "Partner Centers"
           },
           {
-            "value": "50+",
+            "value": "100+",
             "label": "Smart Dialysis Centers"
           },
           {
-            "value": "3000+",
+            "value": "5000+",
             "label": "Connected Machines"
           }
         ]
@@ -533,7 +529,7 @@
         "partnerCenters": "Partner Centers"
       },
       "stats": {
-        "smartCenters": "50+",
+        "smartCenters": "100+",
         "selfOperated": "30+",
         "partnerCenters": "100+"
       },
@@ -1943,7 +1939,7 @@
       "paragraphs": [
         "Suntop Healthcare is a medical technology company focused on hemodialysis.",
         "Founded on the principle of 'People First, Service Above All', we started with equipment supply, technical support, department operations management, and clinical care, gradually building a comprehensive service system covering the entire dialysis workflow. On this foundation, we developed our proprietary dialysis management system, making all core equipment—dialysis machines, BP monitors, scales—IoT-enabled, and integrating customized models and decision systems to achieve a complete closed loop from data collection, analysis, evaluation, recommendations to real-time feedback.",
-        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 50+ successfully upgraded to smart dialysis centers and 3,000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
+        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 100+ successfully upgraded to smart dialysis centers and 5,000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
         "We believe truly valuable healthcare innovation must simultaneously improve medical quality, reduce risk, and increase operational efficiency. Suntop Healthcare is driving the transformation of dialysis management from 'experience-driven' to 'data-driven', making dialysis safer, more efficient, and more sustainable."
       ]
     },
