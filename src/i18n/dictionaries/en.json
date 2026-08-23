@@ -12,10 +12,10 @@
     "investors": "Investors"
   },
   "home": {
-    "tag": "Digital Hemodialysis Center",
+    "tag": "Hemodialysis AI & IoT",
     "hero": {
-      "title1": "The real-time operating layer",
-      "title2": "for dialysis centers",
+      "title1": "Smart Dialysis Center",
+      "title2": "Real-time IoT and AI-assisted operations",
       "subtitle": "Connect treatment devices, support infrastructure, environment, and clinical data into one risk-control operating layer.",
       "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
       "stats": "100+ smart dialysis centers | 5000+ connected machines | Cloud / local / hybrid deployment",

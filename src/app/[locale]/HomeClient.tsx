@@ -94,14 +94,22 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           <Badge variant="eyebrow" className="mb-7">
             {d.home.tag}
           </Badge>
+          {/* Name carries the weight; the descriptor sits under it rather than
+              competing with it at the same size. */}
           <h1
             className={`font-display font-light leading-[1.06] tracking-tightest text-[2.6rem] md:text-[3.6rem] ${heading}`}
             style={{ textWrap: 'balance' }}
           >
             {d.home.hero.title1}
-            <br />
-            {d.home.hero.title2}
           </h1>
+          <p
+            className={`mt-4 font-display font-light leading-snug text-[1.35rem] md:text-[1.7rem] ${
+              isLight ? 'text-accent-700' : 'text-accent-300'
+            }`}
+            style={{ textWrap: 'balance' }}
+          >
+            {d.home.hero.title2}
+          </p>
           <p className={`mt-7 text-lg md:text-xl leading-relaxed max-w-2xl ${body}`}>
             {d.home.hero.subtitle}
           </p>
