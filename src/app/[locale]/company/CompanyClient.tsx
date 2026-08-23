@@ -333,6 +333,7 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
       {/* Partners Section */}
       {t.partners && (
         <section 
+          id="partners"
           className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >

@@ -20,7 +20,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.techOverview, href: `/${locale}/platform` },
       { label: t.links.dataInfra, href: `/${locale}/platform#data` },
       { label: t.links.aiEngine, href: `/${locale}/platform#intelligence` },
-      { label: t.links.automation, href: `/${locale}/platform#automation` },
+      { label: t.links.automation, href: `/${locale}/company#partners` },
     ],
     clinical: [
       { label: t.links.inCenter, href: `/${locale}/clinical#in-center` },

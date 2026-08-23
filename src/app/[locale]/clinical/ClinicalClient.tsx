@@ -544,6 +544,7 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
       {/* Clinical Results / Proven Outcomes */}
       {t.results && (
         <section 
+          id="results"
           className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >
