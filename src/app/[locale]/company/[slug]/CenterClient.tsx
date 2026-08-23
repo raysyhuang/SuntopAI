@@ -8,30 +8,7 @@ import { ArrowLeft, MapPin, Phone, Ruler, CheckCircle, Building2 } from 'lucide-
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
-
-interface TourismSpot {
-  name: string
-  image: string
-  description: string
-  distance: string
-}
-
-interface Center {
-  slug: string
-  name: string
-  shortName: string
-  city: string
-  province: string
-  address: string
-  contact?: string
-  area?: string
-  established?: string
-  description: string
-  features: string[]
-  gallery?: string[]
-  tourism?: TourismSpot[]
-  tourismIntro?: string
-}
+import type { Center } from '@/types/center'
 
 interface CenterClientProps {
   locale: Locale
@@ -257,7 +234,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                 </h2>
                 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {center.features.map((feature, index) => (
+                  {(center.features ?? []).map((feature, index) => (
                     <motion.div
                       key={feature}
                       initial={{ opacity: 0, x: -20 }}
@@ -446,9 +423,10 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                     boxShadow: theme === 'light' ? '0 4px 20px rgba(0,0,0,0.08)' : 'none'
                   }}
                 >
+                  {spot.image && (
                   <div
                     className="aspect-[4/3] overflow-hidden cursor-zoom-in"
-                    onClick={() => setActiveGalleryItem({ src: spot.image, alt: spot.name })}
+                    onClick={() => setActiveGalleryItem({ src: spot.image as string, alt: spot.name })}
                   >
                     <img
                       src={spot.image}
@@ -456,6 +434,7 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
+                  )}
                   <div className="p-5">
                     <h3
                       className="font-semibold text-lg mb-2"

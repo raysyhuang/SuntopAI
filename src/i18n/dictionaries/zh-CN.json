@@ -7,13 +7,15 @@
     "services": "服务",
     "company": "公司",
     "news": "新闻",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "partners": "合作伙伴",
+    "investors": "投资人"
   },
   "home": {
-    "tag": "数字化血液透析中心",
+    "tag": "血液透析 AI 与物联网",
     "hero": {
-      "title1": "透析中心操作系统",
-      "title2": "实时物联 + AI风控",
+      "title1": "智慧透析中心",
+      "title2": "实时物联 + AI 辅助运营",
       "subtitle": "把透析设备、辅助设备、环境与临床数据接入同一个风险控制中枢",
       "description": "杏泰的方案不是单点软件，而是覆盖软体、硬体与资料服务的透析中心数字底座：从设备联网、床旁终端、中央监测到AI风险预警，帮助中心把日常经验沉淀为可执行的闭环流程。",
       "stats": "100+智慧透析中心 | 5000+联网透析设备 | 云端 / 本地 / 混合部署",
@@ -130,7 +132,7 @@
         }
       ],
       "cta": "查看完整成效数据",
-      "footnote": "数据来源：杏泰医疗自营透析中心，2024-2025",
+      "footnote": "数据来源：杏泰医疗自营透析中心，2024-2025。研究设计文档正在整理中。",
       "deployment": {
         "title": "已验证的部署规模",
         "items": [
@@ -209,6 +211,39 @@
     "finalCta": {
       "title": "不是单一软件，而是数字化血透中心方案",
       "description": "把透析物联、AI风险控制、床旁闭环和资产绩效纳入同一个运行底座，让中心运营更安全、更可追溯、更容易持续改进。"
+    },
+    "proofEyebrow": "规模",
+    "audiences": {
+      "eyebrow": "您从哪里开始",
+      "title": "四类访客，四条路径",
+      "hospitals": {
+        "title": "医院与透析中心",
+        "description": "设备物联、中央监控、床旁终端与临床决策支持，深度嵌入既有流程。"
+      },
+      "patients": {
+        "title": "肾友与家属",
+        "description": "遍布全国的透析中心网络、异地透析安排，以及营养、康复与血管通路照护。"
+      },
+      "partners": {
+        "title": "合作伙伴",
+        "description": "医院共建、中心加盟、设备接入与智慧供应链，以及人才培训体系。"
+      },
+      "investors": {
+        "title": "投资人",
+        "description": "同时运营透析中心并自研医疗软件的集团结构、市场机会与发展里程碑。"
+      }
+    },
+    "evidence": {
+      "eyebrow": "临床成效",
+      "title": "运行中观察到的变化",
+      "from": "改善前",
+      "link": "查看全部成效与方法说明"
+    },
+    "regulatory": {
+      "eyebrow": "资质",
+      "title": "二类医疗器械注册证",
+      "scopeLabel": "适用范围",
+      "validLabel": "有效期至"
     }
   },
   "platform": {
@@ -1825,6 +1860,11 @@
         "legend": {
           "direct": "直营中心",
           "partner": "合作医院"
+        },
+        "popup": {
+          "nearby": "周边旅游景点",
+          "viewDetails": "查看详情",
+          "contact": "联系方式"
         }
       },
       "tourism": {
@@ -1859,6 +1899,18 @@
         "title": "开始规划您的旅行",
         "description": "浏览地图，探索全国透析中心，让透析不再成为旅行的障碍。",
         "button": "浏览地图"
+      }
+    },
+    "crossLinks": {
+      "clinical": {
+        "title": "临床应用",
+        "description": "精细化管理如何改善临床结果",
+        "button": "查看临床应用"
+      },
+      "platform": {
+        "title": "技术平台",
+        "description": "支撑各项服务的数据与系统能力",
+        "button": "查看平台"
       }
     }
   },
@@ -1943,569 +1995,7 @@
         "tourism": "周边景点",
         "tourismSubtitle": "治疗之余，探索周边精彩",
         "distanceLabel": "距中心"
-      },
-      "list": [
-        {
-          "slug": "fuzhou-xingkang",
-          "name": "福州杏康血液透析中心",
-          "shortName": "福州杏康",
-          "city": "福州",
-          "province": "福建",
-          "address": "福建省福州市连江县凤城镇西凤路3号",
-          "contact": "周经理 1316295406",
-          "area": "1300㎡",
-          "established": "2018",
-          "description": "福州杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境",
-            "高品质中央氧气供应系统"
-          ],
-          "gallery": [
-            "/images/centers/fuzhou-xingkang/1.jpg",
-            "/images/centers/fuzhou-xingkang/2.jpg",
-            "/images/centers/fuzhou-xingkang/3.jpg",
-            "/images/centers/fuzhou-xingkang/4.jpg",
-            "/images/centers/fuzhou-xingkang/5.jpg",
-            "/images/centers/fuzhou-xingkang/6.jpg"
-          ],
-          "tourismIntro": "福州，福建省省会，有着2200多年建城史，是一座山水相依、古韵悠长的历史文化名城。这里三山鼎峙、闽江穿城，拥有三坊七巷、鼓山涌泉等众多名胜古迹，温泉资源丰富，素有“温泉之城”美誉。福州也是海上丝绸之路的重要起点城市，闽菜文化源远流长。",
-          "tourism": [
-            {
-              "name": "三坊七巷",
-              "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
-              "description": "中国历史文化名街，保存完好的明清古建筑群，被誉为“中国城市里坊制度活化石”。",
-              "distance": "5 km"
-            },
-            {
-              "name": "鼓山",
-              "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
-              "description": "福州市东郊名山，山上有千年古刹涌泉寺，摩崖石刻众多，登顶可俯瞰福州全城与闽江。",
-              "distance": "15 km"
-            },
-            {
-              "name": "西湖公园",
-              "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
-              "description": "福州市区历史最悠久的公园，始建于晋代，湖光山色秀美，是市民休闲的好去处。",
-              "distance": "3 km"
-            },
-            {
-              "name": "闽江夜游",
-              "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
-              "description": "乘船游览闽江两岸灯火辉煌的城市夜景，途经中洲岛、解放大桥等标志性景观。",
-              "distance": "4 km"
-            }
-          ]
-        },
-        {
-          "slug": "anhui-xingkang",
-          "name": "安徽杏康血液透析中心",
-          "shortName": "安徽杏康",
-          "city": "合肥",
-          "province": "安徽",
-          "address": "安徽省合肥市包河区徽州大道与福州路交口西北角千城大厦",
-          "contact": "陈经理 1505515908",
-          "area": "1000㎡",
-          "description": "安徽杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。以国家标准为核心，结合杏泰医疗多年积累总结的管理理念和合肥滨湖当地居民生活就医习惯等实际情况，为合肥滨湖及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境",
-            "高品质中央氧气供应系统"
-          ],
-          "gallery": [
-            "/images/centers/anhui-xingkang/1.jpg",
-            "/images/centers/anhui-xingkang/2.jpg",
-            "/images/centers/anhui-xingkang/3.jpg",
-            "/images/centers/anhui-xingkang/4.jpg",
-            "/images/centers/anhui-xingkang/5.jpg"
-          ],
-          "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有包拯故里的廉政文化、环巢湖的湖光山色，也有蓬勃发展的新兴产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
-          "tourism": [
-            {
-              "name": "合肥天鹅湖",
-              "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
-              "description": "合肥政务区标志性城市公园，湖面开阔，绿道环绕，适合散步与休憩。",
-              "distance": "3.5 km"
-            },
-            {
-              "name": "包公园",
-              "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
-              "description": "纪念北宋名臣包拯的历史文化园区，包含包公祠、清风阁等景点。",
-              "distance": "4.2 km"
-            },
-            {
-              "name": "三河古镇",
-              "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
-              "description": "拥有2500年历史的江南水乡古镇，古街、古桥、古民居保存完好。",
-              "distance": "35 km"
-            },
-            {
-              "name": "巢湖风景区",
-              "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
-              "description": "中国五大淡水湖之一，湖光山色秀丽，温泉资源丰富，是休闲度假胜地。",
-              "distance": "60 km"
-            }
-          ]
-        },
-        {
-          "slug": "lujiang-xingkang",
-          "name": "庐江杏康血液透析中心",
-          "shortName": "庐江杏康",
-          "city": "庐江",
-          "province": "安徽",
-          "address": "安徽省庐江县庐巢路108号莲花商业文化广场",
-          "contact": "陈经理 1505515908",
-          "area": "1100㎡",
-          "description": "庐江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为庐江及周边地区患者提供专业的透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/lujiang-xingkang/1.jpg",
-            "/images/centers/lujiang-xingkang/2.jpg",
-            "/images/centers/lujiang-xingkang/3.jpg",
-            "/images/centers/lujiang-xingkang/4.jpg",
-            "/images/centers/lujiang-xingkang/5.jpg",
-            "/images/centers/lujiang-xingkang/6.jpg"
-          ],
-          "tourismIntro": "庐江县位于安徽省中部，地处巢湖南岸，历史悠久、人杰地灵。这里是三国名将周瑜故里，拥有丰富的温泉资源和秀美的山水风光。冶父山的禅意幽深、汤池温泉的舒适惬意，让庐江成为修身养性的理想之地。",
-          "tourism": [
-            {
-              "name": "汤池温泉",
-              "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
-              "description": "千年温泉古镇，水质优良，富含多种矿物质，是放松身心的天然疗养胜地。",
-              "distance": "20 km"
-            },
-            {
-              "name": "冶父山",
-              "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
-              "description": "国家森林公园，相传为春秋铸剑大师欧冶子铸剑之地，山势秀丽，古刹幽深。",
-              "distance": "15 km"
-            },
-            {
-              "name": "周瑜墓",
-              "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
-              "description": "三国名将周瑜安息之地，园内古木参天，是了解三国文化的重要历史遗迹。",
-              "distance": "5 km"
-            },
-            {
-              "name": "巢湖风景区",
-              "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
-              "description": "中国五大淡水湖之一，湖光山色秀丽，湿地生态丰富，可游览中庙、姥山岛等景点。",
-              "distance": "30 km"
-            }
-          ]
-        },
-        {
-          "slug": "hefei-pufukang",
-          "name": "合肥普福康血液透析中心",
-          "shortName": "合肥普福康",
-          "city": "合肥",
-          "province": "安徽",
-          "address": "安徽省合肥市肥西县上派镇灯塔路与南方路交叉口",
-          "contact": "陈经理 1505515908",
-          "area": "2000㎡",
-          "description": "合肥普福康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。在先进的医疗设备配备基础上，搭配经验丰富的专业透析医护团队，为合肥及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境",
-            "高品质中央氧气供应系统"
-          ],
-          "gallery": [
-            "/images/centers/hefei-pufukang/1.jpg",
-            "/images/centers/hefei-pufukang/2.jpg",
-            "/images/centers/hefei-pufukang/3.jpg",
-            "/images/centers/hefei-pufukang/4.jpg",
-            "/images/centers/hefei-pufukang/5.jpg",
-            "/images/centers/hefei-pufukang/6.jpg"
-          ],
-          "tourismIntro": "合肥，安徽省省会，地处长三角城市群核心区域，是一座融合千年历史底蕴与现代科技创新的活力之城。这里有三国故地逍遥津、巍巍大蜀山，也有蓬勃发展的科教产业。无论是短暂停留还是长期治疗，合肥都能为您提供丰富的休闲与文化体验。",
-          "tourism": [
-            {
-              "name": "逍遥津公园",
-              "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
-              "description": "三国古战场遗址公园，张辽威震逍遥津的故事就发生在这里，园内绿树成荫、古迹众多。",
-              "distance": "3 km"
-            },
-            {
-              "name": "安徽省博物院",
-              "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
-              "description": "国家一级博物馆，馆藏丰富，展示安徽从远古到近现代的历史文化精华。",
-              "distance": "4 km"
-            },
-            {
-              "name": "大蜀山国家森林公园",
-              "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
-              "description": "合肥市区最高峰，森林覆盖率高，是登山健身、亲近自然的城市绿肺。",
-              "distance": "12 km"
-            },
-            {
-              "name": "合肥野生动物园",
-              "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
-              "description": "大蜀山脚下的生态型动物园，园内动物种类丰富，适合家庭游览与亲子活动。",
-              "distance": "15 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhaoqing-xingkang",
-          "name": "肇庆杏康血液透析中心",
-          "shortName": "肇庆杏康",
-          "city": "肇庆",
-          "province": "广东",
-          "address": "肇庆市端州区建设二路28号盛世大厦",
-          "contact": "李经理 1890305928",
-          "area": "686㎡",
-          "description": "肇庆杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，为肇庆及周边地区患者提供专业的透析照护服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/zhaoqing-xingkang/1.jpg",
-            "/images/centers/zhaoqing-xingkang/2.jpg",
-            "/images/centers/zhaoqing-xingkang/3.jpg",
-            "/images/centers/zhaoqing-xingkang/4.jpg",
-            "/images/centers/zhaoqing-xingkang/5.jpg",
-            "/images/centers/zhaoqing-xingkang/6.jpg"
-          ],
-          "tourismIntro": "肇庆，广东省历史文化名城，地处西江中游，是岭南文化的重要发祥地之一。这里拥有七星岩、鼎湖山两大国家级风景名胜区，自然风光秀美，被誉为“北回归线上的绿洲”。端砚文化、宋代古城墙等丰富的人文资源，让肇庆兼具自然之美与文化之韵。",
-          "tourism": [
-            {
-              "name": "七星岩",
-              "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
-              "description": "七座石灰岩峰峦如北斗七星排列，湖山相映，被誉为“岭南第一奇观”。",
-              "distance": "3 km"
-            },
-            {
-              "name": "鼎湖山",
-              "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
-              "description": "中国第一个国家级自然保护区，被誉为“北回归线上的绿宝石”，森林覆盖率达98%。",
-              "distance": "18 km"
-            },
-            {
-              "name": "星湖湿地公园",
-              "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
-              "description": "国家湿地公园，丹顶鹤与多种珍稀鸟类栖息于此，湖水清澈，生态环境优美。",
-              "distance": "4 km"
-            },
-            {
-              "name": "宋城墙",
-              "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
-              "description": "始建于宋代的古城墙遗址，是广东仅存的宋代砖城墙，见证了肇庆千年的沧桑变迁。",
-              "distance": "2 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhongshan-shenkang",
-          "name": "中山肾康血液透析中心",
-          "shortName": "中山肾康",
-          "city": "中山",
-          "province": "广东",
-          "address": "广东省中山市石岐区孙文东路88号",
-          "contact": "李经理 18903059289",
-          "area": "625㎡",
-          "description": "中山肾康血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予患者更加安心的医疗照护。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/zhongshan-shenkang/1.jpg",
-            "/images/centers/zhongshan-shenkang/2.jpg",
-            "/images/centers/zhongshan-shenkang/3.jpg",
-            "/images/centers/zhongshan-shenkang/4.jpg",
-            "/images/centers/zhongshan-shenkang/5.jpg"
-          ],
-          "tourismIntro": "中山市，广东省地级市，地处珠三角核心区域，是伟大的民主革命先驱孙中山先生的故乡。这座城市兼具岭南水乡的柔美与近代革命文化的厚重，既有精致的园林与美食，也有丰富的红色文化资源。",
-          "tourism": [
-            {
-              "name": "孙中山故居",
-              "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
-              "description": "全国重点文物保护单位，展示孙中山先生成长与革命的历史，是中山最重要的文化地标。",
-              "distance": "25 km"
-            },
-            {
-              "name": "中山詹园",
-              "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
-              "description": "岭南最大的私家古典园林，融合苏杭园林精华与岭南建筑风格，景色雅致。",
-              "distance": "10 km"
-            },
-            {
-              "name": "紫马岭公园",
-              "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
-              "description": "中山市最大的综合性城市公园，园内湖泊、花园、游乐设施齐全，是休闲散步的好去处。",
-              "distance": "5 km"
-            },
-            {
-              "name": "孙文西路步行街",
-              "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
-              "description": "融合中西建筑风格的百年商业老街，骑楼建筑独具特色，是品味中山文化的好地方。",
-              "distance": "3 km"
-            }
-          ]
-        },
-        {
-          "slug": "heilongjiang-xingkang",
-          "name": "黑龙江杏康血液透析中心",
-          "shortName": "黑龙江杏康",
-          "city": "哈尔滨",
-          "province": "黑龙江",
-          "address": "哈尔滨市道外区红旗大街621号",
-          "contact": "杨经理 1560489313",
-          "area": "1800㎡",
-          "description": "黑龙江杏康血液透析中心设有肾内科、医学检验科、药房、超声、心电等重点科室，为东北地区患者提供专业的透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/heilongjiang-xingkang/1.jpg",
-            "/images/centers/heilongjiang-xingkang/2.jpg",
-            "/images/centers/heilongjiang-xingkang/3.jpg",
-            "/images/centers/heilongjiang-xingkang/4.jpg",
-            "/images/centers/heilongjiang-xingkang/5.jpg",
-            "/images/centers/heilongjiang-xingkang/6.jpg"
-          ],
-          "tourismIntro": "哈尔滨，黑龙江省省会，素有“东方小巴黎”“冰城”之称。这座城市融合了中俄文化精华，拥有独特的欧式建筑群和世界闻名的冰雪文化。中央大街的百年石板路、圣索菲亚教堂的拜占庭穹顶，以及冬日里璀璨的冰雪大世界，让哈尔滨成为一座别具魅力的北国名城。",
-          "tourism": [
-            {
-              "name": "中央大街",
-              "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
-              "description": "亚洲最长的步行街之一，汇集欧洲各时期建筑风格，被誉为“建筑艺术博物馆”。",
-              "distance": "5 km"
-            },
-            {
-              "name": "圣索菲亚教堂",
-              "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
-              "description": "远东地区最大的东正教堂之一，拜占庭式建筑风格，是哈尔滨的标志性建筑。",
-              "distance": "5 km"
-            },
-            {
-              "name": "太阳岛",
-              "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
-              "description": "松花江上的生态风景区，夏季绿树花海，冬季雪雕艺术，是国家5A级旅游景区。",
-              "distance": "10 km"
-            },
-            {
-              "name": "哈尔滨冰雪大世界",
-              "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
-              "description": "世界最大的冰雪主题乐园，每年冬季开放，冰雕雪塑规模宏大、流光溢彩。",
-              "distance": "25 km"
-            }
-          ]
-        },
-        {
-          "slug": "harbin-yuhua",
-          "name": "哈尔滨誉华血液透析中心",
-          "shortName": "哈尔滨誉华",
-          "city": "哈尔滨",
-          "province": "黑龙江",
-          "address": "哈尔滨市道外区红旗大街621号",
-          "contact": "杨经理 1560489313",
-          "area": "2250㎡",
-          "description": "哈尔滨誉华血液透析中心配有先进的透析机和双级反渗净水系统，双重保障透析用水品质，为哈尔滨及其周边地区的肾友提供持续优质化的专业透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/harbin-yuhua/1.jpg",
-            "/images/centers/harbin-yuhua/2.jpg",
-            "/images/centers/harbin-yuhua/3.jpg",
-            "/images/centers/harbin-yuhua/4.jpg",
-            "/images/centers/harbin-yuhua/5.jpg"
-          ],
-          "tourismIntro": "哈尔滨，黑龙江省省会，是中国纬度最高的省会城市，四季分明，冬日银装素裹。这座城市以独特的冰雪文化、欧陆风情和东北美食闻名遐迩。松花江畔的悠闲时光、老道外的百年建筑，都是哈尔滨独有的城市记忆。",
-          "tourism": [
-            {
-              "name": "松花江畔",
-              "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
-              "description": "哈尔滨的母亲河，江畔绿道适合散步骑行，冬季江面可体验冰上活动。",
-              "distance": "4 km"
-            },
-            {
-              "name": "东北虎林园",
-              "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
-              "description": "世界最大的东北虎繁育基地，可近距离观赏百余只东北虎的雄姿。",
-              "distance": "15 km"
-            },
-            {
-              "name": "果戈里大街",
-              "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
-              "description": "以俄国作家果戈里命名的文化街区，欧式建筑林立，咖啡馆与书店遍布。",
-              "distance": "3 km"
-            },
-            {
-              "name": "龙塔",
-              "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
-              "description": "亚洲第一高钢塔，高336米，设有观光平台和旋转餐厅，可360度俯瞰哈尔滨全景。",
-              "distance": "8 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhenjiang-xingkang",
-          "name": "镇江杏康血液透析中心",
-          "shortName": "镇江杏康",
-          "city": "镇江",
-          "province": "江苏",
-          "address": "江苏省镇江市",
-          "description": "镇江杏康血液透析中心配有高品质中央氧气供应系统、先进的透析机和双级反渗净水系统，双重保障透析用水品质，提供超高纯度透析用水，给予肾友更加安心的医疗照护。为镇江及周边地区患者提供持续优质化的专业透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境",
-            "高品质中央氧气供应系统"
-          ],
-          "gallery": [
-            "/images/centers/zhenjiang-xingkang/1.jpg",
-            "/images/centers/zhenjiang-xingkang/2.jpg",
-            "/images/centers/zhenjiang-xingkang/3.jpg",
-            "/images/centers/zhenjiang-xingkang/4.jpg",
-            "/images/centers/zhenjiang-xingkang/5.jpg"
-          ],
-          "tourismIntro": "镇江，江苏省地级市，位于长江与京杭大运河交汇处，自古就是兵家必争的战略要地。这座有着3000多年历史的文化名城，以“天下第一江山”闻名，金山寺的白蛇传说、西津渡的千年古渡、北固山的三国遗迹，构成了一幅壮丽的历史画卷。",
-          "tourism": [
-            {
-              "name": "金山寺",
-              "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
-              "description": "始建于东晋的千年古刹，白蛇传“水漫金山”故事的发生地，依山而建，气势恢宏。",
-              "distance": "5 km"
-            },
-            {
-              "name": "西津渡",
-              "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
-              "description": "千年古渡口历史街区，保存了唐宋以来的古建筑群，被誉为“中国古渡博物馆”。",
-              "distance": "4 km"
-            },
-            {
-              "name": "北固山",
-              "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
-              "description": "三国时期孙刘联姻之地，“天下第一江山”石刻名闻天下，登顶可览长江壮景。",
-              "distance": "6 km"
-            },
-            {
-              "name": "焦山",
-              "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
-              "description": "长江中唯一四面环水的岛屿山林，有“江中浮玉”之称，山上碑林珍贵、古木参天。",
-              "distance": "10 km"
-            }
-          ]
-        },
-        {
-          "slug": "linshu-xingkang",
-          "name": "临沭杏康血液透析中心",
-          "shortName": "临沭杏康",
-          "city": "临沭",
-          "province": "山东",
-          "address": "山东省临沂市临沭县城常林大街西侧",
-          "contact": "孟经理 15054936765",
-          "area": "2000㎡",
-          "description": "临沭杏康血液透析中心配有先进的透析机和双级反渗净水系统，为临沭及周边地区患者提供专业的透析服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/linshu-xingkang/1.jpg",
-            "/images/centers/linshu-xingkang/2.jpg",
-            "/images/centers/linshu-xingkang/3.jpg",
-            "/images/centers/linshu-xingkang/4.jpg",
-            "/images/centers/linshu-xingkang/5.jpg",
-            "/images/centers/linshu-xingkang/6.jpg"
-          ],
-          "tourismIntro": "临沭县位于山东省东南部，地处沂蒙山区南麓，是一座历史悠久的鲁南小城。这里山水秀丽、民风淳朴，苍马山的自然风光、柳编工艺的非遗传承，以及周边沂蒙山区壮美的红色旅游资源，共同构成了临沭独特的旅游魅力。",
-          "tourism": [
-            {
-              "name": "苍马山风景区",
-              "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
-              "description": "国家3A级旅游景区，山峦叠翠，溪流潺潺，有玉圣园、抗日纪念馆等多处景点。",
-              "distance": "10 km"
-            },
-            {
-              "name": "柳编文化园",
-              "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
-              "description": "展示临沭国家级非遗柳编工艺的文化园区，可体验传统柳编手工制作。",
-              "distance": "5 km"
-            },
-            {
-              "name": "蒙山风景区",
-              "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
-              "description": "沂蒙山世界地质公园核心景区，主峰龟蒙顶海拔1156米，山高林密、空气清新。",
-              "distance": "80 km"
-            },
-            {
-              "name": "地下大峡谷",
-              "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
-              "description": "中国特大型溶洞之一，全长6100米，洞内有暗河漂流，地质景观奇特壮丽。",
-              "distance": "60 km"
-            }
-          ]
-        },
-        {
-          "slug": "liaoning-xingkang",
-          "name": "辽宁杏康血液透析中心",
-          "shortName": "辽宁杏康",
-          "city": "沈阳",
-          "province": "辽宁",
-          "address": "沈阳市沈河区北顺城路61号",
-          "contact": "刘经理 17640220000",
-          "area": "1600㎡",
-          "description": "辽宁杏康血液透析中心为辽宁地区患者提供专业的透析照护服务。",
-          "features": [
-            "个性化设计",
-            "定制化服务",
-            "居家式环境"
-          ],
-          "gallery": [
-            "/images/centers/liaoning-xingkang/1.jpg",
-            "/images/centers/liaoning-xingkang/2.jpg",
-            "/images/centers/liaoning-xingkang/3.jpg",
-            "/images/centers/liaoning-xingkang/4.jpg",
-            "/images/centers/liaoning-xingkang/5.jpg",
-            "/images/centers/liaoning-xingkang/6.jpg"
-          ],
-          "tourismIntro": "沈阳，辽宁省省会，是中国东北地区的政治、经济与文化中心。作为清朝的发祥地，沈阳拥有世界文化遗产沈阳故宫和清昭陵，积淀了丰厚的满族文化底蕴。这座城市既有古都的庄严大气，也有现代都市的蓬勃活力。",
-          "tourism": [
-            {
-              "name": "沈阳故宫",
-              "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
-              "description": "世界文化遗产，清太祖努尔哈赤和清太宗皇太极的皇宫，中国仅存的两大宫殿建筑群之一。",
-              "distance": "5 km"
-            },
-            {
-              "name": "北陵公园（清昭陵）",
-              "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
-              "description": "清太宗皇太极的陵寝，沈阳最大的公园，古松参天，陵寝建筑庄严肃穆。",
-              "distance": "8 km"
-            },
-            {
-              "name": "张氏帅府",
-              "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
-              "description": "东北军阀张作霖和张学良父子的官邸和私宅，展示了近代东北的风云历史。",
-              "distance": "5 km"
-            },
-            {
-              "name": "沈阳世博园",
-              "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
-              "description": "2006年世界园艺博览会举办地，占地246公顷，四季花卉缤纷，是城市生态休闲胜地。",
-              "distance": "20 km"
-            }
-          ]
-        }
-      ]
+      }
     },
     "partners": {
       "tag": "合作医院",
@@ -2719,7 +2209,10 @@
       "aboutUs": "关于我们",
       "centers": "透析中心",
       "news": "新闻",
-      "contact": "联系我们"
+      "contact": "联系我们",
+      "regulatory": "医疗器械注册证",
+      "partners": "合作伙伴",
+      "investors": "投资人"
     },
     "legal": {
       "rights": "保留所有权利。",
@@ -2979,5 +2472,131 @@
         "content": "我们致力于通过定期审查和更新政策和程序、监控法规变化和新兴要求、纳入审计和评估的反馈、投资合规技术和自动化、参与行业团体和监管机构以及与行业标准进行基准比较，持续改进我们的合规计划。"
       }
     ]
+  },
+  "regulatoryPage": {
+    "tag": "资质与证据",
+    "title": "医疗器械注册证",
+    "subtitle": "岱特智能科技自主研发的血液透析信息处理软件，已取得中华人民共和国第二类医疗器械注册证。",
+    "certTitle": "注册证信息",
+    "fields": {
+      "number": "注册证编号",
+      "registrant": "注册人",
+      "device": "产品名称",
+      "model": "型号规格",
+      "structure": "结构及组成",
+      "scope": "适用范围",
+      "authority": "审批部门",
+      "approved": "批准日期",
+      "expires": "有效期至"
+    },
+    "tiersTitle": "功能与注册范围的对应关系",
+    "tiersIntro": "注册证的适用范围仅涵盖数据的传输、显示与处理。为避免混淆，我们对每一项功能标注其所处的合规层级。",
+    "tiers": {
+      "registered": {
+        "label": "注册范围内",
+        "description": "查房、化验评估、足部管理、质控、化验提醒、中央监控显示、床旁终端显示、水电环境物联网。"
+      },
+      "support": {
+        "label": "临床决策支持",
+        "description": "AI 辅助文书起草、原因归因分析、参考性建议。建议仅供参考，须由医师确认后方可执行。"
+      },
+      "validation": {
+        "label": "研究验证中",
+        "description": "干体重预测、心衰风险评估、透析中低血压预警、四项实时监测算法。属研究项目，未作为注册的临床功能提供，亦不可用于临床决策。"
+      }
+    },
+    "renewalNote": "注册证有效期至 2030 年 7 月 16 日。软件发生重大更新时须办理变更注册。"
+  },
+  "partnersPage": {
+    "tag": "合作伙伴",
+    "title": "与我们合作",
+    "subtitle": "从医院共建、中心加盟到设备接入与供应链协同，我们提供可复制的合作模式与长期支持。",
+    "modelsTitle": "五种合作模式",
+    "models": [
+      {
+        "title": "医院共建",
+        "description": "与综合医院肾内科共同建立血液净化中心或血管通路中心，提供设计规划、人员培训、运营管理与质控体系的全流程支持。"
+      },
+      {
+        "title": "中心加盟",
+        "description": "以独立透析中心（IDC）模式加盟，共享统一的品牌形象、标准作业流程、管理系统与集中采购能力。"
+      },
+      {
+        "title": "设备接入",
+        "description": "开放数据接口，可将既有国产透析设备接入物联网与 5G 网络，无需更换设备即可升级为联网透析机。"
+      },
+      {
+        "title": "智慧供应链",
+        "description": "院内微供应链系统与 HIS 对接，实现实物流、库存流、治疗流与收费流的一致性，并按排班与处方进行智能补货。"
+      },
+      {
+        "title": "人才培训",
+        "description": "杏人e学院线上课程与线下实训体系，涵盖血管通路、营养管理、康复与专科护理。"
+      }
+    ],
+    "networkTitle": "合作网络",
+    "networkDescription": "我们已与全国多家医疗机构建立长期合作关系，覆盖综合医院与独立透析中心。",
+    "networkCta": "查看合作医院",
+    "collaborationsTitle": "部分合作",
+    "collaborations": [
+      {
+        "partner": "伊藤忠商事",
+        "description": "与杏泰医疗集团签署战略合作协议。"
+      },
+      {
+        "partner": "波士顿科学 · 广州医科大学附属第五医院",
+        "description": "共同建立血液透析血管通路中心与血管通路技术培训基地。"
+      }
+    ],
+    "ctaTitle": "成为合作伙伴",
+    "ctaDescription": "请告诉我们您所在机构的情况与合作方向，我们会安排专人与您对接。",
+    "ctaButton": "联系我们"
+  },
+  "investorsPage": {
+    "tag": "投资人",
+    "title": "投资概览",
+    "subtitle": "杏泰医疗同时运营透析中心并自主研发医疗软件——这一组合是我们区别于同业的核心。",
+    "positionTitle": "我们的定位",
+    "positionBody": "行业内既有专注扩张的连锁透析机构，也有专注软件的医疗信息化公司。杏泰同时具备两者：自营与合作的透析中心网络提供真实的临床场景与连续数据，旗下岱特智能科技据此研发透析管理系统与专科 AI 模型，并已取得二类医疗器械注册证。系统深度嵌入医院流程，替换成本高；数据规模的增长又持续提升模型精度。",
+    "marketTitle": "市场机会",
+    "marketBody": "中国透析患者的治疗渗透率显著低于周边高收入经济体。若达到日本或台湾地区的患病率水平，潜在治疗人群将远高于当前规模。",
+    "marketNote": "患病率数据引自 2016 年年度数据报告，仅供结构性比较参考。",
+    "prevalenceLabels": {
+      "china": "中国大陆",
+      "japan": "日本",
+      "taiwan": "中国台湾",
+      "usa": "美国"
+    },
+    "modelTitle": "商业模式",
+    "modelItems": [
+      {
+        "title": "透析服务",
+        "description": "自营中心与合作中心的透析治疗收入。"
+      },
+      {
+        "title": "系统与软件",
+        "description": "透析管理系统的销售、部署与持续服务。"
+      },
+      {
+        "title": "AI 使用费",
+        "description": "按治疗人次向使用 AI 功能的中心收取。"
+      },
+      {
+        "title": "设备与耗材",
+        "description": "透析设备与耗材供应，并与系统接口协同。"
+      },
+      {
+        "title": "智慧供应链",
+        "description": "面向中心网络的采购、仓储与配送服务。"
+      }
+    ],
+    "scaleTitle": "当前规模",
+    "governanceTitle": "合规与治理",
+    "governanceBody": "旗下软件已取得中华人民共和国第二类医疗器械注册证。我们对每一项产品功能标注其所处的合规层级，明确区分注册范围内的功能、临床决策支持功能与仍在研究验证阶段的功能。",
+    "governanceCta": "查看注册证与合规说明",
+    "materialsTitle": "索取详细材料",
+    "materialsBody": "财务预测、扩张计划与完整投资材料需经审核后提供。请说明您的机构与关注方向。",
+    "materialsNote": "本页所载前瞻性内容为规划假设，不构成任何承诺或收益保证。",
+    "materialsCta": "联系投资者关系"
   }
 }

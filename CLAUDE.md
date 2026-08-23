@@ -20,6 +20,9 @@ npm start                # Start production server
 
 # Code quality
 npm run lint             # Run ESLint
+npm run dict:check       # Verify all 4 dictionaries match zh-CN key-for-key
+npm run facts:check      # Report figures awaiting reconciliation, and outcome
+                         # measures published without a documented study design
 ```
 
 ## Monorepo Structure
@@ -261,19 +264,61 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 ## Key Pages & Routes
 
+Navigation carries **six** top-level items: Platform, Services, Company, Partners,
+Investors, News. The logo links home, so Home is not repeated in the nav. Clinical
+sits under Services and Deployment under Platform — both keep their own URLs and are
+reached from their parent page's cross-links and from the footer.
+
 All pages under `src/app/[locale]/`:
-- `/` - Home (hero, pillars, stats) - `HomeClient.tsx`
+- `/` - Home, an audience router - `HomeClient.tsx`
 - `/platform` - Platform architecture - `PlatformClient.tsx`
-- `/clinical/*` - Clinical applications (patient-care, vascular-access)
-- `/deployment` - Integration and deployment - `DeploymentClient.tsx`
-- `/services` - Service offerings (3x3 grid)
-- `/services/patient-travel` - Interactive Leaflet map with 150+ dialysis centers
+- `/deployment` - Integration and deployment (under Platform)
+- `/services` - Service offerings
+- `/services/patient-travel` - Interactive Leaflet map of the center network
+- `/services/vascular-access` - Vascular access service
+- `/clinical/*` - Clinical applications (under Services)
 - `/company` - About, mission, values
+- `/company/certifications` - Medical device registration and capability tiers
 - `/company/[slug]` - Individual center detail pages with tourism galleries
 - `/company/centers` - All centers listing
+- `/partners` - Partnership models and named collaborations
+- `/investors` - Public investment overview; projections stay behind a request flow
 - `/news` - News listing and individual articles (`/news/[slug]`)
 - `/contact` - Contact form - `ContactClient.tsx`
 - `/privacy`, `/terms`, `/compliance` - Legal pages (use `LegalPageClient.tsx`)
+- `/preview` - The previous homepage, parked for comparison. **Delete once signed off.**
+
+### Facts, figures and naming — `src/content/facts.ts`
+
+**Every number that appears on the site lives here, once.** Figures are
+locale-independent, so all four locales read the same value and cannot drift.
+
+- Render figures through `publicFact(id)`. It **throws at build time** for anything
+  marked `unreconciled` or `internal` — an unsettled number must fail the build
+  rather than reach a hospital director or an investor.
+- Each fact carries a `basis` (what is actually counted) and an `asOf` date. Show the
+  basis beside headline figures; it is what stops the site and the company deck from
+  appearing to contradict each other.
+- `BRAND` holds approved naming: **Suntop Healthcare** (group) → **岱特 / Daite**
+  (technology subsidiary, and the registrant) → **胜透 / Suntop AI** (the product;
+  胜透 in zh-CN and zh-TW, Suntop AI in en and ja).
+- `REGISTRATION` holds the Class II certificate. `CAPABILITY_TIERS` maps each product
+  capability to `registered`, `decision-support`, or `in-validation` — see the medical
+  language rules below.
+- `OUTCOMES` are cleared for publication but their study design is undocumented, so
+  each must render `OUTCOMES_ATTRIBUTION` alongside the figure until `method` is filled in.
+
+### Center data — one source
+
+`public/data/centers-{locale}.json` is the **single source of truth** for centers.
+
+- Server components and `generateStaticParams` read it via `getDirectCenters(locale)`
+  in `src/lib/centers-data.ts`; client components fetch it over HTTP.
+- **Do NOT** reintroduce a copy in the dictionaries. Centers were previously defined
+  twice, which is how the English map silently lost nine centers and how the zh-TW and
+  ja map data stayed in Simplified Chinese.
+- Text in these files is **locale-specific** and must be genuinely translated. Never
+  copy zh-CN into another locale as a placeholder.
 
 ## Design Principles
 
@@ -307,3 +352,7 @@ From README.md - **institutional tone suitable for hospitals, investors, regulat
 5. **Do NOT** use Server Component features in `*Client.tsx` files
 6. **Do NOT** skip locale parameter in page components - always await params
 7. **Do NOT** import dictionaries directly - use `getDictionary(locale)`
+8. **Do NOT** hard-code any figure in a component - add it to `facts.ts` and render it through `publicFact()`
+9. **Do NOT** define centers anywhere but `public/data/centers-{locale}.json`
+10. **Do NOT** describe a predictive or warning capability as a registered clinical function - the Class II registration covers transmission, display and processing only, so label capabilities with their tier from `CAPABILITY_TIERS`
+11. **Do NOT** hard-code user-facing strings in components, including inside HTML-string builders such as `MapPopup` - pass localized labels in

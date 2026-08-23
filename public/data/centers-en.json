@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-02-08",
+  "lastUpdated": "2026-02-08T12:00:00Z",
   "centers": [
     {
       "id": "fuzhou-xingkang-001",
@@ -20,29 +20,44 @@
       "established": "2018",
       "description": "Fuzhou Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system to ensure ultra-high purity dialysis water.",
       "features": [
-        "Personalized design",
-        "Customized services",
-        "Home-like environment",
-        "High-quality central oxygen supply"
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment",
+        "High-Quality Central Oxygen Supply"
       ],
       "gallery": [
         "/images/centers/fuzhou-xingkang/1.jpg",
         "/images/centers/fuzhou-xingkang/2.jpg",
-        "/images/centers/fuzhou-xingkang/3.jpg"
+        "/images/centers/fuzhou-xingkang/3.jpg",
+        "/images/centers/fuzhou-xingkang/4.jpg",
+        "/images/centers/fuzhou-xingkang/5.jpg",
+        "/images/centers/fuzhou-xingkang/6.jpg"
       ],
-      "tourismIntro": "Fuzhou, the capital of Fujian Province, has a history of over 2,200 years and is a historical and cultural city where mountains and waters blend.",
+      "tourismIntro": "Fuzhou, the capital of Fujian Province, boasts over 2,200 years of history as a culturally rich city where mountains and rivers converge. Home to the renowned Three Lanes and Seven Alleys, Drum Mountain, and abundant hot spring resources, Fuzhou is known as the 'Hot Spring City.' As a key starting point of the Maritime Silk Road, it offers visitors a blend of heritage, nature, and distinctive Min cuisine.",
       "tourism": [
         {
           "name": "Three Lanes and Seven Alleys",
-          "type": "Historical Culture",
-          "distance": "5 km",
-          "description": "A well-preserved Ming and Qing dynasty architectural complex"
+          "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
+          "description": "A nationally renowned historic street featuring well-preserved Ming and Qing dynasty architecture, known as a living fossil of ancient Chinese urban planning.",
+          "distance": "5 km"
         },
         {
           "name": "Drum Mountain",
-          "type": "Natural Scenery",
-          "distance": "10 km",
-          "description": "The highest peak in Fuzhou, home to Yongquan Temple"
+          "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
+          "description": "A famous mountain east of the city, home to the thousand-year-old Yongquan Temple, numerous cliff inscriptions, and panoramic views of Fuzhou and the Min River.",
+          "distance": "15 km"
+        },
+        {
+          "name": "West Lake Park",
+          "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
+          "description": "The oldest park in Fuzhou's urban area, dating back to the Jin Dynasty, offering beautiful lake scenery and a peaceful retreat for locals and visitors alike.",
+          "distance": "3 km"
+        },
+        {
+          "name": "Min River Night Cruise",
+          "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
+          "description": "A scenic boat tour along the illuminated Min River waterfront, passing landmarks like Zhongzhou Island and Jiefang Bridge.",
+          "distance": "4 km"
         }
       ]
     },
@@ -63,17 +78,553 @@
       "area": "1600㎡",
       "description": "Liaoning Xingkang Hemodialysis Center provides professional dialysis care services for patients in the Liaoning region.",
       "features": [
-        "Personalized design",
-        "Customized services",
-        "Home-like environment"
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
       ],
-      "tourismIntro": "Shenyang, the capital of Liaoning Province, is the political, economic, and cultural center of Northeast China.",
+      "tourismIntro": "Shenyang, the capital of Liaoning Province, is the political, economic, and cultural center of Northeast China. As the birthplace of the Qing Dynasty, Shenyang is home to the UNESCO-listed Shenyang Imperial Palace and Zhaoling Tomb, carrying a rich Manchu cultural legacy. The city seamlessly blends the grandeur of an ancient capital with the vibrant energy of a modern metropolis.",
       "tourism": [
         {
           "name": "Shenyang Imperial Palace",
-          "type": "Historical Culture",
-          "distance": "5 km",
-          "description": "UNESCO World Heritage Site, the imperial palace of Emperor Nurhaci"
+          "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
+          "description": "A UNESCO World Heritage Site and former palace of Qing founders Nurhaci and Hong Taiji — one of only two imperial palace complexes in China.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Beiling Park (Zhaoling Tomb)",
+          "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
+          "description": "The mausoleum of Qing Emperor Hong Taiji and Shenyang's largest park, featuring towering ancient pines and majestic tomb architecture.",
+          "distance": "8 km"
+        },
+        {
+          "name": "Marshal Zhang's Mansion",
+          "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
+          "description": "The official residence of warlord Zhang Zuolin and his son Zhang Xueliang, showcasing the dramatic modern history of Northeast China.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Shenyang Expo Garden",
+          "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
+          "description": "The venue of the 2006 World Horticultural Exposition spanning 246 hectares, with year-round floral displays and a premier urban ecological retreat.",
+          "distance": "20 km"
+        }
+      ],
+      "gallery": [
+        "/images/centers/liaoning-xingkang/1.jpg",
+        "/images/centers/liaoning-xingkang/2.jpg",
+        "/images/centers/liaoning-xingkang/3.jpg",
+        "/images/centers/liaoning-xingkang/4.jpg",
+        "/images/centers/liaoning-xingkang/5.jpg",
+        "/images/centers/liaoning-xingkang/6.jpg"
+      ]
+    },
+    {
+      "id": "anhui-xingkang-003",
+      "slug": "anhui-xingkang",
+      "type": "direct",
+      "name": "Anhui Xingkang Hemodialysis Center",
+      "shortName": "Anhui Xingkang",
+      "city": "Hefei",
+      "province": "Anhui",
+      "coordinates": {
+        "lat": 31.8206,
+        "lng": 117.2272
+      },
+      "address": "Qiancheng Building, northwest corner of Huizhou Avenue and Fuzhou Road, Baohe District, Hefei, Anhui Province",
+      "contact": "Manager Chen 1505515908",
+      "area": "1000㎡",
+      "description": "Anhui Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system, providing ultra-high purity dialysis water through two layers of safeguards. Built on national standards and combined with the management practices Suntop Healthcare has developed over many years, the center is adapted to local care patterns in Hefei's Binhu district to provide consistent, high-quality dialysis services to patients in the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment",
+        "High-Quality Central Oxygen Supply"
+      ],
+      "gallery": [
+        "/images/centers/anhui-xingkang/1.jpg",
+        "/images/centers/anhui-xingkang/2.jpg",
+        "/images/centers/anhui-xingkang/3.jpg",
+        "/images/centers/anhui-xingkang/4.jpg",
+        "/images/centers/anhui-xingkang/5.jpg"
+      ],
+      "tourismIntro": "Hefei, the capital of Anhui Province, sits at the heart of the Yangtze River Delta city cluster — a vibrant metropolis blending a thousand years of history with modern innovation. Home to the cultural legacy of Judge Bao, the scenic shores of Chaohu Lake, and a thriving tech industry, Hefei offers a rich mix of leisure and cultural experiences whether you are staying briefly or throughout a course of treatment.",
+      "tourism": [
+        {
+          "name": "Swan Lake Park",
+          "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
+          "description": "An iconic urban park in Hefei's Government District with expansive lake views, scenic greenways, and relaxing walking paths.",
+          "distance": "3.5 km"
+        },
+        {
+          "name": "Lord Bao Park",
+          "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
+          "description": "A historic cultural park honoring Bao Zheng, the renowned Song Dynasty judge, featuring the Bao Zheng Memorial Hall and Qingfeng Pavilion.",
+          "distance": "4.2 km"
+        },
+        {
+          "name": "Sanhe Ancient Town",
+          "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
+          "description": "A 2,500-year-old water town with well-preserved ancient streets, bridges, and traditional residences showcasing Jiangnan heritage.",
+          "distance": "35 km"
+        },
+        {
+          "name": "Chaohu Lake Scenic Area",
+          "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
+          "description": "One of China's five great freshwater lakes, offering scenic mountain and lake views, hot springs, and a tranquil retreat.",
+          "distance": "60 km"
+        }
+      ]
+    },
+    {
+      "id": "lujiang-xingkang-004",
+      "slug": "lujiang-xingkang",
+      "type": "direct",
+      "name": "Lujiang Xingkang Hemodialysis Center",
+      "shortName": "Lujiang Xingkang",
+      "city": "Lujiang",
+      "province": "Anhui",
+      "coordinates": {
+        "lat": 31.2545,
+        "lng": 117.2873
+      },
+      "address": "Lianhua Commercial and Cultural Plaza, No. 108 Luchao Road, Lujiang County, Anhui Province",
+      "contact": "Manager Chen 1505515908",
+      "area": "1100㎡",
+      "description": "Lujiang Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system, providing professional dialysis services to patients in Lujiang and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/lujiang-xingkang/1.jpg",
+        "/images/centers/lujiang-xingkang/2.jpg",
+        "/images/centers/lujiang-xingkang/3.jpg",
+        "/images/centers/lujiang-xingkang/4.jpg",
+        "/images/centers/lujiang-xingkang/5.jpg",
+        "/images/centers/lujiang-xingkang/6.jpg"
+      ],
+      "tourismIntro": "Lujiang County sits on the southern shore of Chaohu Lake in central Anhui, a land of deep history and natural beauty. As the hometown of the legendary Three Kingdoms general Zhou Yu, Lujiang offers hot springs, scenic mountains, and a tranquil atmosphere ideal for rest and recovery.",
+      "tourism": [
+        {
+          "name": "Tangchi Hot Springs",
+          "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
+          "description": "An ancient hot spring town with over a thousand years of history, featuring mineral-rich waters ideal for relaxation and rejuvenation.",
+          "distance": "20 km"
+        },
+        {
+          "name": "Yefu Mountain",
+          "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
+          "description": "A national forest park said to be where the legendary Spring and Autumn swordsmith Ou Yezi once forged swords, featuring lush scenery and ancient temples.",
+          "distance": "15 km"
+        },
+        {
+          "name": "Tomb of Zhou Yu",
+          "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
+          "description": "The resting place of the legendary Three Kingdoms general Zhou Yu, set among ancient trees — an important site for Chinese history enthusiasts.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Chaohu Lake Scenic Area",
+          "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
+          "description": "One of China's five great freshwater lakes with beautiful scenery, rich wetland ecology, and attractions including Zhongmiao Temple and Mushan Island.",
+          "distance": "30 km"
+        }
+      ]
+    },
+    {
+      "id": "hefei-pufukang-005",
+      "slug": "hefei-pufukang",
+      "type": "direct",
+      "name": "Hefei Pufukang Hemodialysis Center",
+      "shortName": "Hefei Pufukang",
+      "city": "Hefei",
+      "province": "Anhui",
+      "coordinates": {
+        "lat": 31.8206,
+        "lng": 117.2272
+      },
+      "address": "Junction of Dengta Road and Nanfang Road, Shangpai Town, Feixi County, Hefei, Anhui Province",
+      "contact": "Manager Chen 1505515908",
+      "area": "2000㎡",
+      "description": "Hefei Pufukang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system, providing ultra-high purity dialysis water through two layers of safeguards. Advanced medical equipment is paired with an experienced dialysis nursing and medical team to deliver consistent, high-quality dialysis services to patients in Hefei and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment",
+        "High-Quality Central Oxygen Supply"
+      ],
+      "gallery": [
+        "/images/centers/hefei-pufukang/1.jpg",
+        "/images/centers/hefei-pufukang/2.jpg",
+        "/images/centers/hefei-pufukang/3.jpg",
+        "/images/centers/hefei-pufukang/4.jpg",
+        "/images/centers/hefei-pufukang/5.jpg",
+        "/images/centers/hefei-pufukang/6.jpg"
+      ],
+      "tourismIntro": "Hefei, the capital of Anhui Province, sits at the heart of the Yangtze River Delta city cluster — a vibrant metropolis blending ancient heritage with modern innovation. Home to the historic Xiaoyaojin Park from the Three Kingdoms era and the scenic Dashu Mountain, Hefei offers a rich mix of leisure and cultural experiences.",
+      "tourism": [
+        {
+          "name": "Xiaoyaojin Park",
+          "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
+          "description": "A historic park on the site of a famous Three Kingdoms battlefield where General Zhang Liao achieved his legendary victory, featuring lush greenery and ancient relics.",
+          "distance": "3 km"
+        },
+        {
+          "name": "Anhui Provincial Museum",
+          "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
+          "description": "A national first-class museum with extensive collections showcasing Anhui's history and culture from ancient times to the modern era.",
+          "distance": "4 km"
+        },
+        {
+          "name": "Dashu Mountain Forest Park",
+          "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
+          "description": "The highest peak in urban Hefei with dense forest coverage, a green oasis for hiking and connecting with nature.",
+          "distance": "12 km"
+        },
+        {
+          "name": "Hefei Wildlife Park",
+          "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
+          "description": "An eco-friendly wildlife park at the foot of Dashu Mountain, home to diverse animal species and ideal for family outings.",
+          "distance": "15 km"
+        }
+      ]
+    },
+    {
+      "id": "zhaoqing-xingkang-006",
+      "slug": "zhaoqing-xingkang",
+      "type": "direct",
+      "name": "Zhaoqing Xingkang Hemodialysis Center",
+      "shortName": "Zhaoqing Xingkang",
+      "city": "Zhaoqing",
+      "province": "Guangdong",
+      "coordinates": {
+        "lat": 23.0469,
+        "lng": 112.4659
+      },
+      "address": "Shengshi Building, No. 28 Jianshe 2nd Road, Duanzhou District, Zhaoqing",
+      "contact": "Manager Li 1890305928",
+      "area": "686㎡",
+      "description": "Zhaoqing Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system, providing professional dialysis care to patients in Zhaoqing and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/zhaoqing-xingkang/1.jpg",
+        "/images/centers/zhaoqing-xingkang/2.jpg",
+        "/images/centers/zhaoqing-xingkang/3.jpg",
+        "/images/centers/zhaoqing-xingkang/4.jpg",
+        "/images/centers/zhaoqing-xingkang/5.jpg",
+        "/images/centers/zhaoqing-xingkang/6.jpg"
+      ],
+      "tourismIntro": "Zhaoqing, a nationally designated historic and cultural city in Guangdong Province, lies along the Xi River and is a cradle of Lingnan culture. Home to the Seven Star Crags and Dinghu Mountain — both national scenic areas — Zhaoqing is celebrated as an 'oasis on the Tropic of Cancer,' blending natural splendor with rich cultural heritage including Duan inkstone craftsmanship and ancient Song Dynasty walls.",
+      "tourism": [
+        {
+          "name": "Seven Star Crags",
+          "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
+          "description": "Seven limestone peaks arranged like the Big Dipper constellation, mirrored in surrounding lakes — known as the 'foremost wonder of Lingnan.'",
+          "distance": "3 km"
+        },
+        {
+          "name": "Dinghu Mountain",
+          "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
+          "description": "China's first national nature reserve, dubbed the 'Emerald on the Tropic of Cancer' with 98% forest coverage and rich biodiversity.",
+          "distance": "18 km"
+        },
+        {
+          "name": "Star Lake Wetland Park",
+          "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
+          "description": "A national wetland park where red-crowned cranes and rare bird species thrive amid crystal-clear lake waters and lush natural surroundings.",
+          "distance": "4 km"
+        },
+        {
+          "name": "Ancient Song Dynasty City Wall",
+          "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
+          "description": "A rare surviving Song Dynasty brick city wall in Guangdong, bearing witness to over a thousand years of Zhaoqing's history.",
+          "distance": "2 km"
+        }
+      ]
+    },
+    {
+      "id": "zhongshan-shenkang-007",
+      "slug": "zhongshan-shenkang",
+      "type": "direct",
+      "name": "Zhongshan Shenkang Hemodialysis Center",
+      "shortName": "Zhongshan Shenkang",
+      "city": "Zhongshan",
+      "province": "Guangdong",
+      "coordinates": {
+        "lat": 22.5211,
+        "lng": 113.3927
+      },
+      "address": "No. 88 Sunwen East Road, Shiqi District, Zhongshan, Guangdong Province",
+      "contact": "Manager Li 18903059289",
+      "area": "625㎡",
+      "description": "Zhongshan Shenkang Hemodialysis Center is equipped with advanced dialysis machines and a dual-stage reverse osmosis water treatment system, providing ultra-high purity dialysis water through two layers of safeguards for greater patient safety and peace of mind.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/zhongshan-shenkang/1.jpg",
+        "/images/centers/zhongshan-shenkang/2.jpg",
+        "/images/centers/zhongshan-shenkang/3.jpg",
+        "/images/centers/zhongshan-shenkang/4.jpg",
+        "/images/centers/zhongshan-shenkang/5.jpg"
+      ],
+      "tourismIntro": "Zhongshan, a prefecture-level city at the heart of the Pearl River Delta in Guangdong, is the hometown of Dr. Sun Yat-sen, the great pioneer of China's democratic revolution. The city blends the charm of a Lingnan water town with rich modern revolutionary heritage, offering refined gardens, renowned cuisine, and cultural landmarks.",
+      "tourism": [
+        {
+          "name": "Sun Yat-sen's Former Residence",
+          "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
+          "description": "A nationally protected heritage site showcasing the life and revolutionary history of Dr. Sun Yat-sen — Zhongshan's most significant cultural landmark.",
+          "distance": "25 km"
+        },
+        {
+          "name": "Zhan Garden",
+          "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
+          "description": "The largest private classical garden in Lingnan, blending Suzhou-Hangzhou garden aesthetics with Lingnan architectural style in an elegant setting.",
+          "distance": "10 km"
+        },
+        {
+          "name": "Zimaling Park",
+          "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
+          "description": "Zhongshan's largest comprehensive urban park with lakes, gardens, and recreational facilities — a perfect spot for leisurely strolls.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Sunwen West Road Pedestrian Street",
+          "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
+          "description": "A century-old commercial street blending Chinese and Western architectural styles, famous for its distinctive arcade buildings and local culture.",
+          "distance": "3 km"
+        }
+      ]
+    },
+    {
+      "id": "heilongjiang-xingkang-008",
+      "slug": "heilongjiang-xingkang",
+      "type": "direct",
+      "name": "Heilongjiang Xingkang Hemodialysis Center",
+      "shortName": "Heilongjiang Xingkang",
+      "city": "Harbin",
+      "province": "Heilongjiang",
+      "coordinates": {
+        "lat": 45.756,
+        "lng": 126.6426
+      },
+      "address": "No. 621 Hongqi Street, Daowai District, Harbin",
+      "contact": "Manager Yang 1560489313",
+      "area": "1800㎡",
+      "description": "Heilongjiang Xingkang Hemodialysis Center houses nephrology, medical laboratory, pharmacy, ultrasound and electrocardiography departments, providing professional dialysis services to patients across northeast China.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/heilongjiang-xingkang/1.jpg",
+        "/images/centers/heilongjiang-xingkang/2.jpg",
+        "/images/centers/heilongjiang-xingkang/3.jpg",
+        "/images/centers/heilongjiang-xingkang/4.jpg",
+        "/images/centers/heilongjiang-xingkang/5.jpg",
+        "/images/centers/heilongjiang-xingkang/6.jpg"
+      ],
+      "tourismIntro": "Harbin, the capital of Heilongjiang Province, is known as the 'Oriental Paris' and the 'Ice City.' This metropolis blends Chinese and Russian cultural heritage, boasting distinctive European architecture and a world-famous ice and snow culture. From the century-old cobblestones of Central Avenue to the Byzantine domes of Saint Sophia Cathedral, Harbin is a uniquely charming northern city.",
+      "tourism": [
+        {
+          "name": "Central Avenue",
+          "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
+          "description": "One of Asia's longest pedestrian streets, featuring European architectural styles spanning multiple eras — dubbed an 'open-air museum of architecture.'",
+          "distance": "5 km"
+        },
+        {
+          "name": "Saint Sophia Cathedral",
+          "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
+          "description": "One of the largest Orthodox churches in the Far East, featuring Byzantine architecture and standing as Harbin's most iconic landmark.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Sun Island",
+          "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
+          "description": "A scenic ecological zone on the Songhua River — lush gardens in summer, stunning snow sculptures in winter — rated a national 5A tourist attraction.",
+          "distance": "10 km"
+        },
+        {
+          "name": "Harbin Ice and Snow World",
+          "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
+          "description": "The world's largest ice and snow theme park, open each winter with monumental ice sculptures illuminated in dazzling colors.",
+          "distance": "25 km"
+        }
+      ]
+    },
+    {
+      "id": "harbin-yuhua-009",
+      "slug": "harbin-yuhua",
+      "type": "direct",
+      "name": "Harbin Yuhua Hemodialysis Center",
+      "shortName": "Harbin Yuhua",
+      "city": "Harbin",
+      "province": "Heilongjiang",
+      "coordinates": {
+        "lat": 45.756,
+        "lng": 126.6426
+      },
+      "address": "No. 621 Hongqi Street, Daowai District, Harbin",
+      "contact": "Manager Yang 1560489313",
+      "area": "2250㎡",
+      "description": "Harbin Yuhua Hemodialysis Center is equipped with advanced dialysis machines and a dual-stage reverse osmosis water treatment system, providing two layers of safeguards for dialysis water quality and consistent, high-quality dialysis services to patients in Harbin and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/harbin-yuhua/1.jpg",
+        "/images/centers/harbin-yuhua/2.jpg",
+        "/images/centers/harbin-yuhua/3.jpg",
+        "/images/centers/harbin-yuhua/4.jpg",
+        "/images/centers/harbin-yuhua/5.jpg"
+      ],
+      "tourismIntro": "Harbin, the capital of Heilongjiang Province, is China's northernmost provincial capital with distinct seasons and snowy winters. Famous for its unique ice culture, European flair, and hearty northeastern cuisine, Harbin offers unforgettable experiences from the Songhua River promenade to the century-old architecture of the Daowai district.",
+      "tourism": [
+        {
+          "name": "Songhua River Promenade",
+          "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
+          "description": "Harbin's 'Mother River' with scenic greenways for walking and cycling, and exciting ice activities on the frozen surface in winter.",
+          "distance": "4 km"
+        },
+        {
+          "name": "Siberian Tiger Park",
+          "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
+          "description": "The world's largest Siberian tiger breeding base, where visitors can observe over a hundred majestic tigers up close.",
+          "distance": "15 km"
+        },
+        {
+          "name": "Gogol Street",
+          "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
+          "description": "A cultural district named after the Russian writer Gogol, lined with European-style buildings, cozy cafes, and bookshops.",
+          "distance": "3 km"
+        },
+        {
+          "name": "Dragon Tower",
+          "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
+          "description": "Asia's tallest steel tower at 336 meters, featuring observation decks and a revolving restaurant with 360-degree panoramic views of Harbin.",
+          "distance": "8 km"
+        }
+      ]
+    },
+    {
+      "id": "zhenjiang-xingkang-010",
+      "slug": "zhenjiang-xingkang",
+      "type": "direct",
+      "name": "Zhenjiang Xingkang Hemodialysis Center",
+      "shortName": "Zhenjiang Xingkang",
+      "city": "Zhenjiang",
+      "province": "Jiangsu",
+      "coordinates": {
+        "lat": 32.1865,
+        "lng": 119.4258
+      },
+      "address": "Zhenjiang, Jiangsu Province",
+      "description": "Zhenjiang Xingkang Hemodialysis Center is equipped with a high-quality central oxygen supply system, advanced dialysis machines, and a dual-stage reverse osmosis water treatment system, providing ultra-high purity dialysis water through two layers of safeguards and consistent, high-quality dialysis services to patients in Zhenjiang and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment",
+        "High-Quality Central Oxygen Supply"
+      ],
+      "gallery": [
+        "/images/centers/zhenjiang-xingkang/1.jpg",
+        "/images/centers/zhenjiang-xingkang/2.jpg",
+        "/images/centers/zhenjiang-xingkang/3.jpg",
+        "/images/centers/zhenjiang-xingkang/4.jpg",
+        "/images/centers/zhenjiang-xingkang/5.jpg"
+      ],
+      "tourismIntro": "Zhenjiang, a city in Jiangsu Province at the confluence of the Yangtze River and the Grand Canal, has been a strategic stronghold for over 3,000 years. Known for its claim to 'the finest river and mountain scenery under heaven,' Zhenjiang weaves legendary tales — from the White Snake legend at Jinshan Temple to ancient Three Kingdoms sites at Beigushan — into a magnificent historical tapestry.",
+      "tourism": [
+        {
+          "name": "Jinshan Temple",
+          "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
+          "description": "A thousand-year-old temple dating to the Eastern Jin Dynasty, the legendary setting of the 'White Snake' tale — built into the hillside with imposing grandeur.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Xijin Ferry Ancient Street",
+          "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
+          "description": "A thousand-year-old ferry crossing turned historic district, preserving architecture from the Tang and Song dynasties — called the 'Museum of Ancient Chinese Ferries.'",
+          "distance": "4 km"
+        },
+        {
+          "name": "Beigushan Mountain",
+          "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
+          "description": "The site of the legendary Sun-Liu alliance during the Three Kingdoms era, famous for its 'Finest Scenery Under Heaven' inscription and sweeping Yangtze views.",
+          "distance": "6 km"
+        },
+        {
+          "name": "Jiaoshan Island",
+          "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
+          "description": "The only island mountain surrounded by water in the Yangtze River, known as the 'Floating Jade,' featuring precious stone stele collections and towering ancient trees.",
+          "distance": "10 km"
+        }
+      ]
+    },
+    {
+      "id": "linshu-xingkang-011",
+      "slug": "linshu-xingkang",
+      "type": "direct",
+      "name": "Linshu Xingkang Hemodialysis Center",
+      "shortName": "Linshu Xingkang",
+      "city": "Linshu",
+      "province": "Shandong",
+      "coordinates": {
+        "lat": 34.9208,
+        "lng": 118.6503
+      },
+      "address": "West side of Changlin Street, Linshu County, Linyi, Shandong Province",
+      "contact": "Manager Meng 15054936765",
+      "area": "2000㎡",
+      "description": "Linshu Xingkang Hemodialysis Center is equipped with advanced dialysis machines and a dual-stage reverse osmosis water treatment system, providing professional dialysis services to patients in Linshu and the surrounding area.",
+      "features": [
+        "Personalized Design",
+        "Customized Services",
+        "Home-like Environment"
+      ],
+      "gallery": [
+        "/images/centers/linshu-xingkang/1.jpg",
+        "/images/centers/linshu-xingkang/2.jpg",
+        "/images/centers/linshu-xingkang/3.jpg",
+        "/images/centers/linshu-xingkang/4.jpg",
+        "/images/centers/linshu-xingkang/5.jpg",
+        "/images/centers/linshu-xingkang/6.jpg"
+      ],
+      "tourismIntro": "Linshu County, in southeastern Shandong Province at the southern foot of the Yimeng Mountains, is a historic town rich in natural beauty and folk traditions. From the scenic Cangma Mountain to the intangible cultural heritage of willow weaving, and the magnificent red tourism resources of the surrounding Yimeng region, Linshu offers a unique and authentic travel experience.",
+      "tourism": [
+        {
+          "name": "Cangma Mountain Scenic Area",
+          "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
+          "description": "A national 3A-rated scenic area with rolling green hills, flowing streams, and attractions including the Jade Garden and WWII memorial.",
+          "distance": "10 km"
+        },
+        {
+          "name": "Willow Weaving Cultural Park",
+          "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
+          "description": "A cultural park showcasing Linshu's nationally recognized intangible heritage of willow weaving, with hands-on craft experiences.",
+          "distance": "5 km"
+        },
+        {
+          "name": "Mengshan Mountain Scenic Area",
+          "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
+          "description": "The core scenic zone of the Yimeng Mountain UNESCO Global Geopark, with Guimeng Peak rising to 1,156 meters amid dense forests and fresh mountain air.",
+          "distance": "80 km"
+        },
+        {
+          "name": "Underground Grand Canyon",
+          "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
+          "description": "One of China's largest karst caves stretching 6,100 meters, featuring an underground river drift and spectacular geological formations.",
+          "distance": "60 km"
         }
       ]
     },

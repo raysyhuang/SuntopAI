@@ -128,6 +128,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {/* Architecture Section */}
       {t.architecture && (
         <section 
+          id="architecture"
           className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
         >
@@ -447,6 +448,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       {/* Supply Chain Section */}
       {t.supplyChain && (
         <section 
+          id="supply-chain"
           className="relative py-24"
           style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
         >
@@ -609,6 +611,7 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
 
       {/* Process & Security Combined */}
       <section 
+        id="implementation"
         className="relative py-24"
         style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0f172a' }}
       >

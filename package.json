@@ -10,7 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "dict:check": "node scripts/check-dict-sync.mjs"
+    "dict:check": "node scripts/check-dict-sync.mjs",
+    "facts:check": "node scripts/check-facts.mjs"
   },
   "dependencies": {
     "coordtransform": "^2.1.2",

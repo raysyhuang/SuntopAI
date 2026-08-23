@@ -7,13 +7,15 @@
     "services": "サービス",
     "company": "会社概要",
     "news": "ニュース",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "partners": "パートナー",
+    "investors": "投資家"
   },
   "home": {
-    "tag": "デジタル血液透析センター",
+    "tag": "血液透析のAIとIoT",
     "hero": {
-      "title1": "透析センターの運用レイヤー",
-      "title2": "IoT + AIリスク中枢",
+      "title1": "スマート透析センター",
+      "title2": "リアルタイムIoTとAI支援オペレーション",
       "subtitle": "治療機器、補助設備、環境、臨床データを一つのリスク制御レイヤーへ接続",
       "description": "杏泰の提案は単体ソフトではありません。機器接続、ベッドサイド端末、中央監視、AIリスク警告、実行ワークフローを組み合わせた、ソフトウェア・ハードウェア・データサービス一体の透析センター基盤です。",
       "stats": "100+スマート透析センター | 5000+接続済み透析装置 | クラウド / ローカル / ハイブリッド導入",
@@ -130,7 +132,7 @@
         }
       ],
       "cta": "完全な成果データを見る",
-      "footnote": "杏泰医療自社運営透析センターのデータに基づく、2024-2025",
+      "footnote": "杏泰医療自社運営透析センターのデータに基づく、2024-2025。研究設計の文書化を進めています。",
       "deployment": {
         "title": "検証済みの導入規模",
         "items": [
@@ -209,6 +211,39 @@
     "finalCta": {
       "title": "単体ソフトではなく、デジタル透析センターソリューション",
       "description": "透析IoT、AIリスク制御、ベッドサイド閉ループ、資産パフォーマンスを一つの運用レイヤーに統合し、より安全で追跡可能なセンター運営を支援します。"
+    },
+    "proofEyebrow": "規模",
+    "audiences": {
+      "eyebrow": "どこから始めるか",
+      "title": "4つの対象、4つの入口",
+      "hospitals": {
+        "title": "病院・透析センター",
+        "description": "機器のIoT接続、セントラルモニタリング、ベッドサイド端末、臨床意思決定支援を既存の業務プロセスに組み込みます。"
+      },
+      "patients": {
+        "title": "患者様・ご家族",
+        "description": "全国の透析センターネットワーク、旅行透析、栄養・リハビリ・バスキュラーアクセスのケア。"
+      },
+      "partners": {
+        "title": "パートナー",
+        "description": "病院との共同構築、センターのフランチャイズ、機器連携、スマートサプライチェーン、教育研修。"
+      },
+      "investors": {
+        "title": "投資家",
+        "description": "透析センターの運営と医療ソフトウェアの自社開発を併せ持つグループ構造、市場機会、マイルストーン。"
+      }
+    },
+    "evidence": {
+      "eyebrow": "臨床成果",
+      "title": "運用下で観察された変化",
+      "from": "改善前",
+      "link": "すべての成果と方法論"
+    },
+    "regulatory": {
+      "eyebrow": "規制",
+      "title": "第二種医療機器登録",
+      "scopeLabel": "適用範囲",
+      "validLabel": "有効期限"
     }
   },
   "platform": {
@@ -1825,6 +1860,11 @@
         "legend": {
           "direct": "直営センター",
           "partner": "提携病院"
+        },
+        "popup": {
+          "nearby": "周辺の観光スポット",
+          "viewDetails": "詳細を見る",
+          "contact": "連絡先"
         }
       },
       "tourism": {
@@ -1859,6 +1899,18 @@
         "title": "旅の計画を始める",
         "description": "地図を閲覧し、全国の透析センターを探索して、透析が旅行の障壁にならないようにしましょう。",
         "button": "地図を見る"
+      }
+    },
+    "crossLinks": {
+      "clinical": {
+        "title": "臨床応用",
+        "description": "きめ細かな管理が臨床成果をどう改善するか",
+        "button": "臨床応用を見る"
+      },
+      "platform": {
+        "title": "技術プラットフォーム",
+        "description": "各サービスを支えるデータとシステムの基盤",
+        "button": "プラットフォームを見る"
       }
     }
   },
@@ -1916,559 +1968,7 @@
         "tourism": "周辺観光スポット",
         "tourismSubtitle": "治療の合間に、周辺の見どころを探索",
         "distanceLabel": "センターから"
-      },
-      "list": [
-        {
-          "slug": "fuzhou-xingkang",
-          "name": "福州杏康血液透析センター",
-          "shortName": "福州杏康",
-          "city": "福州",
-          "province": "福建",
-          "address": "福建省福州市連江県鳳城鎮西鳳路3号",
-          "area": "1300㎡",
-          "established": "2018",
-          "description": "福州杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、超高純度の透析用水を提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境",
-            "中央酸素供給"
-          ],
-          "gallery": [
-            "/images/centers/fuzhou-xingkang/1.jpg",
-            "/images/centers/fuzhou-xingkang/2.jpg",
-            "/images/centers/fuzhou-xingkang/3.jpg",
-            "/images/centers/fuzhou-xingkang/4.jpg",
-            "/images/centers/fuzhou-xingkang/5.jpg",
-            "/images/centers/fuzhou-xingkang/6.jpg"
-          ],
-          "tourismIntro": "福州は福建省の省都で、2200年以上の歴史を持つ山水に恵まれた歴史文化都市です。三坊七巷や鼓山、豊富な温泉資源で知られ「温泉の都」と称されています。海上シルクロードの重要な起点都市でもあり、閩菜文化が息づく魅力的な街です。",
-          "tourism": [
-            {
-              "name": "三坊七巷",
-              "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
-              "description": "中国歴史文化名街に指定された、明・清時代の古い建築群が保存された街区。中国都市の坊制の「生きた化石」と称されています。",
-              "distance": "5 km"
-            },
-            {
-              "name": "鼓山",
-              "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
-              "description": "福州市東郊の名山。千年の歴史を持つ湧泉寺や多くの摩崖石刻があり、山頂から福州の街並みと閩江を一望できます。",
-              "distance": "15 km"
-            },
-            {
-              "name": "西湖公園",
-              "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
-              "description": "晋代に造られた福州市内最古の公園。美しい湖の景色が広がり、市民の憩いの場として親しまれています。",
-              "distance": "3 km"
-            },
-            {
-              "name": "閩江ナイトクルーズ",
-              "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
-              "description": "閩江両岸のきらびやかな夜景を船から楽しむクルーズ。中洲島や解放大橋など、福州のランドマークを巡ります。",
-              "distance": "4 km"
-            }
-          ]
-        },
-        {
-          "slug": "anhui-xingkang",
-          "name": "安徽杏康血液透析センター",
-          "shortName": "安徽杏康",
-          "city": "合肥",
-          "province": "安徽",
-          "address": "安徽省合肥市包河区徽州大道と福州路交差点北西角千城大厦",
-          "area": "1000㎡",
-          "description": "安徽杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、超高純度の透析用水を提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境",
-            "中央酸素供給"
-          ],
-          "gallery": [
-            "/images/centers/anhui-xingkang/1.jpg",
-            "/images/centers/anhui-xingkang/2.jpg",
-            "/images/centers/anhui-xingkang/3.jpg",
-            "/images/centers/anhui-xingkang/4.jpg",
-            "/images/centers/anhui-xingkang/5.jpg"
-          ],
-          "tourismIntro": "合肥は安徽省の省都であり、長江デルタ都市群の中核に位置する、千年の歴史と現代のイノベーションが融合する活気ある都市です。包拯ゆかりの廉政文化、巣湖の美しい湖畔風景、そして急成長するハイテク産業を擁し、短期滞在でも長期治療中でも、豊かなレジャーと文化体験をお楽しみいただけます。",
-          "tourism": [
-            {
-              "name": "合肥白鳥湖公園",
-              "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
-              "description": "合肥市政務区のシンボル的な都市公園。広大な湖面と緑道に囲まれ、散歩や休憩に最適です。",
-              "distance": "3.5 km"
-            },
-            {
-              "name": "包公園",
-              "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
-              "description": "北宋の名裁判官・包拯を記念する歴史文化公園。包公祠や清風閣などの見どころがあります。",
-              "distance": "4.2 km"
-            },
-            {
-              "name": "三河古鎮",
-              "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
-              "description": "2500年の歴史を持つ江南水郷の古鎮。古い街並み、橋、伝統的な民家が保存されています。",
-              "distance": "35 km"
-            },
-            {
-              "name": "巣湖風景区",
-              "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
-              "description": "中国五大淡水湖の一つ。美しい湖と山の景色、豊富な温泉資源を有するリゾート地です。",
-              "distance": "60 km"
-            }
-          ]
-        },
-        {
-          "slug": "lujiang-xingkang",
-          "name": "廬江杏康血液透析センター",
-          "shortName": "廬江杏康",
-          "city": "廬江",
-          "province": "安徽",
-          "address": "安徽省廬江県廬巣路108号蓮花商業文化広場",
-          "area": "1100㎡",
-          "description": "廬江杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、廬江及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/lujiang-xingkang/1.jpg",
-            "/images/centers/lujiang-xingkang/2.jpg",
-            "/images/centers/lujiang-xingkang/3.jpg",
-            "/images/centers/lujiang-xingkang/4.jpg",
-            "/images/centers/lujiang-xingkang/5.jpg",
-            "/images/centers/lujiang-xingkang/6.jpg"
-          ],
-          "tourismIntro": "廬江県は安徽省中部、巣湖の南岸に位置し、深い歴史と美しい自然に恵まれた土地です。三国志の名将・周瑜の故郷であり、豊富な温泉資源と秀麗な山水風景が、心身を癒す理想的な環境を提供します。",
-          "tourism": [
-            {
-              "name": "湯池温泉",
-              "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
-              "description": "千年の歴史を持つ温泉古鎮。豊富なミネラルを含む良質な湯で、心身のリラックスに最適です。",
-              "distance": "20 km"
-            },
-            {
-              "name": "冶父山",
-              "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
-              "description": "国家森林公園に指定された名山。春秋時代の伝説的な鍛冶師・欧冶子が剣を鍛えた地と伝えられ、美しい山並みと古刹が点在します。",
-              "distance": "15 km"
-            },
-            {
-              "name": "周瑜墓",
-              "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
-              "description": "三国志の名将・周瑜が眠る場所。園内には古木が茂り、三国文化を学ぶ重要な史跡です。",
-              "distance": "5 km"
-            },
-            {
-              "name": "巣湖風景区",
-              "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
-              "description": "中国五大淡水湖の一つ。美しい湖山の景色と豊かな湿地生態系が広がり、中廟や姥山島などの見どころがあります。",
-              "distance": "30 km"
-            }
-          ]
-        },
-        {
-          "slug": "hefei-pufukang",
-          "name": "合肥普福康血液透析センター",
-          "shortName": "合肥普福康",
-          "city": "合肥",
-          "province": "安徽",
-          "address": "安徽省合肥市肥西県上派鎮灯塔路と南方路交差点",
-          "area": "2000㎡",
-          "description": "合肥普福康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、合肥及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境",
-            "中央酸素供給"
-          ],
-          "gallery": [
-            "/images/centers/hefei-pufukang/1.jpg",
-            "/images/centers/hefei-pufukang/2.jpg",
-            "/images/centers/hefei-pufukang/3.jpg",
-            "/images/centers/hefei-pufukang/4.jpg",
-            "/images/centers/hefei-pufukang/5.jpg",
-            "/images/centers/hefei-pufukang/6.jpg"
-          ],
-          "tourismIntro": "合肥は安徽省の省都であり、長江デルタ都市群の中核に位置する、千年の歴史と現代のイノベーションが融合する活気ある都市です。三国時代の古戦場・逍遥津や雄大な大蜀山があり、充実した文化・レジャー体験を提供します。",
-          "tourism": [
-            {
-              "name": "逍遥津公園",
-              "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
-              "description": "三国時代の古戦場跡に造られた公園。張遼が逍遥津で名を馳せた伝説の地で、緑豊かな園内に多くの史跡があります。",
-              "distance": "3 km"
-            },
-            {
-              "name": "安徽省博物院",
-              "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
-              "description": "国家一級博物館に指定された総合博物館。古代から近現代まで安徽の歴史文化の精華を展示しています。",
-              "distance": "4 km"
-            },
-            {
-              "name": "大蜀山国家森林公園",
-              "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
-              "description": "合肥市街地の最高峰。森林に覆われた都市のオアシスで、ハイキングや自然散策に最適です。",
-              "distance": "12 km"
-            },
-            {
-              "name": "合肥野生動物園",
-              "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
-              "description": "大蜀山のふもとにあるエコ型動物園。多様な動物が飼育され、ファミリー向けのレジャーに最適です。",
-              "distance": "15 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhaoqing-xingkang",
-          "name": "肇慶杏康血液透析センター",
-          "shortName": "肇慶杏康",
-          "city": "肇慶",
-          "province": "広東",
-          "address": "肇慶市端州区建設二路28号盛世大厦",
-          "area": "686㎡",
-          "description": "肇慶杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、肇慶及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/zhaoqing-xingkang/1.jpg",
-            "/images/centers/zhaoqing-xingkang/2.jpg",
-            "/images/centers/zhaoqing-xingkang/3.jpg",
-            "/images/centers/zhaoqing-xingkang/4.jpg",
-            "/images/centers/zhaoqing-xingkang/5.jpg",
-            "/images/centers/zhaoqing-xingkang/6.jpg"
-          ],
-          "tourismIntro": "肇慶は広東省の歴史文化名城で、西江の中流に位置し、嶺南文化の重要な発祥地の一つです。七星岩と鼎湖山の二大国家級景勝地を擁し、「北回帰線上のオアシス」と称される美しい自然と、端渓硯や宋代の古城壁などの豊かな文化遺産が魅力です。",
-          "tourism": [
-            {
-              "name": "七星岩",
-              "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
-              "description": "北斗七星のように並ぶ7つの石灰岩の峰と湖が織りなす絶景。「嶺南第一の奇観」と称されています。",
-              "distance": "3 km"
-            },
-            {
-              "name": "鼎湖山",
-              "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
-              "description": "中国初の国家級自然保護区。森林被覆率98%を誇り、「北回帰線上のエメラルド」と称される生態系の宝庫です。",
-              "distance": "18 km"
-            },
-            {
-              "name": "星湖湿地公園",
-              "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
-              "description": "国家湿地公園に指定され、タンチョウや珍しい鳥類が生息。澄んだ湖水と美しい自然環境が広がります。",
-              "distance": "4 km"
-            },
-            {
-              "name": "宋代城壁",
-              "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
-              "description": "宋代に築かれた古城壁の遺跡。広東省に残る唯一の宋代のレンガ城壁で、肇慶の千年の歴史を物語ります。",
-              "distance": "2 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhongshan-shenkang",
-          "name": "中山腎康血液透析センター",
-          "shortName": "中山腎康",
-          "city": "中山",
-          "province": "広東",
-          "address": "広東省中山市石岐区孫文東路88号",
-          "area": "625㎡",
-          "description": "中山腎康血液透析センターは、先進の透析装置と二段式逆浸透水システムを備え、超高純度の透析用水を提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/zhongshan-shenkang/1.jpg",
-            "/images/centers/zhongshan-shenkang/2.jpg",
-            "/images/centers/zhongshan-shenkang/3.jpg",
-            "/images/centers/zhongshan-shenkang/4.jpg",
-            "/images/centers/zhongshan-shenkang/5.jpg"
-          ],
-          "tourismIntro": "中山市は広東省の珠江デルタ核心部に位置し、偉大な民主革命の先駆者・孫中山（孫文）の故郷です。嶺南水郷の優美さと近代革命文化の重厚さを兼ね備え、精緻な庭園や美食、豊かな文化資源が魅力の街です。",
-          "tourism": [
-            {
-              "name": "孫中山故居",
-              "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
-              "description": "全国重点文物保護単位に指定された、孫中山の成長と革命の歴史を展示する中山市最重要の文化的ランドマークです。",
-              "distance": "25 km"
-            },
-            {
-              "name": "中山詹園",
-              "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
-              "description": "嶺南最大の私家古典庭園。蘇杭庭園の粋と嶺南建築の風格を融合した、雅やかな景観が広がります。",
-              "distance": "10 km"
-            },
-            {
-              "name": "紫馬嶺公園",
-              "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
-              "description": "中山市最大の総合都市公園。湖や庭園、レジャー施設が充実し、散歩やリラックスに最適です。",
-              "distance": "5 km"
-            },
-            {
-              "name": "孫文西路歩行街",
-              "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
-              "description": "中西融合の建築様式が特徴的な百年の歴史を持つ商業街。アーケード建築が独特で、中山文化を味わえます。",
-              "distance": "3 km"
-            }
-          ]
-        },
-        {
-          "slug": "heilongjiang-xingkang",
-          "name": "黒龍江杏康血液透析センター",
-          "shortName": "黒龍江杏康",
-          "city": "ハルビン",
-          "province": "黒龍江",
-          "address": "ハルビン市道外区紅旗大街621号",
-          "area": "1800㎡",
-          "description": "黒龍江杏康血液透析センターは、腎臓内科、検査科、薬局、超音波、心電図などの重点科室を設置し、東北地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/heilongjiang-xingkang/1.jpg",
-            "/images/centers/heilongjiang-xingkang/2.jpg",
-            "/images/centers/heilongjiang-xingkang/3.jpg",
-            "/images/centers/heilongjiang-xingkang/4.jpg",
-            "/images/centers/heilongjiang-xingkang/5.jpg",
-            "/images/centers/heilongjiang-xingkang/6.jpg"
-          ],
-          "tourismIntro": "ハルビンは黒竜江省の省都で、「東方の小パリ」「氷の都」と称されています。中露文化が融合したこの都市は、独特のヨーロッパ風建築群と世界的に有名な氷雪文化を有しています。中央大街の百年の石畳、聖ソフィア大聖堂のビザンチン様式のドーム、そして冬の氷雪大世界が、ハルビンを魅力あふれる北国の名城にしています。",
-          "tourism": [
-            {
-              "name": "中央大街",
-              "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
-              "description": "アジア最長級の歩行者天国。ヨーロッパ各時代の建築様式が集まり、「建築芸術の博物館」と称されています。",
-              "distance": "5 km"
-            },
-            {
-              "name": "聖ソフィア大聖堂",
-              "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
-              "description": "極東最大級の正教会の一つ。ビザンチン様式の建築で、ハルビンのシンボル的存在です。",
-              "distance": "5 km"
-            },
-            {
-              "name": "太陽島",
-              "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
-              "description": "松花江上の生態景勝地。夏は緑と花、冬は雪彫刻芸術が楽しめる国家5A級観光地です。",
-              "distance": "10 km"
-            },
-            {
-              "name": "ハルビン氷雪大世界",
-              "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
-              "description": "世界最大の氷雪テーマパーク。毎年冬季にオープンし、壮大な氷雪彫刻が色鮮やかにライトアップされます。",
-              "distance": "25 km"
-            }
-          ]
-        },
-        {
-          "slug": "harbin-yuhua",
-          "name": "ハルビン誉華血液透析センター",
-          "shortName": "ハルビン誉華",
-          "city": "ハルビン",
-          "province": "黒龍江",
-          "address": "ハルビン市道外区紅旗大街621号",
-          "area": "2250㎡",
-          "description": "ハルビン誉華血液透析センターは、先進の透析装置と二段式逆浸透水システムを備え、ハルビン及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/harbin-yuhua/1.jpg",
-            "/images/centers/harbin-yuhua/2.jpg",
-            "/images/centers/harbin-yuhua/3.jpg",
-            "/images/centers/harbin-yuhua/4.jpg",
-            "/images/centers/harbin-yuhua/5.jpg"
-          ],
-          "tourismIntro": "ハルビンは黒竜江省の省都で、中国最北の省都として四季がはっきりしています。独特の氷雪文化、ヨーロッパ風の街並み、東北料理で広く知られています。松花江沿いの散策や道外区の百年建築など、ハルビンならではの魅力に満ちた街です。",
-          "tourism": [
-            {
-              "name": "松花江河畔",
-              "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
-              "description": "ハルビンの母なる川。河畔の緑道は散歩やサイクリングに最適で、冬は凍った川面で氷上アクティビティが楽しめます。",
-              "distance": "4 km"
-            },
-            {
-              "name": "東北虎林園",
-              "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
-              "description": "世界最大のアムールトラ繁殖基地。百頭以上のアムールトラの雄姿を間近で観察できます。",
-              "distance": "15 km"
-            },
-            {
-              "name": "ゴーゴリ大通り",
-              "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
-              "description": "ロシアの作家ゴーゴリにちなんだ文化街区。ヨーロッパ風の建物が立ち並び、カフェや書店が点在します。",
-              "distance": "3 km"
-            },
-            {
-              "name": "龍塔",
-              "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
-              "description": "アジア最高の鋼鉄タワー（高さ336m）。展望台と回転レストランがあり、ハルビンの360度パノラマを楽しめます。",
-              "distance": "8 km"
-            }
-          ]
-        },
-        {
-          "slug": "zhenjiang-xingkang",
-          "name": "鎮江杏康血液透析センター",
-          "shortName": "鎮江杏康",
-          "city": "鎮江",
-          "province": "江蘇",
-          "address": "江蘇省鎮江市",
-          "description": "鎮江杏康血液透析センターは、高品質の中央酸素供給システム、先進の透析装置、二段式逆浸透水システムを備え、鎮江及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境",
-            "中央酸素供給"
-          ],
-          "gallery": [
-            "/images/centers/zhenjiang-xingkang/1.jpg",
-            "/images/centers/zhenjiang-xingkang/2.jpg",
-            "/images/centers/zhenjiang-xingkang/3.jpg",
-            "/images/centers/zhenjiang-xingkang/4.jpg",
-            "/images/centers/zhenjiang-xingkang/5.jpg"
-          ],
-          "tourismIntro": "鎮江は江蘇省の都市で、長江と京杭大運河の合流点に位置し、3000年以上の歴史を持つ文化名城です。「天下第一の江山」として知られ、金山寺の白蛇伝説、西津渡の千年の渡し場、北固山の三国遺跡が、壮大な歴史絵巻を描き出しています。",
-          "tourism": [
-            {
-              "name": "金山寺",
-              "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
-              "description": "東晋時代に創建された千年古刹。「白蛇伝」の舞台として有名で、山に沿って建てられた壮大な伽藍が広がります。",
-              "distance": "5 km"
-            },
-            {
-              "name": "西津渡",
-              "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
-              "description": "千年の歴史を持つ古い渡し場の街区。唐宋以来の古建築群が保存され、「中国古渡博物館」と称されています。",
-              "distance": "4 km"
-            },
-            {
-              "name": "北固山",
-              "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
-              "description": "三国時代に孫権と劉備が同盟を結んだ地。「天下第一江山」の石刻で知られ、山頂から長江の壮大な景色を望めます。",
-              "distance": "6 km"
-            },
-            {
-              "name": "焦山",
-              "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
-              "description": "長江で唯一四方を水に囲まれた島山で、「江中の浮玉」と呼ばれています。貴重な碑林や古木が残されています。",
-              "distance": "10 km"
-            }
-          ]
-        },
-        {
-          "slug": "linshu-xingkang",
-          "name": "臨沭杏康血液透析センター",
-          "shortName": "臨沭杏康",
-          "city": "臨沭",
-          "province": "山東",
-          "address": "山東省臨沂市臨沭県城常林大街西側",
-          "area": "2000㎡",
-          "description": "臨沭杏康血液透析センターは、先進の透析装置と二段式逆浸透水システムを備え、臨沭及び周辺地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/linshu-xingkang/1.jpg",
-            "/images/centers/linshu-xingkang/2.jpg",
-            "/images/centers/linshu-xingkang/3.jpg",
-            "/images/centers/linshu-xingkang/4.jpg",
-            "/images/centers/linshu-xingkang/5.jpg",
-            "/images/centers/linshu-xingkang/6.jpg"
-          ],
-          "tourismIntro": "臨沭県は山東省南東部、沂蒙山地の南麓に位置する歴史ある町です。秀麗な山水と素朴な民風に恵まれ、蒼馬山の自然風光、柳編み工芸の無形文化遺産、そして周辺の沂蒙山地域の壮大な赤色観光資源が、臨沭ならではの旅の魅力を形作っています。",
-          "tourism": [
-            {
-              "name": "蒼馬山風景区",
-              "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
-              "description": "国家3A級観光地。緑豊かな山並みと清流が広がり、玉聖園や抗日記念館など見どころが多数あります。",
-              "distance": "10 km"
-            },
-            {
-              "name": "柳編み文化園",
-              "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
-              "description": "臨沭の国家級無形文化遺産である柳編み工芸を展示する文化園。伝統的な柳編み体験もできます。",
-              "distance": "5 km"
-            },
-            {
-              "name": "蒙山風景区",
-              "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
-              "description": "沂蒙山ユネスコ世界ジオパークの中核景区。主峰の亀蒙頂は標高1156mで、深い森と清らかな空気に包まれています。",
-              "distance": "80 km"
-            },
-            {
-              "name": "地下大峡谷",
-              "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
-              "description": "中国最大級の鍾乳洞の一つ。全長6100mの洞内には地下河川が流れ、壮大な地質景観が広がります。",
-              "distance": "60 km"
-            }
-          ]
-        },
-        {
-          "slug": "liaoning-xingkang",
-          "name": "遼寧杏康血液透析センター",
-          "shortName": "遼寧杏康",
-          "city": "瀋陽",
-          "province": "遼寧",
-          "address": "瀋陽市瀋河区北順城路61号",
-          "area": "1600㎡",
-          "description": "遼寧杏康血液透析センターは、遼寧地域の患者に専門的な透析サービスを提供します。",
-          "features": [
-            "個別化設計",
-            "カスタマイズサービス",
-            "ホームライク環境"
-          ],
-          "gallery": [
-            "/images/centers/liaoning-xingkang/1.jpg",
-            "/images/centers/liaoning-xingkang/2.jpg",
-            "/images/centers/liaoning-xingkang/3.jpg",
-            "/images/centers/liaoning-xingkang/4.jpg",
-            "/images/centers/liaoning-xingkang/5.jpg",
-            "/images/centers/liaoning-xingkang/6.jpg"
-          ],
-          "tourismIntro": "瀋陽は遼寧省の省都で、中国東北地方の政治・経済・文化の中心です。清朝発祥の地として、世界文化遺産の瀋陽故宮と清昭陵を有し、深い満州文化の歴史が息づいています。古都の荘厳さと現代都市の活力を兼ね備えた魅力的な都市です。",
-          "tourism": [
-            {
-              "name": "瀋陽故宮",
-              "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
-              "description": "世界文化遺産。清の太祖ヌルハチと太宗ホンタイジの皇宮で、中国に現存する二大宮殿建築群の一つです。",
-              "distance": "5 km"
-            },
-            {
-              "name": "北陵公園（清昭陵）",
-              "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
-              "description": "清の太宗ホンタイジの陵墓で、瀋陽最大の公園。古松が天を突き、荘厳な陵墓建築が広がります。",
-              "distance": "8 km"
-            },
-            {
-              "name": "張氏帥府",
-              "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
-              "description": "東北の軍閥・張作霖と張学良父子の官邸兼私邸。近代東北の激動の歴史を伝える博物館です。",
-              "distance": "5 km"
-            },
-            {
-              "name": "瀋陽世博園",
-              "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
-              "description": "2006年世界園芸博覧会の会場。246ヘクタールの敷地に四季折々の花々が咲き誇る、都市型エコレジャースポットです。",
-              "distance": "20 km"
-            }
-          ]
-        }
-      ]
+      }
     },
     "partners": {
       "tag": "提携病院",
@@ -2709,7 +2209,10 @@
       "aboutUs": "会社概要",
       "centers": "透析センター",
       "news": "ニュース",
-      "contact": "お問い合わせ"
+      "contact": "お問い合わせ",
+      "regulatory": "医療機器登録",
+      "partners": "パートナー",
+      "investors": "投資家"
     },
     "legal": {
       "rights": "All rights reserved.",
@@ -2961,5 +2464,131 @@
         "content": "当社はコンプライアンスプログラムの継続的改善に取り組んでおり、ポリシーと手順の定期的なレビューと更新、規制変更と新たな要件の監視、監査と評価からのフィードバックの組み込み、コンプライアンス技術と自動化への投資、業界団体や規制当局との連携、および業界のベストプラクティスとのベンチマークを実施しています。"
       }
     ]
+  },
+  "regulatoryPage": {
+    "tag": "エビデンス",
+    "title": "医療機器登録",
+    "subtitle": "岱特智能科技が自社開発した血液透析情報処理ソフトウェアは、中華人民共和国の第二種医療機器登録を取得しています。",
+    "certTitle": "登録証の詳細",
+    "fields": {
+      "number": "登録番号",
+      "registrant": "登録者",
+      "device": "製品名",
+      "model": "型式",
+      "structure": "構造及び構成",
+      "scope": "適用範囲",
+      "authority": "審査機関",
+      "approved": "承認日",
+      "expires": "有効期限"
+    },
+    "tiersTitle": "機能と登録範囲の対応",
+    "tiersIntro": "登録の適用範囲は透析データの伝送・表示・処理に限られます。誤解を避けるため、各機能が該当する規制上の区分を明示しています。",
+    "tiers": {
+      "registered": {
+        "label": "登録範囲内",
+        "description": "回診、検査評価、フットケア管理、品質管理、検査リマインダー、セントラルモニタリング表示、ベッドサイド端末表示、設備IoT。"
+      },
+      "support": {
+        "label": "臨床意思決定支援",
+        "description": "AIによる文書作成補助、要因分析、参考提案。提案は参考用であり、実施には医師の確認が必要です。"
+      },
+      "validation": {
+        "label": "検証中",
+        "description": "ドライウェイト予測、心不全リスク評価、透析中低血圧の早期警告、4項目のリアルタイムモニタリングアルゴリズム。研究プログラムであり、登録された臨床機能としては提供されず、臨床使用はできません。"
+      }
+    },
+    "renewalNote": "登録の有効期限は2030年7月16日です。ソフトウェアの重要な変更には変更登録が必要です。"
+  },
+  "partnersPage": {
+    "tag": "パートナー",
+    "title": "パートナーシップ",
+    "subtitle": "病院との共同構築、センターのフランチャイズから機器連携、サプライチェーン協業まで、再現性のある協業モデルと長期的な支援を提供します。",
+    "modelsTitle": "5つの協業モデル",
+    "models": [
+      {
+        "title": "病院との共同構築",
+        "description": "総合病院の腎臓内科と共同で血液浄化センターまたはバスキュラーアクセスセンターを設立し、設計・人材育成・運営管理・品質管理まで一貫して支援します。"
+      },
+      {
+        "title": "センターのフランチャイズ",
+        "description": "独立透析センターとして参画し、統一されたブランド、標準業務手順、管理システム、共同購買を共有します。"
+      },
+      {
+        "title": "機器連携",
+        "description": "オープンなデータインターフェースにより、既存の国産透析装置をIoTおよび5Gネットワークに接続し、機器を入れ替えることなくネットワーク対応にアップグレードします。"
+      },
+      {
+        "title": "スマートサプライチェーン",
+        "description": "HISと連携した院内マイクロサプライチェーンにより、現物・在庫・治療・請求の整合性を確保し、スケジュールと処方に基づいて補充を行います。"
+      },
+      {
+        "title": "教育研修",
+        "description": "バスキュラーアクセス、栄養管理、リハビリテーション、専門看護を対象としたオンライン講座と実地研修。"
+      }
+    ],
+    "networkTitle": "パートナーネットワーク",
+    "networkDescription": "総合病院から独立透析センターまで、全国の医療機関と長期的な協業関係を築いています。",
+    "networkCta": "提携病院を見る",
+    "collaborationsTitle": "主な協業",
+    "collaborations": [
+      {
+        "partner": "伊藤忠商事",
+        "description": "杏泰医療グループとの戦略的パートナーシップ契約。"
+      },
+      {
+        "partner": "ボストン・サイエンティフィック · 広州医科大学附属第五病院",
+        "description": "血液透析バスキュラーアクセスセンターおよび技術研修拠点を共同設立。"
+      }
+    ],
+    "ctaTitle": "パートナーになる",
+    "ctaDescription": "貴施設の状況とご希望の協業内容をお知らせください。担当者よりご連絡いたします。",
+    "ctaButton": "お問い合わせ"
+  },
+  "investorsPage": {
+    "tag": "投資家",
+    "title": "投資概要",
+    "subtitle": "杏泰医療は透析センターの運営と医療ソフトウェアの自社開発を併せ持ちます。この組み合わせが当社の差別化要因です。",
+    "positionTitle": "当社のポジション",
+    "positionBody": "業界には拡大に注力する透析チェーンと、ソフトウェアに注力する医療IT企業が存在します。杏泰はその両方です。自社運営および提携センターのネットワークが実際の臨床現場と継続的なデータを提供し、技術子会社がその上に透析管理システムと専門AIモデルを構築し、第二種医療機器登録を取得しています。システムは病院の業務プロセスに深く組み込まれるため置き換えコストが高く、データ規模の拡大がモデル精度を継続的に高めます。",
+    "marketTitle": "市場機会",
+    "marketBody": "中国本土における透析患者の治療浸透率は、近隣の高所得経済圏を大きく下回っています。日本や台湾と同等の有病率であれば、治療対象人口は現在の治療者数を大幅に上回ります。",
+    "marketNote": "有病率は2016年の年次データ報告に基づくもので、構造的な比較のために示しています。",
+    "prevalenceLabels": {
+      "china": "中国本土",
+      "japan": "日本",
+      "taiwan": "台湾",
+      "usa": "米国"
+    },
+    "modelTitle": "ビジネスモデル",
+    "modelItems": [
+      {
+        "title": "透析サービス",
+        "description": "自社運営センターおよび提携センターにおける治療収入。"
+      },
+      {
+        "title": "システム・ソフトウェア",
+        "description": "透析管理システムの販売、導入、継続的なサービス。"
+      },
+      {
+        "title": "AI利用料",
+        "description": "AI機能を利用するセンターに対し、治療1回あたりで課金。"
+      },
+      {
+        "title": "機器・消耗品",
+        "description": "透析機器および消耗品の供給と、システム連携。"
+      },
+      {
+        "title": "スマートサプライチェーン",
+        "description": "センターネットワーク全体の調達・保管・配送。"
+      }
+    ],
+    "scaleTitle": "現在の規模",
+    "governanceTitle": "コンプライアンスとガバナンス",
+    "governanceBody": "当社ソフトウェアは中華人民共和国の第二種医療機器登録を取得しています。各機能には該当する規制上の区分を明示し、登録範囲内の機能、臨床意思決定支援、研究検証段階の機能を明確に区別しています。",
+    "governanceCta": "登録証とコンプライアンスを見る",
+    "materialsTitle": "詳細資料のご請求",
+    "materialsBody": "財務予測、拡大計画、投資資料一式は審査のうえご提供します。貴社の概要とご関心の分野をお知らせください。",
+    "materialsNote": "本資料に含まれる将来見通しは計画上の前提であり、確約や収益の保証を意味するものではありません。",
+    "materialsCta": "IR担当へのお問い合わせ"
   }
 }

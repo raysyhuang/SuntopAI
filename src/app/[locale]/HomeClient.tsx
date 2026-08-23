@@ -2,510 +2,296 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import {
-  ArrowRight, Database, Brain, Cog, Activity, Server, Cpu,
-  Stethoscope, PackageCheck, Shield,
-} from 'lucide-react'
+import { ArrowRight, Building2, HeartPulse, Handshake, TrendingUp, ShieldCheck } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
 import { Section } from '@/components/ui/Section'
-import { Card } from '@/components/ui/Card'
 import { Stat } from '@/components/ui/Stat'
 import { Badge } from '@/components/ui/Badge'
+import { publicFact, REGISTRATION, OUTCOMES, type FactId } from '@/content/facts'
+
+/**
+ * Homepage.
+ *
+ * A router rather than a summary of the whole site: it establishes who Suntop is,
+ * proves it once, sends each of the four audiences onward, and stops.
+ *
+ * Every figure is read from `facts.ts` — never hard-coded here and never taken from
+ * the dictionaries — so all four locales state the same numbers and cannot drift.
+ */
+
+const HERO_FACTS: FactId[] = [
+  'platform.institutionsDeployed',
+  'platform.machinesConnected',
+  'group.idcOperating',
+  'group.cooperativeCenters',
+]
+
+/** Outcomes chosen for the homepage — the rest live on the evidence page. */
+const FEATURED_OUTCOMES = ['pre-shock-patients', 'lab-evaluation-time', 'iron-deficiency']
+
+const fade = {
+  initial: { opacity: 0, y: 16 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: '-80px' },
+  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
+}
 
 interface HomeClientProps {
   locale: Locale
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.55 },
-}
-
-const staggerContainer = {
-  animate: {
-    transition: { staggerChildren: 0.08 },
-  },
-}
-
 export default function HomeClient({ locale, dictionary }: HomeClientProps) {
-  const t = dictionary.home
   const { theme } = useTheme()
   const isLight = theme === 'light'
+  const d = dictionary
+  const home = d.home
 
-  // Warm hybrid: warm grays in light mode; cool slate retained in dark for institutional feel
-  const headingClass = isLight ? '[color:#141413]' : 'text-white'
-  const bodyClass = isLight ? '[color:#5e5d59]' : 'text-neutral-400'
-  const mutedClass = isLight ? '[color:#87867f]' : 'text-neutral-500'
-  const hairlineClass = isLight ? '[border-color:#e8e6dc]' : 'border-slate-800'
+  const heading = isLight ? 'text-ink-900' : 'text-white'
+  const body = isLight ? 'text-warm-ink-500' : 'text-neutral-400'
+  const hairline = isLight ? 'border-[#e8e6dc]' : 'border-slate-800'
 
-  const pillars = [
-    { icon: Database, title: t.pillars.iot.title, description: t.pillars.iot.description, features: t.pillars.iot.features },
-    { icon: Brain, title: t.pillars.ai.title, description: t.pillars.ai.description, features: t.pillars.ai.features },
-    { icon: Cog, title: t.pillars.automation.title, description: t.pillars.automation.description, features: t.pillars.automation.features },
+  const audiences = [
+    {
+      icon: Building2,
+      title: home.audiences.hospitals.title,
+      desc: home.audiences.hospitals.description,
+      href: `/${locale}/platform`,
+      label: d.nav.platform,
+    },
+    {
+      icon: HeartPulse,
+      title: home.audiences.patients.title,
+      desc: home.audiences.patients.description,
+      href: `/${locale}/services`,
+      label: d.nav.services,
+    },
+    {
+      icon: Handshake,
+      title: home.audiences.partners.title,
+      desc: home.audiences.partners.description,
+      href: `/${locale}/deployment`,
+      label: d.nav.deployment,
+    },
+    {
+      icon: TrendingUp,
+      title: home.audiences.investors.title,
+      desc: home.audiences.investors.description,
+      href: `/${locale}/company`,
+      label: d.nav.company,
+    },
   ]
 
-  const flowSteps = [
-    { icon: Server, ...t.flow.steps.machines },
-    { icon: Database, ...t.flow.steps.data },
-    { icon: Brain, ...t.flow.steps.ai },
-    { icon: Cog, ...t.flow.steps.automation },
-  ]
-
-  const whyCards = [
-    { icon: Shield, ...t.why.clinical },
-    { icon: Activity, ...t.why.operational },
-    { icon: Brain, ...t.why.strategic },
-    { icon: Database, ...t.why.longterm },
-  ]
+  const outcomes = OUTCOMES.filter((o) => FEATURED_OUTCOMES.includes(o.id))
 
   return (
-    <div className="relative">
-      {/* ───────────── Hero ───────────── */}
-      <section
-        className="relative min-h-screen flex items-center"
-        style={{ backgroundColor: isLight ? '#f5f4ed' : '#0b1624' }}
-      >
-        <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 py-24 lg:py-28 w-full">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={staggerContainer}
+    <>
+      {/* ───────── 1. Hero — one claim, two actions ───────── */}
+      <Section tone="light" className="!pt-32 !pb-20 md:!pt-40 md:!pb-24">
+        <motion.div {...fade} className="max-w-3xl">
+          <Badge variant="eyebrow" className="mb-7">
+            {d.home.tag}
+          </Badge>
+          {/* Name carries the weight; the descriptor sits under it rather than
+              competing with it at the same size. */}
+          <h1
+            className={`font-display font-light leading-[1.06] tracking-tightest text-[2.6rem] md:text-[3.6rem] ${heading}`}
+            style={{ textWrap: 'balance' }}
           >
-            <motion.div variants={fadeInUp} className="mb-6">
-              <Badge variant="eyebrow">{t.tag}</Badge>
-            </motion.div>
-
-            <motion.h1
-              variants={fadeInUp}
-              className={`display-lg mb-6 text-balance ${headingClass}`}
-            >
-              {t.hero.title1}
-              <br />
-              <span className="gradient-text">{t.hero.title2}</span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className={`text-lg md:text-xl font-light leading-relaxed max-w-2xl mb-6 ${
-                isLight ? '[color:#3d3d3a]' : 'text-neutral-200'
-              }`}
-            >
-              {t.hero.subtitle}
-            </motion.p>
-
-            <motion.p
-              variants={fadeInUp}
-              className={`text-base leading-relaxed max-w-2xl mb-8 ${bodyClass}`}
-            >
-              {t.hero.description}
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="flex flex-wrap gap-2 mb-10">
-              {t.hero.badges.map((badge) => (
-                <Badge key={badge} variant="neutral">{badge}</Badge>
-              ))}
-            </motion.div>
-
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-3">
-              <Link href={`/${locale}/platform`} className="btn-primary">
-                {t.cta.explore}
-                <ArrowRight size={18} aria-hidden="true" />
-              </Link>
-              <Link href={`/${locale}/company#contact`} className="btn-secondary">
-                {t.cta.contact}
-              </Link>
-            </motion.div>
-
-            {t.hero.stats && (
-              <motion.div
-                variants={fadeInUp}
-                className={`mt-10 pt-6 border-t ${hairlineClass}`}
-              >
-                <p className={`text-sm font-medium ${mutedClass}`}>{t.hero.stats}</p>
-              </motion.div>
-            )}
-          </motion.div>
-
-          {t.hero.metrics && t.hero.metrics.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 mt-16 border-t border-b ${
-                isLight ? 'border-[#e8e6dc] divide-[#e8e6dc]' : 'border-slate-800 divide-slate-800'
-              }`}
-            >
-              {t.hero.metrics.map((metric) => (
-                <div key={metric.label} className="px-6 py-5">
-                  <Stat value={metric.value} label={metric.label} />
-                </div>
-              ))}
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* ───────────── Why This Matters — DARK INTERLUDE ───────────── */}
-      <section
-        className="relative py-28 md:py-36"
-        style={{ backgroundColor: isLight ? '#141413' : '#060d18' }}
-      >
-        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-            >
-              {/* Editorial chapter marker */}
-              <div className="flex items-center gap-3 mb-6">
-                <span className="h-px w-10 bg-[#3d3d3a]" aria-hidden="true" />
-                <span className="text-[10px] uppercase tracking-[0.18em] font-medium text-[#b0aea5]">
-                  {t.why.tag}
-                </span>
-              </div>
-
-              <h2 className="display-lg mb-8 text-[#faf9f5]">
-                {t.why.title}
-              </h2>
-
-              {/* Editorial serif body — long-form essay typography */}
-              <p className="font-display text-lg md:text-xl leading-[1.65] mb-6 text-[#d6d4c8]">
-                {t.why.description1}
-              </p>
-              <p className="font-display text-lg md:text-xl leading-[1.65] text-[#d6d4c8]">
-                {t.why.description2}
-              </p>
-
-              {t.why.references && t.why.references.length > 0 && (
-                <div className="mt-8 pt-5 border-t border-[#3d3d3a]">
-                  <p className="text-[10px] uppercase tracking-[0.18em] font-medium mb-3 text-[#87867f]">
-                    References
-                  </p>
-                  <div className="text-xs leading-relaxed space-y-1.5 text-[#87867f] font-display italic">
-                    {t.why.references.map((ref: string, index: number) => (
-                      <p key={index}>{ref}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.55 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-            >
-              {whyCards.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-[#30302e] p-6 md:p-7 bg-[#1c1c1a] transition-colors hover:border-[#4d4c48]"
-                >
-                  <div className="w-9 h-9 rounded flex items-center justify-center mb-4 bg-accent-900/30 border border-accent-800/40">
-                    <item.icon className="w-4 h-4 text-accent-300" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display font-medium text-lg mb-2 leading-snug text-[#faf9f5]" style={{ letterSpacing: 0 }}>
-                    {item.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-[#b0aea5]">{item.desc}</p>
-                </div>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ───────────── Technology Platform Pillars ───────────── */}
-      <Section tone="light">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
-        >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-            <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
-              {t.pillars.tag}
-            </span>
-            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-          </div>
-          <h2 className={`display-lg mb-5 ${headingClass}`}>{t.pillars.title}</h2>
-          <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${bodyClass}`}>
-            {t.pillars.description}
+            {d.home.hero.title1}
+          </h1>
+          <p
+            className={`mt-4 font-display font-light leading-snug text-[1.35rem] md:text-[1.7rem] ${
+              isLight ? 'text-accent-700' : 'text-accent-300'
+            }`}
+            style={{ textWrap: 'balance' }}
+          >
+            {d.home.hero.title2}
           </p>
+          <p className={`mt-7 text-lg md:text-xl leading-relaxed max-w-2xl ${body}`}>
+            {d.home.hero.subtitle}
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link
+              href={`/${locale}/platform`}
+              className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors ${
+                isLight
+                  ? 'bg-accent-700 text-white hover:bg-accent-800'
+                  : 'bg-accent-500 text-slate-950 hover:bg-accent-400'
+              }`}
+            >
+              {d.home.cta.explore}
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href={`/${locale}/contact`}
+              className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium border transition-colors ${
+                isLight
+                  ? 'border-[#d1cfc5] text-ink-800 hover:bg-[#f0eee6]'
+                  : 'border-slate-700 text-neutral-200 hover:bg-slate-800/60'
+              }`}
+            >
+              {d.home.cta.contact}
+            </Link>
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* ───────── 2. Proof bar — canonical figures, one line each ───────── */}
+      <Section tone="subtle" className="!py-16 md:!py-20">
+        <motion.div {...fade}>
+          <Badge variant="eyebrow" className="mb-8">
+            {home.proofEyebrow}
+          </Badge>
+          <div className={`grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 border-t pt-10 ${hairline}`}>
+            {HERO_FACTS.map((id, i) => {
+              const fact = publicFact(id)
+              const labels = [
+                d.home.hero.metrics?.[0]?.label ?? '',
+                d.home.hero.metrics?.[1]?.label ?? '',
+                d.company.stats.team,
+                d.company.stats.partners,
+              ]
+              return <Stat key={id} value={fact.value} label={labels[i]} />
+            })}
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* ───────── 3. Audience router — the point of the page ───────── */}
+      <Section tone="light">
+        <motion.div {...fade} className="mb-14 max-w-2xl">
+          <Badge variant="eyebrow" className="mb-6">
+            {home.audiences.eyebrow}
+          </Badge>
+          <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight ${heading}`}>
+            {home.audiences.title}
+          </h2>
         </motion.div>
 
-        {/* Flow diagram */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mb-14"
-        >
-          <div className="grid grid-cols-2 gap-3 md:hidden">
-            {flowSteps.map((step, index) => (
-              <motion.div
-                key={step.label}
-                initial={{ scale: 0.95, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className={`flex flex-col items-center text-center p-4 rounded border ${
-                  isLight ? 'bg-[#faf9f5] border-[#f0eee6]' : 'bg-slate-900/40 border-slate-800/60'
+        <div className="grid md:grid-cols-2 gap-px overflow-hidden rounded-2xl border"
+             style={{ borderColor: isLight ? '#e8e6dc' : '#1e293b', backgroundColor: isLight ? '#e8e6dc' : '#1e293b' }}>
+          {audiences.map((a, i) => (
+            <motion.div key={a.title} {...fade} transition={{ ...fade.transition, delay: i * 0.06 }}>
+              <Link
+                href={a.href}
+                className={`group flex h-full flex-col p-8 md:p-10 transition-colors ${
+                  isLight ? 'bg-[#faf9f5] hover:bg-[#f5f4ed]' : 'bg-[#0b1624] hover:bg-[#0f1e33]'
                 }`}
               >
-                <div className={`w-10 h-10 rounded flex items-center justify-center mb-2 ${
-                  isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                }`}>
-                  <step.icon className={`w-5 h-5 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
-                </div>
-                <span className={`font-medium text-sm ${headingClass}`}>{step.label}</span>
-                <span className={`text-xs ${mutedClass}`}>{step.sublabel}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="hidden md:flex items-center justify-center gap-3">
-            {flowSteps.map((step, index) => (
-              <div key={step.label} className="flex items-center gap-3">
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.12 }}
-                  className={`flex flex-col items-center px-6 py-5 rounded border min-w-[150px] ${
-                    isLight ? 'bg-[#faf9f5] border-[#f0eee6] shadow-whisper' : 'bg-slate-900/40 border-slate-800/60'
-                  }`}
+                <a.icon
+                  className="w-5 h-5 mb-6"
+                  style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}
+                  aria-hidden="true"
+                />
+                <h3 className={`text-lg font-semibold mb-3 ${heading}`}>{a.title}</h3>
+                <p className={`text-[0.95rem] leading-relaxed mb-6 ${body}`}>{a.desc}</p>
+                <span
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium"
+                  style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}
                 >
-                  <div className={`w-11 h-11 rounded flex items-center justify-center mb-2 ${
-                    isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                  }`}>
-                    <step.icon className={`w-5 h-5 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
-                  </div>
-                  <span className={`font-medium text-sm ${headingClass}`}>{step.label}</span>
-                  <span className={`text-xs ${mutedClass}`}>{step.sublabel}</span>
-                </motion.div>
-                {index < flowSteps.length - 1 && (
-                  <ArrowRight className={`w-4 h-4 flex-shrink-0 ${isLight ? 'text-accent-500' : 'text-accent-400'}`} aria-hidden="true" />
-                )}
-              </div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Pillars */}
-        <div className="grid md:grid-cols-3 gap-5">
-          {pillars.map((pillar, index) => (
-            <motion.div
-              key={pillar.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
-            >
-              <Card className="h-full">
-                <div className="flex items-start gap-4">
-                  <div className={`w-9 h-9 rounded flex items-center justify-center flex-shrink-0 ${
-                    isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                  }`}>
-                    <pillar.icon className={`w-4 h-4 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className={`font-display font-medium text-lg mb-2 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                      {pillar.title}
-                    </h3>
-                    <p className={`text-sm leading-relaxed mb-4 ${bodyClass}`}>
-                      {pillar.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {pillar.features.map((feature) => (
-                        <Badge key={feature} variant="neutral">{feature}</Badge>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Card>
+                  {a.label}
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
             </motion.div>
           ))}
         </div>
       </Section>
 
-      {/* ───────────── Clinical Highlights ───────────── */}
-      {t.clinicalHighlights && (
-        <Section tone="subtle">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            {/* Editorial chapter marker */}
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-              <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
-                {t.clinicalHighlights.tag}
-              </span>
-              <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-            </div>
-            <h2 className={`display-lg mb-5 ${headingClass}`}>{t.clinicalHighlights.title}</h2>
-          </motion.div>
-
-          <div className={`grid grid-cols-2 lg:grid-cols-4 divide-x divide-y lg:divide-y-0 border rounded-md overflow-hidden ${
-            isLight ? 'border-[#e8e6dc] divide-[#e8e6dc]' : 'border-slate-800 divide-slate-800'
-          }`}>
-            {t.clinicalHighlights.items.map((item: any, index: number) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-                className={`px-6 py-7 ${isLight ? 'bg-[#faf9f5]' : 'bg-slate-900/40'}`}
-              >
-                <div
-                  className={`font-display font-medium tabular-nums text-3xl md:text-4xl leading-none mb-3 ${
-                    isLight ? 'text-accent-700' : 'text-accent-300'
-                  }`}
-                  style={{ letterSpacing: 0 }}
-                >
-                  {item.value}
-                </div>
-                <div className={`text-sm font-medium mb-1 ${headingClass}`}>{item.label}</div>
-                <div className={`text-xs leading-relaxed ${mutedClass}`}>{item.detail}</div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href={`/${locale}/clinical#results`}
-              className={`inline-flex items-center gap-2 text-sm font-medium ${
-                isLight ? 'text-accent-700 hover:text-accent-800' : 'text-accent-300 hover:text-accent-200'
-              }`}
-            >
-              {t.clinicalHighlights.cta}
-              <ArrowRight className="w-4 h-4" aria-hidden="true" />
-            </Link>
-          </div>
-
-          {t.clinicalHighlights.footnote && (
-            <p className={`text-center text-xs mt-4 italic ${mutedClass}`}>
-              {t.clinicalHighlights.footnote}
-            </p>
-          )}
-
-          {t.clinicalHighlights.deployment && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={`mt-14 pt-10 border-t ${hairlineClass}`}
-            >
-              <h3 className={`text-center text-xs uppercase tracking-[0.14em] font-medium mb-8 ${mutedClass}`}>
-                {t.clinicalHighlights.deployment.title}
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {t.clinicalHighlights.deployment.items.map((item: any) => (
-                  <Stat key={item.label} value={item.value} label={item.label} align="center" />
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </Section>
-      )}
-
-      {/* ───────────── Explore & Final CTA ───────────── */}
-      <Section tone="light">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-14"
-        >
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-            <span className={`text-[10px] uppercase tracking-[0.18em] font-medium ${mutedClass}`}>
-              {t.router.tag}
-            </span>
-            <span className={`h-px w-10 ${isLight ? 'bg-[#d1cfc5]' : 'bg-slate-700'}`} aria-hidden="true" />
-          </div>
-          <h2 className={`display-lg mb-5 ${headingClass}`}>{t.router.title}</h2>
-          <p className={`text-base md:text-lg max-w-2xl mx-auto leading-relaxed ${bodyClass}`}>
-            {t.router.description}
-          </p>
+      {/* ───────── 4. Evidence — raw pairs lead, attribution attached ───────── */}
+      <Section tone="dark">
+        <motion.div {...fade} className="max-w-2xl mb-14">
+          <Badge variant="eyebrow" className="mb-6">
+            {home.evidence.eyebrow}
+          </Badge>
+          <h2 className="font-display font-light text-3xl md:text-[2.5rem] leading-tight text-white">
+            {home.evidence.title}
+          </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-16">
-          {[
-            { icon: Cpu, key: 'platform', href: `/${locale}/platform` },
-            { icon: Stethoscope, key: 'clinical', href: `/${locale}/clinical` },
-            { icon: PackageCheck, key: 'deployment', href: `/${locale}/deployment` },
-          ].map((door, index) => {
-            const doorData = t.router.doors[door.key as keyof typeof t.router.doors]
-            return (
-              <motion.div
-                key={door.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-              >
-                <Link
-                  href={door.href}
-                  className={`group block h-full rounded-md border p-6 transition-[border-color,box-shadow,background-color] ${
-                    isLight
-                      ? 'bg-[#faf9f5] border-[#f0eee6] shadow-whisper hover:shadow-whisper-lg hover:border-accent-200'
-                      : 'bg-slate-900/40 border-slate-800/60 hover:border-accent-700/50 hover:bg-slate-900/60'
-                  }`}
-                >
-                  <div className={`w-11 h-11 rounded flex items-center justify-center mb-5 ${
-                    isLight ? 'bg-accent-50 border border-accent-100' : 'bg-accent-900/30 border border-accent-800/40'
-                  }`}>
-                    <door.icon className={`w-5 h-5 ${isLight ? 'text-accent-700' : 'text-accent-300'}`} aria-hidden="true" />
-                  </div>
-                  <h3 className={`font-display font-medium text-xl mb-3 leading-snug ${headingClass}`} style={{ letterSpacing: 0 }}>
-                    {doorData.title}
-                  </h3>
-                  <p className={`text-sm leading-relaxed mb-5 ${bodyClass}`}>
-                    {doorData.description}
-                  </p>
-                  <span className={`inline-flex items-center gap-1.5 text-sm font-medium ${
-                    isLight ? 'text-accent-700' : 'text-accent-300'
-                  }`}>
-                    {doorData.cta}
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                  </span>
-                </Link>
-              </motion.div>
-            )
-          })}
+        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+          {outcomes.map((o, i) => (
+            <motion.div key={o.id} {...fade} transition={{ ...fade.transition, delay: i * 0.08 }}>
+              <div className="font-display font-light tabular-nums text-[2.5rem] md:text-[2.75rem] leading-none text-white">
+                {o.after}
+              </div>
+              <div className="mt-3 flex items-center gap-2 text-sm tabular-nums text-neutral-500">
+                <span className="uppercase tracking-[0.12em] text-[10px] font-sans font-medium">
+                  {home.evidence.from}
+                </span>
+                <span>{o.before}</span>
+              </div>
+              <p className="mt-4 pt-4 border-t border-slate-800 text-sm text-neutral-300 font-medium">
+                {o.measure}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Final CTA row */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex flex-col sm:flex-row gap-3 justify-center"
-        >
-          <Link href={`/${locale}/company#contact`} className="btn-primary">
-            {t.cta.start}
-            <ArrowRight size={18} aria-hidden="true" />
-          </Link>
-          <Link href={`/${locale}/platform`} className="btn-secondary">
-            {t.cta.learn}
+        <motion.div {...fade} className="mt-14 pt-8 border-t border-slate-800">
+          <p className="text-xs leading-relaxed text-neutral-500 max-w-2xl">
+            {d.home.clinicalHighlights.footnote}
+          </p>
+          <Link
+            href={`/${locale}/clinical`}
+            className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-accent-400 hover:text-accent-300"
+          >
+            {home.evidence.link}
+            <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </motion.div>
       </Section>
-    </div>
+
+      {/* ───────── 5. Registration — the trust asset, stated plainly ───────── */}
+      <Section tone="subtle" className="!py-20 md:!py-24">
+        <motion.div {...fade} className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-14 items-start">
+          <ShieldCheck
+            className="w-8 h-8 shrink-0"
+            style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}
+            aria-hidden="true"
+          />
+          <div>
+            <Badge variant="eyebrow" className="mb-5">
+              {home.regulatory.eyebrow}
+            </Badge>
+            <h2 className={`font-display font-light text-2xl md:text-3xl leading-tight mb-3 ${heading}`}>
+              {home.regulatory.title}
+            </h2>
+            <p className={`font-mono text-sm mb-8 ${isLight ? 'text-accent-700' : 'text-accent-300'}`}>
+              {REGISTRATION.number}
+            </p>
+            <dl className={`grid sm:grid-cols-[130px_1fr] gap-x-8 gap-y-4 text-sm border-t pt-7 ${hairline}`}>
+              <dt className={`font-medium ${body}`}>{home.regulatory.scopeLabel}</dt>
+              <dd className={heading}>{REGISTRATION.scope[locale]}</dd>
+              <dt className={`font-medium ${body}`}>{home.regulatory.validLabel}</dt>
+              <dd className={`font-mono tabular-nums ${heading}`}>{REGISTRATION.expires}</dd>
+            </dl>
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* ───────── 6. Close ───────── */}
+      <Section tone="light" className="!py-24 md:!py-28">
+        <motion.div {...fade} className="text-center max-w-2xl mx-auto">
+          <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight mb-8 ${heading}`}>
+            {d.home.finalCta.title}
+          </h2>
+          <Link
+            href={`/${locale}/contact`}
+            className={`inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-medium transition-colors ${
+              isLight
+                ? 'bg-accent-700 text-white hover:bg-accent-800'
+                : 'bg-accent-500 text-slate-950 hover:bg-accent-400'
+            }`}
+          >
+            {d.home.cta.start}
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.div>
+      </Section>
+    </>
   )
 }

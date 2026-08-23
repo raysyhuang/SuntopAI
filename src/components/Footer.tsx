@@ -20,7 +20,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
       { label: t.links.techOverview, href: `/${locale}/platform` },
       { label: t.links.dataInfra, href: `/${locale}/platform#data` },
       { label: t.links.aiEngine, href: `/${locale}/platform#intelligence` },
-      { label: t.links.automation, href: `/${locale}/platform#automation` },
+      { label: t.links.automation, href: `/${locale}/company#partners` },
     ],
     clinical: [
       { label: t.links.inCenter, href: `/${locale}/clinical#in-center` },
@@ -44,6 +44,9 @@ export default function Footer({ locale, dictionary }: FooterProps) {
     ],
     company: [
       { label: t.links.aboutUs, href: `/${locale}/company` },
+      { label: t.links.regulatory, href: `/${locale}/company/certifications` },
+      { label: t.links.partners, href: `/${locale}/partners` },
+      { label: t.links.investors, href: `/${locale}/investors` },
       { label: t.links.centers, href: `/${locale}/company#centers` },
       { label: t.links.news, href: `/${locale}/news` },
       { label: t.links.contact, href: `/${locale}/company#contact` },
