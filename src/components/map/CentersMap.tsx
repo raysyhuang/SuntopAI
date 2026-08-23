@@ -13,11 +13,12 @@ interface CentersMapProps {
   centers: Center[]
   isDarkTheme?: boolean
   locale?: string
+  popupLabels?: { direct: string; partner: string }
   selectedCenterId?: string | null
   onCenterSelect?: (centerId: string | null) => void
 }
 
-export function CentersMap({ centers, isDarkTheme, locale, selectedCenterId, onCenterSelect }: CentersMapProps) {
+export function CentersMap({ centers, isDarkTheme, locale, popupLabels, selectedCenterId, onCenterSelect }: CentersMapProps) {
   const [isClient, setIsClient] = useState(false)
   const [theme, setTheme] = useState<'dark' | 'light'>('dark')
 
@@ -108,6 +109,7 @@ export function CentersMap({ centers, isDarkTheme, locale, selectedCenterId, onC
       <MarkerCluster 
         centers={centers}
         locale={locale}
+        popupLabels={popupLabels}
         selectedCenterId={selectedCenterId}
         onCenterSelect={onCenterSelect}
       />

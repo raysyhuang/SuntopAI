@@ -7,7 +7,9 @@ export interface Coordinates {
 
 export interface TourismSpot {
   name: string
-  type: string
+  /** Never rendered; retained only for records that still carry it. */
+  type?: string
+  image?: string
   distance?: string
   description?: string
 }

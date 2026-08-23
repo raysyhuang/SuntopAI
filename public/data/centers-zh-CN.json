@@ -28,21 +28,36 @@
       "gallery": [
         "/images/centers/fuzhou-xingkang/1.jpg",
         "/images/centers/fuzhou-xingkang/2.jpg",
-        "/images/centers/fuzhou-xingkang/3.jpg"
+        "/images/centers/fuzhou-xingkang/3.jpg",
+        "/images/centers/fuzhou-xingkang/4.jpg",
+        "/images/centers/fuzhou-xingkang/5.jpg",
+        "/images/centers/fuzhou-xingkang/6.jpg"
       ],
-      "tourismIntro": "福州，福建省省会，有着2200多年建城史，是一座山水相依、古韵悠长的历史文化名城。",
+      "tourismIntro": "福州，福建省省会，有着2200多年建城史，是一座山水相依、古韵悠长的历史文化名城。这里三山鼎峙、闽江穿城，拥有三坊七巷、鼓山涌泉等众多名胜古迹，温泉资源丰富，素有“温泉之城”美誉。福州也是海上丝绸之路的重要起点城市，闽菜文化源远流长。",
       "tourism": [
         {
           "name": "三坊七巷",
-          "type": "历史文化",
-          "distance": "5 km",
-          "description": "中国历史文化名街，保存完好的明清古建筑群"
+          "image": "/images/tourism/fuzhou-xingkang/three-lanes.jpg",
+          "description": "中国历史文化名街，保存完好的明清古建筑群，被誉为“中国城市里坊制度活化石”。",
+          "distance": "5 km"
         },
         {
           "name": "鼓山",
-          "type": "自然风光",
-          "distance": "10 km",
-          "description": "福州市区最高峰，涌泉寺为闽刹之冠"
+          "image": "/images/tourism/fuzhou-xingkang/drum-mountain.jpg",
+          "description": "福州市东郊名山，山上有千年古刹涌泉寺，摩崖石刻众多，登顶可俯瞰福州全城与闽江。",
+          "distance": "15 km"
+        },
+        {
+          "name": "西湖公园",
+          "image": "/images/tourism/fuzhou-xingkang/west-lake.jpg",
+          "description": "福州市区历史最悠久的公园，始建于晋代，湖光山色秀美，是市民休闲的好去处。",
+          "distance": "3 km"
+        },
+        {
+          "name": "闽江夜游",
+          "image": "/images/tourism/fuzhou-xingkang/min-river.jpg",
+          "description": "乘船游览闽江两岸灯火辉煌的城市夜景，途经中洲岛、解放大桥等标志性景观。",
+          "distance": "4 km"
         }
       ]
     },
@@ -67,14 +82,40 @@
         "定制化服务",
         "居家式环境"
       ],
-      "tourismIntro": "沈阳，辽宁省省会，是中国东北地区的政治、经济与文化中心。",
+      "tourismIntro": "沈阳，辽宁省省会，是中国东北地区的政治、经济与文化中心。作为清朝的发祥地，沈阳拥有世界文化遗产沈阳故宫和清昭陵，积淀了丰厚的满族文化底蕴。这座城市既有古都的庄严大气，也有现代都市的蓬勃活力。",
       "tourism": [
         {
           "name": "沈阳故宫",
-          "type": "历史文化",
-          "distance": "5 km",
-          "description": "世界文化遗产，清太祖努尔哈赤和清太宗皇太极的皇宫"
+          "image": "/images/tourism/liaoning-xingkang/shenyang-palace.jpg",
+          "description": "世界文化遗产，清太祖努尔哈赤和清太宗皇太极的皇宫，中国仅存的两大宫殿建筑群之一。",
+          "distance": "5 km"
+        },
+        {
+          "name": "北陵公园（清昭陵）",
+          "image": "/images/tourism/liaoning-xingkang/zhaoling-tomb.jpg",
+          "description": "清太宗皇太极的陵寝，沈阳最大的公园，古松参天，陵寝建筑庄严肃穆。",
+          "distance": "8 km"
+        },
+        {
+          "name": "张氏帅府",
+          "image": "/images/tourism/liaoning-xingkang/zhang-mansion.jpg",
+          "description": "东北军阀张作霖和张学良父子的官邸和私宅，展示了近代东北的风云历史。",
+          "distance": "5 km"
+        },
+        {
+          "name": "沈阳世博园",
+          "image": "/images/tourism/liaoning-xingkang/expo-garden.jpg",
+          "description": "2006年世界园艺博览会举办地，占地246公顷，四季花卉缤纷，是城市生态休闲胜地。",
+          "distance": "20 km"
         }
+      ],
+      "gallery": [
+        "/images/centers/liaoning-xingkang/1.jpg",
+        "/images/centers/liaoning-xingkang/2.jpg",
+        "/images/centers/liaoning-xingkang/3.jpg",
+        "/images/centers/liaoning-xingkang/4.jpg",
+        "/images/centers/liaoning-xingkang/5.jpg",
+        "/images/centers/liaoning-xingkang/6.jpg"
       ]
     },
     {
@@ -110,27 +151,27 @@
       "tourism": [
         {
           "name": "合肥天鹅湖",
-          "type": "旅游景点",
-          "distance": "3.5 km",
-          "description": "合肥政务区标志性城市公园，湖面开阔，绿道环绕，适合散步与休憩。"
+          "image": "/images/tourism/anhui-xingkang/swan-lake.jpg",
+          "description": "合肥政务区标志性城市公园，湖面开阔，绿道环绕，适合散步与休憩。",
+          "distance": "3.5 km"
         },
         {
           "name": "包公园",
-          "type": "旅游景点",
-          "distance": "4.2 km",
-          "description": "纪念北宋名臣包拯的历史文化园区，包含包公祠、清风阁等景点。"
+          "image": "/images/tourism/anhui-xingkang/bao-park.jpg",
+          "description": "纪念北宋名臣包拯的历史文化园区，包含包公祠、清风阁等景点。",
+          "distance": "4.2 km"
         },
         {
           "name": "三河古镇",
-          "type": "旅游景点",
-          "distance": "35 km",
-          "description": "拥有2500年历史的江南水乡古镇，古街、古桥、古民居保存完好。"
+          "image": "/images/tourism/anhui-xingkang/sanhe-town.jpg",
+          "description": "拥有2500年历史的江南水乡古镇，古街、古桥、古民居保存完好。",
+          "distance": "35 km"
         },
         {
           "name": "巢湖风景区",
-          "type": "旅游景点",
-          "distance": "60 km",
-          "description": "中国五大淡水湖之一，湖光山色秀丽，温泉资源丰富，是休闲度假胜地。"
+          "image": "/images/tourism/anhui-xingkang/chaohu-lake.jpg",
+          "description": "中国五大淡水湖之一，湖光山色秀丽，温泉资源丰富，是休闲度假胜地。",
+          "distance": "60 km"
         }
       ]
     },
@@ -167,27 +208,27 @@
       "tourism": [
         {
           "name": "汤池温泉",
-          "type": "旅游景点",
-          "distance": "20 km",
-          "description": "千年温泉古镇，水质优良，富含多种矿物质，是放松身心的天然疗养胜地。"
+          "image": "/images/tourism/lujiang-xingkang/tangchi-hotspring.jpg",
+          "description": "千年温泉古镇，水质优良，富含多种矿物质，是放松身心的天然疗养胜地。",
+          "distance": "20 km"
         },
         {
           "name": "冶父山",
-          "type": "旅游景点",
-          "distance": "15 km",
-          "description": "国家森林公园，相传为春秋铸剑大师欧冶子铸剑之地，山势秀丽，古刹幽深。"
+          "image": "/images/tourism/lujiang-xingkang/yefu-mountain.jpg",
+          "description": "国家森林公园，相传为春秋铸剑大师欧冶子铸剑之地，山势秀丽，古刹幽深。",
+          "distance": "15 km"
         },
         {
           "name": "周瑜墓",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "三国名将周瑜安息之地，园内古木参天，是了解三国文化的重要历史遗迹。"
+          "image": "/images/tourism/lujiang-xingkang/zhouyu-tomb.jpg",
+          "description": "三国名将周瑜安息之地，园内古木参天，是了解三国文化的重要历史遗迹。",
+          "distance": "5 km"
         },
         {
           "name": "巢湖风景区",
-          "type": "旅游景点",
-          "distance": "30 km",
-          "description": "中国五大淡水湖之一，湖光山色秀丽，湿地生态丰富，可游览中庙、姥山岛等景点。"
+          "image": "/images/tourism/lujiang-xingkang/chaohu-lake.jpg",
+          "description": "中国五大淡水湖之一，湖光山色秀丽，湿地生态丰富，可游览中庙、姥山岛等景点。",
+          "distance": "30 km"
         }
       ]
     },
@@ -225,27 +266,27 @@
       "tourism": [
         {
           "name": "逍遥津公园",
-          "type": "旅游景点",
-          "distance": "3 km",
-          "description": "三国古战场遗址公园，张辽威震逍遥津的故事就发生在这里，园内绿树成荫、古迹众多。"
+          "image": "/images/tourism/hefei-pufukang/xiaoyaojin.jpg",
+          "description": "三国古战场遗址公园，张辽威震逍遥津的故事就发生在这里，园内绿树成荫、古迹众多。",
+          "distance": "3 km"
         },
         {
           "name": "安徽省博物院",
-          "type": "旅游景点",
-          "distance": "4 km",
-          "description": "国家一级博物馆，馆藏丰富，展示安徽从远古到近现代的历史文化精华。"
+          "image": "/images/tourism/hefei-pufukang/anhui-museum.jpg",
+          "description": "国家一级博物馆，馆藏丰富，展示安徽从远古到近现代的历史文化精华。",
+          "distance": "4 km"
         },
         {
           "name": "大蜀山国家森林公园",
-          "type": "旅游景点",
-          "distance": "12 km",
-          "description": "合肥市区最高峰，森林覆盖率高，是登山健身、亲近自然的城市绿肺。"
+          "image": "/images/tourism/hefei-pufukang/dashu-mountain.jpg",
+          "description": "合肥市区最高峰，森林覆盖率高，是登山健身、亲近自然的城市绿肺。",
+          "distance": "12 km"
         },
         {
           "name": "合肥野生动物园",
-          "type": "旅游景点",
-          "distance": "15 km",
-          "description": "大蜀山脚下的生态型动物园，园内动物种类丰富，适合家庭游览与亲子活动。"
+          "image": "/images/tourism/hefei-pufukang/hefei-wildlife.jpg",
+          "description": "大蜀山脚下的生态型动物园，园内动物种类丰富，适合家庭游览与亲子活动。",
+          "distance": "15 km"
         }
       ]
     },
@@ -282,27 +323,27 @@
       "tourism": [
         {
           "name": "七星岩",
-          "type": "旅游景点",
-          "distance": "3 km",
-          "description": "七座石灰岩峰峦如北斗七星排列，湖山相映，被誉为“岭南第一奇观”。"
+          "image": "/images/tourism/zhaoqing-xingkang/seven-star-crags.jpg",
+          "description": "七座石灰岩峰峦如北斗七星排列，湖山相映，被誉为“岭南第一奇观”。",
+          "distance": "3 km"
         },
         {
           "name": "鼎湖山",
-          "type": "旅游景点",
-          "distance": "18 km",
-          "description": "中国第一个国家级自然保护区，被誉为“北回归线上的绿宝石”，森林覆盖率达98%。"
+          "image": "/images/tourism/zhaoqing-xingkang/dinghu-mountain.jpg",
+          "description": "中国第一个国家级自然保护区，被誉为“北回归线上的绿宝石”，森林覆盖率达98%。",
+          "distance": "18 km"
         },
         {
           "name": "星湖湿地公园",
-          "type": "旅游景点",
-          "distance": "4 km",
-          "description": "国家湿地公园，丹顶鹤与多种珍稀鸟类栖息于此，湖水清澈，生态环境优美。"
+          "image": "/images/tourism/zhaoqing-xingkang/star-lake.jpg",
+          "description": "国家湿地公园，丹顶鹤与多种珍稀鸟类栖息于此，湖水清澈，生态环境优美。",
+          "distance": "4 km"
         },
         {
           "name": "宋城墙",
-          "type": "旅游景点",
-          "distance": "2 km",
-          "description": "始建于宋代的古城墙遗址，是广东仅存的宋代砖城墙，见证了肇庆千年的沧桑变迁。"
+          "image": "/images/tourism/zhaoqing-xingkang/song-wall.jpg",
+          "description": "始建于宋代的古城墙遗址，是广东仅存的宋代砖城墙，见证了肇庆千年的沧桑变迁。",
+          "distance": "2 km"
         }
       ]
     },
@@ -338,27 +379,27 @@
       "tourism": [
         {
           "name": "孙中山故居",
-          "type": "旅游景点",
-          "distance": "25 km",
-          "description": "全国重点文物保护单位，展示孙中山先生成长与革命的历史，是中山最重要的文化地标。"
+          "image": "/images/tourism/zhongshan-shenkang/sun-yatsen.jpg",
+          "description": "全国重点文物保护单位，展示孙中山先生成长与革命的历史，是中山最重要的文化地标。",
+          "distance": "25 km"
         },
         {
           "name": "中山詹园",
-          "type": "旅游景点",
-          "distance": "10 km",
-          "description": "岭南最大的私家古典园林，融合苏杭园林精华与岭南建筑风格，景色雅致。"
+          "image": "/images/tourism/zhongshan-shenkang/zhan-garden.jpg",
+          "description": "岭南最大的私家古典园林，融合苏杭园林精华与岭南建筑风格，景色雅致。",
+          "distance": "10 km"
         },
         {
           "name": "紫马岭公园",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "中山市最大的综合性城市公园，园内湖泊、花园、游乐设施齐全，是休闲散步的好去处。"
+          "image": "/images/tourism/zhongshan-shenkang/zimaling.jpg",
+          "description": "中山市最大的综合性城市公园，园内湖泊、花园、游乐设施齐全，是休闲散步的好去处。",
+          "distance": "5 km"
         },
         {
           "name": "孙文西路步行街",
-          "type": "旅游景点",
-          "distance": "3 km",
-          "description": "融合中西建筑风格的百年商业老街，骑楼建筑独具特色，是品味中山文化的好地方。"
+          "image": "/images/tourism/zhongshan-shenkang/sunwen-road.jpg",
+          "description": "融合中西建筑风格的百年商业老街，骑楼建筑独具特色，是品味中山文化的好地方。",
+          "distance": "3 km"
         }
       ]
     },
@@ -395,27 +436,27 @@
       "tourism": [
         {
           "name": "中央大街",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "亚洲最长的步行街之一，汇集欧洲各时期建筑风格，被誉为“建筑艺术博物馆”。"
+          "image": "/images/tourism/heilongjiang-xingkang/central-avenue.jpg",
+          "description": "亚洲最长的步行街之一，汇集欧洲各时期建筑风格，被誉为“建筑艺术博物馆”。",
+          "distance": "5 km"
         },
         {
           "name": "圣索菲亚教堂",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "远东地区最大的东正教堂之一，拜占庭式建筑风格，是哈尔滨的标志性建筑。"
+          "image": "/images/tourism/heilongjiang-xingkang/sophia-cathedral.jpg",
+          "description": "远东地区最大的东正教堂之一，拜占庭式建筑风格，是哈尔滨的标志性建筑。",
+          "distance": "5 km"
         },
         {
           "name": "太阳岛",
-          "type": "旅游景点",
-          "distance": "10 km",
-          "description": "松花江上的生态风景区，夏季绿树花海，冬季雪雕艺术，是国家5A级旅游景区。"
+          "image": "/images/tourism/heilongjiang-xingkang/sun-island.jpg",
+          "description": "松花江上的生态风景区，夏季绿树花海，冬季雪雕艺术，是国家5A级旅游景区。",
+          "distance": "10 km"
         },
         {
           "name": "哈尔滨冰雪大世界",
-          "type": "旅游景点",
-          "distance": "25 km",
-          "description": "世界最大的冰雪主题乐园，每年冬季开放，冰雕雪塑规模宏大、流光溢彩。"
+          "image": "/images/tourism/heilongjiang-xingkang/ice-snow-world.jpg",
+          "description": "世界最大的冰雪主题乐园，每年冬季开放，冰雕雪塑规模宏大、流光溢彩。",
+          "distance": "25 km"
         }
       ]
     },
@@ -451,27 +492,27 @@
       "tourism": [
         {
           "name": "松花江畔",
-          "type": "旅游景点",
-          "distance": "4 km",
-          "description": "哈尔滨的母亲河，江畔绿道适合散步骑行，冬季江面可体验冰上活动。"
+          "image": "/images/tourism/harbin-yuhua/songhua-river.jpg",
+          "description": "哈尔滨的母亲河，江畔绿道适合散步骑行，冬季江面可体验冰上活动。",
+          "distance": "4 km"
         },
         {
           "name": "东北虎林园",
-          "type": "旅游景点",
-          "distance": "15 km",
-          "description": "世界最大的东北虎繁育基地，可近距离观赏百余只东北虎的雄姿。"
+          "image": "/images/tourism/harbin-yuhua/siberian-tiger.jpg",
+          "description": "世界最大的东北虎繁育基地，可近距离观赏百余只东北虎的雄姿。",
+          "distance": "15 km"
         },
         {
           "name": "果戈里大街",
-          "type": "旅游景点",
-          "distance": "3 km",
-          "description": "以俄国作家果戈里命名的文化街区，欧式建筑林立，咖啡馆与书店遍布。"
+          "image": "/images/tourism/harbin-yuhua/gogol-street.jpg",
+          "description": "以俄国作家果戈里命名的文化街区，欧式建筑林立，咖啡馆与书店遍布。",
+          "distance": "3 km"
         },
         {
           "name": "龙塔",
-          "type": "旅游景点",
-          "distance": "8 km",
-          "description": "亚洲第一高钢塔，高336米，设有观光平台和旋转餐厅，可360度俯瞰哈尔滨全景。"
+          "image": "/images/tourism/harbin-yuhua/dragon-tower.jpg",
+          "description": "亚洲第一高钢塔，高336米，设有观光平台和旋转餐厅，可360度俯瞰哈尔滨全景。",
+          "distance": "8 km"
         }
       ]
     },
@@ -506,27 +547,27 @@
       "tourism": [
         {
           "name": "金山寺",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "始建于东晋的千年古刹，白蛇传“水漫金山”故事的发生地，依山而建，气势恢宏。"
+          "image": "/images/tourism/zhenjiang-xingkang/jinshan-temple.jpg",
+          "description": "始建于东晋的千年古刹，白蛇传“水漫金山”故事的发生地，依山而建，气势恢宏。",
+          "distance": "5 km"
         },
         {
           "name": "西津渡",
-          "type": "旅游景点",
-          "distance": "4 km",
-          "description": "千年古渡口历史街区，保存了唐宋以来的古建筑群，被誉为“中国古渡博物馆”。"
+          "image": "/images/tourism/zhenjiang-xingkang/xijin-ferry.jpg",
+          "description": "千年古渡口历史街区，保存了唐宋以来的古建筑群，被誉为“中国古渡博物馆”。",
+          "distance": "4 km"
         },
         {
           "name": "北固山",
-          "type": "旅游景点",
-          "distance": "6 km",
-          "description": "三国时期孙刘联姻之地，“天下第一江山”石刻名闻天下，登顶可览长江壮景。"
+          "image": "/images/tourism/zhenjiang-xingkang/beigu-mountain.jpg",
+          "description": "三国时期孙刘联姻之地，“天下第一江山”石刻名闻天下，登顶可览长江壮景。",
+          "distance": "6 km"
         },
         {
           "name": "焦山",
-          "type": "旅游景点",
-          "distance": "10 km",
-          "description": "长江中唯一四面环水的岛屿山林，有“江中浮玉”之称，山上碑林珍贵、古木参天。"
+          "image": "/images/tourism/zhenjiang-xingkang/jiaoshan.jpg",
+          "description": "长江中唯一四面环水的岛屿山林，有“江中浮玉”之称，山上碑林珍贵、古木参天。",
+          "distance": "10 km"
         }
       ]
     },
@@ -563,27 +604,27 @@
       "tourism": [
         {
           "name": "苍马山风景区",
-          "type": "旅游景点",
-          "distance": "10 km",
-          "description": "国家3A级旅游景区，山峦叠翠，溪流潺潺，有玉圣园、抗日纪念馆等多处景点。"
+          "image": "/images/tourism/linshu-xingkang/cangma-mountain.jpg",
+          "description": "国家3A级旅游景区，山峦叠翠，溪流潺潺，有玉圣园、抗日纪念馆等多处景点。",
+          "distance": "10 km"
         },
         {
           "name": "柳编文化园",
-          "type": "旅游景点",
-          "distance": "5 km",
-          "description": "展示临沭国家级非遗柳编工艺的文化园区，可体验传统柳编手工制作。"
+          "image": "/images/tourism/linshu-xingkang/willow-weaving.jpg",
+          "description": "展示临沭国家级非遗柳编工艺的文化园区，可体验传统柳编手工制作。",
+          "distance": "5 km"
         },
         {
           "name": "蒙山风景区",
-          "type": "旅游景点",
-          "distance": "80 km",
-          "description": "沂蒙山世界地质公园核心景区，主峰龟蒙顶海拔1156米，山高林密、空气清新。"
+          "image": "/images/tourism/linshu-xingkang/yimeng-mountain.jpg",
+          "description": "沂蒙山世界地质公园核心景区，主峰龟蒙顶海拔1156米，山高林密、空气清新。",
+          "distance": "80 km"
         },
         {
           "name": "地下大峡谷",
-          "type": "旅游景点",
-          "distance": "60 km",
-          "description": "中国特大型溶洞之一，全长6100米，洞内有暗河漂流，地质景观奇特壮丽。"
+          "image": "/images/tourism/linshu-xingkang/underground-canyon.jpg",
+          "description": "中国特大型溶洞之一，全长6100米，洞内有暗河漂流，地质景观奇特壮丽。",
+          "distance": "60 km"
         }
       ]
     },

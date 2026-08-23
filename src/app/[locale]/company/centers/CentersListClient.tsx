@@ -6,19 +6,13 @@ import { ArrowLeft, ArrowRight, MapPinned } from 'lucide-react'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
-
-interface Center {
-  slug: string
-  name: string
-  shortName: string
-  city: string
-  province: string
-  description: string
-}
+import type { Center } from '@/types/center'
 
 interface CentersListClientProps {
   locale: Locale
   dictionary: Dictionary
+  /** Canonical centers from public/data — no longer read from the dictionary. */
+  centers: Center[]
 }
 
 const fadeInUp = {
@@ -27,9 +21,8 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-export default function CentersListClient({ locale, dictionary }: CentersListClientProps) {
+export default function CentersListClient({ locale, dictionary, centers }: CentersListClientProps) {
   const t = dictionary.company
-  const centers = t.centers?.list || []
   const { theme } = useTheme()
 
   // Group centers by province

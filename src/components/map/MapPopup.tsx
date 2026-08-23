@@ -1,11 +1,24 @@
 import type { Center } from '@/types/center'
 
 // Creates HTML string for Leaflet popup (always white background, use dark text)
-export function createPopupContent(center: Center, locale: string = 'zh-CN'): string {
+export interface PopupLabels {
+  direct: string
+  partner: string
+}
+
+export function createPopupContent(
+  center: Center,
+  locale: string = 'zh-CN',
+  labels?: PopupLabels,
+): string {
   const typeBadgeStyle = center.type === 'direct'
     ? 'background:rgba(0,125,115,0.1);color:#007d73;border:1px solid rgba(0,125,115,0.25)'
     : 'background:rgba(139,92,246,0.1);color:#7c3aed;border:1px solid rgba(139,92,246,0.25)'
-  const typeLabel = center.type === 'direct' ? '直营中心' : '合作医院'
+  // Falls back to zh-CN only when no labels are supplied; every caller should pass them.
+  const typeLabel =
+    center.type === 'direct'
+      ? labels?.direct ?? '直营中心'
+      : labels?.partner ?? '合作医院'
 
   const hasTourism = center.tourism && center.tourism.length > 0
 
