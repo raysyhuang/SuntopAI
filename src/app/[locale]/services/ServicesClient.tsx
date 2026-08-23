@@ -1144,6 +1144,46 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         </section>
       )}
 
+      {/* Cross-links — Services is the parent of Clinical now that it has left the top nav */}
+      {t.crossLinks && (
+        <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { href: `/${locale}/clinical`, ...t.crossLinks.clinical },
+                { href: `/${locale}/platform`, ...t.crossLinks.platform },
+              ].map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                >
+                  <Link href={link.href} className={`block rounded-2xl p-6 group transition-colors ${
+                    theme === 'dark'
+                      ? 'bg-slate-900/50 border border-slate-800/50 hover:border-accent-500/50'
+                      : 'bg-[#faf9f5] border border-[#f0eee6] shadow-whisper hover:border-accent-300 hover:shadow-whisper-lg'
+                  }`}>
+                    <h3 className={`font-display font-semibold mb-2 transition-colors ${
+                      theme === 'dark' ? 'text-white group-hover:text-accent-400' : '[color:#141413] group-hover:text-accent-600'
+                    }`}>
+                      {link.title}
+                    </h3>
+                    <p className={`text-sm mb-4 ${theme === 'dark' ? 'text-neutral-500' : '[color:#87867f]'}`}>{link.description}</p>
+                    <span className={`inline-flex items-center gap-2 text-sm font-medium ${
+                      theme === 'dark' ? 'text-accent-400' : 'text-accent-600'
+                    }`}>
+                      {link.button}
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA */}
       <section 
         className="py-24"

@@ -21,13 +21,15 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
 
+  // Six top-level items. The logo links home, so Home is not repeated here.
+  // Clinical sits under Services and Deployment under Platform — both remain
+  // reachable from their parent page's cross-links and from the footer.
   const navLinks = [
-    { href: `/${locale}`, label: dictionary.nav.home },
     { href: `/${locale}/platform`, label: dictionary.nav.platform },
-    { href: `/${locale}/clinical`, label: dictionary.nav.clinical },
-    { href: `/${locale}/deployment`, label: dictionary.nav.deployment },
     { href: `/${locale}/services`, label: dictionary.nav.services },
     { href: `/${locale}/company`, label: dictionary.nav.company },
+    { href: `/${locale}/partners`, label: dictionary.nav.partners },
+    { href: `/${locale}/investors`, label: dictionary.nav.investors },
     { href: `/${locale}/news`, label: dictionary.nav.news },
   ]
 
