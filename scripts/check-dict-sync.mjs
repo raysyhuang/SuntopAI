@@ -16,17 +16,44 @@ const DICT_DIR = resolve(__dirname, '../src/i18n/dictionaries')
 const LOCALES = ['zh-CN', 'en', 'ja', 'zh-TW']
 const SOURCE = 'zh-CN'
 
+/**
+ * Legal pages legitimately differ per jurisdiction: the English privacy policy
+ * carries HIPAA and CCPA sections, zh-CN carries China's PIPL/CSL section, and
+ * the terms include a US-only class action waiver. Differences here are reported
+ * as warnings rather than failures so CI is not permanently red.
+ *
+ * They still need review. As of 2026-08 the ja and zh-TW privacy and compliance
+ * pages omit the China data protection section that zh-CN carries, which is a
+ * genuine coverage gap for counsel to rule on — not a translation bug.
+ */
+const JURISDICTIONAL = ['privacyPage.sections', 'termsPage.sections', 'compliancePage.sections']
+const isJurisdictional = (key) => JURISDICTIONAL.some((p) => key.startsWith(p))
+
 function loadDict(locale) {
   const raw = readFileSync(resolve(DICT_DIR, `${locale}.json`), 'utf-8')
   return JSON.parse(raw)
 }
 
-/** Recursively flatten an object into dot-separated key paths */
+/**
+ * Recursively flatten an object into dot-separated key paths.
+ *
+ * Arrays are descended into rather than treated as leaves, and each array
+ * contributes its length as part of the path. A locale with fewer items than
+ * zh-CN — a missing legal section, a dropped service card — therefore shows up
+ * as a key mismatch instead of passing silently.
+ */
 function flattenKeys(obj, prefix = '') {
   const keys = []
   for (const [k, v] of Object.entries(obj)) {
     const path = prefix ? `${prefix}.${k}` : k
-    if (v && typeof v === 'object' && !Array.isArray(v)) {
+    if (Array.isArray(v)) {
+      keys.push(`${path}[length=${v.length}]`)
+      v.forEach((item, i) => {
+        if (item && typeof item === 'object') {
+          keys.push(...flattenKeys(item, `${path}[${i}]`))
+        }
+      })
+    } else if (v && typeof v === 'object') {
       keys.push(...flattenKeys(v, path))
     } else {
       keys.push(path)
@@ -55,9 +82,20 @@ for (const locale of LOCALES) {
   const localeKeys = new Set(flattenKeys(dicts[locale]))
 
   // Keys in source but missing from this locale
-  const missing = [...sourceKeys].filter(k => !localeKeys.has(k))
+  const allMissing = [...sourceKeys].filter(k => !localeKeys.has(k))
   // Keys in this locale but not in source (orphaned)
-  const orphaned = [...localeKeys].filter(k => !sourceKeys.has(k))
+  const allOrphaned = [...localeKeys].filter(k => !sourceKeys.has(k))
+
+  const missing = allMissing.filter(k => !isJurisdictional(k))
+  const orphaned = allOrphaned.filter(k => !isJurisdictional(k))
+  const legal = [...allMissing, ...allOrphaned].filter(isJurisdictional)
+
+  if (legal.length > 0) {
+    console.log(`\n\x1b[33m!\x1b[0m ${locale}.json — ${legal.length} legal-page difference(s), reported but not failing:`)
+    for (const k of legal.sort()) {
+      console.log(`    ~ ${k}`)
+    }
+  }
 
   if (missing.length === 0 && orphaned.length === 0) {
     console.log(`\x1b[32m✓\x1b[0m ${locale}.json — in sync`)
