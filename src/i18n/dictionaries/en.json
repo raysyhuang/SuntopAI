@@ -1860,6 +1860,11 @@
         "legend": {
           "direct": "Direct Centers",
           "partner": "Partner Hospitals"
+        },
+        "popup": {
+          "nearby": "Nearby attractions",
+          "viewDetails": "View details",
+          "contact": "Contact"
         }
       },
       "tourism": {

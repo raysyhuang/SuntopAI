@@ -5,6 +5,7 @@ import { MapContainer, TileLayer } from 'react-leaflet'
 import type { LatLngBoundsExpression } from 'leaflet'
 import type { Center } from '@/types/center'
 import { MarkerCluster } from './MarkerCluster'
+import type { PopupLabels } from './MapPopup'
 import 'leaflet/dist/leaflet.css'
 import 'leaflet.markercluster/dist/MarkerCluster.css'
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
@@ -12,8 +13,8 @@ import 'leaflet.markercluster/dist/MarkerCluster.Default.css'
 interface CentersMapProps {
   centers: Center[]
   isDarkTheme?: boolean
-  locale?: string
-  popupLabels?: { direct: string; partner: string }
+  locale: string
+  popupLabels: PopupLabels
   selectedCenterId?: string | null
   onCenterSelect?: (centerId: string | null) => void
 }

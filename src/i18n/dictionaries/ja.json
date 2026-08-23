@@ -1860,6 +1860,11 @@
         "legend": {
           "direct": "直営センター",
           "partner": "提携病院"
+        },
+        "popup": {
+          "nearby": "周辺の観光スポット",
+          "viewDetails": "詳細を見る",
+          "contact": "連絡先"
         }
       },
       "tourism": {

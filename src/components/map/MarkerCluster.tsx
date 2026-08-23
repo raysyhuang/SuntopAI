@@ -10,13 +10,13 @@ import { createPopupContent, type PopupLabels } from './MapPopup'
 
 interface MarkerClusterProps {
   centers: Center[]
-  locale?: string
-  popupLabels?: PopupLabels
+  locale: string
+  popupLabels: PopupLabels
   selectedCenterId?: string | null
   onCenterSelect?: (centerId: string | null) => void
 }
 
-export function MarkerCluster({ centers, locale = 'zh-CN', popupLabels, selectedCenterId, onCenterSelect }: MarkerClusterProps) {
+export function MarkerCluster({ centers, locale, popupLabels, selectedCenterId, onCenterSelect }: MarkerClusterProps) {
   const map = useMap()
   const markersRef = useRef<Map<string, L.Marker>>(new Map())
 

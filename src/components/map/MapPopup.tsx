@@ -4,21 +4,20 @@ import type { Center } from '@/types/center'
 export interface PopupLabels {
   direct: string
   partner: string
+  nearby: string
+  viewDetails: string
+  contact: string
 }
 
 export function createPopupContent(
   center: Center,
-  locale: string = 'zh-CN',
-  labels?: PopupLabels,
+  locale: string,
+  labels: PopupLabels,
 ): string {
   const typeBadgeStyle = center.type === 'direct'
     ? 'background:rgba(0,125,115,0.1);color:#007d73;border:1px solid rgba(0,125,115,0.25)'
     : 'background:rgba(139,92,246,0.1);color:#7c3aed;border:1px solid rgba(139,92,246,0.25)'
-  // Falls back to zh-CN only when no labels are supplied; every caller should pass them.
-  const typeLabel =
-    center.type === 'direct'
-      ? labels?.direct ?? '直营中心'
-      : labels?.partner ?? '合作医院'
+  const typeLabel = center.type === 'direct' ? labels.direct : labels.partner
 
   const hasTourism = center.tourism && center.tourism.length > 0
 
@@ -48,21 +47,21 @@ export function createPopupContent(
   if (hasTourism) {
     html += `<div style="font-size:0.75rem;color:#007d73;display:flex;align-items:center;gap:4px;margin-bottom:12px">`
     html += `<svg width="16" height="16" fill="#007d73" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>`
-    html += `<span>周边旅游景点</span>`
+    html += `<span>${labels.nearby}</span>`
     html += `</div>`
   }
 
   // Link to detail page
   if (center.type === 'direct' && center.slug) {
     html += `<a href="/${locale}/company/${center.slug}?from=map" style="font-size:0.875rem;color:#007d73;text-decoration:none;display:inline-flex;align-items:center;gap:4px;font-weight:500">`
-    html += `查看详情`
+    html += `${labels.viewDetails}`
     html += `<svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>`
     html += `</a>`
   }
 
   // Contact
   if (center.contact) {
-    html += `<div style="margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;font-size:0.75rem;color:#86868b">联系方式: ${center.contact}</div>`
+    html += `<div style="margin-top:8px;padding-top:8px;border-top:1px solid #e5e7eb;font-size:0.75rem;color:#86868b">${labels.contact}: ${center.contact}</div>`
   }
 
   html += `</div>`

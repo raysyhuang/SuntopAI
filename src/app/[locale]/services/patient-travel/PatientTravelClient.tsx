@@ -168,7 +168,7 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
                       centers={filteredCenters} 
                       isDarkTheme={theme === 'dark'} 
                       locale={locale}
-                      popupLabels={dict.map.legend}
+                      popupLabels={{ ...dict.map.legend, ...dict.map.popup }}
                       selectedCenterId={selectedCenterId}
                       onCenterSelect={setSelectedCenterId}
                     />

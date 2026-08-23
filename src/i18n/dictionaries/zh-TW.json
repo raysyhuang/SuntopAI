@@ -1860,6 +1860,11 @@
         "legend": {
           "direct": "直營中心",
           "partner": "合作醫院"
+        },
+        "popup": {
+          "nearby": "周邊旅遊景點",
+          "viewDetails": "查看詳情",
+          "contact": "聯絡方式"
         }
       },
       "tourism": {
