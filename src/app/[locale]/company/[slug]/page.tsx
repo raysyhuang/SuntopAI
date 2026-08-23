@@ -5,6 +5,13 @@ import { getDirectCenters } from '@/lib/centers-data'
 import CenterClient from './CenterClient'
 import { notFound } from 'next/navigation'
 
+/**
+ * Every center slug is known at build time, so an unlisted slug is not a page.
+ * Without this, Next renders the not-found body with a 200 status and search
+ * engines index invalid URLs as real pages.
+ */
+export const dynamicParams = false
+
 export default async function CenterPage({
   params,
 }: {

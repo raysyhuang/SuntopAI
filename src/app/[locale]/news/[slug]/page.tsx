@@ -3,6 +3,9 @@ import { getDictionary } from '@/i18n/get-dictionary'
 import ArticleClient from './ArticleClient'
 import { notFound } from 'next/navigation'
 
+/** Article slugs are fixed at build time — see company/[slug] for the rationale. */
+export const dynamicParams = false
+
 // Article data
 const articles = [
   { 
