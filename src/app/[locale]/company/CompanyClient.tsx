@@ -7,10 +7,14 @@ import { Target, Eye, Users, Award, Briefcase, Building, Mail, MapPin, Phone, Bu
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import { publicFact } from '@/content/facts'
+import type { Center } from '@/types/center'
 
 interface CompanyClientProps {
   locale: Locale
   dictionary: Dictionary
+  /** Canonical centers from public/data — no longer read from the dictionary. */
+  centers: Center[]
 }
 
 const fadeInUp = {
@@ -19,7 +23,7 @@ const fadeInUp = {
   transition: { duration: 0.6 },
 }
 
-export default function CompanyClient({ locale, dictionary }: CompanyClientProps) {
+export default function CompanyClient({ locale, dictionary, centers }: CompanyClientProps) {
   const t = dictionary.company
   const { theme } = useTheme()
 
@@ -204,10 +208,10 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Building, value: '50+', label: t.stats.founded },
-              { icon: Users, value: '30+', label: t.stats.team },
-              { icon: Award, value: '100+', label: t.stats.partners },
-              { icon: Briefcase, value: '3000+', label: t.stats.stations },
+              { icon: Building, fact: 'platform.institutionsDeployed', label: t.stats.founded },
+              { icon: Users, fact: 'group.idcOperating', label: t.stats.team },
+              { icon: Award, fact: 'group.cooperativeCenters', label: t.stats.partners },
+              { icon: Briefcase, fact: 'platform.machinesConnected', label: t.stats.stations },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -222,7 +226,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
                   className="text-3xl font-display font-semibold mb-1"
                   style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
                 >
-                  {stat.value}
+                  {publicFact(stat.fact as Parameters<typeof publicFact>[0]).value}
                 </div>
                 <div style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }} className="text-sm">{stat.label}</div>
               </motion.div>
@@ -259,7 +263,7 @@ export default function CompanyClient({ locale, dictionary }: CompanyClientProps
 
             {/* Centers Grid */}
             <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
-              {t.centers.list.slice(0, 6).map((center: { slug: string; shortName: string; city: string; province: string }, index: number) => (
+              {centers.slice(0, 6).map((center, index) => (
                 <motion.div
                   key={center.slug}
                   initial={{ opacity: 0, y: 20 }}

@@ -1,5 +1,6 @@
 import { getDictionary } from '@/i18n/get-dictionary'
 import type { Locale } from '@/i18n/config'
+import { getDirectCenters } from '@/lib/centers-data'
 import CompanyClient from './CompanyClient'
 
 export default async function CompanyPage({
@@ -10,5 +11,5 @@ export default async function CompanyPage({
   const { locale } = await params
   const dictionary = await getDictionary(locale)
 
-  return <CompanyClient locale={locale} dictionary={dictionary} />
+  return <CompanyClient locale={locale} dictionary={dictionary} centers={getDirectCenters(locale)} />
 }
