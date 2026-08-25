@@ -49,6 +49,69 @@ function getLocale(request: NextRequest): string {
   return defaultLocale
 }
 
+
+const INTERNAL_PRICING_REALM = 'Suntop AI internal'
+
+function isInternalPricing(pathname: string): boolean {
+  return (
+    pathname === '/internal_pricing' ||
+    pathname.startsWith('/internal_pricing/')
+  )
+}
+
+/** Length-safe comparison so a wrong password cannot be probed a character at a time. */
+function safeEqual(a: string, b: string): boolean {
+  if (a.length !== b.length) return false
+  let diff = 0
+  for (let i = 0; i < a.length; i++) diff |= a.charCodeAt(i) ^ b.charCodeAt(i)
+  return diff === 0
+}
+
+function unauthorized(message: string): NextResponse {
+  return new NextResponse(message, {
+    status: 401,
+    headers: {
+      'WWW-Authenticate': `Basic realm="${INTERNAL_PRICING_REALM}", charset="UTF-8"`,
+      'Cache-Control': 'no-store',
+      'X-Robots-Tag': 'noindex, nofollow, noarchive, nosnippet',
+      'Content-Type': 'text/plain; charset=utf-8',
+    },
+  })
+}
+
+function guardInternalPricing(request: NextRequest): NextResponse {
+  const user = process.env.INTERNAL_PRICING_USER
+  const password = process.env.INTERNAL_PRICING_PASSWORD
+
+  // Fail closed: no credentials configured means no access.
+  if (!user || !password) {
+    return unauthorized(
+      'Internal pricing is not configured. Set INTERNAL_PRICING_USER and INTERNAL_PRICING_PASSWORD.'
+    )
+  }
+
+  const header = request.headers.get('authorization') || ''
+  if (!header.startsWith('Basic ')) return unauthorized('Authentication required.')
+
+  let decoded = ''
+  try {
+    decoded = atob(header.slice(6))
+  } catch {
+    return unauthorized('Authentication required.')
+  }
+
+  const separator = decoded.indexOf(':')
+  if (separator < 0) return unauthorized('Authentication required.')
+
+  const okUser = safeEqual(decoded.slice(0, separator), user)
+  const okPassword = safeEqual(decoded.slice(separator + 1), password)
+  if (!okUser || !okPassword) return unauthorized('Authentication required.')
+
+  const response = NextResponse.next()
+  response.headers.set('Cache-Control', 'no-store')
+  return response
+}
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   
@@ -78,6 +141,15 @@ export function middleware(request: NextRequest) {
     pathname.includes('.') // static files
   ) {
     return NextResponse.next()
+  }
+
+  // Internal pricing sheet: no locale prefix, and never part of the public site.
+  // Gated by HTTP Basic auth. Fails CLOSED — if the credentials are not configured
+  // the sheet is unreachable, so internal commercial terms can never be exposed by
+  // a forgotten config var. The document is served by a route handler rather than
+  // from public/, so this is the only path to it.
+  if (isInternalPricing(pathname)) {
+    return guardInternalPricing(request)
   }
 
   // Redirect if there is no locale
