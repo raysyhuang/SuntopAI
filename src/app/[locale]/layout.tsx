@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { locales, localeNames, type Locale } from '@/i18n/config'
+import { notFound } from 'next/navigation'
+import { locales, localeNames, isValidLocale, type Locale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
@@ -37,9 +38,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: Locale }>
+  params: Promise<{ locale: string }>
 }): Promise<Metadata> {
   const { locale } = await params
+
+  // Anything that is not one of our four locales is not a page. Without this the
+  // lookup below returns undefined and reading `.title` throws, which Next reports
+  // as a 500 — so every probe for /foo.html or /wp-login.php became a server error
+  // instead of a 404.
+  if (!isValidLocale(locale)) notFound()
+
   const meta = localeMetadata[locale]
 
   return {
@@ -73,9 +81,12 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ locale: Locale }>
+  params: Promise<{ locale: string }>
 }) {
   const { locale } = await params
+
+  if (!isValidLocale(locale)) notFound()
+
   const dictionary = await getDictionary(locale)
 
   return (

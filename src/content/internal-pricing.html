@@ -101,6 +101,31 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
   font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
 
+/* ── maintenance schedule ── */
+.maint{border:1px solid var(--line);border-radius:4px;padding:20px 22px;
+  display:flex;flex-direction:column;gap:14px;break-inside:avoid}
+.maint-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.maint-title{font-family:"Outfit",sans-serif;font-size:11.5px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
+.maint-sub{font-size:13px;color:var(--muted)}
+.years{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:0;padding:0;
+  list-style:none;counter-reset:none}
+.years li{display:flex;flex-direction:column;align-items:center;gap:3px;
+  padding:11px 6px;border-radius:3px;border:1px solid var(--line);text-align:center;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.years .y{font-size:12px;color:var(--muted);white-space:nowrap}
+.years .a{font-family:"Outfit",sans-serif;font-size:16px;font-weight:500;
+  color:var(--ink);font-variant-numeric:tabular-nums}
+.years .free{background:var(--tint)}
+.years .free .a{color:var(--muted)}
+.years .paid{background:var(--teal-tint);border-color:var(--teal-line)}
+.years .paid .a{color:var(--teal)}
+.years .sum{background:var(--ink);border-color:var(--ink)}
+.years .sum .y{color:rgba(255,255,255,.7)}
+.years .sum .a{color:#fff}
+.maint-foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.maint-foot b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:600}
+
 /* ── size selector (radio-driven, no JS) ── */
 .sizer{display:flex;flex-direction:column;gap:16px}
 .sr{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
@@ -161,6 +186,7 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
   background:var(--teal);border-radius:50%;
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
 .box.exc li::before{background:transparent;border:1px solid var(--line-2);border-radius:0}
+.box li em{font-style:normal;color:var(--muted);font-size:13px}
 .box .tail{font-size:13px;color:var(--muted);border-top:1px solid var(--teal-line);padding-top:12px}
 .box.exc .tail{border-top-color:var(--line)}
 
@@ -202,6 +228,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
 @media (max-width:780px){
   .cards,.split,.dl{grid-template-columns:1fr}
   .bonus{grid-template-columns:1fr;gap:14px}
+  .years{grid-template-columns:repeat(3,1fr)}
   .terms div{grid-template-columns:1fr;gap:2px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -249,11 +276,12 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
         <div class="card-tag">方式一</div>
         <h3>一次性买断<small>Lump sum · paid once</small></h3>
         <div class="big"><span class="cur">¥</span><span class="val">10,000</span><span class="per">／台</span></div>
-        <p class="cap">保底 ¥100,000，10 台及以下按保底计</p>
+        <p class="cap">签约付清；保底 ¥100,000，10 台及以下按保底计</p>
         <div class="facts">
           <div><span class="k">10 台及以下</span><span class="v">¥100,000</span></div>
           <div><span class="k">超过 10 台</span><span class="v">¥10,000 × 台数</span></div>
-          <div><span class="k">付款</span><span class="v">签约后一次付清</span></div>
+          <div><span class="k">维护升级费</span><span class="v">第 3 年起 10%／年</span></div>
+          <div><span class="k">五年合计每台</span><span class="v">¥13,000</span></div>
         </div>
       </div>
 
@@ -270,10 +298,31 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
       </div>
     </div>
 
+    <div class="maint">
+      <div class="maint-head">
+        <span class="maint-title">买断方式的维护升级费</span>
+        <span class="maint-sub">按买断合同金额的 10%／年计收，前两年免费</span>
+      </div>
+      <ol class="years">
+        <li class="free"><span class="y">第 1 年</span><span class="a">免费</span></li>
+        <li class="free"><span class="y">第 2 年</span><span class="a">免费</span></li>
+        <li class="paid"><span class="y">第 3 年</span><span class="a">10%</span></li>
+        <li class="paid"><span class="y">第 4 年</span><span class="a">10%</span></li>
+        <li class="paid"><span class="y">第 5 年</span><span class="a">10%</span></li>
+        <li class="sum"><span class="y">五年合计</span><span class="a">130%</span></li>
+      </ol>
+      <p class="maint-foot">
+        以 ¥10,000／台 计，每台每年维护费 ¥1,000，五年合计每台 <b>¥13,000</b>。
+        第 6 年起继续按 10%／年续收。
+      </p>
+    </div>
+
     <p class="note">
-      核算口径：一台机器约 <strong>500 人次／年</strong>。按此测算，6 年即为每台 3,000 人次，
-      两个保底条件一致，全期每台约 ¥15,000。6 台及以下的中心，买断保底 ¥100,000 高于按人次保底，
-      可优先推荐按人次方式。
+      核算口径：一台机器约 <strong>500 人次／年</strong>，6 年即为每台 3,000 人次，
+      与「保底 6 年」一致，按人次全期每台 ¥15,000。
+      同以 6 年计，买断每台 ¥14,000（含第 3–6 年维护费）。
+      因此 <strong>9 台及以下</strong>的中心，买断保底 ¥100,000 摊不薄，按人次全期金额更低，可优先推荐按人次；
+      10 台以上买断更划算。
     </p>
   </section>
 
@@ -322,7 +371,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
           </tbody>
           </table>
                 </div>
-        <p class="foot"><span>一次性买断 <b>¥100,000</b>　<em>10 台及以下按保底计</em></span><span>按人次全期保底 <b>¥150,000</b>　<em>10 × 3,000 × ¥5</em></span></p>
+        <p class="foot"><span>一次性买断 <b>¥100,000</b>　<em>10 台及以下按保底计</em></span><span>五年合计 <b>¥130,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥150,000</b>　<em>10 × 3,000 × ¥5</em></span></p>
       </div>
       <div class="pane pane2">
         <div class="scroll">
@@ -350,7 +399,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
           </tbody>
           </table>
                 </div>
-        <p class="foot"><span>一次性买断 <b>¥250,000</b></span><span>按人次全期保底 <b>¥375,000</b>　<em>25 × 3,000 × ¥5</em></span></p>
+        <p class="foot"><span>一次性买断 <b>¥250,000</b></span><span>五年合计 <b>¥325,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥375,000</b>　<em>25 × 3,000 × ¥5</em></span></p>
       </div>
       <div class="pane pane3">
         <div class="scroll">
@@ -379,7 +428,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
           </tbody>
           </table>
                 </div>
-        <p class="foot"><span>一次性买断 <b>¥450,000</b></span><span>按人次全期保底 <b>¥675,000</b>　<em>45 × 3,000 × ¥5</em></span></p>
+        <p class="foot"><span>一次性买断 <b>¥450,000</b></span><span>五年合计 <b>¥585,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥675,000</b>　<em>45 × 3,000 × ¥5</em></span></p>
       </div>
       <div class="pane pane4">
         <div class="scroll">
@@ -408,7 +457,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
           </tbody>
           </table>
                 </div>
-        <p class="foot"><span>一次性买断 <b>¥800,000</b></span><span>按人次全期保底 <b>¥1,200,000</b>　<em>80 × 3,000 × ¥5</em></span></p>
+        <p class="foot"><span>一次性买断 <b>¥800,000</b></span><span>五年合计 <b>¥1,040,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥1,200,000</b>　<em>80 × 3,000 × ¥5</em></span></p>
       </div>
     </div>
   </section>
@@ -427,7 +476,7 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
             <li>透析中央监控系统 — 全中心床位状态与告警集中显示</li>
             <li>透析物联网系统（≤ 99 床）— 水处理、水浸、漏液、环境与温湿度等监测点位</li>
             <li>AI 临床决策支持模块 — 病历辅助书写、归因分析、参考建议</li>
-            <li>平台服务器租赁、系统升级与远程运维</li>
+            <li>平台服务器租赁、系统升级与远程运维 <em>（买断方式前 2 年含，第 3 年起计维护费）</em></li>
           </ul>
         </div>
 
