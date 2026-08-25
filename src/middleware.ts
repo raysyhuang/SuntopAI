@@ -83,11 +83,13 @@ function guardInternalPricing(request: NextRequest): NextResponse {
   const user = process.env.INTERNAL_PRICING_USER
   const password = process.env.INTERNAL_PRICING_PASSWORD
 
-  // Fail closed: no credentials configured means no access.
+  // No credentials configured: serve it unauthenticated. Setting both config vars
+  // turns the login on again with no code change.
   if (!user || !password) {
-    return unauthorized(
-      'Internal pricing is not configured. Set INTERNAL_PRICING_USER and INTERNAL_PRICING_PASSWORD.'
-    )
+    const open = NextResponse.next()
+    open.headers.set('Cache-Control', 'no-store')
+    open.headers.set('X-Robots-Tag', 'noindex, nofollow, noarchive, nosnippet')
+    return open
   }
 
   const header = request.headers.get('authorization') || ''
@@ -143,11 +145,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // Internal pricing sheet: no locale prefix, and never part of the public site.
-  // Gated by HTTP Basic auth. Fails CLOSED — if the credentials are not configured
-  // the sheet is unreachable, so internal commercial terms can never be exposed by
-  // a forgotten config var. The document is served by a route handler rather than
-  // from public/, so this is the only path to it.
+  // Internal pricing sheet: no locale prefix, and not part of the public site.
+  // Optionally gated by HTTP Basic auth — set INTERNAL_PRICING_USER and
+  // INTERNAL_PRICING_PASSWORD to require a login. With neither set the sheet is
+  // open to anyone holding the URL, which is deliberate while it is being trialled;
+  // it stays out of the sitemap, disallowed in robots.txt and linked from nowhere,
+  // but that is obscurity, not access control.
   if (isInternalPricing(pathname)) {
     return guardInternalPricing(request)
   }
