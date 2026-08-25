@@ -101,31 +101,6 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
   font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
 
-/* ── maintenance schedule ── */
-.maint{border:1px solid var(--line);border-radius:4px;padding:20px 22px;
-  display:flex;flex-direction:column;gap:14px;break-inside:avoid}
-.maint-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
-.maint-title{font-family:"Outfit",sans-serif;font-size:11.5px;font-weight:600;
-  letter-spacing:.12em;text-transform:uppercase;color:var(--teal)}
-.maint-sub{font-size:13px;color:var(--muted)}
-.years{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:0;padding:0;
-  list-style:none;counter-reset:none}
-.years li{display:flex;flex-direction:column;align-items:center;gap:3px;
-  padding:11px 6px;border-radius:3px;border:1px solid var(--line);text-align:center;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact}
-.years .y{font-size:12px;color:var(--muted);white-space:nowrap}
-.years .a{font-family:"Outfit",sans-serif;font-size:16px;font-weight:500;
-  color:var(--ink);font-variant-numeric:tabular-nums}
-.years .free{background:var(--tint)}
-.years .free .a{color:var(--muted)}
-.years .paid{background:var(--teal-tint);border-color:var(--teal-line)}
-.years .paid .a{color:var(--teal)}
-.years .sum{background:var(--ink);border-color:var(--ink)}
-.years .sum .y{color:rgba(255,255,255,.7)}
-.years .sum .a{color:#fff}
-.maint-foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
-.maint-foot b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:600}
-
 /* ── size selector (radio-driven, no JS) ── */
 .sizer{display:flex;flex-direction:column;gap:16px}
 .sr{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
@@ -228,7 +203,6 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
 @media (max-width:780px){
   .cards,.split,.dl{grid-template-columns:1fr}
   .bonus{grid-template-columns:1fr;gap:14px}
-  .years{grid-template-columns:repeat(3,1fr)}
   .terms div{grid-template-columns:1fr;gap:2px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
@@ -296,25 +270,6 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
           <div><span class="k">折合每台</span><span class="v">¥15,000</span></div>
         </div>
       </div>
-    </div>
-
-    <div class="maint">
-      <div class="maint-head">
-        <span class="maint-title">买断方式的维护升级费</span>
-        <span class="maint-sub">按买断合同金额的 10%／年计收，前两年免费</span>
-      </div>
-      <ol class="years">
-        <li class="free"><span class="y">第 1 年</span><span class="a">免费</span></li>
-        <li class="free"><span class="y">第 2 年</span><span class="a">免费</span></li>
-        <li class="paid"><span class="y">第 3 年</span><span class="a">10%</span></li>
-        <li class="paid"><span class="y">第 4 年</span><span class="a">10%</span></li>
-        <li class="paid"><span class="y">第 5 年</span><span class="a">10%</span></li>
-        <li class="sum"><span class="y">五年合计</span><span class="a">130%</span></li>
-      </ol>
-      <p class="maint-foot">
-        以 ¥10,000／台 计，每台每年维护费 ¥1,000，五年合计每台 <b>¥13,000</b>。
-        第 6 年起继续按 10%／年续收。
-      </p>
     </div>
 
     <p class="note">
