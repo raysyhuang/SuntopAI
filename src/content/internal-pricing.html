@@ -44,12 +44,40 @@ a{color:var(--teal)}
 .sheet{max-width:940px;margin:0 auto;padding:0 32px 72px}
 
 /* ── masthead ── */
-.bar{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 20px;
-  padding:20px 0 14px;border-bottom:2px solid var(--ink)}
+.bar{position:sticky;top:0;z-index:6;background:var(--paper);
+  display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;
+  padding:16px 0 13px;border-bottom:2px solid var(--ink)}
 .mark{font-family:"Outfit",sans-serif;font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-.01em}
 .mark span{color:var(--teal)}
 .bar-meta{margin-left:auto;font-size:11.5px;letter-spacing:.05em;
   text-transform:uppercase;color:var(--faint)}
+
+/* ── view controls (screen only) ── */
+.tools{display:flex;align-items:center;gap:8px}
+.tgl{display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none;
+  padding:6px 12px 6px 9px;border:1px solid var(--line-2);border-radius:999px;
+  font-size:12.5px;font-weight:500;color:var(--muted);transition:color .12s,border-color .12s}
+.tgl .dot{width:26px;height:15px;border-radius:999px;background:var(--line-2);
+  position:relative;transition:background .16s}
+.tgl .dot::after{content:"";position:absolute;top:2px;left:2px;width:11px;height:11px;
+  border-radius:50%;background:#fff;transition:transform .16s}
+#cust:checked ~ .tgl{color:var(--teal);border-color:var(--teal)}
+#cust:checked ~ .tgl .dot{background:var(--teal)}
+#cust:checked ~ .tgl .dot::after{transform:translateX(11px)}
+#cust:focus-visible ~ .tgl{outline:2px solid var(--teal);outline-offset:2px}
+.prt{display:inline-flex;align-items:center;gap:7px;cursor:pointer;
+  padding:7px 14px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);
+  color:#fff;font:inherit;font-size:12.5px;font-weight:500}
+.prt:hover{background:var(--teal);border-color:var(--teal)}
+
+/* internal-only blocks and phrases, swapped out by the 客户版 toggle */
+body:has(#cust:checked) .internal,
+body:has(#cust:checked) .only-int{display:none}
+.only-cust{display:none}
+body:has(#cust:checked) .only-cust{display:inline}
+.internal-flag{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--gold)}
+.internal-flag::before{content:"";flex:0 0 auto;width:7px;height:7px;border-radius:50%;
+  background:var(--gold);-webkit-print-color-adjust:exact;print-color-adjust:exact}
 
 .title{padding:38px 0 30px;display:flex;flex-direction:column;gap:12px}
 h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(30px,4.4vw,42px);
@@ -57,10 +85,12 @@ h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(30px,4.4vw,42p
 .lede{max-width:60ch;font-size:16px;color:var(--muted)}
 
 /* ── sections ── */
-section{display:flex;flex-direction:column;gap:18px;padding-top:40px;break-inside:avoid}
+section{display:flex;flex-direction:column;gap:18px;padding-top:40px}
 .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;
   border-bottom:1px solid var(--line);padding-bottom:10px}
 h2{font-family:"Newsreader",serif;font-weight:500;font-size:23px;color:var(--ink);line-height:1.25}
+.head .num{font-family:"Outfit",sans-serif;font-size:12px;font-weight:600;color:var(--teal);
+  letter-spacing:.08em;font-variant-numeric:tabular-nums}
 .head .en{font-family:"Outfit",sans-serif;font-size:11.5px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--faint)}
 .note{font-size:13.5px;color:var(--muted);max-width:76ch}
@@ -85,6 +115,23 @@ h2{font-family:"Newsreader",serif;font-weight:500;font-size:23px;color:var(--ink
   border-bottom:1px solid var(--line);font-size:13.5px}
 .facts .k{color:var(--muted)}
 .facts .v{color:var(--ink);font-weight:500;font-variant-numeric:tabular-nums;text-align:right}
+
+/* ── collapsible block (checkbox-driven, no JS — prints open by CSS alone) ── */
+.fold{border:1px solid var(--line);border-radius:4px;background:var(--paper)}
+.fold-sum{cursor:pointer;user-select:none;display:flex;align-items:center;gap:11px;
+  padding:13px 18px;font-family:"Outfit",sans-serif;font-size:13.5px;font-weight:600;
+  color:var(--ink);border-radius:4px;transition:color .12s}
+.fold-sum::before{content:"";flex:0 0 auto;width:7px;height:7px;margin-left:2px;
+  border-right:1.6px solid var(--teal);border-bottom:1.6px solid var(--teal);
+  transform:rotate(-45deg) translate(-2px,-2px);transition:transform .18s}
+.fold-sum:hover{color:var(--teal)}
+.fold-sum .hint{margin-left:auto;font-family:"Inter",sans-serif;font-weight:400;
+  font-size:12.5px;color:var(--faint)}
+.fold-body{display:none}
+#cfg:checked ~ .fold-sum::before{transform:rotate(45deg) translate(-1px,-1px)}
+#cfg:checked ~ .fold-sum{border-bottom:1px solid var(--line);border-radius:4px 4px 0 0}
+#cfg:checked ~ .fold-body{display:flex;flex-direction:column;gap:16px;padding:18px}
+#cfg:focus-visible ~ .fold-sum{outline:2px solid var(--teal);outline-offset:2px}
 
 /* ── tables ── */
 .scroll{overflow-x:auto;border:1px solid var(--line);border-radius:4px}
@@ -142,7 +189,8 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
 .pane .foot em{font-style:normal;color:var(--faint);font-size:12px;font-variant-numeric:tabular-nums}
 
 /* ── scope ── */
-.split{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;align-items:start}
+.split{display:flex;flex-direction:column;gap:18px}
+.grps{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;align-items:start}
 .box{border:1px solid var(--line);border-radius:4px;padding:24px;
   display:flex;flex-direction:column;gap:16px;break-inside:avoid}
 .box.inc{border-color:var(--teal-line);background:var(--teal-tint);
@@ -156,8 +204,8 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
 .grp-label{font-family:"Outfit",sans-serif;font-size:10.5px;font-weight:600;
   letter-spacing:.12em;text-transform:uppercase;color:var(--teal);opacity:.75}
 .box ul{display:flex;flex-direction:column;gap:8px}
-.box li{display:flex;gap:9px;font-size:14px;line-height:1.5;color:var(--body)}
-.box li::before{content:"";flex:0 0 auto;width:6px;height:6px;margin-top:8px;
+.box li{position:relative;padding-left:15px;font-size:14px;line-height:1.5;color:var(--body)}
+.box li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;
   background:var(--teal);border-radius:50%;
   -webkit-print-color-adjust:exact;print-color-adjust:exact}
 .box.exc li::before{background:transparent;border:1px solid var(--line-2);border-radius:0}
@@ -182,28 +230,16 @@ tr.grp td{background:var(--tint);font-family:"Outfit",sans-serif;font-size:10.5p
 .terms .t{color:var(--gold);font-weight:600}
 .terms .d{color:var(--body)}
 
-/* ── download ── */
-.dl{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;
-  border:1px solid var(--line);border-radius:4px;padding:22px 24px;break-inside:avoid}
-.dl h3{font-family:"Newsreader",serif;font-weight:500;font-size:19px;color:var(--ink)}
-.dl p{font-size:13.5px;color:var(--muted);margin-top:4px;max-width:58ch}
-.btn{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;padding:12px 20px;
-  border-radius:3px;background:var(--teal);color:#fff;text-decoration:none;
-  font-weight:600;font-size:14.5px;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact}
-.btn:hover{filter:brightness(1.1)}
-.btn-pending{background:none;color:var(--muted);border:1px dashed var(--line-2);
-  font-weight:500;cursor:default}
-.dl code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;color:var(--faint)}
-.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
-
 footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
   display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--faint)}
 
-@media (max-width:780px){
-  .cards,.split,.dl{grid-template-columns:1fr}
+/* screen-only: an A4 print box is ~690px wide and must not collapse to the phone layout */
+@media screen and (max-width:780px){
+  .cards,.grps{grid-template-columns:1fr}
   .bonus{grid-template-columns:1fr;gap:14px}
   .terms div{grid-template-columns:1fr;gap:2px}
+  .bar{position:static}
+  .tools{width:100%;justify-content:flex-start}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
@@ -212,18 +248,25 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
 @media print{
   body{font-size:10.5pt;line-height:1.5}
   .sheet{max-width:none;padding:0}
+  .bar{position:static}
+  .tools{display:none}
   section{padding-top:22px}
   h1{font-size:24pt}
   h2{font-size:15pt}
   .big .val{font-size:28pt}
   .bonus .pct{font-size:40pt}
-  summary{background:var(--tint)!important}
-  summary::before{display:none}
-  .btn{background:none!important;color:var(--ink)!important;border:1px solid var(--line-2)}
-  .btn svg{display:none}
   a{text-decoration:none}
-  .scroll{overflow:visible}
-  footer{margin-top:26px}
+  .scroll{overflow:visible;border-radius:0}
+  /* keep atomic blocks whole, let long tables flow with a repeating header */
+  .card,.box,.bonus,.seg,.pane .foot,.internal{break-inside:avoid}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  .head{break-after:avoid}
+  /* the fold is a screen affordance; print the contents flat, open or not */
+  .fold{border:0}
+  .fold-sum{display:none}
+  .fold-body,#cfg:checked ~ .fold-body{display:flex;flex-direction:column;gap:16px;padding:0}
+  footer{margin-top:26px;break-inside:avoid}
 }
 </style>
 </head>
@@ -233,17 +276,23 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
 
   <header class="bar">
     <div class="mark">胜透 <span>Suntop AI</span></div>
-    <div class="bar-meta">内部报价参考 · Rev. 2026-08</div>
+    <div class="bar-meta"><span class="only-int">内部报价参考</span><span class="only-cust">报价参考</span> · Rev. 2026-08</div>
+    <div class="tools">
+      <input class="sr" type="checkbox" id="cust">
+      <label class="tgl" for="cust"><span class="dot"></span>客户版</label>
+      <button class="prt" type="button" id="print">打印 ／ 存 PDF</button>
+    </div>
   </header>
 
   <div class="title">
     <h1>智慧透析中心报价单<br>信息化 ＋ 物联网 ＋ AI</h1>
-    <p class="lede">同一套系统，两种付款方式：一次性买断，或按人次计价。</p>
+    <p class="lede">同一套系统，两种付款方式：一次性买断，或按人次计价。<span class="only-int">
+      对外出示或打印前，请打开右上角<b>「客户版」</b>，内部条款将同时从屏幕与打印稿中移除。</span></p>
   </div>
 
   <!-- ── 1. two models ── -->
   <section>
-    <div class="head"><h2>计价方式</h2><span class="en">Two ways to pay</span></div>
+    <div class="head"><span class="num">01</span><h2>计价方式</h2><span class="en">Two ways to pay</span></div>
 
     <div class="cards">
       <div class="card">
@@ -272,178 +321,179 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
       </div>
     </div>
 
-    <p class="note">
-      核算口径：一台机器约 <strong>500 人次／年</strong>，6 年即为每台 3,000 人次，
-      与「保底 6 年」一致，按人次全期每台 ¥15,000。
-      同以 6 年计，买断每台 ¥14,000（含第 3–6 年维护费）。
-      因此 <strong>9 台及以下</strong>的中心，买断保底 ¥100,000 摊不薄，按人次全期金额更低，可优先推荐按人次；
-      10 台以上买断更划算。
-    </p>
   </section>
 
   <!-- ── 2. configuration ── -->
   <section>
-    <div class="head"><h2>配置清单</h2><span class="en">Configuration by center size</span></div>
-    <p class="note">
-      选择中心规模，查看对应配置。逐床配比（床旁血压、智慧信息终端、透析机联机、漏液监测）为固定比例；
-      分区类点位（温湿度、数据网关、卫生间监测等）随机房布局变化，以工程勘察为准。
-    </p>
+    <div class="head"><span class="num">02</span><h2>配置清单</h2><span class="en">Configuration by center size</span></div>
+    <div class="fold">
+      <input class="sr" type="checkbox" id="cfg">
+      <label class="fold-sum" for="cfg">各规模配置与小计<span class="hint">10 台以下 · 11–30 · 31–60 · 60 台以上</span></label>
+      <div class="fold-body">
+      <p class="note">
+        选择中心规模，查看对应配置。逐床配比（床旁血压、智慧信息终端、透析机联机、漏液监测）为固定比例；
+        分区类点位（温湿度、数据网关、卫生间监测等）随机房布局变化，以工程勘察为准。
+      </p>
 
-    <div class="sizer">
-      <input class="sr" type="radio" name="sz" id="sz1">
-      <input class="sr" type="radio" name="sz" id="sz2" checked>
-      <input class="sr" type="radio" name="sz" id="sz3">
-      <input class="sr" type="radio" name="sz" id="sz4">
-      <div class="seg" role="group" aria-label="中心规模">
-        <label for="sz1">10 台以下<small>示例 10 台</small></label>
-        <label for="sz2">11–30 台<small>示例 25 台</small></label>
-        <label for="sz3">31–60 台<small>示例 45 台</small></label>
-        <label for="sz4">60 台以上<small>示例 80 台</small></label>
+      <div class="sizer">
+        <input class="sr" type="radio" name="sz" id="sz1">
+        <input class="sr" type="radio" name="sz" id="sz2" checked>
+        <input class="sr" type="radio" name="sz" id="sz3">
+        <input class="sr" type="radio" name="sz" id="sz4">
+        <div class="seg" role="group" aria-label="中心规模">
+          <label for="sz1">10 台以下<small>示例 10 台</small></label>
+          <label for="sz2">11–30 台<small>示例 25 台</small></label>
+          <label for="sz3">31–60 台<small>示例 45 台</small></label>
+          <label for="sz4">60 台以上<small>示例 80 台</small></label>
+        </div>
+        <div class="pane pane1">
+          <div class="scroll">
+            <table>
+            <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
+            <tbody>
+            <tr class="grp"><td colspan="4">逐床配置</td></tr>
+            <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">10 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
+            <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">10 套</td><td class="q">含平板、支架、延长线</td></tr>
+            <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">10 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
+            <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">10 套</td><td class="q">—</td></tr>
+            <tr class="grp"><td colspan="4">接诊与显示</td></tr>
+            <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 1 台</td><td class="q">含数据线</td></tr>
+            <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
+            <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">1 套</td><td class="q">信息处理工作站与中间件</td></tr>
+            <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
+            <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
+            <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">4 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
+            <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">3 套</td><td class="q">—</td></tr>
+            <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">2 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">3 套</td><td class="q">需水处理厂家开放接口</td></tr>
+            </tbody>
+            </table>
+                  </div>
+          <p class="foot"><span>一次性买断 <b>¥100,000</b>　<em>10 台及以下按保底计</em></span><span>五年合计 <b>¥130,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥150,000</b>　<em>10 × 3,000 × ¥5</em></span></p>
+        </div>
+        <div class="pane pane2">
+          <div class="scroll">
+            <table>
+            <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
+            <tbody>
+            <tr class="grp"><td colspan="4">逐床配置</td></tr>
+            <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">25 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
+            <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">25 套</td><td class="q">含平板、支架、延长线</td></tr>
+            <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">25 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
+            <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">25 套</td><td class="q">—</td></tr>
+            <tr class="grp"><td colspan="4">接诊与显示</td></tr>
+            <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 1 台</td><td class="q">含数据线</td></tr>
+            <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
+            <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">1 套</td><td class="q">信息处理工作站与中间件</td></tr>
+            <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
+            <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
+            <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">5 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
+            <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">4 套</td><td class="q">—</td></tr>
+            <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">2 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">3 套</td><td class="q">需水处理厂家开放接口</td></tr>
+            </tbody>
+            </table>
+                  </div>
+          <p class="foot"><span>一次性买断 <b>¥250,000</b></span><span>五年合计 <b>¥325,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥375,000</b>　<em>25 × 3,000 × ¥5</em></span></p>
+        </div>
+        <div class="pane pane3">
+          <div class="scroll">
+            <table>
+            <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
+            <tbody>
+            <tr class="grp"><td colspan="4">逐床配置</td></tr>
+            <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">45 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
+            <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">45 套</td><td class="q">含平板、支架、延长线</td></tr>
+            <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">45 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
+            <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">45 套</td><td class="q">—</td></tr>
+            <tr class="grp"><td colspan="4">接诊与显示</td></tr>
+            <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">含一体机与接诊软件</td></tr>
+            <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 2 台</td><td class="q">含数据线</td></tr>
+            <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
+            <tr><td class="k">等候区电视机</td><td class="n q">按候诊区</td><td class="n">1 台</td><td class="q">含支架／安装</td></tr>
+            <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">2 套</td><td class="q">信息处理工作站与中间件</td></tr>
+            <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
+            <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
+            <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">10 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
+            <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">7 套</td><td class="q">—</td></tr>
+            <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">4 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">4 套</td><td class="q">需水处理厂家开放接口</td></tr>
+            </tbody>
+            </table>
+                  </div>
+          <p class="foot"><span>一次性买断 <b>¥450,000</b></span><span>五年合计 <b>¥585,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥675,000</b>　<em>45 × 3,000 × ¥5</em></span></p>
+        </div>
+        <div class="pane pane4">
+          <div class="scroll">
+            <table>
+            <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
+            <tbody>
+            <tr class="grp"><td colspan="4">逐床配置</td></tr>
+            <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">80 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
+            <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">80 套</td><td class="q">含平板、支架、延长线</td></tr>
+            <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">80 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
+            <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">80 套</td><td class="q">—</td></tr>
+            <tr class="grp"><td colspan="4">接诊与显示</td></tr>
+            <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">建议加 1 台备用机</td></tr>
+            <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">建议加 1 台备用机</td></tr>
+            <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 2 台</td><td class="q">含数据线</td></tr>
+            <tr><td class="k">4K 显示屏</td><td class="n q">&gt; 50 床 2 台</td><td class="n">2 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
+            <tr><td class="k">等候区电视机</td><td class="n q">按候诊区</td><td class="n">1–2 台</td><td class="q">含支架／安装</td></tr>
+            <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">4 套</td><td class="q">信息处理工作站与中间件</td></tr>
+            <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
+            <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2–4 套</td><td class="q">—</td></tr>
+            <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">8–14 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
+            <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">5–10 套</td><td class="q">—</td></tr>
+            <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">4–6 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
+            <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">4–12 套</td><td class="q">需水处理厂家开放接口</td></tr>
+            </tbody>
+            </table>
+                  </div>
+          <p class="foot"><span>一次性买断 <b>¥800,000</b></span><span>五年合计 <b>¥1,040,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥1,200,000</b>　<em>80 × 3,000 × ¥5</em></span></p>
+        </div>
       </div>
-      <div class="pane pane1">
-        <div class="scroll">
-          <table>
-          <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
-          <tbody>
-          <tr class="grp"><td colspan="4">逐床配置</td></tr>
-          <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">10 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
-          <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">10 套</td><td class="q">含平板、支架、延长线</td></tr>
-          <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">10 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
-          <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">10 套</td><td class="q">—</td></tr>
-          <tr class="grp"><td colspan="4">接诊与显示</td></tr>
-          <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 1 台</td><td class="q">含数据线</td></tr>
-          <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
-          <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">1 套</td><td class="q">信息处理工作站与中间件</td></tr>
-          <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
-          <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
-          <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">4 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
-          <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">3 套</td><td class="q">—</td></tr>
-          <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">2 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">3 套</td><td class="q">需水处理厂家开放接口</td></tr>
-          </tbody>
-          </table>
-                </div>
-        <p class="foot"><span>一次性买断 <b>¥100,000</b>　<em>10 台及以下按保底计</em></span><span>五年合计 <b>¥130,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥150,000</b>　<em>10 × 3,000 × ¥5</em></span></p>
-      </div>
-      <div class="pane pane2">
-        <div class="scroll">
-          <table>
-          <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
-          <tbody>
-          <tr class="grp"><td colspan="4">逐床配置</td></tr>
-          <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">25 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
-          <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">25 套</td><td class="q">含平板、支架、延长线</td></tr>
-          <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">25 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
-          <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">25 套</td><td class="q">—</td></tr>
-          <tr class="grp"><td colspan="4">接诊与显示</td></tr>
-          <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">1 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 1 台</td><td class="q">含数据线</td></tr>
-          <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
-          <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">1 套</td><td class="q">信息处理工作站与中间件</td></tr>
-          <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
-          <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
-          <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">5 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
-          <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">4 套</td><td class="q">—</td></tr>
-          <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">2 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">3 套</td><td class="q">需水处理厂家开放接口</td></tr>
-          </tbody>
-          </table>
-                </div>
-        <p class="foot"><span>一次性买断 <b>¥250,000</b></span><span>五年合计 <b>¥325,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥375,000</b>　<em>25 × 3,000 × ¥5</em></span></p>
-      </div>
-      <div class="pane pane3">
-        <div class="scroll">
-          <table>
-          <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
-          <tbody>
-          <tr class="grp"><td colspan="4">逐床配置</td></tr>
-          <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">45 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
-          <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">45 套</td><td class="q">含平板、支架、延长线</td></tr>
-          <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">45 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
-          <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">45 套</td><td class="q">—</td></tr>
-          <tr class="grp"><td colspan="4">接诊与显示</td></tr>
-          <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">含一体机与接诊软件</td></tr>
-          <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 2 台</td><td class="q">含数据线</td></tr>
-          <tr><td class="k">4K 显示屏</td><td class="n q">≤ 50 床 1 台</td><td class="n">1 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
-          <tr><td class="k">等候区电视机</td><td class="n q">按候诊区</td><td class="n">1 台</td><td class="q">含支架／安装</td></tr>
-          <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">2 套</td><td class="q">信息处理工作站与中间件</td></tr>
-          <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
-          <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2 套</td><td class="q">—</td></tr>
-          <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">10 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
-          <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">7 套</td><td class="q">—</td></tr>
-          <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">4 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">4 套</td><td class="q">需水处理厂家开放接口</td></tr>
-          </tbody>
-          </table>
-                </div>
-        <p class="foot"><span>一次性买断 <b>¥450,000</b></span><span>五年合计 <b>¥585,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥675,000</b>　<em>45 × 3,000 × ¥5</em></span></p>
-      </div>
-      <div class="pane pane4">
-        <div class="scroll">
-          <table>
-          <thead><tr><th>项目</th><th class="n">配比</th><th class="n">数量</th><th>说明</th></tr></thead>
-          <tbody>
-          <tr class="grp"><td colspan="4">逐床配置</td></tr>
-          <tr><td class="k">床旁实时血压系统</td><td class="n q">1／床</td><td class="n">80 套</td><td class="q">含臂式电子血压计与数据服务中间件</td></tr>
-          <tr><td class="k">智慧信息终端</td><td class="n q">1／床</td><td class="n">80 套</td><td class="q">含平板、支架、延长线</td></tr>
-          <tr><td class="k">透析机联机</td><td class="n q">1／台</td><td class="n">80 台</td><td class="q">按品牌配通讯模块与联机软件</td></tr>
-          <tr><td class="k">透析机漏液监测</td><td class="n q">1／台</td><td class="n">80 套</td><td class="q">—</td></tr>
-          <tr class="grp"><td colspan="4">接诊与显示</td></tr>
-          <tr><td class="k">体重自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">建议加 1 台备用机</td></tr>
-          <tr><td class="k">血压自助接诊系统</td><td class="n q">每 40 床 1 套</td><td class="n">2 套</td><td class="q">建议加 1 台备用机</td></tr>
-          <tr><td class="k">接诊体重秤 ／ 血压计</td><td class="n q">同接诊台数</td><td class="n">各 2 台</td><td class="q">含数据线</td></tr>
-          <tr><td class="k">4K 显示屏</td><td class="n q">&gt; 50 床 2 台</td><td class="n">2 台</td><td class="q">含挂架／安装，≤ 55 寸</td></tr>
-          <tr><td class="k">等候区电视机</td><td class="n q">按候诊区</td><td class="n">1–2 台</td><td class="q">含支架／安装</td></tr>
-          <tr><td class="k">前置机</td><td class="n q">每 25 床 1 套</td><td class="n">4 套</td><td class="q">信息处理工作站与中间件</td></tr>
-          <tr class="grp"><td colspan="4">物联网点位（以勘察为准）</td></tr>
-          <tr><td class="k">透析机电源监测</td><td class="n q">按配电回路</td><td class="n">2–4 套</td><td class="q">—</td></tr>
-          <tr><td class="k">温湿度监控</td><td class="n q">按分区</td><td class="n">8–14 套</td><td class="q">治疗区、库房、水处理间等</td></tr>
-          <tr><td class="k">数据网关服务</td><td class="n q">按分区</td><td class="n">5–10 套</td><td class="q">—</td></tr>
-          <tr><td class="k">卫生间人体监测</td><td class="n q">按卫生间数</td><td class="n">4–6 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水浸监控 ／ 环境监测 ／ 冰箱门磁</td><td class="n q">固定</td><td class="n">2 ／ 1 ／ 1 套</td><td class="q">—</td></tr>
-          <tr><td class="k">水泵监控</td><td class="n q">按水处理机组</td><td class="n">4–12 套</td><td class="q">需水处理厂家开放接口</td></tr>
-          </tbody>
-          </table>
-                </div>
-        <p class="foot"><span>一次性买断 <b>¥800,000</b></span><span>五年合计 <b>¥1,040,000</b>　<em>含第 3–5 年维护费</em></span><span>按人次全期保底 <b>¥1,200,000</b>　<em>80 × 3,000 × ¥5</em></span></p>
       </div>
     </div>
   </section>
 
   <!-- ── 3. scope ── -->
   <section>
-    <div class="head"><h2>报价范围</h2><span class="en">What's included</span></div>
+    <div class="head"><span class="num">03</span><h2>报价范围</h2><span class="en">What's included</span></div>
     <div class="split">
       <div class="box inc">
         <h3>已包含<b>两种计价方式范围相同</b></h3>
 
-        <div class="grp-block">
-          <div class="grp-label">软件与平台</div>
-          <ul>
-            <li>透析业务软件 HDS — 接诊、医嘱、透析记录、护理文书、随访统计</li>
-            <li>透析中央监控系统 — 全中心床位状态与告警集中显示</li>
-            <li>透析物联网系统（≤ 99 床）— 水处理、水浸、漏液、环境与温湿度等监测点位</li>
-            <li>AI 临床决策支持模块 — 病历辅助书写、归因分析、参考建议</li>
-            <li>平台服务器租赁、系统升级与远程运维 <em>（买断方式前 2 年含，第 3 年起计维护费）</em></li>
-          </ul>
-        </div>
+        <div class="grps">
+          <div class="grp-block">
+            <div class="grp-label">软件与平台</div>
+            <ul>
+              <li>透析业务软件 HDS — 接诊、医嘱、透析记录、护理文书、随访统计</li>
+              <li>透析中央监控系统 — 全中心床位状态与告警集中显示</li>
+              <li>透析物联网系统（≤ 99 床）— 水处理、水浸、漏液、环境与温湿度等监测点位</li>
+              <li>AI 临床决策支持模块 — 病历辅助书写、归因分析、参考建议</li>
+              <li>平台服务器租赁、系统升级与远程运维 <em>（买断方式前 2 年含，第 3 年起计维护费）</em></li>
+            </ul>
+          </div>
 
-        <div class="grp-block">
-          <div class="grp-label">硬件、实施与年费</div>
-          <ul>
-            <li>床旁硬件 — 床旁血压、智慧信息终端、自助接诊、显示屏</li>
-            <li>透析机联机 — 按品牌与台数计价</li>
-            <li>现场安装培训 — 按次计价</li>
-            <li>质控上报年费 — 国家级、省级分别计费</li>
-            <li>数据服务中间件年费 — 含 4G／5G 流量与接口授权</li>
-          </ul>
+          <div class="grp-block">
+            <div class="grp-label">硬件、实施与年费</div>
+            <ul>
+              <li>床旁硬件 — 床旁血压、智慧信息终端、自助接诊、显示屏</li>
+              <li>透析机联机 — 按品牌与台数计价</li>
+              <li>现场安装培训 — 按次计价</li>
+              <li>质控上报年费 — 国家级、省级分别计费</li>
+              <li>数据服务中间件年费 — 含 4G／5G 流量与接口授权</li>
+            </ul>
+          </div>
         </div>
 
         <p class="tail">AI 提供的建议仅供参考，须经临床医师确认后执行。</p>
@@ -461,9 +511,10 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
     </div>
   </section>
 
-  <!-- ── 4. incentive ── -->
-  <section>
-    <div class="head"><h2>奖励机制</h2><span class="en">Team incentive</span></div>
+  <!-- ── 4. incentive — internal only, removed by the 客户版 toggle ── -->
+  <section class="internal">
+    <div class="head"><span class="num">04</span><h2>奖励机制</h2><span class="en">Team incentive</span></div>
+    <p class="internal-flag">仅供内部：打开右上角「客户版」即从屏幕与打印稿中移除本节。</p>
     <div class="bonus">
       <div class="pct">10%</div>
       <div>
@@ -479,26 +530,19 @@ footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line);
     <p class="note">本节为内部说明，不随报价单对外出示。</p>
   </section>
 
-  <!-- ── 5. download ── -->
-  <section>
-    <div class="head"><h2>随附资料</h2><span class="en">Leave-behind</span></div>
-    <div class="dl">
-      <div>
-        <h3>数字化血液透析中心</h3>
-        <p>公司介绍与产品全景演示文稿（PDF，78 MB），可在客户拜访后作为随附资料留存。
-           目前请从共享目录 <code>references/</code> 取用；托管地址确定后此处换为直接下载。
-           视频资料上线后一并补充。</p>
-      </div>
-      <span class="btn btn-pending" aria-disabled="true">托管地址待定</span>
-    </div>
-  </section>
-
   <footer>
     <span>岱特智能科技（上海）有限公司　医疗器械注册证 沪械注准20252210297（第二类）</span>
     <span>注册范围：用于对血液净化中心的透析数据进行传输、显示和处理</span>
-    <span>本页为内部报价参考，不对外发布；最终以双方签署的《商品／服务订购合同》为准。</span>
+    <span class="only-int">本页为内部报价参考，不对外发布；最终以双方签署的《商品／服务订购合同》为准。</span>
+    <span class="only-cust">本报价为方案参考，最终以双方签署的《商品／服务订购合同》为准。</span>
   </footer>
 </div>
+
+<script>
+// The only script on the page: everything else is CSS, so the sheet prints
+// correctly however it is exported.
+document.getElementById('print').addEventListener('click', function () { window.print() })
+</script>
 
 </body>
 </html>
