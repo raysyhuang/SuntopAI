@@ -657,3 +657,63 @@
   background: transparent !important;
   border: none !important;
 }
+
+/* ------------------------------------------------------------------ *
+ * CJK typography
+ *
+ * The type scale here was tuned for Latin text, but Chinese is the primary
+ * language of this site. Chinese characters have no ascenders or descenders and
+ * fill their em box, so a line-height that reads comfortably in English sets CJK
+ * too tightly. Registries of Chinese web typography settle around 1.75 for body
+ * copy; headings stay tight because large CJK needs less air, not more.
+ *
+ * Everything below is keyed off :lang(), which works because [locale]/layout.tsx
+ * now sets the language per locale. Simplified, Traditional and Japanese each get
+ * their own font stack — sharing one stack across them produces the wrong glyph
+ * shapes, since the same code point is drawn differently in each.
+ * ------------------------------------------------------------------ */
+@layer base {
+  :lang(zh-Hans), :lang(zh-CN) {
+    font-family: var(--font-inter), -apple-system, 'PingFang SC', 'Noto Sans SC',
+      'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+  :lang(zh-Hant), :lang(zh-TW) {
+    font-family: var(--font-inter), -apple-system, 'PingFang TC', 'Noto Sans TC',
+      'Microsoft JhengHei', sans-serif;
+  }
+  :lang(ja) {
+    font-family: var(--font-inter), -apple-system, 'Hiragino Kaku Gothic ProN',
+      'Noto Sans JP', 'Yu Gothic', sans-serif;
+  }
+
+  /* Body copy only. Headings keep their own tighter leading. */
+  :lang(zh-Hans) p, :lang(zh-CN) p,
+  :lang(zh-Hant) p, :lang(zh-TW) p,
+  :lang(ja) p,
+  :lang(zh-Hans) li, :lang(zh-CN) li,
+  :lang(zh-Hant) li, :lang(zh-TW) li,
+  :lang(ja) li {
+    line-height: 1.75;
+  }
+
+  /*
+    line-break: strict keeps closing punctuation — 」）、。— off the start of a
+    line, which is a hard rule in Chinese and Japanese typesetting that browsers
+    otherwise apply loosely. word-break stays normal so embedded Latin brand names
+    and acronyms are not fractured mid-word.
+  */
+  :lang(zh-Hans), :lang(zh-CN), :lang(zh-Hant), :lang(zh-TW), :lang(ja) {
+    line-break: strict;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+
+  /*
+    Adds the thin space that belongs between CJK and adjacent Latin or digits —
+    「5000 台」 rather than 「5000台」. Baseline 2025; browsers without it simply
+    render as before, so this is safe to ship unguarded.
+  */
+  :lang(zh-Hans), :lang(zh-CN), :lang(zh-Hant), :lang(zh-TW), :lang(ja) {
+    text-autospace: ideograph-alpha ideograph-numeric;
+  }
+}

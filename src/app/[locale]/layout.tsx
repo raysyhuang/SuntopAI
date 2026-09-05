@@ -90,12 +90,29 @@ export default async function LocaleLayout({
   const dictionary = await getDictionary(locale)
 
   return (
-    <>
+    /*
+      Every page used to declare lang="zh-CN", because <html> lives in the root
+      layout and a root layout cannot see the [locale] param. English, Japanese and
+      Traditional Chinese pages were all announcing themselves as Simplified
+      Chinese — wrong for screen readers, and wrong for the line-breaking and font
+      selection the browser applies to CJK text.
+
+      display:contents keeps this wrapper out of the flex layout while still
+      carrying lang to everything inside it, which is what the :lang() rules in
+      globals.css key off. The inline script then corrects the attribute on <html>
+      itself; it runs during parse, so nothing is painted with the wrong language.
+    */
+    <div lang={locale} style={{ display: 'contents' }}>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang=${JSON.stringify(locale)}`,
+        }}
+      />
       <Navigation locale={locale} dictionary={dictionary} />
       <main id="main-content" className="flex-1" role="main">
         {children}
       </main>
       <Footer locale={locale} dictionary={dictionary} />
-    </>
+    </div>
   )
 }
