@@ -11,7 +11,8 @@
     "start": "next start",
     "lint": "next lint",
     "dict:check": "node scripts/check-dict-sync.mjs",
-    "facts:check": "node scripts/check-facts.mjs"
+    "facts:check": "node scripts/check-facts.mjs",
+    "map:build": "node scripts/make-network-map.mjs"
   },
   "dependencies": {
     "coordtransform": "^2.1.2",

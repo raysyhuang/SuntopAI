@@ -84,7 +84,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        display: ['var(--font-serif)', 'Georgia', 'serif'],
+        // Latin falls to Newsreader; CJK to Noto Serif SC. Order matters —
+        // the browser takes the first family that has the glyph.
+        display: ['var(--font-serif)', 'Noto Serif SC', 'Songti SC', 'Georgia', 'serif'],
         'display-sans': ['var(--font-outfit)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },

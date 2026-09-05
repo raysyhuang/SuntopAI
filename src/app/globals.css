@@ -397,7 +397,7 @@
   .display-sm,
   .display-md,
   .display-lg {
-    font-family: var(--font-serif), Georgia, serif;
+    font-family: var(--font-serif), 'Noto Serif SC', 'Songti SC', Georgia, serif;
     font-weight: 500;
     letter-spacing: -0.005em;
   }

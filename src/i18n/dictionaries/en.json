@@ -233,6 +233,16 @@
         "description": "A group that both operates dialysis centers and builds its own medical software — the structure, the market, and the milestones."
       }
     },
+    "network": {
+      "eyebrow": "Network",
+      "title": "The network follows where dialysis patients are",
+      "description": "We do not spread thinly across the country. We go deep where patient density is high and reimbursement is relatively stable. Self-operated and partner centers share one management standard and one system.",
+      "legendDirect": "Self-operated centers and hospitals",
+      "legendPartner": "Partner dialysis centers",
+      "legendProvince": "Provinces with a center",
+      "note": "The map plots the centers published on this site. The group serves a wider set of provinces than shown here; the two counts are on different bases.",
+      "cta": "View all centers"
+    },
     "evidence": {
       "eyebrow": "Clinical results",
       "title": "Observed in operation",

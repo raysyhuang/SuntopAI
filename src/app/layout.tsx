@@ -109,6 +109,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-CN" className={`${outfit.variable} ${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable} light`} suppressHydrationWarning>
+      <head>
+        {/*
+          Newsreader carries the Latin headings but ships no CJK glyphs, so Chinese
+          headlines were falling through Georgia to whatever serif the operating system
+          happened to have — Songti on macOS, SimSun on Windows. For a Chinese-first
+          brand that meant the wordmark-adjacent type changed on every visitor's machine.
+
+          Noto Serif SC is loaded from Google Fonts rather than next/font because Google
+          slices CJK into ~100 unicode-range subsets and the browser fetches only the few
+          it needs; next/font would self-host all of them and add megabytes to the slug.
+          Both hosts are already allowed by the CSP in next.config.js.
+        */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         {/* Skip to main content link for accessibility */}
         <a
