@@ -91,13 +91,12 @@ const paths = geo.features
   })
   .join('')
 
-const dots = centers
-  .filter((c) => c.coordinates)
-  .map((c) => {
-    const [x, y] = pt(c.coordinates.lng, c.coordinates.lat)
-    return `<circle class="${c.type === 'direct' ? 'd1' : 'd2'}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6.5"/>`
-  })
-  .join('')
+/*
+  No dots in the SVG. The homepage draws them from network-map-dots.json as real
+  elements so they can be brought in one at a time; baking them in here too would
+  show them twice.
+*/
+const dots = ''
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
 <style>
@@ -120,8 +119,37 @@ ${dots}
 mkdirSync(dirname(OUT), { recursive: true })
 writeFileSync(OUT, svg, 'utf8')
 
+/*
+  The dots are written out a second time as plain coordinates, so the homepage can
+  overlay them as real elements and bring them in one by one. Inlining the whole map
+  to get that would put 200KB of path data in the HTML; the province shapes stay a
+  static image and only the 20 dots — a few hundred bytes — become animatable.
+  Same viewBox, so the two line up exactly.
+*/
+const DOTS_OUT = join(ROOT, 'public/data/network-map-dots.json')
+writeFileSync(
+  DOTS_OUT,
+  JSON.stringify(
+    {
+      viewBox: { width: W, height: H },
+      dots: centers
+        .filter((c) => c.coordinates)
+        .map((c) => {
+          const [x, y] = pt(c.coordinates.lng, c.coordinates.lat)
+          return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), type: c.type === 'direct' ? 'direct' : 'partner' }
+        })
+        /* North to south, so the sequence reads as the network spreading down the
+           coast rather than as dots appearing at random. */
+        .sort((a, b) => a.y - b.y),
+    },
+    null,
+    2
+  ) + '\n',
+  'utf8'
+)
+
 console.log(
-  `network-map.svg  ${Math.round(svg.length / 1024)} KB  ` +
+  `network-map.svg + network-map-dots.json  ${Math.round(svg.length / 1024)} KB  ` +
     `${covered.size} provinces shaded  ${centers.filter((c) => c.coordinates).length} centers plotted`
 )
 console.log([...covered].sort().join('、'))

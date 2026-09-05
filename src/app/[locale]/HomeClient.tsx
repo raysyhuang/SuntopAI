@@ -11,6 +11,7 @@ import { Section } from '@/components/ui/Section'
 import { Stat } from '@/components/ui/Stat'
 import { Badge } from '@/components/ui/Badge'
 import { publicFact, REGISTRATION, OUTCOMES, type FactId } from '@/content/facts'
+import { NetworkMap } from '@/components/NetworkMap'
 
 /**
  * Homepage.
@@ -260,14 +261,8 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           network it depicts. Re-run `npm run map:build` after changing a center. */}
       <Section tone="subtle">
         <div className="grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] gap-12 lg:gap-20 items-center">
-          <motion.div {...fade} className="relative">
-            <Image
-              src="/images/network-map.svg"
-              alt={home.network.title}
-              width={1000}
-              height={830}
-              className="w-full h-auto"
-            />
+          <motion.div {...fade}>
+            <NetworkMap alt={home.network.title} />
           </motion.div>
 
           <motion.div {...fade}>
