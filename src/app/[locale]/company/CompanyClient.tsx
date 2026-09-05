@@ -235,6 +235,143 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
         </div>
       </section>
 
+      {/* Group structure and the flagship case.
+          Structure is a business-and-management view, not a shareholding chart —
+          structureNote says so. The case is told as origin → validation → reproduction,
+          because the point being made is that the standard travels, not that one
+          hospital is good. */}
+      <section
+        className="relative py-24"
+        style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#0b1220' }}
+      >
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mb-14"
+          >
+            <h2
+              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-5"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            >
+              {t.structureTitle}
+            </h2>
+            <p className="leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}>
+              {t.structureIntro}
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {t.structureNodes.map((node, i) => (
+              <motion.div
+                key={node.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="rounded-lg border p-6"
+                style={{
+                  borderColor: theme === 'light' ? '#e8e6dc' : '#1e293b',
+                  backgroundColor: theme === 'light' ? '#faf9f5' : '#0f172a',
+                }}
+              >
+                <span className="font-mono text-[0.62rem] tracking-[0.16em] uppercase" style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}>
+                  {node.ownership}
+                </span>
+                <h3 className="mt-2.5 text-[0.98rem] font-medium leading-snug" style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}>
+                  {node.name}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}>
+                  {node.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mt-5 rounded-lg border p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
+            style={{
+              borderColor: theme === 'light' ? '#ccfbf1' : '#134e4a',
+              backgroundColor: theme === 'light' ? '#f0fdfa' : '#0d1f1e',
+            }}
+          >
+            <h3 className="text-base font-medium shrink-0" style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}>
+              {t.structureBaseTitle}
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}>
+              {t.structureBaseBody}
+            </p>
+          </motion.div>
+
+          <p className="mt-5 text-xs" style={{ color: theme === 'light' ? '#86868b' : '#64748b' }}>
+            {t.structureNote}
+          </p>
+
+          {/* Flagship case */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mt-24 mb-12"
+          >
+            <h2
+              className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-5"
+              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
+            >
+              {t.caseTitle}
+            </h2>
+            <p className="leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}>
+              {t.caseIntro}
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl">
+            {t.caseSteps.map((step, i) => (
+              <motion.div
+                key={step.stage}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.08 }}
+                className="grid md:grid-cols-[110px_1fr] gap-3 md:gap-8 py-7 border-t"
+                style={{ borderColor: theme === 'light' ? '#e8e6dc' : '#1e293b' }}
+              >
+                <span
+                  className="text-xs font-medium tracking-wide self-start rounded px-2.5 py-1 inline-block w-fit"
+                  style={{
+                    color: theme === 'light' ? '#007d73' : '#2dd4bf',
+                    backgroundColor: theme === 'light' ? '#f0fdfa' : '#0d1f1e',
+                  }}
+                >
+                  {step.stage}
+                </span>
+                <div>
+                  <h3 className="text-[1.02rem] font-medium mb-2.5" style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}>
+                    {step.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed" style={{ color: theme === 'light' ? '#6e6e73' : '#94a3b8' }}>
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+            <p
+              className="mt-8 text-sm leading-relaxed border-l-2 pl-5"
+              style={{
+                color: theme === 'light' ? '#4d4c48' : '#94a3b8',
+                borderColor: theme === 'light' ? '#007d73' : '#2dd4bf',
+              }}
+            >
+              {t.caseNote}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Centers Section */}
       {t.centers && (
         <section 

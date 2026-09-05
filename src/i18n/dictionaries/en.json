@@ -1964,6 +1964,53 @@
         }
       ]
     },
+    "structureTitle": "Group structure",
+    "structureIntro": "Technology, self-operated facilities, partnerships and the supply chain sit in four separate bodies with clear ownership and contractual lines. The technology is developed in-house by a wholly owned subsidiary.",
+    "structureNodes": [
+      {
+        "ownership": "Wholly owned",
+        "name": "Daite Intelligent Technology (Shanghai) Co., Ltd.",
+        "description": "The group's technology entity. It develops the dialysis information system, device IoT and clinical decision support applications, and holds the Class II medical device registration."
+      },
+      {
+        "ownership": "Controlled and operated",
+        "name": "Self-operated facilities",
+        "description": "Independent dialysis centers, renal specialty hospitals and secondary general hospitals built or acquired by the group and run directly by it."
+      },
+      {
+        "ownership": "Contractual partnership",
+        "name": "Partner dialysis centers",
+        "description": "Centers co-established with public and private hospitals. The group holds no ownership; it provides operational support, systems, training and supply under a franchise-like arrangement."
+      },
+      {
+        "ownership": "Group function",
+        "name": "Supply chain and commercial",
+        "description": "Procurement, warehousing, distribution, engineering and after-sales service, supporting the self-operated network, partner centers and external customers alike."
+      }
+    ],
+    "structureBaseTitle": "Suntop College",
+    "structureBaseBody": "The training and quality-control body that runs across every part of the group, organised into clinical, patient service, quality control and education groups, and jointly running an AI research center with the Daite team.",
+    "structureNote": "This diagram shows business and management relationships. It is not a legal shareholding chart.",
+    "caseTitle": "Make it work in one hospital first, then show it can be reproduced",
+    "caseIntro": "Precision management is not a document. It is a way of working that took two years inside one hospital to take shape. Dalian Renren Hospital is where it came from.",
+    "caseSteps": [
+      {
+        "stage": "Origin",
+        "title": "Turning one hospital into the place the standard comes from",
+        "description": "The group brought in senior staff at Dalian Renren Hospital and introduced Japanese-style precision management and service practice, fixing roles, working procedures, daily routines and quality control one by one, and building the hospital into the group's flagship, training center and source of transferable practice."
+      },
+      {
+        "stage": "Validation",
+        "title": "Becoming a hub for China–Japan clinical exchange",
+        "description": "The hospital has repeatedly hosted Japanese physicians, nurses and clinical engineers for training and exchange, and works with several Japanese companies. Japanese specialists have spoken positively of the hospital's standard of service."
+      },
+      {
+        "stage": "Reproduction",
+        "title": "The same practice run once in a partner center and once in a self-operated one",
+        "description": "In 2025 precision management was reproduced at Jiaxing Xin'an International Hospital, a partner center, and at Liaoning Xingkang Dialysis Center, a self-operated one. Working under both ownership structures showed the practice does not depend on the particular conditions of any one hospital."
+      }
+    ],
+    "caseNote": "What matters here is not that the group gained one good hospital, but the confirmation that the standard travels. Suntop College was established on that basis, to hold the practice as a common training system.",
     "stats": {
       "founded": "Smart Dialysis Centers",
       "team": "Self-Operated",
@@ -2549,6 +2596,39 @@
     "networkTitle": "Partner network",
     "networkDescription": "We hold long-term partnerships with healthcare institutions across the country, spanning general hospitals and independent dialysis centers.",
     "networkCta": "View partner hospitals",
+    "hospitalValueTitle": "For a hospital, the partnership solves four specific problems",
+    "hospitalValueIntro": "2026 is a critical window for equipment renewal and compliance. A large number of dialysis machines are approaching the end of their service life, and reimbursement is asking for more detailed records of monitoring during treatment. What a hospital needs most in this period is usually not a lower quote, but a way to settle these questions together.",
+    "hospitalValueHeads": {
+      "problem": "What the hospital is facing",
+      "solution": "What Suntop provides"
+    },
+    "hospitalValueItems": [
+      {
+        "problemTitle": "Equipment has reached the end of its service life",
+        "problemBody": "Many dialysis machines are at or past their rated service life. Continuing to run them can expose the department to reimbursement deductions.",
+        "solutionTitle": "Equipment renewal funded through software investment or instalments",
+        "solutionBody": "Machines can be replaced through a software investment or instalment arrangement alongside a consumables supply agreement, reducing the hospital's one-off capital outlay."
+      },
+      {
+        "problemTitle": "Record-keeping requirements for monitoring during treatment are becoming more detailed",
+        "problemBody": "Reimbursement now asks for more detailed records of blood temperature, blood pressure, online clearance and blood volume monitoring. Some older machines cannot be upgraded, or need costly add-on parts.",
+        "solutionTitle": "The system handles transmission, display and archiving of monitoring data",
+        "solutionBody": "The hemodialysis information processing software transmits, displays and processes this monitoring data and files it alongside treatment and laboratory records, so the department can complete its daily documentation and checks."
+      },
+      {
+        "problemTitle": "Departmental management depends on individual experience",
+        "problemBody": "Scheduling, records, laboratory review and quality control rest on a few experienced staff, so service quality moves with turnover.",
+        "solutionTitle": "Precision management arrives together with the information system",
+        "solutionBody": "A common division of roles, working procedures, daily routines and quality-control system, together with informatised ward rounds and laboratory result review, moves repetitive work to the system and returns time to conversations with patients."
+      },
+      {
+        "problemTitle": "Wanting to offer services beyond dialysis, without a system for it",
+        "problemBody": "Nutrition, rehabilitation, vascular access and diabetic foot care usually lack standards, staff and training inside the hospital.",
+        "solutionTitle": "Multidisciplinary service standards and training that already work",
+        "solutionBody": "The group's standardised service system is transferred as a whole, with Suntop College providing clinical training. Partners are welcome to visit the group's reference centers."
+      }
+    ],
+    "hospitalValueNote": "We hold to three principles: sustainable profit, lawful and compliant operation, and reasonable payment terms. Competing on fee waivers does not last in this industry; solving a hospital's real problems does.",
     "collaborationsTitle": "Selected collaborations",
     "collaborations": [
       {
@@ -2569,16 +2649,99 @@
     "title": "Investment overview",
     "subtitle": "Suntop Healthcare both operates dialysis centers and builds its own medical software. That combination is what separates us from the field.",
     "positionTitle": "Our position",
-    "positionBody": "The sector contains dialysis chains focused on expansion, and health IT companies focused on software. Suntop is both. A network of self-operated and partner centers supplies real clinical settings and continuous data; our technology subsidiary builds the dialysis management system and specialist AI models on top of it, and holds a Class II medical device registration. The system embeds deeply into hospital workflow, which makes it costly to replace, and growing data scale continues to improve model accuracy.",
+    "positionBody": "The industry has chain dialysis operators focused on expansion, and healthcare software companies focused on systems. Suntop is both, and adds a third segment: system, supply chain and endpoint. The network of self-operated and partner centers supplies real clinical settings and continuous data; on that basis Daite Intelligent Technology develops the dialysis management system and specialty AI models, and holds a Class II medical device registration. The group's procurement scale then lets that system reach partner hospitals on competitive terms. The system embeds deeply into hospital workflow, making it costly to replace, while growing data volume continues to improve model accuracy.",
+    "pillarsTitle": "System × Supply chain × Endpoint",
+    "pillarsIntro": "These three segments are rarely held by one company in the Chinese dialysis market. Software vendors have no centers of their own; device and consumables manufacturers do not own the clinical workflow; chain operators have neither. Each segment held makes the other two worth more.",
+    "pillars": [
+      {
+        "tag": "SYSTEM",
+        "title": "System",
+        "description": "A registered dialysis information system, device IoT and clinical decision support applications, developed in-house by Daite Intelligent Technology, a wholly owned subsidiary. The system is what allows the way one center works to be reproduced at the next.",
+        "metric": "Class II medical device registration held"
+      },
+      {
+        "tag": "SUPPLY",
+        "title": "Supply chain",
+        "description": "One-stop supply of dialyzers, bloodlines, machines and water treatment, with online ordering, shipment tracking and traceability to the original batch. Procurement scale sets our cost, and cost sets the terms we can offer a partner.",
+        "metric": "Among the largest single private purchasers in China"
+      },
+      {
+        "tag": "ENDPOINT",
+        "title": "Endpoint",
+        "description": "Self-operated dialysis centers and hospitals, together with centers co-established with partner hospitals. The endpoint is both a source of revenue and the setting where new capability is validated before it is offered elsewhere.",
+        "metric": "Self-operated and partner center network"
+      }
+    ],
+    "pillarsCompareTitle": "Who holds which segment",
+    "pillarsCompareHead": {
+      "role": "Market participant",
+      "system": "System",
+      "supply": "Supply chain",
+      "endpoint": "Endpoint"
+    },
+    "pillarsCompareRows": [
+      {
+        "label": "Information system / software vendors",
+        "system": true,
+        "supply": false,
+        "endpoint": false
+      },
+      {
+        "label": "Device and consumables manufacturers",
+        "system": false,
+        "supply": true,
+        "endpoint": false
+      },
+      {
+        "label": "Chain dialysis operators",
+        "system": false,
+        "supply": false,
+        "endpoint": true
+      },
+      {
+        "label": "Public hospital dialysis units",
+        "system": false,
+        "supply": false,
+        "endpoint": true
+      },
+      {
+        "label": "Suntop Healthcare",
+        "system": true,
+        "supply": true,
+        "endpoint": true
+      }
+    ],
+    "pillarsCompareNote": "This table is Suntop's own summary of market structure, offered to explain how our position differs. It is not an assessment of any particular company.",
     "marketTitle": "Market opportunity",
-    "marketBody": "Treatment penetration among dialysis patients in mainland China sits well below neighbouring high-income economies. At prevalence comparable to Japan or Taiwan, the treatable population would be substantially larger than the number treated today.",
-    "marketNote": "Prevalence figures are drawn from a 2016 annual data report and are shown for structural comparison only.",
+    "marketBody": "China's dialysis treatment rate remains well below that of neighbouring high-income economies. Measured in patients per million population, China stands at roughly one third of Japan and one fifth of Taiwan. That gap means the treated dialysis population in China will continue to grow for the foreseeable future.",
+    "marketNote": "Each figure is taken from the most recent year its national registry has published, so the years are not aligned. The figure for China is derived from the patient count and national population; the other three are rates published directly by their registries. The chart is intended to show the order of the difference, not to support precise comparison.",
     "prevalenceLabels": {
       "china": "Mainland China",
       "japan": "Japan",
       "taiwan": "Taiwan",
       "usa": "United States"
     },
+    "policyTitle": "Policy environment",
+    "policyIntro": "Over the past two years every reform on the payment side has landed directly on dialysis. Together they have compressed the room to operate on product margin, while raising the bar for operations and compliance — pressure for those who cannot meet it, and a barrier protecting those who can.",
+    "policyItems": [
+      {
+        "title": "Volume-based procurement",
+        "description": "Inter-provincial alliance procurement of blood purification consumables took effect in June 2024, with reductions of up to 74%; a Beijing-Tianjin-Hebei alliance followed in 2025 at an average of 55.23%. Margin on consumables has been compressed systematically."
+      },
+      {
+        "title": "Payment reform",
+        "description": "The DRG/DIP 2.0 grouping scheme has applied uniformly across pooling regions since January 2025, adding continuing cost-control and compliance pressure on providers."
+      },
+      {
+        "title": "Price item restructuring",
+        "description": "The provisional guide to urinary-system service pricing consolidated dialysis items into 108 entries and folded the cost of monitoring during treatment into the base treatment price, effective August 2025."
+      },
+      {
+        "title": "AI enters policy and the pricing system",
+        "description": "In November 2025 five ministries issued implementing opinions on promoting and regulating AI in healthcare; the National Healthcare Security Administration has also listed AI assistance as an extension item within its pricing guides."
+      }
+    ],
+    "policyNote": "Sources: documents published by the National Healthcare Security Administration and the National Health Commission; years are given in each entry. These are statements of policy as issued, not forecasts of where policy will go.",
     "modelTitle": "Business model",
     "modelItems": [
       {
@@ -2608,6 +2771,13 @@
     "governanceCta": "View registration and compliance",
     "materialsTitle": "Request detailed materials",
     "materialsBody": "Financial projections, expansion plans and the full investment materials are provided on request following review. Please tell us about your firm and where your interest lies.",
+    "materialsItemsTitle": "Available on request",
+    "materialsItems": [
+      "Full company profile (PDF)",
+      "Financial projections and the three-year expansion plan",
+      "Smart dialysis center deployment progress and roadmap detail",
+      "Supply chain and product catalogue"
+    ],
     "materialsNote": "Any forward-looking content in these materials reflects planning assumptions and does not constitute a commitment or a guarantee of returns.",
     "materialsCta": "Contact investor relations"
   }

@@ -92,6 +92,53 @@ export default function PartnersClient({ locale, dictionary }: PartnersClientPro
         </div>
       </Section>
 
+      {/* What the partnership solves for the hospital.
+          Written from the hospital's side of the table: the problem first, our answer
+          second. Every capability claim here stays inside the registered scope of
+          沪械注准20252210297 — transmission, display and processing — so nothing on this
+          page reads as a compliance guarantee. */}
+      <Section tone="subtle">
+        <motion.div {...fade} className="max-w-3xl mb-12">
+          <h2 className={`font-display font-light text-2xl md:text-[2.1rem] leading-tight mb-5 ${heading}`}>
+            {t.hospitalValueTitle}
+          </h2>
+          <p className={`leading-relaxed ${body}`}>{t.hospitalValueIntro}</p>
+        </motion.div>
+
+        <motion.div {...fade}>
+          <div className={`hidden md:grid md:grid-cols-2 gap-8 lg:gap-12 pb-3 border-b ${hairline}`}>
+            <span className={`text-xs font-medium tracking-wide ${isLight ? 'text-warm-ink-400' : 'text-neutral-500'}`}>
+              {t.hospitalValueHeads.problem}
+            </span>
+            <span className="text-xs font-medium tracking-wide text-accent-600 dark:text-accent-400">
+              {t.hospitalValueHeads.solution}
+            </span>
+          </div>
+
+          {t.hospitalValueItems.map((item) => (
+            <div
+              key={item.problemTitle}
+              className={`grid md:grid-cols-2 gap-5 md:gap-8 lg:gap-12 py-7 border-b ${hairline}`}
+            >
+              <div>
+                <h3 className={`text-[0.95rem] font-medium mb-2 ${heading}`}>{item.problemTitle}</h3>
+                <p className={`text-sm leading-relaxed ${body}`}>{item.problemBody}</p>
+              </div>
+              <div>
+                <h3 className="text-[0.95rem] font-medium mb-2 text-accent-700 dark:text-accent-400">
+                  {item.solutionTitle}
+                </h3>
+                <p className={`text-sm leading-relaxed ${body}`}>{item.solutionBody}</p>
+              </div>
+            </div>
+          ))}
+
+          <p className={`mt-8 max-w-3xl text-sm leading-relaxed ${isLight ? 'text-warm-ink-500' : 'text-neutral-500'}`}>
+            {t.hospitalValueNote}
+          </p>
+        </motion.div>
+      </Section>
+
       {/* Network + selected collaborations */}
       <Section tone="light">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20">

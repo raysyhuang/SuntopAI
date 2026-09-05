@@ -71,8 +71,11 @@ This is a **locale-first architecture** using Next.js App Router with dynamic `[
 **CRITICAL i18n rules:**
 1. `zh-CN.json` is the **semantic source of truth** - defines canonical meaning
 2. All other language files must match `zh-CN.json` meaning exactly
-3. **Never modify JSON keys** - only edit string values
-4. Keys must stay synchronized across all 4 language files
+3. **Only edit string values in place.** A key may be *added* only when it is added to
+   all four files in the same change, with real translations in each — never to one file
+   alone, and never with zh-CN text standing in for a translation. Renaming, removing,
+   re-ordering or restructuring keys is still not allowed.
+4. Keys must stay synchronized across all 4 language files. `npm run dict:check` must pass
 5. When editing any medical/clinical copy, apply clinical-regulatory-i18n guidelines (see below)
 
 ### Locale Detection Flow
@@ -170,7 +173,8 @@ The system **supports** clinicians; it does not act as a clinician.
 - Edit meaning in `zh-CN.json` first
 - Propagate same meaning to `en.json`, `ja.json`, `zh-TW.json`
 - Never introduce new concepts in non-Chinese files
-- Never rename, remove, add, re-order, or restructure JSON keys — only modify string values
+- Never rename, remove, re-order, or restructure JSON keys
+- A new key must land in all four files at once, each with a genuine translation
 
 #### 3) Terminology glossary (canonical mappings)
 
@@ -199,14 +203,16 @@ Do not invent new terminology mappings — use the table above or extend it expl
 - [ ] Terminology aligns with glossary table above
 
 **JSON integrity (must pass):**
-- [ ] No key renames, removals, additions, or restructuring
-- [ ] Only string values changed
+- [ ] No key renames, removals, or restructuring
+- [ ] Any new key exists in all four files, each with a real translation
+- [ ] `npm run dict:check` passes
 - [ ] JSON remains valid
 
 ### Editing i18n dictionaries workflow
 
 1. Edit `zh-CN.json` value(s) to correct regulatory-safe meaning
-2. Keep same keys and structure (no add/remove/reorder)
+2. Keep the existing keys and structure. If the change needs a new key, add it to all
+   four files in the same commit — zh-CN first, then real translations in en, ja and zh-TW
 3. Update `en.json`, `ja.json`, `zh-TW.json` with exact same meaning
 4. Ensure valid JSON output
 5. Run QA checklist above
@@ -346,7 +352,8 @@ From README.md - **institutional tone suitable for hospitals, investors, regulat
 ## Common Pitfalls
 
 1. **Do NOT** add autonomy language to medical content (read GLOSSARY.md first)
-2. **Do NOT** modify i18n JSON structure/keys (only values)
+2. **Do NOT** modify i18n JSON structure, or add a key to one locale only —
+   new keys go into all four files together, each genuinely translated
 3. **Do NOT** forget to update all 4 language files when changing content
 4. **Do NOT** mix dependencies between root/video/pdf-slides projects
 5. **Do NOT** use Server Component features in `*Client.tsx` files

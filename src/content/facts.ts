@@ -394,53 +394,100 @@ export const FACTS = {
 
   /* ---- Market (investor track) ---- */
 
+  /**
+   * Prevalence is stated in patients per million population (pmp), the unit the
+   * national registries publish. The four values do not share a year — each is the
+   * latest its registry has released — so the chart must show the year beside each
+   * bar and be read as an order-of-magnitude comparison, not a like-for-like one.
+   *
+   * China is the only derived figure here: the registry publishes a patient count,
+   * not a rate. Everything else is the rate its registry published.
+   */
   'market.chinaPrevalence': {
-    value: '<0.07%',
-    basis: 'Treated dialysis patients as a share of national population',
-    source: 'Annual Data Report, cited in Company Overview deck',
-    asOf: '2016',
-    status: 'needs-review',
+    value: '840 pmp',
+    basis:
+      'Dialysis patients per million population. Derived: 1,183,000 patients (CNRDS, end-2024) over a national population of 1.408 billion (NBS, end-2024)',
+    source: 'Chinese Society of Nephrology / CNRDS; National Bureau of Statistics',
+    asOf: '2024',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
-    note: 'Ten years old. Refresh from USRDS/CNRDS, or label the year visibly on the chart.',
+    conflicts: [{ value: '<0.07%', source: 'Annual Data Report cited in Company Overview deck, 2016' }],
+    note:
+      'Derived, not published as a rate. Refreshed 2026-09-04 from the CNRDS 2024 year-end figures presented at the CSN conference in July 2025, superseding the 2016 figure.',
   },
   'market.japanPrevalence': {
-    value: '0.23%',
-    basis: 'Treated dialysis patients as a share of national population',
-    source: 'Annual Data Report, cited in Company Overview deck',
-    asOf: '2016',
-    status: 'needs-review',
+    value: '2,725 pmp',
+    basis: 'Dialysis patients per million population, as published by the registry',
+    source: 'Japanese Society for Dialysis Therapy (JSDT), annual statistical survey, year-end 2024',
+    asOf: '2024',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '0.23%', source: 'Annual Data Report cited in Company Overview deck, 2016' }],
   },
   'market.taiwanPrevalence': {
-    value: '0.34%',
-    basis: 'Treated dialysis patients as a share of national population',
-    source: 'Annual Data Report, cited in Company Overview deck',
-    asOf: '2016',
+    value: '3,771 pmp',
+    basis: 'Dialysis patients per million population, as published by the registry',
+    source: 'Taiwan Renal Registry Data System (TWRDS)',
+    asOf: '2020',
     status: 'needs-review',
     audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '0.34%', source: 'Annual Data Report cited in Company Overview deck, 2016' }],
+    note:
+      'The oldest of the four. TWRDS runs roughly a two-year publication lag; refresh when a newer edition is available.',
   },
   'market.usPrevalence': {
-    value: '0.21%',
-    basis: 'Treated dialysis patients as a share of national population',
-    source: 'Annual Data Report, cited in Company Overview deck',
-    asOf: '2016',
-    status: 'needs-review',
+    value: '2,327 pmp',
+    basis: 'Adjusted ESRD prevalence per million population, as published by the registry',
+    source: 'United States Renal Data System (USRDS), 2025 Annual Data Report',
+    asOf: '2023',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '0.21%', source: 'Annual Data Report cited in Company Overview deck, 2016' }],
   },
   'market.chinaCagr': {
-    value: '14%',
-    basis: 'Compound annual growth rate of the treated dialysis population in China',
-    source: 'SDC Chain Proposal Deck',
-    asOf: '2023',
-    status: 'needs-review',
+    value: '12%',
+    basis:
+      'Compound annual growth rate of hemodialysis patients in China, 2011 to 2024 (234,632 to 1,027,267)',
+    source: 'Chinese Society of Nephrology / CNRDS',
+    asOf: '2024',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '14%', source: 'SDC Chain Proposal Deck, 2023' }],
   },
   'market.chinaPatients': {
-    value: '1,000,000',
-    basis: 'Treated dialysis patients in China',
-    source: 'SDC Chain Proposal Deck',
-    asOf: '2023',
-    status: 'needs-review',
+    value: '1,183,000',
+    basis: 'Dialysis patients in China at year end — 1,027,267 hemodialysis and 156,000 peritoneal dialysis',
+    source:
+      'Chinese Society of Nephrology / CNRDS, year-end 2024, presented at the CSN conference July 2025',
+    asOf: '2024',
+    status: 'verified',
+    audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '1,000,000', source: 'SDC Chain Proposal Deck, 2023' }],
+  },
+  'market.chinaNewPatients': {
+    value: '220,270',
+    basis: 'Patients newly starting hemodialysis in China during the year',
+    source: 'Chinese Society of Nephrology / CNRDS, 2024',
+    asOf: '2024',
+    status: 'verified',
+    audience: ['public', 'investor-gated'],
+  },
+  'market.chinaCenters': {
+    value: '8,456',
+    basis:
+      'Hemodialysis centers in China — 31.6% tertiary hospitals, 51.5% secondary, 17.0% other',
+    source: 'Chinese Society of Nephrology / CNRDS, year-end 2024',
+    asOf: '2024',
+    status: 'verified',
+    audience: ['public', 'investor-gated'],
+    conflicts: [{ value: '7,512', source: 'CNRDS, year-end 2023' }],
+  },
+  'market.chinaCkdPrevalence': {
+    value: '10.8%',
+    basis: 'Chronic kidney disease prevalence among Chinese adults, implying roughly 120 million people',
+    source: 'National cross-sectional study, cited by the Chinese Center for Disease Control and Prevention',
+    asOf: '2024-07',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
   },
 } as const satisfies Record<string, Fact>
