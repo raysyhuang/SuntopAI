@@ -242,14 +242,17 @@ export const FACTS = {
   'group.cooperativeCenters': {
     value: '100+',
     basis:
-      'Partner centers currently running the Suntop platform',
+      'Top private hospital partners in the CDC network, counted at the hospital level. Broader than the hospitals under a management contract and broader than the centers running the platform. Some are reached indirectly, through partner companies that operate several hospitals, rather than under a direct contract with the group',
     source: 'Confirmed by Suntop',
-    asOf: '2026-08-22',
+    asOf: '2026-09-05',
     status: 'verified',
     audience: ['public', 'investor-gated'],
-    conflicts: [{ value: '300+ cooperative centers', source: 'Company Overview deck, 2023-12 (cumulative basis)' }],
+    conflicts: [
+      { value: '300+ cooperative centers', source: 'Company Overview deck, 2023-12 (cumulative basis)' },
+      { value: '18 managed hospitals', source: 'Koology 托管医院汇总, 2026 (management-contract basis only)' },
+    ],
     note:
-      'Site figure adopted as canonical, 2026-08-22. The 2023 deck\'s 300+ counts cooperative centers ever established with public and private hospitals — a cumulative basis, not a current one. Both remain true; the deck should say which it means.',
+      'Basis corrected 2026-09-05. It previously read "partner centers currently running the Suntop platform", which conflated three different populations and made this figure look like a restatement of platform.institutionsDeployed. CDC counts partner hospitals; only some are under a management contract, and only some run the platform. Two things a reader in diligence will ask about, so say them before being asked: the financial system\'s 托管医院汇总 counts only the management-contract subset and is much smaller by design, and part of the CDC count is reached through partner companies operating several hospitals rather than through a direct contract. The 2023 deck\'s 300+ is cumulative rather than current.',
   },
   'group.annualTreatments': {
     value: '4.5M+',
@@ -324,9 +327,12 @@ export const FACTS = {
     asOf: '2026-08-22',
     status: 'verified',
     audience: ['public', 'investor-gated'],
-    conflicts: [{ value: '50+ institutions', source: '岱特AI wiki §3, 2026-07 (institutions, not centers)' }],
+    conflicts: [
+      { value: '50+ institutions', source: '岱特AI wiki §3, 2026-07 (institutions, not centers)' },
+      { value: '50 fully deployed smart dialysis centers', source: '2026 outlook, 2025-12 (complete deployment only)' },
+    ],
     note:
-      'Site figure adopted as canonical, 2026-08-22. The wiki\'s 50+ counts contracting institutions rather than centers, which is why the two differ.',
+      'Site figure adopted as canonical, 2026-08-22. Three populations are in play and they are easy to confuse: 50+ contracting institutions, 100+ centers running the platform, and 50 centers with the complete smart-dialysis deployment. Whichever is quoted, say which — and note this is a different population again from group.cooperativeCenters, which counts partner hospitals rather than platform deployments.',
   },
   'platform.patientsOnSystem': {
     value: '~8,000',
