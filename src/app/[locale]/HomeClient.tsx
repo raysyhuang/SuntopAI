@@ -62,6 +62,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       href: `/${locale}/platform`,
       label: d.nav.platform,
       photo: '/images/partnership/treatment-floor.jpg',
+      focus: 'center 42%',
     },
     {
       icon: HeartPulse,
@@ -70,6 +71,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       href: `/${locale}/services`,
       label: d.nav.services,
       photo: '/images/centers/lujiang-xingkang/3.jpg',
+      focus: 'center 34%',
     },
     {
       icon: Handshake,
@@ -78,6 +80,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       href: `/${locale}/deployment`,
       label: d.nav.deployment,
       photo: '/images/partnership/building.jpg',
+      focus: 'center 45%',
     },
     {
       icon: TrendingUp,
@@ -86,6 +89,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       href: `/${locale}/company`,
       label: d.nav.company,
       photo: '/images/centers/hefei-pufukang/3.jpg',
+      focus: 'center center',
     },
   ]
 
@@ -152,7 +156,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           transition={{ ...fade.transition, delay: 0.1 }}
           className="relative hidden lg:block"
         >
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-stripe-lg">
+          <div className="relative aspect-[3/2] overflow-hidden rounded-xl shadow-stripe-lg">
             <Image
               src="/images/partnership/center-5.png"
               alt={d.home.hero.title1}
@@ -217,6 +221,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                     alt=""
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectPosition: a.focus }}
                     className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   />
                   <div
