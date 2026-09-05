@@ -201,7 +201,7 @@
       },
       "partners": {
         "title": "Partners",
-        "description": "Hospital co-build, center franchise, equipment integration, smart supply chain, and the training academy."
+        "description": "Hospital co-build, center enablement, equipment integration, smart supply chain, and the training academy."
       },
       "investors": {
         "title": "Investors",
@@ -1960,7 +1960,7 @@
       {
         "ownership": "Contractual partnership",
         "name": "Partner dialysis centers",
-        "description": "Centers co-established with public and private hospitals. The group holds no ownership; it provides operational support, systems, training and supply under a franchise-like arrangement."
+        "description": "Centers co-established with public and private hospitals. The group holds no ownership; it enables the center with operational support, systems, training and supply."
       },
       {
         "ownership": "Group function",
@@ -2549,7 +2549,7 @@
   "partnersPage": {
     "tag": "Partners",
     "title": "Working with us",
-    "subtitle": "From hospital co-build and center franchise through to equipment integration and supply chain, we offer repeatable partnership models with long-term support.",
+    "subtitle": "From hospital co-build and center enablement through to equipment integration and supply chain, we offer repeatable partnership models with long-term support.",
     "modelsTitle": "Five partnership models",
     "models": [
       {
@@ -2557,7 +2557,7 @@
         "description": "Establish a blood purification center or vascular access center together with a hospital's nephrology department, with full support across design, staff training, operations management and quality control."
       },
       {
-        "title": "Center franchise",
+        "title": "Center enablement",
         "description": "Join as an independent dialysis center under a shared brand, standard operating procedures, management system and central purchasing."
       },
       {

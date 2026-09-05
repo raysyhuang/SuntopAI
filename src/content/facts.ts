@@ -242,17 +242,17 @@ export const FACTS = {
   'group.cooperativeCenters': {
     value: '100+',
     basis:
-      'Top private hospital partners in the CDC network, counted at the hospital level. Broader than the hospitals under a management contract and broader than the centers running the platform. Some are reached indirectly, through partner companies that operate several hospitals, rather than under a direct contract with the group',
+      'Top private hospital partners in the CDC network, counted at the hospital level. Broader than the hospitals whose dialysis department the group co-builds and operates, and broader than the centers the platform enables. Some are reached indirectly, through partner companies that operate several hospitals, rather than under a direct contract with the group',
     source: 'Confirmed by Suntop',
     asOf: '2026-09-05',
     status: 'verified',
     audience: ['public', 'investor-gated'],
     conflicts: [
       { value: '300+ cooperative centers', source: 'Company Overview deck, 2023-12 (cumulative basis)' },
-      { value: '18 managed hospitals', source: 'Koology 托管医院汇总, 2026 (management-contract basis only)' },
+      { value: '18 co-built and operated', source: 'Group financial system, 2026 (co-built-and-operated basis only)' },
     ],
     note:
-      'Basis corrected 2026-09-05. It previously read "partner centers currently running the Suntop platform", which conflated three different populations and made this figure look like a restatement of platform.institutionsDeployed. CDC counts partner hospitals; only some are under a management contract, and only some run the platform. Two things a reader in diligence will ask about, so say them before being asked: the financial system\'s 托管医院汇总 counts only the management-contract subset and is much smaller by design, and part of the CDC count is reached through partner companies operating several hospitals rather than through a direct contract. The 2023 deck\'s 300+ is cumulative rather than current.',
+      'Basis corrected 2026-09-05. It previously read "partner centers currently running the Suntop platform", which conflated three different populations and made this figure look like a restatement of platform.institutionsDeployed. The group takes part in a partner hospital in one of three ways — co-building and operating its dialysis department, enabling it with the platform and supply chain, or supplying it — and CDC counts the hospitals, not any one of those arrangements. Two things a reader in diligence will ask about, so say them before being asked: the financial system counts only the co-built-and-operated subset and is much smaller by design, and part of the CDC count is reached through partner companies operating several hospitals rather than through a direct contract. The 2023 deck\'s 300+ is cumulative rather than current. Avoid the word 托管 in anything public — 共建运营 and 赋能 are the agreed terms.',
   },
   'group.annualTreatments': {
     value: '4.5M+',
