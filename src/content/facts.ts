@@ -332,7 +332,7 @@ export const FACTS = {
       { value: '50 fully deployed smart dialysis centers', source: '2026 outlook, 2025-12 (complete deployment only)' },
     ],
     note:
-      'Site figure adopted as canonical, 2026-08-22. Three populations are in play and they are easy to confuse: 50+ contracting institutions, 100+ centers running the platform, and 50 centers with the complete smart-dialysis deployment. Whichever is quoted, say which — and note this is a different population again from group.cooperativeCenters, which counts partner hospitals rather than platform deployments.',
+      'This is the smart dialysis center figure, and 100+ is the number to quote publicly — decided 2026-09-06. Three populations are in play and they are easy to confuse: 50+ contracting institutions, 100+ centers running the platform, and the 50 centers that had the complete deployment at the end of 2025. The last of those is a milestone in the 2026 outlook, not the current count, so do not use it as a headline. This is a different population again from group.cooperativeCenters, which counts partner hospitals rather than platform deployments.',
   },
   'platform.patientsOnSystem': {
     value: '~8,000',

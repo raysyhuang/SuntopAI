@@ -18,7 +18,6 @@
       "title2": "Real-time IoT and AI-assisted operations",
       "subtitle": "Connect treatment devices, support infrastructure, environment, and clinical data into one risk-control operating layer.",
       "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
-      "stats": "100+ smart dialysis centers | 5000+ connected machines | Cloud / local / hybrid deployment",
       "badges": [
         "Whole-center IoT",
         "AI risk control",
@@ -27,15 +26,12 @@
       ],
       "metrics": [
         {
-          "value": "100+",
           "label": "Smart dialysis centers"
         },
         {
-          "value": "5000+",
           "label": "Connected machines"
         },
         {
-          "value": "20+",
           "label": "Core and dynamic alarms"
         }
       ]
@@ -132,28 +128,7 @@
         }
       ],
       "cta": "View Full Results",
-      "footnote": "Based on data from Suntop-operated dialysis centers, 2024-2025. Formal study documentation is in preparation.",
-      "deployment": {
-        "title": "Validated Deployment Scale",
-        "items": [
-          {
-            "value": "30+",
-            "label": "Self-operated Centers"
-          },
-          {
-            "value": "100+",
-            "label": "Partner Centers"
-          },
-          {
-            "value": "100+",
-            "label": "Smart Dialysis Centers"
-          },
-          {
-            "value": "5000+",
-            "label": "Connected Machines"
-          }
-        ]
-      }
+      "footnote": "Based on data from Suntop-operated dialysis centers, 2024-2025. Formal study documentation is in preparation."
     },
     "why": {
       "tag": "The Problem We Solve",
@@ -514,11 +489,6 @@
         "smartCenters": "Smart Dialysis Centers",
         "selfOperated": "Self-Operated Centers",
         "partnerCenters": "Partner Centers"
-      },
-      "stats": {
-        "smartCenters": "100+",
-        "selfOperated": "30+",
-        "partnerCenters": "100+"
       },
       "descriptions": {
         "smartCenters": "Upgraded to smart dialysis centers",
@@ -1943,7 +1913,7 @@
       "paragraphs": [
         "Suntop Healthcare is a medical technology company focused on hemodialysis.",
         "Founded on the principle of 'People First, Service Above All', we started with equipment supply, technical support, department operations management, and clinical care, gradually building a comprehensive service system covering the entire dialysis workflow. On this foundation, we developed our proprietary dialysis management system, making all core equipment—dialysis machines, BP monitors, scales—IoT-enabled, and integrating customized models and decision systems to achieve a complete closed loop from data collection, analysis, evaluation, recommendations to real-time feedback.",
-        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 50+ successfully upgraded to smart dialysis centers and 5000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
+        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 100+ successfully upgraded to smart dialysis centers and 5000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
         "We believe truly valuable healthcare innovation must simultaneously improve medical quality, reduce risk, and increase operational efficiency. Suntop Healthcare is driving the transformation of dialysis management from 'experience-driven' to 'data-driven', making dialysis safer, more efficient, and more sustainable."
       ]
     },
@@ -2477,6 +2447,10 @@
         "content": "Our compliance program is designed to meet the requirements of multiple regulatory frameworks across different jurisdictions, including healthcare regulations (HIPAA, GDPR, PIPL, and local healthcare laws), medical device regulations (FDA, NMPA, CE marking requirements), data protection and privacy laws (CCPA, GDPR, PIPL), information security standards (ISO 27001, SOC 2), quality management standards (ISO 13485, ISO 9001), and industry-specific guidelines."
       },
       {
+        "title": "China Data Protection (PIPL & CSL)",
+        "content": "For operations in China, we comply with local data protection regulations including the Personal Information Protection Law (PIPL) for comprehensive personal data protection, the Cybersecurity Law (CSL) for network security and data localization requirements, and the Data Security Law (DSL) for data classification and protection measures. We adhere to healthcare data security regulations and guidelines, conduct cross-border data transfer assessments where required, and maintain local data storage and processing capabilities."
+      },
+      {
         "title": "HIPAA Compliance (United States)",
         "content": "For operations in the United States, we maintain comprehensive HIPAA compliance. This includes adherence to the Privacy Rule with policies and procedures to protect Protected Health Information (PHI), and the Security Rule with administrative, physical, and technical safeguards for electronic PHI. We follow the Breach Notification Rule with procedures for timely notification in case of data breaches and execute Business Associate Agreements (BAAs) with all covered entities and subcontractors. We apply the Minimum Necessary Standard, limiting access to PHI to what is required for each function. We conduct regular HIPAA risk assessments and remediation, have designated Privacy and Security Officers, and provide annual workforce training on HIPAA requirements."
       },
@@ -2491,10 +2465,6 @@
       {
         "title": "FDA and Medical Device Regulations",
         "content": "Our software and platforms comply with applicable medical device regulations including FDA 21 CFR Part 820 (Quality System Regulation for medical devices), FDA Software as a Medical Device (SaMD) guidelines, IEC 62304 (medical device software lifecycle processes), and IEC 62443 (industrial automation and control systems security). We also comply with National Medical Products Administration (NMPA) requirements in China and CE marking requirements for EU medical device compliance. We implement risk management per ISO 14971 and maintain clinical evaluation and post-market surveillance procedures."
-      },
-      {
-        "title": "China Data Protection (PIPL & CSL)",
-        "content": "For operations in China, we comply with local data protection regulations including the Personal Information Protection Law (PIPL) for comprehensive personal data protection, the Cybersecurity Law (CSL) for network security and data localization requirements, and the Data Security Law (DSL) for data classification and protection measures. We adhere to healthcare data security regulations and guidelines, conduct cross-border data transfer assessments where required, and maintain local data storage and processing capabilities."
       },
       {
         "title": "Quality Management System",
