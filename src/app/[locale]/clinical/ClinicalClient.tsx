@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Building2, Network, Brain, Activity, Shield, Users, TrendingUp, Clock, AlertTriangle, CheckCircle, Heart, Monitor, Sparkles, ArrowRight, Cpu, MessageSquare, Layout, Footprints, Workflow, Wifi } from 'lucide-react'
@@ -225,9 +226,12 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                       border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                     }}
                   >
-                    <img 
-                      src="/images/clinical/每日例会.jpg" 
+                    <Image
+                      src="/images/clinical/每日例会.jpg"
                       alt="Daily team huddle"
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="w-full h-64 object-cover"
                     />
                   </motion.div>
@@ -308,9 +312,12 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                       border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                     }}
                   >
-                    <img 
-                      src="/images/clinical/足部筛查.jpg" 
+                    <Image
+                      src="/images/clinical/足部筛查.jpg"
                       alt="Foot screening"
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="w-full h-64 object-cover"
                     />
                   </motion.div>
@@ -437,7 +444,14 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                           border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                         }}
                       >
-                        <img src={image} alt="" className="w-full h-32 object-cover" />
+                        <Image
+                          src={image}
+                          alt=""
+                          width={600}
+                          height={400}
+                          sizes="(max-width: 640px) 50vw, 25vw"
+                          className="w-full h-32 object-cover"
+                        />
                       </div>
                     ))}
                   </motion.div>
@@ -673,9 +687,12 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                                   border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                                 }}
                               >
-                                <img 
-                                  src={image} 
-                                  alt={label} 
+                                <Image
+                                  src={image}
+                                  alt={label}
+                                  width={900}
+                                  height={600}
+                                  sizes="(max-width: 768px) 100vw, 33vw"
                                   className="w-full h-56 object-cover"
                                 />
                               </div>
@@ -720,9 +737,12 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
             className="max-h-[85vh] w-full max-w-5xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <img
+            <Image
               src={activeGalleryItem.src}
               alt={activeGalleryItem.alt}
+              width={1800}
+              height={1200}
+              sizes="100vw"
               className="max-h-[75vh] w-full rounded-2xl object-contain"
             />
             <p className="mt-3 text-center text-sm font-medium text-white/90">

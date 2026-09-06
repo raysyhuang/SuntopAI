@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
@@ -26,6 +27,40 @@ interface CenterClientProps {
 */
 const fadeInUp = {}
 
+/** The link itself, with no knowledge of where the visitor came from. */
+function BackLink({ href, label, isLight }: { href: string; label: string; isLight: boolean }) {
+  return (
+    <Link
+      href={href}
+      className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
+      style={{ color: isLight ? '#007d73' : '#2dd4bf' }}
+    >
+      <ArrowLeft className="w-4 h-4" />
+      {label}
+    </Link>
+  )
+}
+
+/** The only part of this page that needs the query string. */
+function BackLinkFromQuery({
+  listHref,
+  listLabel,
+  mapHref,
+  mapLabel,
+  isLight,
+}: {
+  listHref: string
+  listLabel: string
+  mapHref: string
+  mapLabel: string
+  isLight: boolean
+}) {
+  const fromMap = useSearchParams().get('from') === 'map'
+  return (
+    <BackLink href={fromMap ? mapHref : listHref} label={fromMap ? mapLabel : listLabel} isLight={isLight} />
+  )
+}
+
 export default function CenterClient({ locale, dictionary, center }: CenterClientProps) {
   const t = dictionary.company
   const centerLabels = t.centers?.centerDetail || {
@@ -38,17 +73,9 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
   }
   const { theme } = useTheme()
   const [activeGalleryItem, setActiveGalleryItem] = useState<{ src: string; alt: string } | null>(null)
-  const searchParams = useSearchParams()
-  const from = searchParams.get('from')
-  
-  // Determine back link based on where user came from
-  const backLink = from === 'map' 
-    ? `/${locale}/services/patient-travel#map` 
-    : `/${locale}/company/centers`
-  
-  const backLabel = from === 'map'
-    ? (dictionary.services?.patientTravel?.map?.title || '返回地图')
-    : centerLabels.backToList
+  const listHref = `/${locale}/company/centers`
+  const mapHref = `/${locale}/services/patient-travel#map`
+  const mapLabel = dictionary.services?.patientTravel?.map?.title || '返回地图'
 
   // Close lightbox on escape key
   useEffect(() => {
@@ -83,14 +110,25 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
             className="max-w-4xl"
           >
             <motion.div variants={fadeInUp} className="mb-6">
-              <Link 
-                href={backLink}
-                className="inline-flex items-center gap-2 text-sm font-medium transition-colors"
-                style={{ color: theme === 'light' ? '#007d73' : '#2dd4bf' }}
+              {/* Reads ?from= so a visitor who arrived from the map goes back to it.
+                  Isolated behind Suspense because useSearchParams opts its whole
+                  subtree out of static rendering: with the call inline, all eighty
+                  centre pages prerendered to an empty shell — no heading, no images —
+                  and only filled in after hydration. The fallback is the plain list
+                  link, which is the right destination for everyone else. */}
+              <Suspense
+                fallback={
+                  <BackLink href={listHref} label={centerLabels.backToList} isLight={theme === 'light'} />
+                }
               >
-                <ArrowLeft className="w-4 h-4" />
-                {backLabel}
-              </Link>
+                <BackLinkFromQuery
+                  listHref={listHref}
+                  listLabel={centerLabels.backToList}
+                  mapHref={mapHref}
+                  mapLabel={mapLabel}
+                  isLight={theme === 'light'}
+                />
+              </Suspense>
             </motion.div>
             
             <motion.h1
@@ -355,9 +393,12 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                   }}
                   onClick={() => setActiveGalleryItem({ src: image, alt: `${center.name} - ${index + 1}` })}
                 >
-                  <img 
-                    src={image} 
+                  <Image
+                    src={image}
                     alt={`${center.name} - ${index + 1}`}
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
                 </motion.div>
@@ -417,9 +458,12 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                     className="aspect-[4/3] overflow-hidden cursor-zoom-in"
                     onClick={() => setActiveGalleryItem({ src: spot.image as string, alt: spot.name })}
                   >
-                    <img
+                    <Image
                       src={spot.image}
                       alt={spot.name}
+                      width={1200}
+                      height={900}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                     />
                   </div>
@@ -504,9 +548,12 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
             className="max-h-[85vh] w-full max-w-5xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <img
+            <Image
               src={activeGalleryItem.src}
               alt={activeGalleryItem.alt}
+              width={1800}
+              height={1200}
+              sizes="100vw"
               className="max-h-[80vh] w-full rounded-2xl object-contain"
             />
             <p className="mt-3 text-center text-sm font-medium text-white/90">
