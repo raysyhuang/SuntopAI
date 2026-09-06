@@ -16,7 +16,7 @@
     "hero": {
       "title1": "Make every dialysis session smarter",
       "title2": "Connecting devices, data and clinical decisions",
-      "subtitle": "Suntop AI builds on dialysis information processing cleared by a Class II medical device registration, closing the loop between IoT, automation and AI: machines, HIS, LIS and clinical workflow connected end to end, so centers raise care quality and operating efficiency while lowering management cost. Deployed across {centers} centers, {direct} of them our own, and refined continuously in live clinical use.",
+      "subtitle": "Dialysis management, connected machines, clinical decision support and real-time monitoring, closed into one loop. Running in {centers} centers, {direct} of them our own — we prove it on ourselves before handing it to anyone else.",
       "badges": [
         "Whole-center IoT",
         "AI risk control",
@@ -160,7 +160,7 @@
     "router": {
       "tag": "Learn More",
       "title": "Explore Our Solutions",
-      "description": "From technical architecture to clinical applications, discover our smart dialysis platform",
+      "description": "From the architecture to the clinical floor: the smart dialysis platform",
       "doors": {
         "platform": {
           "title": "Platform Technology",
@@ -286,7 +286,7 @@
   "platform": {
     "tag": "Technology",
     "title": "Digital Hemodialysis Management Platform",
-    "subtitle": "Systems, hardware and data services integrated end to end. Low-cost cloud architecture, continuous updates without on-site maintenance, and compliance with national medical data security rules — a digital core running from data capture through to a connected network.",
+    "subtitle": "Machines, HIS, LIS and treatment records on one data layer. Cloud-hosted, no on-site maintenance, compliant with national medical data security rules.",
     "features": {
       "native": "Dialysis-Native",
       "realtime": "Real-Time Intelligence",
@@ -610,7 +610,7 @@
   "clinical": {
     "tag": "Clinical Applications",
     "title": "AI-Enabled Refined Management",
-    "subtitle": "Comprehensive dialysis center management through AI platform, ensuring medical quality, operational efficiency, and patient satisfaction.",
+    "subtitle": "Detailed management written into the system, so care quality does not move with staff turnover.",
     "statement": {
       "title": "Clinical Augmentation, Not Replacement",
       "description": "Our platform is designed to augment clinical expertise, not replace it. Every AI recommendation and automated action is built with clinical guardrails, transparency, and physician oversight as core design principles.",
@@ -631,7 +631,7 @@
     "fineManagement": {
       "tag": "Refined Management",
       "title": "Refined Medical Services for Hemodialysis Centers",
-      "subtitle": "In today's healthcare environment, dialysis centers are not just treatment facilities, but complex systems requiring efficient coordination and precise quality control. The core of refined hemodialysis services lies in deeply integrating advanced IT tools with clinical management, achieving a leap from 'human governance' to 'data governance'.",
+      "subtitle": "A dialysis center is not only a place of treatment; it is an operation that has to coordinate and hold quality. Detailed management puts that operation into process and tooling — from running on people to running on data.",
       "parts": {
         "centerManagement": {
           "tag": "Part One",
@@ -991,7 +991,7 @@
   "vascularAccess": {
     "tag": "Smart Vascular Access Center",
     "title": "AI-Assisted Vascular Access Services",
-    "subtitle": "Following comprehensive vascular access intervention planning, combined with AI-assisted screening and 5G remote consultation, to ensure effective dialysis treatment",
+    "subtitle": "Planning and carrying out vascular access intervention, with ultrasound screening records and 5G remote consultation.",
     "backToClinical": "Back to Clinical",
     "backToServices": "Back to Services",
     "smartFeature": {
@@ -1173,7 +1173,7 @@
     "turnkeyServices": {
       "tag": "Turnkey Solutions",
       "title": "End-to-End Support from Planning to Launch",
-      "subtitle": "We do more than connect systems and machines: we build and upgrade the dialysis center end to end.",
+      "subtitle": "We do more than connect systems and machines: we build and upgrade the center itself.",
       "services": [
         {
           "id": "design",
@@ -1208,7 +1208,7 @@
         {
           "id": "training",
           "title": "Staff Training",
-          "subtitle": "Comprehensive online and offline training",
+          "subtitle": "Online and in-person training",
           "description": "From traditional department training to flexible online learning modes for continuous professional development.",
           "icon": "GraduationCap",
           "steps": [
@@ -1239,7 +1239,7 @@
           "id": "operations",
           "title": "Operations Management",
           "subtitle": "Professional and flexible management services",
-          "description": "Every aspect is tailored to client needs and actual conditions, providing comprehensive management support.",
+          "description": "Management support arranged around each client's needs and circumstances.",
           "icon": "Settings",
           "steps": [
             {
@@ -1358,7 +1358,7 @@
         {
           "title": "Cost Control Analysis",
           "icon": "TrendingDown",
-          "description": "Comprehensive cost monitoring and analysis for lean operations.",
+          "description": "Cost monitoring and analysis behind lean operation.",
           "items": [
             "Per-dialysis cost accounting",
             "Consumable usage efficiency analysis",
@@ -1410,7 +1410,7 @@
     "training": {
       "tag": "Staff Training",
       "title": "Professional Training System",
-      "subtitle": "Online and offline combined, building professional dialysis medical teams",
+      "subtitle": "Online and in-person training for dialysis clinical teams",
       "description": "Suntop Healthcare always puts service quality first, continuously strengthening institutional capabilities and staff professionalism. Training has evolved from traditional department training and medical staff exchanges to flexible and diverse online learning models.",
       "offline": {
         "title": "Offline Training",
@@ -1486,7 +1486,7 @@
   "services": {
     "tag": "Services",
     "title": "Technology-Enabled Services, Creating Value",
-    "subtitle": "Beyond treatment itself, providing vascular access, patient care, professional training and more comprehensive service support for kidney patients, while continuously expanding health management services and technology-enabled applications.",
+    "subtitle": "Beyond treatment: vascular access, patient care and clinical training, with new health management services added as they mature.",
     "newBadge": "New",
     "serviceCards": [
       {
@@ -1510,7 +1510,7 @@
       {
         "id": "training",
         "title": "Professional Training",
-        "description": "Online and offline combined, building professional dialysis medical teams",
+        "description": "Online and in-person training for dialysis clinical teams",
         "icon": "GraduationCap"
       },
       {
@@ -1522,7 +1522,7 @@
       {
         "id": "nutrition",
         "title": "Dialysis Nutrition",
-        "description": "Professional nutritionist guidance, personalized meal plans, scientific diet for recovery",
+        "description": "Dietitian guidance and individual meal plans alongside the rehabilitation programme",
         "icon": "Utensils"
       },
       {
@@ -1541,7 +1541,7 @@
     "operationService": {
       "tag": "Smart Dialysis Center",
       "title": "Co-built Operation Services",
-      "subtitle": "Partner with hospitals to co-operate dialysis centers, transforming traditional facilities into modern smart dialysis centers",
+      "subtitle": "Building dialysis centers with hospitals, and upgrading conventional units into smart dialysis centers",
       "whatWeProvide": {
         "title": "Complete Solution",
         "items": [
@@ -1601,7 +1601,7 @@
     "vascularAccess": {
       "tag": "Smart Vascular Access",
       "title": "AI-Assisted Vascular Access Services",
-      "subtitle": "Following comprehensive vascular access intervention planning, combined with AI-assisted screening and 5G remote consultation, to ensure effective dialysis treatment",
+      "subtitle": "Planning and carrying out vascular access intervention, with ultrasound screening records and 5G remote consultation.",
       "smartFeature": {
         "tag": "AI-Powered",
         "title": "AI-Assisted Vascular Access Screening",
@@ -1614,7 +1614,7 @@
         ]
       },
       "servicesSummary": {
-        "title": "Comprehensive Vascular Access Services",
+        "title": "Vascular access services",
         "description": "Providing AI-assisted pre-operative assessment, autologous/prosthetic AV fistula surgery, central venous catheter insertion, thrombosis and aneurysm management, and minimally invasive interventions, ensuring each patient receives the optimal vascular access solution.",
         "highlights": [
           "AI-assisted assessment & planning",
@@ -1652,7 +1652,7 @@
     "training": {
       "tag": "Digital Training",
       "title": "Yiro Digital Platforms",
-      "subtitle": "Comprehensive digital training and health management support for medical teams and patients",
+      "subtitle": "Digital training and health management for clinical teams and patients",
       "staffPlatform": {
         "title": "Yiro Curriculum",
         "target": "Medical Staff Training",
@@ -1662,7 +1662,7 @@
       "patientApp": {
         "title": "Yiro Health",
         "target": "Patient Health Management",
-        "description": "A mobile health platform designed for dialysis patients, integrating activity center, health challenges, educational content, and rewards program. It helps patients understand their condition, build social connections, participate in interactive activities, and improve overall quality of life.",
+        "description": "A mobile platform for dialysis patients: education, health challenges, an activity hub and a points store, so patients can follow their own condition and take part.",
         "scanToDownload": "Scan to Download"
       },
       "provider": "Powered by Sound Decision Technology Co., Ltd."
@@ -1734,7 +1734,7 @@
     "nutrition": {
       "tag": "Dialysis Nutrition",
       "title": "Dialysis Nutrition Management",
-      "subtitle": "Proper nutrition is not only key to maintaining body function, but also a powerful weapon for improving quality of life and fighting disease",
+      "subtitle": "Nutrition bears directly on a dialysis patient's strength, complication risk and quality of life.",
       "brand": "XinXiWang",
       "intro": "In partnership with 'XinXiWang' nutrition brand, we provide professional nutrition management services. Through the 'Nutrition Defense' campaign, medical staff provide bedside education while professional nutritionists share nutrition knowledge.",
       "smartFeature": {
@@ -2046,7 +2046,7 @@
     "stats": {
       "founded": "Smart Dialysis Centers",
       "team": "Self-Operated",
-      "partners": "Partner Centers",
+      "partners": "Partner hospitals",
       "stations": "Devices Connected"
     },
     "centers": {
