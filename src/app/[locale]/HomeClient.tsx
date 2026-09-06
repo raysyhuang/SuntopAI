@@ -153,8 +153,14 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             <p className="mt-6 text-accent-300 text-[1.35rem] md:text-[1.7rem] font-light leading-snug tracking-tight">
               {d.home.hero.title2}
             </p>
+            {/* The two figures in this sentence are the same ones the proof bar
+                below renders. They are interpolated rather than written into the
+                dictionary so a change in facts.ts reaches all four locales at once
+                and cannot leave the headline contradicting the bar under it. */}
             <p className="mt-8 max-w-[38rem] text-[1.05rem] md:text-lg leading-[1.85] text-neutral-300">
-              {d.home.hero.subtitle}
+              {d.home.hero.subtitle
+                .replace('{centers}', publicFact('platform.institutionsDeployed').value)
+                .replace('{direct}', publicFact('group.idcOperating').value)}
             </p>
 
             <div className="mt-11 flex flex-wrap gap-3">
@@ -252,6 +258,127 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             </motion.div>
           ))}
         </div>
+      </Section>
+
+      {/* ───────── 3a. Not a concept ─────────
+          The claim in the hero is that conventional units become smart ones. This is
+          where that claim gets its evidence, and the evidence is deliberately
+          platform-side: devices actually connected, patients actually on the system,
+          records actually held. Those are countable and current, unlike a treatment
+          volume that has to be asserted. See POSITIONING.md. */}
+      <Section tone="dark">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] gap-12 lg:gap-20">
+          <div>
+            <h2 className="font-display font-light text-3xl md:text-[2.6rem] leading-tight text-white">
+              {home.shift.title}
+            </h2>
+            <p className="mt-7 leading-[1.85] text-neutral-300">{home.shift.body}</p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 self-center">
+            {([
+              ['platform.machinesConnected', home.shift.labels.machines],
+              ['platform.patientsOnSystem', home.shift.labels.patients],
+              ['platform.monitoringRecords', home.shift.labels.sessions],
+              ['platform.iotRecords', home.shift.labels.telemetry],
+            ] as Array<[FactId, string]>).map(([id, label]) => (
+              <div key={id}>
+                <div className="font-display font-light tabular-nums text-[2.1rem] md:text-[2.5rem] leading-none text-white">
+                  {publicFact(id).value}
+                </div>
+                <div className="mt-2.5 text-sm leading-snug text-neutral-400">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-14 max-w-3xl text-xs leading-relaxed text-neutral-500">
+          {home.shift.note}
+        </p>
+      </Section>
+
+      {/* ───────── 3a-ii. What the AI actually changed ─────────
+          The one section an expert audience has not read on a competitor's site.
+          Scale, chain operation and management systems are familiar to them; a
+          clinician regaining the hours to re-check a plan at every session is not.
+
+          The claim here is deliberately about REVIEW FREQUENCY, not about outcomes.
+          Frequency is a workflow fact the registered scope (transmit, display,
+          process) fully supports, and it needs no trial to stand up. The clinical
+          consequence — fewer intradialytic hypotension events from more accurate
+          ultrafiltration — is real but is an outcome claim: it needs an N and a
+          documented study design before it can be published, and dry-weight
+          prediction sits in CAPABILITY_TIERS as in-validation. See POSITIONING.md. */}
+      <Section tone="light">
+        <motion.div {...fade} className="max-w-3xl">
+          <p className="text-[0.7rem] uppercase tracking-[0.22em] font-medium" style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}>
+            {home.loop.eyebrow}
+          </p>
+          <h2 className={`mt-5 font-display font-light text-3xl md:text-[2.6rem] leading-tight ${heading}`}>
+            {home.loop.title}
+          </h2>
+        </motion.div>
+
+        {/* Before and after, weighted. The past is stated without disdain — the
+            constraint was hours, not care — so the contrast lands as capacity
+            returned rather than as a competitor being criticised. */}
+        <div className="mt-14 grid md:grid-cols-2 gap-6 lg:gap-8">
+          <motion.div
+            {...fade}
+            className={`rounded-2xl border p-8 lg:p-10 ${hairline}`}
+            style={{ backgroundColor: isLight ? 'rgba(0,0,0,0.015)' : 'rgba(255,255,255,0.02)' }}
+          >
+            <div className={`text-xs uppercase tracking-[0.18em] ${isLight ? 'text-warm-ink-400' : 'text-neutral-500'}`}>
+              {home.loop.beforeLabel}
+            </div>
+            <p className={`mt-5 leading-[1.85] ${isLight ? 'text-warm-ink-500' : 'text-neutral-400'}`}>
+              {home.loop.beforeBody}
+            </p>
+          </motion.div>
+
+          <motion.div
+            {...fade}
+            className="rounded-2xl border p-8 lg:p-10"
+            style={{
+              borderColor: isLight ? '#0f766e33' : '#2dd4bf33',
+              backgroundColor: isLight ? '#0f766e0a' : '#2dd4bf0d',
+            }}
+          >
+            <div className="text-xs uppercase tracking-[0.18em] font-medium" style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}>
+              {home.loop.afterLabel}
+            </div>
+            <p className={`mt-5 leading-[1.85] ${heading}`}>{home.loop.afterBody}</p>
+          </motion.div>
+        </div>
+
+        {/* The four parts, as a loop rather than a feature list — the point of the
+            section is that none of them delivers anything on its own. */}
+        <motion.div {...fade} className={`mt-20 pt-14 border-t ${hairline}`}>
+          <div className="max-w-2xl">
+            <h3 className={`font-display font-light text-2xl md:text-[1.9rem] leading-snug ${heading}`}>
+              {home.loop.loopTitle}
+            </h3>
+            <p className={`mt-5 leading-relaxed ${body}`}>{home.loop.loopBody}</p>
+          </div>
+
+          <ol className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+            {home.loop.steps.map((step, i) => (
+              <li key={step.title} className={`border-t pt-6 ${hairline}`}>
+                <div className="font-mono text-xs tabular-nums" style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}>
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <div className={`mt-4 font-display text-lg font-light ${heading}`}>{step.title}</div>
+                <p className={`mt-3 text-sm leading-[1.8] ${body}`}>
+                  {step.body.replace('{machines}', publicFact('platform.machinesConnected').value)}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </motion.div>
+
+        <p className={`mt-14 max-w-3xl text-xs leading-relaxed ${isLight ? 'text-warm-ink-400' : 'text-neutral-500'}`}>
+          {home.loop.note}
+        </p>
       </Section>
 
       {/* ───────── 3b. Network — where the centers actually are ─────────

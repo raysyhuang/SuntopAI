@@ -14,9 +14,9 @@
   "home": {
     "tag": "Hemodialysis AI & IoT",
     "hero": {
-      "title1": "Smarter dialysis, every session",
+      "title1": "Make every dialysis session smarter",
       "title2": "Connecting devices, data and clinical decisions",
-      "subtitle": "Built on a registered dialysis information system, combining IoT, automation and AI to connect dialysis machines, HIS, LIS and clinical workflow — so a center runs with less administrative load and lower operating cost. The platform is live in 100+ centers, 30+ of them our own, and continues to be validated in real clinical use.",
+      "subtitle": "Suntop AI builds on dialysis information processing cleared by a Class II medical device registration, closing the loop between IoT, automation and AI: machines, HIS, LIS and clinical workflow connected end to end, so centers raise care quality and operating efficiency while lowering management cost. Deployed across {centers} centers, {direct} of them our own, and refined continuously in live clinical use.",
       "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
       "badges": [
         "Whole-center IoT",
@@ -184,8 +184,8 @@
       }
     },
     "finalCta": {
-      "title": "Not a single software product: a digital dialysis-center solution",
-      "description": "Unify dialysis IoT, AI risk control, bedside closed loops, and asset performance in one operating layer for safer, more traceable center operations."
+      "title": "What we deliver is a closed loop, not a system",
+      "description": "Dialysis management, connected machines, clinical decision support and real-time monitoring only work delivered together. We prove each one in our own centers before handing the whole loop to a partner."
     },
     "proofEyebrow": "Scale",
     "audiences": {
@@ -217,6 +217,46 @@
       "legendProvince": "Provinces with a center",
       "note": "The map plots the centers published on this site. The group serves a wider set of provinces than shown here; the two counts are on different bases.",
       "cta": "View all centers"
+    },
+    "shift": {
+      "title": "Not a concept. A system already running.",
+      "body": "A smart dialysis center is not a proposal document. It is running in 100+ centers today — scheduling, records, laboratory review and quality control handled by the system, device, laboratory and treatment data on one platform, and clinical time returned to patients. The figures below come from the platform itself, not from an estimate.",
+      "note": "Device and patient counts are group figures as of August 2026; record counts are taken from the platform as of April 2026.",
+      "labels": {
+        "machines": "devices connected live",
+        "patients": "patients on the system",
+        "sessions": "treatment monitoring records",
+        "telemetry": "device telemetry records"
+      }
+    },
+    "loop": {
+      "eyebrow": "What AI actually does in a dialysis unit",
+      "title": "For the first time, clinicians can review the plan at every session",
+      "beforeLabel": "Before",
+      "beforeBody": "Dry weight and ultrafiltration volume were reviewed once every two to four weeks. Not by choice — a clinician's hours were already full, and the data sat apart in machines, lab systems and paper notes. Assembling it took as long as a clinic.",
+      "afterLabel": "Now",
+      "afterBody": "Machine parameters, monitoring data and lab results from every session are gathered automatically and presented in a form that can be read directly. A clinician can check at each session whether the dry weight and ultrafiltration target still fit — instead of waiting a fortnight.",
+      "loopTitle": "Not a piece of software — a closed loop",
+      "loopBody": "Four parts, none of them optional. Drop any one and the data breaks in the middle, and what reaches the clinician is late and incomplete.",
+      "steps": [
+        {
+          "title": "Dialysis management system",
+          "body": "Orders, scheduling, nursing records and quality management in one system rather than spread across separate forms."
+        },
+        {
+          "title": "IoT",
+          "body": "{machines} machines connected live; treatment parameters enter the record automatically, without transcription after the fact."
+        },
+        {
+          "title": "Clinical decision support",
+          "body": "Attribution analysis and AI-assisted drafting turn scattered data into grounds a clinician can read directly. Suggestions are for reference; the clinician confirms."
+        },
+        {
+          "title": "Real-time monitoring",
+          "body": "Central monitoring and bedside terminals surface an anomaly at the nurses' station during treatment, not after the patient comes off."
+        }
+      ],
+      "note": "Judgement and prescription remain with the clinician; the system's job is to put complete data in front of them in time. Dry-weight prediction and intradialytic hypotension warning remain research programmes and are not offered as registered clinical functions."
     },
     "evidence": {
       "eyebrow": "Clinical results",
@@ -2629,7 +2669,7 @@
     "title": "Investment overview",
     "subtitle": "Suntop Healthcare both operates dialysis centers and builds its own medical software. That combination is what separates us from the field.",
     "positionTitle": "Our position",
-    "positionBody": "The industry has chain dialysis operators focused on expansion, and healthcare software companies focused on systems. Suntop is both, and adds a third segment: system, supply chain and endpoint. The network of self-operated and partner centers supplies real clinical settings and continuous data; on that basis Daite Intelligent Technology develops the dialysis management system and specialty AI models, and holds a Class II medical device registration. The group's procurement scale then lets that system reach partner hospitals on competitive terms. The system embeds deeply into hospital workflow, making it costly to replace, while growing data volume continues to improve model accuracy.",
+    "positionBody": "The industry has chain operators focused on expansion and software companies focused on systems. We are neither. We first rebuilt our own dialysis centers into smart dialysis centers — precision management, a smart supply chain, AI and IoT introduced as one package — and then brought that capability to partner hospitals. A software vendor has no clinical setting of its own in which to prove anything; a chain operator replicates centers rather than capability. What we replicate is a way of working that can be installed inside somebody else's center. The system is developed in-house by Daite Intelligent Technology, a wholly owned subsidiary that holds the registration. It embeds deeply into hospital workflow, making it costly to replace, while growing data volume continues to improve model accuracy.",
     "pillarsTitle": "System × Supply chain × Endpoint",
     "pillarsIntro": "These three segments are rarely held by one company in the Chinese dialysis market. Software vendors have no centers of their own; device and consumables manufacturers do not own the clinical workflow; chain operators have neither. Each segment held makes the other two worth more.",
     "pillars": [
