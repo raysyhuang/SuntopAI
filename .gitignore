@@ -60,5 +60,9 @@ pdf-slides/
 # Reference materials (not for production)
 references/
 
-# Agent skills are installed per-developer, not committed
+# Agent skills are installed per developer with `npx skills add`, not committed.
+# .claude/skills holds symlinks into .agents/, so committing them leaves broken
+# links in a fresh clone.
 .agents/
+.claude/skills/
+skills-lock.json

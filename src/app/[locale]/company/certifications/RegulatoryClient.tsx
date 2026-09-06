@@ -62,9 +62,6 @@ export default function RegulatoryClient({ locale, dictionary }: RegulatoryClien
       {/* ───────── Header ───────── */}
       <Section tone="light" className="!pt-32 !pb-16 md:!pt-40 md:!pb-20">
         <motion.div {...fade} className="max-w-3xl">
-          <Badge variant="eyebrow" className="mb-7">
-            {t.tag}
-          </Badge>
           <h1
             className={`font-display font-light leading-[1.08] tracking-tightest text-[2.4rem] md:text-[3.2rem] ${heading}`}
             style={{ textWrap: 'balance' }}

@@ -141,7 +141,12 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
               className="font-display font-light text-white leading-[1.04] tracking-[-0.035em] text-[3.1rem] sm:text-[3.9rem] lg:text-[4.7rem]"
               style={{ textWrap: 'balance' }}
             >
-              {d.home.hero.title1}
+              {/* The figure stays in facts.ts. Interpolating it here means the
+                  headline cannot quietly disagree with the proof bar below it. */}
+              {d.home.hero.title1.replace(
+                '{count}',
+                publicFact('platform.institutionsDeployed').value
+              )}
             </h1>
             <p className="mt-6 text-accent-300 text-[1.35rem] md:text-[1.7rem] font-light leading-snug tracking-tight">
               {d.home.hero.title2}

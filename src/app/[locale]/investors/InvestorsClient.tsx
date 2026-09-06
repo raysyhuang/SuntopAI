@@ -7,6 +7,7 @@ import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
 import { Section } from '@/components/ui/Section'
+import { PageHero } from '@/components/PageHero'
 import { Badge } from '@/components/ui/Badge'
 import { Stat } from '@/components/ui/Stat'
 import { publicFact, type FactId } from '@/content/facts'
@@ -71,21 +72,13 @@ export default function InvestorsClient({ locale, dictionary }: InvestorsClientP
 
   return (
     <>
-      {/* Header */}
-      <Section tone="light" className="!pt-32 !pb-16 md:!pt-40 md:!pb-20">
-        <motion.div {...fade} className="max-w-3xl">
-          <Badge variant="eyebrow" className="mb-7">
-            {t.tag}
-          </Badge>
-          <h1
-            className={`font-display font-light leading-[1.08] tracking-tightest text-[2.4rem] md:text-[3.2rem] ${heading}`}
-            style={{ textWrap: 'balance' }}
-          >
-            {t.title}
-          </h1>
-          <p className={`mt-7 text-lg leading-relaxed ${body}`}>{t.subtitle}</p>
-        </motion.div>
-      </Section>
+      {/* Scale is this page's argument, so the opener shows a floor at scale. */}
+      <PageHero
+        title={t.title}
+        lede={t.subtitle}
+        photo="/images/centers/hefei-pufukang/3.jpg"
+        focus="center"
+      />
 
       {/* Position */}
       <Section tone="subtle">

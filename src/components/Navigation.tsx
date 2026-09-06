@@ -8,6 +8,7 @@ import { Menu, X, Globe, ChevronDown, Sun, Moon } from 'lucide-react'
 import { locales, localeNames, type Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from './ThemeProvider'
+import { hasDarkHero } from './darkHeroRoutes'
 
 interface NavigationProps {
   locale: Locale
@@ -22,13 +23,12 @@ export default function Navigation({ locale, dictionary }: NavigationProps) {
   const { theme, toggleTheme } = useTheme()
 
   /*
-    The homepage opens on a full-bleed dark photograph, and the bar sits on top of
+    Several pages open on a full-bleed dark photograph, and the bar sits on top of
     it while it is transparent. Colours taken from the theme alone put dark text on
-    that image and the whole bar disappeared. Until the page scrolls past the hero,
-    the bar is over dark regardless of theme, and it takes its colours from that.
+    that image and the whole bar disappeared. Until such a page scrolls past its
+    hero, the bar is over dark regardless of theme and takes its colours from that.
   */
-  const isHome = pathname === `/${locale}`
-  const overDark = isHome && !isScrolled
+  const overDark = hasDarkHero(pathname, locale) && !isScrolled
   const onDark = overDark || theme === 'dark'
 
   // Six top-level items. The logo links home, so Home is not repeated here.
