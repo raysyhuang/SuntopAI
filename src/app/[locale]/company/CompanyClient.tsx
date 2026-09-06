@@ -56,7 +56,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

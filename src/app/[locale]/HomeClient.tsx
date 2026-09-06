@@ -9,7 +9,6 @@ import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
 import { Section } from '@/components/ui/Section'
 import { Stat } from '@/components/ui/Stat'
-import { Badge } from '@/components/ui/Badge'
 import { publicFact, REGISTRATION, OUTCOMES, type FactId } from '@/content/facts'
 import { NetworkMap } from '@/components/NetworkMap'
 
@@ -98,85 +97,81 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
 
   return (
     <>
-      {/* ───────── 1. Hero — one claim, two actions, one photograph ─────────
-          The claim used to sit alone in the left half with the right half empty.
-          A treatment floor of our own says more about what the company is than
-          another sentence would. */}
-      <Section tone="light" className="!pt-32 !pb-20 md:!pt-40 md:!pb-24">
-        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)] gap-12 lg:gap-16 items-center">
-        <motion.div {...fade} className="max-w-3xl">
-          <Badge variant="eyebrow" className="mb-7">
-            {d.home.tag}
-          </Badge>
-          {/* Name carries the weight; the descriptor sits under it rather than
-              competing with it at the same size. */}
-          <h1
-            className={`font-display font-light leading-[1.06] tracking-tightest text-[2.6rem] md:text-[3.6rem] ${heading}`}
-            style={{ textWrap: 'balance' }}
-          >
-            {d.home.hero.title1}
-          </h1>
-          <p
-            className={`mt-4 font-display font-light leading-snug text-[1.35rem] md:text-[1.7rem] ${
-              isLight ? 'text-accent-700' : 'text-accent-300'
-            }`}
-            style={{ textWrap: 'balance' }}
-          >
-            {d.home.hero.title2}
-          </p>
-          <p className={`mt-7 text-lg md:text-xl leading-relaxed max-w-2xl ${body}`}>
-            {d.home.hero.subtitle}
-          </p>
-          <div className="mt-10 flex flex-wrap gap-3">
-            <Link
-              href={`/${locale}/platform`}
-              className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors ${
-                isLight
-                  ? 'bg-accent-700 text-white hover:bg-accent-800'
-                  : 'bg-accent-500 text-slate-950 hover:bg-accent-400'
-              }`}
-            >
-              {d.home.cta.explore}
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href={`/${locale}/contact`}
-              className={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium border transition-colors ${
-                isLight
-                  ? 'border-[#d1cfc5] text-ink-800 hover:bg-[#f0eee6]'
-                  : 'border-slate-700 text-neutral-200 hover:bg-slate-800/60'
-              }`}
-            >
-              {d.home.cta.contact}
-            </Link>
-          </div>
-        </motion.div>
+      {/* ───────── 1. Hero ─────────
+          Full-bleed and dark, because the subject is a clinical floor and the page
+          should open inside one rather than describe it from a beige page. The
+          photograph is the only thing above the fold that proves the system is in
+          use; everything else is a claim.
 
-        <motion.div
-          {...fade}
-          transition={{ ...fade.transition, delay: 0.1 }}
-          className="relative hidden lg:block"
-        >
-          <div className="relative aspect-[3/2] overflow-hidden rounded-xl shadow-stripe-lg">
-            <Image
-              src="/images/partnership/center-5.png"
-              alt={d.home.hero.title1}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 45vw"
-              className="object-cover"
-            />
-          </div>
-        </motion.div>
+          No eyebrow label above the heading — the heading carries its own weight,
+          and a small tag over a big line is the shape of a template. */}
+      <section className="relative isolate grain overflow-hidden bg-[#060d18]">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/partnership/center-5.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[62%_center]"
+          />
+          {/*
+            Two scrims, not one. A single flat overlay greys the photograph out; a
+            dark wash from the left for the text plus a gentle lift from the bottom
+            keeps the clinical detail readable on the right where nothing sits on it.
+          */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(100deg, #060d18 0%, rgba(6,13,24,0.94) 38%, rgba(6,13,24,0.62) 62%, rgba(6,13,24,0.30) 100%)',
+            }}
+          />
+          <div
+            className="absolute inset-x-0 bottom-0 h-1/3"
+            style={{ background: 'linear-gradient(to top, rgba(6,13,24,0.85), transparent)' }}
+          />
         </div>
-      </Section>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8 pt-40 pb-28 md:pt-52 md:pb-36">
+          <div className="max-w-[46rem]">
+            {/* The claim leads; the descriptor sits under it at a size that still
+                carries, rather than shrinking to a label above the headline. */}
+            <h1
+              className="font-display font-light text-white leading-[1.04] tracking-[-0.035em] text-[3.1rem] sm:text-[3.9rem] lg:text-[4.7rem]"
+              style={{ textWrap: 'balance' }}
+            >
+              {d.home.hero.title1}
+            </h1>
+            <p className="mt-6 text-accent-300 text-[1.35rem] md:text-[1.7rem] font-light leading-snug tracking-tight">
+              {d.home.hero.title2}
+            </p>
+            <p className="mt-8 max-w-[38rem] text-[1.05rem] md:text-lg leading-[1.85] text-neutral-300">
+              {d.home.hero.subtitle}
+            </p>
+
+            <div className="mt-11 flex flex-wrap gap-3">
+              <Link
+                href={`/${locale}/platform`}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-medium text-ink-900 transition-colors hover:bg-neutral-200"
+              >
+                {d.home.cta.explore}
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href={`/${locale}/contact`}
+                className="inline-flex items-center gap-2 rounded-full border border-white/25 px-7 py-3.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+              >
+                {d.home.cta.contact}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ───────── 2. Proof bar — canonical figures, one line each ───────── */}
       <Section tone="subtle" className="!py-16 md:!py-20">
         <motion.div {...fade}>
-          <Badge variant="eyebrow" className="mb-8">
-            {home.proofEyebrow}
-          </Badge>
           <div className={`grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8 border-t pt-10 ${hairline}`}>
             {HERO_FACTS.map((id, i) => {
               const fact = publicFact(id)
@@ -195,9 +190,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       {/* ───────── 3. Audience router — the point of the page ───────── */}
       <Section tone="light">
         <motion.div {...fade} className="mb-14 max-w-2xl">
-          <Badge variant="eyebrow" className="mb-6">
-            {home.audiences.eyebrow}
-          </Badge>
           <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight ${heading}`}>
             {home.audiences.title}
           </h2>
@@ -266,9 +258,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
           </motion.div>
 
           <motion.div {...fade}>
-            <Badge variant="eyebrow" className="mb-6">
-              {home.network.eyebrow}
-            </Badge>
             <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight ${heading}`}>
               {home.network.title}
             </h2>
@@ -308,9 +297,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
       {/* ───────── 4. Evidence — raw pairs lead, attribution attached ───────── */}
       <Section tone="dark">
         <motion.div {...fade} className="max-w-2xl mb-14">
-          <Badge variant="eyebrow" className="mb-6">
-            {home.evidence.eyebrow}
-          </Badge>
           <h2 className="font-display font-light text-3xl md:text-[2.5rem] leading-tight text-white">
             {home.evidence.title}
           </h2>
@@ -358,9 +344,6 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
             aria-hidden="true"
           />
           <div>
-            <Badge variant="eyebrow" className="mb-5">
-              {home.regulatory.eyebrow}
-            </Badge>
             <h2 className={`font-display font-light text-2xl md:text-3xl leading-tight mb-3 ${heading}`}>
               {home.regulatory.title}
             </h2>

@@ -67,7 +67,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

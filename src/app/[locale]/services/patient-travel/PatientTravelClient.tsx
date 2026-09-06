@@ -61,7 +61,6 @@ export function PatientTravelClient({ dictionary, locale }: PatientTravelClientP
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

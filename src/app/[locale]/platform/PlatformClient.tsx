@@ -55,7 +55,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
       <section className="relative py-32 overflow-hidden" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

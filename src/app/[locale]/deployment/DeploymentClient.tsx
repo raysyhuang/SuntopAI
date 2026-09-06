@@ -57,7 +57,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

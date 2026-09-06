@@ -59,3 +59,6 @@ pdf-slides/
 
 # Reference materials (not for production)
 references/
+
+# Agent skills are installed per-developer, not committed
+.agents/

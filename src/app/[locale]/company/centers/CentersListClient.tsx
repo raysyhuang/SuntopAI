@@ -43,7 +43,6 @@ export default function CentersListClient({ locale, dictionary, centers }: Cente
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

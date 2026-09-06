@@ -112,7 +112,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}

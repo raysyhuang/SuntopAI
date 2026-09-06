@@ -107,7 +107,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         {theme === 'dark' && (
           <>
-            <div className="absolute inset-0 grid-pattern" />
             <div className="absolute inset-0 radial-gradient" />
           </>
         )}
