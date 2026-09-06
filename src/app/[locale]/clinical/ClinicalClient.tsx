@@ -169,7 +169,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                 viewport={{ once: true }}
                 className="text-center mb-8"
               >
-                <span className="label-tag mb-6 inline-block">{t.fineManagement.tag}</span>
                 <h2 
                   className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                   style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -524,7 +523,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-6 inline-block">{t.results.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -550,7 +548,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     border: theme === 'dark' ? '1px solid rgba(51,65,85,0.5)' : 'none'
                   }}
                 >
-                  <span className="label-tag mb-4 inline-block">{category.tag}</span>
                   <h3 
                     className="font-display text-xl md:text-2xl font-semibold mb-2"
                     style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -633,7 +630,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <span className="label-tag mb-6 inline-block">{t.gallery.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}

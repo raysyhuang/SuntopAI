@@ -65,10 +65,6 @@ export default function CentersListClient({ locale, dictionary, centers }: Cente
               </Link>
             </motion.div>
             
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.centers?.tag}
-            </motion.span>
-            
             <motion.h1
               variants={fadeInUp}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6"

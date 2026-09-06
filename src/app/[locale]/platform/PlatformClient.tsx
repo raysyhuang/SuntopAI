@@ -70,7 +70,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-4 inline-block">{t.clinicalApplications.tag}</span>
               <h2 className={`font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4 ${
                 theme === 'dark' ? 'text-white' : '[color:#141413]'
               }`}>
@@ -157,7 +156,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-4 inline-block">{t.coreModules.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
@@ -294,7 +292,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 className="mb-20"
               >
                 <div className="text-center mb-10">
-                  <span className="label-tag mb-4 inline-block">{t.monitoringSystem.centralMonitoring.tag}</span>
                   <h2 
                     className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                     style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}
@@ -345,7 +342,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 viewport={{ once: true }}
               >
                 <div className="text-center mb-10">
-                  <span className="label-tag mb-4 inline-block">{t.monitoringSystem.bedsideTerminal.tag}</span>
                   <h2 
                     className="font-display text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight mb-4"
                     style={{ color: theme === 'light' ? '#141413' : '#ffffff' }}

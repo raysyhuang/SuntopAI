@@ -89,10 +89,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               </Link>
             </motion.div>
             
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {center.city}, {center.province}
-            </motion.span>
-            
             <motion.h1
               variants={fadeInUp}
               className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6"

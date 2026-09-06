@@ -62,9 +62,6 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
             variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
             className="max-w-4xl"
           >
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.tag}
-            </motion.span>
             <motion.h1
               variants={fadeInUp}
               className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"

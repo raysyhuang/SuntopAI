@@ -108,7 +108,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-6 inline-block">{t.architecture.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -189,7 +188,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <span className="label-tag mb-6 inline-block">{t.deployment.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -289,7 +287,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-6 inline-block">{t.turnkeyServices.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -428,7 +425,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-6 inline-block">{t.supplyChain.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -496,7 +492,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 viewport={{ once: true }}
               >
                 <div className="text-center mb-8">
-                  <span className="label-tag mb-4 inline-block">{t.supplyChain.suppliers.tag}</span>
                   <h3 
                     className="font-display text-2xl font-semibold mb-2"
                     style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -593,7 +588,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="label-tag mb-4 inline-block">{t.process.tag}</span>
                 <h3 
                   className="font-display text-2xl font-semibold mb-2"
                   style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -640,7 +634,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                <span className="label-tag mb-4 inline-block">{t.security.tag}</span>
                 <h3 
                   className="font-display text-2xl font-semibold mb-2"
                   style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}

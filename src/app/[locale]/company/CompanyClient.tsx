@@ -355,7 +355,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <span className="label-tag mb-6 inline-block">{t.centers.tag}</span>
               <h2 
                 className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -450,7 +449,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
               viewport={{ once: true }}
               className="text-center mb-12"
             >
-              <span className="label-tag mb-6 inline-block">{t.partners.tag}</span>
               <h2 
                 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-4"
                 style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
@@ -519,7 +517,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
                 viewport={{ once: true }}
                 className="text-center mb-16"
               >
-                <span className="label-tag mb-6 inline-block">{t.contact.tag}</span>
                 <h2 
                   className="font-display text-4xl md:text-5xl font-semibold tracking-tight mb-6"
                   style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}

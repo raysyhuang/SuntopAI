@@ -129,9 +129,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
             variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
             className="max-w-4xl"
           >
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.tag}
-            </motion.span>
             <motion.h1
               variants={fadeInUp}
               className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
@@ -321,7 +318,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="label-tag mb-4 inline-block">Center Excellence</span>
             <h2 className={`font-display text-3xl md:text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {t.featuresTitle}
             </h2>
@@ -373,7 +369,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="label-tag mb-4 inline-block">Activities</span>
             <h2 className={`font-display text-3xl md:text-4xl font-semibold ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {t.galleryTitle}
             </h2>

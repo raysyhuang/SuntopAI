@@ -215,7 +215,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               viewport={{ once: true }}
               className="mb-12"
             >
-              <span className="label-tag mb-4 inline-block">{t.operationService.tag}</span>
               <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 {t.operationService.title}
               </h2>
@@ -376,7 +375,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             viewport={{ once: true }}
             className="mb-12"
           >
-            <span className="label-tag mb-4 inline-block">{t.vascularAccess.tag}</span>
             <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {t.vascularAccess.title}
             </h2>
@@ -547,7 +545,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             viewport={{ once: true }}
             className="mb-12"
           >
-            <span className="label-tag mb-4 inline-block">{t.patientCare.tag}</span>
             <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               {t.patientCare.title}
             </h2>
@@ -683,7 +680,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="label-tag mb-4 inline-block">{t.training.tag}</span>
               <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 {t.training.title}
               </h2>
@@ -804,7 +800,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="label-tag mb-4 inline-block">{t.rehabilitation.tag}</span>
                 <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t.rehabilitation.title}
                 </h2>
@@ -877,7 +872,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <span className="label-tag mb-4 inline-block">{t.nutrition.tag}</span>
               <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                 {t.nutrition.title}
               </h2>
@@ -974,7 +968,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="label-tag mb-4 inline-block">{t.footCare.tag}</span>
                 <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t.footCare.title}
                 </h2>
@@ -1033,7 +1026,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
-                <span className="label-tag mb-4 inline-block">{t.skinCare.tag}</span>
                 <h2 className={`font-display text-4xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
                   {t.skinCare.title}
                 </h2>
