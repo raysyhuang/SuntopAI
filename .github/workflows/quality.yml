@@ -1,0 +1,63 @@
+name: Quality
+
+# The checks that protect things a reviewer cannot see by reading a diff: that the
+# four dictionaries still line up, that no figure has been copied out of facts.ts
+# into a dictionary where it can drift, and that the pages still render and score.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      # Content integrity first: these are fast, and they fail for reasons a
+      # type-checker and a bundler cannot see.
+      - name: Dictionaries in sync
+        run: npm run dict:check
+
+      - name: No figure duplicated out of facts.ts
+        run: npm run figures:check
+
+      - name: Figures cleared for publication
+        run: npm run facts:check
+
+      - name: Types
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    # Runs against the built site. Accessibility and SEO are hard gates;
+    # performance and best practices report but do not block, because a page that
+    # leads with photographs will always trade some score for the photograph.
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Lighthouse
+        run: npx lhci autorun
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/
+          retention-days: 14

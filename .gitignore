@@ -66,3 +66,4 @@ references/
 .agents/
 .claude/skills/
 skills-lock.json
+.lighthouseci/

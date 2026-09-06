@@ -120,11 +120,18 @@ export default function RootLayout({
           slices CJK into ~100 unicode-range subsets and the browser fetches only the few
           it needs; next/font would self-host all of them and add megabytes to the slug.
           Both hosts are already allowed by the CSP in next.config.js.
+
+          Two weights, not three. Google emits a separate set of about a hundred
+          unicode-range @font-face rules per weight for CJK, so each weight costs
+          roughly 30KB of stylesheet before a single glyph is fetched. The site is
+          overwhelmingly semibold with some light; 500 was carried for .display-*
+          alone, and dropping it leaves the browser choosing between 400 and 600,
+          which at CJK heading sizes is not a difference a reader notices.
         */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&display=swap"
           rel="stylesheet"
         />
       </head>
