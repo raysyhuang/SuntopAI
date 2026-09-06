@@ -28,6 +28,12 @@ jobs:
       - name: No figure duplicated out of facts.ts
         run: npm run figures:check
 
+      # The registration covers transmission, display and processing. Nothing was
+      # reading the copy itself, and seven strings claiming prediction, autonomous
+      # analysis and treatment planning shipped and stayed shipped.
+      - name: No copy claims more than the registration covers
+        run: npm run copy:check
+
       - name: Figures cleared for publication
         run: npm run facts:check
 

@@ -9,7 +9,13 @@ import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
 import { Section } from '@/components/ui/Section'
 import { Stat } from '@/components/ui/Stat'
-import { publicFact, REGISTRATION, OUTCOMES, type FactId } from '@/content/facts'
+import {
+  publicFact,
+  REGISTRATION,
+  OUTCOMES,
+  OUTCOMES_ATTRIBUTION,
+  type FactId,
+} from '@/content/facts'
 import { NetworkMap } from '@/components/NetworkMap'
 
 /**
@@ -454,8 +460,12 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
 
         <motion.div {...fade} className="mt-14 pt-8 border-t border-slate-800">
+          {/* From facts.ts, not the dictionary. These outcomes carry no documented
+              study design yet, so the attribution is the condition of publishing
+              them at all — it cannot be allowed to drift out of sync in one locale
+              the way a copied string can. */}
           <p className="text-xs leading-relaxed text-neutral-500 max-w-2xl">
-            {d.home.clinicalHighlights.footnote}
+            {OUTCOMES_ATTRIBUTION[locale]}
           </p>
           <Link
             href={`/${locale}/clinical`}

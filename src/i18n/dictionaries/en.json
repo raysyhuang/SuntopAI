@@ -139,7 +139,7 @@
         "3. Flythe JE, et al. Association of Mortality Risk with Various Definitions of Intradialytic Hypotension. J Am Soc Nephrol 2015;26:724-734",
         "4. Saran R, et al. Longer treatment time and slower ultrafiltration in hemodialysis: associations with reduced mortality in the DOPPS. Kidney Int 2006;69:1222-1228"
       ],
-      "description2": "Our AI system analyzes BP trends, UF tolerance patterns, and historical treatment data to predict IDH events minutes before onset, optimize UF profiling, and provide evidence-based dry weight recommendations.",
+      "description2": "The system gathers blood-pressure trends, ultrafiltration records and treatment history into a form a clinician can read directly, supporting review of the plan at each session. Dry-weight prediction and intradialytic hypotension warning remain research programmes.",
       "clinical": {
         "title": "IDH Prevention",
         "desc": "Reduced intradialytic hypotension through predictive alerts"
@@ -183,7 +183,7 @@
       }
     },
     "finalCta": {
-      "title": "What we deliver is a closed loop, not a system",
+      "title": "Start with one center and test the transformation",
       "description": "Dialysis management, connected machines, clinical decision support and real-time monitoring only work delivered together. We prove each one in our own centers before handing the whole loop to a partner."
     },
     "proofEyebrow": "Scale",
@@ -232,12 +232,12 @@
     },
     "loop": {
       "eyebrow": "What AI actually does in a dialysis unit",
-      "title": "For the first time, clinicians can review the plan at every session",
+      "title": "Plan review moves from once a fortnight to every session",
       "beforeLabel": "Before",
       "beforeBody": "Dry weight and ultrafiltration volume were reviewed once every two to four weeks. Not by choice — a clinician's hours were already full, and the data sat apart in machines, lab systems and paper notes. Assembling it took as long as a clinic.",
       "afterLabel": "Now",
       "afterBody": "Machine parameters, monitoring data and lab results from every session are gathered automatically and presented in a form that can be read directly. A clinician can check at each session whether the dry weight and ultrafiltration target still fit — instead of waiting a fortnight.",
-      "loopTitle": "Not a piece of software — a closed loop",
+      "loopTitle": "Four parts close the loop; drop one and the data breaks in the middle",
       "loopBody": "Four parts, none of them optional. Drop any one and the data breaks in the middle, and what reaches the clinician is late and incomplete.",
       "steps": [
         {
@@ -317,7 +317,7 @@
         "capabilities": [
           "Intradialytic blood pressure trend analysis",
           "Ultrafiltration risk detection",
-          "Personalized parameter recommendations",
+          "Attribution analysis of treatment records",
           "Early warning signals for adverse events"
         ]
       },
@@ -457,7 +457,7 @@
       "centralMonitoring": {
         "tag": "Central Monitoring System",
         "title": "Smart Monitoring: From Rounds to Early Warning",
-        "description": "Risk status is visualized with tiered, color-coded indicators so abnormal trends can be recognized at a glance. A centralized view of patient status helps staff quickly identify which stations may require attention.",
+        "description": "Bed status is colour-graded against configured thresholds on vital signs and dialysis parameters, so an out-of-range reading stands out. The nurses' station shows every bed at once, so the team can look and allocate resources in time. Judgement and response remain with the clinical team.",
         "images": [
           {
             "label": "Central Monitoring System"
@@ -997,7 +997,7 @@
     "smartFeature": {
       "tag": "AI-Powered",
       "title": "AI-Assisted Vascular Access Screening",
-      "description": "Ultrasound devices transmit images in real-time via 5G to our platform, where AI algorithms automatically analyze vascular conditions, identify stenosis risks, and generate standardized assessment reports to assist rapid clinical decision-making.",
+      "description": "Ultrasound images are transmitted to the platform live over 5G and filed against a standard template, so a clinician can review them remotely or in consultation. Reading and diagnosis remain with the clinician.",
       "features": [
         "5G real-time ultrasound transmission",
         "AI automatic vascular analysis",
@@ -1010,7 +1010,7 @@
     "services": [
       {
         "title": "AI-Assisted Pre-operative Assessment",
-        "description": "AI analyzes ultrasound images for comprehensive vascular condition evaluation and personalized treatment planning"
+        "description": "Ultrasound images are filed against a standard template and gathered into a vascular assessment record for the clinician to review; the assessment and the treatment plan are the clinician's."
       },
       {
         "title": "Autologous AV Fistula Surgery",
@@ -1126,12 +1126,12 @@
           "id": "intelligence",
           "title": "Intelligence Layer",
           "icon": "Brain",
-          "description": "AI models analyze trends, detect risks, and generate alerts and recommendations before complications occur.",
+          "description": "The platform gathers treatment, monitoring and laboratory data into trend views a clinician can read directly, supporting clinical judgement. The associated risk models remain research programmes.",
           "features": [
             "Intradialytic hypotension prediction",
             "Ultrafiltration risk detection",
             "Adequacy assessment",
-            "Personalized parameter recommendations"
+            "Attribution analysis of treatment records"
           ]
         },
         {
@@ -1605,7 +1605,7 @@
       "smartFeature": {
         "tag": "AI-Powered",
         "title": "AI-Assisted Vascular Access Screening",
-        "description": "Ultrasound devices transmit images in real-time via 5G to our platform, where AI algorithms automatically analyze vascular conditions, identify stenosis risks, and generate standardized assessment reports.",
+        "description": "Ultrasound images are transmitted to the platform live over 5G and filed against a standard template, so a clinician can review them remotely or in consultation. Reading and diagnosis remain with the clinician.",
         "features": [
           "5G real-time ultrasound transmission",
           "AI automatic vascular analysis",
@@ -1675,7 +1675,7 @@
       "smartFeature": {
         "tag": "AI Powered",
         "title": "AI Posture & Gait Analysis",
-        "description": "Using AI visual recognition technology, automatically analyze patients' posture and walking gait, assess muscle strength, balance ability, and motor function to provide scientific basis for personalized rehabilitation plans.",
+        "description": "Vision-based capture records a patient's posture and gait as a standardised record of functional mobility, for the rehabilitation clinician to draw on when setting a plan. The assessment is the clinician's.",
         "features": [
           "AI automatic posture analysis",
           "Gait and motor function assessment",
@@ -1740,7 +1740,7 @@
       "smartFeature": {
         "tag": "Smart Nutrition",
         "title": "Intelligent Nutritional Assessment",
-        "description": "The system automatically integrates patient lab results, dialysis parameters, and dietary records to calculate nutritional status scores, identify malnutrition risks, and generate personalized protein intake and dietary improvement recommendations.",
+        "description": "The system brings together laboratory values, dialysis parameters and dietary records, computes a nutritional status score and presents it in a form that can be read directly, for the clinician and dietitian to draw on. Dietary and protein intake plans are confirmed by the clinician or dietitian.",
         "features": [
           "Multi-dimensional nutritional indicator analysis",
           "Intelligent nutritional status scoring",

@@ -12,6 +12,7 @@
     "lint": "next lint",
     "dict:check": "node scripts/check-dict-sync.mjs",
     "figures:check": "node scripts/check-figure-drift.mjs",
+    "copy:check": "node scripts/check-clinical-language.mjs",
     "lh": "lhci autorun",
     "facts:check": "node scripts/check-facts.mjs",
     "map:build": "node scripts/make-network-map.mjs"
