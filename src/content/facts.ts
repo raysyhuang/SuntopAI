@@ -308,7 +308,10 @@ export const FACTS = {
   /* ---- Platform scale — 胜透 / Suntop AI ---- */
 
   'platform.machinesConnected': {
-    value: '5000+',
+    /* Thousands separator, like every other four-digit figure in this file. It was
+       the one exception, so the site printed 5000+ while the deck printed 5,000+
+       and the two looked like they came from different places. */
+    value: '5,000+',
     basis:
       'Dialysis machines connected to the Suntop AI platform across self-operated and partner centers',
     source: 'Confirmed by Suntop',

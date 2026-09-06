@@ -82,7 +82,7 @@ const RULES = [
         // analysis that lands on a clinical conclusion
         '|AI\\s*(?:{auto}|自主)?{analyse}[^。；]{0,24}(?:{diagnose}|{identify}[^。；]{0,6}(?:{risk}|{stenosis})|{formulate}|生成[^。；]{0,8}(?:{plan}|{prescription}|{order}))' +
         // drawing up the plan, however it is phrased
-        '|(?:{formulate}|定制|訂製|量身[定訂][制製]|[设設][计計])[^。；]{0,8}(?:治[疗療](?:{plan}|[计計][划劃])|{prescription})' +
+        '|(?<!(?:[医醫][师師生]|[护護]士))(?:{formulate}|定制|訂製|量身[定訂][制製]|[设設][计計])[^。；]{0,8}(?:治[疗療](?:{plan}|[计計][划劃])|{prescription})' +
         '|{auto}(?:{diagnose}|开立|開立|下{order}|{manage})' +
         '|AI\\s*{decide}|机器自主|機器自主'
     ),
@@ -91,10 +91,14 @@ const RULES = [
        same claim through 診断・判定・策定・決定. */
     ja: /(?:AI|システム|本製品)[^。]{0,24}(?:独自に|単独で|自動的に)?[^。]{0,8}(?:診断し|診断を行|判定し)|自動(?:診断|判定)|治療(?:方針|計画)[^。]{0,6}(?:策定|作成)し|医師なしで|AIが[^。]{0,12}決定/,
     /* Saying the system does NOT do these things is the point, not a violation. */
+    /* Negation only, deliberately. Adding "由医师确认" to "AI 制定治疗方案" does not
+       make it true that a clinician formulated the plan — it just bolts a
+       disclaimer onto a claim the registration does not cover. An exemption has to
+       deny the same claim, not merely mention the clinician. */
     unless: {
-      zh: zh('(?:不|未|非|无法|無法|并非|並非|不会|不會)[^。；]{0,10}(?:{diagnose}|{formulate}|{decide}|取代|替代)|由{clinician}[^。；]{0,8}(?:作出|做出|确认|確認|完成)|{clinician}[^。；]{0,10}(?:最[终終][决決]定|确认|確認)'),
-      en: /\b(?:does not|do not|never|cannot|is not|are not)\b[^.]{0,30}\b(?:diagnos|decid|replac|determin)|\b(?:clinician|physician)\s+(?:confirms|decides|retains|remains)/i,
-      ja: /(?:ものではありません|ではありません|しません|行いません)|医師が(?:確認|判断|行)/,
+      zh: zh('(?:不|未|非|无法|無法|并非|並非|不会|不會|[绝絕]不)[^。；]{0,10}(?:{diagnose}|{formulate}|{decide}|取代|替代|判[断斷]病情)'),
+      en: /\b(?:does not|do not|never|cannot|is not|are not|rather than)\b[^.]{0,30}\b(?:diagnos|decid|replac|determin|formulat|design)/i,
+      ja: /(?:診断|判定|策定|決定)(?:する)?(?:ものではありません|ことはありません)|(?:診断|判定|策定)(?:し|は)ません/,
     },
   },
   {
@@ -104,7 +108,7 @@ const RULES = [
       '(?:{occur}|{complication})前.{0,10}(?:{warn}|{predict}|[预預]判|[预預]知)' +
         '|提前[^。；]{0,4}(?:[预預]判|{predict}|{warn})' +
         '|{risk}(?:{predict}|[预預]判)|{predict}性(?:{diagnose}|[评評]估)' +
-        '|{identify}[^。；]{0,4}(?:{stenosis}|{risk})' +
+        '|(?<!(?:[医醫][师師生]|[护護]士)){identify}[^。；]{0,4}(?:{stenosis}|{risk})' +
         '|(?:{stenosis}|{risk})[^。；]{0,4}智能{identify}' +
         '|(?:干体重|乾體重)[^。；]{0,10}(?:建[议議]|推荐|推薦|{predict}|[调調]整)' +
         '|(?:超滤|超濾)曲线|(?:超滤|超濾)曲線'
@@ -113,9 +117,9 @@ const RULES = [
     ja: /(?:合併症|発症)[^。]{0,10}前に[^。]{0,10}(?:予測|警告|予知)|事前に[^。]{0,8}予測|リスク(?:予測|判定|検出)|狭窄リスク[^。]{0,6}検出|ドライウェイト[^。]{0,10}(?:予測|推奨|調整)/,
     /* Naming the research tier is the disclosure these rules exist to require. */
     unless: {
-      zh: zh('{research}|研究[项項]目|尚未注册|尚未註冊|不作[为為]已注册|不作[為为]已註冊|由{clinician}[^。；]{0,8}(?:作出|做出|确认|確認|判[断斷])|{clinician}[^。；]{0,10}(?:作出|做出|确认|確認|最[终終][决決]定)'),
-      en: /research\s+(?:programme|program|stage)|not\s+(?:offered|available)\s+(?:as|for)|in[- ]validation|remains?\s+the\s+clinician|\b(?:clinician|physician)\s+(?:confirms|decides|judges)/i,
-      ja: /研究(?:段階|プログラム)|提供するものではありません|臨床使用はできません|医師が(?:行い|判断|確認)/,
+      zh: zh('研究(?:[验驗][证證])?(?:阶段|階段)|[验驗][证證]阶段|[验驗][證证]階段|研究[项項]目|尚未注册|尚未註冊|不作[为為]已注册|不作[為为]已註冊|由{clinician}[^。；]{0,8}(?:作出|做出|判[断斷])|{clinician}[^。；]{0,10}(?:作出|做出|最[终終][决決]定)'),
+      en: /research\s+(?:programme|program|stage)|not\s+(?:offered|available)\s+(?:as|for)|in[- ]validation|remains?\s+the\s+clinician|\b(?:clinician|physician)\s+(?:decides|judges)/i,
+      ja: /研究(?:段階|プログラム)|提供するものではありません|臨床使用はできません|医師が(?:行い|判断)/,
     },
   },
   {
@@ -152,14 +156,14 @@ const RULES = [
   {
     id: 'replaces-clinician',
     why: 'Claims the system replaces clinical staff.',
-    zh: zh('(?:取代|替代|无需|無需|不需要){clinician}'),
+    zh: zh('(?:取代|替代){clinician}|(?:无需|無需|不需要){clinician}[^。；]{0,6}(?:介入|[参參]与|[参參]與|判[断斷]|确认|確認|[审審]核|复核|複核|在场|在場)'),
     en: /\breplac(?:e|es|ing)\s+(?:the\s+)?(?:physician|clinician|nurse|doctor)|\bwithout\s+(?:a\s+)?(?:physician|clinician|doctor)\b/i,
     ja: /(?:医師|看護師)(?:に)?(?:代わ|取って代わ)|医師(?:は)?不要|医師なしで/,
     /* "本系统不取代医生" is the sentence we want, and the first version rejected it. */
     unless: {
-      zh: zh('(?:不|未|非|无法|無法|并非|並非|不会|不會|[绝絕]不)[^。；]{0,4}(?:取代|替代)|{clinician}[^。；]{0,10}(?:作出|做出|确认|確認|最[终終][决決]定)'),
-      en: /\b(?:does not|do not|never|cannot|is not|are not)\b[^.]{0,20}\breplac|\b(?:clinician|physician)\s+(?:confirms|decides|retains|remains)/i,
-      ja: /(?:代わるものではありません|置き換えるものではありません|ではありません|しません)|医師が(?:確認|判断)/,
+      zh: zh('(?:不|未|非|无法|無法|并非|並非|不会|不會|[绝絕]不)[^。；]{0,4}(?:取代|替代)'),
+      en: /\b(?:does not|do not|never|cannot|is not|are not)\b[^.]{0,20}\breplac/i,
+      ja: /(?:代わるもの|置き換えるもの)ではありません|医師(?:に)?代わ(?:り|る)ません/,
     },
   },
 ]
@@ -209,6 +213,12 @@ const MUST_CATCH = [
   ['zh-CN', 'unregistered-prediction', '狭窄风险智能识别'],
   ['en', 'unregistered-prediction', 'Intelligent stenosis risk detection'],
   ['ja', 'unregistered-prediction', 'インテリジェント狭窄リスク検出'],
+  /* Bypasses: a disclaimer bolted onto a forbidden claim is not an exemption. */
+  ['zh-CN', 'autonomous-action', 'AI分析超声影像，识别狭窄风险，制定个性化治疗方案。建议供参考，由医师确认。'],
+  ['zh-CN', 'unregistered-prediction', 'AI提前预判透中低血压并生成处置建议。研究显示效果良好。'],
+  ['zh-CN', 'replaces-clinician', '系统取代医师完成评估，医师确认后生效。'],
+  ['ja', 'autonomous-action', 'AIが治療方針を策定します。医師が確認します。'],
+  ['zh-CN', 'replaces-clinician', '无需医师介入即可完成评估。'],
 ]
 
 const MUST_PASS = [
@@ -228,6 +238,11 @@ const MUST_PASS = [
   ['en', 'The platform never replaces the physician; it only displays data.'],
   ['en', 'The system does not replace the physician.'],
   ['ja', 'AIが治療方針を決定するものではありません。'],
+  /* The clinician is the actor and the system only carries the result — which is
+     the registered scope, not a violation of it. */
+  ['zh-CN', '系统仅传输医师制定的治疗方案。'],
+  ['zh-CN', '系统显示医师识别狭窄风险后记录的结论。'],
+  ['zh-CN', '数据自动传输，无需医生手工录入。'],
   /* Attributing the judgement to the clinician is the required framing, and an
      earlier version of the prediction rule rejected it. */
   ['zh-CN', '系统自动记录每次透析前后的体重数据，整理成趋势视图供医师查阅。干体重的评估与调整由医师作出。'],
