@@ -37,9 +37,7 @@ export async function getCentersData(locale: Locale): Promise<CentersData> {
  * of bug rather than fixing its instances.
  */
 export function getCentersDataSync(locale: Locale): CentersData {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { readFileSync } = require('fs') as typeof import('fs')
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
   const { join } = require('path') as typeof import('path')
 
   const read = (loc: string) =>

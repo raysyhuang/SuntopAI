@@ -1,0 +1,18 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "jsx-a11y/alt-text": "error",
+    "@next/next/no-page-custom-font": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/services/**/*.tsx",
+        "**/platform/**/*.tsx"
+      ],
+      "rules": {
+        "@next/next/no-img-element": "off"
+      }
+    }
+  ]
+}
