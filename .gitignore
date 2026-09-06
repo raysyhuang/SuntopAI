@@ -55,7 +55,6 @@ next-env.d.ts
 video/
 
 # PDF slides generator
-pdf-slides/
 
 # Reference materials (not for production)
 references/

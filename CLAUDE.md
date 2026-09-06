@@ -27,11 +27,10 @@ npm run facts:check      # Report figures awaiting reconciliation, and outcome
 
 ## Monorepo Structure
 
-This repository contains **three independent projects**:
+This repository contains **two independent projects**:
 
 1. **Main website** (root) - Next.js 14 corporate site
 2. **video/** - Remotion-based video generation
-3. **pdf-slides/** - React PDF presentation generator
 
 Each has its own `package.json` and dependencies. **Do not mix dependencies** between projects.
 
@@ -44,12 +43,22 @@ npm run build:intro      # Render intro only
 npm run build:short      # Render short version
 ```
 
-### PDF slides project commands
-```bash
-cd pdf-slides
-npm run generate         # Generate PDF presentation
-npm run generate:all     # Generate with confirmation message
-```
+### The company profile deck lives outside this repository
+
+It is `~/Documents/Python Project/Suntop Profile` (45 pages, `python3 build/build.py`,
+which checks every page for overflow before printing the PDF). Its text and figures
+come from the same `POSITIONING.md` and `src/content/facts.ts` this site reads, so a
+figure changed here has to be carried across by hand — check both when a number moves.
+
+There used to be a `pdf-slides/` React-PDF generator here, superseded by that deck and
+moved to `~/Documents/Python Project/_archive/pdf-slides-superseded-2026-09`. It had
+fallen far out of date — `3000+` machines against the current `5000+`, a `95% 预警准确率`
+backed by no fact record, and "从辅助驾驶到自动驾驶" on its title slide — and an outside
+reviewer mistook its output for the current company profile.
+
+It was moved rather than deleted because it was in `.gitignore` and never committed:
+there is no git history to recover it from. Do not resurrect its content; anything
+reused from it has to be rewritten against `POSITIONING.md` and `facts.ts`.
 
 ## Architecture
 
@@ -266,7 +275,7 @@ NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 
 - Path alias: `@/*` → `./src/*`
 - Strict mode enabled
-- Excludes: `node_modules`, `video`, `pdf-slides`
+- Excludes: `node_modules`, `video`
 
 ## Key Pages & Routes
 
@@ -355,7 +364,7 @@ From README.md - **institutional tone suitable for hospitals, investors, regulat
 2. **Do NOT** modify i18n JSON structure, or add a key to one locale only —
    new keys go into all four files together, each genuinely translated
 3. **Do NOT** forget to update all 4 language files when changing content
-4. **Do NOT** mix dependencies between root/video/pdf-slides projects
+4. **Do NOT** mix dependencies between the root and `video/` projects
 5. **Do NOT** use Server Component features in `*Client.tsx` files
 6. **Do NOT** skip locale parameter in page components - always await params
 7. **Do NOT** import dictionaries directly - use `getDictionary(locale)`
