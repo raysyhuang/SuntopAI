@@ -149,7 +149,7 @@
         "desc": "Data-driven dry weight assessment, reducing inter-physician variability"
       },
       "strategic": {
-        "title": "Risk Detection",
+        "title": "Out-of-range flagging",
         "desc": "Multi-dimensional analysis to identify potential complication risks early"
       },
       "longterm": {
@@ -316,7 +316,7 @@
         "signal": "The system augments clinical judgment rather than replacing it.",
         "capabilities": [
           "Intradialytic blood pressure trend analysis",
-          "Ultrafiltration risk detection",
+          "Ultrafiltration records and threshold flags",
           "Attribution analysis of treatment records",
           "Early warning signals for adverse events"
         ]
@@ -362,7 +362,7 @@
           "features": [
             {
               "title": "Data-Driven Clinical Decisions",
-              "description": "Robust data foundation for treatment planning with AI-powered preset templates enabling rapid generation of evidence-based clinical recommendations."
+              "description": "Laboratory results are filed as structured records against a standard template, so a clinician can complete the write-up quickly. Drafts are for reference and take effect once the clinician confirms them."
             },
             {
               "title": "One-Click Clinical Reports",
@@ -378,7 +378,7 @@
           "features": [
             {
               "title": "Risk Classification",
-              "description": "System automatically completes risk classification based on multi-dimensional data, helping quickly identify high-risk patients for targeted intervention."
+              "description": "Patient records are grouped by rules the center configures, so the nursing team can find who needs attention first. The center sets the grouping; whether to intervene is the clinical team's decision."
             },
             {
               "title": "Photo Comparison Tracking",
@@ -390,7 +390,7 @@
         "medicalRecords": {
           "title": "Dry Weight Assessment Assistant",
           "subtitle": "Smart weight trend tracking, scientific dry weight assessment, optimized UF planning",
-          "description": "System automatically records pre/post-dialysis weight data, combining UF volume, BP changes and multi-dimensional indicators to intelligently analyze patient weight trends. Assists doctors in scientifically assessing and adjusting dry weight, optimizing UF prescriptions, and preventing volume-related complications.",
+          "description": "Pre- and post-dialysis weights are recorded automatically and presented alongside ultrafiltration volume and blood-pressure change as a trend view for the clinician to read. Assessing and adjusting dry weight remains the clinician's.",
           "features": [
             {
               "title": "Smart Weight Trend Tracking",
@@ -398,10 +398,10 @@
             },
             {
               "title": "Dry Weight & Blood Pressure Trends",
-              "description": "Combining BP patterns, UF tolerance, edema assessment data, AI analyzes if current dry weight setting is appropriate and generates adjustment recommendations."
+              "description": "Blood-pressure patterns, ultrafiltration tolerance and oedema records are gathered into one view, so a clinician can re-check the current dry weight setting. The dry-weight models remain research programmes."
             }
           ],
-          "aiHighlight": "Smart weight tracking + multi-dimensional analysis for scientific dry weight assessment"
+          "aiHighlight": "Weight trends and related records on one screen, for the clinician to review"
         },
         "labReminder": {
           "title": "Lab Reminder Module",
@@ -1001,7 +1001,7 @@
       "features": [
         "5G real-time ultrasound transmission",
         "AI automatic vascular analysis",
-        "Intelligent stenosis risk detection",
+        "Successive vascular assessments compared",
         "Standardized report generation"
       ]
     },
@@ -1609,7 +1609,7 @@
         "features": [
           "5G real-time ultrasound transmission",
           "AI automatic vascular analysis",
-          "Intelligent stenosis risk detection",
+          "Successive vascular assessments compared",
           "Standardized report generation"
         ]
       },

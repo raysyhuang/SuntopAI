@@ -94,6 +94,18 @@ for (const p of withCenter) {
   if (!served.has(p)) throw new Error(`${p} has a center but is missing from network-coverage.json`)
 }
 
+/* The published province figure has to be the length of this roster. They were
+   allowed to drift once already — facts.ts carried "25+" from a 2023 deck while
+   the map shaded 23 — and a reader who counts the shaded provinces is entitled to
+   get the number the page prints. */
+const factsSrc = readFileSync(join(ROOT, 'src/content/facts.ts'), 'utf8')
+const claimed = factsSrc.match(/'group\.provinces':\s*\{\s*value:\s*'([^']+)'/)?.[1]
+if (claimed !== String(served.size)) {
+  throw new Error(
+    `group.provinces in facts.ts is "${claimed}" but network-coverage.json lists ${served.size}`
+  )
+}
+
 const paths = geo.features
   .map((f) => {
     const d = pathFor(f.geometry)
@@ -144,6 +156,13 @@ function inProvince(lon, lat, province) {
   return hit
 }
 
+/* What this gate does and does not prove. It catches a coordinate that landed in
+   the wrong province — the failure a city guessed from a hospital's name actually
+   produces. It CANNOT catch a coordinate that is in the right province but the
+   wrong city: put Guangzhou's position on the 东莞 record and this passes, because
+   both are in 广东. There is no city gazetteer in the repo to check against, so
+   the city column is only as good as whoever wrote it. Spot-check a new row on a
+   map before committing it. */
 const misplaced = enabled.filter((c) => !inProvince(c.lng, c.lat, c.province))
 if (misplaced.length) {
   throw new Error(
@@ -152,10 +171,38 @@ if (misplaced.length) {
   )
 }
 
-const published = centers.filter((c) => c.coordinates).map((c) => c.coordinates)
-const enabledPlotted = enabled.filter(
-  (c) => !published.some((p) => Math.abs(p.lng - c.lng) < 0.35 && Math.abs(p.lat - c.lat) < 0.35)
-)
+const published = centers
+  .filter((c) => c.coordinates)
+  .map((c) => ({ ...c.coordinates, type: c.type === 'direct' ? 'direct' : 'partner' }))
+
+/** Collapses records that sit on the same point; a self-operated centre wins over
+    a partner one, so a shared coordinate never downgrades what it depicts. */
+function dedupe(points) {
+  const byPoint = new Map()
+  for (const p of points) {
+    const key = `${p.lng.toFixed(4)},${p.lat.toFixed(4)}`
+    const kept = byPoint.get(key)
+    if (!kept || (kept.type !== 'direct' && p.type === 'direct')) byPoint.set(key, p)
+  }
+  return [...byPoint.values()]
+}
+
+/* Real distance, not a bounding box. Comparing longitude and latitude
+   independently makes the "radius" a square, so a point 0.382° away on the
+   diagonal was being suppressed by a 0.35° rule — 平湖 was dropped against
+   海宁康华医院 on exactly that. Longitude is scaled by cos(latitude) because a
+   degree of longitude is shorter than a degree of latitude away from the
+   equator, which is the same correction the projection above makes. */
+const SUPPRESS_DEG = 0.35
+function near(a, b) {
+  const kx = Math.cos(((a.lat + b.lat) / 2 / 180) * Math.PI)
+  const dx = (a.lng - b.lng) * kx
+  const dy = a.lat - b.lat
+  return Math.hypot(dx, dy) < SUPPRESS_DEG
+}
+
+const enabledPlotted = enabled.filter((c) => !published.some((p) => near(p, c)))
+const publishedDots = dedupe(published)
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
 <style>
@@ -194,16 +241,14 @@ writeFileSync(
     {
       viewBox: { width: W, height: H },
       dots: [
-        ...centers
-          .filter((c) => c.coordinates)
-          .map((c) => {
-            const [x, y] = pt(c.coordinates.lng, c.coordinates.lat)
-            return {
-              x: Number(x.toFixed(1)),
-              y: Number(y.toFixed(1)),
-              type: c.type === 'direct' ? 'direct' : 'partner',
-            }
-          }),
+        /* Two centers sharing a city-centre coordinate produce two dots in exactly
+           the same place — invisible as duplication, but it inflates what a reader
+           counts. 合肥 and 哈尔滨 each have a pair. Collapse them; the count beside
+           the map comes from facts.ts, not from counting dots. */
+        ...publishedDots.map((c) => {
+          const [x, y] = pt(c.lng, c.lat)
+          return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), type: c.type }
+        }),
         ...enabledPlotted.map((c) => {
           const [x, y] = pt(c.lng, c.lat)
           return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), type: 'enabled' }
@@ -222,7 +267,8 @@ writeFileSync(
 console.log(
   `network-map.svg + network-map-dots.json  ${Math.round(svg.length / 1024)} KB  ` +
     `${withCenter.size} with centers + ${served.size - withCenter.size} served = ${served.size} provinces  ` +
-    `${centers.filter((c) => c.coordinates).length} centers + ${enabledPlotted.length} enabled cities plotted ` +
+    `${publishedDots.length} center dots (${published.length} centers, ${published.length - publishedDots.length} sharing a point) ` +
+    `+ ${enabledPlotted.length} enabled cities ` +
     `(${enabled.length - enabledPlotted.length} suppressed as already published)`
 )
 console.log('  有中心：', [...withCenter].sort().join('、'))

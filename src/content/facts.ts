@@ -224,13 +224,15 @@ export const FACTS = {
   /* ---- Group scale — 杏泰 Suntop Healthcare ---- */
 
   'group.provinces': {
-    value: '25+',
-    basis: 'Provinces containing at least one hospital served by the group',
-    source: 'Suntop Official Company Overview deck',
-    asOf: '2023-12',
-    status: 'needs-review',
+    value: '23',
+    basis:
+      'Provinces and municipalities containing at least one dialysis center or hospital served by the group — through the supply chain, a cooperative-operation arrangement, or a platform deployment. Enumerated, not estimated: the roster is public/data/network-coverage.json, which the network map reads',
+    source: 'Derived from the group customer and cooperative-hospital roster',
+    asOf: '2026-09',
+    status: 'verified',
     audience: ['public', 'investor-gated'],
-    note: 'Nearly three years old. Confirm or refresh.',
+    conflicts: [{ value: '25+', source: 'Suntop Official Company Overview deck, 2023-12' }],
+    note: 'Replaced a three-year-old "25+" that no one could trace to a list. This one is a count of a roster that exists, so the map and the figure cannot drift apart.',
   },
   'group.hospitalsServed': {
     value: '800+',
