@@ -19,11 +19,15 @@ interface VascularAccessClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 // Service icons mapping
 const serviceIcons = [
@@ -154,7 +158,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`rounded-3xl p-8 md:p-12 ${
@@ -257,7 +260,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -276,7 +278,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
@@ -313,7 +314,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
@@ -329,7 +329,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
@@ -364,7 +363,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
@@ -378,7 +376,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
             {galleryImages.map((src, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
@@ -410,7 +407,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
       >
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`rounded-2xl p-6 md:p-10 text-center ${
@@ -445,7 +441,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-6">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
@@ -472,7 +467,6 @@ export default function VascularAccessClient({ locale, dictionary }: VascularAcc
               </Link>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >

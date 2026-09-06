@@ -17,11 +17,15 @@ interface PlatformClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 const capabilityIcons = [Server, Activity, Wifi, Shield, Activity, Target, Cpu, Zap, GitBranch, Layers, Target, Shield]
 
@@ -65,7 +69,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
         <section className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#faf9f5' : '#1e293b' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -84,7 +87,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               {Object.entries(t.clinicalApplications.apps).map(([key, app]: [string, any], index) => (
                 <motion.div
                   key={key}
-                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
@@ -126,7 +128,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
             {/* Link to Clinical Page */}
             {t.clinicalApplications.learnMore && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-center mt-12"
@@ -151,7 +152,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
         <section id="data" className="relative py-24" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -176,7 +176,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                 return (
                   <motion.div
                     key={key}
-                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -286,7 +285,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
             {/* Central Monitoring Subsection */}
             {t.monitoringSystem.centralMonitoring && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="mb-20"
@@ -337,7 +335,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
             {/* Bedside Terminal Subsection */}
             {t.monitoringSystem.bedsideTerminal && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -398,7 +395,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
                       {t.monitoringSystem.bedsideTerminal.features.map((feature: any, index: number) => (
                         <motion.div
                           key={feature.title}
-                          initial={{ opacity: 0, y: 20 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ delay: index * 0.1 }}
@@ -485,7 +481,6 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
               ].map((link, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >

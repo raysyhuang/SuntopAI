@@ -29,11 +29,15 @@ interface ClinicalClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 const outcomeIcons = [Activity, AlertTriangle, Shield, CheckCircle, Network, TrendingUp, Users, Building2, TrendingUp, Activity, Clock, CheckCircle]
 type GalleryGroupKey = 'education' | 'quality' | 'engagement' | 'rehab' | 'training'
@@ -122,7 +126,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
         >
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -164,7 +167,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-center mb-8"
@@ -195,7 +197,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                   >
@@ -216,7 +217,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     </p>
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="rounded-2xl overflow-hidden"
@@ -239,7 +239,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     return (
                       <motion.div
                         key={key}
-                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
@@ -301,7 +300,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                   <motion.div
-                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="rounded-2xl overflow-hidden lg:order-1 order-2"
@@ -317,7 +315,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     />
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="lg:order-2 order-1"
@@ -346,7 +343,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     return (
                       <motion.div
                         key={key}
-                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
@@ -408,7 +404,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                   >
@@ -429,7 +424,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     </p>
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     className="grid grid-cols-2 gap-4"
@@ -455,7 +449,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                     return (
                       <motion.div
                         key={key}
-                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 }}
@@ -518,7 +511,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -538,7 +530,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               {Object.entries(t.results.categories).map(([key, category]: [string, any], catIndex) => (
                 <motion.div
                   key={key}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: catIndex * 0.1 }}
@@ -625,7 +616,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -666,7 +656,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
                         return (
                           <motion.div
                             key={itemKey}
-                            initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: transitionIndex * 0.03 }}
@@ -711,7 +700,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
 
       {activeGalleryItem && (
         <motion.div
-          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6"
           role="dialog"
@@ -758,7 +746,6 @@ export default function ClinicalClient({ locale, dictionary }: ClinicalClientPro
               ].map((link, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >

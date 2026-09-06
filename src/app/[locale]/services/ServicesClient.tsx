@@ -20,11 +20,15 @@ interface ServicesClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 // Vascular access gallery images
 const vascularGalleryImages = [
@@ -172,7 +176,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 <motion.a
                   key={card.id}
                   href={`#${card.id}`}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
@@ -210,7 +213,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             {/* Header with Benefits */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -227,7 +229,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   {t.operationService.benefits?.map((benefit: string, index: number) => (
                     <motion.span
                       key={index}
-                      initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
@@ -249,7 +250,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             <div className="grid lg:grid-cols-2 gap-8 mb-12">
               {/* Left: Solution Cards */}
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
@@ -262,7 +262,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                     return (
                       <motion.div
                         key={item.title}
-                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.05 }}
@@ -291,7 +290,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
               {/* Right: Gallery Preview */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
               >
@@ -302,7 +300,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   {partnershipImages.slice(0, 4).map((img, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.05 }}
@@ -323,7 +320,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
             {/* Partner Centers - Compact */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className={`rounded-2xl p-6 ${
@@ -370,7 +366,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
@@ -385,7 +380,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* AI Feature Highlight */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`rounded-2xl p-8 mb-12 ${
@@ -461,7 +455,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* Services Summary */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`p-8 rounded-2xl mb-12 ${
@@ -493,7 +486,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             {vascularGalleryImages.slice(0, 3).map((src, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
@@ -512,7 +504,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* Learn More Link */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mt-10 text-center"
@@ -540,7 +531,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
@@ -555,7 +545,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* Activities Summary */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`p-6 md:p-8 rounded-2xl mb-12 ${
@@ -596,7 +585,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* Smart Tourism Feature */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className={`rounded-2xl p-8 ${
@@ -645,7 +633,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
           {/* Learn More Link */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mt-10 text-center"
@@ -676,7 +663,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Platform Descriptions */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -748,7 +734,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
 
             {/* Right: App Preview with QR Code */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex flex-col items-center justify-center"
@@ -796,7 +781,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -845,7 +829,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               </motion.div>
               
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer group"
@@ -868,7 +851,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -934,7 +916,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="grid grid-cols-2 gap-4"
@@ -964,7 +945,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -991,7 +971,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="grid grid-cols-2 gap-4"
@@ -1022,7 +1001,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -1041,7 +1019,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                   {t.skinCare.services?.map((service: { title: string; description: string }, index: number) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
@@ -1084,7 +1061,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               
               {/* Image Gallery - Right Side */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 className="grid grid-cols-2 gap-4"
@@ -1116,7 +1092,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
               ].map((link, i) => (
                 <motion.div
                   key={link.href}
-                  initial={{ opacity: 0, x: i === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                 >
@@ -1152,7 +1127,6 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
       >
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >

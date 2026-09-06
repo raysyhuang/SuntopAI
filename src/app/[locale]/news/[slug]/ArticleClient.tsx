@@ -297,7 +297,6 @@ export default function ArticleClient({ locale, dictionary, article }: ArticleCl
         <div className="max-w-3xl mx-auto px-6 lg:px-8">
           {/* Summary */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className={`text-xl leading-relaxed mb-8 pb-8 border-b ${
               theme === 'dark' ? 'text-gray-300 border-slate-700' : 'text-gray-700 border-gray-200'
@@ -311,7 +310,6 @@ export default function ArticleClient({ locale, dictionary, article }: ArticleCl
             {content.content.map((paragraph, index) => (
               <motion.p
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className={`text-base leading-relaxed ${
@@ -325,7 +323,6 @@ export default function ArticleClient({ locale, dictionary, article }: ArticleCl
 
           {/* Back link */}
           <motion.div
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             className="mt-12 pt-8 border-t"

@@ -39,11 +39,15 @@ interface DeploymentClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 export default function DeploymentClient({ locale, dictionary }: DeploymentClientProps) {
   const t = dictionary.deployment
@@ -67,7 +71,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex items-center gap-4"
@@ -103,7 +106,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -126,7 +128,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 return (
                   <motion.div
                     key={layer.id}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -183,7 +184,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -205,7 +205,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 return (
                   <motion.div
                     key={option.title}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -247,7 +246,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex items-center gap-4"
@@ -282,7 +280,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -304,7 +301,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 return (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -384,7 +380,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex items-center gap-4"
@@ -420,7 +415,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -442,7 +436,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                 return (
                   <motion.div
                     key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -487,7 +480,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
             {/* Suppliers */}
             {t.supplyChain.suppliers && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -506,7 +498,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
                   {t.supplyChain.suppliers.list.map((supplier: any, index: number) => (
                     <motion.div
                       key={supplier.nameEn}
-                      initial={{ opacity: 0, scale: 0.95 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.03 }}
@@ -546,7 +537,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex items-center gap-4"
@@ -584,7 +574,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
             {/* Process */}
             {t.process && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -629,7 +618,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
             {/* Security */}
             {t.security && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
@@ -688,7 +676,6 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
               {Object.entries(t.crossLinks).map(([key, link]: [string, any]) => (
                 <motion.div
                   key={key}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="rounded-2xl p-8"

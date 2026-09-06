@@ -18,11 +18,15 @@ interface CompanyClientProps {
   centers: Center[]
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 export default function CompanyClient({ locale, dictionary, centers }: CompanyClientProps) {
   const t = dictionary.company
@@ -66,7 +70,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="rounded-2xl p-8"
@@ -100,7 +103,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
@@ -145,7 +147,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
@@ -184,7 +185,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
@@ -215,7 +215,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-3xl mb-14"
@@ -235,7 +234,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
             {t.structureNodes.map((node, i) => (
               <motion.div
                 key={node.name}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
@@ -259,7 +257,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
           </div>
 
           <motion.div
-            initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="mt-5 rounded-lg border p-6 flex flex-col md:flex-row md:items-center gap-4 md:gap-8"
@@ -282,7 +279,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
 
           {/* Flagship case */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="max-w-3xl mt-24 mb-12"
@@ -302,7 +298,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
             {t.caseSteps.map((step, i) => (
               <motion.div
                 key={step.stage}
-                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
@@ -350,7 +345,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -371,7 +365,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
               {centers.slice(0, 6).map((center, index) => (
                 <motion.div
                   key={center.slug}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
@@ -411,7 +404,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
 
             {/* More Centers Note */}
             <motion.div
-              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="text-center"
@@ -444,7 +436,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="text-center mb-12"
@@ -464,7 +455,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
               {t.partners.list.map((partner: { name: string; province: string; note?: string }, index: number) => (
                 <motion.div
                   key={partner.name}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05 }}
@@ -490,7 +480,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
             </div>
 
             <motion.p
-              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               className="text-center mt-8"
@@ -512,7 +501,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
           >
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-center mb-16"
@@ -540,7 +528,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
                 {contactReasons.map((reason, index) => (
                   <motion.div
                     key={reason.title}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
@@ -579,7 +566,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
                 {/* Form */}
                 <div className="lg:col-span-3">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                   >
@@ -746,7 +732,6 @@ export default function CompanyClient({ locale, dictionary, centers }: CompanyCl
                 {/* Contact Info */}
                 <div className="lg:col-span-2">
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     className="space-y-8"

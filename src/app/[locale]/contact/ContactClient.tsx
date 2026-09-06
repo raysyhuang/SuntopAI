@@ -12,11 +12,15 @@ interface ContactClientProps {
   dictionary: Dictionary
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 export default function ContactClient({ locale, dictionary }: ContactClientProps) {
   const t = dictionary.contact
@@ -90,7 +94,6 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
             {contactReasons.map((reason, index) => (
               <motion.div
                 key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
@@ -129,7 +132,6 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Form */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
@@ -142,7 +144,6 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
               
               {isSubmitted ? (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   className="text-center py-12 rounded-2xl"
                   style={{ 
@@ -301,7 +302,6 @@ export default function ContactClient({ locale, dictionary }: ContactClientProps
 
             {/* Contact Info */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >

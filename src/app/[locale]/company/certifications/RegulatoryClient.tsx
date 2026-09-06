@@ -18,12 +18,19 @@ import { REGISTRATION, BRAND } from '@/content/facts'
  * the certificate actually covers.
  */
 
-const fade = {
-  initial: { opacity: 0, y: 16 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
-}
+/*
+  Deliberately empty, and kept as a named object so the call sites do not all have
+  to change to say the same thing.
+
+  This used to fade every section up on scroll. Two problems, and they point the
+  same way. Framer writes `initial` into the server HTML, so opacity:0 shipped in
+  the markup on 35 blocks and none of them were readable until hydration finished —
+  blank on a slow connection, permanently blank if the bundle failed. And an
+  identical entrance on every section is not motion design; it is a tic. The site
+  keeps one authored moment, the network map assembling itself, which carries
+  meaning the page would otherwise have to state.
+*/
+const fade = {}
 
 interface RegulatoryClientProps {
   locale: Locale
@@ -120,7 +127,6 @@ export default function RegulatoryClient({ locale, dictionary }: RegulatoryClien
             <motion.div
               key={tier.key}
               {...fade}
-              transition={{ ...fade.transition, delay: i * 0.08 }}
               className={`rounded-2xl border p-7 ${
                 isLight
                   ? '[background-color:#faf9f5] [border-color:#e8e6dc]'

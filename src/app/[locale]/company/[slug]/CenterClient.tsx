@@ -16,11 +16,15 @@ interface CenterClientProps {
   center: Center
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 export default function CenterClient({ locale, dictionary, center }: CenterClientProps) {
   const t = dictionary.company
@@ -119,7 +123,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
             <div className="lg:col-span-1 space-y-6">
               {/* Address */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="rounded-2xl p-6"
@@ -150,7 +153,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               {/* Contact */}
               {center.contact && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
@@ -183,7 +185,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               {/* Area */}
               {center.area && (
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
@@ -217,7 +218,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
             {/* Features */}
             <div className="lg:col-span-2">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
@@ -232,7 +232,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
                   {(center.features ?? []).map((feature, index) => (
                     <motion.div
                       key={feature}
-                      initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
@@ -253,7 +252,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
 
               {/* Standard Features */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="mt-12"
@@ -331,7 +329,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -348,7 +345,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               {center.gallery.map((image, index) => (
                 <motion.div
                   key={image}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
@@ -379,7 +375,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="mb-12"
@@ -407,7 +402,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
               {center.tourism.map((spot, index) => (
                 <motion.div
                   key={spot.name}
-                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
@@ -468,7 +462,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
@@ -491,7 +484,6 @@ export default function CenterClient({ locale, dictionary, center }: CenterClien
       {/* Lightbox Modal */}
       {activeGalleryItem && (
         <motion.div
-          initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-6"
           role="dialog"

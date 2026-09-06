@@ -20,12 +20,19 @@ import { publicFact } from '@/content/facts'
  * not duplicated here — it already lives on the company page, and this links to it.
  */
 
-const fade = {
-  initial: { opacity: 0, y: 16 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
-}
+/*
+  Deliberately empty, and kept as a named object so the call sites do not all have
+  to change to say the same thing.
+
+  This used to fade every section up on scroll. Two problems, and they point the
+  same way. Framer writes `initial` into the server HTML, so opacity:0 shipped in
+  the markup on 35 blocks and none of them were readable until hydration finished —
+  blank on a slow connection, permanently blank if the bundle failed. And an
+  identical entrance on every section is not motion design; it is a tic. The site
+  keeps one authored moment, the network map assembling itself, which carries
+  meaning the page would otherwise have to state.
+*/
+const fade = {}
 
 const MODEL_ICONS = [Building2, Store, Cable, PackageCheck, GraduationCap]
 
@@ -70,7 +77,6 @@ export default function PartnersClient({ locale, dictionary }: PartnersClientPro
               <motion.div
                 key={m.title}
                 {...fade}
-                transition={{ ...fade.transition, delay: i * 0.05 }}
                 className={`grid gap-4 md:grid-cols-[40px_minmax(180px,240px)_1fr] md:gap-8 py-8 border-b ${hairline}`}
               >
                 <Icon
@@ -163,7 +169,7 @@ export default function PartnersClient({ locale, dictionary }: PartnersClientPro
             </Link>
           </motion.div>
 
-          <motion.div {...fade} transition={{ ...fade.transition, delay: 0.08 }}>
+          <motion.div {...fade}>
             <h2 className={`font-display font-light text-2xl md:text-[2.1rem] leading-tight mb-8 ${heading}`}>
               {t.collaborationsTitle}
             </h2>

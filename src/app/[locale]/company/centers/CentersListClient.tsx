@@ -15,11 +15,15 @@ interface CentersListClientProps {
   centers: Center[]
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
-}
+/*
+  Empty on purpose, kept as a name so the call sites need not all change.
+
+  It used to fade each block up on mount. Framer writes `initial` into the server
+  HTML, so opacity:0 shipped in the markup and the content below it was unreadable
+  until hydration — and an identical entrance on every block is a tic rather than
+  motion design. The site keeps one authored moment: the network map assembling.
+*/
+const fadeInUp = {}
 
 export default function CentersListClient({ locale, dictionary, centers }: CentersListClientProps) {
   const t = dictionary.company
@@ -93,7 +97,6 @@ export default function CentersListClient({ locale, dictionary, centers }: Cente
           {Object.entries(centersByProvince).map(([province, provinceCenters], provinceIndex) => (
             <motion.div
               key={province}
-              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: provinceIndex * 0.1 }}
@@ -113,7 +116,6 @@ export default function CentersListClient({ locale, dictionary, centers }: Cente
                 {(provinceCenters as Center[]).map((center, index) => (
                   <motion.div
                     key={center.slug}
-                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.05 }}
@@ -155,7 +157,6 @@ export default function CentersListClient({ locale, dictionary, centers }: Cente
 
           {/* More Coming Soon */}
           <motion.div
-            initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="text-center mt-16 pt-16"

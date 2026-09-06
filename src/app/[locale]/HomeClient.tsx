@@ -32,12 +32,19 @@ const HERO_FACTS: FactId[] = [
 /** Outcomes chosen for the homepage — the rest live on the evidence page. */
 const FEATURED_OUTCOMES = ['pre-shock-patients', 'lab-evaluation-time', 'iron-deficiency']
 
-const fade = {
-  initial: { opacity: 0, y: 16 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const },
-}
+/*
+  Deliberately empty, and kept as a named object so the call sites do not all have
+  to change to say the same thing.
+
+  This used to fade every section up on scroll. Two problems, and they point the
+  same way. Framer writes `initial` into the server HTML, so opacity:0 shipped in
+  the markup on 35 blocks and none of them were readable until hydration finished —
+  blank on a slow connection, permanently blank if the bundle failed. And an
+  identical entrance on every section is not motion design; it is a tic. The site
+  keeps one authored moment, the network map assembling itself, which carries
+  meaning the page would otherwise have to state.
+*/
+const fade = {}
 
 interface HomeClientProps {
   locale: Locale
@@ -203,7 +210,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         <div className="grid md:grid-cols-2 gap-px overflow-hidden rounded-2xl border"
              style={{ borderColor: isLight ? '#e8e6dc' : '#1e293b', backgroundColor: isLight ? '#e8e6dc' : '#1e293b' }}>
           {audiences.map((a, i) => (
-            <motion.div key={a.title} {...fade} transition={{ ...fade.transition, delay: i * 0.06 }}>
+            <motion.div key={a.title} {...fade}>
               <Link
                 href={a.href}
                 className={`group flex h-full flex-col overflow-hidden transition-colors ${
@@ -309,7 +316,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
 
         <div className="grid md:grid-cols-3 gap-10 md:gap-8">
           {outcomes.map((o, i) => (
-            <motion.div key={o.id} {...fade} transition={{ ...fade.transition, delay: i * 0.08 }}>
+            <motion.div key={o.id} {...fade}>
               <div className="font-display font-light tabular-nums text-[2.5rem] md:text-[2.75rem] leading-none text-white">
                 {o.after}
               </div>

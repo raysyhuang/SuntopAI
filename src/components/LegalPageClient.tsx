@@ -19,11 +19,9 @@ const pageIcons = {
   compliance: Scale,
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 },
-}
+/* Empty on purpose — see the note on fadeInUp elsewhere: Framer writes
+   `initial` into the server HTML, so opacity:0 shipped in the markup. */
+const fadeInUp = {}
 
 export default function LegalPageClient({ locale, dictionary, pageType }: LegalPageClientProps) {
   const { theme } = useTheme()
@@ -75,7 +73,6 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           {/* Back Link */}
           <motion.div
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="mb-8"
           >
@@ -94,7 +91,6 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
 
           {/* Introduction */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className={`text-lg mb-10 leading-relaxed ${
@@ -109,7 +105,6 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
             {pageData?.sections?.map((section: { title: string; content: string; items?: string[] }, index: number) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + index * 0.05 }}
                 className={`rounded-2xl p-6 md:p-8 ${
@@ -148,7 +143,6 @@ export default function LegalPageClient({ locale, dictionary, pageType }: LegalP
 
           {/* Contact CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className={`mt-12 text-center p-8 rounded-2xl ${
