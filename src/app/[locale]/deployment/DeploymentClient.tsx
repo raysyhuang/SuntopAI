@@ -7,6 +7,7 @@ import Image from 'next/image'
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import { PageHero } from '@/components/PageHero'
 
 const supplyChainIcons: { [key: string]: React.ComponentType<{ className?: string; style?: React.CSSProperties }> } = {
   Package,
@@ -49,45 +50,14 @@ export default function DeploymentClient({ locale, dictionary }: DeploymentClien
   const { theme } = useTheme()
 
   return (
-    <div className="relative pt-20">
-      {/* Hero */}
-      <section 
-        className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
-      >
-        {theme === 'dark' && (
-          <>
-            <div className="absolute inset-0 radial-gradient" />
-          </>
-        )}
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
-            className="max-w-4xl"
-          >
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.tag}
-            </motion.span>
-            <motion.h1
-              variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {t.title}
-            </motion.h1>
-            <motion.p
-              variants={fadeInUp}
-              className="text-xl leading-relaxed"
-              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-            >
-              {t.subtitle}
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="relative">
+      {/* 部署页开在真实的中心动线上。 */}
+      <PageHero
+        title={t.title}
+        lede={t.subtitle}
+        photo="/images/partnership/corridor.jpg"
+        focus="center 40%"
+      />
 
       {/* Section Group 1: Technical Solution */}
       {t.sectionGroups?.technical && (

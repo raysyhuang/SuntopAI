@@ -13,6 +13,7 @@ import {
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import { PageHero } from '@/components/PageHero'
 
 interface ServicesClientProps {
   locale: Locale
@@ -121,45 +122,14 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
   }
 
   return (
-    <div className="relative pt-20">
-      {/* Hero */}
-      <section 
-        className="relative py-24 overflow-hidden"
-        style={{ backgroundColor: theme === 'light' ? '#f5f5f7' : '#0f172a' }}
-      >
-        {theme === 'dark' && (
-          <>
-            <div className="absolute inset-0 radial-gradient" />
-          </>
-        )}
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
-            className="max-w-4xl"
-          >
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.tag}
-            </motion.span>
-            <motion.h1
-              variants={fadeInUp}
-              className="font-display text-5xl md:text-6xl font-semibold tracking-tight mb-6"
-              style={{ color: theme === 'light' ? '#1d1d1f' : '#ffffff' }}
-            >
-              {t.title}
-            </motion.h1>
-            <motion.p
-              variants={fadeInUp}
-              className="text-xl leading-relaxed"
-              style={{ color: theme === 'light' ? '#6e6e73' : '#a1a1aa' }}
-            >
-              {t.subtitle}
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+    <div className="relative">
+      {/* 服务页面对的是患者与家属，开在人上而不是设备上。 */}
+      <PageHero
+        title={t.title}
+        lede={t.subtitle}
+        photo="/images/centers/lujiang-xingkang/3.jpg"
+        focus="center 34%"
+      />
 
       {/* Service Navigation Cards - 3x3 Grid */}
       <section className="py-16" style={{ backgroundColor: theme === 'light' ? '#ffffff' : '#1e293b' }}>

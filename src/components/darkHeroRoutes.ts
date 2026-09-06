@@ -9,7 +9,16 @@
  * Add a route here in the same change that gives it a PageHero, or the logo and
  * the links will render dark on a dark image and effectively disappear.
  */
-export const DARK_HERO_ROUTES = ['', '/partners', '/investors'] as const
+export const DARK_HERO_ROUTES = [
+  '',
+  '/platform',
+  '/services',
+  '/company',
+  '/partners',
+  '/investors',
+  '/deployment',
+  '/clinical',
+] as const
 
 /** `pathname` is the full path including the locale segment, e.g. /zh-CN/partners. */
 export function hasDarkHero(pathname: string, locale: string): boolean {

@@ -10,6 +10,7 @@ import {
 import type { Locale } from '@/i18n/config'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import { useTheme } from '@/components/ThemeProvider'
+import { PageHero } from '@/components/PageHero'
 
 interface PlatformClientProps {
   locale: Locale
@@ -50,53 +51,14 @@ export default function PlatformClient({ locale, dictionary }: PlatformClientPro
   }
 
   return (
-    <div className="relative pt-20">
-      {/* Hero Section */}
-      <section className="relative py-32 overflow-hidden" style={{ backgroundColor: theme === 'light' ? '#f5f4ed' : '#0f172a' }}>
-        {theme === 'dark' && (
-          <>
-            <div className="absolute inset-0 radial-gradient" />
-          </>
-        )}
-        
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={{ animate: { transition: { staggerChildren: 0.1 } } }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            <motion.span variants={fadeInUp} className="label-tag mb-6 inline-block">
-              {t.tag}
-            </motion.span>
-            <motion.h1
-              variants={fadeInUp}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-6"
-              style={{ color: theme === 'light' ? '#141413' : '#ffffff', letterSpacing: '-0.025em' }}
-            >
-              {t.title}
-            </motion.h1>
-            <motion.p
-              variants={fadeInUp}
-              className="text-lg md:text-xl leading-relaxed mb-8 max-w-3xl mx-auto"
-              style={{ color: theme === 'light' ? '#5e5d59' : '#a1a1aa' }}
-            >
-              {t.subtitle}
-            </motion.p>
-            <motion.div
-              variants={fadeInUp}
-              className="flex items-center gap-8 justify-center flex-wrap"
-            >
-              {[t.features.native, t.features.realtime, t.features.guardrails].map((feature, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: '#007d73' }} />
-                  <span className="text-sm font-medium" style={{ color: theme === 'light' ? '#141413' : '#a1a1aa' }}>{feature}</span>
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+    <div className="relative">
+      {/* 开在联网的透析机旁。中央监控截图在首屏尺度下过亮也过碎，压不住导航条。 */}
+      <PageHero
+        title={t.title}
+        lede={t.subtitle}
+        photo="/images/centers/heilongjiang-xingkang/3.jpg"
+        focus="center 45%"
+      />
 
       {/* Platform Use Cases Section - Simplified */}
       {t.clinicalApplications && (
