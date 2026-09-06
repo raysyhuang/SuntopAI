@@ -1,0 +1,258 @@
+{
+  "_comment": "Cities with a private hospital running on the platform or served by the smart supply chain. City level and unnamed on purpose: naming a partner publicly needs that partner's agreement (see PARTNERSHIPS in src/content/facts.ts), and none of these has been cleared. Selected from the group's cooperative-hospital list and its highest-volume supply-chain customers; public hospitals and distributors excluded. Every coordinate is verified to fall inside its stated province by scripts/make-network-map.mjs, which fails the build if one does not.",
+  "asOf": "2026-09",
+  "cities": [
+    {
+      "city": "东莞",
+      "province": "广东",
+      "lng": 113.75,
+      "lat": 23.02
+    },
+    {
+      "city": "东营",
+      "province": "山东",
+      "lng": 118.67,
+      "lat": 37.43
+    },
+    {
+      "city": "仁寿",
+      "province": "四川",
+      "lng": 104.15,
+      "lat": 30.0
+    },
+    {
+      "city": "仙桃",
+      "province": "湖北",
+      "lng": 113.45,
+      "lat": 30.36
+    },
+    {
+      "city": "全椒",
+      "province": "安徽",
+      "lng": 118.27,
+      "lat": 32.09
+    },
+    {
+      "city": "利辛",
+      "province": "安徽",
+      "lng": 116.21,
+      "lat": 33.14
+    },
+    {
+      "city": "南乐",
+      "province": "河南",
+      "lng": 115.2,
+      "lat": 36.07
+    },
+    {
+      "city": "博罗",
+      "province": "广东",
+      "lng": 114.29,
+      "lat": 23.17
+    },
+    {
+      "city": "厦门",
+      "province": "福建",
+      "lng": 118.09,
+      "lat": 24.48
+    },
+    {
+      "city": "台山",
+      "province": "广东",
+      "lng": 112.79,
+      "lat": 22.25
+    },
+    {
+      "city": "合肥",
+      "province": "安徽",
+      "lng": 117.28,
+      "lat": 31.86
+    },
+    {
+      "city": "哈尔滨",
+      "province": "黑龙江",
+      "lng": 126.53,
+      "lat": 45.8
+    },
+    {
+      "city": "响水",
+      "province": "江苏",
+      "lng": 119.57,
+      "lat": 34.2
+    },
+    {
+      "city": "嘉兴",
+      "province": "浙江",
+      "lng": 120.75,
+      "lat": 30.76
+    },
+    {
+      "city": "大连",
+      "province": "辽宁",
+      "lng": 121.62,
+      "lat": 38.92
+    },
+    {
+      "city": "天津",
+      "province": "天津",
+      "lng": 117.2,
+      "lat": 39.13
+    },
+    {
+      "city": "如皋",
+      "province": "江苏",
+      "lng": 120.56,
+      "lat": 32.39
+    },
+    {
+      "city": "宁波",
+      "province": "浙江",
+      "lng": 121.55,
+      "lat": 29.87
+    },
+    {
+      "city": "射阳",
+      "province": "江苏",
+      "lng": 120.26,
+      "lat": 33.78
+    },
+    {
+      "city": "平湖",
+      "province": "浙江",
+      "lng": 121.02,
+      "lat": 30.7
+    },
+    {
+      "city": "广州",
+      "province": "广东",
+      "lng": 113.26,
+      "lat": 23.13
+    },
+    {
+      "city": "廊坊",
+      "province": "河北",
+      "lng": 116.7,
+      "lat": 39.52
+    },
+    {
+      "city": "张家界",
+      "province": "湖南",
+      "lng": 110.48,
+      "lat": 29.13
+    },
+    {
+      "city": "怀化",
+      "province": "湖南",
+      "lng": 110.0,
+      "lat": 27.57
+    },
+    {
+      "city": "揭阳",
+      "province": "广东",
+      "lng": 116.37,
+      "lat": 23.55
+    },
+    {
+      "city": "新郑",
+      "province": "河南",
+      "lng": 113.74,
+      "lat": 34.4
+    },
+    {
+      "city": "无锡",
+      "province": "江苏",
+      "lng": 120.3,
+      "lat": 31.57
+    },
+    {
+      "city": "杭州",
+      "province": "浙江",
+      "lng": 120.15,
+      "lat": 30.27
+    },
+    {
+      "city": "永州",
+      "province": "湖南",
+      "lng": 111.61,
+      "lat": 26.42
+    },
+    {
+      "city": "沅江",
+      "province": "湖南",
+      "lng": 112.36,
+      "lat": 28.85
+    },
+    {
+      "city": "泉州",
+      "province": "福建",
+      "lng": 118.68,
+      "lat": 24.87
+    },
+    {
+      "city": "海盐",
+      "province": "浙江",
+      "lng": 120.95,
+      "lat": 30.53
+    },
+    {
+      "city": "清远",
+      "province": "广东",
+      "lng": 113.05,
+      "lat": 23.68
+    },
+    {
+      "city": "湖州",
+      "province": "浙江",
+      "lng": 120.09,
+      "lat": 30.89
+    },
+    {
+      "city": "玉林",
+      "province": "广西",
+      "lng": 110.15,
+      "lat": 22.63
+    },
+    {
+      "city": "玉环",
+      "province": "浙江",
+      "lng": 121.23,
+      "lat": 28.14
+    },
+    {
+      "city": "盐城",
+      "province": "江苏",
+      "lng": 120.16,
+      "lat": 33.35
+    },
+    {
+      "city": "营口",
+      "province": "辽宁",
+      "lng": 122.23,
+      "lat": 40.67
+    },
+    {
+      "city": "衢州",
+      "province": "浙江",
+      "lng": 118.87,
+      "lat": 28.94
+    },
+    {
+      "city": "连云港",
+      "province": "江苏",
+      "lng": 119.22,
+      "lat": 34.6
+    },
+    {
+      "city": "长沙",
+      "province": "湖南",
+      "lng": 112.94,
+      "lat": 28.23
+    },
+    {
+      "city": "青岛",
+      "province": "山东",
+      "lng": 120.38,
+      "lat": 36.07
+    }
+  ]
+}

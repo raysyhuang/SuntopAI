@@ -210,11 +210,13 @@
     "network": {
       "eyebrow": "Network",
       "title": "The network follows where dialysis patients are",
-      "description": "We do not spread thinly across the country. We go deep where patient density is high and reimbursement is relatively stable. Self-operated and partner centers share one management standard and one system.",
+      "description": "Our own and cooperative centers go deep in regions with dense patient populations and relatively stable reimbursement; the smart supply chain and platform deployments reach wider, covering 23 provinces and municipalities today. All three run to the same management standard on the same system.",
       "legendDirect": "Self-operated centers and hospitals",
       "legendPartner": "Partner dialysis centers",
       "legendProvince": "Provinces with a center",
-      "note": "The map plots the centers published on this site. The group serves a wider set of provinces than shown here; the two counts are on different bases.",
+      "legendReach": "Provinces the service network reaches",
+      "legendEnabled": "Enabled private hospitals (unnamed)",
+      "note": "Dark shading marks provinces with a center; light shading marks provinces reached through the smart supply chain, a cooperative arrangement or a platform deployment — 23 provinces and municipalities in total. Small dots mark leading private hospitals running our platform or served by the supply chain, placed by city and not named individually: naming a partner publicly requires their agreement.",
       "cta": "View all centers"
     },
     "shift": {

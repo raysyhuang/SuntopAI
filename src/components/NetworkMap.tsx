@@ -59,10 +59,15 @@ export function NetworkMap({ alt }: { alt: string }) {
             key={`${p.x}-${p.y}-${i}`}
             cx={p.x}
             cy={p.y}
-            r={6.5}
-            fill={p.type === 'direct' ? '#0b1d33' : '#0b5f58'}
+            /* Three tiers, and the third has to read as a third: an enabled
+               hospital is a real presence but not a center we run, so it sits
+               smaller and lighter than either kind of center. */
+            r={p.type === 'enabled' ? 4.6 : 6.5}
+            fill={
+              p.type === 'direct' ? '#0b1d33' : p.type === 'partner' ? '#0b5f58' : '#4b9c92'
+            }
             stroke="#ffffff"
-            strokeWidth={2.2}
+            strokeWidth={p.type === 'enabled' ? 1.7 : 2.2}
             initial={{ scale: 0, opacity: 0 }}
             animate={show ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
             transition={

@@ -398,6 +398,8 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 { swatch: <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: '#0b1d33' }} />, text: home.network.legendDirect },
                 { swatch: <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: '#0b5f58' }} />, text: home.network.legendPartner },
                 { swatch: <span className="w-3.5 h-2.5 rounded-sm shrink-0 border" style={{ backgroundColor: '#7ecdc0', borderColor: '#ffffff' }} />, text: home.network.legendProvince },
+                { swatch: <span className="w-3.5 h-2.5 rounded-sm shrink-0 border" style={{ backgroundColor: '#cfe9e3', borderColor: '#ffffff' }} />, text: home.network.legendReach },
+                { swatch: <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: '#4b9c92' }} />, text: home.network.legendEnabled },
               /* Colours mirror scripts/make-network-map.mjs — if the map palette
                  changes there, change it here too or the legend starts lying. */
               ].map((row) => (
@@ -445,7 +447,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
                 <span>{o.before}</span>
               </div>
               <p className="mt-4 pt-4 border-t border-slate-800 text-sm text-neutral-300 font-medium">
-                {o.measure}
+                {o.measure[locale]}
               </p>
             </motion.div>
           ))}

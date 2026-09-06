@@ -1,0 +1,10 @@
+{
+  "_comment": "Provinces the service network reaches beyond the centers published in centers-*.json. Derived once from the group's supply-chain customer roster and the cooperative-hospital list held in the internal finance system; committed here so the site build never reads a private repository. No partner is named — this file carries province names only. Refresh by re-deriving from that roster and updating asOf.",
+  "asOf": "2026-09",
+  "basis": "Provinces with dialysis centers or hospitals served by the group's supply chain, cooperative-operation arrangements, or platform deployment.",
+  "provinces": [
+    "江苏", "广西", "广东", "河南", "山东", "安徽", "上海", "浙江",
+    "湖南", "湖北", "四川", "辽宁", "黑龙江", "山西", "福建", "天津",
+    "贵州", "河北", "重庆", "甘肃", "云南", "吉林", "北京"
+  ]
+}

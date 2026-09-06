@@ -19,6 +19,8 @@ const ROOT = join(HERE, '..')
 
 const GEO = join(HERE, 'china-provinces.json')
 const CENTERS = join(ROOT, 'public/data/centers-zh-CN.json')
+const COVERAGE = join(ROOT, 'public/data/network-coverage.json')
+const ENABLED = join(ROOT, 'public/data/network-enabled-cities.json')
 const OUT = join(ROOT, 'public/images/network-map.svg')
 
 const W = 1000
@@ -80,13 +82,24 @@ const geo = JSON.parse(readFileSync(GEO, 'utf8'))
 const data = JSON.parse(readFileSync(CENTERS, 'utf8'))
 const centers = Array.isArray(data) ? data : data.centers
 
-const covered = new Set(centers.filter((c) => c.province).map((c) => normalise(c.province)))
+/* Two levels of shading, because the network is wider than the list of centers we
+   publish. A province with a center we name is shaded strongly; a province we reach
+   only through the supply chain, a cooperative arrangement or a platform deployment
+   is shaded lightly. The second set names no partner — province names only — so it
+   carries no disclosure the centers file does not already make. */
+const withCenter = new Set(centers.filter((c) => c.province).map((c) => normalise(c.province)))
+const coverage = JSON.parse(readFileSync(COVERAGE, 'utf8'))
+const served = new Set(coverage.provinces.map(normalise))
+for (const p of withCenter) {
+  if (!served.has(p)) throw new Error(`${p} has a center but is missing from network-coverage.json`)
+}
 
 const paths = geo.features
   .map((f) => {
     const d = pathFor(f.geometry)
     if (!d) return ''
-    const cls = covered.has(normalise(f.properties?.name ?? '')) ? 'on' : 'off'
+    const name = normalise(f.properties?.name ?? '')
+    const cls = withCenter.has(name) ? 'on' : served.has(name) ? 'reach' : 'off'
     return `<path class="${cls}" d="${d}"/>`
   })
   .join('')
@@ -98,6 +111,52 @@ const paths = geo.features
 */
 const dots = ''
 
+/* Cities with a private hospital on the platform or served by the supply chain,
+   plotted unnamed. Two gates before any of them ships:
+
+   1. The coordinate must fall inside the province the file claims for it. A city
+      guessed from a hospital's name is exactly the kind of error a map makes
+      visible and a reviewer cannot catch by reading the diff.
+   2. It must not sit on a center we already publish. Several of these hospitals
+      ARE published centers; drawing them again would count them twice. 0.35° is
+      roughly where two dots merge at this map's scale, so anything closer is the
+      same dot to a reader. */
+const enabled = JSON.parse(readFileSync(ENABLED, 'utf8')).cities
+
+const provinceGeom = new Map(
+  geo.features.map((f) => [normalise(f.properties?.name ?? ''), f.geometry])
+)
+function inProvince(lon, lat, province) {
+  const geom = provinceGeom.get(normalise(province))
+  if (!geom) return false
+  let hit = false
+  for (const ring of ringsOf(geom)) {
+    let crossings = false
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const [xi, yi] = ring[i]
+      const [xj, yj] = ring[j]
+      if (yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) {
+        crossings = !crossings
+      }
+    }
+    if (crossings) hit = !hit
+  }
+  return hit
+}
+
+const misplaced = enabled.filter((c) => !inProvince(c.lng, c.lat, c.province))
+if (misplaced.length) {
+  throw new Error(
+    `network-enabled-cities.json: outside their province — ` +
+      misplaced.map((c) => `${c.city} (${c.province})`).join(', ')
+  )
+}
+
+const published = centers.filter((c) => c.coordinates).map((c) => c.coordinates)
+const enabledPlotted = enabled.filter(
+  (c) => !published.some((p) => Math.abs(p.lng - c.lng) < 0.35 && Math.abs(p.lat - c.lat) < 0.35)
+)
+
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
 <style>
  /* White strokes over a filled map: the borders read as separation rather than
@@ -106,10 +165,12 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" wid
     off-white here made the whole map dissolve into the section background. */
  path{stroke:#ffffff;stroke-width:1.1;stroke-linejoin:round}
  path.off{fill:#e3e6ec}
+ path.reach{fill:#cfe9e3}
  path.on{fill:#7ecdc0}
  circle{stroke:#fff;stroke-width:2.2}
  circle.d1{fill:#0b1d33}
  circle.d2{fill:#0b5f58}
+ circle.d3{fill:#4b9c92}
 </style>
 ${paths}
 ${dots}
@@ -132,12 +193,22 @@ writeFileSync(
   JSON.stringify(
     {
       viewBox: { width: W, height: H },
-      dots: centers
-        .filter((c) => c.coordinates)
-        .map((c) => {
-          const [x, y] = pt(c.coordinates.lng, c.coordinates.lat)
-          return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), type: c.type === 'direct' ? 'direct' : 'partner' }
-        })
+      dots: [
+        ...centers
+          .filter((c) => c.coordinates)
+          .map((c) => {
+            const [x, y] = pt(c.coordinates.lng, c.coordinates.lat)
+            return {
+              x: Number(x.toFixed(1)),
+              y: Number(y.toFixed(1)),
+              type: c.type === 'direct' ? 'direct' : 'partner',
+            }
+          }),
+        ...enabledPlotted.map((c) => {
+          const [x, y] = pt(c.lng, c.lat)
+          return { x: Number(x.toFixed(1)), y: Number(y.toFixed(1)), type: 'enabled' }
+        }),
+      ]
         /* North to south, so the sequence reads as the network spreading down the
            coast rather than as dots appearing at random. */
         .sort((a, b) => a.y - b.y),
@@ -150,6 +221,9 @@ writeFileSync(
 
 console.log(
   `network-map.svg + network-map-dots.json  ${Math.round(svg.length / 1024)} KB  ` +
-    `${covered.size} provinces shaded  ${centers.filter((c) => c.coordinates).length} centers plotted`
+    `${withCenter.size} with centers + ${served.size - withCenter.size} served = ${served.size} provinces  ` +
+    `${centers.filter((c) => c.coordinates).length} centers + ${enabledPlotted.length} enabled cities plotted ` +
+    `(${enabled.length - enabledPlotted.length} suppressed as already published)`
 )
-console.log([...covered].sort().join('、'))
+console.log('  有中心：', [...withCenter].sort().join('、'))
+console.log('  仅覆盖：', [...served].filter((p) => !withCenter.has(p)).sort().join('、'))

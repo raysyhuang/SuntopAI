@@ -13,6 +13,7 @@
  *
  * Run `npm run facts:check` for the current reconciliation queue.
  */
+import type { Locale } from '@/i18n/config'
 
 export type FactStatus =
   /** Sourced, current, agreed. Safe to publish. */
@@ -506,7 +507,10 @@ export type FactId = keyof typeof FACTS
 
 export interface Outcome {
   id: string
-  measure: string
+  /** Localised: the measure is a label, not a figure, so it has to be translated
+      like any other user-facing string. Keyed the same way as BRAND and
+      REGISTRATION.scope. */
+  measure: Record<Locale, string>
   before: string
   after: string
   /** Relative change, only rendered once `method` is filled in. */
@@ -539,14 +543,24 @@ export interface Outcome {
 export const OUTCOMES: Outcome[] = [
   {
     id: 'pre-dialysis-systolic-bp',
-    measure: 'Pre-dialysis systolic blood pressure',
+    measure: {
+      'zh-CN': '透析前收缩压',
+      'zh-TW': '透析前收縮壓',
+      en: 'Pre-dialysis systolic blood pressure',
+      ja: '透析前収縮期血圧',
+    },
     before: '145±22 mmHg',
     after: '141±21 mmHg',
     method: { sites: null, patients: null, period: '2024–2025', design: null },
   },
   {
     id: 'pre-shock-patients',
-    measure: 'Patients in a pre-shock state',
+    measure: {
+      'zh-CN': '处于休克前期的患者比例',
+      'zh-TW': '處於休克前期的患者比例',
+      en: 'Patients in a pre-shock state',
+      ja: 'ショック前状態にある患者の割合',
+    },
     before: '22.4%',
     after: '9.0%',
     relative: '60% reduction',
@@ -554,7 +568,12 @@ export const OUTCOMES: Outcome[] = [
   },
   {
     id: 'lab-evaluation-time',
-    measure: 'Laboratory result evaluation time',
+    measure: {
+      'zh-CN': '检验结果评估用时',
+      'zh-TW': '檢驗結果評估用時',
+      en: 'Laboratory result evaluation time',
+      ja: '検査結果の評価所要時間',
+    },
     before: '8.3 min/patient',
     after: '2.5 min/patient',
     relative: '70% faster',
@@ -562,14 +581,24 @@ export const OUTCOMES: Outcome[] = [
   },
   {
     id: 'anemia-prevalence',
-    measure: 'Anemia prevalence',
+    measure: {
+      'zh-CN': '贫血患病率',
+      'zh-TW': '貧血盛行率',
+      en: 'Anemia prevalence',
+      ja: '貧血の有病率',
+    },
     before: '60.9%',
     after: '41.3%',
     method: { sites: null, patients: null, period: '2024–2025', design: null },
   },
   {
     id: 'iron-deficiency',
-    measure: 'Iron deficiency prevalence',
+    measure: {
+      'zh-CN': '铁缺乏患病率',
+      'zh-TW': '鐵缺乏盛行率',
+      en: 'Iron deficiency prevalence',
+      ja: '鉄欠乏の有病率',
+    },
     before: '74.0%',
     after: '21.1%',
     relative: '71% reduction',
@@ -577,7 +606,12 @@ export const OUTCOMES: Outcome[] = [
   },
   {
     id: 'renal-bone-disease',
-    measure: 'Renal bone disease prevalence',
+    measure: {
+      'zh-CN': '肾性骨病患病率',
+      'zh-TW': '腎性骨病盛行率',
+      en: 'Renal bone disease prevalence',
+      ja: '腎性骨症の有病率',
+    },
     before: '48.4%',
     after: '30.7%',
     relative: '37% reduction',
