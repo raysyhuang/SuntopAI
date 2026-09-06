@@ -751,3 +751,27 @@
     background-color: rgba(255, 255, 255, 0.20);
   }
 }
+
+/* A <button> defaults to the arrow cursor, and Tailwind's preflight does not change
+   that. Every button on this site is a real action. */
+button:not(:disabled),
+[role='button']:not([aria-disabled='true']) {
+  cursor: pointer;
+}
+
+/*
+  Anyone who has asked their system for less motion gets none of it. The site has
+  one authored moment left — the network map — and that already checks
+  useReducedMotion in the component; this covers the CSS side: the grain, and any
+  transition or animation that would otherwise still run.
+*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

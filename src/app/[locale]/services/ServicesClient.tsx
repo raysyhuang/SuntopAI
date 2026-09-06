@@ -238,7 +238,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                           : 'bg-teal-50 text-teal-700 border border-teal-200'
                       }`}
                     >
-                      <span className={`${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`}>✓</span>
+                      <Check className={`w-4 h-4 shrink-0 ${theme === 'dark' ? 'text-teal-400' : 'text-teal-600'}`} aria-hidden />
                       {benefit}
                     </motion.span>
                   ))}
@@ -610,7 +610,7 @@ export default function ServicesClient({ locale, dictionary }: ServicesClientPro
                 <ul className="space-y-2">
                   {t.patientCare.smartFeature.benefits.map((benefit: string, index: number) => (
                     <li key={index} className="flex items-start gap-2">
-                      <span className={`text-sm mt-0.5 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`}>✓</span>
+                      <Check className={`w-4 h-4 mt-0.5 shrink-0 ${theme === 'dark' ? 'text-rose-400' : 'text-rose-600'}`} aria-hidden />
                       <span className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}`}>{benefit}</span>
                     </li>
                   ))}

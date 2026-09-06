@@ -14,9 +14,9 @@
   "home": {
     "tag": "Hemodialysis AI & IoT",
     "hero": {
-      "title1": "Smart dialysis center",
-      "title2": "AI-enabled care. Connected dialysis.",
-      "subtitle": "Our registered dialysis information system runs in 100+ smart dialysis centers — 30+ of them our own. Nothing reaches a partner hospital until it has worked in a center we operate ourselves.",
+      "title1": "Smarter dialysis, every session",
+      "title2": "Connecting devices, data and clinical decisions",
+      "subtitle": "Built on a registered dialysis information system, combining IoT, automation and AI to connect dialysis machines, HIS, LIS and clinical workflow — so a center runs with less administrative load and lower operating cost. The platform is live in 100+ centers, 30+ of them our own, and continues to be validated in real clinical use.",
       "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
       "badges": [
         "Whole-center IoT",
@@ -37,7 +37,7 @@
       ]
     },
     "cta": {
-      "explore": "Explore Platform",
+      "explore": "Explore the platform",
       "contact": "Contact Us",
       "start": "Start a Conversation",
       "learn": "Learn More"
