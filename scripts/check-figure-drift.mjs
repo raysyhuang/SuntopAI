@@ -26,11 +26,29 @@ const LOCALES = ['zh-CN', 'zh-TW', 'en', 'ja']
 
 const facts = readFileSync(join(ROOT, 'src/content/facts.ts'), 'utf8')
 
-/** Pull `'some.id': { value: 'X'` pairs straight out of the source. */
+/**
+ * Pull `'some.id': { … value: 'X'` pairs straight out of the source.
+ *
+ * `value` does not have to be the first line inside the brace. It used to have to
+ * be, and adding one explanatory comment above a value silently dropped that
+ * figure out of the check — the run still passed, just with one fewer figure in
+ * it, which is the failure mode a checker must not have. Anything up to the next
+ * `value:` counts, as long as no new record has started in between.
+ */
 const figures = new Map()
-for (const m of facts.matchAll(/'([\w.]+)':\s*\{\s*\n\s*value:\s*'([^']*)'/g)) {
-  const [, id, value] = m
+for (const m of facts.matchAll(/'([\w.]+)':\s*\{((?:[^{}']|'[^']*')*?)value:\s*'([^']*)'/g)) {
+  const [, id, , value] = m
   if (value.trim().length > 1) figures.set(value.trim(), id)
+}
+
+/* A record that has a value but never reaches this map is invisible to the check,
+   so prove the count instead of trusting it. */
+const declared = [...facts.matchAll(/^\s{2}'([\w.]+)':\s*\{$/gm)].length
+if (figures.size < declared - 2) {
+  throw new Error(
+    `Parsed ${figures.size} figures from ${declared} records in facts.ts — the ` +
+      `parser is missing some. Fix the pattern rather than lowering this bound.`
+  )
 }
 
 function* walk(node, path = '') {

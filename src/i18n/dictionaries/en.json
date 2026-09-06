@@ -373,7 +373,7 @@
         },
         "careManagement": {
           "title": "Foot Care Management Module",
-          "subtitle": "Refined screening, intelligent grading, protecting every step",
+          "subtitle": "Structured screening and tiered care management, with a record at every step",
           "description": "Comprehensive assessment of lower limb arterial pulse, neurological sensation, skin integrity, and nail condition. The system captures subtle changes in foot health status. Instant wound photography with archival storage enables visual trend tracking through historical photo comparison. Multi-dimensional risk stratification automatically identifies high-risk patients, enabling early intervention and targeted prevention.",
           "features": [
             {
@@ -1574,7 +1574,7 @@
         "Expanded service capacity and scale"
       ],
       "partners": {
-        "title": "100+ Partner Centers",
+        "title": "100+ partner hospitals",
         "list": [
           {
             "name": "Hunan Want Want Hospital",

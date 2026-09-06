@@ -175,16 +175,38 @@ const published = centers
   .filter((c) => c.coordinates)
   .map((c) => ({ ...c.coordinates, type: c.type === 'direct' ? 'direct' : 'partner' }))
 
-/** Collapses records that sit on the same point; a self-operated centre wins over
-    a partner one, so a shared coordinate never downgrades what it depicts. */
-function dedupe(points) {
-  const byPoint = new Map()
-  for (const p of points) {
+/**
+ * Separates centers recorded at the same coordinate instead of dropping them.
+ *
+ * Two pairs share a city-centre position — 安徽杏康 with 合肥普福康, and the two
+ * Harbin centers — because nobody has geocoded them individually. Collapsing them
+ * made the map show 18 dots for 20 centers, which quietly loses a center; keeping
+ * them stacked draws one dot twice. Both are wrong in the same direction.
+ *
+ * So the second and later records at a point are nudged onto a small ring around
+ * it — about 8km, a few pixels at this scale. Close enough to still read as that
+ * city, far enough that a reader can count them. Deterministic, so the committed
+ * output does not churn between runs.
+ *
+ * The real fix is a coordinate per center in centers-zh-CN.json. Until then this
+ * keeps the map honest about how many there are.
+ */
+const NUDGE_DEG = 0.075
+function spread(points) {
+  const seen = new Map()
+  return points.map((p) => {
     const key = `${p.lng.toFixed(4)},${p.lat.toFixed(4)}`
-    const kept = byPoint.get(key)
-    if (!kept || (kept.type !== 'direct' && p.type === 'direct')) byPoint.set(key, p)
-  }
-  return [...byPoint.values()]
+    const n = seen.get(key) ?? 0
+    seen.set(key, n + 1)
+    if (n === 0) return p
+    const angle = (n - 1) * ((2 * Math.PI) / 3) + Math.PI / 6
+    const kx = Math.cos((p.lat / 180) * Math.PI) || 1
+    return {
+      ...p,
+      lng: p.lng + (NUDGE_DEG * Math.cos(angle)) / kx,
+      lat: p.lat + NUDGE_DEG * Math.sin(angle),
+    }
+  })
 }
 
 /* Real distance, not a bounding box. Comparing longitude and latitude
@@ -202,7 +224,7 @@ function near(a, b) {
 }
 
 const enabledPlotted = enabled.filter((c) => !published.some((p) => near(p, c)))
-const publishedDots = dedupe(published)
+const publishedDots = spread(published)
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
 <style>
@@ -267,7 +289,7 @@ writeFileSync(
 console.log(
   `network-map.svg + network-map-dots.json  ${Math.round(svg.length / 1024)} KB  ` +
     `${withCenter.size} with centers + ${served.size - withCenter.size} served = ${served.size} provinces  ` +
-    `${publishedDots.length} center dots (${published.length} centers, ${published.length - publishedDots.length} sharing a point) ` +
+    `${publishedDots.length} center dots ` +
     `+ ${enabledPlotted.length} enabled cities ` +
     `(${enabled.length - enabledPlotted.length} suppressed as already published)`
 )
