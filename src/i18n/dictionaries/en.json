@@ -397,7 +397,7 @@
               "description": "Auto-records pre-dialysis weight, post-dialysis weight, UF volume, generating visual trend charts to clearly show weight patterns and dry weight deviations."
             },
             {
-              "title": "Dry Weight Assessment & Recommendations",
+              "title": "Dry Weight & Blood Pressure Trends",
               "description": "Combining BP patterns, UF tolerance, edema assessment data, AI analyzes if current dry weight setting is appropriate and generates adjustment recommendations."
             }
           ],
@@ -1965,7 +1965,7 @@
       "paragraphs": [
         "Suntop Healthcare is a medical technology company focused on hemodialysis.",
         "Founded on the principle of 'People First, Service Above All', we started with equipment supply, technical support, department operations management, and clinical care, gradually building a comprehensive service system covering the entire dialysis workflow. On this foundation, we developed our proprietary dialysis management system, making all core equipment—dialysis machines, BP monitors, scales—IoT-enabled, and integrating customized models and decision systems to achieve a complete closed loop from data collection, analysis, evaluation, recommendations to real-time feedback.",
-        "Today, we have 30+ self-operated dialysis centers and 100+ partner centers nationwide, with 100+ successfully upgraded to smart dialysis centers and 5000+ connected dialysis machines. Our system continuously provides clinical decision support during treatment—including intradialytic hypotension alerts, UF rate optimization recommendations, and dry weight assessments. These insights are embedded in real-time within the physician's workflow, not as post-hoc analysis.",
+        "Our system provides clinical decision support throughout treatment: machine parameters, monitoring data and laboratory results are gathered as they arrive and presented in a form that can be read directly, inside the clinician's workflow rather than as analysis after the fact. Judgement and prescription remain with the clinician; dry-weight prediction and intradialytic hypotension warning remain research programmes.",
         "We believe truly valuable healthcare innovation must simultaneously improve medical quality, reduce risk, and increase operational efficiency. Suntop Healthcare is driving the transformation of dialysis management from 'experience-driven' to 'data-driven', making dialysis safer, more efficient, and more sustainable."
       ]
     },
