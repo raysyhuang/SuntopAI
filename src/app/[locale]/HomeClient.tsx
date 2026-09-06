@@ -200,67 +200,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </motion.div>
       </Section>
 
-      {/* ───────── 3. Audience router — the point of the page ───────── */}
-      <Section tone="light">
-        <motion.div {...fade} className="mb-14 max-w-2xl">
-          <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight ${heading}`}>
-            {home.audiences.title}
-          </h2>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-px overflow-hidden rounded-2xl border"
-             style={{ borderColor: isLight ? '#e8e6dc' : '#1e293b', backgroundColor: isLight ? '#e8e6dc' : '#1e293b' }}>
-          {audiences.map((a, i) => (
-            <motion.div key={a.title} {...fade}>
-              <Link
-                href={a.href}
-                className={`group flex h-full flex-col overflow-hidden transition-colors ${
-                  isLight ? 'bg-[#faf9f5] hover:bg-[#f5f4ed]' : 'bg-[#0b1624] hover:bg-[#0f1e33]'
-                }`}
-              >
-                {/* A photograph of our own network says more than a 20px icon.
-                    The icon stays, over the image, so the card is still readable
-                    at a glance. */}
-                <div className="relative aspect-[16/9] overflow-hidden">
-                  <Image
-                    src={a.photo}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    style={{ objectPosition: a.focus }}
-                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  />
-                  <div
-                    className="absolute inset-0"
-                    style={{
-                      background: isLight
-                        ? 'linear-gradient(to top, rgba(6,27,49,.45), rgba(6,27,49,0) 55%)'
-                        : 'linear-gradient(to top, rgba(6,27,49,.75), rgba(6,27,49,.1) 60%)',
-                    }}
-                  />
-                  <a.icon
-                    className="absolute left-6 bottom-5 w-5 h-5 text-white/90"
-                    aria-hidden="true"
-                  />
-                </div>
-                <div className="flex h-full flex-col p-8 md:p-10">
-                <h3 className={`text-lg font-semibold mb-3 ${heading}`}>{a.title}</h3>
-                <p className={`text-[0.95rem] leading-relaxed mb-6 ${body}`}>{a.desc}</p>
-                <span
-                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium"
-                  style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}
-                >
-                  {a.label}
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
-                </span>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* ───────── 3a. Not a concept ─────────
+      {/* ───────── 3. Not a concept ─────────
           The claim in the hero is that conventional units become smart ones. This is
           where that claim gets its evidence, and the evidence is deliberately
           platform-side: devices actually connected, patients actually on the system,
@@ -297,7 +237,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </p>
       </Section>
 
-      {/* ───────── 3a-ii. What the AI actually changed ─────────
+      {/* ───────── 4. What the AI actually changed ─────────
           The one section an expert audience has not read on a competitor's site.
           Scale, chain operation and management systems are familiar to them; a
           clinician regaining the hours to re-check a plan at every session is not.
@@ -381,7 +321,63 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </p>
       </Section>
 
-      {/* ───────── 3b. Network — where the centers actually are ─────────
+      {/* ───────── 5. How the market is counted ─────────
+          The single most important paragraph for an investor, and it was missing
+          from the site entirely — it existed only in the deck. Because we sell
+          transformation rather than replacement, the installed base is addressable
+          too, which inverts the usual arithmetic where a maturing sector shrinks
+          the opportunity. Stated as an argument about addressable market, never as
+          a claim about customers already signed. See POSITIONING.md. */}
+      <Section tone="dark">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] gap-12 lg:gap-20">
+          <motion.div {...fade}>
+            <p className="text-[0.7rem] uppercase tracking-[0.22em] font-medium text-accent-300">
+              {home.opportunity.eyebrow}
+            </p>
+            <h2 className="mt-5 font-display font-light text-3xl md:text-[2.6rem] leading-tight text-white">
+              {home.opportunity.title}
+            </h2>
+            <p className="mt-7 leading-[1.85] text-neutral-300">{home.opportunity.body}</p>
+
+            <div className="mt-12 border-t border-slate-800 pt-8">
+              <div className="font-display font-light tabular-nums text-[3rem] md:text-[3.6rem] leading-none text-white">
+                {publicFact('market.chinaCenters').value}
+              </div>
+              <div className="mt-3 text-sm text-neutral-400">{home.opportunity.figureLabel}</div>
+            </div>
+          </motion.div>
+
+          {/* Old arithmetic above, new below, so the reader arrives at the second
+              one having just agreed with the first. */}
+          <div className="space-y-px self-center overflow-hidden rounded-2xl bg-slate-800">
+            {([
+              [home.opportunity.oldLabel, home.opportunity.oldBody, false],
+              [home.opportunity.newLabel, home.opportunity.newBody, true],
+            ] as Array<[string, string, boolean]>).map(([label, text, isNew]) => (
+              <motion.div
+                key={label}
+                {...fade}
+                className="p-8 lg:p-10"
+                style={{ backgroundColor: isNew ? '#0d1f2b' : '#0b1624' }}
+              >
+                <div
+                  className="text-xs uppercase tracking-[0.18em] font-medium"
+                  style={{ color: isNew ? '#2dd4bf' : '#64748b' }}
+                >
+                  {label}
+                </div>
+                <p className={`mt-4 leading-[1.85] ${isNew ? 'text-white' : 'text-neutral-400'}`}>{text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-14 max-w-3xl text-xs leading-relaxed text-neutral-500">
+          {home.opportunity.note}
+        </p>
+      </Section>
+
+      {/* ───────── 6. Network — where the centers actually are ─────────
           The SVG is generated by scripts/make-network-map.mjs from the same
           centers-zh-CN.json the map page reads, so it cannot drift from the
           network it depicts. Re-run `npm run map:build` after changing a center. */}
@@ -428,7 +424,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </div>
       </Section>
 
-      {/* ───────── 4. Evidence — raw pairs lead, attribution attached ───────── */}
+      {/* ───────── 7. Evidence — raw pairs lead, attribution attached ───────── */}
       <Section tone="dark">
         <motion.div {...fade} className="max-w-2xl mb-14">
           <h2 className="font-display font-light text-3xl md:text-[2.5rem] leading-tight text-white">
@@ -469,7 +465,7 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </motion.div>
       </Section>
 
-      {/* ───────── 5. Registration — the trust asset, stated plainly ───────── */}
+      {/* ───────── 8. Registration — the trust asset, stated plainly ───────── */}
       <Section tone="subtle" className="!py-20 md:!py-24">
         <motion.div {...fade} className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-14 items-start">
           <ShieldCheck
@@ -494,7 +490,70 @@ export default function HomeClient({ locale, dictionary }: HomeClientProps) {
         </motion.div>
       </Section>
 
-      {/* ───────── 6. Close ───────── */}
+      {/* ───────── 9. Audience router ─────────
+          Sits after the argument, not inside it. These cards are navigation: put
+          between the evidence and the market case they interrupt a line of
+          reasoning that is meant to be read straight through. */}
+      <Section tone="light">
+        <motion.div {...fade} className="mb-14 max-w-2xl">
+          <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight ${heading}`}>
+            {home.audiences.title}
+          </h2>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-px overflow-hidden rounded-2xl border"
+             style={{ borderColor: isLight ? '#e8e6dc' : '#1e293b', backgroundColor: isLight ? '#e8e6dc' : '#1e293b' }}>
+          {audiences.map((a, i) => (
+            <motion.div key={a.title} {...fade}>
+              <Link
+                href={a.href}
+                className={`group flex h-full flex-col overflow-hidden transition-colors ${
+                  isLight ? 'bg-[#faf9f5] hover:bg-[#f5f4ed]' : 'bg-[#0b1624] hover:bg-[#0f1e33]'
+                }`}
+              >
+                {/* A photograph of our own network says more than a 20px icon.
+                    The icon stays, over the image, so the card is still readable
+                    at a glance. */}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={a.photo}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    style={{ objectPosition: a.focus }}
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  />
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: isLight
+                        ? 'linear-gradient(to top, rgba(6,27,49,.45), rgba(6,27,49,0) 55%)'
+                        : 'linear-gradient(to top, rgba(6,27,49,.75), rgba(6,27,49,.1) 60%)',
+                    }}
+                  />
+                  <a.icon
+                    className="absolute left-6 bottom-5 w-5 h-5 text-white/90"
+                    aria-hidden="true"
+                  />
+                </div>
+                <div className="flex h-full flex-col p-8 md:p-10">
+                <h3 className={`text-lg font-semibold mb-3 ${heading}`}>{a.title}</h3>
+                <p className={`text-[0.95rem] leading-relaxed mb-6 ${body}`}>{a.desc}</p>
+                <span
+                  className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium"
+                  style={{ color: isLight ? '#0f766e' : '#2dd4bf' }}
+                >
+                  {a.label}
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                </span>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* ───────── 10. Close ───────── */}
       <Section tone="light" className="!py-24 md:!py-28">
         <motion.div {...fade} className="text-center max-w-2xl mx-auto">
           <h2 className={`font-display font-light text-3xl md:text-[2.5rem] leading-tight mb-8 ${heading}`}>

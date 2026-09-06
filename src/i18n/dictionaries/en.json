@@ -17,7 +17,6 @@
       "title1": "Make every dialysis session smarter",
       "title2": "Connecting devices, data and clinical decisions",
       "subtitle": "Suntop AI builds on dialysis information processing cleared by a Class II medical device registration, closing the loop between IoT, automation and AI: machines, HIS, LIS and clinical workflow connected end to end, so centers raise care quality and operating efficiency while lowering management cost. Deployed across {centers} centers, {direct} of them our own, and refined continuously in live clinical use.",
-      "description": "Suntop is not positioning a single software tool. It is a software, hardware, and data-service foundation for dialysis centers: device connectivity, bedside terminals, central monitoring, AI risk alerts, and workflows that turn daily practice into an executable closed loop.",
       "badges": [
         "Whole-center IoT",
         "AI risk control",
@@ -190,7 +189,7 @@
     "proofEyebrow": "Scale",
     "audiences": {
       "eyebrow": "Where to begin",
-      "title": "Four audiences, four paths",
+      "title": "Where to go next depends on who you are",
       "hospitals": {
         "title": "Hospitals & dialysis centers",
         "description": "Device connectivity, central monitoring, bedside terminals and clinical decision support, embedded in the workflow you already run."
@@ -205,7 +204,7 @@
       },
       "investors": {
         "title": "Investors",
-        "description": "A group that both operates dialysis centers and builds its own medical software — the structure, the market, and the milestones."
+        "description": "Group structure, market opportunity and milestones for a company that both operates dialysis centers and builds its own platform."
       }
     },
     "network": {
@@ -258,6 +257,17 @@
       ],
       "note": "Judgement and prescription remain with the clinician; the system's job is to put complete data in front of them in time. Dry-weight prediction and intradialytic hypotension warning remain research programmes and are not offered as registered clinical functions."
     },
+    "opportunity": {
+      "eyebrow": "How we size the market",
+      "title": "Installed base and greenfield are both our market",
+      "body": "We sell transformation, not replacement. A center already built — even one already running well — becomes a smart dialysis center without replacing its machines or tearing up its workflow. That changes how the addressable market is counted.",
+      "oldLabel": "The old arithmetic",
+      "oldBody": "Only new-build centers count as opportunity; anywhere already taken is a competitor. The more mature the sector, the smaller the share left.",
+      "newLabel": "The new arithmetic",
+      "newBody": "An existing center can be transformed too, so it enters the addressable market as well. And the larger and more complex the operation, the more transformation returns — which makes the best-run centers the customers we want most.",
+      "figureLabel": "Hemodialysis centers in China",
+      "note": "This is an argument about addressable market, not a claim about customers already signed."
+    },
     "evidence": {
       "eyebrow": "Clinical results",
       "title": "Observed in operation",
@@ -266,7 +276,7 @@
     },
     "regulatory": {
       "eyebrow": "Regulatory",
-      "title": "Class II medical device registration",
+      "title": "The registered scope is stated plainly, and every capability is tiered",
       "scopeLabel": "Registered scope",
       "validLabel": "Valid until"
     }
@@ -274,7 +284,7 @@
   "platform": {
     "tag": "Technology",
     "title": "Digital Hemodialysis Management Platform",
-    "subtitle": "Deep integration of software, hardware, and data services. Low-cost cloud architecture with real-time updates and zero maintenance, compliant with national medical data security standards. Technology truly serving healthcare—building the interconnected 'Digital Hub' from data collection to ecosystem integration.",
+    "subtitle": "Systems, hardware and data services integrated end to end. Low-cost cloud architecture, continuous updates without on-site maintenance, and compliance with national medical data security rules — a digital core running from data capture through to a connected network.",
     "features": {
       "native": "Dialysis-Native",
       "realtime": "Real-Time Intelligence",
@@ -1161,7 +1171,7 @@
     "turnkeyServices": {
       "tag": "Turnkey Solutions",
       "title": "End-to-End Support from Planning to Launch",
-      "subtitle": "We don't just provide software and equipment—we deliver comprehensive dialysis center construction and upgrade services.",
+      "subtitle": "We do more than connect systems and machines: we build and upgrade the dialysis center end to end.",
       "services": [
         {
           "id": "design",
@@ -1971,7 +1981,7 @@
           "description": "Providing dialysis equipment and consumables, ensuring device interoperability."
         },
         {
-          "title": "Software & Hardware",
+          "title": "Systems and hardware",
           "description": "Proprietary dialysis management system, AI LLM and IoT infrastructure."
         },
         {
@@ -2626,8 +2636,8 @@
       {
         "problemTitle": "Equipment has reached the end of its service life",
         "problemBody": "Many dialysis machines are at or past their rated service life. Continuing to run them can expose the department to reimbursement deductions.",
-        "solutionTitle": "Equipment renewal funded through software investment or instalments",
-        "solutionBody": "Machines can be replaced through a software investment or instalment arrangement alongside a consumables supply agreement, reducing the hospital's one-off capital outlay."
+        "solutionTitle": "Machine renewal funded by system investment or instalments",
+        "solutionBody": "Machines are replaced through system investment or an instalment arrangement alongside a consumables supply agreement, lowering the hospital's one-off capital outlay."
       },
       {
         "problemTitle": "Record-keeping requirements for monitoring during treatment are becoming more detailed",
@@ -2667,7 +2677,7 @@
   "investorsPage": {
     "tag": "Investors",
     "title": "Investment overview",
-    "subtitle": "Suntop Healthcare both operates dialysis centers and builds its own medical software. That combination is what separates us from the field.",
+    "subtitle": "Suntop Healthcare both operates dialysis centers and builds its own medical platform — that combination is what separates us from our peers.",
     "positionTitle": "Our position",
     "positionBody": "The industry has chain operators focused on expansion and software companies focused on systems. We are neither. We first rebuilt our own dialysis centers into smart dialysis centers — precision management, a smart supply chain, AI and IoT introduced as one package — and then brought that capability to partner hospitals. A software vendor has no clinical setting of its own in which to prove anything; a chain operator replicates centers rather than capability. What we replicate is a way of working that can be installed inside somebody else's center. The system is developed in-house by Daite Intelligent Technology, a wholly owned subsidiary that holds the registration. It embeds deeply into hospital workflow, making it costly to replace, while growing data volume continues to improve model accuracy.",
     "pillarsTitle": "System × Supply chain × Endpoint",
@@ -2769,7 +2779,7 @@
         "description": "Treatment revenue from self-operated and partner centers."
       },
       {
-        "title": "Systems and software",
+        "title": "Systems and platform",
         "description": "Sale, deployment and ongoing service of the dialysis management system."
       },
       {
